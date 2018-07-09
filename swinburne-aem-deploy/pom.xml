@@ -83,22 +83,7 @@
     <build>
         <plugins>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <!-- <id>copy-testsupport</id> -->
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <phase>package</phase>
-                        <configuration>
-                            <includeArtifactIds>aem-maven-repository</includeArtifactIds>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -166,6 +151,22 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <!-- <id>copy-testsupport</id> -->
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <includeArtifactIds>aem-maven-repository</includeArtifactIds>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
             <!-- ====================================================================== -->
             <!-- V A U L T   P A C K A G E   P L U G I N                                -->

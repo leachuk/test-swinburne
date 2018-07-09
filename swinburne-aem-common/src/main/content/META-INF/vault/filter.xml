@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <!--                        W A R N I N G                     -->
+    <!--        This change can make the AEM content removed      -->
+    <!--    http://jackrabbit.apache.org/filevault/filter.html    -->
+    <!--                        W A R N I N G                     -->
+
+    <filter root="/apps/swinburne">
+        <!-- The type of the first pattern defines the default behavior, so that the filter is more natural to write.
+        If the first pattern is include, then the default is exclude and vice versa.  -->
+        <exclude pattern="/apps/swinburne/config(.*)?"/>
+    </filter>
+
+    <filter root="/apps/settings/wcm/design/swinburne"/>
+
+    <filter root="/etc/clientlibs/swinburne">
+        <!-- do not allow deploy into css js and fonts folders -->
+        <include pattern="/etc/clientlibs/swinburne/.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/css.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/js.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/fonts.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/images.*"/>
+    </filter>
+
+    <!-- required for templates -->
+    <filter root="/conf/swinburne"/>
+
+    <!--<filter root="/etc/blueprints/swinburne-english"/>-->
+
+</workspaceFilter>

@@ -1,0 +1,18 @@
+{
+  "cards-large": [
+    {
+      "card-classes": "card--no-bar",
+      "card-ctas": [
+        {
+          "classes": "btn-link",
+          "custom-button": true,
+          "button-href": "#",
+          "button-label": "Read more"
+        }
+      ],
+      "card-image": "https://via.placeholder.com/800x380",
+      "card-text": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum maxime sequi praesentium, doloribus est ab expedita tempore obcaecati eligendi cumque inventore molestiae a assumenda vero esse error dolor! Aliquam, doloremque.</p>",
+      "card-title": "Large sized card"
+    }
+  ]
+}

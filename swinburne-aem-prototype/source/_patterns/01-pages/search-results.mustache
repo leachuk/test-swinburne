@@ -1,0 +1,39 @@
+{{> components-header }}
+
+<section class="contentblock mb-90">
+  {{> components-page-details:theme--page-details-search }}
+</section>
+
+<div class="contentblock theme--contentblock-search mb-60">
+  {{!-- AEM search widget --}}
+  <div>
+    {{> helpers-quicksearch }}
+  </div>
+
+  {{!-- AEM tags filter --}}
+  <div>
+    <div class="taglist" data-list-split-every="5" data-search-tags="fa fa-chevron-circle-down fa fa-chevron-circle-right  default fa fa-chevron-down fa fa-chevron-circle-left fa fa-chevron-circle-up fa fa-chevron-up fa fa-chevron-left fa fa-chevron-right"
+      id="taglist_OGDQRPVGQ" data-has-pages="false">
+      <div class="content">
+        <select id="" class="">
+          <option value="" selected="" disabled="">Select</option>
+          <option value="fa-chevron-circle-down">Circle Down</option>
+          <option value="fa-chevron-circle-right">Circle Right </option>
+          <option value="default">Default</option>
+          <option value="fa-chevron-down">Down</option>
+          <option value="fa-chevron-circle-left">Circle Left</option>
+          <option value="fa-chevron-circle-up">Circle Up</option>
+          <option value="fa-chevron-up">Up</option>
+          <option value="fa-chevron-left">Left</option>
+          <option value="fa-chevron-right">Right</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contentblock mb-90">
+  {{> components-search }}
+</div>
+
+{{> components-footer }}

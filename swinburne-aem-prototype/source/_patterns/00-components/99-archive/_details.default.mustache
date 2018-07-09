@@ -1,0 +1,18 @@
+<div class="page-details text-center {{ styleModifier }}" role="banner" style="background-image: url('{{ page-details-background }}')">
+  <div class="container">
+    {{# page-details-breadcrumb }} {{> components-breadcrumb }} {{/ page-details-breadcrumb }} {{# page-details-date }} {{> components-page-date }} {{/ page-details-date }} {{# page-details-content }}
+    <header>
+      <h1>{{{ page-details-title }}}</h1>
+      {{# page-details-content-desc }}
+        <div class="description">
+          <p>{{{ page-details-content-desc }}}</p>
+        </div>
+      {{/ page-details-content-desc }}
+    </header>
+  {{/ page-details-content }} {{# page-details-search }}
+    <section data-modules="header-search">
+      {{> helpers-quicksearch }}
+    </section>
+  {{/ page-details-search }}
+  </div>
+</div>

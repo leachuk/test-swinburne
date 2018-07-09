@@ -1,0 +1,168 @@
+<%
+    //println "REPORT: entering spec-template"
+    def fmt, stats, gebReport
+
+    String gebEnvReportsDir = System.getProperty("geb.build.reportsDir")
+    def reportPath = "../../${gebEnvReportsDir}/"
+    def rootPath = "../../"
+    def removePathStart = "./"
+
+    def pathCheckStartSource = "./src/"
+    def pathCheckStartSpec = "./specs/"
+    def pathCheckEndDiff = ".diff.png"
+    def pathCheckEndImage = ".png"
+    def pathCheckEndHtml = ".html"
+
+    def codeCheckFileGen = /[ ]*(report|designRef|takeScreenshot).*/
+
+    def blockNameTranslations = ['Given:':'Given:','When:':'When','And:':'And','Then:':'Then']
+
+    //we need the JsonReport converted before the template is executed
+    //since Spock-Reports first executes the spec-templates, we
+    //have to transform the JsonReport in here...
+    //println "REPORT: convert report data"
+
+    def jsonFile = support.ReportConverter.convertJsonReport()
+
+    fmt = new com.athaydes.spockframework.report.internal.StringFormatHelper()
+    stats = com.athaydes.spockframework.report.util.Utils.stats( data )
+    gebReport = (new groovy.json.JsonSlurper()).parseText(new File(jsonFile).text)
+    //println "REPORT: parsed gebReport"
+    //println "REPORT: gebTestResults for ${data.info.description.className}"
+%>
+
+== Report for ${data?.info?.description?.className}
+
+<%
+    def gebTestResults
+    gebTestResults = gebReport.specs.find {it?.class==data.info.description.className}?.tests
+%>
+
+=== Summary
+[options="header",cols="asciidoc,asciidoc"]
+|====
+|Total Runs        |Success Rate                           |Total time                        |Failures          |Errors          |Skipped
+|${stats.totalRuns}|${fmt.toPercentage(stats.successRate)} |${fmt.toTimeDuration(stats.time)} |${stats.failures} |${stats.errors} |${stats.skipped}
+|====
+
+=== Features
+<%
+    features.eachFeature { name, result, blocks, iterations, params ->
+%>
+==== $name
+
+=====
+
+<%
+        //println "REPORT: gebTestResults - iteration for ${name}"
+        def gebArtefacts = gebTestResults?.find {it?.label==name}?.reports
+%>
+
+Result: **$result** [big]#<% if (result=="PASS") { %>icon:check-circle-o[role="green"]<% } else { %>icon:exclamation-triangle[role="red"]<% } %>#
+<%
+        def num = 0
+        for ( block in blocks ) {
+%>
+* **${blockNameTranslations[block.kind]?:block.kind}** ${block.text}
+<%
+            //fetch screenshots
+            def numCols = 0
+            def screenshots = []
+            gebArtefacts.each {
+                String blockScreenshots = ""
+
+                it.files.each { afile ->
+                    String filePathUrl = afile
+                    String filePathUrlEnc = afile
+                    String filePathFull = afile
+
+                    filePathUrl = filePathFull.startsWith('./') ? filePathUrl.substring(2) : filePathUrl
+                    filePathUrl = filePathFull.startsWith(pathCheckStartSpec) ? reportPath+filePathUrl : rootPath+filePathUrl
+                    filePathUrlEnc = filePathUrl.replaceAll(' ','%20')
+
+                    if (filePathFull.endsWith(pathCheckEndImage)) {
+                        if (filePathFull.startsWith(pathCheckStartSource)) {
+                            blockScreenshots = blockScreenshots << """ .Source\n"""
+                        } else if (filePathFull.endsWith(pathCheckEndDiff)) {
+                            blockScreenshots = blockScreenshots << """ a| .Diff\n"""
+                        } else if (!filePathFull.startsWith(pathCheckStartSpec)) {
+                            if (it.files.size() > 1) {
+                                blockScreenshots = blockScreenshots << """ a| """
+                            }
+                            blockScreenshots = blockScreenshots << """ .Current\n"""
+                        }
+                        blockScreenshots = blockScreenshots << """image:${filePathUrl}[width="95%",pdfwidth="100%",scaledwidth="95%",link="${filePathUrl}"]\n"""
+                    }
+                    if (filePathFull.endsWith(pathCheckEndHtml)) {
+                        blockScreenshots = blockScreenshots << """link:${filePathUrlEnc}[source html]\n"""
+                    }
+
+                }
+                numCols++
+                screenshots << """${blockScreenshots}"""
+            }
+
+            //output testcode along with screenshots
+            def needsScreenshot = false
+            if ( block.sourceCode ) {
+                out << "\n[cols=\"2,1\"]\n|====\n"
+                out << "\na|[source,groovy,linenums]\n----\n"
+                block.sourceCode.each { codeLine ->
+                    out << codeLine
+                    out << "\n"
+
+                    def m = codeLine =~ codeCheckFileGen
+
+                    if (0..<m.count) {
+                        needsScreenshot = true
+                    }
+                }
+                out << "----\n\n"
+                if (needsScreenshot && screenshots[num] != null) {
+                    out << "a| " << screenshots[num++] <<"\n"
+                } else {
+                    out << "| \n"
+                }
+                out << "|====\n"
+            }
+        } //for ( block in blocks ) {
+
+        def executedIterations = iterations.findAll { it.dataValues || it.errors }
+        if ( params && executedIterations && executedIterations.size() > 1 ) {
+ %>
+
+[options="header"]
+|====
+| ${params.join( ' | ' )} | Result
+<%
+            for ( iteration in executedIterations ) {
+%>| ${iteration.dataValues.join( ' | ' )} | ${iteration.errors ? 'icon:exclamation-triangle[role="red"]FAIL' : 'icon:check-circle-o[role="green"]PASS'}
+<%          }
+%>|====
+<%      }
+
+        def problems = executedIterations.findAll { it.errors }
+        if ( problems ) {
+            out << """
+[WARNING]
+.The following problems occurred:
+====
+"""
+            for ( badIteration in problems ) {
+                if ( badIteration.dataValues ) {
+                    out << '* ' << badIteration.dataValues << '\n'
+                }
+                for ( error in badIteration.errors ) {
+                    out << '----\n' << error << '\n----\n'
+                }
+            }
+            out << """
+====
+"""
+        }
+
+out << """
+=====
+"""
+    } //features.eachFeature
+ %>

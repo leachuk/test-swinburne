@@ -1,0 +1,17 @@
+{
+  "breadcrumbs": [
+    {
+      "href": "#",
+      "label": "Home"
+    },
+    {
+      "active": true,
+      "href": "#",
+      "label": "Articles"
+    }
+  ],
+
+  "page-details-background": "//dummyimage.com/1x1/dedede/fff.jpg",
+  "page-details-content": true,
+  "page-details-title": "Testing"
+}

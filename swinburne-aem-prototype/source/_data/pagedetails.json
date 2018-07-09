@@ -1,0 +1,26 @@
+{
+  "hideH1": false,
+  "hideH2": true,
+  "hideLEAD": true,
+  "hidePARAGRAPH": true,
+
+  "pageDetails": {
+    "componentProperties" : {
+      "componentId": "pagedetails1",
+      "componentTheme": "theme--page-details-header-column-title-image",
+      "componentModifier": "",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+
+      "pageBackgroundImage": "",
+      "hideTitle": false,
+      "hideDescription": false,
+      "showToolbar": true,
+
+      "container": "",
+      "pageTitle": "UC EXPERIENCE",
+      "richText": "Your future looks great"
+    }
+  }
+}

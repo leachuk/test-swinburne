@@ -1,0 +1,23 @@
+{
+  "breadcrumbs": [
+    {
+      "href": "#",
+      "label": "Home"
+    },
+    {
+      "href": "#",
+      "label": "Search"
+    },
+    {
+      "active": true,
+      "href": "#",
+      "label": "Search results"
+    }
+  ],
+
+  "page-details-background": "//dummyimage.com/1x1/dedede/dedede.jpg",
+  "page-details-content": true,
+  "page-details-content-desc": false,
+  "page-details-date": false,
+  "page-details-title": "We found 85 results for <span class='query'>Page 1</span>"
+}

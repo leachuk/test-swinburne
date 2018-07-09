@@ -1,0 +1,70 @@
+<!-- // Text \\ -->
+<div class="container my-large">
+  <div class="row">
+    <h1>Text Components</h1>
+  </div>
+  <div id="{{richText.componentProperties.componentId}}" class="text
+    {{richText.componentProperties.componentTheme}}
+      {{richText.componentProperties.componentModifier}}
+      {{richText.componentProperties.componentChevron}}
+      {{richText.componentProperties.componentIcon}}
+      {{styleModifier}}
+  "
+
+      {{# richText.componentProperties.componentModules }}
+         data-module="{{richText.componentProperties.componentModules}}"
+      {{/ richText.componentProperties.componentModules }}
+    >
+      {{^hideH1 }}
+        <h1 class="{{ h1Modifiers }}">{{ richText.componentProperties.h1 }}</h1>
+      {{/hideH1}}
+
+      {{^hideH2 }}
+        <h2 class="{{ h2Modifiers }}">{{ richText.componentProperties.h2 }}</h2>
+      {{/hideH2}}
+
+      {{^hideLEAD }}
+        <p><span class="p1">{{ richText.componentProperties.lead }}</span></p>
+      {{/hideLEAD}}
+
+      {{^hidePARAGRAPH }}
+        <p>{{ richText.componentProperties.paragraph }}</p>
+      {{/hidePARAGRAPH}}
+  </div>
+  <hr/>
+  <div id="{{richText1.componentProperties.componentId}}" class="text
+    {{richText1.componentProperties.componentTheme}}
+    {{richText1.componentProperties.componentModifier}}
+    {{richText1.componentProperties.componentChevron}}
+    {{richText1.componentProperties.componentIcon}}
+    {{styleModifier}}"
+
+    {{# richText1.componentProperties.componentModules }}
+         data-module="{{richText1.componentProperties.componentModules}}"
+    {{/ richText1.componentProperties.componentModules }}
+  <div>{{{richText1.componentProperties.text}}}</div>
+  <hr/>
+  <div id="{{richText2.componentProperties.componentId}}" class="text
+    {{richText2.componentProperties.componentTheme}}
+  {{richText2.componentProperties.componentModifier}}
+  {{richText2.componentProperties.componentChevron}}
+  {{richText2.componentProperties.componentIcon}}
+  {{styleModifier}}"
+
+  {{# richText2.componentProperties.componentModules }}
+       data-module="{{richText2.componentProperties.componentModules}}"
+  {{/ richText2.componentProperties.componentModules }}
+  <div>{{{richText2.componentProperties.text}}}</div>
+  <hr/>
+  <div id="{{richText3.componentProperties.componentId}}" class="text
+    {{richText3.componentProperties.componentTheme}}
+  {{richText3.componentProperties.componentModifier}}
+  {{richText3.componentProperties.componentChevron}}
+  {{richText3.componentProperties.componentIcon}}
+  {{styleModifier}}"
+
+  {{# richText3.componentProperties.componentModules }}
+       data-module="{{richText3.componentProperties.componentModules}}"
+  {{/ richText3.componentProperties.componentModules }}
+  <div>{{{richText3.componentProperties.text}}}</div>
+</div>

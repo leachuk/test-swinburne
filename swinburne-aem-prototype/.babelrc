@@ -1,0 +1,23 @@
+{
+  "comments": true,
+  "compact": "auto",
+  "retainLines": true,
+
+  "presets": [
+    ["@babel/preset-es2015"],
+    ["@babel/preset-react"],
+    ["@babel/preset-env", {
+      "modules": false,
+      "useBuiltIns": "usage"
+    }],
+    ["@babel/preset-stage-0", {
+      "decoratorsLegacy": true,
+      "loose": true,
+      "useBuiltIns": true
+    }]
+  ],
+
+  "plugins": [
+    "react-hot-loader/babel"
+  ]
+}

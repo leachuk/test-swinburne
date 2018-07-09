@@ -1,0 +1,14 @@
+// Font weights
+@each $weight in 300 400 600 700 {
+  .fw-#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+.f-open-sans {
+  font-family: $font-family-open-sans;
+}
+
+.f-brush-up {
+  font-family: $font-family-brush-up;
+}

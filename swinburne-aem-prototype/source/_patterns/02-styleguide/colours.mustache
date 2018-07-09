@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <h1>{{ colours_title }}</h1>
+  </div>
+  <ul class="sg-colors">
+    {{# colours }}
+    <li>
+      <div class="sg-swatch" style="background-color: {{ value }};"></div>
+      <div class="sg-label">{{ name }} - <strong>{{ value }}</strong></div>
+    </li>
+    {{/ colours }}
+  </ul>
+
+  <p class="mt-60">Background Class Colours</p>
+  <ul class="sg-colors">
+    {{# bg-colours }}
+    <li>
+      <div class="sg-swatch {{ value }}"></div>
+      <div class="sg-label"><strong>{{ value }}</strong></div>
+    </li>
+    {{/ bg-colours }}
+  </ul>
+
+  <p class="mt-60">Text Class Colours</p>
+  <ul class="sg-colors">
+    {{# text-colours }}
+    <li>
+      <div class="sg-swatch {{ value }}">
+        <p class="{{ value }}">text colour</p>
+      </div>
+      <div class="sg-label"><strong>{{ value }}</strong></div>
+    </li>
+    {{/ text-colours }}
+  </ul>
+</div>

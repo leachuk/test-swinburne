@@ -1,0 +1,41 @@
+{{> components-header }}
+
+<section class="contentblock mb-90">
+  {{> components-page-details }}
+</section>
+
+<section class="contentblock mb-90 text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-md-12">
+        {{> components-text(
+          text: "<h1>Article Heading</h1>"
+        ) }}
+        {{> components-text(
+          text: "<p class='lead'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatum accusamus, iste optio, quaerat officiis veritatis voluptas minus quasi delectus ratione suscipit, quas ea iusto. Maiores neque voluptas minus iure?</p>"
+        ) }}
+      </div>
+
+      <div class="w-100"></div>
+
+      <div class="col col-md-10 mt-90">
+        <figure class="theme--image-pull-left">
+          <img src="//via.placeholder.com/950x430" alt="">
+          <figcaption>Discussions about the cord cutting phenomenon</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contentblock mb-90 text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-md-9">
+        {{> components-blockquote }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> components-footer }}

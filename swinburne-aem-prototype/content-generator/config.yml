@@ -1,0 +1,1559 @@
+
+# Modifiers
+content/cq:tags/swinburne/component-style-modifier:
+  # Backgrounds
+  background:
+    prefixes:
+      - c1
+      - c2
+      - c3
+      - c4
+      - c5
+      - c6
+      - c7
+      - c8
+      - c9
+      - g1
+      - g2
+      - g3
+      - g4
+      - g5
+      - g6
+      - g7
+    startWith: bg-
+    title: 'Background Colour - %%prefix_normalised%%'
+
+  background/standard:
+    prefixes:
+      - danger
+      - dark
+      - faded
+      - info
+      - inverse
+      - light
+      - primary
+      - success
+      - warning
+    valueFormat: bg-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+  border:
+    sizes:
+      - '0'
+      - '1'
+    prefixes:
+      - border
+      - border-bottom
+      - border-top
+      - border-left
+      - border-right
+      - rounded
+      - rounded-bottom
+      - rounded-top
+      - rounded-left
+      - rounded-right
+    title: '%%prefix_normalised%% %%size%%px'
+
+  border/rounded-circle:
+    flat: true
+    prefix: rounded-circle
+    title: 'Rounded Circle'
+
+  # Content Inverted
+  content/inverted:
+    flat: true
+    prefix: inverted
+    title: 'Inverted'
+
+  # Colours
+  color:
+    prefixes:
+      - c1
+      - c2
+      - c3
+      - c4
+      - c5
+      - c6
+      - c7
+      - c8
+      - c9
+      - g1
+      - g2
+      - g3
+      - g4
+      - g5
+      - g6
+      - g7
+    startWith: text-
+    title: 'Text Colour - %%prefix_normalised%%'
+
+  # Colors Standard
+  color/standard:
+    prefixes:
+      - danger
+      - info
+      - muted
+      - primary
+      - success
+      - warning
+      - white
+    valueFormat: text-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+  # Columns
+  column/standard:
+    prefixes:
+      - xs
+      - sm
+      - md
+      - lg
+      - xl
+    sizes:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+    valueFormat: col-%%prefix%%-%%size%%
+    title: 'Col %%prefix_normalised%% %%size%%'
+
+  column/prefix-only:
+    prefixes:
+      - xs
+      - sm
+      - md
+      - lg
+      - xl
+    valueFormat: col-%%prefix%%
+    title: 'Col %%prefix_normalised%%'
+
+  column/col:
+    flat: true
+    prefix: col
+    title: 'Col'
+
+  # Align
+  align/text:
+    prefixes:
+      - center
+      - left
+      - right
+    valueFormat: text-%%prefix%%
+    title: 'Text - %%prefix_normalised%%'
+
+
+  # Button
+  button/group/group/vertical:
+    flat: true
+    prefix: btn btn-group-vertical
+    title: 'Vertical'
+
+  button/group/size/large:
+    flat: true
+    prefix: btn btn-group-lg
+    title: 'Large'
+
+  button/group/size/small:
+    flat: true
+    prefix: btn btn-group-sm
+    title: 'Small'
+
+  button/group/toolbar:
+    flat: true
+    prefix: btn btn-toolbar
+    title: 'Toolbar'
+
+  ## Button Normal
+  button/normal:
+    prefixes:
+      - danger
+      - info
+      - light
+      - link
+      - primary
+      - secondary
+      - success
+      - warning
+    valueFormat: btn btn-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+  ## Button Outline
+  button/outline:
+    prefixes:
+      - danger
+      - info
+      - light
+      - link
+      - primary
+      - secondary
+      - success
+      - warning
+    valueFormat: btn btn-outline-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+  ## Button Size
+  button/size/block:
+    flat: true
+    prefix: btn btn-block
+    title: 'Block'
+
+  button/size/large:
+    flat: true
+    prefix: btn btn-lg
+    title: 'Large'
+
+  button/size/small:
+    flat: true
+    prefix: btn btn-sm
+    title: 'Small'
+
+  button/size/variable:
+    flat: true
+    prefix: btn btn-variable
+    title: 'Variable'
+
+  ## Button State
+  button/state/active:
+    flat: true
+    prefix: active
+    title: 'Active'
+
+  button/state/disabled:
+    flat: true
+    prefix: disabled
+    title: 'Disabled'
+
+  # Cards
+  card:
+    prefixes:
+      - author
+      - coloured
+      - inverse
+      - large
+      - medium
+      - medium-tall
+      - no-bar
+      - no-shadow
+      - outline
+      - padded
+      - promoted
+    valueFormat: card--%%prefix%%
+    title: 'Card - %%prefix_normalised%%'
+
+  card/inverse:
+    flat: true
+    prefix: card-inverse
+    title: 'Inverse'
+
+  card/container:
+    prefixes:
+      - columns
+      - deck
+      - group
+    valueFormat: card-%%prefix%%
+    title: 'Card - %%prefix_normalised%%'
+
+  card/background:
+    prefixes:
+      - danger
+      - info
+      - primary
+      - success
+      - warning
+    valueFormat: card-%%prefix%%
+    title: 'Background - %%prefix_normalised%%'
+
+  card/outline:
+    prefixes:
+      - danger
+      - info
+      - primary
+      - success
+      - warning
+    valueFormat: card-outline-%%prefix%%
+    title: 'Outline - %%prefix_normalised%%'
+
+
+  # Embed
+  embed/default:
+    flat: true
+    prefix: embed-responsive embed-responsive-1by1
+    title: 'Default'
+
+  embed/embed-responsive-1by1:
+    flat: true
+    prefix: embed-responsive embed-responsive-1by1
+    title: 'Responsive 1 by 1'
+
+  embed/embed-responsive-4by3:
+    flat: true
+    prefix: embed-responsive embed-responsive-4by3
+    title: 'Responsive 4 by 3'
+
+  embed/embed-responsive-16by9:
+    flat: true
+    prefix: embed-responsive embed-responsive-16by9
+    title: 'Responsive 16 by 9'
+
+  embed/embed-responsive-21by9:
+    flat: true
+    prefix: embed-responsive embed-responsive-21by9
+    title: 'Responsive 21 by 9'
+
+  # Flexbox
+  flex/align-items:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - baseline
+      - center
+      - end
+      - start
+      - stretch
+    valueFormat: 'align-items%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  flex/align-self:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - baseline
+      - center
+      - end
+      - start
+      - stretch
+    valueFormat: 'align-self%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  flex/direction:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - row
+      - row-reverse
+      - column
+      - column-reverse
+    valueFormat: 'flex%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  flex/justify-content:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - around
+      - between
+      - center
+      - end
+      - start
+    valueFormat: 'justify-content%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  flex/order:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    sizes:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+    prefix: order
+    title: '%%sizeWithSuffix%% %%breakpoint%%'
+
+  flex/wrap:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - nowrap
+      - wrap
+      - wrap-reverse
+    valueFormat: 'flex%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  # Font
+  font/font-weight-light:
+    flat: true
+    prefix: fw-300
+    title: 'Font Weight (Light)'
+
+  font/font-weight-normal:
+    flat: true
+    prefix: fw-400
+    title: 'Font Weight (Normal)'
+
+  font/font-weight-bold:
+    flat: true
+    prefix: fw-500
+    title: 'Font Weight (Bold)'
+
+  font/font-weight-bolder:
+    flat: true
+    prefix: fw-600
+    title: 'Font Weight (Bolder)'
+
+  # Grid
+  grid/container:
+    flat: true
+    prefix: container
+    title: 'Container'
+
+  grid/container-flush:
+    flat: true
+    prefix: container-flush
+    title: 'Container Flush'
+
+  # Icons
+  icon/size:
+    prefixes:
+      - xs
+      - sm
+      - md
+      - lg
+      - xl
+    prefixValue: icon--
+    title: 'Icon Size (%%prefix_normalised%%)'
+
+  icon/rotate:
+    prefixes:
+      - rotate-90
+      - rotate-180
+      - rotate-270
+    prefixValue: fa-
+    title: '%%prefix_normalised%%'
+
+  icon/position:
+    prefixes:
+      - pull-left
+      - pull-right
+    prefixValue: fa-
+    title: '%%prefix_normalised%%'
+
+  icon/list:
+    prefixes:
+      - ol
+      - ul
+    prefixValue: fa-
+    title: '%%prefix_normalised%%'
+
+  icon/animation:
+    prefixes:
+      - pulse
+      - spin
+    prefixValue: fa-
+    title: '%%prefix_normalised%%'
+
+  icon/box:
+    prefixes:
+      - border
+      - fw
+    prefixValue: fa-
+    title: '%%prefix_normalised%%'
+
+  icon/stack:
+    prefixes:
+      - stack-1x
+      - stack-2x
+    prefixValue: fa-
+    title: '%%prefix_normalised%%'
+
+  icon/flip:
+    prefixes:
+      - horizontal
+      - vertical
+    prefixValue: fa-flip-
+    title: '%%prefix_normalised%%'
+
+  icon/color:
+    prefixes:
+      - inverse
+    prefixValue: fa-
+    title: '%%prefix_normalised%%'
+
+  # Margin
+  margin:
+    breakpoints:
+      - sm
+      - md
+    emptyTitle: true
+    prefixes:
+      - m
+      - mb
+      - mt
+      - ml
+      - mr
+      - mx
+      - my
+    sizes:
+      - 0
+      - 15
+      - 30
+      - 45
+      - 60
+      - 75
+      - 90
+      - 120
+    title: '%%prefix_normalised%% - %%size%%px %%breakpoint%%'
+
+  margin/mx-0:
+    flat: true
+    prefix: mx-0
+    title: 'No Left and Right Margins'
+  margin/my-0:
+    flat: true
+    prefix: my-0
+    title: 'No Top and Bottom Margins'
+  margin/mx-auto:
+    flat: true
+    prefix: mx-auto
+    title: 'Center Horizontally'
+
+  # Padding
+  padding:
+    breakpoints:
+      - sm
+      - md
+    emptyTitle: true
+    prefixes:
+      - p
+      - pb
+      - pt
+      - pl
+      - pr
+      - px
+      - py
+    sizes:
+      - 0
+      - 15
+      - 30
+      - 45
+      - 60
+      - 75
+      - 90
+      - 120
+    title: '%%prefix_normalised%% %%size%%px %%breakpoint%%'
+
+  margin/px-0:
+    flat: true
+    prefix: px-0
+    title: 'No Left and Right Padding'
+  margin/py-0:
+    flat: true
+    prefix: py-0
+    title: 'No Top and Bottom Padding'
+
+  # Text Alignments
+  text/alignment:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - center
+      - left
+      - right
+    prefixValue: text-
+    title: 'Text Alignment (%%prefix_normalised%%) %%breakpoint%%'
+
+  text/alignment/text-center:
+    flat: true
+    prefix: text-center
+    title: '%%prefix_normalised%%'
+  text/alignment/text-right:
+    flat: true
+    prefix: text-right
+    title: '%%prefix_normalised%%'
+  text/alignment/text-left:
+    flat: true
+    prefix: text-left
+    title: '%%prefix_normalised%%'
+
+  # Text transforms
+  text/transform:
+    prefixes:
+      - capitalize
+      - lowercase
+      - none
+      - uppercase
+    prefixValue: text-
+    title: 'Text Transform (%%prefix_normalised%%)'
+
+  video:
+    prefixes:
+      - loop
+      - muted
+      - playsinline
+    title: '%%prefix_normalised%%'
+
+  visibility:
+    prefixes:
+      - hidden
+      - hidden-lg-down
+      - hidden-lg-up
+      - hidden-md-down
+      - hidden-md-up
+      - hidden-sm-down
+      - hidden-sm-up
+      - hidden-xs-down
+      - hidden-xs-up
+      - hidden-xl-down
+      - hidden-xl-up
+      - invisible
+      - sr-only
+      - sr-only-focusable
+      - text-hide
+      - visible
+    title: '%%prefix_normalised%%'
+
+# Modules
+content/cq:tags/swinburne/component-style-module:
+  media/video/background:
+    flat: true
+    prefix: play-video
+    title: 'Play Background Video'
+
+  media/video/popup:
+    flat: true
+    prefix: play-video
+    title: 'Play Popup Video'
+
+  # Search widget
+  widgets/search/global-search:
+    flat: true
+    prefix: global-search
+    title: 'Global Search'
+
+  widgets/search/quicksearch:
+    flat: true
+    prefix: search
+    title: 'Quick Search'
+
+  # Carousel
+  lists/carousel:
+    flat: true
+    prefix: carousel
+    title: 'Carousel'
+
+# Themes
+content/cq:tags/swinburne/component-style-theme:
+  # Cards
+  common/cards:
+    prefixes:
+      - author
+      - coloured
+      - inverse
+      - large
+      - medium
+      - medium-tall
+      - no-bar
+      - no-shadow
+      - outline
+      - padded
+      - promoted
+    valueFormat: cards-%%prefix%%
+    title: 'Cards - %%prefix_normalised%%'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  #/apps/aemdesign/global/dialog/touch/badge
+  common/card/size:
+    prefixes:
+      - large
+      - medium
+      - small
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  # /apps/aemdesign/global/dialog/touch/sitetheme
+  common/site/themecategory:
+    prefixes:
+      - none
+    valueFormat: ' '
+    title: '%%prefix_normalised%%'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  # /apps/aemdesign/global/dialog/touch/sitetheme
+  common/site/themecolor:
+    prefixes:
+      - none
+    valueFormat: ' '
+    title: '%%prefix_normalised%%'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  # /apps/aemdesign/global/dialog/touch/sitetheme
+  common/site/tilecolor:
+    prefixes:
+      - none
+    valueFormat: ' '
+    title: '%%prefix_normalised%%'
+
+  # Content Link
+  content/link/button-nav:
+    flat: true
+    prefix: 'navbar-toggler navbar-toggler-right hidden-lg-up'
+    title: 'Button Nav'
+
+  content/link/navbar-brand:
+    flat: true
+    prefix: 'navbar-brand'
+    title: 'Navbar Brand'
+
+  content/link/navbar-home:
+    flat: true
+    prefix: navbar-home
+    title: 'Navbar Home Button'
+
+  content/link/navbar-toggler:
+    flat: true
+    prefix: navbar-toggler
+    title: 'Navbar Toggler (Hamburger)'
+
+  # Content Table
+  content/table:
+    prefixes:
+      - bordered
+      - hover
+      - inverse
+      - responsive
+      - striped
+      - sm
+    valueFormat: 'table-%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  # Content Text
+  content/text:
+    prefixes:
+      - negative
+      - positive
+    valueFormat: 'theme-%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+
+  # Details
+  ## Contact Details
+  details/contact-details/format/description/default:
+    flat: true
+    prefix: '${title}'
+    title: 'Default format'
+
+  details/contact-details/format/description/jobTitleAtEmployee:
+    flat: true
+    prefix: '<span itemprop="jobTitle">${jobTitle}</span> for <span itemprop="employee" itemtype="http://schema.org/Organization">${employee}</span>'
+    title: 'Job Title At Employee'
+
+  details/contact-details/format/description/jobTitleAtEmployeeWithEmail:
+    flat: true
+    prefix: '<span itemprop="jobTitle">${jobTitle}</span> for <span itemprop="employee" itemtype="http://schema.org/Organization">${employee}</span> <a href="mailto:${email}" itemprop="email">${email}</a>'
+    title: 'Job Title At Employee with Email'
+
+  details/contact-details/format/title/default:
+    flat: true
+    prefix: '${honorificPrefix} ${givenName} ${familyName}'
+    title: 'Default format'
+
+  details/contact-details/format/title/author:
+    flat: true
+    prefix: 'Author: <span itemprop="name">${givenName} ${familyName}</span>'
+    title: 'Author prefix with Name'
+
+  ## Event Details
+  details/event-details/format/title/default:
+    flat: true
+    prefix: '${title}'
+    title: 'Default format'
+
+  details/event-details/format/title/italic:
+    flat: true
+    prefix: '<i>${title}</i>'
+    title: 'Italic Title'
+
+  details/event-details/format/subtitle/default:
+    flat: true
+    prefix: '${eventStartDateText} to ${eventEndDateText}'
+    title: 'Default Start and End Date Formatted'
+
+  details/event-details/format/subtitle/daterangewithlocation:
+    flat: true
+    prefix: '${eventStartDateText} to ${eventEndDateText} , ${eventLoc}'
+    title: 'Date Start and End Date with Location'
+
+  details/event-details/format/subtitle/singledate:
+    flat: true
+    prefix: '${eventStartDateText}'
+    title: 'Event Start Date Formatted'
+
+  details/event-details/format/subtitle/singledatetime:
+    flat: true
+    prefix: '${eventStartDateText}, ${eventStartTimeText}'
+    title: 'Event Start Date and Time Formatted'
+
+  details/event-details/format/subtitle/singledatetimerange:
+    flat: true
+    prefix: '${eventStartDateText}, ${eventStartTimeText} to ${eventEndTimeText}'
+    title: 'Event Start Date and Time with End Time Formatted'
+
+  details/event-details/format/subtitle/singledatewithlocation:
+    flat: true
+    prefix: '${eventLoc}, ${eventStartDateText}'
+    title: 'Event Location with Start Date Formatted'
+
+  details/event-details/format/displaytime/default:
+    flat: true
+    prefix: '${eventStartTimeText} to ${eventEndTimeText}'
+    title: 'Default Start and End Time formatted'
+
+  details/event-details/format/displaydate/default:
+    flat: true
+    prefix: '${eventStartDateText} to ${eventEndDateText}'
+    title: 'Default Start and End Date formatted'
+
+  details/event-details/format/displaydate/hyphen-seprator:
+    flat: true
+    prefix: '${eventStartDateText} - ${eventEndDateText}'
+    title: 'Hyphen Separated Start and End Date formatted'
+
+  ## Page Details
+  details/page-details/format/title/default:
+    flat: true
+    prefix: '${title}'
+    title: 'Default format'
+
+  details/page-details/format/title/italic:
+    flat: true
+    prefix: '<i>${title}</i>'
+    title: 'Italic Title'
+
+  details/page-details/format/title/including-subtitle:
+    flat: true
+    prefix: '${title}<span class="subtitle">${subtitle}</span>'
+    title: 'Including Subtitle'
+
+  # Content Block
+  layout/contentblock:
+    prefixes:
+      - alert
+      - hero
+      - pull-quote
+    prefixValue: theme--contentblock-
+    title: 'Content Block - %%prefix_normalised%%'
+
+
+
+  layout/contentblock/constraints:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    sizes:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+    prefix: theme--contentblock-constrain
+    valueFormat: '%%prefix%%%%infix%%-%%size%%'
+    title: '%%size%% columns %%breakpoint%%'
+
+  # Navbar
+  layout/navbar/headernav:
+    flat: true
+    prefix: 'navbar-expand-lg navbar-light bg-white'
+    title: 'Header Nav'
+
+  layout/navbar/simple-inverse:
+    flat: true
+    prefix: 'navbar-toggleable-md navbar-inverse bg-inverse fixed-top'
+    title: 'Simple Inverse'
+
+  # Lists
+  lists:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - inline
+      - flush
+    valueFormat: 'theme--lists%%infix%%-%%prefix%%'
+    title: 'Inline List %%breakpoint%%'
+
+  lists/direction:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - row
+      - row-reverse
+      - column
+      - column-reverse
+    valueFormat: 'theme--lists%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  lists/equal:
+    flat: true
+    prefix: theme--lists-equal
+    title: 'Equal (50%-50%) Width Items'
+
+  lists/flat:
+    flat: true
+    prefix: theme--lists-flat
+    title: 'Flat (unstyled) Items'
+
+  lists/large:
+    flat: true
+    prefix: theme--lists-large
+    title: 'Large (33.33%) Items'
+
+  lists/fill:
+    flat: true
+    prefix: theme--lists-fill
+    title: '100% Width Items'
+
+  lists/light:
+    flat: true
+    prefix: theme--lists-light
+    title: 'Lighter Colour Links'
+
+  lists/justify:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - jc
+      - je
+      - js
+      - aic
+      - aie
+      - ais
+      - acc
+      - ace
+      - acs
+    valueFormat: 'theme--lists%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  # Image
+  media/image:
+    prefixes:
+      - banner
+      - figure
+    title: '%%prefix_normalised%%'
+
+  media/image/caption:
+    flat: true
+    prefix: theme--image-caption
+    title: 'Captioned Image'
+
+  media/image/pull:
+    prefixes:
+      - left
+      - right
+    sizes:
+      - 1
+      - 2
+      - 3
+      - 4
+    valueFormat: 'theme--image-pull-%%prefix%%-%%size%%'
+    title: 'Pull Image - %%prefix_normalised%% (%%size%% Columns)'
+
+  # Video
+  media/video/background:
+    flat: true
+    prefix: theme--video-background
+    title: 'Background Video'
+
+  # Footer
+  layout/brand-footer:
+    flat: true
+    prefix: brand-footer
+    title: 'Brand Footer'
+
+  # Header
+  layout/header/fixed-top:
+    flat: true
+    prefix: brand-header fixed-top
+    title: 'Brand Header - Fixed Top'
+
+  # Content Block
+  layout/contentblock/header/brand-top:
+    flat: true
+    prefix: brand-header__top container d-flex align-items-center justify-content-center justify-content-md-start
+    title: 'Brand Top'
+
+  layout/contentblock/container:
+    flat: true
+    prefix: container
+    title: 'Container'
+
+  layout/contentblock/container-flush:
+    flat: true
+    prefix: container-flush
+    title: 'Container Flush'
+
+  layout/contentblock/collapse:
+    flat: true
+    prefix: theme--contentblock-collapse
+    title: 'Collapsable Accordion'
+
+  layout/contentblock/split:
+    flat: true
+    prefix: theme--contentblock-split
+    title: 'Horizontal Split (line)'
+
+  layout/contentblock/navbar/collapse:
+    flat: true
+    prefix: collapse navbar-collapse
+    title: 'Navbar Collapse'
+
+  layout/contentblock/footer/top:
+    flat: true
+    prefix: brand-footer__top
+    title: 'Brand Footer - Top'
+
+  layout/contentblock/footer/bottom:
+    flat: true
+    prefix: brand-footer__bottom
+    title: 'Brand Footer - Bottom'
+
+  layout/contentblock/alert:
+    flat: true
+    prefix: brand-footer__bottom
+    title: 'Brand Footer - Bottom'
+
+  # Nav list
+  lists/navlist/navbar/nav:
+    flat: true
+    prefix: navbar-nav
+    title: 'Navbar Nav'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  # Badge - menuColor
+  lists/navlist/color:
+    prefixes:
+      - none
+    prefixValue: ' '
+    title: '%%prefix_normalised%%'
+
+  # Navbar
+  lists/navbar/headernav:
+    flat: true
+    prefix: navbar-expand-lg navbar-light bg-white
+    title: 'Header Nav'
+
+  # Colctrl
+  layout/colctrl/flush:
+    prefixes:
+      - grid-flush
+    prefixValue: theme--
+    title: 'Grid - %%prefix_normalised%%'
+
+  layout/colctrl/column:
+    prefixToFolders:
+      sm: small
+      md: medium
+      lg: large
+    prefixes:
+      - sm
+      - md
+      - lg
+    sizes:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+    valueFormat: 'col-%%prefix%%-%%size%%'
+    title: '%%size%% Columns'
+
+  layout/colctrl/column/small/auto:
+    flat: true
+    prefix: col-auto
+    title: 'Automatic Widths'
+
+  layout/colctrl/column/medium/auto:
+    flat: true
+    prefix: col-md-auto
+    title: 'Automatic Widths - Medium Up'
+
+  layout/colctrl/column/large/auto:
+    flat: true
+    prefix: col-lg-auto
+    title: 'Automatic Widths - Large Up'
+
+  layout/colctrl/row/align-items:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - baseline
+      - center
+      - end
+      - start
+      - stretch
+    valueFormat: 'align-items%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  layout/colctrl/row/direction:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - row
+      - row-reverse
+      - column
+      - column-reverse
+    valueFormat: 'flex%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  layout/colctrl/row/justify-content:
+    breakpoints:
+      - sm
+      - md
+      - lg
+    prefixes:
+      - around
+      - between
+      - center
+      - end
+      - start
+    valueFormat: 'justify-content%%infix%%-%%prefix%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout:
+    prefixes:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+    startWith: col
+    valueFormat: '%%prefix%%;colctrl-%%prefix%%c'
+    title: '%%prefix_normalised%% Column'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-3-9:
+    flat: true
+    prefix: '2;col-md-,3,9'
+    title: '2 Column - 3 | 9'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col5-2-3-2-3-2:
+    flat: true
+    prefix: '5;col-md-,2,3,2,3,2'
+    title: '5 Column - 2 | 3 | 2 | 3 | 2'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col8-centered:
+    flat: true
+    prefix: 'col-md-8 mx-md-auto'
+    title: '8 Column - Centered'
+
+
+  # Widgets
+  widgets/sharebutton/addthisinline:
+    flat: true
+    prefix: addthis_inline_share_toolbox
+    title: 'Inline Share Toolbox'
+
+# Icon
+content/cq:tags/swinburne/component-style-icon:
+  feed/rss:
+    flat: true
+    prefix: 'fa fa-rss'
+    title: 'RSS'
+  feed/atom:
+    flat: true
+    prefix: 'fa fa-rss'
+    title: 'Atom'
+
+  social:
+    prefixes:
+      - vimeo
+      - youtube
+      - facebook-f
+      - github
+      - pinterest-p
+      - twitter
+      - weibo
+      - instagram
+      - linkedin-in
+    valueFormat: fa fa-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+  spinner:
+    prefixes:
+      - cog
+      - gear
+      - refresh
+      - spinner
+    valueFormat: fa fa-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+  general:
+    prefixes:
+      - ticks
+      - fast-forward
+      - comments
+      - briefcase
+      - calendar
+      - search
+      - home
+      - edit
+      - phone
+      - pencil-alt
+      - book
+      - reply-all
+      - life-ring
+    valueFormat: fa fa-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+  spinner/circle:
+    flat: true
+    prefix: 'fa fa-circle-o-notch'
+    title: 'Circle'
+
+# Chevron
+content/cq:tags/swinburne/component-style-chevron:
+  chevron:
+    prefixes:
+      - circle-down
+      - circle-up
+      - circle-right
+      - circle-left
+      - down
+      - up
+      - right
+      - left
+    valueFormat: fa fa-chevron-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+# Analytics
+content/cq:tags/swinburne/component-analytics:
+  hittype:
+    prefixes:
+      - event
+      - exception
+      - item
+      - pageview
+      - screenview
+      - social
+      - timing
+      - transaction
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+# Aria
+content/cq:tags/swinburne/component-aria:
+  live:
+    prefixes:
+      - assertive
+      - off
+      - polite
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  role:
+    prefixes:
+      - article
+      - banner
+      - complementary
+      - contentinfo
+      - navigation
+      - toolbar
+      - tooltip
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+# Dialog
+content/cq:tags/swinburne/component-dialog:
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  asset/rendition/prefix:
+    prefixes:
+      - thumbnail
+      - web
+    valueFormat: 'cq5dam.%%prefix%%.'
+    title: 'OOTB %%prefix_normalised%%'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  common/true-false:
+    prefixes:
+      - 'false'
+      - 'true'
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  honorific/prefix:
+    prefixes:
+      - dr
+      - lady
+      - miss
+      - mr
+      - mrs
+      - ms
+      - sir
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  honorific/suffix:
+    prefixes:
+      - none
+    valueFormat: '.'
+    title: '%%prefix_normalised%%'
+
+
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  html/animation/name:
+    prefixes:
+      - fade
+      - fade-down
+      - fade-down-left
+      - fade-down-right
+      - fade-left
+      - fade-right
+      - fade-up
+      - fade-up-left
+      - fade-up-right
+      - flip-down
+      - flip-left
+      - flip-right
+      - flip-up
+      - slide-down
+      - slide-left
+      - slide-right
+      - slide-up
+      - zoom-in
+      - zoom-in-down
+      - zoom-in-left
+      - zoom-in-right
+      - zoom-in-up
+      - zoom-out
+      - zoom-out-down
+      - zoom-out-left
+      - zoom-out-right
+      - zoom-out-up
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+# WARNING: Reference to these path is hardcoded into component dialogs
+  html/animation/easing:
+    prefixes:
+      - ease
+      - ease-in
+      - ease-in-back
+      - ease-in-cubic
+      - ease-in-out
+      - ease-in-out-back
+      - ease-in-out-cubic
+      - ease-in-out-quad
+      - ease-in-out-quart
+      - ease-in-out-sine
+      - ease-in-quad
+      - ease-in-quart
+      - ease-in-sine
+      - ease-out
+      - ease-out-back
+      - ease-out-cubic
+      - ease-out-quad
+      - ease-out-quart
+      - ease-out-sine
+      - linear
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+# WARNING: Reference to these path is hardcoded into component dialogs
+  html/heading:
+    prefixes:
+      - h1
+      - h2
+      - h3
+      - h4
+      - h5
+      - h6
+      - lead
+      - p2
+      - p3
+      - p4
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+# WARNING: Reference to these path is hardcoded into component dialogs
+  html/linktarget:
+    prefixes:
+      - blank
+      - parent
+      - self
+      - top
+    valueFormat: '_%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+# WARNING: Reference to these path is hardcoded into component dialogs
+  html/toggle:
+    prefixes:
+      - button
+      - buttons
+      - collapse
+      - dropdown
+      - modal
+      - pill
+      - popover
+      - tab
+      - tooltip
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+# WARNING: Reference to these path is hardcoded into component dialogs
+  html/type:
+    prefixes:
+      - button
+      - embed
+      - input
+      - link
+      - menu
+      - object
+      - script
+      - source
+      - style
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+content/cq:tags/swinburne/content-type:
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  asset:
+    prefixes:
+      - audio
+      - document
+      - image
+      - video
+    title: '%%prefix_normalised%%'
+
+  page:
+    prefixes:
+      - article
+      - book
+      - contact: {title: "Contact Page"}
+      - event
+      - location: {title: "Location Page"}
+      - news: {title: "News Page"}
+      - profile
+    title: '%%prefix_normalised%%'
+
+content/cq:tags/swinburne/component-topic:
+  #used for comms between components
+  group:
+    prefixes:
+      - group1
+      - group2
+    title: '%%prefix_normalised%%'
+
+  #used for comms between components
+  topic:
+    prefixes:
+      - eventFilterSelected         #when a selection in tag list is made
+      - mapMarkerFilterSelected     #when map marker is filtered
+    title: '%%prefix_normalised%%'
+
+apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins:
+  misctools/specialCharsConfig/chars:
+    template: 'text-misctools-specialCharsConfig-chars'
+    contents:
+      - default_copyright: { entity: '&amp;copy;', name: "copyright" }
+      - default_euro: { entity: '&amp;euro;', name: "euro" }
+      - default_registered: { entity: '&amp;reg;', name: "registered" }
+      - default_trademark: { entity: '&amp;trade;', name: "trademark" }
+
+  styles/styles:
+    template: 'text-rtePlugins-styles-styles'
+    contents:
+      - textC1: { cssName: 'text-c1', text: "Colour C1 (#008e9e)" }
+      - textC2: { cssName: 'text-c2', text: "Colour C2 (#7fe4e0)" }
+      - textC3: { cssName: 'text-c3', text: "Colour C3 (#c3e8e7)" }
+      - textC4: { cssName: 'text-c4', text: "Colour C4 (#e6f4f6)" }
+      - textC5: { cssName: 'text-c5', text: "Colour C5 (#f1f9fa)" }
+      - textC6: { cssName: 'text-c6', text: "Colour C6 (#003781)" }
+      - textC7: { cssName: 'text-c7', text: "Colour C7 (#007ab3)" }
+      - textC8: { cssName: 'text-c8', text: "Colour C8 (#fdd25c)" }
+      - textC9: { cssName: 'text-c9', text: "Colour C9 (#ffe8b0)" }
+      - textG1: { cssName: 'text-g1', text: "Colour G1 (#414141)" }
+      - textG2: { cssName: 'text-g2', text: "Colour G2 (#5a5360)" }
+      - textG3: { cssName: 'text-g3', text: "Colour G3 (#635c69)" }
+      - textG4: { cssName: 'text-g4', text: "Colour G4 (#cad4de)" }
+      - textG5: { cssName: 'text-g5', text: "Colour G5 (#f2f2f2)" }
+      - textG6: { cssName: 'text-g6', text: "Colour G6 (#f7f6f7)" }
+      - textG7: { cssName: 'text-g7', text: "Colour G7 (#fff)" }
+      - textQuoteSuffix: { cssName: 'text-quote-suffix', text: "Quote Suffix" }
+      - fontWeight300: { cssName: 'fw-300', text: "Font Weight (Light)" }
+      - fontWeight400: { cssName: 'fw-400', text: "Font Weight (Normal)" }
+      - fontWeight500: { cssName: 'fw-500', text: "Font Weight (Bold)" }
+      - fontWeight600: { cssName: 'fw-600', text: "Font Weight (Bolder)" }
+      - textStyleLead: { cssName: 'lead', text: "Text Style (Lead)" }
+      - textStyleP2: { cssName: 'p2', text: "Text Style (P2)" }
+      - textStyleP3: { cssName: 'p3', text: "Text Style (P3)" }
+      - textStyleP4: { cssName: 'p4', text: "Text Style (P4)" }
+
+  paraformat/formats:
+    template: 'text-rtePlugins-paraformat-formats'
+    contents:
+      - default_p: { description: 'Paragraph', tag: "p" }
+      - default_h1: { description: 'Heading 1', tag: "h1" }
+      - default_h2: { description: 'Heading 2', tag: "h2" }
+      - default_h3: { description: 'Heading 3', tag: "h3" }
+      - default_h4: { description: 'Heading 4', tag: "h4" }
+      - default_h5: { description: 'Heading 5', tag: "h5" }
+      - default_h6: { description: 'Heading 6', tag: "h6" }
+      - default_blockquote: { description: 'Quote', tag: "blockquote" }

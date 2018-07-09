@@ -1,0 +1,59 @@
+{
+  "h1Modifiers": "Text",
+  "h2Modifiers": "",
+
+  "richText": {
+    "componentProperties": {
+      "componentId": "text1",
+      "componentTheme": "",
+      "componentModifier": "",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+
+      "hideH1": false,
+      "hideH2": false,
+      "hideLEAD": false,
+      "hidePARAGRAPH": false,
+
+      "h1": "YOUR FUTURE LOOKS GREAT FROM HERE",
+      "h2": "This is another heading",
+      "lead": "Set in the truly unique location of Australia's modern capital city, the University of Canberra is an institution like no other.",
+      "paragraph": "Set in the truly unique location of Australia's modern capital city, the University of Canberra is an institution like no other."
+    }
+  },
+  "richText1": {
+    "description": "sample text with example of what authors can author in aem text",
+    "componentProperties": {
+      "componentId": "text2",
+      "componentTheme": "",
+      "componentModifier": "",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+      "text": "<h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6><p>Paragraph</p><blockquote>Blockquote</blockquote><p><b>Bold</b> <i>Italic</i> <u>Underline</u> <sub>Subscript</sub> <sup>Superscript</sup> <a target=\"_blank\" href=\"/content/aemdesign-showcase/en/component/content/text.html\" adhocenable=\"false\">link</a>&nbsp;special characters: ÷, <span class=\"color1\">&quot;Style Green&quot;</span>&nbsp;no style <span class=\"color2\">&quot;Style Red&quot;</span> no style</p><p>Left Aligned</p><p style=\"text-align: center;\">Center Text</p><p style=\"text-align: right;\">Right Aligned</p><p>&nbsp;&nbsp;&nbsp;&nbsp;List</p><ul><li>item 1</li><li>item 2</li><li>item 3</li></ul><div>&nbsp;</div><p>List</p><ol><li>item 1</li><li>item 2</li><li>item 3</li></ol><table cellspacing=\"0\" cellpadding=\"1\" border=\"1\"><tbody><tr><th>Header</th><th>Col1</th><th>Col1</th><th>Col1</th></tr><tr><td>Row1</td><td>●</td><td>○</td><td><span class=\"color1\">○</span></td></tr><tr><td>Row2</td><td><span class=\"color1\">●</span></td><td><span class=\"color2\">●</span></td><td><span class=\"color2\">○</span></td></tr></tbody></table><div>&nbsp;</div><div>No Indent</div><div style=\"margin-left: 40px;\">Indent</div><div style=\"margin-left: 80px;\">Indent</div><div style=\"margin-left: 120px;\">Indent</div><div style=\"margin-left: 80px;\">Indent</div><div style=\"margin-left: 40px;\">Indent</div><div>No Indent</div><div>&nbsp;</div><div>BR<br/>BR</div>"
+    }
+  },
+  "richText2": {
+    "componentProperties": {
+      "componentId": "text3",
+      "componentTheme": "",
+      "componentModifier": "text-uppercase",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+      "text": "<h2>real work as you study</h2>"
+    }
+  },
+  "richText3": {
+    "componentProperties": {
+      "componentId": "text4",
+      "componentTheme": "",
+      "componentModifier": "text-xsmall",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+      "text": "<p>© Swinburne | CRICOS: 00111D | RTO: 3059 | </p>"
+    }
+  }
+}

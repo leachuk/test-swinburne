@@ -1,0 +1,15 @@
+{
+  "h1Modifiers": "",
+  "h2Modifiers": "",
+
+  "pageList": {
+    "componentProperties": {
+      "componentId": "pagelist1",
+      "componentTheme": "",
+      "componentModifier": "bg-c3 theme--page-list-content-list",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": ""
+    }
+  }
+}

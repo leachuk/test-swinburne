@@ -1,0 +1,55 @@
+#!/bin/bash
+
+set -e
+
+function set_term_title() {
+   echo -en "\033]0;$1\a"
+}
+
+function getDefaultFromPom() {
+    local PARAM_NAME=${1:-}
+    echo $(cat pom.xml | grep "<${PARAM_NAME}>" | sed -e 's/.*>\(.*\)<.*/\1/')
+
+}
+
+function getParamOrDefault() {
+    local PARAMS=${1:-}
+    local PARAM_NAME=${2:-}
+    local DEFAULT_VALUE=$(getDefaultFromPom "${PARAM_NAME}")
+
+    if [[ "" == "$DEFAULT_VALUE" ]]; then
+        echo DEFAULT MISSING IN POM
+    else
+        PARAMS_CHECK=$(echo ${PARAMS} | grep "${PARAM_NAME}=")
+        if [[ "" == "$PARAMS_CHECK" ]]; then
+            echo $DEFAULT_VALUE
+        else
+            echo $(echo ${PARAMS_CHECK} | sed -e "s/.*${PARAM_NAME}=\(.*\).*/\1/")
+        fi
+    fi
+}
+
+#./check_maven
+SCRIPT_PARAMS="$@"
+
+AEM_USER=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.password")
+AEM_PASS=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.username")
+AEM_HOST=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.host")
+AEM_PORT=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.port")
+AEM_SCHEMA=$(getParamOrDefault "$SCRIPT_PARAMS" "package.uploadProtocol")
+
+echo "Params:     $SCRIPT_PARAMS"
+echo "AEM_USER:   $AEM_USER"
+echo "AEM_PASS:   $(sed "s/\w/*/g" <<< ${AEM_PASS})"
+echo "AEM_HOST:   $AEM_HOST"
+echo "AEM_PORT:   $AEM_PORT"
+echo "AEM_SCHEMA: $AEM_SCHEMA"
+
+set_term_title "Deploying Monolith Package: mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage clean install "
+#mvn -DskipTests clean install -P autoCleanInstallPackage
+#mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallBundle,autoInstallPackage,autoInstallPackagePublish
+mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install "$@"
+set_term_title "Deployed"
+
+#clean cache
+curl -s -u ${AEM_USER}:${AEM_PASS} -H User-Agent:curl -X POST ${AEM_SCHEMA}://${AEM_HOST}:${AEM_PORT}/system/console/slingjsp

@@ -1,0 +1,128 @@
+{
+  "title": "AEM.Design Pattern Library",
+
+  "breadcrumbs": [
+    {
+      "href": "#",
+      "label": "Home"
+    },
+    {
+      "href": "#",
+      "label": "Library"
+    },
+    {
+      "active": true,
+      "href": "#",
+      "label": "Data"
+    }
+  ],
+
+  "buttons": [
+    {
+      "label": "Primary",
+      "modifier": "primary"
+    },
+    {
+      "label": "Secondary",
+      "modifier": "secondary"
+    },
+    {
+      "label": "Primary (small)",
+      "modifier": "primary btn-sm"
+    },
+    {
+      "label": "Secondary (small)",
+      "modifier": "secondary btn-sm"
+    },
+    {
+      "label": "Link",
+      "modifier": "link pt-15 pb-15 pl-15"
+    }
+  ],
+
+  "card-title-size": "h3",
+  "colours_title": "Colours panel",
+  "colours": [
+    {
+      "name": "C1",
+      "value": "#008e9e"
+    },
+    {
+      "name": "C2",
+      "value": "#7fe4e0"
+    },
+    {
+      "name": "C3",
+      "value": "#c3e8e7"
+    },
+    {
+      "name": "C4",
+      "value": "#e6f4f6"
+    },
+    {
+      "name": "C5",
+      "value": "#f1f9fa"
+    },
+    {
+      "name": "C6",
+      "value": "#003781"
+    },
+    {
+      "name": "C7",
+      "value": "#007ab3"
+    },
+    {
+      "name": "C8",
+      "value": "#fdd25c"
+    },
+    {
+      "name": "C9",
+      "value": "#ffe8b0"
+    },
+    {
+      "name": "G1",
+      "value": "#414141"
+    },
+    {
+      "name": "G2",
+      "value": "#5a5360"
+    },
+    {
+      "name": "G3",
+      "value": "#635c69"
+    },
+    {
+      "name": "G4",
+      "value": "#cad4de"
+    },
+    {
+      "name": "G5",
+      "value": "#f2f2f2"
+    },
+    {
+      "name": "G6",
+      "value": "#f7f6f7"
+    },
+    {
+      "name": "G7",
+      "value": "#ffffff"
+    }
+  ],
+
+"grid_title": "Grid",
+  "typography_title": "Typography",
+  "logos_title": "Logos",
+  "fonts_title": "Fonts",
+  "images_title": "Images",
+  "date": "January 11th 2018",
+  "date-formatted": "2018-01-11",
+
+  "header": {
+    "clear": false
+  },
+
+  "page-details-background": "//via.placeholder.com/1920x300",
+  "page-details-breadcrumb": true,
+  "page-details-content-desc": "Page Description",
+  "page-details-date": true
+}

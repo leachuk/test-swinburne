@@ -1,0 +1,16 @@
+<nav aria-label="breadcrumb" class="breadcrumb">
+  <ol class="breadcrumb">
+  {{# breadcrumbs }}
+    {{# active }}
+      <li class="breadcrumb-item active" aria-current="page">
+        <a href="{{ href }}">{{ label }}</a>
+      </li>
+    {{/ active }}
+    {{^ active }}
+      <li class="breadcrumb-item">
+        <a href="{{ href }}">{{ label }}</a>
+      </li>
+    {{/ active }}
+  {{/ breadcrumbs }}
+  </ol>
+</nav>

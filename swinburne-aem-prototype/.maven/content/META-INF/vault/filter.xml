@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <!--                        W A R N I N G                     -->
+    <!--        This change can make the AEM content removed      -->
+    <!--    http://jackrabbit.apache.org/filevault/filter.html    -->
+    <!--                        W A R N I N G                     -->
+    <filter root="/etc/clientlibs/swinburne/css"/>
+    <filter root="/etc/clientlibs/swinburne/fonts"/>
+    <filter root="/etc/clientlibs/swinburne/js"/>
+    <filter root="/etc/clientlibs/swinburne/images"/>
+
+    <filter root="/content/cq:tags/swinburne/content-type" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-topic" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-theme" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-modifier" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-module" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-chevron" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-icon" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-dialog" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-aria" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-analytics" mode="update"/>
+
+    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/misctools/specialCharsConfig/chars" mode="update"/>
+    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/styles/styles" mode="update"/>
+    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/paraformat/formats" mode="update"/>
+
+</workspaceFilter>

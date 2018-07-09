@@ -1,0 +1,37 @@
+
+{{# contentblock }}
+  {{# contentblock-show-imagewithshape }}
+  <div class="contentblock {{ contentblock-theme }}">
+    <div class="content contentblock-body">
+      <div class="container">
+
+        <div class="row justify-content-left d-flex align-items-center">
+          <div class="col col-sm-8 col-md-8">
+            <div class="text text-c1 text-left">
+              {{> components-contentblock.text }}
+            </div>
+          </div>
+          <!-- Spacer for mobile breakpoint -->
+          <div class="d-sm-block d-md-none w-100"></div>
+          <div class="col col-sm-4 col-md-4">
+            {{!-- Shape --}}
+            {{# contentblock-shape }}
+              <div class="shape">
+                <img src="{{ contentblock-shape }}" class="shape--svg" />
+              </div>
+            {{/ contentblock-shape }}
+            {{!-- Image --}}
+            {{# contentblock-image }}
+              <div class="image">
+                <img src="{{ contentblock-image }}" class="img-fluid" alt="{{ contentblock-title }} image" />
+              </div>
+            {{/ contentblock-image }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  {{/ contentblock-show-imagewithshape }}
+  
+{{/ contentblock }}

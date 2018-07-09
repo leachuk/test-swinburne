@@ -1,0 +1,17 @@
+{
+  "cards-author": [
+    {
+      "card-ctas": [
+        {
+          "classes": "btn-link",
+          "custom-button": true,
+          "button-href": "#",
+          "button-label": "More articles from this author"
+        }
+      ],
+      "card-image": "https://via.placeholder.com/200",
+      "card-text": "<p>Article Description</p>",
+      "card-title": "Author: Article Author"
+    }
+  ]
+}

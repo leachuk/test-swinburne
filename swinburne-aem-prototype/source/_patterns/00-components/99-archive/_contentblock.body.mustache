@@ -1,0 +1,22 @@
+<div class="content contentblock-body">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-md-12 mt-90 mb-90 text-center">
+        {{!-- Title --}}
+        {{# contentblock-title }}
+          <h1 class="contentblock-title">{{ contentblock-title }}</h1>
+        {{/ contentblock-title }}
+        {{!-- Description --}}
+        {{# contentblock-description }}
+          <div class="contentblock-description">
+            {{# contentblock-lead }}
+            <p class='lead'>{{ contentblock-lead }}</p>
+            {{/ contentblock-lead }}
+
+            <p>{{{ contentblock-description }}}</p>
+          </div>
+        {{/ contentblock-description }}
+      </div>
+    </div>
+  </div>
+</div>

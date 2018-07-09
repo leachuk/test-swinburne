@@ -1,0 +1,68 @@
+{
+  "cards-search": [
+    {
+      "card-ctas": [
+        {
+          "classes": "btn-link",
+          "custom-button": true,
+          "button-href": "#",
+          "button-label": "Read more"
+        }
+      ],
+      "card-product-name": "Card Title",
+      "card-text": "<p>Multiline <strong>strong text</strong>, lorem ipsum dolor sit amet tudor bein consec ateur frodi loqudem falar. Multiline synopsis, lorem ipsum dolor sit amet tudor bein...</p>",
+      "card-title": "Card Sub Title",
+      "card-title-size": "h5"
+    },
+    {
+      "card-ctas": [
+        {
+          "classes": "btn-link",
+          "custom-button": true,
+          "button-href": "#",
+          "button-label": "Download"
+        }
+      ],
+      "card-product-name": "Downloads",
+      "card-text": "<p>Multiline <strong>strong text</strong>, lorem ipsum dolor sit amet tudor bein consec ateur frodi loqudem falar. Multiline synopsis, lorem ipsum dolor sit amet tudor bein.</p>",
+      "card-title": "Card Sub Title",
+      "card-title-size": "h5"
+    },
+    {
+      "card-ctas": [
+        {
+          "classes": "btn-link",
+          "custom-button": true,
+          "button-href": "#",
+          "button-label": "Download"
+        }
+      ],
+      "card-file-type": "doc",
+      "card-product-name": "Card Title",
+      "card-text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+      "card-title": "Card Sub Title",
+      "card-title-size": "h5"
+    },
+    {
+      "card-ctas": [
+        {
+          "classes": "btn-link",
+          "custom-button": true,
+          "button-href": "#",
+          "button-label": "Read This"
+        },
+        {
+          "classes": "btn-link",
+          "custom-button": true,
+          "button-href": "#",
+          "button-label": "Read More"
+        }
+      ],
+      "card-image": "https://via.placeholder.com/800x380",
+      "card-product-name": "Card Title",
+      "card-text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+      "card-title": "Card Sub Title",
+      "card-title-size": "h5"
+    }
+  ]
+}

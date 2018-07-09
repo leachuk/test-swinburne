@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Job Title At Employee"
+    value="&lt;span itemprop=&quot;jobTitle&quot;&gt;${jobTitle}&lt;/span&gt; for &lt;span itemprop=&quot;employee&quot; itemtype=&quot;http://schema.org/Organization&quot;&gt;${employee}&lt;/span&gt;"
+    sling:resourceType="cq/tagging/components/tag"/>

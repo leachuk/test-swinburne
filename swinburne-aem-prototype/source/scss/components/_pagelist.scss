@@ -1,0 +1,92 @@
+// PLEASE NOTE!!
+//
+// These styles directly affect AEM components, they should not introduce any new
+// behaviour that can be handled already by Bootstrap helper classes such as spacing
+// and other component level changes.
+
+@mixin pagelist-variant($selector: false) {
+  $selector: if($selector != false, unquote($selector), $selector);
+
+  &#{if($selector != false, unquote($selector), '')}:not([class*='-inline']) > .content {
+    > ul > li,
+    > div {
+      @content;
+    }
+  }
+}
+
+.pagelist {
+  @include make-container;
+  @include make-container-max-widths;
+
+  > .content {
+    @include make-row;
+
+    &,
+    > ul {
+      justify-content: center;
+    }
+
+    > ul {
+      @include list-unstyled;
+
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+
+  // This may seem excessive but it serves a very useful purpse!
+  //
+  // To prevent themes are behaving incorrectly we need to ignore the below behaviour if
+  // specific ones are applied which ensures the theme has 100% control of the page list.
+  // Doing it this way makes updates slightly more difficult but it's the easiest way of
+  // managing the experience for authors when creating pages.
+  @include pagelist-variant {
+    @include make-col-ready;
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+    }
+  }
+
+  // Additional variants
+  @include pagelist-variant('.theme--lists-large') {
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+  }
+
+  @include pagelist-variant('.theme--lists-fill') {
+    @include media-breakpoint-up(md) {
+      @include make-col(12);
+    }
+  }
+
+  @include pagelist-variant('.theme--lists-equal') {
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+  }
+
+  // Normalize the list when the 'carousel' module is applied
+  &[data-modules*='carousel'] {
+    ul.owl-carousel {
+      display: block;
+
+      .owl-item:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  // iPhone X support
+  &:not([data-modules*='carousel']) {
+    @include iphone-x;
+  }
+}

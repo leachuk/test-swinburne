@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#ensure latest drivers are installed
+mvn clean verify -DskipTests=true
+
+#THIS WILL RUN ALL WORKING TESTS
+#EXEC_TEST="${1:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*,PageTitle*,PageDescription*,SearchList*}"
+
+#THIS WILL RUN ONLY ONE TEST YOU CAN USE THIS IN DEV
+EXEC_TEST="${1:-NavListP*}"
+
+EXEC_ENV="${2:-local-chrome}" #localremote - seleniumhub - local-phantomjs
+EXEC_TEST_EXCLUDE="${3:-}"
+EXEC_HOST="${4:-localhost}"
+EXEC_PARAMS=" ${*:5}"
+
+echo "RUNNING ENV: $EXEC_ENV"
+echo "RUNNING TESTS: $EXEC_TEST"
+echo "EXCLUDING TESTS: $EXEC_TEST_EXCLUDE"
+echo "WITH PARAMETERS: $EXEC_PARAMS"
+echo mvn test -Dgeb.env="$EXEC_ENV" -Dcrx.host="$EXEC_HOST" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""$EXEC_PARAMS"
+
+mvn test -e -Dgeb.env="$EXEC_ENV" -Dcrx.host="$EXEC_HOST" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""$EXEC_PARAMS"

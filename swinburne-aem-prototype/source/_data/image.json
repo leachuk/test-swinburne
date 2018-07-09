@@ -1,0 +1,20 @@
+{
+  "href": "",
+  "label": "image label",
+  "source": "https://via.placeholder.com/1480x720",
+  "caption": "",
+  "description": "",
+  "license": "",
+  "textmuted": "",
+
+  "image": {
+    "componentProperties": {
+      "componentId": "image1",
+      "componentTheme": "",
+      "componentModifier": "rendition",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": ""
+    }
+  }
+}

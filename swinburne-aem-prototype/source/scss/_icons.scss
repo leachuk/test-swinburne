@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  src: url('../fonts/webfonts/fa-solid-900.eot');
+  src: url('../fonts/webfonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/webfonts/fa-solid-900.woff2') format('woff2'),
+  url('../fonts/webfonts/fa-solid-900.woff') format('woff'),
+  url('../fonts/webfonts/fa-solid-900.ttf') format('truetype'),
+  url('../fonts/webfonts/fa-solid-900.svg#fontawesome') format('svg');
+}
+
+//Icon classes for components
+.icn {
+  &  > *:before{
+    font-family: 'Font Awesome 5 Free';
+  }
+  // General Icons
+  &-home > *:before {
+    content:"\f015"
+  }
+  &-briefcase > *:before {
+    content:"\f0b1"
+  }
+  &-fast-forward > *:before {
+    content:"\f050"
+  }
+  &-comments > *:before {
+    content:"\f086"
+  }
+  &-search > *:before {
+    content:"\f002"
+  }
+  &-calendar > *:before {
+    content:"\f133"
+  }
+  &-edit > *:before {
+    content:"\f044"
+  }
+  &-phone > *:before {
+    content:"\f095"
+  }
+  &-pencil-alt > *:before {
+    content:"\f303"
+  }
+  &-book > *:before {
+    content:"\f02d"
+  }
+  &-reply-all > *:before {
+    content:"\f122"
+  }
+  &-life-ring > *:before {
+    content:"\f1cd"
+  }
+  // Social Icons
+  &-facebook-f > *:before {
+    content:"\f39e"
+  }
+  &-instagram > *:before {
+    content:"\f16d"
+  }
+  &-twitter > *:before {
+    content:"\f099"
+  }
+  &-pinterest-p > *:before {
+    content:"\f231"
+  }
+  &-chevron-down > *:before {
+    content:"\f078"
+  }
+  &-chevron-up > *:before {
+    content:"\f077"
+  }
+}

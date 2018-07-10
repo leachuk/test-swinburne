@@ -5,15 +5,15 @@ $white: #fff;
 
 $brand-colours: (
   'core': (
-    c1: #008e9e,
-    c2: #7fe4e0,
-    c3: #c3e8e7,
-    c4: #e6f4f6,
-    c5: #f1f9fa,
-    c6: #003781,
-    c7: #007ab3,
-    c8: #fdd25c,
-    c9: #ffe8b0,
+    c1: #85C441,
+    c2: #00AEEF,
+    c3: #00BED8,
+    c4: #FCB945,
+    c5: #883681,
+    c6: #808285,
+    c7: #DC2D27,
+    c8: #000000,
+    c9: #555555
   ),
 
   'grey': (
@@ -25,13 +25,18 @@ $brand-colours: (
     g6: #f7f6f7,
     g7: $white,
   ),
+
+
 );
 
-$primary: map-deep-get($brand-colours, 'core', 'c6');
+$primary: map-deep-get($brand-colours, 'core', 'c8');
+$secondary: map-deep-get($brand-colours, 'core', 'c7');
+$tertiary: map-deep-get($brand-colours, 'core', 'c6');
 
 $theme-colors: (
   'primary'   : $primary,
   'secondary' : $secondary,
+  'tertiary' : $tertiary,
 
   'c1': map-deep-get($brand-colours, 'core', 'c1'),
   'c2': map-deep-get($brand-colours, 'core', 'c2'),
@@ -330,6 +335,13 @@ $container-max-widths: (
   lg: 960px,
   xl: 1440px,
 );
+
+$screen-sm: 768px;
+$screen-md: 991px;
+$screen-lg: 1200px;
+
+//Max queries
+$screen-sm-max: 767px;
 
 
 // Grid columns

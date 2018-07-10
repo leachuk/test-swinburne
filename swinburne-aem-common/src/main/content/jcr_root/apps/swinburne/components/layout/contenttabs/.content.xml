@@ -6,4 +6,4 @@
     jcr:title="Content Tabs"
     cq:icon="folder"
           componentGroup="Swinburne - Layout"
-          sling:resourceSuperType="aemdesign/components/layout/contentblock"/>
+          sling:resourceSuperType="aemdesign/components/layout/contenttabs"/>

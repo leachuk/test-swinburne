@@ -13,13 +13,6 @@ content/cq:tags/swinburne/component-style-modifier:
       - c7
       - c8
       - c9
-      - g1
-      - g2
-      - g3
-      - g4
-      - g5
-      - g6
-      - g7
     startWith: bg-
     title: 'Background Colour - %%prefix_normalised%%'
 
@@ -77,13 +70,6 @@ content/cq:tags/swinburne/component-style-modifier:
       - c7
       - c8
       - c9
-      - g1
-      - g2
-      - g3
-      - g4
-      - g5
-      - g6
-      - g7
     startWith: text-
     title: 'Text Colour - %%prefix_normalised%%'
 
@@ -96,6 +82,8 @@ content/cq:tags/swinburne/component-style-modifier:
       - primary
       - success
       - warning
+      - red
+      - black
       - white
     valueFormat: text-%%prefix%%
     title: '%%prefix_normalised%%'

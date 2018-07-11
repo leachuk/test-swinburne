@@ -1,6 +1,8 @@
-article,
-.article {
-  & > [class*="aem-"] {
-    @include container();
+article {
+  &,
+  &.article {
+    & > [class*="aem-"] {
+      @include container();
+    }
   }
 }

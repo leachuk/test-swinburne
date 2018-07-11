@@ -42,38 +42,56 @@
 
   "card-title-size": "h3",
   "colours_title": "Colours panel",
-  "colours": [
+  "bg-colours": [
     {
-      "name": "C1",
-      "value": "#DC2D27"
-    },
-    {
-      "name": "C2",
-      "value": "#000000"
-    },
-    {
-      "name": "C3",
+      "name": "bg-c1",
       "value": "#85C441"
     },
     {
-      "name": "C4",
+      "name": "bg-c2",
       "value": "#00AEEF"
     },
     {
-      "name": "C5",
+      "name": "bg-c3",
       "value": "#00BED8"
     },
     {
-      "name": "C6",
+      "name": "bg-c4",
       "value": "#FCB945"
     },
     {
-      "name": "C7",
+      "name": "bg-c5",
       "value": "#883681"
     },
     {
-      "name": "C8",
+      "name": "bg-c6",
       "value": "#808285"
+    },
+    {
+      "name": "bg-c7",
+      "value": "#DC2D27"
+    },
+    {
+      "name": "bg-c8",
+      "value": "#000000"
+    },
+    {
+      "name": "bg-c9",
+      "value": "#ffffff"
+    }
+  ],
+  "text-colours": [
+    {
+      "name": "text-red",
+      "value": "#DC2D27"
+    },
+    {
+      "name": "text-white",
+      "value": "#ffffff"
+    },
+    {
+      "name": "text-black",
+      "value": "#000000"
     }
   ],
 

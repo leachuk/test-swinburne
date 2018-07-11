@@ -67,6 +67,12 @@
       color: $primary;
     }
   }
+  &.text-white {
+    &,
+    & > * {
+      color: $white;
+    }
+  }
 }
 
 .row li {
@@ -74,6 +80,16 @@
   line-height: 1.2;
   padding-bottom: .5em;
 }
+
+//make a loop to create this class.
+/*
+&-c1 {
+  &,
+  & > * {
+    color: theme-colors('c1');
+  }
+}
+*/
 
 
 

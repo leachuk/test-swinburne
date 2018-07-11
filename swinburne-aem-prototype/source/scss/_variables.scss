@@ -13,7 +13,7 @@ $brand-colours: (
     c6: #808285,
     c7: #DC2D27,
     c8: #000000,
-    c9: #555555
+    c9: #ffffff
   ),
 
   'grey': (
@@ -56,8 +56,6 @@ $theme-colors: (
   'g6': map-deep-get($brand-colours, 'grey', 'g6'),
   'g7': map-deep-get($brand-colours, 'grey', 'g7'),
 );
-
-
 // Spacing
 
 $spacers: (

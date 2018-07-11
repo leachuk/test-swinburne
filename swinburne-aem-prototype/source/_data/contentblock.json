@@ -2,15 +2,17 @@
   "contentblock1": {
       "componentId": "contentblock1",
       "componentTheme": "block-banner",
-      "componentModifier": "",
-      "componentModules": "",
-      "componentChevron": "",
-      "componentIcon": "",
       "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/juggling.jpg)\"",
-      "text": ""
+      "text": "<h2>Juggling life and uni?</h2>",
+      "linkHref": "http://google.com",
+      "linkText": "tell me how"
   },
   "contentblock2": {
+    "componentId": "contentblock2",
     "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/work-experience.jpg\")",
-    "componentTheme": "block-banner"
+    "componentTheme": "block-banner",
+    "linkHref": "http://google.com",
+    "linkText": "tell me more",
+    "text": "<h2>REAL WORK AS YOU STUDY</h2>"
   }
 }

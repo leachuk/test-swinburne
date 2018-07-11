@@ -1,5 +1,5 @@
-footer,
-.footer {
+article,
+.article {
   & > [class*="aem-"] {
     @include container();
   }

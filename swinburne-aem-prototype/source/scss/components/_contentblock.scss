@@ -4,7 +4,7 @@
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
 
-.content-block {
+.contentblock {
   &.block-banner {
     width: 100%;
     height: 300px;
@@ -18,20 +18,18 @@
       background-position: right top;
     }
   }
-  .banner-text {
-    padding: 50px 5px 5px 10px;
+  & > .container > [class*="aem-"] {
+    margin: 50px 5px 5px 10px;
     width: 60%;
     z-index: 11;
     @media (min-width: $screen-sm) {
       width: 35%;
-      padding: 100px 5px;
+      margin: 100px 5px;
     }
-    .text-wrapper {
-      background-color: $white;
-      padding: 13px;
-      @media (min-width: $screen-sm) {
-        padding: 20px;
-      }
+    background-color: $white;
+    padding: 13px;
+    @media (min-width: $screen-sm) {
+      padding: 20px;
     }
     h2 {
       font-size: 20px;
@@ -50,12 +48,4 @@
       }
     }
   }
-}
-
-.grid,
-.container:not(.my-large, .my-5) {
-  display: block;
-  margin: 0 auto;
-  max-width: 1400px;
-  position: relative
 }

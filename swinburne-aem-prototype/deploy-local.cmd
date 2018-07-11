@@ -1,1 +1,2 @@
-mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallPackage,deploymentpackage -Dcrx.host=localhost
+
+mvn -D"skipTests=true" clean install -P autoInstallPackage,deploymentpackage -D"crx.host=localhost"

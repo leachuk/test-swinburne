@@ -23,3 +23,8 @@
   // Custom utilities
   'utilities/index'
 ;
+
+.grid,
+.container:not(.my-large, .my-5) {
+  @include container();
+}

@@ -1,11 +1,7 @@
-<div {{> components-componentAttributes( componentName: "content-block", componentId: "{{{ id }}}", componentTheme: "{{{ theme }}}", componentModifier: "{{{ modifier }}}", componentModules: "{{{ modules }}}", componentChevron: "{{{ chevron }}}", componentIcon: "{{{ icon }}}", componentStyle: "{{{ style }}}" ) }}>
-  <div class="container">
-    <div class="banner-text">
-      <div class="text-wrapper">
-        {{> components-text.default( text: "{{{ text }}}", modifier: "text-uppercase", id: "text8") }}
-        {{> components-link.button( label: "{{ linkText }}", href: "http://google.com", modifier: "link-button", id: "link8") }}
-      </div>
-    </div>
+<section {{> components-componentAttributes( componentName: "contentblock", componentId: "{{{ id }}}", componentTheme: "{{{ theme }}}", componentModifier: "{{{ modifier }}}", componentModules: "{{{ modules }}}", componentChevron: "{{{ chevron }}}", componentIcon: "{{{ icon }}}", componentStyle: "{{{ style }}}" ) }}>
+  <div class="aem-Grid">
+      {{> components-text.default( text: "{{{ text }}}", modifier: "text-uppercase", id: "text8") }}
+      {{> components-link.button( label: "{{ linkText }}", href: "{{ linkHref }}", modifier: "btn-secondary", id: "link8") }}
   </div>
-</div>
+</section>
 

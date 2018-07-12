@@ -226,7 +226,6 @@ content/cq:tags/swinburne/component-style-modifier:
     valueFormat: link-%%prefix%%
     title: 'Link - %%prefix_normalised%%'
 
-
   # Cards
   card:
     prefixes:
@@ -1217,6 +1216,37 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: addthis_inline_share_toolbox
     title: 'Inline Share Toolbox'
 
+# Icon modifiers
+content/cq:tags/swinburne/component-modifiers-icon:
+   social:
+    prefixes:
+      - facebook-f
+      - pinterest-p
+      - twitter
+      - instagram
+      - linkedin-in
+    valueFormat: icn icn-%%prefix%%
+    title: '%%prefix_normalised%%'
+
+  general:
+    prefixes:
+      - fast-forward
+      - comments
+      - briefcase
+      - calendar
+      - search
+      - home
+      - edit
+      - phone
+      - pencil-alt
+      - book
+      - reply-all
+      - life-ring
+      - chevron-up
+      - chevron-down
+    valueFormat: icn icn-%%prefix%%
+    title: '%%prefix_normalised%%'
+
 # Icon
 content/cq:tags/swinburne/component-style-icon:
   feed/rss:
@@ -1253,7 +1283,6 @@ content/cq:tags/swinburne/component-style-icon:
 
   general:
     prefixes:
-      - ticks
       - fast-forward
       - comments
       - briefcase
@@ -1268,11 +1297,6 @@ content/cq:tags/swinburne/component-style-icon:
       - life-ring
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
-
-  spinner/circle:
-    flat: true
-    prefix: 'fa fa-circle-o-notch'
-    title: 'Circle'
 
 # Chevron
 content/cq:tags/swinburne/component-style-chevron:

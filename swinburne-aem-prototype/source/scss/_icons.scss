@@ -10,10 +10,12 @@
 }
 
 //Icon classes for components
+.fa,
+.icn > *:before {
+  font-family: 'Font Awesome 5 Free';
+}
+
 .icn {
-  &  > *:before{
-    font-family: 'Font Awesome 5 Free';
-  }
   // General Icons
   &-home > *:before {
     content:"\f015"

@@ -2,5 +2,5 @@
 title: Content Block
 ---
 
-Modifiers :
-- **block-banner**
+Themes :
+- **theme--contentblock-banner**

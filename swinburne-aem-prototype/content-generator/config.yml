@@ -217,15 +217,6 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: disabled
     title: 'Disabled'
 
-  # Links
-  link:
-    prefixes:
-      - footer
-      - nav
-      - paragraph
-    valueFormat: link-%%prefix%%
-    title: 'Link - %%prefix_normalised%%'
-
   # Cards
   card:
     prefixes:
@@ -1216,37 +1207,6 @@ content/cq:tags/swinburne/component-style-theme:
     flat: true
     prefix: addthis_inline_share_toolbox
     title: 'Inline Share Toolbox'
-
-# Icon modifiers
-content/cq:tags/swinburne/component-modifiers-icon:
-   social:
-    prefixes:
-      - facebook-f
-      - pinterest-p
-      - twitter
-      - instagram
-      - linkedin-in
-    valueFormat: icn icn-%%prefix%%
-    title: '%%prefix_normalised%%'
-
-  general:
-    prefixes:
-      - fast-forward
-      - comments
-      - briefcase
-      - calendar
-      - search
-      - home
-      - edit
-      - phone
-      - pencil-alt
-      - book
-      - reply-all
-      - life-ring
-      - chevron-up
-      - chevron-down
-    valueFormat: icn icn-%%prefix%%
-    title: '%%prefix_normalised%%'
 
 # Icon
 content/cq:tags/swinburne/component-style-icon:

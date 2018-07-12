@@ -2,4 +2,4 @@
 title: Link Button
 ---
 Modifiers :
-- **link-button**
+- **btn btn-secondary**

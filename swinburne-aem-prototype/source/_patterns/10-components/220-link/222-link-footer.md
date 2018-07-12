@@ -1,5 +1,7 @@
 ---
 title: Link Footer
 ---
-Modifier :
-- **link-footer**
+Modifiers :
+- **text-c6**
+- **text-uppercase**
+- **text-xsmall**

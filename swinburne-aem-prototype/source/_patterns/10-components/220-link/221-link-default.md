@@ -2,4 +2,4 @@
 title: Link Default
 ---
 Modifiers :
-- **link-red**
+- **text-red**

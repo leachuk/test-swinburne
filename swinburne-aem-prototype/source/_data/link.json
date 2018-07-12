@@ -1,0 +1,50 @@
+{
+  "link1": {
+      "componentId": "link1",
+      "componentTheme": "link-button",
+      "componentModifier": "",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+      "text": "Tell me how"
+  },
+  "link2": {
+      "componentId": "link2",
+      "componentTheme": "link-footer",
+      "componentModifier": "",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+      "text": "Copyright and Disclaimer"
+  },
+  "link3": {
+      "componentId": "link3",
+      "componentTheme": "link-button",
+      "componentModifier": "",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+      "text": "<a href=\"#form-module\"><h3>Register now</h3></a>"
+  },
+  "link4": {
+      "componentId": "link4",
+      "componentTheme": "link-nav",
+      "componentModifier": "",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "icn icn-home",
+      "text": "<span>Home</span>"
+  },
+  "link5": {
+      "componentId": "link5",
+      "componentTheme": "link-paragraph",
+      "componentModifier": "",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+      "text": "<h2>SWINBURNE <span>INFO EVENING</span></h2><p>Attend the Swinburne Info Evening to learn about the range of postgrad programs, master and bachelor degrees, and pathways that can take you where you want to go.</p><p>Chat with academics about the courses that are right for you and just where they can lead. You’ll leave feeling cool, calm and confident about your future.</p><p>To register, just drop your details in here.</p>"
+  },
+  "link6": {
+    "tellmehow": "tell me how"
+  }
+}

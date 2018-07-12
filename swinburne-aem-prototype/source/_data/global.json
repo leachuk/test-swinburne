@@ -45,67 +45,35 @@
   "colours": [
     {
       "name": "C1",
-      "value": "#008e9e"
+      "value": "#DC2D27"
     },
     {
       "name": "C2",
-      "value": "#7fe4e0"
+      "value": "#000000"
     },
     {
       "name": "C3",
-      "value": "#c3e8e7"
+      "value": "#85C441"
     },
     {
       "name": "C4",
-      "value": "#e6f4f6"
+      "value": "#00AEEF"
     },
     {
       "name": "C5",
-      "value": "#f1f9fa"
+      "value": "#00BED8"
     },
     {
       "name": "C6",
-      "value": "#003781"
+      "value": "#FCB945"
     },
     {
       "name": "C7",
-      "value": "#007ab3"
+      "value": "#883681"
     },
     {
       "name": "C8",
-      "value": "#fdd25c"
-    },
-    {
-      "name": "C9",
-      "value": "#ffe8b0"
-    },
-    {
-      "name": "G1",
-      "value": "#414141"
-    },
-    {
-      "name": "G2",
-      "value": "#5a5360"
-    },
-    {
-      "name": "G3",
-      "value": "#635c69"
-    },
-    {
-      "name": "G4",
-      "value": "#cad4de"
-    },
-    {
-      "name": "G5",
-      "value": "#f2f2f2"
-    },
-    {
-      "name": "G6",
-      "value": "#f7f6f7"
-    },
-    {
-      "name": "G7",
-      "value": "#ffffff"
+      "value": "#808285"
     }
   ],
 

@@ -1,3 +1,0 @@
----
-title: Calculator Prototype
----

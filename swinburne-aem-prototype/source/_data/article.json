@@ -1,13 +1,11 @@
 {
-  "article": {
-    "componentProperties": {
-      "componentId": "article",
+  "article1": {
+      "componentId": "article1",
       "componentTheme": "",
       "componentModifier": "",
       "componentModules": "",
       "componentChevron": "",
       "componentIcon": "",
-      "pageBackgroundImage": "dsafsdfg/asfasf/b.png"
-    }
+      "text": "<h1>Article</h1>"
   }
 }

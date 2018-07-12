@@ -1,0 +1,51 @@
+<div class="container my-5">
+  <div class="row">
+    <h1>Spacing</h1>
+  </div>
+  <p>{{{notations}}}</p>
+  <div class="row sg-spacing">
+    <h2>Margin</h2>
+    {{# margins }}
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="spacing">
+          <div class="{{ value }}"></div>
+        </div>
+        <div class="sg-label">{{ name }}</div>
+        <div class="sg-label">Class: <b>{{ value }}</b></div>
+      </div>
+    {{/ margins }}
+    <hr/>
+    <h2>Padding</h2>
+    {{# paddings }}
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="spacing {{value}}">
+          <div></div>
+        </div>
+        <div class="sg-label">{{ name }}</div>
+        <div class="sg-label">Class: <b>{{ value }}</b></div>
+      </div>
+    {{/ paddings }}
+    <hr/>
+    <h2>Responsive margin</h2>
+    {{# responsives_margins }}
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="spacing">
+          <div class="{{ value }}"></div>
+        </div>
+        <div class="sg-label">{{ name }}</div>
+        <div class="sg-label">Class: <b>{{ value }}</b></div>
+      </div>
+    {{/ responsives_margins }}
+    <hr/>
+    <h2>Responsive padding</h2>
+    {{# responsives_paddings }}
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="spacing {{value}}">
+          <div></div>
+        </div>
+        <div class="sg-label">{{ name }}</div>
+        <div class="sg-label">Class: <b>{{ value }}</b></div>
+      </div>
+    {{/ responsives_paddings }}
+  </div>
+</div>

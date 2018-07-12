@@ -1,0 +1,81 @@
+.link,
+.btn {
+  font-size: 16px;
+  display: inline-block;
+  color: $primary;
+  border: 0;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+}
+
+.link-red {
+  color: $secondary
+}
+
+//Modifiers
+.btn-secondary {
+  color: $white;
+  background-color: $secondary;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  transition: background-color 300ms ease-in-out, border-radius 300ms ease-in-out;
+  font-weight: bold;
+  &:hover {
+    color: $white;
+    background-color: lighten($secondary, 10%);
+  }
+  & > * {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  & > h3 {
+    font-size: 24px;
+  }
+}
+
+.link-footer {
+  text-transform: uppercase;
+  font-size: 12px;
+  &,
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.link-nav {
+  color: lighten($tertiary, 15%);
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+  & > * {
+    display: inline-block;
+  }
+  & > *:before {
+    padding-left: 1.2em;
+    margin-right: 5px;
+  }
+  &:hover {
+    &,
+    &:before {
+      color: $tertiary;
+    }
+  }
+}
+
+.link-paragraph {
+  p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 45px;
+    & > * {
+      color: $secondary;
+    }
+  }
+}

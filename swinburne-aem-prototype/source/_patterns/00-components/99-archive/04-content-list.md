@@ -1,3 +1,0 @@
----
-title: Content Page List
----

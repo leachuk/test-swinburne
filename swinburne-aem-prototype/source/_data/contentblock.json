@@ -1,44 +1,18 @@
 {
-  "contentblock": [
-    {
-      "contentblock-theme": "",
-      "contentblock-padded": true,
-      "contentblock-title": "Article Heading with 01234",
-      "contentblock-description": "Paragraph Description... Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatum accusamus, iste optio, quaerat officiis veritatis voluptas minus quasi delectus ratione suscipit, quas ea iusto. Maiores neque voluptas minus iure?",
-      "contentblock-lead": "Paragraph Lead... Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatum accusamus, iste optio, quaerat officiis veritatis voluptas minus quasi delectus ratione suscipit, quas ea iusto. Maiores neque voluptas minus iure?",
-      "contentblock-show-imagewithshape": false,
-      "contentblock-image": "",
-      "contentblock-shape": ""
-    },
-    {
-      "contentblock-theme": "theme--hero-banner",
-      "contentblock-padded": false,
-      "contentblock-title": "Your future looks great from here",
-      "contentblock-description": "",
-      "contentblock-lead": "",
-      "contentblock-show-imagewithshape": true,
-      "contentblock-image": "/images/placeholders/UCHero1.png",
-      "contentblock-shape": "/images/icons/UC_Square_Green.svg"
-    },
-    {
-      "contentblock-theme": "theme--hero-banner",
-      "contentblock-padded": false,
-      "contentblock-title": "Your future looks great from here",
-      "contentblock-description": "",
-      "contentblock-lead": "",
-      "contentblock-show-imagewithshape": true,
-      "contentblock-image": "/images/placeholders/UCHero2.png",
-      "contentblock-shape": "/images/icons/UC_Oval_Blue.svg"
-    },
-    {
-      "contentblock-theme": "theme--hero-banner",
-      "contentblock-padded": false,
-      "contentblock-title": "Your future looks great from here",
-      "contentblock-description": "",
-      "contentblock-lead": "",
-      "contentblock-show-imagewithshape": true,
-      "contentblock-image": "/images/placeholders/UCHero3.png",
-      "contentblock-shape": "/images/icons/UC_Oval_Yellow.svg"
-    }
-  ]
+  "contentblock1": {
+      "componentId": "contentblock1",
+      "componentTheme": "block-banner",
+      "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/juggling.jpg)\"",
+      "text": "<h2>Juggling life and uni?</h2>",
+      "linkHref": "http://google.com",
+      "linkText": "tell me how"
+  },
+  "contentblock2": {
+    "componentId": "contentblock2",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/work-experience.jpg\")",
+    "componentTheme": "block-banner",
+    "linkHref": "http://google.com",
+    "linkText": "tell me more",
+    "text": "<h2>REAL WORK AS YOU STUDY</h2>"
+  }
 }

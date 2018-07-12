@@ -1,28 +1,6 @@
-.brand-footer {
-  max-width: 100vw;
-  overflow: hidden;
-
-  &__top,
-  &__bottom {
-    position: relative;
-
-    &::before {
-      content: '';
-      height: 100%;
-      left: 50%;
-      position: absolute;
-      top: 0;
-      transform: translateX(-50%);
-      width: calc(100vw + 100%);
-      z-index: -1;
-    }
-  }
-
-  &__top::before {
-    background-color: theme-color('g2');
-  }
-
-  &__bottom::before {
-    background-color: rgba(theme-color('g2'), .95);
+footer,
+.footer {
+  & > [class*="aem-"] {
+    @include container();
   }
 }

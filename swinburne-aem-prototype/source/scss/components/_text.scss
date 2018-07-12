@@ -32,9 +32,6 @@
   h6 {
     font-size: 120%;
   }
-  a {
-    text-decoration: none;
-  }
   ol, ul {
     padding-left: 3em;
     padding-bottom: 1em;
@@ -42,15 +39,32 @@
       list-style: none;
     }
   }
+  * {
+    color: $black;
+  }
   //modifiers
   &.text-uppercase {
+    &,
     & > * {
       text-transform: uppercase;
     }
   }
   &.text-xsmall {
+    &,
     & > * {
       font-size: 12px;
+    }
+  }
+  &.text-red {
+    &,
+    & > * {
+      color: $secondary;
+    }
+  }
+  &.text-black {
+    &,
+    & > * {
+      color: $primary;
     }
   }
 }
@@ -60,5 +74,6 @@
   line-height: 1.2;
   padding-bottom: .5em;
 }
+
 
 

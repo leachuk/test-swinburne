@@ -5,9 +5,9 @@
 // again by a component style for instance.
 
 @import
-  // '~bootstrap/scss/utilities/align',
+   '~bootstrap/scss/utilities/align',
   '~bootstrap/scss/utilities/background',
-  // '~bootstrap/scss/utilities/borders',
+   '~bootstrap/scss/utilities/borders',
   '~bootstrap/scss/utilities/clearfix',
   '~bootstrap/scss/utilities/display',
   '~bootstrap/scss/utilities/embed',
@@ -23,3 +23,8 @@
   // Custom utilities
   'utilities/index'
 ;
+
+.grid,
+.container:not(.my-large, .my-5) {
+  @include container();
+}

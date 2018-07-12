@@ -1552,31 +1552,26 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
   styles/styles:
     template: 'text-rtePlugins-styles-styles'
     contents:
-      - textC1: { cssName: 'text-c1', text: "Colour C1 (#008e9e)" }
-      - textC2: { cssName: 'text-c2', text: "Colour C2 (#7fe4e0)" }
-      - textC3: { cssName: 'text-c3', text: "Colour C3 (#c3e8e7)" }
-      - textC4: { cssName: 'text-c4', text: "Colour C4 (#e6f4f6)" }
-      - textC5: { cssName: 'text-c5', text: "Colour C5 (#f1f9fa)" }
-      - textC6: { cssName: 'text-c6', text: "Colour C6 (#003781)" }
-      - textC7: { cssName: 'text-c7', text: "Colour C7 (#007ab3)" }
-      - textC8: { cssName: 'text-c8', text: "Colour C8 (#fdd25c)" }
-      - textC9: { cssName: 'text-c9', text: "Colour C9 (#ffe8b0)" }
-      - textG1: { cssName: 'text-g1', text: "Colour G1 (#414141)" }
-      - textG2: { cssName: 'text-g2', text: "Colour G2 (#5a5360)" }
-      - textG3: { cssName: 'text-g3', text: "Colour G3 (#635c69)" }
-      - textG4: { cssName: 'text-g4', text: "Colour G4 (#cad4de)" }
-      - textG5: { cssName: 'text-g5', text: "Colour G5 (#f2f2f2)" }
-      - textG6: { cssName: 'text-g6', text: "Colour G6 (#f7f6f7)" }
-      - textG7: { cssName: 'text-g7', text: "Colour G7 (#fff)" }
+      - textC1: { cssName: 'text-c1', text: "Colour C1 (#85C441)" }
+      - textC2: { cssName: 'text-c2', text: "Colour C2 (#00AEEF)" }
+      - textC3: { cssName: 'text-c3', text: "Colour C3 (#00BED8)" }
+      - textC4: { cssName: 'text-c4', text: "Colour C4 (#FCB945)" }
+      - textC5: { cssName: 'text-c5', text: "Colour C5 (#883681)" }
+      - textC6: { cssName: 'text-c6', text: "Colour C6 (#808285)" }
+      - textC7: { cssName: 'text-c7', text: "Colour C7 (#DC2D27)" }
+      - textC8: { cssName: 'text-c8', text: "Colour C8 (#000000)" }
+      - textC9: { cssName: 'text-c9', text: "Colour C9 (#ffffff)" }
       - textQuoteSuffix: { cssName: 'text-quote-suffix', text: "Quote Suffix" }
       - fontWeight300: { cssName: 'fw-300', text: "Font Weight (Light)" }
       - fontWeight400: { cssName: 'fw-400', text: "Font Weight (Normal)" }
-      - fontWeight500: { cssName: 'fw-500', text: "Font Weight (Bold)" }
-      - fontWeight600: { cssName: 'fw-600', text: "Font Weight (Bolder)" }
+      - fontWeight600: { cssName: 'fw-600', text: "Font Weight (Bold)" }
+      - fontWeight700: { cssName: 'fw-700', text: "Font Weight (Bolder)" }
       - textStyleLead: { cssName: 'lead', text: "Text Style (Lead)" }
       - textStyleP2: { cssName: 'p2', text: "Text Style (P2)" }
       - textStyleP3: { cssName: 'p3', text: "Text Style (P3)" }
       - textStyleP4: { cssName: 'p4', text: "Text Style (P4)" }
+      - fontFamillyOpenSans: { cssName : 'f-open-sans', text: 'Font Family (Open Sans)'}
+      - fontFamillyBrushUp: { cssName : 'f-brush-up', text: 'Font Family (Brush Up)'}
 
   paraformat/formats:
     template: 'text-rtePlugins-paraformat-formats'

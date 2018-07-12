@@ -13,6 +13,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - c7
       - c8
       - c9
+      - c10
     startWith: bg-
     title: 'Background Colour - %%prefix_normalised%%'
 
@@ -507,6 +508,11 @@ content/cq:tags/swinburne/component-style-modifier:
       - my
     sizes:
       - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
       - 15
       - 30
       - 45
@@ -545,6 +551,11 @@ content/cq:tags/swinburne/component-style-modifier:
       - py
     sizes:
       - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
       - 15
       - 30
       - 45

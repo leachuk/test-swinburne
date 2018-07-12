@@ -1,5 +1,5 @@
 ---
 title: Link Nav
 ---
-Theme :
+Modifiers :
 - **link-nav**

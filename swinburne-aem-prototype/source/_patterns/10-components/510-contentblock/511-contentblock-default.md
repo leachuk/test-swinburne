@@ -2,5 +2,5 @@
 title: Content Block
 ---
 
-class list :
+Modifiers :
 - **block-banner**

@@ -1,5 +1,5 @@
 ---
 title: Link Button
 ---
-Modifier :
+Modifiers :
 - **link-button**

@@ -22,7 +22,8 @@ class FooterPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Layout" > "Footer"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#plainfooter"
+        def selector = "#footer1"
+        def selectorContainer = "#contentblock1"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -33,7 +34,7 @@ class FooterPublishSpec extends ComponentSpec {
 
         and: 'Should have sample rich text'
         assert $(selector + " .text[component]").text().trim() == "Footer Content"
-        report("Should have sample rich text")
+        takeScreenshot($(selectorContainer).firstElement(), "Should have sample rich text")
 
         where:
         viewport << getViewPorts()
@@ -45,12 +46,12 @@ class FooterPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Layout" > "Footer"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#footerwithbackground"
+        def selector = "#footer2"
+        def selectorContainer = "#contentblock2"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
         waitForAuthorPreviewPage()
-        report("I am on the component showcase page")
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
@@ -60,6 +61,31 @@ class FooterPublishSpec extends ComponentSpec {
 
         and: 'Section should have a background image'
         assert $(selector).css("background-image").indexOf("/${pathSite}/${language}/${pathPage}/_jcr_content/article/par/contentblock2/par/footer/bgimage.img.png/0.png") > 0
+        takeScreenshot($(selectorContainer).firstElement(), "Should have sample rich text")
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Functionality of Component with Style in #viewport.label")
+    def "Functionality of Component with Style"() {
+
+        given: '>the page hierarchy is created as "Components" > "Layout" > "Footer"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#footer3"
+        def selectorContainer = "#contentblock3"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+
+        and: 'Should have class modifier assigned'
+        assert $(selector).attr("class").contains("bg-c8")
+        takeScreenshot($(selectorContainer).firstElement(), "Should have sample rich text")
 
         where:
         viewport << getViewPorts()

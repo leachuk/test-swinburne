@@ -14,5 +14,21 @@
     "linkHref": "http://google.com",
     "linkText": "tell me more",
     "text": "REAL WORK AS YOU STUDY"
+  },
+  "contentblock5": {
+    "componentId": "contentblock5",
+    "componentStyle": "",
+    "componentTheme": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": "Content block default"
+  },
+  "contentblock6": {
+    "componentId": "contentblock6",
+    "componentStyle": "",
+    "componentTheme": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": "Content block container"
   }
 }

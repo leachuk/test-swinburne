@@ -1,3 +1,19 @@
+a.link[component] {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button.link[component]:not([class*="btn"]) {
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
+}
+
 .btn[component] {
   font-size: 16px;
   display: inline-block;
@@ -17,12 +33,6 @@
   }
   & > h3 {
     font-size: 24px;
-  }
-}
-
-.link[component] {
-  &:hover {
-    text-decoration: none;
   }
 }
 

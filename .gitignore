@@ -88,5 +88,5 @@ devops___*
 
 #prototype project
 patternlab.json
-content-generator/content/
-content-generator/output/
+**/content-generator/content/
+**/content-generator/output/

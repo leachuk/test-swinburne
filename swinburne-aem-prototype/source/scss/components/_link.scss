@@ -1,9 +1,10 @@
 a.link[component] {
-  color: #007bff;
+  color: $link;
   text-decoration: none;
   background-color: transparent;
   &:hover {
     text-decoration: underline;
+    color: $link-hover;
   }
 }
 

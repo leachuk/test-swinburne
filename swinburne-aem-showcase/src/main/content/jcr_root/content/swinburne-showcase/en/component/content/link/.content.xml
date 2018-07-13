@@ -78,7 +78,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/contentblock"
                         componentId="contentblock4"
-                        title="Link: Prototype Example"
+                        title="Link: Themed"
                         variant="advsection">
                     <par
                             jcr:primaryType="nt:unstructured"
@@ -87,7 +87,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/content/link"
                                 componentId="linkprimary"
-                                componentModifiers="[swinburne:component-style-modifier/button,swinburne:component-style-modifier/button/normal/primary]"
+                                componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
                                 label="PRIMARY"
                                 link="Primary"
                                 variant="button"/>
@@ -95,37 +95,15 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/content/link"
                                 componentId="linksecondary"
-                                componentModifiers="[swinburne:component-style-modifier/button,swinburne:component-style-modifier/button/normal/secondary]"
+                                componentModifiers="[swinburne:component-style-modifier/button/normal/secondary]"
                                 label="SECONDARY"
                                 link="Secondary"
-                                variant="button"/>
-                        <linkprimarysmall
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="linkprimarysmall"
-                                componentModifiers="[swinburne:component-style-modifier/button,swinburne:component-style-modifier/button/normal/primary,swinburne:component-style-modifier/button/size/small]"
-                                label="Primary (small)"
-                                link="Primary (small)"
-                                variant="button"/>
-                        <linksecondarysmall
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="linksecondarysmall"
-                                componentModifiers="[swinburne:component-style-modifier/button,swinburne:component-style-modifier/button/normal/secondary,swinburne:component-style-modifier/button/size/small]"
-                                label="Secondary (small)"
-                                link="Secondary (small)"
-                                variant="button"/>
-                        <linkplain
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="linkplain"
-                                componentModifiers="[swinburne:component-style-modifier/button,swinburne:component-style-modifier/button/normal/link,swinburne:component-style-modifier/padding/pb-15,swinburne:component-style-modifier/padding/pt-15,swinburne:component-style-modifier/padding/pl-15]"
                                 variant="button"/>
                     </par>
                 </contentblock4>
                 <contentblock5
                         jcr:primaryType="nt:unstructured"
-                        title="Link: Default no Labelsdfsdf"
+                        title="Link: Default no Label"
                         hideTitle="false"
                         variant="advsection"
                         sling:resourceType="swinburne/components/layout/contentblock">

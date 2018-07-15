@@ -3,7 +3,7 @@
 // These styles directly affect AEM components, they should not introduce any new
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
-.text {
+.text[component] {
   p{
     font-size: 20px;
     margin-bottom: 15px;
@@ -39,57 +39,53 @@
       list-style: none;
     }
   }
-  * {
-    color: $black;
-  }
-  //modifiers
-  &.text-uppercase {
-    &,
-    & > * {
-      text-transform: uppercase;
-    }
-  }
-  &.text-xsmall {
-    &,
-    & > * {
-      font-size: 12px;
-    }
-  }
-  &.text-red {
-    &,
-    & > * {
-      color: $secondary;
-    }
-  }
-  &.text-black {
-    &,
-    & > * {
-      color: $primary;
-    }
-  }
-  &.text-white {
-    &,
-    & > * {
-      color: $white;
-    }
+  .row li {
+    font-size: 20px;
+    line-height: 1.2;
+    padding-bottom: .5em;
   }
 }
 
-.row li {
-  font-size: 20px;
-  line-height: 1.2;
-  padding-bottom: .5em;
+//modifiers
+.bg-c8 {
+  color: $white;
 }
 
-//make a loop to create this class.
-/*
-&-c1 {
+.bg-c9 {
+  color: $black;
+}
+
+.text-uppercase {
   &,
   & > * {
-    color: theme-colors('c1');
+    text-transform: uppercase;
   }
 }
-*/
+.text-xsmall {
+  &,
+  & > * {
+    font-size: 12px;
+  }
+}
+.text-red {
+  &,
+  & > * {
+    color: $secondary;
+  }
+}
+.text-black {
+  &,
+  & > * {
+    color: $primary;
+  }
+}
+.text-white {
+  &,
+  & > * {
+    color: $white;
+  }
+}
+
 
 
 

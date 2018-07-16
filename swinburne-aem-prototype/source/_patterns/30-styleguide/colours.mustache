@@ -2,26 +2,13 @@
   <div class="row">
     <h1>{{ colours_title }}</h1>
   </div>
-  <h2>Primary colours</h2>
-  <div class="sg-colors">
-    {{# colours }}
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-      <div>
-        <div class="sg-swatch" style="background-color: {{ value }};"></div>
-        <div class="sg-label">{{ name }} - <strong>{{ value }}</strong></div>
-      </div>
-    </div>
-    {{/ colours }}
-  </div>
-  <hr/>
-  <hr/>
   <h2>Background Class Colours</h2>
   <div class="sg-colors">
     {{# bg-colours }}
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
       <div>
-        <div class="sg-swatch {{ value }}"></div>
-        <div class="sg-label"><strong>{{ value }}</strong></div>
+        <div class="sg-swatch {{ name }}"></div>
+        <div class="sg-label">{{ name }} - <strong>{{ value }}</strong></div>
       </div>
     </div>
     {{/ bg-colours }}
@@ -30,12 +17,10 @@
   <h2>Text Class Colours</h2>
   <div class="sg-colors">
     {{# text-colours }}
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
       <div>
-        <div class="sg-swatch {{ value }}">
-          <p class="{{ value }}">text colour</p>
-        </div>
-        <div class="sg-label"><strong>{{ value }}</strong></div>
+        <div class="sg-swatch" style="background-color: {{ value }};"></div>
+        <div class="sg-label">{{ name }} - <strong>{{ value }}</strong></div>
       </div>
     </div>
     {{/ text-colours }}

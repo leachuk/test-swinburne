@@ -1,30 +1,31 @@
-.link,
-.btn {
-  font-size: 16px;
-  display: inline-block;
-  color: $primary;
-  border: 0;
+a.link[component] {
+  color: $link;
+  text-decoration: none;
+  background-color: transparent;
   &:hover {
-    text-decoration: none;
-    color: $primary;
+    text-decoration: underline;
+    color: $link-hover;
   }
 }
 
-.link-red {
-  color: $secondary
+button.link[component]:not([class*="btn"]) {
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
 }
 
-//Modifiers
-.btn-secondary {
+.btn[component] {
+  font-size: 16px;
+  display: inline-block;
   color: $white;
-  background-color: $secondary;
+  border: 0;
   padding: 10px 14px;
   text-transform: uppercase;
   transition: background-color 300ms ease-in-out, border-radius 300ms ease-in-out;
   font-weight: bold;
   &:hover {
     color: $white;
-    background-color: lighten($secondary, 10%);
   }
   & > * {
     font-weight: bold;
@@ -36,23 +37,27 @@
   }
 }
 
-.link-footer {
-  text-transform: uppercase;
-  font-size: 12px;
-  &,
+//Modifiers
+.btn-secondary[component] {
+  background-color: $secondary;
   &:hover {
-    color: $secondary;
+    background-color: lighten($secondary, 10%);
   }
 }
 
-.link-nav {
+.btn-primary[component] {
+  background-color: $primary;
+  &:hover {
+    background-color: lighten($primary, 25%);
+  }
+}
+
+.nav[component] {
   color: lighten($tertiary, 15%);
   text-decoration: none;
   transition: color 300ms ease-in-out;
-  & > * {
-    display: inline-block;
-  }
-  & > *:before {
+  display: inline-block;
+  &:before {
     padding-left: 1.2em;
     margin-right: 5px;
   }

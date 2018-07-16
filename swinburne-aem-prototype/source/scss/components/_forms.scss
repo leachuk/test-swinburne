@@ -1,0 +1,41 @@
+@mixin inputStyle() {
+  display: block;
+  width: 100%;
+  margin-bottom: 17px;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: $white;
+  border: 1px solid #d9d5d1;
+  font-family: $font-family-open-sans;
+  padding: 8px 15px 8px 30px;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #292625;
+  border-radius: 0;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+
+.guideFieldWidget {
+  & > * ,
+  & > input[type="text"]{
+    @include inputStyle();
+    @include placeholder {
+      color: map-deep-get($brand-colours, 'core', 'c6');
+    }
+    &:focus {
+      border: 1px solid map-deep-get($brand-colours, 'core', 'c2');
+      @include placeholder {
+        color: map-deep-get($brand-colours, 'core', 'c6');
+      }
+    }
+    &.error {
+      border : 1px solid map-deep-get($brand-colours, 'core', 'c7')
+    }
+    &.success {
+      border : 1px solid map-deep-get($brand-colours, 'core', 'c1')
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "textfield1": {
+    "componentId": "textfield1",
+    "componentTheme": "",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "placeholder": "",
+    "name": "defaultTextField",
+    "autocomplete": ""
+  },
+  "textfield2": {
+    "componentId": "textfield2",
+    "componentTheme": "",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "disabled",
+    "placeholder": "",
+    "name": "disabledTextField",
+    "autocomplete": ""
+  },
+  "textfield3": {
+    "componentId": "textfield3",
+    "componentTheme": "",
+    "componentModifier": "success",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "placeholder": "",
+    "name": "successTextField",
+    "autocomplete": ""
+  },
+  "textfield4": {
+    "componentId": "textfield4",
+    "componentTheme": "",
+    "componentModifier": "error",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "placeholder": "",
+    "name": "errorTextField",
+    "autocomplete": ""
+  },
+  "textfield5": {
+    "componentId": "textfield5",
+    "componentTheme": "",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "placeholder": "Placeholder",
+    "name": "placeholderTextField",
+    "autocomplete": ""
+  }
+}

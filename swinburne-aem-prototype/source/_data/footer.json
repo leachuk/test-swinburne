@@ -2,7 +2,7 @@
   "footer1": {
     "componentId": "footer1",
     "componentTheme": "",
-    "componentModifier": "",
+    "componentModifier": "bg-c8 text-white",
     "componentStyle": "",
     "text": "<h1>Footer</h1>"
   }

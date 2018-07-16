@@ -2,4 +2,4 @@
 title: footer
 ---
 
-class list :
+Modifiers :

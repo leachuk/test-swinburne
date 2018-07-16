@@ -1,6 +1,9 @@
-footer,
-.footer {
-  & > [class*="aem-"] {
-    @include container();
+footer[component] {
+  &,
+  &.footer  {
+    padding: 40px 0;
+    & > [class*="aem-"] {
+      @include container();
+    }
   }
 }

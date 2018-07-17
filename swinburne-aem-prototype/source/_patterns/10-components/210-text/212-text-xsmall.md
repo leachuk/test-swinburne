@@ -3,7 +3,7 @@ title: Text Xsmall
 ---
 
 ### Overview
-  Component for displaying rich text.
+  Component for displaying a rich text with a xsmall size.
 ### Design
 
 1. Theme

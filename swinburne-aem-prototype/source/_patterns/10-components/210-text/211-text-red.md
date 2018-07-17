@@ -2,7 +2,7 @@
 title: Text red
 ---
 ### Overview
-  Component for displaying rich text.
+  Component for displaying a rich text in red.
 ### Design
 
 1. Theme

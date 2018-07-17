@@ -2,7 +2,7 @@
 title: Text field disabled
 ---
 ### Overview
-Component for creating a text box that include a disabled text field and a label
+Component for creating a text box that include a readonly text field and a label
 
 ### Design
 1. Theme
@@ -16,4 +16,4 @@ Component for creating a text box that include a disabled text field and a label
 5. Icon
  * none
 6. Style
- * disabled
+ * readonly

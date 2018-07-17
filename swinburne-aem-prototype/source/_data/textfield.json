@@ -21,10 +21,10 @@
     "componentChevron": "",
     "componentIcon": "",
     "placeholderText": "",
-    "name": "disabledTextField",
+    "name": "readonlyTextField",
     "panelPath": "",
-    "label": "text field disabled",
-    "style": "disabled",
+    "label": "text field readonly",
+    "style": "readonly",
     "shortDescription": "",
     "longDescription": ""
   },

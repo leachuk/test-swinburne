@@ -6,9 +6,12 @@
     "componentModules": "",
     "componentChevron": "",
     "componentIcon": "",
-    "placeholder": "",
+    "placeholderText": "",
     "name": "defaultTextField",
-    "autocomplete": ""
+    "panelPath": "",
+    "label": "text field default",
+    "shortDescription": "",
+    "longDescription": ""
   },
   "textfield2": {
     "componentId": "textfield2",
@@ -17,10 +20,13 @@
     "componentModules": "",
     "componentChevron": "",
     "componentIcon": "",
-    "componentStyle": "disabled",
-    "placeholder": "",
+    "placeholderText": "",
     "name": "disabledTextField",
-    "autocomplete": ""
+    "panelPath": "",
+    "label": "text field disabled",
+    "style": "disabled",
+    "shortDescription": "",
+    "longDescription": ""
   },
   "textfield3": {
     "componentId": "textfield3",
@@ -30,9 +36,12 @@
     "componentChevron": "",
     "componentIcon": "",
     "componentStyle": "",
-    "placeholder": "",
+    "placeholderText": "",
     "name": "successTextField",
-    "autocomplete": ""
+    "panelPath": "",
+    "label": "text field success",
+    "shortDescription": "",
+    "longDescription": ""
   },
   "textfield4": {
     "componentId": "textfield4",
@@ -42,9 +51,12 @@
     "componentChevron": "",
     "componentIcon": "",
     "componentStyle": "",
-    "placeholder": "",
+    "placeholderText": "",
     "name": "errorTextField",
-    "autocomplete": ""
+    "panelPath": "",
+    "label": "text field error",
+    "shortDescription": "",
+    "longDescription": ""
   },
   "textfield5": {
     "componentId": "textfield5",
@@ -54,8 +66,11 @@
     "componentChevron": "",
     "componentIcon": "",
     "componentStyle": "",
-    "placeholder": "Placeholder",
+    "placeholderText": "Placeholder",
     "name": "placeholderTextField",
-    "autocomplete": ""
+    "panelPath": "",
+    "label": "text field placeholder",
+    "shortDescription": "",
+    "longDescription": ""
   }
 }

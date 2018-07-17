@@ -3,11 +3,9 @@
   width: 100%;
   margin-bottom: 17px;
   height: 50px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: $white;
   border: 1px solid #d9d5d1;
-  font-family: $font-family-open-sans;
   padding: 8px 15px 8px 30px;
   font-size: 16px;
   line-height: 1.4em;
@@ -18,9 +16,11 @@
 }
 
 
-.guideFieldWidget {
-  & > * ,
-  & > input[type="text"]{
+.guideFieldNode {
+  & * {
+    font-family: $font-family-open-sans;
+  }
+  input:not([type="radio"]):not([type="checkbox"]){
     @include inputStyle();
     @include placeholder {
       color: map-deep-get($brand-colours, 'core', 'c6');
@@ -31,11 +31,23 @@
         color: map-deep-get($brand-colours, 'core', 'c6');
       }
     }
-    &.error {
-      border : 1px solid map-deep-get($brand-colours, 'core', 'c7')
+  }
+  .guideFieldLabel {
+    &.top {
+      label {
+        display: block;
+        margin-bottom: .35em;
+      }
     }
-    &.success {
-      border : 1px solid map-deep-get($brand-colours, 'core', 'c1')
+  }
+  &.error {
+    input:not([type="radio"]):not([type="checkbox"]) {
+      border: 1px solid map-deep-get($brand-colours, 'core', 'c7')
+    }
+  }
+  &.success {
+    input:not([type="radio"]):not([type="checkbox"]) {
+      border: 1px solid map-deep-get($brand-colours, 'core', 'c1')
     }
   }
 }

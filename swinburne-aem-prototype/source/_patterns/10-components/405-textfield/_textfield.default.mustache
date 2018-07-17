@@ -1,9 +1,9 @@
 <div id="guideContainer-{{{ panelPath }}}-{{{ name }}}___guide-item" class="col-md-12">
   <div class="guidetextbox guidefield">
-    <div {{> components-formFieldAttributes( name: "{{{ name }}}", css: "error", panelPath: "{{{ panelPath }}}" ) }}>
+    <div {{> components-formFieldAttributes( name: "{{{ name }}}", css: "{{{ modifier }}}", panelPath: "{{{ panelPath }}}" ) }}>
       <div class="guideFieldLabel top" style=""><label for="guideContainer-{{{ panelPath }}}-{{{ name }}}___widget" id="guideContainer-{{{ panelPath }}}-{{{ name }}}___label">{{{ label }}}</label></div>
       <div class="guideFieldWidget textField  " style="">
-        <input type="text" autocomplete="off" id="guideContainer-{{{ panelPath }}}-{{{ name }}}___widget" name="{{{ name }}}" value="" style="" placeholder="{{{ placeholderText }}}">
+        <input type="text" autocomplete="off" id="guideContainer-{{{ panelPath }}}-{{{ name }}}___widget" name="{{{ name }}}" value="" {{{ style }}} placeholder="{{{ placeholderText }}}">
       </div>
       <div class="guideHelpQuestionMark" data-guide-longdescription="guideContainer-{{{ panelPath }}}-{{{ name }}}___guideFieldLongDescription" data-guide-alwaysshow="false" tabindex="0">
       </div>

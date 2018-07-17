@@ -78,6 +78,10 @@
     {
       "name": "bg-c9",
       "value": "#ffffff"
+    },
+    {
+      "name": "bg-c10",
+      "value": "bg image"
     }
   ],
   "text-colours": [

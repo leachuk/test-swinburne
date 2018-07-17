@@ -3,7 +3,7 @@
 // These styles directly affect AEM components, they should not introduce any new
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
-.text[component] {
+.text {
   p{
     font-size: 20px;
     margin-bottom: 15px;
@@ -85,7 +85,6 @@
     color: $white;
   }
 }
-
 
 
 

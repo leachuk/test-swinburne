@@ -2,4 +2,4 @@
 title: Base template
 ---
 
-class list :
+Modifiers :

@@ -18,9 +18,6 @@
     font-size: 200%;
   }
   h3 {
-    margin-top: 0.5em;
-    margin-bottom: 0.3em;
-    line-height: 1.1em;
     font-size: 180%;
   }
   h4 {
@@ -35,9 +32,6 @@
   ol, ul {
     padding-left: 3em;
     padding-bottom: 1em;
-    li {
-      list-style: none;
-    }
   }
   .row li {
     font-size: 20px;
@@ -46,7 +40,15 @@
   }
 }
 
-//text modifiers
+//modifiers
+.bg-c8 {
+  color: $white;
+}
+
+.bg-c9 {
+  color: $black;
+}
+
 .text-uppercase {
   &,
   &  * {

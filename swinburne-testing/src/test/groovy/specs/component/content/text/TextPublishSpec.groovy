@@ -21,8 +21,6 @@ class TextPublishSpec extends ComponentSpec {
     def "Functionality of Component Variant: Default"() {
 
         given: '>the page hierarchy is created as "Components" > "Content" > "Text"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
         def selector = "#text1"
 
         when: "I am on the component showcase page"

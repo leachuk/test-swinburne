@@ -1555,3 +1555,5 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_h5: { description: 'Heading 5', tag: "h5" }
       - default_h6: { description: 'Heading 6', tag: "h6" }
       - default_blockquote: { description: 'Quote', tag: "blockquote" }
+      - default_small: { description: 'Small', tag: "small" }
+      - default_emphasis: { description: 'Emphasis', tag: "em" }

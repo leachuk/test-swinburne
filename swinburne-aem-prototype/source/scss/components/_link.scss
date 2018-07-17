@@ -18,14 +18,16 @@ button.link[component]:not([class*="btn"]) {
 .btn[component] {
   font-size: 16px;
   display: inline-block;
-  color: $white;
   border: 0;
   padding: 10px 14px;
   text-transform: uppercase;
   transition: background-color 300ms ease-in-out, border-radius 300ms ease-in-out;
   font-weight: bold;
-  &:hover {
+  &:not([class*="btn-outline-"]) {
     color: $white;
+    &:hover {
+      color: $white;
+    }
   }
   & > * {
     font-weight: bold;

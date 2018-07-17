@@ -27,6 +27,7 @@
     }
     &:focus {
       border: 1px solid map-deep-get($brand-colours, 'core', 'c2');
+      outline: none;
       @include placeholder {
         color: map-deep-get($brand-colours, 'core', 'c6');
       }

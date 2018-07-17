@@ -396,13 +396,23 @@ content/cq:tags/swinburne/component-style-modifier:
 
   font/font-weight-bold:
     flat: true
-    prefix: fw-500
+    prefix: fw-600
     title: 'Font Weight (Bold)'
 
   font/font-weight-bolder:
     flat: true
-    prefix: fw-600
+    prefix: fw-700
     title: 'Font Weight (Bolder)'
+
+  font/font-brush-up:
+    flat: true
+    prefix: f-brush-up
+    title: 'Font Family (Brush up)'
+
+  font/font-open-sans:
+    flat: true
+    prefix: f-open-sans
+    title: 'Font Family (Open sans)'
 
   # Grid
   grid/container:
@@ -854,9 +864,6 @@ content/cq:tags/swinburne/component-style-theme:
   # Content Block
   layout/contentblock:
     prefixes:
-      - alert
-      - hero
-      - pull-quote
       - banner
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
@@ -1548,3 +1555,5 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_h5: { description: 'Heading 5', tag: "h5" }
       - default_h6: { description: 'Heading 6', tag: "h6" }
       - default_blockquote: { description: 'Quote', tag: "blockquote" }
+      - default_small: { description: 'Small', tag: "small" }
+      - default_emphasis: { description: 'Emphasis', tag: "em" }

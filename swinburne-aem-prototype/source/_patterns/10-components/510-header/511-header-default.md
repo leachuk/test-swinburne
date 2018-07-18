@@ -1,10 +1,9 @@
 ---
-title: Link Button
+title: Header
 ---
 ### Overview
-  Component for displaying a default button link.
+  Component for displaying a header
 ### Design
-
 1. Theme
  * none
 2. Modifier

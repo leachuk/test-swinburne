@@ -1,10 +1,10 @@
 ---
-title: Link Button
+title: Article default
 ---
-### Overview
-  Component for displaying a default button link.
-### Design
 
+### Overview
+  Component for displaying an article wrapper
+### Design
 1. Theme
  * none
 2. Modifier

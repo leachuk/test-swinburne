@@ -13,7 +13,9 @@ $brand-colours: (
     c6: #808285,
     c7: #DC2D27,
     c8: #000000,
-    c9: #ffffff
+    c9: #ffffff,
+    c10: #292625,
+    c11: #d9d5d1
   ),
 
   'grey': (
@@ -32,7 +34,6 @@ $brand-colours: (
 $primary: map-deep-get($brand-colours, 'core', 'c8');
 $secondary: map-deep-get($brand-colours, 'core', 'c7');
 $tertiary: map-deep-get($brand-colours, 'core', 'c6');
-$secondary-font-colour: #292625;
 
 $theme-colors: (
   'primary'   : $primary,

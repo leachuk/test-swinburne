@@ -5,11 +5,11 @@
   height: 50px;
   box-sizing: border-box;
   background: $white;
-  border: 1px solid #d9d5d1;
+  border: 1px solid map-deep-get($brand-colours, 'core', 'c11');
   padding: 8px 15px 8px 30px;
   font-size: 16px;
   line-height: 1.4em;
-  color: #292625;
+  color: map-deep-get($brand-colours, 'core', 'c10');
   border-radius: 0;
   vertical-align: middle;
   -webkit-appearance: none;

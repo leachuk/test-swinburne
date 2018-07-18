@@ -52,6 +52,10 @@
     max-width: rem-calc(1200px);
   }
 
+  &-pattern-extra {
+    overflow: auto;
+  }
+
   &-heading {
     @include make-container;
     @include make-container-max-widths;

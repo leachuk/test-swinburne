@@ -1,0 +1,23 @@
+<div id="guideContainer-{{{ panelPath }}}-{{{ name }}}___guide-item" class="col-md-12">
+  <div class="guidetextbox guidefield">
+    <div {{> components-formFieldAttributes( name: "{{{ name }}}", css: "{{{ modifier }}}", panelPath: "{{{ panelPath }}}" ) }}>
+      <div class="guideFieldLabel top" style=""><label for="guideContainer-{{{ panelPath }}}-{{{ name }}}___widget" id="guideContainer-{{{ panelPath }}}-{{{ name }}}___label">{{{ label }}}</label></div>
+      <div class="guideFieldWidget textField  " style="">
+        <input type="text" autocomplete="off" id="guideContainer-{{{ panelPath }}}-{{{ name }}}___widget" name="{{{ name }}}" value="" {{{ style }}} placeholder="{{{ placeholderText }}}">
+      </div>
+      <div class="guideHelpQuestionMark" data-guide-longdescription="guideContainer-{{{ panelPath }}}-{{{ name }}}___guideFieldLongDescription" data-guide-alwaysshow="false" tabindex="0">
+      </div>
+      <div id="guideContainer-{{{ panelPath }}}-{{{ name }}}___guideFieldShortDescription" class="guideFieldDescription short" style="null;display:none">
+        <p>{{{ shortDescription }}}</p>
+      </div>
+      <div id="guideContainer-{{{ panelPath }}}-{{{ name }}}___guideFieldLongDescription" class="guideFieldDescription long" style="">
+        <p>{{{ longDescription }}}</p>
+      </div>
+      <div class="guideFieldError">
+
+      </div>
+      <div class="alert_indicator guidevalid_indicator" data-guide-name="{{{ name }}}"  data-guide-id="guideContainer-{{{ panelPath }}}-{{{ name }}}__">
+      </div>
+    </div>
+  </div>
+</div>

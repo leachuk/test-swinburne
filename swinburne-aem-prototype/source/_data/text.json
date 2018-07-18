@@ -14,6 +14,6 @@
     "copyright": "<p>© Swinburne | CRICOS: 00111D | RTO: 3059 | </p>"
   },
   "text1" : {
-    "componentModifier" : "h2 fw-700 text-uppercase"
+    "componentModifier" : "fw-700 text-uppercase"
   }
 }

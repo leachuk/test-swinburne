@@ -59,6 +59,8 @@ const prefixes = {
   c7: 'C7 (#DC2D27)',
   c8: 'C8 (#000000)',
   c9: 'C9 (#ffffff)',
+  c10: 'C10 (#292625)',
+  c11: 'C11 (#d9d5d1)',
 
   // Specific styles
   'col'          : 'Columns',

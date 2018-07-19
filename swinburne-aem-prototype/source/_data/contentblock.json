@@ -3,7 +3,7 @@
       "componentId": "contentblock1",
       "componentTheme": "theme--contentblock-banner",
       "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/juggling.jpg)\"",
-      "text": "Juggling life and uni?",
+      "text": "<h2>Juggling life and uni?</h2>",
       "linkHref": "http://google.com",
       "linkText": "tell me how"
   },
@@ -12,7 +12,7 @@
     "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/work-experience.jpg\")",
     "componentTheme": "theme--contentblock-banner",
     "linkHref": "http://google.com",
-    "linkText": "tell me more",
+    "linkText": "<h2>tell me more</h2>",
     "text": "REAL WORK AS YOU STUDY"
   },
   "contentblock5": {

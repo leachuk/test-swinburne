@@ -1,10 +1,9 @@
 ---
-title: Link Button
+title: Content Block default
 ---
 ### Overview
-  Component for displaying a default button link.
+  Component for displaying a default content block
 ### Design
-
 1. Theme
  * none
 2. Modifier

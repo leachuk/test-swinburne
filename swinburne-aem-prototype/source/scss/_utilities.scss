@@ -25,6 +25,7 @@
 ;
 
 .grid,
+.aem-Grid,
 .container:not(.my-large, .my-5) {
   @include container();
 }
@@ -33,13 +34,13 @@
 body > .container {
   &,
   .container .container,
-  .grid .container,
-  .grid .grid,
-  .container .grid {
+  .aem-Grid .container,
+  .aem-Grid .aem-Grid,
+  .aem-Grid .aem-Grid {
     max-width: 100% !important;
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 

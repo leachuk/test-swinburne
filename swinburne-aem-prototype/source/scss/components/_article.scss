@@ -1,7 +1,7 @@
 article[component] {
   &,
   &.article {
-    & > [class*="aem-"] {
+    & > [class*="aem-Grid"] {
       @include container();
     }
   }

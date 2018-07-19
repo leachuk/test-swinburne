@@ -4,6 +4,10 @@ title: Link Button Themed
 ## Secondary button
 ### Overview
   Component for displaying a secondary button link.
+  
+### Variant
+  Button
+  
 ### Design
 1. Theme
  * none
@@ -19,6 +23,10 @@ title: Link Button Themed
 ## Primary button
 ### Overview
   Component for displaying a primary button link.
+  
+### Variant
+  Button
+  
 ### Design
 1. Theme
  * none
@@ -34,6 +42,10 @@ title: Link Button Themed
 ## Primary button small
 ### Overview
  Component for displaying a primary button link.
+ 
+### Variant
+  Button
+  
 ### Design
 1. Theme
 * none

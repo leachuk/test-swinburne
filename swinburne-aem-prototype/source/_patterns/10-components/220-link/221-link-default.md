@@ -3,6 +3,10 @@ title: Link Default
 ---
 ### Overview
   Component for displaying a default link with label.
+  
+### Variant
+  Default
+
 ### Design
 
 1. Theme

@@ -42,12 +42,12 @@
 }
 
 //modifiers
-.bg-c8 {
-  color: $white;
+.bg-c8 * {
+  color: $white !important;
 }
 
-.bg-c9 {
-  color: $black;
+.bg-c9 * {
+  color: $black !important;
 }
 
 .text-uppercase {

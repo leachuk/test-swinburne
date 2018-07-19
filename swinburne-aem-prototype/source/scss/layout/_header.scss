@@ -4,8 +4,6 @@ header[component] {
     width: 100%;
     height: 90px;
     line-height: 90px;
-    & > [class*="aem-"] {
-      @include container();
-    }
+    & > [class*="aem-"] {}
   }
 }

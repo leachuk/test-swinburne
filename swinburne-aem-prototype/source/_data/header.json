@@ -2,7 +2,7 @@
   "header1": {
     "componentId": "header1",
     "componentTheme": "",
-    "componentModifier": "",
+    "componentModifier": "container",
     "componentStyle": "",
     "text": "<h1>Header</h1>"
   }

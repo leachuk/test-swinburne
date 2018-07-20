@@ -42,41 +42,47 @@
 }
 
 //modifiers
-.bg-c8 * {
-  color: $white !important;
+.bg-c8 {
+  &,
+  * {
+    color: $white !important;
+  }
 }
 
-.bg-c9 * {
-  color: $black !important;
+.bg-c9  {
+  &,
+  * {
+    color: $black !important;
+  }
 }
 
 .text-uppercase {
   &,
-  &  * {
+  * {
     text-transform: uppercase !important;
   }
 }
 .text-xsmall {
   &,
-  &  * {
+  * {
     font-size: 12px !important;
   }
 }
 .text-red {
   &,
-  &  * {
+  * {
     color: $secondary !important;
   }
 }
 .text-black {
   &,
-  &  * {
+  * {
     color: $primary !important;
   }
 }
 .text-white {
   &,
-  &  * {
+  * {
     color: $white !important;
   }
 }

@@ -2,11 +2,11 @@
   "link1": {
       "componentId": "link1",
       "componentTheme": "",
-      "componentModifier": "text-red",
+      "componentModifier": "",
       "componentModules": "",
       "componentChevron": "",
       "componentIcon": "",
-      "text": "Tell me how",
+      "text": "Link : default",
       "href": "www.google.com"
   },
   "link2": {
@@ -26,8 +26,8 @@
       "componentModules": "",
       "componentChevron": "",
       "componentIcon": "",
-      "href": "www.google.com",
-      "text": "tell me how"
+      "href": "",
+      "text": "Secondary"
   },
   "link4": {
       "componentId": "link4",
@@ -47,5 +47,34 @@
       "componentChevron": "",
       "componentIcon": "",
       "text": "<h2>SWINBURNE <span>INFO EVENING</span></h2><p>Attend the Swinburne Info Evening to learn about the range of postgrad programs, master and bachelor degrees, and pathways that can take you where you want to go.</p><p>Chat with academics about the courses that are right for you and just where they can lead. You’ll leave feeling cool, calm and confident about your future.</p><p>To register, just drop your details in here.</p>"
-  }
+  },
+  "link6": {
+    "componentId": "link6",
+    "componentTheme": "",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "text": "Link : Button",
+    "href": ""
+  },
+  "link7": {
+    "componentId": "link7",
+    "componentTheme": "",
+    "componentModifier": "btn btn-primary",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "text": "Primary"
+  },
+  "link8": {
+    "componentId": "link8",
+    "componentTheme": "",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "text": "Link",
+    "href": ""
+  },
 }

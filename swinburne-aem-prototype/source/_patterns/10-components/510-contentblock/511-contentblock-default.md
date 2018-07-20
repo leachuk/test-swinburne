@@ -1,6 +1,3 @@
 ---
-title: Content Block
+title: Content Block default
 ---
-
-Themes :
-- **theme--contentblock-banner**

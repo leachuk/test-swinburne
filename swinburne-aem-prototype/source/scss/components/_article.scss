@@ -1,6 +1,6 @@
 article[component] {
   &,
   &.article {
-    & > [class*="aem-Grid"] {}
+    & > .aem-Grid {}
   }
 }

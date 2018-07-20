@@ -1,14 +1,15 @@
 ---
-title: footer default
+title: footer default background
 ---
 ### Overview
-  Component for displaying a default footer
+  Component for displaying a default footer with a background
 ### Variant
   Default
 ### Design
 1. Theme
  * none
 2. Modifier
+ * Swinburne : BACKGROUND IMAGE (select desired image)
  * Swinburne : Component Style Modifier / Grid / Container
 3. Modules
  * none
@@ -16,4 +17,5 @@ title: footer default
  * none
 5. Icon
  * none
+
 

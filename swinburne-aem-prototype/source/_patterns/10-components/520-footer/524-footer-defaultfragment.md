@@ -1,8 +1,8 @@
 ---
-title: footer default
+title: footer default Fragment
 ---
 ### Overview
-  Component for displaying a default footer
+  Component for displaying a default footer to be replaced by experience
 ### Variant
   Default
 ### Design
@@ -16,4 +16,5 @@ title: footer default
  * none
 5. Icon
  * none
+
 

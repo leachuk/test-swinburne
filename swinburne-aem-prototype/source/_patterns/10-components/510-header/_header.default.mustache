@@ -1,3 +1,5 @@
 <header {{> components-componentAttributes( componentName: "header", componentId: "{{{ id }}}", componentTheme: "{{{ theme }}}", componentModifier: "{{{ modifier }}}", componentModules: "{{{ modules }}}", componentChevron: "{{{ chevron }}}", componentIcon: "{{{ icon }}}", componentStyle: "{{{ style }}}" ) }}>
-  <div class="aem-Grid">{{{ text }}}</div>
+  <div class="aem-Grid">
+    {{> components-text.default( text: "{{{ text }}}") }}
+  </div>
 </header>

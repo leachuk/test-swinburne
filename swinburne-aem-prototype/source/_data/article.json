@@ -2,7 +2,7 @@
   "article1": {
       "componentId": "article1",
       "componentTheme": "",
-      "componentModifier": "",
+      "componentModifier": "container",
       "componentModules": "",
       "componentChevron": "",
       "componentIcon": "",

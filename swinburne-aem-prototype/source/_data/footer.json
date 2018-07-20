@@ -23,7 +23,7 @@
   "footer4": {
     "componentId": "footer4",
     "componentTheme": "",
-    "componentModifier": "",
+    "componentModifier": "container",
     "componentStyle": "",
     "text": "<h1>Footer</h1>"
   },

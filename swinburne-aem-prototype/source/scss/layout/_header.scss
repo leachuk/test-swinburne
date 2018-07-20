@@ -1,12 +1,9 @@
-header {
+header[component] {
   &,
   &.header {
     width: 100%;
-    background: $white;
     height: 90px;
     line-height: 90px;
-    & > [class*="aem-"] {
-      @include container();
-    }
+    & > [class*="aem-"] {}
   }
 }

@@ -1,7 +1,7 @@
 {
   "contentblock1": {
       "componentId": "contentblock1",
-      "componentTheme": "block-banner",
+      "componentTheme": "theme--contentblock-banner",
       "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/juggling.jpg)\"",
       "text": "<h2>Juggling life and uni?</h2>",
       "linkHref": "http://google.com",
@@ -10,9 +10,25 @@
   "contentblock2": {
     "componentId": "contentblock2",
     "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/work-experience.jpg\")",
-    "componentTheme": "block-banner",
+    "componentTheme": "theme--contentblock-banner",
     "linkHref": "http://google.com",
-    "linkText": "tell me more",
-    "text": "<h2>REAL WORK AS YOU STUDY</h2>"
+    "linkText": "<h2>tell me more</h2>",
+    "text": "REAL WORK AS YOU STUDY"
+  },
+  "contentblock5": {
+    "componentId": "contentblock5",
+    "componentStyle": "",
+    "componentTheme": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": "Content block default"
+  },
+  "contentblock6": {
+    "componentId": "contentblock6",
+    "componentStyle": "",
+    "componentTheme": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": "Content block container"
   }
 }

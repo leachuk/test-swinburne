@@ -14,21 +14,27 @@
   }
   h1 {
     font-size: 220%;
+    margin: 0;
   }
   h2 {
     font-size: 200%;
+    margin: 0;
   }
   h3 {
     font-size: 180%;
+    margin: 0;
   }
   h4 {
     font-size: 160%;
+    margin: 0;
   }
   h5 {
     font-size: 140%;
+    margin: 0;
   }
   h6 {
     font-size: 120%;
+    margin: 0;
   }
   ol, ul {
     padding-left: 3em;
@@ -43,40 +49,46 @@
 
 //modifiers
 .bg-c8 {
-  color: $white;
+  &,
+  * {
+    color: $white !important;
+  }
 }
 
-.bg-c9 {
-  color: $black;
+.bg-c9  {
+  &,
+  * {
+    color: $black !important;
+  }
 }
 
 .text-uppercase {
   &,
-  &  * {
+  * {
     text-transform: uppercase !important;
   }
 }
 .text-xsmall {
   &,
-  &  * {
+  * {
     font-size: 12px !important;
   }
 }
 .text-red {
   &,
-  &  * {
+  * {
     color: $secondary !important;
   }
 }
 .text-black {
   &,
-  &  * {
+  * {
     color: $primary !important;
   }
 }
 .text-white {
   &,
-  &  * {
+  * {
     color: $white !important;
   }
 }

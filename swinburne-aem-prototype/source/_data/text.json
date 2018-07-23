@@ -15,5 +15,8 @@
   },
   "text1" : {
     "componentModifier" : "fw-700 text-uppercase"
+  },
+  "text2" : {
+
   }
 }

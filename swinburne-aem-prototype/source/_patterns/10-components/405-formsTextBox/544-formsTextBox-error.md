@@ -1,9 +1,10 @@
 ---
-title: Text field error
+title: Forms Text box error
 ---
 ### Overview
 Component for creating a text box that include an error text field and an error label
-
+### Variant
+Default
 ### Design
 1. Theme
  * none
@@ -11,7 +12,7 @@ Component for creating a text box that include an error text field and an error 
  * error
 3. Modules
  * none
-4. Chenvron
+4. Chevron
  * none
 5. Icon
  * none

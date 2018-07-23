@@ -1,9 +1,10 @@
 ---
-title: Text field default
+title: Forms Text box default
 ---
 ### Overview
 Component for creating text box that include a text field and a label
-
+### Variant
+Default
 ### Design
 1. Theme
  * none
@@ -11,7 +12,7 @@ Component for creating text box that include a text field and a label
  * none
 3. Modules
  * none
-4. Chenvron
+4. Chevron
  * none
 5. Icon
  * none

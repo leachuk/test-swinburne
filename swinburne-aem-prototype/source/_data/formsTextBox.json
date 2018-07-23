@@ -11,6 +11,7 @@
     "panelPath": "",
     "label": "text field default",
     "shortDescription": "",
+    "type": "guideTextBox",
     "longDescription": ""
   },
   "textfield2": {
@@ -26,6 +27,7 @@
     "label": "text field readonly",
     "style": "readonly",
     "shortDescription": "",
+    "type": "guideTextBox",
     "longDescription": ""
   },
   "textfield3": {
@@ -41,6 +43,7 @@
     "panelPath": "",
     "label": "text field success",
     "shortDescription": "",
+    "type": "guideTextBox",
     "longDescription": ""
   },
   "textfield4": {
@@ -55,6 +58,7 @@
     "name": "errorTextField",
     "panelPath": "",
     "label": "text field error",
+    "type": "guideTextBox",
     "shortDescription": "",
     "longDescription": ""
   },
@@ -70,6 +74,7 @@
     "name": "placeholderTextField",
     "panelPath": "",
     "label": "text field placeholder",
+    "type": "guideTextBox",
     "shortDescription": "",
     "longDescription": ""
   }

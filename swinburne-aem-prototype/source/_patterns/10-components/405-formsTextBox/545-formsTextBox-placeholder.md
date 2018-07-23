@@ -1,5 +1,5 @@
 ---
-title: Text field placeholder
+title: Forms Text box placeholder
 ---
 
 ### Overview
@@ -12,7 +12,7 @@ Component for creating text box that include a text field , a label and a placeh
  * none
 3. Modules
  * none
-4. Chenvron
+4. Chevron
  * none
 5. Icon
  * none

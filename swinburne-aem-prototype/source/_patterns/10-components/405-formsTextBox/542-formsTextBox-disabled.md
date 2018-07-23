@@ -1,5 +1,5 @@
 ---
-title: Text field disabled
+title: Forms Text box disabled
 ---
 ### Overview
 Component for creating a text box that include a readonly text field and a label
@@ -11,7 +11,7 @@ Component for creating a text box that include a readonly text field and a label
  * none
 3. Modules
  * none
-4. Chenvron
+4. Chevron
  * none
 5. Icon
  * none

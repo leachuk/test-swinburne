@@ -5,9 +5,9 @@ import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class FooterPublishSpec extends ComponentSpec {
+class FooterInheritPublishSpec extends ComponentSpec {
 
-    String pathPage = "component/layout/footer"
+    String pathPage = "component/layout/footer/footerinherit"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
     String componentPath = "jcr:content/article/par/contentblock1/par/footer"
@@ -19,7 +19,7 @@ class FooterPublishSpec extends ComponentSpec {
     @Unroll("Functionality of Component in #viewport.label")
     def "Functionality of Component"() {
 
-        given: '>the page hierarchy is created as "Components" > "Layout" > "Footer"'
+        given: '>the page hierarchy is created as "Components" > "Layout" > "Footer" > "Footer Inherit"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#footer1"
@@ -43,7 +43,7 @@ class FooterPublishSpec extends ComponentSpec {
     @Unroll("Functionality of Component with Background in #viewport.label")
     def "Functionality of Component with Background"() {
 
-        given: '>the page hierarchy is created as "Components" > "Layout" > "Footer"'
+        given: '>the page hierarchy is created as "Components" > "Layout" > "Footer" > "Footer Inherit"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#footer2"

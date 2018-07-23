@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Page">
+    jcr:primaryType="cq:Page">
     <footerinherit/>
     <jcr:content
-            cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
-            jcr:primaryType="cq:PageContent"
-            jcr:title="Footer"
-            sling:resourceType="swinburne/components/template/base">
+        cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer"
+        sling:resourceType="swinburne/components/template/base">
         <article
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/article"
-                componentId="article_3VHMHSEZ4">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_3VHMHSEZ4">
             <par
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/container">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
                 <contentblock1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock1"
-                        title="Variant: Default"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock1"
+                    title="Variant: Default"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <footer
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/footer"
-                                cancelInheritParent="true"
-                                componentId="footer1">
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/footer"
+                            cancelInheritParent="true"
+                            componentId="footer1">
                             <par
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/layout/container">
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="swinburne/components/content/text"
-                                        componentId="text_QK3FPKM9V"
-                                        text="&lt;p>Footer Content&lt;/p>&#xa;"
-                                        textIsRich="true"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_QK3FPKM9V"
+                                    text="&lt;p>Footer Content&lt;/p>&#xa;"
+                                    textIsRich="true"/>
                             </par>
                         </footer>
                     </par>
                 </contentblock1>
                 <contentblock2
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock2"
-                        title="Variant: Default with Background"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock2"
+                    title="Variant: Default with Background"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <footer
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/footer"
-                                cancelInheritParent="true"
-                                componentId="footer2">
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/footer"
+                            cancelInheritParent="true"
+                            componentId="footer2">
                             <par
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/layout/container">
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="swinburne/components/content/text"
-                                        componentId="text_Z223GU3KV"
-                                        text="&lt;p>Footer Content with Background&lt;/p>&#xa;"
-                                        textIsRich="true"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_Z223GU3KV"
+                                    text="&lt;p>Footer Content with Background&lt;/p>&#xa;"
+                                    textIsRich="true"/>
                             </par>
                             <bgimage
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/media/image"
-                                    fileReference="/content/dam/swinburne-showcase/en/common/aem-design.png"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/media/image"
+                                fileReference="/content/dam/swinburne-showcase/en/common/aem-design.png"/>
                         </footer>
                     </par>
                 </contentblock2>
                 <contentblock3
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock3"
-                        title="Variant: Default with Styles"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock3"
+                    title="Variant: Default with Styles"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <footer
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/footer"
-                                cancelInheritParent="true"
-                                componentId="footer3"
-                                componentModifiers="[swinburne:component-style-modifier/background/bg-c8,swinburne:component-style-modifier/color/standard/white]">
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/footer"
+                            cancelInheritParent="true"
+                            componentId="footer3"
+                            componentModifiers="[swinburne:component-style-modifier/background/bg-c8,swinburne:component-style-modifier/color/standard/white]">
                             <par
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/layout/container">
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="swinburne/components/content/text"
-                                        componentId="text_DERTRA6XV"
-                                        text="&lt;p>Footer Content with Style&lt;/p>&#xa;"
-                                        textIsRich="true"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_DERTRA6XV"
+                                    text="&lt;p>Footer Content with Style&lt;/p>&#xa;"
+                                    textIsRich="true"/>
                             </par>
                         </footer>
                     </par>
@@ -103,31 +103,23 @@
             </par>
         </article>
         <footer
-                jcr:lastModified="{Date}2018-07-19T19:56:38.723+10:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/footer"
-                cancelInheritParent="true"
-                componentId="footer_LWNXEVYCM"
-                componentModifiers="[swinburne:component-style-modifier/background/bg-c8,swinburne:component-style-modifier/color/standard/white]">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/footer"
+            cancelInheritParent="true"
+            componentId="footer_LWNXEVYCM"
+            componentModifiers="[swinburne:component-style-modifier/background/bg-c8,swinburne:component-style-modifier/color/standard/white]">
             <bgimage
-                    jcr:lastModified="{Date}2018-07-19T19:56:38.723+10:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="aemdesign/components/media/image"/>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdesign/components/media/image"/>
             <par
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="aemdesign/components/layout/container">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdesign/components/layout/container">
                 <text
-                        jcr:created="{Date}2018-07-19T20:00:29.326+10:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-07-19T20:01:18.061+10:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/content/text"
-                        componentId="text_PCZO5L7NE"
-                        text="&lt;p>© SWINBURNE | CRICOS: 00111D | RTO: 3059 |&lt;/p>&#xa;"
-                        textIsRich="true"/>
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/content/text"
+                    componentId="text_PCZO5L7NE"
+                    text="&lt;p>© SWINBURNE | CRICOS: 00111D | RTO: 3059 |&lt;/p>&#xa;"
+                    textIsRich="true"/>
             </par>
         </footer>
     </jcr:content>

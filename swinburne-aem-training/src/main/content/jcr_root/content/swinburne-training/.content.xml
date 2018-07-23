@@ -6,7 +6,7 @@
         cq:designPath="/apps/settings/wcm/design/swinburne"
         cq:template="/apps/swinburne/templates/column/two"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:language="en"
+        jcr:language="en_au"
         jcr:mixinTypes="[mix:lockable,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Training"

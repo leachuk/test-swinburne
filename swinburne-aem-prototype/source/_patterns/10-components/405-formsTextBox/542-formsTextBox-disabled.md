@@ -3,7 +3,8 @@ title: Forms Text box disabled
 ---
 ### Overview
 Component for creating a text box that include a readonly text field and a label
-
+### Variant
+Default
 ### Design
 1. Theme
  * none

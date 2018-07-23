@@ -3,7 +3,8 @@ title: Forms Text box default
 ---
 ### Overview
 Component for creating text box that include a text field and a label
-
+### Variant
+Default
 ### Design
 1. Theme
  * none

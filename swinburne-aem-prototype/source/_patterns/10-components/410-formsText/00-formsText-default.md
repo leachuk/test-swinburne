@@ -3,7 +3,8 @@ title: Forms Text default
 ---
 ### Overview
 Component for displaying a text
-
+### Variant
+Default
 ### Design
 1. Theme
  * none

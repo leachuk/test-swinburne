@@ -3,7 +3,8 @@ title: Forms Text box error
 ---
 ### Overview
 Component for creating a text box that include an error text field and an error label
-
+### Variant
+Default
 ### Design
 1. Theme
  * none

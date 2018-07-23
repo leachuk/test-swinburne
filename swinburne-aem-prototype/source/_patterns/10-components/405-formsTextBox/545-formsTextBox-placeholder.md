@@ -4,7 +4,8 @@ title: Forms Text box placeholder
 
 ### Overview
 Component for creating text box that include a text field , a label and a placeholder
-
+### Variant
+Default
 ### Design
 1. Theme
  * none

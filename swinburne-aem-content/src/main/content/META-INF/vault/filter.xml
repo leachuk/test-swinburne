@@ -18,6 +18,7 @@
     <filter root="/content/swinburne" mode="update"/>
 
     <filter root="/content/api/swinburne" mode="update"/>
+    <filter root="/content/experience-fragments/swin-exp-fragments" mode="update"/>
     <!--<filter root="/etc/designs/swinburne" mode="update"/>-->
     <!--<filter root="/content/cq:tags/swinburne" mode="update"/>-->
 

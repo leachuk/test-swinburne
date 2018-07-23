@@ -23,7 +23,7 @@ class FooterAuthorSpec extends ComponentSpec {
     def "Authoring of Component"() {
 
         given: "Component has already been inserted"
-        def selector = "#plainfooter"
+        def selector = "#footer1"
 
         when: "I am on the Component showcase page"
         TouchUIEditor page = waitForTouchUIPage(language)

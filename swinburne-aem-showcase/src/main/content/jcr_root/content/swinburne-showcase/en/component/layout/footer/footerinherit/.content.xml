@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-07-23T12:37:33.494+10:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Footer Inherit"
@@ -32,10 +30,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <contentblock1
-                    jcr:created="{Date}2018-07-19T20:13:39.361+10:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-07-23T12:29:52.179+10:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock1"
@@ -45,30 +39,18 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
                         <footer
-                            jcr:created="{Date}2018-07-19T20:13:54.934+10:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2018-07-19T20:13:54.934+10:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/footer"
                             componentId="footer_AMYMRD2MO"/>
                     </par>
                     <bgimage
-                        jcr:lastModified="{Date}2018-07-23T12:29:52.179+10:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <bgvideo
-                        jcr:lastModified="{Date}2018-07-23T12:29:52.179+10:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock1>
                 <contentblock2
-                    jcr:created="{Date}2018-07-20T15:31:44.862+10:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-07-20T15:31:44.862+10:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock2">
@@ -76,10 +58,6 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
                         <footer
-                            jcr:created="{Date}2018-07-20T15:33:21.070+10:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2018-07-20T15:33:34.594+10:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/footer"
                             cancelInheritParent="false"
@@ -87,10 +65,6 @@
                     </par>
                 </contentblock2>
                 <contentblock3
-                    jcr:created="{Date}2018-07-23T12:37:16.842+10:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-07-23T12:37:16.842+10:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_BCYUFL1KE">
@@ -98,17 +72,11 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
                         <footer
-                            jcr:created="{Date}2018-07-23T12:37:27.044+10:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2018-07-23T12:37:33.489+10:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/footer"
                             cancelInheritParent="false"
                             componentId="footer_FCJUK7HYN">
                             <bgimage
-                                jcr:lastModified="{Date}2018-07-23T12:37:33.489+10:00"
-                                jcr:lastModifiedBy="admin"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/media/image"/>
                         </footer>
@@ -117,8 +85,6 @@
             </par>
         </article>
         <footer
-            jcr:lastModified="{Date}2018-07-19T19:53:48.079+10:00"
-            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
             cancelInheritParent="false"
@@ -127,8 +93,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
             <bgimage
-                jcr:lastModified="{Date}2018-07-19T19:53:48.079+10:00"
-                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="aemdesign/components/media/image"/>
         </footer>

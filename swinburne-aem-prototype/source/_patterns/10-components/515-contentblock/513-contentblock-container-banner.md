@@ -4,6 +4,8 @@ title: Content Block container banner
 ## Component
 ### Overview
   Component for displaying a content container with banner theme
+### Variant
+ Container
 ### Design
 1. Theme
  * Swinburne : Component Style Theme / Layout / Contentblock / Content Block - Banner

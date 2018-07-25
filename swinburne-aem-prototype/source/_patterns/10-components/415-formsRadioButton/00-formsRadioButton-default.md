@@ -1,10 +1,10 @@
 ---
-title: Content Block container
+title: Forms Radio Button default
 ---
 ### Overview
-  Component for displaying a default content container
+Component for displaying a set of 2 radio buttons
 ### Variant
- Container
+Default
 ### Design
 1. Theme
  * none
@@ -16,3 +16,6 @@ title: Content Block container
  * none
 5. Icon
  * none
+6. Style
+ * none 
+ 

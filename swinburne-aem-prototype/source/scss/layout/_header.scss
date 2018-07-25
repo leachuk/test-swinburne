@@ -36,6 +36,9 @@ header[component],
         }
         &:first-of-type {}
         &:last-of-type {
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
           & > img {
             transform: translateY(-50%);
           }

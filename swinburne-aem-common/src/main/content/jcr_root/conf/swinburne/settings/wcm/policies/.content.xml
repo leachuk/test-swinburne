@@ -12,7 +12,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Swinburne Default"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:Swinburne - Content,group:Swinburne - Media,group:Swinburne - Details,group:Swinburne - Layout,group:Swinburne - Forms,group:Swinburne - Lists,group:Swinburne - Widgets,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/designimporter/components/importerEx,/libs/dam/cfm/components/contentfragment]"
+                        components="[group:Swinburne - Content,group:Swinburne - Media,group:Swinburne - Details,group:Swinburne - Layout,group:Swinburne - Forms,group:Swinburne - Lists,group:Swinburne - Widgets,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/designimporter/components/importerEx,/libs/dam/cfm/components/contentfragment,/libs/fd/af/components/aemform]"
                         policyresourceType="swinburne/components/layout/container">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -67,7 +67,6 @@
                             </assetToComponentMapping>
                         </cq:authoring>
                         <jcr:content
-                            jcr:mixinTypes="[]"
                             jcr:primaryType="nt:unstructured"
                             mergeList="{Boolean}true"/>
                     </swinburne-default>
@@ -76,7 +75,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Swinburne Structure"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:Swinburne - Content,group:Swinburne - Media,group:AEM.Design - Details,group:AEM.Design - Layout,group:AEM.Design - Forms,group:AEM.Design - Lists,group:AEM.Design - Widgets,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/designimporter/components/importerEx,/libs/dam/cfm/components/contentfragment]"
+                        components="[group:Swinburne - Content,group:Swinburne - Media,group:AEM.Design - Details,group:AEM.Design - Layout,group:AEM.Design - Forms,group:AEM.Design - Lists,group:AEM.Design - Widgets,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/designimporter/components/importerEx,/libs/dam/cfm/components/contentfragment,/libs/fd/af/components/aemform]"
                         policyresourceType="swinburne/components/layout/container">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -131,7 +130,6 @@
                             </assetToComponentMapping>
                         </cq:authoring>
                         <jcr:content
-                            jcr:mixinTypes="[]"
                             jcr:primaryType="nt:unstructured"
                             mergeList="{Boolean}true"/>
                     </swinburne-structure>

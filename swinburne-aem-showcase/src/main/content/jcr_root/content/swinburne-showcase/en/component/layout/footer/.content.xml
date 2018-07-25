@@ -9,15 +9,13 @@
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article"
-            componentId="article_3VHMHSEZ4">
+            sling:resourceType="swinburne/components/layout/article">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <contentblock1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock1"
                     title="Variant: Default"
                     variant="advsection">
                     <par
@@ -26,15 +24,13 @@
                         <footer
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/footer"
-                            cancelInheritParent="true"
-                            componentId="footer1">
+                            cancelInheritParent="true">
                             <par
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_QK3FPKM9V"
                                     text="&lt;p>Footer Content&lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
@@ -44,7 +40,6 @@
                 <contentblock2
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock2"
                     title="Variant: Default with Background"
                     variant="advsection">
                     <par
@@ -53,15 +48,13 @@
                         <footer
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/footer"
-                            cancelInheritParent="true"
-                            componentId="footer2">
+                            cancelInheritParent="true">
                             <par
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_Z223GU3KV"
                                     text="&lt;p>Footer Content with Background&lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
@@ -75,7 +68,6 @@
                 <contentblock3
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock3"
                     title="Variant: Default with Styles"
                     variant="advsection">
                     <par
@@ -85,7 +77,6 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/footer"
                             cancelInheritParent="true"
-                            componentId="footer3"
                             componentModifiers="[swinburne:component-style-modifier/background/bg-c8,swinburne:component-style-modifier/color/standard/white]">
                             <par
                                 jcr:primaryType="nt:unstructured"
@@ -93,7 +84,6 @@
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_DERTRA6XV"
                                     text="&lt;p>Footer Content with Style&lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
@@ -106,7 +96,6 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
             cancelInheritParent="true"
-            componentId="footer_LWNXEVYCM"
             componentModifiers="[swinburne:component-style-modifier/background/bg-c8,swinburne:component-style-modifier/color/standard/white]">
             <bgimage
                 jcr:primaryType="nt:unstructured"
@@ -117,7 +106,6 @@
                 <text
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
-                    componentId="text_PCZO5L7NE"
                     text="&lt;p>© SWINBURNE | CRICOS: 00111D | RTO: 3059 |&lt;/p>&#xa;"
                     textIsRich="true"/>
             </par>

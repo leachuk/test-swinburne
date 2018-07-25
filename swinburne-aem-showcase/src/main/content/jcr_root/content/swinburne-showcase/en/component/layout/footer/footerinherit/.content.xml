@@ -8,24 +8,21 @@
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/header"
-            componentId="header_C4RZV2XLT">
+            sling:resourceType="swinburne/components/layout/header">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
         </header>
         <aside
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/aside"
-            componentId="aside_L3OXLS0NW">
+            sling:resourceType="swinburne/components/layout/aside">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
         </aside>
         <article
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article"
-            componentId="article_DKZZKHJ4O">
+            sling:resourceType="swinburne/components/layout/article">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
@@ -88,7 +85,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
             cancelInheritParent="false"
-            componentId="footer_99Q5STAFA">
+            componentId="footer4">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>

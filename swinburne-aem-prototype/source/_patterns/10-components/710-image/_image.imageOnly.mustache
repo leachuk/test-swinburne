@@ -1,0 +1,12 @@
+<div {{> components-componentAttributes( componentName: "image imageOnly", componentId: "{{{ id }}}", componentTheme: "{{{ theme }}}", componentModifier: "{{{ modifier }}}", componentModules: "{{{ modules }}}", componentChevron: "{{{ chevron }}}", componentIcon: "{{{ icon }}}", componentStyle: "{{{ style }}}" ) }}>
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="{{{ src4 }}}" media="(min-width: 1px) and (max-width: 72px)">
+    <source srcset="{{{ src3 }}}" media="(min-width: 73px) and (max-width: 210px)">
+    <source srcset="{{{ src2 }}}" media="(min-width: 211px) and (max-width: 478px)">
+    <source srcset="{{{ src1 }}}" media="(min-width: 478px)">
+    <!--[if IE 9]></video><![endif]-->
+  </picture>
+  <!-- Moved the image outside <picture> wrapper because was not loading -->
+  <img src="{{{ src }}}" alt="{{{ alt }}}" title="{{{ title }}}">
+</div>

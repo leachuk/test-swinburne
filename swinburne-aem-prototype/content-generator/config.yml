@@ -1012,8 +1012,8 @@ content/cq:tags/swinburne/component-style-theme:
   # Header
   layout/header/fixed-top:
     flat: true
-    prefix: brand-header fixed-top
-    title: 'Brand Header - Fixed Top'
+    prefix: theme--header-swinburne
+    title: 'Brand Header Default'
 
   # Content Block
   layout/contentblock/header/brand-top:

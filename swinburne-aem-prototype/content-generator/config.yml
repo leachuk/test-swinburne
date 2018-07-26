@@ -652,10 +652,10 @@ content/cq:tags/swinburne/component-style-module:
     prefix: play-video
     title: 'Play Popup Video'
 
-  media/image/paralax:
+  layout/contentblock/parallaximage:
     flat: true
-    prefix: header
-    title: 'header paralax'
+    prefix: parallaximage
+    title: 'Parallax Image'
 
   # Search widget
   widgets/search/global-search:
@@ -989,6 +989,11 @@ content/cq:tags/swinburne/component-style-theme:
     flat: true
     prefix: theme--image-caption
     title: 'Captioned Image'
+
+  media/image/headerlogo:
+    flat: true
+    prefix: theme--image-headerlogo
+    title: 'Header Logo'
 
   media/image/pull:
     prefixes:

@@ -1,8 +1,10 @@
-
+/*module: parallaximage */
 
 export default () => {
   $(document).ready( () => {
-    let $img_paralax = $('.logo-wrapper > div[component]:last-of-type  img');
+
+
+    let $img_paralax = $('[data-modules*=parallaximage] > div[component]:last-of-type img');
     let $window = $(window);
     let window_width = $window.width();
 

@@ -1,7 +1,7 @@
 <div {{> components-componentAttributes( componentName: "header", componentId: "{{{ id }}}", componentTheme: "{{{ theme }}}", componentModifier: "{{{ modifier }}}", componentModules: "{{{ modules }}}", componentChevron: "{{{ chevron }}}", componentIcon: "{{{ icon }}}", componentStyle: "{{{ style }}}" ) }}>
   <div class="container">
     <div class="aem-Grid">
-      <div class="logo-wrapper">
+      <div component class="contentblock parsys"" data-modules="parallaximage">
         {{> components-image.imageOnly(theme: "{{{ image1.componentTheme }}}",
         modifier: "{{{ image1.componentModifier }}}",
         id: "{{{ image1.componentId }}}",

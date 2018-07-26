@@ -1,6 +1,5 @@
 html:not(.aem-AuthorLayer-Edit) {
   div[component].theme--image-headerlogo {
-
     width: 50px;
     height: 50px;
     @include media-breakpoint-up(lg) {
@@ -13,6 +12,22 @@ html:not(.aem-AuthorLayer-Edit) {
       height: auto;
     }
 
+  }
+}
+
+html.aem-AuthorLayer-Edit {
+  div[component].theme--image-headerlogo {
+    picture {
+      &,
+      img {
+        display: block;
+      }
+      img {
+        width: 90px;
+        height: auto;
+        min-width: inherit;
+      }
+    }
   }
 }
 

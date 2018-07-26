@@ -19,7 +19,7 @@
   },
   "image1": {
     "componentId": "image2",
-    "componentTheme": "",
+    "componentTheme": "theme--image-headerlogo",
     "componentModifier": "",
     "componentModules": "",
     "componentChevron": "",

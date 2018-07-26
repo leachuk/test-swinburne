@@ -11,6 +11,7 @@
     "componentTheme": "theme--header-swinburne",
     "componentModifier": "",
     "componentStyle": "",
+    "componentModule": "header.js",
     "text": ""
   }
 }

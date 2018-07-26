@@ -652,6 +652,11 @@ content/cq:tags/swinburne/component-style-module:
     prefix: play-video
     title: 'Play Popup Video'
 
+  media/image/paralax:
+    flat: true
+    prefix: header
+    title: 'header paralax'
+
   # Search widget
   widgets/search/global-search:
     flat: true

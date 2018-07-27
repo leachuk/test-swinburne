@@ -128,7 +128,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>run aem:build</arguments>
+              <arguments>run aem:build --env.clientLibsFolder=${package.clientLibsFolder}</arguments>
             </configuration>
           </execution>
           <execution>

@@ -60,7 +60,7 @@ class FooterPublishSpec extends ComponentSpec {
         assert $(selector + " .text[component]").text().trim() == "Footer Content with Background"
 
         and: 'Section should have a background image'
-        assert $(selector).css("background-image").indexOf("/${pathSite}/${language}/${pathPage}/_jcr_content/article/par/contentblock2/par/footer/bgimage.img.png/0.png") > 0
+        assert $(selector).css("background-image").contains("/component/layout/footer/_jcr_content")
         takeScreenshot($(selectorContainer).firstElement(), "Should have sample rich text")
 
         where:

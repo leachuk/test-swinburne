@@ -3,6 +3,8 @@ title: Content Block default
 ---
 ### Overview
   Component for displaying a default content block
+### Variant
+ Default
 ### Design
 1. Theme
  * none

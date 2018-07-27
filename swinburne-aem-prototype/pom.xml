@@ -68,7 +68,7 @@
                 </goals>
                 <configuration>
                   <targetURL>${package.uploadProtocol}://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
-                  <username>${crx.username}</username>
+                  <userId>${crx.username}</userId>
                   <password>${crx.password}</password>
                 </configuration>
               </execution>

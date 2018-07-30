@@ -30,5 +30,14 @@
     "linkHref": "",
     "linkText": "",
     "text": "Content block container"
+  },
+  "contentblock7": {
+    "componentId": "contentblock7",
+    "componentStyle": "",
+    "componentTheme": "",
+    "componentModule": "parallaximage",
+    "linkHref": "",
+    "linkText": "",
+    "text": ""
   }
 }

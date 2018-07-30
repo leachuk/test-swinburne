@@ -3,10 +3,6 @@ div[component].page-details {
     background-color: inherit;
   }
   &.theme--pagedetail-brand {
-    nav,
-    time {
-      display: none;
-    }
     * {
       color: $white;
     }
@@ -19,18 +15,23 @@ div[component].page-details {
     @include media-breakpoint-up(xl) {
       padding: 65px 0 160px 0;
     }
-    p {
+    .pagedescription,
+    .text > * {
       font-size: 16px;
       margin: 0;
     }
-    p,
-    h1 {
+    .pagedescription,
+    .text > *,
+    .pagetitle {
       max-width: 500px;
+      display: block;
+      font-family: $font-family-open-sans;
     }
-    h1 {
+    .pagetitle {
       font-size: 28px;
       margin: 15px 40px 15px 0;
       line-height: 100%;
+      font-weight: bold;
       @include media-breakpoint-up(sm) {
         font-size: 50px;
         margin: 15px 40px 0 0;
@@ -43,16 +44,19 @@ div[component].page-details {
       padding: 15px 80px 15px 15px;
       text-align: left;
     }
-    img {
-      max-width: 50%;
-      display: block;
-      height: auto;
-      margin-bottom: 15px;
-      @include media-breakpoint-up(md) {
-        max-width: 400px;
-      }
-      @include media-breakpoint-up(xl) {
-        max-width: 100%;
+    picture {
+      img {
+        max-width: 50%;
+        display: block;
+        height: auto;
+        margin-bottom: 15px;
+        min-width: auto;
+        @include media-breakpoint-up(md) {
+          max-width: 400px;
+        }
+        @include media-breakpoint-up(xl) {
+          max-width: 100%;
+        }
       }
     }
   }

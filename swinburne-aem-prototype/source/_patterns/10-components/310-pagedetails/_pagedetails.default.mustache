@@ -7,32 +7,8 @@
                                         componentIcon: "{{{ icon }}}",
                                         componentStyle: "{{{ style }}}" ) }}>
   <div class="container">
-    <nav component="" class="breadcrumb">
-      <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-          <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" href="/content/swinburne-showcase.html">
-            <span itemprop="name">AEM.Design Showcase</span></a>
-          <meta itemprop="position" content="1">
-        </li>
-        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-          <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" href="/content/swinburne-showcase/en/component.html">
-            <span itemprop="name">Components</span></a>
-          <meta itemprop="position" content="2">
-        </li>
-        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-          <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" href="/content/swinburne-showcase/en/component/details.html">
-            <span itemprop="name">Details</span></a>
-          <meta itemprop="position" content="3">
-        </li>
-        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
-          <a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" href="/content/swinburne-showcase/en/component/details/page-details.html">
-            <span itemprop="name">Page Details</span></a>
-          <meta itemprop="position" content="4">
-        </li>
-      </ol>
-    </nav>
-    <time component="" class="pagedate" datetime="2018-07-23">July 23, 2018</time>
-    <header>
+    <header></header>
+    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
       <img src="{{{ src }}}" alt="{{{ alt }}}"/>
       {{> components-text.default( text: "{{{ text }}}" ) }}
       <h1>{{{ title }}}</h1>
@@ -42,7 +18,6 @@
       {{> components-link.default(label: "{{{ btnText }}}",
                                   href: "{{{ btnHref }}}",
                                   modifier: "{{{ btnModifier }}}") }}
-    </header>
-    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 "></div>
+    </div>
   </div>
 </div>

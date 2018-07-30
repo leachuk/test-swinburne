@@ -5,7 +5,7 @@ import '../scss/app.scss'
 // Core modules...
 import Carousels from './modules/carousel'
 import HashLinks from './modules/hash-links'
-import Header from './modules/header'
+import ParallaxImage from './modules/parallaximage'
 import LoadMore from './modules/load-more'
 import Renderers from './modules/renderers'
 import Subscribers from './modules/subscribers'
@@ -47,7 +47,7 @@ $(() => {
   Subscribers()
 
   // Brand header
-  Header()
+  ParallaxImage()
 
   // Take over any hash links on the page so they correctly jump to the content
   HashLinks()

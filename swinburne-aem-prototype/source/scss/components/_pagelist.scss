@@ -127,9 +127,12 @@ $border-color: #1d1f20;
         &.collapsed {
           height: auto;
         }
+        &,
+        & > li {
+          background-color: $white;
+        }
         &  > li {
           border-bottom: 1px solid $border-color;
-          background-color: $white;
           transition: background-color 0.3s ease-in-out;
           padding-left: 0;
           padding-right: 0;

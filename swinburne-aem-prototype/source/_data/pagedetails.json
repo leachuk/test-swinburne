@@ -1,26 +1,19 @@
 {
-  "hideH1": false,
-  "hideH2": true,
-  "hideLEAD": true,
-  "hidePARAGRAPH": true,
-
-  "pageDetails": {
-    "componentProperties" : {
+  "pagedetails1": {
       "componentId": "pagedetails1",
-      "componentTheme": "theme--page-details-header-column-title-image",
+      "componentTheme": "theme--pagedetail-brand",
       "componentModifier": "",
       "componentModules": "",
       "componentChevron": "",
       "componentIcon": "",
-
-      "pageBackgroundImage": "",
-      "hideTitle": false,
-      "hideDescription": false,
-      "showToolbar": true,
-
-      "container": "",
-      "pageTitle": "UC EXPERIENCE",
-      "richText": "Your future looks great"
-    }
+      "backgroundImage": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/move-into-midyear.jpg)\"",
+      "imageSrc": "https://www.swinburne.edu.au/infoevening/_assets/images/jump-in-event.png",
+      "imageAlt": "Jump In",
+      "title": "SWINBURNE INFO<br/>EVENING",
+      "description": "Tuesday 23 January, 4pm – 6pm<br/>Hawthorn campus",
+      "text": "<p>It’s time to stop thinking, start doing, and step into study. Find out all you need to know about our course options and how you can start studying in 2018.</p>",
+      "showToolbar": false,
+      "btnText": "register now",
+      "btnHref": "www.google.fr"
   }
 }

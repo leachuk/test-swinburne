@@ -868,6 +868,10 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: '${title}<span class="subtitle">${subtitle}</span>'
     title: 'Including Subtitle'
 
+  layout/page-details:
+    prefix: theme--pagedetail-brand
+    title: 'Page Details - theme--pagedetail-brand'
+
   # Content Block
   layout/contentblock:
     prefixes:

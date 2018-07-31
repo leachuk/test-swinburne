@@ -652,6 +652,16 @@ content/cq:tags/swinburne/component-style-module:
     prefix: play-video
     title: 'Play Popup Video'
 
+  layout/contentblock/parallaximage:
+    flat: true
+    prefix: parallaximage
+    title: 'Parallax Image'
+
+  layout/button/navtoggler:
+    flat: true
+    prefix: navtoggler
+    title: 'Nav Toggler (button)'
+
   # Search widget
   widgets/search/global-search:
     flat: true
@@ -863,6 +873,10 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: '${title}<span class="subtitle">${subtitle}</span>'
     title: 'Including Subtitle'
 
+  layout/page-details:
+    prefix: theme--pagedetail-brand
+    title: 'Page Details - theme--pagedetail-brand'
+
   # Content Block
   layout/contentblock:
     prefixes:
@@ -985,6 +999,11 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: theme--image-caption
     title: 'Captioned Image'
 
+  media/image/headerlogo:
+    flat: true
+    prefix: theme--image-headerlogo
+    title: 'Header Logo'
+
   media/image/pull:
     prefixes:
       - left
@@ -1012,8 +1031,8 @@ content/cq:tags/swinburne/component-style-theme:
   # Header
   layout/header/fixed-top:
     flat: true
-    prefix: brand-header fixed-top
-    title: 'Brand Header - Fixed Top'
+    prefix: theme--header-swinburne
+    title: 'Brand Header Default'
 
   # Content Block
   layout/contentblock/header/brand-top:

@@ -211,7 +211,7 @@ class PageListPublishSpec extends ComponentSpec {
         assert $("${selector} > div > ul > li.first > div > div.card-body > h3").text() == "Page1"
 
         and: "Has description in first item"
-        assert $("${selector} > div > ul > li.first > div > div.card-body > p").text() == "Page with Licensed Page Image, with non-Licensed Secondary Image and with Background non-Licensed Image"
+        assert $("${selector} > div > ul > li.first > div > div.card-body > div.card-text").text() == "Page with Licensed Page Image, with non-Licensed Secondary Image and with Background non-Licensed Image"
 
         and: "Has call to action in first item"
         assert $("${selector} > div > ul > li.first > div > div.card-body > div > a").text().toUpperCase() == "BUTTON TEXT"
@@ -220,5 +220,97 @@ class PageListPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+    @Unroll("Page List: Default variant using Card badge with List Split every 2 in #viewport.label")
+    def "Page List: Default variant using Card badge with List Split every 2"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist30"
+        def selectorContainer = "#contentblock30 .contents"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+
+        and: "Has three lists"
+        assert $("${selector} ul").size() == 3
+
+        and: "Has five list items"
+        assert $("${selector} li").size() == 5
+
+        and: "First list has two items"
+        assert $("${selector} ul:nth-child(1)").find("li").size() == 2
+
+        and: "Second list has two items"
+        assert $("${selector} ul:nth-child(2)").find("li").size() == 2
+
+        and: "Third list has one items"
+        assert $("${selector} ul:nth-child(3)").find("li").size() == 1
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Page List: Default with Thumbnail Override in #viewport.label")
+    def "Page List: Default with Thumbnail Override"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist31"
+        def selectorContainer = "#contentblock31 .contents"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+
+        and: "Has two list items"
+        assert $("${selector} li").size() == 3
+
+        and: "Last item should have thumbnail override from list"
+        assert $("${selector} ul:nth-child(2) img").attr("src").contains("/cablecar.jpg/")
+        takeScreenshot($(selectorContainer).firstElement(), "Last item should have thumbnail override from list")
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Page List: Default without Thumbnail Override in #viewport.label")
+    def "Page List: Default without Thumbnail Override"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist32"
+        def selectorContainer = "#contentblock32 .contents"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+
+        and: "Has two list items"
+        assert $("${selector} li").size() == 3
+
+        and: "Last item should have thumbnail override from page details"
+        assert $("${selector} ul:nth-child(2) img").attr("src").contains("/grass.jpg/")
+        takeScreenshot($(selectorContainer).firstElement(), "Last item should have thumbnail override from page details")
+
+
+        where:
+        viewport << getViewPorts()
+    }
 
 }

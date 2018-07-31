@@ -3,6 +3,10 @@ title: Link Button
 ---
 ### Overview
   Component for displaying a default button link.
+  
+### Variant
+  Button
+  
 ### Design
 
 1. Theme

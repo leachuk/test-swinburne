@@ -37,27 +37,27 @@ class PageListPaginationPublishSpec extends ComponentSpec {
         assert $("${selector} li").size() == 1
 
         and: "Has pagination details"
-        assert $("${selector} > .pagination > p").text().trim() == "[1 - 1] of 5"
+        assert $("${selector} > .pagination > div.label").text().trim() == "[1 - 1] of 5"
         takeScreenshot($(selectorContainer).firstElement(), "The component should be on first page")
 
         and: "Can select page 2"
         $("${selector} > .pagination > .next > a").click()
-        assert $("${selector} > .pagination > p").text().trim() == "[2 - 2] of 5"
+        assert $("${selector} > .pagination > div.label").text().trim() == "[2 - 2] of 5"
         takeScreenshot($(selectorContainer).firstElement(), "The component should be on second page")
 
         and: "Can select page 3"
         $("${selector} > .pagination > .next > a").click()
-        assert $("${selector} > .pagination > p").text().trim() == "[3 - 3] of 5"
+        assert $("${selector} > .pagination > div.label").text().trim() == "[3 - 3] of 5"
         takeScreenshot($(selectorContainer).firstElement(), "The component should be on third page")
 
         and: "Can select page 4"
         $("${selector} > .pagination > .next > a").click()
-        assert $("${selector} > .pagination > p").text().trim() == "[4 - 4] of 5"
+        assert $("${selector} > .pagination > div.label").text().trim() == "[4 - 4] of 5"
         takeScreenshot($(selectorContainer).firstElement(), "The component should be on forth page")
 
         and: "Can select page 5"
         $("${selector} > .pagination > .next > a").click()
-        assert $("${selector} > .pagination > p").text().trim() == "[5 - 5] of 5"
+        assert $("${selector} > .pagination > div.label").text().trim() == "[5 - 5] of 5"
         takeScreenshot($(selectorContainer).firstElement(), "The component should be on fifth page")
 
         and: "Only previous link exists on last page, without next link"

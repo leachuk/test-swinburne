@@ -2,8 +2,8 @@ footer[component] {
   &,
   &.footer  {
     padding: 40px 0;
-    & > [class*="aem-"] {
-      @include container();
-    }
+    background-size: cover;
+    background-position: center;
+    & > .aem-Grid {}
   }
 }

@@ -87,7 +87,7 @@ module.exports = env => {
 
     output: {
       chunkFilename : '[name].[chunkhash].js',
-      publicPath    : env.aem === true ? '/etc/clientlibs/onemarketing/azau/rio/js/' : '/',
+      publicPath    : env.aem === true ? '/etc/clientlibs/'+env.clientLibsFolder+'/js/' : '/',
     },
 
     module: {

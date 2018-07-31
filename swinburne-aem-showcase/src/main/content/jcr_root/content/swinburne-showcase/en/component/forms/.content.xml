@@ -27,7 +27,5 @@
             </par>
         </article>
     </jcr:content>
-    <enewsletter-subscrible/>
-    <contact-us/>
-    <quick-form/>
+    <aemform/>
 </jcr:root>

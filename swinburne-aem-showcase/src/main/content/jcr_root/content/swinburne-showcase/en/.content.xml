@@ -5,7 +5,7 @@
         cq:tags="[swinburne:content-type/page]"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:language="en"
+        jcr:language="en_au"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="English"

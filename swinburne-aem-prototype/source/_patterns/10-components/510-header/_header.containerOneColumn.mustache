@@ -1,7 +1,9 @@
 <div {{> components-componentAttributes( componentName: "header", componentId: "{{{ id }}}", componentTheme: "{{{ theme }}}", componentModifier: "{{{ modifier }}}", componentModules: "{{{ modules }}}", componentChevron: "{{{ chevron }}}", componentIcon: "{{{ icon }}}", componentStyle: "{{{ style }}}" ) }}>
   <div class="container">
     <div class="aem-Grid">
-      {{> components-contentblock.parsysParallax(modules: "{{{ contentblock7.componentModule }}}") }}
+      <div component class="embedsource">
+        {{> components-contentblock.parsysParallax(modules: "{{{ contentblock7.componentModule }}}") }}
+      </div>
       {{> components-pagelist.default( id: "{{{ pageList1.componentId }}}",
                                        theme: "{{{ pageList1.componentTheme }}}",
                                        modifier: "{{{ pageList1.componentModifier }}}",
@@ -9,11 +11,13 @@
                                        chevron: "{{{pageList1.componentChevron }}}",
                                        icon: "{{{ pageList1.componentIcon }}}",
                                        links: "{{{ pageList1.links }}}") }}
-      {{> components-link.buttonHamburger( label: "{{{ link10.text }}}",
-                                           href: "{{{ link10.href }}}",
-                                           modifier: "{{{ link10.componentModifier }}}",
-                                           modules: "{{{ link10.componentModules }}}",
-                                           id: "{{{ link10.componentId }}}")}}
+        <div component class="embedsource">
+          {{> components-link.buttonHamburger( label: "{{{ link10.text }}}",
+                                                href: "{{{ link10.href }}}",
+                                                modifier: "{{{ link10.componentModifier }}}",
+                                                modules: "{{{ link10.componentModules }}}",
+                                                id: "{{{ link10.componentId }}}")}}
+        </div>
     </div>
   </div>
 </div>

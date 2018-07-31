@@ -1,5 +1,5 @@
 ---
-title: Embed hamburger hamburger
+title: Embed hamburger Button
 ---
 ## Component
 #### Overview

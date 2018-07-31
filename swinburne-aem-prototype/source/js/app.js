@@ -9,6 +9,7 @@ import ParallaxImage from './modules/parallaximage'
 import LoadMore from './modules/load-more'
 import Renderers from './modules/renderers'
 import Subscribers from './modules/subscribers'
+import NavToggler from './modules/navtoggler'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -51,6 +52,8 @@ $(() => {
 
   // Take over any hash links on the page so they correctly jump to the content
   HashLinks()
+
+  NavToggler();
 
   // 'object-fit' polyfill for unsupported browsers
   /* global objectFitImages */

@@ -77,10 +77,10 @@ title: Page Details
 5. Icon
  * none
  
- ### 4. Page Title
- #### Variant
-   Default
- #### Design
+### 4. Page Title
+#### Variant
+  Default
+#### Design
  1. Theme
   * none
  2. Modifier
@@ -92,10 +92,10 @@ title: Page Details
  5. Icon
   * none
   
- ### 5. Page Description
- #### Variant
-   Default
- #### Design
+### 5. Page Description
+#### Variant
+  Default
+#### Design
  1. Theme
   * none
  2. Modifier

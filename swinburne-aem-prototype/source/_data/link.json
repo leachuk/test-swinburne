@@ -91,7 +91,7 @@
     "componentId": "link10",
     "componentTheme": "",
     "componentModifier": "navbar-toggler",
-    "componentModules": "",
+    "componentModules": "navtoggler",
     "componentChevron": "",
     "componentIcon": "",
     "text": "",

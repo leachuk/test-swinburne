@@ -5,9 +5,10 @@ html:not(.aem-AuthorLayer-Edit) {
       overflow: hidden;
     }
     & > div[component] {
+      cursor: pointer;
       &:first-of-type {}
       &:last-of-type {
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           display: none;
         }
         img {

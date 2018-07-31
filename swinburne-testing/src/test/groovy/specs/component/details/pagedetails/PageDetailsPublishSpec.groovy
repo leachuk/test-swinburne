@@ -147,11 +147,12 @@ class PageDetailsPublishSpec extends ComponentSpec {
         and: "Has Toolbar has sample content"
         assert $("${selector} nav.breadcrumb li").first().text().trim() == "AEM.Design Showcase"
 
-        /*and: "Has Toolbar visible"
-        assert $("${selector} .navbar").isEmpty() == false*/
+        /** TODO: To fix the page inheritance issue for Toolbar component and uncomment below Test case conditions.
+        and: "Has Toolbar visible"
+        assert $("${selector} .navbar").isEmpty() == false
 
-       /* and: "Has Toolbar has sample content"
-        assert $("${selector} #text_in_parent_toolbar").text().trim() == "Text in Parent Toolbar"*/
+        and: "Has Toolbar has sample content"
+        assert $("${selector} #text_in_parent_toolbar").text().trim() == "Text in Parent Toolbar" **/
 
         and: "Has Parsys visible"
         assert $("${selector} .text").isEmpty() == false

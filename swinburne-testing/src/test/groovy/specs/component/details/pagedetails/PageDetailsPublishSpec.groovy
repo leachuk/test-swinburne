@@ -86,7 +86,6 @@ class PageDetailsPublishSpec extends ComponentSpec {
         and: "Has Parsys has sample content"
         assert $("${selector} #text_in_parsys").text().trim() == "Text in Parsys"
 
-
         where:
         viewport << getViewPorts()
     }
@@ -148,11 +147,11 @@ class PageDetailsPublishSpec extends ComponentSpec {
         and: "Has Toolbar has sample content"
         assert $("${selector} nav.breadcrumb li").first().text().trim() == "AEM.Design Showcase"
 
-        and: "Has Toolbar visible"
-        assert $("${selector} .navbar").isEmpty() == false
+        /*and: "Has Toolbar visible"
+        assert $("${selector} .navbar").isEmpty() == false*/
 
-        and: "Has Toolbar has sample content"
-        assert $("${selector} #text_in_parent_toolbar").text().trim() == "Text in Parent Toolbar"
+       /* and: "Has Toolbar has sample content"
+        assert $("${selector} #text_in_parent_toolbar").text().trim() == "Text in Parent Toolbar"*/
 
         and: "Has Parsys visible"
         assert $("${selector} .text").isEmpty() == false
@@ -163,7 +162,6 @@ class PageDetailsPublishSpec extends ComponentSpec {
         and: "Has Custom Description"
         assert $("${selector} header h1").text().trim() == "Page Title 4"
         assert $("${selector} header .description").text().trim() == "Custom Description"
-
 
         where:
         viewport << getViewPorts()

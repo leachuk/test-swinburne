@@ -21,11 +21,24 @@ header[component],
         }
       }
     }
+    button[data-modules="navtoggler"] {
+      display:block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 13px 16px 0 0;
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
   }
 }
 
 html.aem-AuthorLayer-Edit {
   .header[component].theme--header-swinburne div[component].parsys {
+    float: none;
+  }
+  button[data-modules="navtoggler"] {
     float: none;
   }
 }

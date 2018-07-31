@@ -2,15 +2,44 @@ header[component],
 .header[component] {
   width: 100%;
   height: 50px;
-  line-height: 50px;
   @include media-breakpoint-up(lg) {
     height: 90px;
-    line-height: 90px;
   }
   &.theme--header-swinburne {
     .container {
       padding-left: 0;
       padding-right: 0;
     }
+    div[component].parsys {
+      float: left;
+      div[component].theme--image-headerlogo {
+        &:first-of-type {
+          z-index: 15;
+        }
+        &:last-of-type {
+          z-index: 14;
+        }
+      }
+    }
+    button[data-modules="navtoggler"] {
+      display:block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 13px 16px 0 0;
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
   }
 }
+
+html.aem-AuthorLayer-Edit {
+  .header[component].theme--header-swinburne div[component].parsys {
+    float: none;
+  }
+  button[data-modules="navtoggler"] {
+    float: none;
+  }
+}
+

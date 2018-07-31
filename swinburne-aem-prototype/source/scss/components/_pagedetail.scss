@@ -55,7 +55,7 @@ div[component].page-details {
           max-width: 400px;
         }
         @include media-breakpoint-up(xl) {
-          max-width: 100%;
+          max-width: 800px;
         }
       }
     }

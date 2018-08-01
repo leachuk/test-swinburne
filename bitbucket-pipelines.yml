@@ -63,6 +63,7 @@ pipelines:
       - step:
           name: install to dev $DEV_AUTHOR_HOST:$DEV_AUTHOR_PORT
           trigger: manual
+          deployment: dev
           caches:
             - maven # adds docker layer caching
             - node

@@ -4,9 +4,6 @@ pipelines:
   default:
     - step:
         name: package
-        trigger: manual
-        services:
-          - maven
         caches:
           - maven # adds docker layer caching
           - node
@@ -27,14 +24,14 @@ pipelines:
           - git reset --hard "origin/master"
           - git submodule sync
           - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
-          - mvn clean package -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+          - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 #          - git config --global user.email "$email"
 #          - git config --global user.name "$name
 #          - mvn -batch-mode release:prepare -Dusername=$USERNAME -Dpassword=$PASSWORD -DscmCommentPrefix="[skip ci]"
 #          - mvn release:perform -Dgoals=install
         artifacts:
-          - *-deploy/target/*.zip
-          - *-testing/target/**/*
+          - swinburne-aem-deploy/target/*.zip
+          - swinburne-testing/target/**/*
 
 definitions:
   services:

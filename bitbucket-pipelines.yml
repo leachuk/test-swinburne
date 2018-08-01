@@ -1,5 +1,8 @@
 image: aemdesign/centos-java-buildpack:latest
 
+clone:
+  lfs: true
+
 pipelines:
   default:
     - step:
@@ -27,12 +30,10 @@ pipelines:
             - maven # adds docker layer caching
             - node
           script:
-            - git lfs install
             - git checkout master
             - git reset --hard "origin/master"
             - git submodule sync
             - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
-            - git lfs pull
             - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
   #          - git config --global user.email "$email"
   #          - git config --global user.name "$name
@@ -48,12 +49,10 @@ pipelines:
             - maven # adds docker layer caching
             - node
           script:
-            - git lfs install
             - git checkout develop
             - git reset --hard "origin/develop"
             - git submodule sync
             - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
-            - git lfs pull
             - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
   #          - git config --global user.email "$email"
   #          - git config --global user.name "$name

@@ -20,8 +20,8 @@ pipelines:
           - yarn --version
           - npm --version
           - git lfs install
-          - git checkout master
-          - git reset --hard "origin/master"
+          - git checkout develop
+          - git reset --hard "origin/develop"
           - git submodule sync
           - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
           - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn

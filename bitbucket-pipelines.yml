@@ -38,7 +38,8 @@ pipelines:
   #          - mvn -batch-mode release:prepare -Dusername=$USERNAME -Dpassword=$PASSWORD -DscmCommentPrefix="[skip ci]"
   #          - mvn release:perform -Dgoals=install
           artifacts:
-            - **/swinburne-aem-deploy*.zip
+            - swinburne-aem-deploy/target/*.zip
+            - swinburne-testing/target/**
     develop:
       - step:
           name: package
@@ -57,7 +58,8 @@ pipelines:
   #          - mvn -batch-mode release:prepare -Dusername=$USERNAME -Dpassword=$PASSWORD -DscmCommentPrefix="[skip ci]"
   #          - mvn release:perform -Dgoals=install
           artifacts:
-            - **/swinburne-aem-deploy*.zip
+            - swinburne-aem-deploy/target/*.zip
+            - swinburne-testing/target/**
       - step:
           name: install to dev
           trigger: manual

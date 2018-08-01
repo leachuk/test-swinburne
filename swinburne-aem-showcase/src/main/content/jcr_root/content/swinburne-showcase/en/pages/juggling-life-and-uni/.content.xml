@@ -2,8 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-07-31T15:04:28.607+10:00"
-         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+          cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
@@ -25,9 +24,7 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page_details
-                    jcr:created="{Date}2018-07-31T15:03:44.772+10:00"
-                     jcr:lastModified="{Date}2018-07-31T15:04:28.596+10:00"
-                     jcr:mixinTypes="[cq:Taggable]"
+                      jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
                     componentId="page_details_QNAOSRW65"
@@ -41,16 +38,13 @@
                     titleIcon="[swinburne:component-style-icon/general/life-ring]"
                     titleIconShow="true">
                     <secondaryImage
-                        jcr:lastModified="{Date}2018-07-31T15:04:28.596+10:00"
-                         jcr:primaryType="nt:unstructured"
+                          jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <thumbnail
-                        jcr:lastModified="{Date}2018-07-31T15:04:28.596+10:00"
-                         jcr:primaryType="nt:unstructured"
+                          jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <bgimage
-                        jcr:lastModified="{Date}2018-07-31T15:04:28.596+10:00"
-                         jcr:primaryType="nt:unstructured"
+                          jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                 </page_details>
             </par>

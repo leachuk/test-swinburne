@@ -61,13 +61,15 @@ pipelines:
             - swinburne-aem-deploy/target/*.zip
             - swinburne-testing/target/**/*
       - step:
-          name: install to dev $DEV_AUTHOR_HOST:$DEV_AUTHOR_PORT
+          name: install to dev
           trigger: manual
-          deployment: dev
-          caches:
-            - maven # adds docker layer caching
-            - node
+          deployment: test
           script:
+#            - git lfs install
+#            - git checkout develop
+#            - git reset --hard "origin/develop"
+#            - git submodule sync
+#            - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
             - mvn clean install -Dcrx.host=$DEV_AUTHOR_HOST -Dcrx.port=$DEV_AUTHOR_PORT -Dcrx.username=$DEV_AUTHOR_USER -Dcrx.password=$DEV_AUTHOR_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 
 

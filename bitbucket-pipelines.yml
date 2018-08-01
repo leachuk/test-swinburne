@@ -48,11 +48,13 @@ pipelines:
           caches:
             - maven # adds docker layer caching
             - node
+            - git-modules
           script:
             - git checkout develop
             - git reset --hard "origin/develop"
             - git submodule sync
             - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
+            - git submodule foreach "git lfs pull"
             - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
   #          - git config --global user.email "$email"
   #          - git config --global user.name "$name
@@ -78,3 +80,5 @@ definitions:
   services:
     docker:
       memory: 2048
+  caches:
+    git-modules: .git/modules

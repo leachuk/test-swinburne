@@ -19,19 +19,56 @@ pipelines:
           - mvn -version
           - yarn --version
           - npm --version
-          - git lfs install
-          - git checkout develop
-          - git reset --hard "origin/develop"
-          - git submodule sync
-          - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
-          - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
-#          - git config --global user.email "$email"
-#          - git config --global user.name "$name
-#          - mvn -batch-mode release:prepare -Dusername=$USERNAME -Dpassword=$PASSWORD -DscmCommentPrefix="[skip ci]"
-#          - mvn release:perform -Dgoals=install
-        artifacts:
-          - swinburne-aem-deploy/target/*.zip
-          - swinburne-testing/target/**/*
+  branches:
+    master:
+      - step:
+          name: package
+          caches:
+            - maven # adds docker layer caching
+            - node
+          script:
+            - git lfs install
+            - git checkout master
+            - git reset --hard "origin/master"
+            - git submodule sync
+            - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
+            - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+  #          - git config --global user.email "$email"
+  #          - git config --global user.name "$name
+  #          - mvn -batch-mode release:prepare -Dusername=$USERNAME -Dpassword=$PASSWORD -DscmCommentPrefix="[skip ci]"
+  #          - mvn release:perform -Dgoals=install
+          artifacts:
+            - swinburne-aem-deploy/target/*.zip
+            - swinburne-testing/target/**/*
+    develop:
+      - step:
+          name: package
+          caches:
+            - maven # adds docker layer caching
+            - node
+          script:
+            - git lfs install
+            - git checkout develop
+            - git reset --hard "origin/develop"
+            - git submodule sync
+            - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
+            - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+  #          - git config --global user.email "$email"
+  #          - git config --global user.name "$name
+  #          - mvn -batch-mode release:prepare -Dusername=$USERNAME -Dpassword=$PASSWORD -DscmCommentPrefix="[skip ci]"
+  #          - mvn release:perform -Dgoals=install
+          artifacts:
+            - swinburne-aem-deploy/target/*.zip
+            - swinburne-testing/target/**/*
+      - step:
+          name: install to dev $DEV_AUTHOR_HOST:$DEV_AUTHOR_PORT
+          trigger: manual
+          caches:
+            - maven # adds docker layer caching
+            - node
+          script:
+            - mvn clean install -Dcrx.host=$DEV_AUTHOR_HOST -Dcrx.port=$DEV_AUTHOR_PORT -Dcrx.username=$DEV_AUTHOR_USER -Dcrx.password=$DEV_AUTHOR_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+
 
 definitions:
   services:

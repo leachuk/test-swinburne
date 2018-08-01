@@ -9,8 +9,6 @@
         cq:parentPath="/content/dam/swinburne"
         dam:assetState="processed"
         dam:relativePath="swinburne/juggling.jpg"
-        jcr:lastModified="{Date}2018-07-10T14:15:49.084+10:00"
-        jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"

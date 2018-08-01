@@ -6,8 +6,7 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="swinburne/apply-now.jpg"
-        jcr:lastModified="{Date}2018-07-10T14:15:49.090+10:00"
-         jcr:primaryType="dam:AssetContent">
+          jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:extracted="{Date}2018-07-10T14:15:48.560+10:00"

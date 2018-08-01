@@ -6,8 +6,6 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="swinburne/juggling1.jpg"
-        jcr:lastModified="{Date}2018-07-16T15:23:23.836+10:00"
-        jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"

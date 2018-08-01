@@ -11,8 +11,7 @@
         dam:copiedAt="{Date}2018-07-26T17:31:46.662+10:00"
         dam:parentAssetID="4fa5bc69-1bae-46da-94c6-de7435b7206c"
         dam:relativePath="swinburne/footer.png"
-        jcr:lastModified="{Date}2018-07-26T17:31:46.900+10:00"
-        jcr:lastModifiedBy="admin"
+         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}4"
@@ -30,8 +29,6 @@
             dam:size="{Long}730"
             dc:format="image/png"
             dc:modified="{Date}2018-07-26T17:31:46.716+10:00"
-            jcr:lastModified="{Date}2018-07-26T17:31:46.716+10:00"
-            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}100"

@@ -6,8 +6,7 @@
     <jcr:content
         dam:assetState="processed"
         dam:s7damType="Image"
-        jcr:lastModified="{Date}2018-07-03T07:28:00.450+10:00"
-        jcr:lastModifiedBy="admin"
+         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}4"

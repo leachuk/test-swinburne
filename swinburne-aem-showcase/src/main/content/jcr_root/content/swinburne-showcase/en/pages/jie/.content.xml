@@ -9,7 +9,7 @@
         <header
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/header"
-            componentId="header_SNICIX8K1">
+            componentId="header_jie">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -17,7 +17,7 @@
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
-            componentId="article_L815ZVLK1">
+            componentId="article_jie">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
@@ -25,7 +25,7 @@
                       jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
-                    componentId="page_details_IGAZBCWLI"
+                    componentId="page_details_jie"
                     componentTheme="[swinburne:component-style-theme/layout/page-details/theme--pagedetail-brand]"
                     hideDescription="true"
                     hideTitle="true"
@@ -50,28 +50,28 @@
                         <image
                               jcr:primaryType="nt:unstructured"
                             sling:resourceType="aemdesign/components/media/image"
-                            componentId="image_IAP2IJYDU"
+                            componentId="image_jie"
                             fileReference="/content/dam/swinburne-showcase/en/common/jump-in-event.png"/>
                         <text
                               jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_2OVNI1QYP"
+                            componentId="text_jie"
                             text="&lt;p>It’s time to stop thinking, start doing, and step into study. Find out all you need to know about our course options and how you can start studying in 2018.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <pagetitle
                               jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/pagetitle"
-                            componentId="pagetitle_G1JC63TUY"/>
+                            componentId="pagetitle_jie"/>
                         <text_copy
                               jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_2OVNI1QYP"
+                            componentId="text_jie"
                             text="&lt;p>Tuesday 23 January, &lt;g class=&quot;gr_ gr_9 gr-alert gr_gramm gr_inline_cards gr_run_anim Style multiReplace&quot; id=&quot;9&quot; data-gr-id=&quot;9&quot;>4pm&lt;/g> – &lt;g class=&quot;gr_ gr_10 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style multiReplace&quot; id=&quot;10&quot; data-gr-id=&quot;10&quot;>6pm&lt;/g>&lt;/p>&#xd;&#xa;&lt;p>Hawthorn campus&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <link
                               jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/link"
-                            componentId="link_SJ40ORWCO"
+                            componentId="link_jie"
                             componentModifiers="[swinburne:component-style-modifier/button/normal/secondary]"
                             label="Register Now"
                             linkUrl="/content/swinburne/en"/>
@@ -80,7 +80,7 @@
                 <contentblock
                       jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_7N1UYSCBA"
+                    componentId="contentblock_jie"
                     componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
                     variant="container">
                     <bgimage
@@ -105,14 +105,14 @@
                         <text
                               jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_LHYWFN23U"
+                            componentId="text_jie"
                             componentModifiers="[swinburne:component-style-modifier/text/transform/uppercase,swinburne:component-style-modifier/font/font-weight-bolder]"
                             text="&lt;h2>JUGGLING LIFE AND UNI?&lt;/h2>&#xd;&#xa;"
                             textIsRich="true"/>
                         <link
                               jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/link"
-                            componentId="link_HFQXJTFPX"
+                            componentId="link_jie"
                             componentModifiers="[swinburne:component-style-modifier/button/normal/secondary]"
                             label="Tell Me How"
                             variant="button"/>
@@ -123,7 +123,7 @@
         <footer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
-            componentId="footer_DVSNLSHZJ">
+            componentId="footer_jie">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>

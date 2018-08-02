@@ -57,5 +57,15 @@
         "class": "last"
       }
     ]
+  },
+  "pageList2": {
+    "componentId": "pagelist3",
+    "componentTheme": "theme--list-social",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
   }
 }

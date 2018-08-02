@@ -32,7 +32,7 @@
                 <experiencefragment
                           jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/experience-fragments/editor/components/experiencefragment"
-                        fragmentPath="/content/experience-fragments/swin-exp-fragments/header-logo/master"/>
+                        fragmentPath="/content/experience-fragments/swinburne-showcase/header-logo/master"/>
             </par>
         </header>
         <footer

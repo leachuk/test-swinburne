@@ -8,14 +8,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Contact Us"
          sling:resourceType="swinburne/components/template/base">
-        <header
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/header"
-            componentId="header_contact_us">
-            <par
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
-        </header>
+
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
@@ -49,13 +42,6 @@
                 </page_details>
             </par>
         </article>
-        <footer
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/footer"
-            componentId="footer_contact_us">
-            <par
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
-        </footer>
+
     </jcr:content>
 </jcr:root>

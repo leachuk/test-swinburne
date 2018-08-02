@@ -6,14 +6,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Swinburne Info Evening"
         sling:resourceType="swinburne/components/template/base">
-        <header
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/header"
-            componentId="header_jie">
-            <par
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
-        </header>
+
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
@@ -120,13 +113,6 @@
                 </contentblock>
             </par>
         </article>
-        <footer
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/footer"
-            componentId="footer_jie">
-            <par
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
-        </footer>
+
     </jcr:content>
 </jcr:root>

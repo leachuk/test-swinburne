@@ -33,5 +33,12 @@
     "componentModifier": "container",
     "componentStyle": "",
     "text": "<p>Footer content to be replaced by Experience Fragment</p>"
+  },
+  "footer6": {
+    "componentId": "footer6",
+    "componentTheme": "theme--footer-brand",
+    "componentModifier": "",
+    "componentStyle": "",
+    "text": "<p>© SWINBURNE | CRICOS: 00111D | RTO: 3059 |</p>"
   }
 }

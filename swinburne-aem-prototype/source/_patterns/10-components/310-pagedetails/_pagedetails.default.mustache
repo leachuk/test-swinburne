@@ -15,12 +15,10 @@
       <span component class="pagetitle">
         {{{ title }}}
       </span>
-      <span component class="pagedescription">
-        {{{ description }}}
-      </span>
-      {{> components-link.default(label: "{{{ btnText }}}",
-                                  href: "{{{ btnHref }}}",
-                                  modifier: "{{{ btnModifier }}}") }}
+      {{> components-text.default( text: "{{{ description }}}" ) }}
+      {{> components-link.default(  label: "{{{ btnText }}}",
+                                    href: "{{{ btnHref }}}",
+                                    modifier: "{{{ btnModifier }}}") }}
     </div>
   </div>
 </div>

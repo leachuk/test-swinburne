@@ -21,6 +21,10 @@ header[component],
         }
       }
     }
+    div[component].embedsource > a {
+      display:block;
+      float:left;
+    }
     button[data-modules="navtoggler"] {
       display:block;
       position: absolute;
@@ -35,8 +39,11 @@ header[component],
 }
 
 html.aem-AuthorLayer-Edit {
-  .header[component].theme--header-swinburne div[component].parsys {
-    float: none;
+  .header[component].theme--header-swinburne {
+    div[component].parsys,
+    div[component].embedsource > a {
+      float: none;
+    }
   }
   button[data-modules="navtoggler"] {
     float: none;

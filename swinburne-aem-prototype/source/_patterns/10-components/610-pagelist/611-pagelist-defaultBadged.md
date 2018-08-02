@@ -1,5 +1,5 @@
 ---
-title: Page List
+title: Page List Badged
 ---
 ### Overview
   Component for displaying a page list navigation bar.
@@ -7,9 +7,9 @@ title: Page List
   Default
 ### Design
 1. Theme
- * none
-2. Modifier
  * Swinburne : Component Style Theme / Lists / Navlist / Navbar / Navbar Nav
+2. Modifier
+ * none
 3. Modules
  * none
 4. Chevron

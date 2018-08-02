@@ -25,7 +25,7 @@ title: Page Details
 3. Show Page Date
  * false
 4. Show Parsys
- * false
+ * true
 5. Hide Title
  * true
 6. Hide Description
@@ -47,22 +47,7 @@ title: Page Details
 5. Icon
  * none
  
-### 2. Link
-#### Variant
-  Default
-#### Design
-1. Theme
- * none
-2. Modifier
- * Swinburne : Component Style Modifier / Button / Normal / Secondary
-3. Modules
- * none
-4. Chevron
- * none
-5. Icon
- * none
- 
-### 3. Text
+### 2. Text
 #### Variant
   Default
 #### Design
@@ -77,7 +62,7 @@ title: Page Details
 5. Icon
  * none
  
-### 4. Page Title
+### 3. Page Title
 #### Variant
   Default
 #### Design
@@ -92,18 +77,33 @@ title: Page Details
  5. Icon
   * none
   
-### 5. Page Description
+### 4. Text
 #### Variant
   Default
 #### Design
- 1. Theme
-  * none
- 2. Modifier
-  * none
- 3. Modules
-  * none
- 4. Chevron
-  * none
- 5. Icon
-  * none
+1. Theme
+ * none
+2. Modifier
+ * none
+3. Modules
+ * none
+4. Chevron
+ * none
+5. Icon
+ * none
+  
+### 5. Link
+#### Variant
+  Default
+#### Design
+1. Theme
+ * none
+2. Modifier
+ * Swinburne : Component Style Modifier / Button / Normal / Secondary
+3. Modules
+ * none
+4. Chevron
+ * none
+5. Icon
+ * none
 

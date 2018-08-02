@@ -1025,7 +1025,7 @@ content/cq:tags/swinburne/component-style-theme:
   # Footer
   layout/brand-footer:
     flat: true
-    prefix: brand-footer
+    prefix: theme--footer-brand
     title: 'Brand Footer'
 
   # Header
@@ -1099,6 +1099,12 @@ content/cq:tags/swinburne/component-style-theme:
     flat: true
     prefix: navbar-expand-lg navbar-light bg-white
     title: 'Header Nav'
+
+
+  lists/navlist/socialnav:
+     flat: true
+     prefix: theme--list-social
+     title: 'Social Nav'
 
   # Colctrl
   layout/colctrl/flush:

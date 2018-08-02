@@ -67,5 +67,15 @@
     "componentIcon": "",
     "componentStyle": "",
     "links": []
+  },
+  "pageList3": {
+    "componentId": "pagelist4",
+    "componentTheme": "theme--list-card",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
   }
 }

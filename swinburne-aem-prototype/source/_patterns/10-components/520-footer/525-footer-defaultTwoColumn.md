@@ -95,10 +95,8 @@ title: Footer 2 Columns template.
 #### Config
 1. Limit
 * 5
-#### Badge Config / Title Configuration
-1. Show Title Icon
-* true
-2. Title Icon ( per badges order )
+#### Badge Config / Icon Badge Configuration
+1. Page Icon ( per badges order )
 * Swinburne : Component Style Icon / Social / Facebook F
 * Swinburne : Component Style Icon / Social / Twitter
 * Swinburne : Component Style Icon / Social / Youtube

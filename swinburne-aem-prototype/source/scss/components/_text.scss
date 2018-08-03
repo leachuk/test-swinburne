@@ -51,11 +51,10 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin: 8px 0 0 -20px;
-        vertical-align: middle;
-        border-top: 5px solid transparent;
-        border-left: 10px solid $secondary;
-        border-bottom: 5px solid transparent;
+        margin: 6px 0 0 -20px;
+        background: url('../images/icons/ul-arrow.svg') no-repeat;
+        width: 13px;
+        height: 13px;
       }
     }
   }

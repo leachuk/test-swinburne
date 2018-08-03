@@ -34,34 +34,34 @@ const bindSlickToElement = (element, options = {}) => {
     center       : get(options, 'center', true),
     itemElement  : get(options, 'itemElement', null),
     items        : get(options, 'items', 1),
-    loop         : get(options, 'loop', false),
-    margin       : get(options, 'margin', 30),
-    mouseDrag    : get(options, 'mouseDrag', false),
+    loop         : get(options, 'loop', true),
+    margin       : get(options, 'margin', 1),
+    mouseDrag    : get(options, 'mouseDrag', true),
     nav          : get(options, 'nav', true),
     slideBy      : get(options, 'slideBy', 1),
     stageElement : get(options, 'stageElement', null),
-    stagePadding : get(options, 'stagePadding', 15),
+    stagePadding : get(options, 'stagePadding', 0),
 
     responsive: {
       0: omitBy({
-        stagePadding: get(options, 'breakpoint.0.stagePadding', 50),
+        stagePadding: get(options, 'breakpoint.0.stagePadding', 0),
       }, isNil),
 
       576: omitBy({
-        items        : get(options, 'breakpoint.576.items', 2),
-        stagePadding : get(options, 'breakpoint.576.stagePadding', 50),
+        items        : get(options, 'breakpoint.576.items', 1),
+        stagePadding : get(options, 'breakpoint.576.stagePadding', 0),
       }, isNil),
 
       768: omitBy({
         center  : get(options, 'breakpoint.768.center', false),
-        items   : get(options, 'breakpoint.768.items', 4),
+        items   : get(options, 'breakpoint.768.items', 2),
         slideBy : get(options, 'breakpoint.768.slideBy', 2),
       }, isNil),
 
-      1024: omitBy({
-        center  : get(options, 'breakpoint.1024.center', false),
-        items   : get(options, 'breakpoint.1024.items', 4),
-        slideBy : get(options, 'breakpoint.1024.slideBy', 2),
+      1200: omitBy({
+        center  : get(options, 'breakpoint.1200.center', false),
+        items   : get(options, 'breakpoint.1200.items', 3),
+        slideBy : get(options, 'breakpoint.1200.slideBy', 1),
       }, isNil),
     },
   }, isNil))

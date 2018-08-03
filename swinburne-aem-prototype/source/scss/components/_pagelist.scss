@@ -87,6 +87,79 @@ $border-color: #1d1f20;
 
   // Normalize the list when the 'carousel' module is applied
   &[data-modules*='carousel'] {
+    &.pagelist {
+      max-width: 100%;
+      width: 100%;
+      padding: 50px 0;
+      @include media-breakpoint-up(lg) {
+        width: 81%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 100%;
+      }
+    }
+    .owl-carousel {
+      width: 77%;
+      margin: 0 auto;
+      @include media-breakpoint-up(lg) {
+        width: 81%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 100%;
+      }
+    }
+    .card,
+    .card-body {
+      background-color: transparent;
+    }
+    .card-img-top {
+      z-index: 1;
+      position: absolute;
+    }
+    .card-body {
+      z-index: 2;
+      margin-bottom: -18px;
+      margin-top: 50%;
+      padding: 15px 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      * {
+        color: $white;
+        text-align: center;
+      }
+      h3 {
+        display: block;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 22px;
+        margin: 0;
+      }
+      .card-text,
+      h3 {
+        padding: 12px 20px;
+      }
+      .card-text {
+        font-size: 14px;
+        padding-top: 0;
+        margin: 0;
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+      }
+      .btn {
+        font-size: 16px;
+        margin: 0 auto 15px auto;
+        padding: 5px 12px;
+        display: inline-block;
+        position: relative;
+      }
+    }
+    .card-img-top,
+    .card-body {
+      height: 100%;
+      max-height: 100%;
+      width: 100%;
+    }
     ul.owl-carousel {
       display: block;
 

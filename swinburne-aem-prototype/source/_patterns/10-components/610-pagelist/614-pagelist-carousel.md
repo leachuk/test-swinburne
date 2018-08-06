@@ -7,7 +7,7 @@ title: Page List Carousel
   Card with Image, Title and Action
 ### Design
 1. Theme
- * none
+ * Swinburne : Component Style Theme / Lists / Cardslist / Image List
 2. Modifier
  * none
 3. Modules

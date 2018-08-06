@@ -80,7 +80,7 @@
   },
   "pageList4": {
     "componentId": "pagelist5",
-    "componentTheme": "",
+    "componentTheme": "theme--list-images",
     "componentModifier": "",
     "componentModules": "carousel",
     "componentChevron": "",

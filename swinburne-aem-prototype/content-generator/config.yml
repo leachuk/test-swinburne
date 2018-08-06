@@ -1113,6 +1113,11 @@ content/cq:tags/swinburne/component-style-theme:
      prefix: theme--list-card
      title: 'Cards Nav'
 
+  lists/cardslist/images:
+     flat: true
+     prefix: theme--list-images
+     title: 'Image List'
+
   # Colctrl
   layout/colctrl/flush:
     prefixes:

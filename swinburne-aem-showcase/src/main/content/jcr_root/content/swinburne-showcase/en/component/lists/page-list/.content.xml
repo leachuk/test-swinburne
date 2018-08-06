@@ -947,6 +947,41 @@
                     </par>
                 </contentblock32>
 
+                <contentblock33
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock33"
+                        hideTitle="false"
+                        hideTitleSeparator="true"
+                        title="Page List: Pages with Analytics"
+                        variant="advsection">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                        <text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                text=""
+                                textIsRich="true"
+                                variant="simple"/>
+                        <pagelist
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/lists/pagelist"
+                                componentId="pagelist33"
+                                detailsBadge="cardAction"
+                                badgeAnalyticsEventType="site interaction"
+                                badgeAnalyticsLinkLocation="pagelist"
+                                badgeAnalyticsLinkType="link"
+                                limit="5"
+                                listFrom="static"
+                                listType="list"
+                                orderBy="jcr:title"
+                                pages="[/content/swinburne-showcase/en/component/lists/page-list/analytics/page1,/content/swinburne-showcase/en/component/lists/page-list/analytics/page2,/content/swinburne-showcase/en/component/lists/page-list/analytics/page3]"
+                                tagsMatch="any">
+                        </pagelist>
+                    </par>
+                </contentblock33>
+
 
 
             </par>

@@ -55,13 +55,13 @@ const bindSlickToElement = (element, options = {}) => {
       768: omitBy({
         center  : get(options, 'breakpoint.768.center', false),
         items   : get(options, 'breakpoint.768.items', 2),
-        slideBy : get(options, 'breakpoint.768.slideBy', 2),
+        slideBy : get(options, 'breakpoint.768.slideBy', 1),
       }, isNil),
 
-      1200: omitBy({
-        center  : get(options, 'breakpoint.1200.center', false),
-        items   : get(options, 'breakpoint.1200.items', 3),
-        slideBy : get(options, 'breakpoint.1200.slideBy', 1),
+      1400: omitBy({
+        center  : get(options, 'breakpoint.1400.center', false),
+        items   : get(options, 'breakpoint.1400.items', 3),
+        slideBy : get(options, 'breakpoint.1400.slideBy', 1),
       }, isNil),
     },
   }, isNil))

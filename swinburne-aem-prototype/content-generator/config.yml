@@ -171,6 +171,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - secondary
       - success
       - warning
+      - icon
     valueFormat: btn btn-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -881,6 +882,7 @@ content/cq:tags/swinburne/component-style-theme:
   layout/contentblock:
     prefixes:
       - banner
+      - carousel
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 

@@ -171,6 +171,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - secondary
       - success
       - warning
+      - icon
     valueFormat: btn btn-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -881,6 +882,7 @@ content/cq:tags/swinburne/component-style-theme:
   layout/contentblock:
     prefixes:
       - banner
+      - carousel
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 
@@ -1025,7 +1027,7 @@ content/cq:tags/swinburne/component-style-theme:
   # Footer
   layout/brand-footer:
     flat: true
-    prefix: brand-footer
+    prefix: theme--footer-brand
     title: 'Brand Footer'
 
   # Header
@@ -1099,6 +1101,17 @@ content/cq:tags/swinburne/component-style-theme:
     flat: true
     prefix: navbar-expand-lg navbar-light bg-white
     title: 'Header Nav'
+
+
+  lists/navlist/socialnav:
+     flat: true
+     prefix: theme--list-social
+     title: 'Social Nav'
+
+  lists/cardslist/cardsnav:
+     flat: true
+     prefix: theme--list-card
+     title: 'Cards Nav'
 
   # Colctrl
   layout/colctrl/flush:

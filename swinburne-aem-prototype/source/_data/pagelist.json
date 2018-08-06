@@ -57,5 +57,35 @@
         "class": "last"
       }
     ]
+  },
+  "pageList2": {
+    "componentId": "pagelist3",
+    "componentTheme": "theme--list-social",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
+  "pageList3": {
+    "componentId": "pagelist4",
+    "componentTheme": "theme--list-card",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
+  "pageList4": {
+    "componentId": "pagelist5",
+    "componentTheme": "",
+    "componentModifier": "",
+    "componentModules": "carousel",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
   }
 }

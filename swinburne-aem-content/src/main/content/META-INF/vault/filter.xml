@@ -5,7 +5,7 @@
     <filter root="/content/swinburne"/>
 
     <filter root="/content/api/swinburne" mode="update"/>
-    <filter root="/content/experience-fragments/swin-exp-fragments" mode="update"/>
+    <filter root="/content/experience-fragments/swinburne" mode="update"/>
 
     <filter root="/etc/blueprints/swinburne" mode="update"/>
     <filter root="/etc/designs/swinburne" mode="update"/>

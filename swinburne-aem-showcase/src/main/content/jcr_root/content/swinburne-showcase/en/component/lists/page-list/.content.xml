@@ -943,11 +943,6 @@
                                 orderBy="jcr:title"
                                 pages="[/content/swinburne-showcase/en/component/lists/page-list/cards/page1,/content/swinburne-showcase/en/component/lists/page-list/cards/page6,/content/swinburne-showcase/en/component/lists/page-list/cards/page5]"
                                 tagsMatch="any">
-                            <badgeThumbnail
-                                    jcr:lastModified="{Date}2018-07-14T16:39:14.776+10:00"
-                                    jcr:lastModifiedBy="admin"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/media/image"/>
                         </pagelist>
                     </par>
                 </contentblock32>

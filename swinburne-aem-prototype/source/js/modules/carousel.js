@@ -41,6 +41,7 @@ const bindSlickToElement = (element, options = {}) => {
     slideBy      : get(options, 'slideBy', 1),
     stageElement : get(options, 'stageElement', null),
     stagePadding : get(options, 'stagePadding', 0),
+    autoplay: true,
 
     responsive: {
       0: omitBy({

@@ -127,7 +127,6 @@ $border-color: #1d1f20;
       .owl-nav {
         & > button {
           position: absolute;
-          height: 105px;
           width: 65px;
           top: 50%;
           transform: translateY(-50%);
@@ -137,6 +136,10 @@ $border-color: #1d1f20;
           border: 0;
           &:hover {
             background: rgba(139,140,146,0.2);
+          }
+          &,
+          & > span:before {
+            height: 105px;
           }
           & > span {
             font-size: 0;
@@ -160,7 +163,10 @@ $border-color: #1d1f20;
           }
           @include media-breakpoint-down(lg) {
             width: 32px;
-            height: 52px;
+            &,
+            & > span:before {
+              height: 52px;
+            }
             &.owl-prev {
               margin-left: -33px;
               & > span:before {

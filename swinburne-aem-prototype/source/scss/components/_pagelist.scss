@@ -213,6 +213,9 @@ $border-color: #1d1f20;
         display: inline-block;
         position: relative;
         @include media-breakpoint-up(sm) {
+          font-size: 14px;
+        }
+        @include media-breakpoint-up(lg) {
           font-size: 16px;
           padding: 5px 12px;
         }

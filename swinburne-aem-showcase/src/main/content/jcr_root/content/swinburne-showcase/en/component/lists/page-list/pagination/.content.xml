@@ -4,7 +4,7 @@
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Pagination"
+        jcr:title="Pagination - Pages for pagination tests"
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"

@@ -111,7 +111,6 @@ $border-color: #1d1f20;
       @include media-breakpoint-up(xl) {
         width: 100%;
         .owl-stage {
-
           & > .owl-item {
             height: 434px;
           }
@@ -208,11 +207,15 @@ $border-color: #1d1f20;
         }
       }
       .btn {
-        font-size: 16px;
+        font-size: 12px;
         margin: 0 auto 15px auto;
-        padding: 5px 12px;
+        padding: 5px;
         display: inline-block;
         position: relative;
+        @include media-breakpoint-up(sm) {
+          font-size: 16px;
+          padding: 5px 12px;
+        }
       }
     }
     .card-img-top,

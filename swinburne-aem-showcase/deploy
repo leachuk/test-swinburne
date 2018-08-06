@@ -27,25 +27,21 @@ echo "AEM_SCHEMA: $AEM_SCHEMA"
 
 
 set_term_title "Turn-off Workflows"
+echo "- Workflows Turn-off"
+doWorkflowsTurnOff
 
-echo "- Turn-off Workflows"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_create" "-F enabled=false"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_create_without_DM" "-F enabled=false"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_mod" "-F enabled=false"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_mod_without_DM" "-F enabled=false"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_mod_without_DM_reupload" "-F enabled=false"
 
-set_term_title "Deploying Project"
-
+set_term_title "Deploying Monolith Package: mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallPackage "$@""
+echo "- Deploy"
 mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallPackage "$@"
+set_term_title "Deployed"
+
 
 set_term_title "Turn-on Workflows"
+echo "- Workflows Turn-on "
+doWorkflowsTurnOn
 
-echo "- Turn-on Workflows"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_create" "-F enabled=true"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_create_without_DM" "-F enabled=true"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_mod" "-F enabled=true"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_mod_without_DM" "-F enabled=true"
-doPostFields "/libs/settings/workflow/launcher/config/update_asset_mod_without_DM_reupload" "-F enabled=true"
 
 set_term_title "Deployed"
+echo "- Deployed"
+

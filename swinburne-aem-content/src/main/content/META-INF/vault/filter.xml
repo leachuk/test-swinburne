@@ -1,48 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <!--                        W A R N I N G                     -->
-    <!--        This change can make the AEM content removed      -->
-    <!--    http://jackrabbit.apache.org/filevault/filter.html    -->
-    <!--                        W A R N I N G                     -->
 
-    <!--TODO: uncomment when you update content node redirect path-->
-    <!--&lt;!&ndash; update just the content root &ndash;&gt;-->
-    <!--<filter root="/content" mode="update">-->
-    <!--<exclude pattern="/content[^/*]$" />-->
-    <!--<include pattern="/content" />-->
-    <!--</filter>-->
-
-
-
-    <filter root="/content/dam/swinburne" mode="update"/>
-    <filter root="/content/swinburne" mode="update"/>
+    <filter root="/content/dam/swinburne"/>
+    <filter root="/content/swinburne"/>
 
     <filter root="/content/api/swinburne" mode="update"/>
-    <filter root="/content/experience-fragments/swinburne-exp-fragments" mode="update"/>
+    <filter root="/content/experience-fragments/swinburne" mode="update"/>
 
-    <!--<filter root="/etc/designs/swinburne" mode="update"/>-->
-    <!--<filter root="/content/cq:tags/swinburne" mode="update"/>-->
+    <filter root="/etc/blueprints/swinburne" mode="update"/>
+    <filter root="/etc/designs/swinburne" mode="update"/>
 
-    <!--<filter root="/apps/settings/wcm/design/swinburne" mode="update"/>-->
-    <!--<filter root="/content/cq:tags/swinburne" mode="update"/>-->
+    <filter root="/conf/swinburne" mode="update"/>
 
-    <!--TODO: uncomment when you have forms content-->
-    <!--&lt;!&ndash; forms &ndash;&gt;-->
-    <!--<filter root="/content/forms/af/"/>-->
-    <!--&lt;!&ndash; forms: dam &ndash;&gt;-->
-    <!--<filter root="/content/dam/formsanddocuments/"/>-->
-
-    <!--&lt;!&ndash; forms: apply ace &ndash;&gt;-->
-    <!--<filter root="/content/forms/fp" mode="update">-->
-    <!--<exclude pattern="/content/forms/fp[^/]*$" />-->
-    <!--<include pattern="/content/forms/fp[^/*]/rep:policy" />-->
-    <!--</filter>-->
-
-    <!--&lt;!&ndash; forms: apply ace &ndash;&gt;-->
-    <!--<filter root="/content/forms/portal" mode="update">-->
-    <!--<exclude pattern="/content/forms/portal[^/]*$" />-->
-    <!--<include pattern="/content/forms/portal[^/*]/rep:policy" />-->
-    <!--</filter>-->
+    <filter root="/etc/clientlibs/swinburne">
+        <!-- do not allow deploy into css js and fonts folders -->
+        <include pattern="/etc/clientlibs/swinburne/.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/css.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/js.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/fonts.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/images.*"/>
+    </filter>
 
 
 </workspaceFilter>

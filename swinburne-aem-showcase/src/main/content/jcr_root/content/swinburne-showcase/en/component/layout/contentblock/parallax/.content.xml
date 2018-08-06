@@ -28,7 +28,7 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <contentblock
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
@@ -38,16 +38,16 @@
                             variant="parsys">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <image1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/media/image"
+                                    sling:resourceType="swinburne/components/media/image"
                                     componentId="image1"
                                     componentTheme="[swinburne:component-style-theme/media/image/headerlogo]"
                                     fileReference="/content/dam/swinburne-showcase/en/multimedia/image/logo-swinburne.png"/>
                                 <image2
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/media/image"
+                                    sling:resourceType="swinburne/components/media/image"
                                     componentId="image2"
                                     componentTheme="[swinburne:component-style-theme/media/image/headerlogo]"
                                     fileReference="/content/dam/swinburne-showcase/en/multimedia/image/logo-swinburne.png"/>

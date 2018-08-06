@@ -5,7 +5,7 @@
         cq:tags="[]"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Images - Pages configured to be used with badges that have Images"
+        jcr:title="Analytics - Pages configured with analytics"
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
@@ -21,10 +21,10 @@
                     sling:resourceType="swinburne/components/lists/list"
                     imageRotate="0"
                     listFrom="children"
+                    listItemShowLink="false"
                     listLinkTitle="More Items"
                     listType="list"
                     parentPage="/content/swinburne-showcase/en/content/pages"
-                    listItemShowLink="false"
                     tagsMatch="any"/>
             </par>
         </article>
@@ -40,10 +40,10 @@
                     sling:resourceType="swinburne/components/lists/list"
                     imageRotate="0"
                     listFrom="children"
+                    listItemShowLink="false"
                     listLinkTitle="More Items"
                     listType="list"
                     parentPage="/content/swinburne-showcase/en/content/pages"
-                    listItemShowLink="false"
                     tagsMatch="any"/>
             </par>
         </aside>

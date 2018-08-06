@@ -1,5 +1,6 @@
 package specs.component.lists.pagelist
 
+
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
@@ -313,4 +314,37 @@ class PageListPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+    @Unroll("Page List: Card Action with Analytics #viewport.label")
+    def "Page List: Card Action with Analytics"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist33"
+        def selectorContainer = "#contentblock33 .contents"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+
+        and: "First page link should have attribute: data-layer-event"
+        assert $("${selector} ul li:nth-child(1) a").attr("data-layer-event").equals("site interaction")
+
+        and: "First page link should have attribute: data-layer-linktype"
+        assert $("${selector} ul li:nth-child(1) a").attr("data-layer-linktype").equals("link")
+
+        and: "First page link should have attribute: data-layer-linklocation"
+        assert $("${selector} ul li:nth-child(1) a").attr("data-layer-linklocation").equals("pagelist")
+
+        and: "First page link should have attribute: data-layer-linkdescription"
+        assert $("${selector} ul li:nth-child(1) a").attr("data-layer-linkdescription").equals("badge Link Description")
+
+
+        where:
+        viewport << getViewPorts()
+    }
 }

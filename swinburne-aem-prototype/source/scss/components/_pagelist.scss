@@ -127,44 +127,57 @@ $border-color: #1d1f20;
       .owl-nav {
         & > button {
           position: absolute;
-          height: 105px;
           width: 65px;
           top: 50%;
           transform: translateY(-50%);
           margin: 0;
-          background-color: rgba(95,89,89, 0.6);
           border-radius: 0;
-          outline: none;
-          overflow: hidden;
+          outline: 0;
+          border: 0;
           &:hover {
-            background-color: rgba(95,89,89, 0.5);
+            background: rgba(139,140,146,0.2);
+          }
+          &,
+          & > span:before {
+            height: 105px;
           }
           & > span {
-            font-size: 115px;
-            color: $white;
-            margin-top: -26px;
-            display: block;
+            font-size: 0;
+            &:before {
+              display: block;
+            }
           }
           &.owl-prev {
             left: 0;
             margin-left: -67px;
+            & > span:before {
+              content: url("https://www.swinburne.edu.au/choose/_assets/images/left-arrow.png");
+            }
           }
           &.owl-next {
             right: 0;
             margin-right: -67px;
+            & > span:before {
+              content: url("https://www.swinburne.edu.au/choose/_assets/images/right-arrow.png");
+            }
           }
           @include media-breakpoint-down(lg) {
             width: 32px;
-            height: 52px;
-            & > span {
-              font-size: 60px;
-              margin-top: -13px;
+            &,
+            & > span:before {
+              height: 52px;
             }
             &.owl-prev {
               margin-left: -33px;
+              & > span:before {
+                content: url("https://www.swinburne.edu.au/choose/_assets/images/left-arrow-responsive.png");
+              }
             }
             &.owl-next {
               margin-right: -33px;
+              & > span:before {
+                content: url("https://www.swinburne.edu.au/choose/_assets/images/right-arrow-responsive.png");
+              }
             }
           }
         }

@@ -1,27 +1,11 @@
 #!/bin/bash
 
-set -e
-
 source "./scripts/functions-debug.sh"
 source "./scripts/functions-maven.sh"
 source "./scripts/functions-curl.sh"
 
 #./check_maven
 SCRIPT_PARAMS="$@"
-
-AEM_USER=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.password")
-AEM_PASS=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.username")
-AEM_HOST=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.host")
-AEM_PORT=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.port")
-AEM_SCHEMA=$(getParamOrDefault "$SCRIPT_PARAMS" "package.uploadProtocol")
-
-echo "Params:     $SCRIPT_PARAMS"
-echo "AEM_USER:   $AEM_USER"
-echo "AEM_PASS:   $(sed "s/\w/*/g" <<< ${AEM_PASS})"
-echo "AEM_HOST:   $AEM_HOST"
-echo "AEM_PORT:   $AEM_PORT"
-echo "AEM_SCHEMA: $AEM_SCHEMA"
-
 
 set_term_title "Turn-off Workflows"
 echo "- Workflows Turn-off"

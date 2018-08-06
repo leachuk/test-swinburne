@@ -1,30 +1,12 @@
 #!/bin/bash
 
+POM_FILE="../pom.xml"
+
 source "../scripts/functions-debug.sh"
 source "../scripts/functions-maven.sh"
 source "../scripts/functions-curl.sh"
 
-POM_FILE="../${DEFAULT_POM_FILE}"
-
 SCRIPT_PARAMS="$@"
-
-AEM_USER=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.password" "$POM_FILE")
-AEM_PASS=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.username" "$POM_FILE")
-AEM_HOST=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.host" "$POM_FILE")
-AEM_PORT=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.port" "$POM_FILE")
-AEM_SCHEMA=$(getParamOrDefault "$SCRIPT_PARAMS" "package.uploadProtocol" "$POM_FILE")
-
-#if [[ "$SCRIPT_PARAMS" == *"localhost"* ]]; then
-#    AEM_HOST = "localhost"
-#fi
-
-echo "Params:     $SCRIPT_PARAMS"
-echo "AEM_USER:   $AEM_USER"
-echo "AEM_PASS:   $(sed "s/\w/*/g" <<< ${AEM_PASS})"
-echo "AEM_HOST:   $AEM_HOST"
-echo "AEM_PORT:   $AEM_PORT"
-echo "AEM_SCHEMA: $AEM_SCHEMA"
-
 
 set_term_title "Turn-off Workflows"
 echo "- Workflows Turn-off"

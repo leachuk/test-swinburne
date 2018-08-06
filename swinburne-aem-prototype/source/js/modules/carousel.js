@@ -72,7 +72,7 @@ export default () => {
   const carousels = [ ...document.querySelectorAll('[data-modules*="carousel"]') ]
 
   if (carousels.length) {
-    import(/* webpackChunkName: "js/vendorlib/owl.carousel" */ 'owl.carousel')
+      import(/* webpackChunkName: "js/vendorlib/owl.carousel" */ 'owl.carousel')
       .then(() => {
         console.info('OwlCarousel has been loaded and bound to `$.fn.owlCarousel()`')
 

@@ -111,10 +111,9 @@ $border-color: #1d1f20;
       @include media-breakpoint-up(xl) {
         width: 100%;
         .owl-stage {
-          display: flex;
+
           & > .owl-item {
-            display: flex;
-            flex: 1 0 auto;
+            height: 434px;
           }
         }
       }

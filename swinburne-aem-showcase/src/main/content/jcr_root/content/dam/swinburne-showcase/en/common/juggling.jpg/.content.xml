@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:mixinTypes="[mix:referenceable]"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="ecd9f9af-458e-4b28-afc2-3c14bacbedb8">
+    jcr:uuid="de02a8dc-53b8-459e-81cd-cc7405cb6b19">
     <jcr:content
+        cq:name="juggling.jpg"
+        cq:parentPath="/content/dam/swinburne"
         dam:assetState="processed"
-        dam:relativePath="swinburne/en/common/aem-design.png"
-        dam:s7damType="Image"
-          jcr:primaryType="dam:AssetContent">
+        dam:relativePath="swinburne/juggling.jpg"
+        jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:Bitsperpixel="{Long}32"
-            dam:Comments="Software: Adobe ImageReady&#xa;"
-            dam:extracted="{Date}2017-12-13T13:42:46.352+11:00"
-            dam:Fileformat="PNG"
-            dam:MIMEtype="image/png"
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2018-07-10T14:15:48.560+10:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
-            dam:Numberoftextualcomments="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
             dam:Physicalheightindpi="{Long}-1"
             dam:Physicalheightininches="{Decimal}-1.0"
             dam:Physicalwidthindpi="{Long}-1"
             dam:Physicalwidthininches="{Decimal}-1.0"
             dam:Progressive="no"
-            dam:sha1="fb154a6c3a9436ccd2411f6b24157bc208c7beb3"
-            dam:size="{Long}8824"
-            dc:format="image/png"
+            dam:sha1="f6eb7529384dfca49ce9c615b9d408f2f9990713"
+            dam:size="{Long}232261"
+            dc:format="image/jpeg"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
-            tiff:ImageLength="{Long}200"
-            tiff:ImageWidth="{Long}200"/>
+            tiff:ImageLength="{Long}668"
+            tiff:ImageWidth="{Long}2503"/>
         <related jcr:primaryType="nt:unstructured"/>
     </jcr:content>
 </jcr:root>

@@ -2,32 +2,39 @@
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="ecd9f9af-458e-4b28-afc2-3c14bacbedb8">
+    jcr:uuid="6c09188e-7820-4587-8188-ea9e9f346576">
     <jcr:content
         dam:assetState="processed"
-        dam:relativePath="swinburne/en/common/aem-design.png"
-        dam:s7damType="Image"
+        dam:relativePath="swinburne/apply-now.jpg"
           jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:Bitsperpixel="{Long}32"
-            dam:Comments="Software: Adobe ImageReady&#xa;"
-            dam:extracted="{Date}2017-12-13T13:42:46.352+11:00"
-            dam:Fileformat="PNG"
-            dam:MIMEtype="image/png"
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2018-07-10T14:15:48.560+10:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
-            dam:Numberoftextualcomments="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
             dam:Physicalheightindpi="{Long}-1"
             dam:Physicalheightininches="{Decimal}-1.0"
             dam:Physicalwidthindpi="{Long}-1"
             dam:Physicalwidthininches="{Decimal}-1.0"
             dam:Progressive="no"
-            dam:sha1="fb154a6c3a9436ccd2411f6b24157bc208c7beb3"
-            dam:size="{Long}8824"
-            dc:format="image/png"
+            dam:sha1="cf9b898a20c2734e8e822970fb41a14ecde54a61"
+            dam:size="{Long}140823"
+            dc:format="image/jpeg"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
-            tiff:ImageLength="{Long}200"
-            tiff:ImageWidth="{Long}200"/>
+            tiff:ImageLength="{Long}668"
+            tiff:ImageWidth="{Long}2503"/>
         <related jcr:primaryType="nt:unstructured"/>
+        <usages
+            dam:score="{Long}1"
+            jcr:primaryType="nt:unstructured"
+            usedBy="[aem]">
+            <aem
+                jcr:primaryType="nt:unstructured"
+                count="{Long}1"
+                lastUsed="{Date}2018-07-10T14:16:46.689+10:00"/>
+        </usages>
     </jcr:content>
 </jcr:root>

@@ -48,4 +48,30 @@
       }
     }
   }
+  &.theme--contentblock-carousel {
+    .text[component] h2 {
+      padding: 20px 20px 0 20px;
+      text-align: center;
+      font-weight: bold;
+      @include media-breakpoint-up(md) {
+        font-size: 52px;
+        padding: 60px 20px 0 20px;
+      }
+    }
+    .owl-item {
+      @include media-breakpoint-up(xl) {
+         height: 435px;
+      }
+      .btn-icon {
+        &:before {
+          content: "\f144";
+          display: inline-block;
+          font-family: $font-family-awesome;
+          font-size: 16px;
+          margin-right: 6px;
+          color: $white;
+        }
+      }
+    }
+  }
 }

@@ -171,6 +171,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - secondary
       - success
       - warning
+      - icon
     valueFormat: btn btn-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -881,6 +882,7 @@ content/cq:tags/swinburne/component-style-theme:
   layout/contentblock:
     prefixes:
       - banner
+      - carousel
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 
@@ -1110,6 +1112,11 @@ content/cq:tags/swinburne/component-style-theme:
      flat: true
      prefix: theme--list-card
      title: 'Cards Nav'
+
+  lists/cardslist/images:
+     flat: true
+     prefix: theme--list-images
+     title: 'Image List'
 
   # Colctrl
   layout/colctrl/flush:

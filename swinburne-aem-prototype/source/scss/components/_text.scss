@@ -65,14 +65,14 @@
 }
 
 //modifiers
-.bg-c8 {
+.bg-c8:not(.card) {
   &,
   * {
     color: $white !important;
   }
 }
 
-.bg-c9  {
+.bg-c9:not(.card)  {
   &,
   * {
     color: $black !important;

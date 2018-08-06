@@ -87,6 +87,16 @@ $border-color: #1d1f20;
 
   // Normalize the list when the 'carousel' module is applied
   &[data-modules*='carousel'] {
+    ul.owl-carousel {
+      display: block;
+
+      .owl-item:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  &.theme--list-images {
     &.pagelist {
       max-width: 100%;
       width: 100%;
@@ -110,13 +120,6 @@ $border-color: #1d1f20;
       margin: 0 auto;
       @include media-breakpoint-up(xl) {
         width: 100%;
-        .owl-stage {
-          display: flex;
-          & > .owl-item {
-            display: flex;
-            flex: 1 0 auto;
-          }
-        }
       }
       .owl-dots {
         display: none;
@@ -209,11 +212,18 @@ $border-color: #1d1f20;
         }
       }
       .btn {
-        font-size: 16px;
+        font-size: 12px;
         margin: 0 auto 15px auto;
-        padding: 5px 12px;
+        padding: 5px;
         display: inline-block;
         position: relative;
+        @include media-breakpoint-up(sm) {
+          font-size: 14px;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 16px;
+          padding: 5px 12px;
+        }
       }
     }
     .card-img-top,
@@ -454,7 +464,7 @@ $border-color: #1d1f20;
       .card-text {
         font-size: 16px;
         font-weight: normal;
-        & > a {
+        a {
           color: $secondary;
           &:hover {
             color: $secondary;

@@ -1106,6 +1106,11 @@ content/cq:tags/swinburne/component-style-theme:
      prefix: theme--list-social
      title: 'Social Nav'
 
+  lists/cardslist/cardsnav:
+     flat: true
+     prefix: theme--list-card
+     title: 'Cards Nav'
+
   # Colctrl
   layout/colctrl/flush:
     prefixes:

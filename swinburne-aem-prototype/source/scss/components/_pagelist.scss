@@ -15,6 +15,15 @@
   }
 }
 
+@mixin removeTopPadding() {
+  .card {
+    &,
+    .card-body {
+      padding-top: 0;
+    }
+  }
+}
+
 $border-color: #1d1f20;
 
 .pagelist {
@@ -264,6 +273,84 @@ $border-color: #1d1f20;
         &:hover {
           text-decoration: none;
           border-radius: 50px;
+        }
+      }
+    }
+  }
+  &.theme--list-card {
+    &.pagelist {
+      max-width: 100%;
+      padding: 1.4rem 0 3.125rem 0;
+    }
+    .card {
+      box-shadow: none;
+      margin-bottom: 0;
+      h3 {
+        margin-top: 0.5em;
+        margin-bottom: 0.3em;
+        line-height: 1.1em;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      h3,
+      .card-text {
+        color: $primary;
+      }
+      &,
+      .card-body {
+        background-color: transparent;
+        & > * {
+          text-align: center;
+          &:not(i, svg) {
+            font-family: $font-family-open-sans;
+          }
+        }
+      }
+      i, svg {
+        position: relative;
+        margin: 0 auto;
+        color: $secondary;
+        font-size: 4.5em;
+      }
+      br {
+        margin-bottom: 1em;
+      }
+      .card-text {
+        font-size: 16px;
+        font-weight: normal;
+        & > a {
+          color: $secondary;
+          &:hover {
+            color: $secondary;
+            text-decoration: none;
+          }
+          &:last-of-type {
+            font-weight: bold;
+            margin-top: 8px;
+            display: block;
+            @include media-breakpoint-down(sm) {
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+    .content > ul {
+      justify-content: left;
+     & > li {
+        padding-left: 0;
+        padding-right: 0;
+        @include media-breakpoint-up(md) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        @include media-breakpoint-up(lg) {
+          flex: 0 0 33.33333%;
+          max-width: 33.33333%;
+        }
+        @include media-breakpoint-up(xl) {
+          flex: 0 0 25%;
+          max-width: 25%;
         }
       }
     }

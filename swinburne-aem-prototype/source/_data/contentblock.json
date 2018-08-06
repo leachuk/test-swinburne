@@ -39,5 +39,14 @@
     "linkHref": "https://www.google.com",
     "linkText": "",
     "text": ""
+  },
+  "contentblock8": {
+    "componentId": "contentblock8",
+    "componentModifier": "bg-c10",
+    "componentTheme": "",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": ""
   }
 }

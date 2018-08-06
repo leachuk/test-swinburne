@@ -87,6 +87,141 @@ $border-color: #1d1f20;
 
   // Normalize the list when the 'carousel' module is applied
   &[data-modules*='carousel'] {
+    &.pagelist {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 0 20px 0;
+      @include media-breakpoint-up(md) {
+        padding: 50px 0;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 81%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 90%;
+      }
+      & > .content {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+    .owl-carousel {
+      width: 80%;
+      margin: 0 auto;
+      @include media-breakpoint-up(xl) {
+        width: 100%;
+        .owl-stage {
+          display: flex;
+          & > .owl-item {
+            display: flex;
+            flex: 1 0 auto;
+          }
+        }
+      }
+      .owl-dots {
+        display: none;
+      }
+      .owl-nav {
+        & > button {
+          position: absolute;
+          height: 105px;
+          width: 65px;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0;
+          background-color: rgba(95,89,89, 0.6);
+          border-radius: 0;
+          outline: none;
+          overflow: hidden;
+          &:hover {
+            background-color: rgba(95,89,89, 0.5);
+          }
+          & > span {
+            font-size: 115px;
+            color: $white;
+            margin-top: -26px;
+            display: block;
+          }
+          &.owl-prev {
+            left: 0;
+            margin-left: -67px;
+          }
+          &.owl-next {
+            right: 0;
+            margin-right: -67px;
+          }
+          @include media-breakpoint-down(lg) {
+            width: 32px;
+            height: 52px;
+            & > span {
+              font-size: 60px;
+              margin-top: -13px;
+            }
+            &.owl-prev {
+              margin-left: -33px;
+            }
+            &.owl-next {
+              margin-right: -33px;
+            }
+          }
+        }
+      }
+    }
+    .card,
+    .card-body {
+      background-color: transparent;
+    }
+    .card-img-top {
+      z-index: 1;
+      position: absolute;
+    }
+    .card-body {
+      z-index: 2;
+      margin-bottom: -18px;
+      margin-top: 65%;
+      padding: 15px 0;
+      @include media-breakpoint-up(lg) {
+        margin-top: 50%;
+      }
+      background-color: rgba(0, 0, 0, 0.5);
+      * {
+        color: $white;
+        text-align: center;
+      }
+      h3 {
+        display: block;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 22px;
+        margin: 0;
+      }
+      .card-text,
+      h3 {
+        padding: 12px 20px;
+      }
+      .card-text {
+        font-size: 14px;
+        padding-top: 0;
+        margin: 0;
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+      }
+      .btn {
+        font-size: 16px;
+        margin: 0 auto 15px auto;
+        padding: 5px 12px;
+        display: inline-block;
+        position: relative;
+      }
+    }
+    .card-img-top,
+    .card-body {
+      height: 100%;
+      max-height: 100%;
+      width: 100%;
+    }
     ul.owl-carousel {
       display: block;
 
@@ -297,7 +432,8 @@ $border-color: #1d1f20;
         color: $primary;
       }
       &,
-      .card-body {
+      .card-body,
+      .card-icon {
         background-color: transparent;
         & > * {
           text-align: center;

@@ -432,7 +432,8 @@ $border-color: #1d1f20;
         color: $primary;
       }
       &,
-      .card-body {
+      .card-body,
+      .card-icon {
         background-color: transparent;
         & > * {
           text-align: center;

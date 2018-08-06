@@ -59,8 +59,11 @@
       }
     }
     .owl-item {
+      @include media-breakpoint-up(xl) {
+         height: 435px;
+      }
       .btn-icon {
-        &:before{
+        &:before {
           content: "\f144";
           display: inline-block;
           font-family: $font-family-awesome;

@@ -431,7 +431,8 @@ $border-color: #1d1f20;
         color: $primary;
       }
       &,
-      .card-body {
+      .card-body,
+      .card-icon {
         background-color: transparent;
         & > * {
           text-align: center;
@@ -452,7 +453,7 @@ $border-color: #1d1f20;
       .card-text {
         font-size: 16px;
         font-weight: normal;
-        & > a {
+        & > p  a {
           color: $secondary;
           &:hover {
             color: $secondary;

@@ -454,7 +454,7 @@ $border-color: #1d1f20;
       .card-text {
         font-size: 16px;
         font-weight: normal;
-        & > a {
+        & > p  a {
           color: $secondary;
           &:hover {
             color: $secondary;

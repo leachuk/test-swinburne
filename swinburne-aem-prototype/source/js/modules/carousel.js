@@ -65,6 +65,11 @@ const bindSlickToElement = (element, options = {}) => {
       }, isNil),
     },
   }, isNil))
+
+  if($parent.find('.owl-stage-outer').length === 0) {
+    $parent.find('.owl-stage').wrap('<div class="owl-stage-outer"></div>');
+    $parent.find('.owl-prev, .owl-next').wrapAll('<div class="owl-nav"></div>');
+  }
 }
 
 export default () => {

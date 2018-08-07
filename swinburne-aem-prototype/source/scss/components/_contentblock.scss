@@ -62,16 +62,6 @@
       @include media-breakpoint-up(xl) {
          height: 435px;
       }
-      .btn-icon {
-        &:before {
-          content: "\f144";
-          display: inline-block;
-          font-family: $font-family-awesome;
-          font-size: 16px;
-          margin-right: 6px;
-          color: $white;
-        }
-      }
     }
   }
 }

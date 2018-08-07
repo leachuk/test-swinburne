@@ -41,7 +41,6 @@ const bindSlickToElement = (element, options = {}) => {
     slideBy      : get(options, 'slideBy', 1),
     stageElement : get(options, 'stageElement', null),
     stagePadding : get(options, 'stagePadding', 0),
-    autoplay: true,
 
     responsive: {
       0: omitBy({
@@ -66,13 +65,18 @@ const bindSlickToElement = (element, options = {}) => {
       }, isNil),
     },
   }, isNil))
+
+  if($parent.find('.owl-stage-outer').length === 0) {
+    $parent.find('.owl-stage').wrap('<div class="owl-stage-outer"></div>');
+    $parent.find('.owl-prev, .owl-next').wrapAll('<div class="owl-nav"></div>');
+  }
 }
 
 export default () => {
   const carousels = [ ...document.querySelectorAll('[data-modules*="carousel"]') ]
 
   if (carousels.length) {
-    import(/* webpackChunkName: "js/vendorlib/owl.carousel" */ 'owl.carousel')
+      import(/* webpackChunkName: "js/vendorlib/owl.carousel" */ 'owl.carousel')
       .then(() => {
         console.info('OwlCarousel has been loaded and bound to `$.fn.owlCarousel()`')
 

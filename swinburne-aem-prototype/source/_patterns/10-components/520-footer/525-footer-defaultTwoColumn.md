@@ -39,24 +39,7 @@ title: Footer 2 Columns template.
  * Swinburne : Component Style Theme / Layout / Colctrl / Column / Large / 9 Columns
  * Swinburne : Component Style Theme / Layout / Colctrl / Column / Large / 3 Columns
  
-### 2. Text
-#### Overview 
-  Component displaying a Text.
-#### Variant
-  Default
-#### Design
-1. Theme
- * none
-2. Modifier
- * none
-3. Modules
- * none
-4. Chevron
- * none
-5. Icon
- * none
- 
-### 3. Page List
+### 2. Page List
 #### Overview 
  Component displaying a Page list with links.
 #### Variant
@@ -74,7 +57,7 @@ title: Footer 2 Columns template.
 * none
 #### Config
 1. Limit
-* 3
+* 6
 
 ### 4. Page List
 #### Overview 

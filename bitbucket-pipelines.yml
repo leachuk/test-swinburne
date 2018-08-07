@@ -66,6 +66,7 @@ pipelines:
           deployment: test
           script:
             - mvn clean install -Dcrx.host=$DEV_AUTHOR_HOST -Dcrx.port=$DEV_AUTHOR_PORT -Dcrx.username=$DEV_AUTHOR_USER -Dcrx.password=$DEV_AUTHOR_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+            - mvn clean install -Dcrx.host=$DEV_PUBLISH1_HOST -Dcrx.port=$DEV_PUBLISH1_PORT -Dcrx.username=$DEV_PUBLISH1_USER -Dcrx.password=$DEV_PUBLISH1_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 
     test:
       - step:
@@ -91,6 +92,8 @@ pipelines:
           deployment: test
           script:
             - mvn clean install -Dcrx.host=$TEST_AUTHOR_HOST -Dcrx.port=$TEST_AUTHOR_PORT -Dcrx.username=$TEST_AUTHOR_USER -Dcrx.password=$TEST_AUTHOR_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+            - mvn clean install -Dcrx.host=$TEST_PUBLISH1_HOST -Dcrx.port=$TEST_PUBLISH1_PORT -Dcrx.username=$TEST_PUBLISH1_USER -Dcrx.password=$TEST_PUBLISH1_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+            - mvn clean install -Dcrx.host=$TEST_PUBLISH2_HOST -Dcrx.port=$TEST_PUBLISH2_PORT -Dcrx.username=$TEST_PUBLISH2_USER -Dcrx.password=$TEST_PUBLISH2_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
 
 
 definitions:

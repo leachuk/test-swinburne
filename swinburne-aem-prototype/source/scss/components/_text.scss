@@ -94,13 +94,13 @@
 .text-red {
   &,
   * {
-    color: $secondary !important;
+    color: $primary !important;
   }
 }
 .text-black {
   &,
   * {
-    color: $primary !important;
+    color: $secondary !important;
   }
 }
 .text-white {

@@ -105,7 +105,7 @@ $border-color: #1d1f20;
         padding: 50px 0;
       }
       @include media-breakpoint-up(lg) {
-        width: 81%;
+        width: 85%;
       }
       @include media-breakpoint-up(xl) {
         width: 90%;
@@ -462,7 +462,7 @@ $border-color: #1d1f20;
       }
       h3,
       .card-text {
-        color: $primary;
+        color: $secondary;
       }
       &,
       .card-body,
@@ -478,7 +478,7 @@ $border-color: #1d1f20;
       i, svg {
         position: relative;
         margin: 0 auto;
-        color: $secondary;
+        color: $primary;
         font-size: 4.5em;
       }
       br {
@@ -488,9 +488,9 @@ $border-color: #1d1f20;
         font-size: 16px;
         font-weight: normal;
         a {
-          color: $secondary;
+          color: $primary;
           &:hover {
-            color: $secondary;
+            color: $primary;
             text-decoration: none;
           }
           &:last-of-type {

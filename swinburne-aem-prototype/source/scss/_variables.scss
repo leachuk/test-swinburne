@@ -31,8 +31,8 @@ $brand-colours: (
 
 );
 
-$primary: map-deep-get($brand-colours, 'core', 'c8');
-$secondary: map-deep-get($brand-colours, 'core', 'c7');
+$primary: map-deep-get($brand-colours, 'core', 'c7');
+$secondary: map-deep-get($brand-colours, 'core', 'c8');
 $tertiary: map-deep-get($brand-colours, 'core', 'c6');
 
 $theme-colors: (

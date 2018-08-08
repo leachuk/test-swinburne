@@ -99,7 +99,7 @@ title: Page Details
 1. Theme
  * none
 2. Modifier
- * Swinburne : Component Style Modifier / Button / Normal / Secondary
+ * Swinburne : Component Style Modifier / Button / Normal / Primary
 3. Modules
  * none
 4. Chevron

@@ -6,7 +6,7 @@ footer[component],
   background-position: center;
 
   &.theme--footer-brand {
-    background-color: $primary;
+    background-color: $secondary;
     padding: 40px 0 100px 0;
     & > .aem-Grid {
       @include container();
@@ -54,7 +54,7 @@ footer[component],
         }
         * {
           font-size: 12px;
-          color: $secondary;
+          color: $primary;
           text-transform: uppercase;
           &:hover {
             text-decoration: none;

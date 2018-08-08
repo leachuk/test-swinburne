@@ -1,22 +1,31 @@
 @font-face {
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome';
   font-style: normal;
-  src: url('../fonts/webfonts/fa-regular-400.eot');
-  src: url('../fonts/webfonts/fa-regular-400.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/webfonts/fa-regular-400.woff2') format('woff2'),
-  url('../fonts/webfonts/fa-regular-400.woff') format('woff'),
-  url('../fonts/webfonts/fa-regular-400.ttf') format('truetype'),
-  url('../fonts/webfonts/fa-regular-400.svg#fontawesome') format('svg');
+  src: url('../fonts/webfonts/fa-solid-900.eot');
+  src: url('../fonts/webfonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/webfonts/fa-solid-900.woff2') format('woff2'),
+  url('../fonts/webfonts/fa-solid-900.woff') format('woff'),
+  url('../fonts/webfonts/fa-solid-900.ttf') format('truetype'),
+  url('../fonts/webfonts/fa-solid-900.svg#fontawesome') format('svg');
+}
+
+@font-face {
+  font-family: 'Font Awesome Brands';
+  font-style: normal;
+  src: url('../fonts/webfonts/fa-brands-400.eot');
+  src: url('../fonts/webfonts/fa-brands-400.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/webfonts/fa-brands-400.woff2') format('woff2'),
+  url('../fonts/webfonts/fa-brands-400.woff') format('woff'),
+  url('../fonts/webfonts/fa-brands-400.ttf') format('truetype'),
+  url('../fonts/webfonts/fa-brands-400.svg#fontawesome') format('svg');
 }
 
 //Icon classes for components
-.fa:before,
-.icn:before {
-  font-family: 'Font Awesome 5 Free';
-}
-
+.fa,
 .icn {
-  // General Icons
+  &:before {
+    font-family: 'Font Awesome';
+  }
   &-home:before {
     content:"\f015"
   }
@@ -53,23 +62,33 @@
   &-life-ring:before {
     content:"\f1cd"
   }
+}
+
+.fa,
+.icn {
   // Social Icons
   &-facebook-f:before {
-    content:"\f39e"
+    content:"\f39e";
+    font-family: 'Font Awesome Brands';
   }
   &-instagram:before {
-    content:"\f16d"
+    content:"\f16d";
+    font-family: 'Font Awesome Brands';
   }
   &-twitter:before {
-    content:"\f099"
+    content:"\f099";
+    font-family: 'Font Awesome Brands';
   }
   &-pinterest-p:before {
-    content:"\f231"
+    content:"\f231";
+    font-family: 'Font Awesome Brands';
   }
-  &-chevron-down:before {
-    content:"\f078"
+  &-linkedin-in:before {
+    content: "\F0E1";
+    font-family: 'Font Awesome Brands';
   }
-  &-chevron-up:before {
-    content:"\f077"
+  &-youtube:before {
+    content: "\F167";
+    font-family: 'Font Awesome Brands';
   }
 }

@@ -883,6 +883,7 @@ content/cq:tags/swinburne/component-style-theme:
     prefixes:
       - banner
       - carousel
+      - form
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 

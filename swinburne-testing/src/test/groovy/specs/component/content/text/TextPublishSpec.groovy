@@ -21,8 +21,6 @@ class TextPublishSpec extends ComponentSpec {
     def "Functionality of Component Variant: Default"() {
 
         given: '>the page hierarchy is created as "Components" > "Content" > "Text"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
         def selector = "#text1"
 
         when: "I am on the component showcase page"
@@ -36,14 +34,35 @@ class TextPublishSpec extends ComponentSpec {
         assert $(selector).text().trim().startsWith("Heading 1")
         report("Should have sample rich text")
 
+        and: "Has sample paraformat-h1"
+        assert $("${selector} h1").isEmpty() == false
+
+        and: "Has sample paraformat-h2"
+        assert $("${selector} h2").isEmpty() == false
+
+        and: "Has sample paraformat-h3"
+        assert $("${selector} h3").isEmpty() == false
+
+        and: "Has sample paraformat-p"
+        assert $("${selector} p").isEmpty() == false
+
+        and: "Has sample paraformat-hyperlinks"
+        assert $("${selector} a").isEmpty() == false
+
+        and: "Has sample paraformat-ul"
+        assert $("${selector} ul").isEmpty() == false
+
+        and: "Has sample paraformat-ol"
+        assert $("${selector} ol").isEmpty() == false
+
+        and: "Has sample paraformat-small"
+        assert $("${selector} p small").isEmpty() == false
+
         and: "Has sample table content"
         assert $("${selector} table").isEmpty() == false
 
-        and: "Has sample link"
-        assert $("${selector} a").isEmpty() == false
-
         and: "Should have simple BR element"
-        assert $("$selector div br").size() > 0
+        assert $("${selector} div br").isEmpty() == false
 
         where:
         viewport << getViewPorts()
@@ -68,12 +87,35 @@ class TextPublishSpec extends ComponentSpec {
         assert $(selector).text().trim().startsWith("Heading 1")
         report("Should have sample rich text")
 
+        and: "Has sample paraformat-h1"
+        assert $("${selector} h1").isEmpty() == false
+
+        and: "Has sample paraformat-h2"
+        assert $("${selector} h2").isEmpty() == false
+
+        and: "Has sample paraformat-h3"
+        assert $("${selector} h3").isEmpty() == false
+
+        and: "Has sample paraformat-p"
+        assert $("${selector} p").isEmpty() == false
+
+        and: "Has sample paraformat-hyperlinks"
+        assert $("${selector} a").isEmpty() == false
+
+        and: "Has sample paraformat-ul"
+        assert $("${selector} ul").isEmpty() == false
+
+        and: "Has sample paraformat-ol"
+        assert $("${selector} ol").isEmpty() == false
+
+        and: "Has sample paraformat-small"
+        assert $("${selector} p small").isEmpty() == false
+
         and: "Has sample table content"
         assert $("${selector} table").isEmpty() == false
 
-        and: "Has sample link"
-        assert $("${selector} a").isEmpty() == false
-
+        and: "Should have simple BR element"
+        assert $("${selector} div br").isEmpty() == false
 
         where:
         viewport << getViewPorts()

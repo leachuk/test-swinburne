@@ -3,9 +3,9 @@
 // These styles directly affect AEM components, they should not introduce any new
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
-
+.theme--contentblock,
 .contentblock {
-  &.block-banner {
+  &-banner {
     width: 100%;
     height: 300px;
     position: relative;
@@ -17,34 +17,98 @@
       height: 400px;
       background-position: right top;
     }
-  }
-  & > .container > [class*="aem-"] {
-    margin: 50px 5px 5px 10px;
-    width: 60%;
-    z-index: 11;
-    @media (min-width: $screen-sm) {
-      width: 35%;
-      margin: 100px 5px;
-    }
-    background-color: $white;
-    padding: 13px;
-    @media (min-width: $screen-sm) {
-      padding: 20px;
-    }
-    h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      font-weight: 700;
-      line-height: 1.1;
+    & > .container > [class*="aem-Grid"] {
+      margin: 50px 5px 5px 10px;
+      width: 60%;
+      z-index: 11;
       @media (min-width: $screen-sm) {
-        font-size: 40px;
+        width: 35%;
+        margin: 100px 5px;
+      }
+      background-color: $white;
+      padding: 13px;
+      @media (min-width: $screen-sm) {
+        padding: 20px;
+      }
+      h2 {
+        font-size: 20px;
         margin-bottom: 10px;
+        font-weight: 700;
+        line-height: 1.1;
+        @media (min-width: $screen-sm) {
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+      }
+      a {
+        @media (max-width: $screen-sm-max) {
+          padding: 5px 5px;
+          font-size: 12px;
+        }
       }
     }
-    a {
-      @media (max-width: $screen-sm-max) {
-        padding: 5px 5px;
-        font-size: 12px;
+  }
+  &.theme--contentblock-carousel {
+    .text[component] h2 {
+      padding: 20px 20px 0 20px;
+      text-align: center;
+      font-weight: bold;
+      @include media-breakpoint-up(md) {
+        font-size: 52px;
+        padding: 60px 20px 0 20px;
+      }
+    }
+    .owl-item {
+      @include media-breakpoint-up(xl) {
+         height: 435px;
+      }
+    }
+  }
+  &.theme--contentblock-form {
+    padding: 25px 0;
+    @include media-breakpoint-up(md) {
+      padding: 105px 0;
+    }
+    .colctrl {
+      max-width: 100%;
+    }
+    div[component].colctrl {
+      @include media-breakpoint-up(md) {
+        max-width: 80%;
+      }
+      @include media-breakpoint-up(lg) {
+        max-width: 100%;
+      }
+    }
+    .row {
+      background-color: $white;
+      .parsys_column {
+        &:first-child {
+          padding: 40px 20px;
+          p {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+          h1 {
+            font-size: 45px;
+          }
+          @include media-breakpoint-up(md) {
+            padding: 40px;
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+        &:last-child {
+          background-color: $black;
+          padding-left: 0;
+          padding-right: 0;
+          img {
+            height: auto;
+            width: 100%;
+            display: block;
+          }
+        }
       }
     }
   }

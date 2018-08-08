@@ -11,5 +11,81 @@
       "componentChevron": "",
       "componentIcon": ""
     }
+  },
+  "pageList1": {
+    "componentId": "pagelist2",
+    "componentTheme": "navbar-nav",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": [
+      {
+        "name": "Home",
+        "href": "",
+        "icon": "fa fa-home",
+        "title": "",
+        "class": "first"
+      },
+      {
+        "name": "Juggling life and uni?",
+        "href": "",
+        "icon": "fa fa-life-saver",
+        "title": "",
+        "class": "item"
+      },
+      {
+        "name": "Find a course",
+        "href": "",
+        "icon": "fa fa-search",
+        "title": "",
+        "class": "item"
+      },
+      {
+        "name": "Apply now",
+        "href": "",
+        "icon": "fa fa-edit",
+        "title": "",
+        "class": "item"
+      },
+      {
+        "name": "Contact us",
+        "href": "",
+        "icon": "fa fa-comments",
+        "title": "",
+        "class": "last"
+      }
+    ]
+  },
+  "pageList2": {
+    "componentId": "pagelist3",
+    "componentTheme": "theme--list-social",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
+  "pageList3": {
+    "componentId": "pagelist4",
+    "componentTheme": "theme--list-card",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
+  "pageList4": {
+    "componentId": "pagelist5",
+    "componentTheme": "theme--list-images",
+    "componentModifier": "",
+    "componentModules": "carousel",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
   }
 }

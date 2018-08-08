@@ -78,6 +78,10 @@
     {
       "name": "bg-c9",
       "value": "#ffffff"
+    },
+    {
+      "name": "bg-c10",
+      "value": "bg image"
     }
   ],
   "text-colours": [
@@ -92,6 +96,14 @@
     {
       "name": "text-black",
       "value": "#000000"
+    },
+    {
+      "name": "text-c10",
+      "value": "#292625"
+    },
+    {
+      "name": "text-c11",
+      "value": "#d9d5d1"
     }
   ],
 

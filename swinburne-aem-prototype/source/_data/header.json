@@ -2,8 +2,16 @@
   "header1": {
     "componentId": "header1",
     "componentTheme": "",
-    "componentModifier": "",
+    "componentModifier": "container",
     "componentStyle": "",
     "text": "<h1>Header</h1>"
+  },
+  "header2": {
+    "componentId": "header2",
+    "componentTheme": "theme--header-swinburne",
+    "componentModifier": "",
+    "componentStyle": "",
+    "componentModule": "header.js",
+    "text": ""
   }
 }

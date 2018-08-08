@@ -22,13 +22,13 @@ class TextAuthorSpec extends ComponentSpec {
 
     def "Authoring of Component"() {
 
-        given: "Component has already been inserted"
+        given: "Component has already been added to component showcase page"
         def selector = "#text1"
 
         when: "I am on the Component showcase page"
         TouchUIEditor page = waitForTouchUIPage(language)
 
-        then: "The component should be on showcase page"
+        then: "The component should be on the showcase page"
         waitFor { withFrame(TouchUIEditor.PAGE_FRAME_CONTENT) { $(selector) } }
 
         and: "All dialogs are closed"
@@ -45,9 +45,9 @@ class TextAuthorSpec extends ComponentSpec {
         when: "I close the dialog box"
         page.Editor.closeDialog(compileComponentPath())
 
-        then: "I should be able to close component author dialog"
+        then: "I should be able to save and close component author dialog"
         page.Editor.isDialogOpen(compileComponentPath()) == false
-        report("I should be able to close component author dialog")
+        report("I should be able to save and close component author dialog")
     }
 
 }

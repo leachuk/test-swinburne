@@ -11,7 +11,7 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="AEM.Design Showcase"
+        jcr:title="Swinburne Showcase"
         sling:resourceType="swinburne/components/template/base"
         redirectTarget="/content/swinburne-showcase/en">
         <image

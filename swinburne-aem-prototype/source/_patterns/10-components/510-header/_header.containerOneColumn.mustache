@@ -1,0 +1,21 @@
+<div {{> components-componentAttributes( componentName: "header", componentId: "{{{ id }}}", componentTheme: "{{{ theme }}}", componentModifier: "{{{ modifier }}}", componentModules: "{{{ modules }}}", componentChevron: "{{{ chevron }}}", componentIcon: "{{{ icon }}}", componentStyle: "{{{ style }}}" ) }}>
+  <div class="container">
+    <div class="aem-Grid">
+      {{> components-embedsource.parsysParallax( modules: "{{{ contentblock7.componentModule }}}" ) }}
+      {{> components-pagelist.defaultBadged( id: "{{{ pageList1.componentId }}}",
+                                             theme: "{{{ pageList1.componentTheme }}}",
+                                             modifier: "{{{ pageList1.componentModifier }}}",
+                                             modules: "{{{ pageList1.componentModules }}}",
+                                             chevron: "{{{pageList1.componentChevron }}}",
+                                             icon: "{{{ pageList1.componentIcon }}}",
+                                             links: "{{{ pageList1.links }}}")
+      }}
+      {{> components-embedsource.hamburger( label: "{{{ link10.text }}}",
+                                            href: "{{{ link10.href }}}",
+                                            modifier: "{{{ link10.componentModifier }}}",
+                                            modules: "{{{ link10.componentModules }}}",
+                                            id: "{{{ link10.componentId }}}")
+      }}
+    </div>
+  </div>
+</div>

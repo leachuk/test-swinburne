@@ -28,3 +28,13 @@
 .container:not(.my-large, .my-5) {
   @include container();
 }
+
+//Overwrite nested container to prevent more sides padding.
+body > .container:not(.my-large, .my-5),
+.contentblock.container:not(.my-large, .my-5){
+  max-width: 100% !important;
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+

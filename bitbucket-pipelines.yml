@@ -76,8 +76,8 @@ pipelines:
             - node
             - git-modules
           script:
-            - git checkout develop
-            - git reset --hard "origin/develop"
+            - git checkout test
+            - git reset --hard "origin/test"
             - git submodule sync
             - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
             - git submodule foreach "git lfs pull"

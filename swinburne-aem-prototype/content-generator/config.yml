@@ -1571,8 +1571,8 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - textC9: { cssName: 'text-c9', text: "Colour C9 (#ffffff)" }
       - textC10: { cssName: 'text-c10', text: "Colour C10 (#292625)" }
       - textC11: { cssName: 'text-c11', text: "Colour C11 (#d9d5d1)" }
-      - textRed: { cssName: 'text-red', text: "Text Colour Secondary" }
-      - textBlack: { cssName: 'text-black', text: "Text Colour Primary" }
+      - textRed: { cssName: 'text-red', text: "Text Colour Primary" }
+      - textBlack: { cssName: 'text-black', text: "Text Colour Secondary" }
       - textWhite: { cssName: 'text-white', text: "Text Colour White" }
       - textQuoteSuffix: { cssName: 'text-quote-suffix', text: "Quote Suffix" }
       - fontWeight300: { cssName: 'fw-300', text: "Font Weight (Light)" }

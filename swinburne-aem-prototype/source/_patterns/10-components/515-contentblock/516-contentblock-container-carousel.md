@@ -37,7 +37,7 @@ title: Content Block container Page List Carousel
 5. Icon
  * none
 6. Badge Config / Badge CTA Config
- * Swinburne : Component Style Modifier / Button / Normal / Secondary (On all pages)
+ * Swinburne : Component Style Modifier / Button / Normal / Primary (On all pages)
  * Swinburne : Component Style Modifier / Button / Normal / Icon (On page 3)
  
 ### 2. Text

@@ -1268,13 +1268,10 @@ content/cq:tags/swinburne/component-style-icon:
 
   social:
     prefixes:
-      - vimeo
       - youtube
       - facebook-f
-      - github
       - pinterest-p
       - twitter
-      - weibo
       - instagram
       - linkedin-in
     valueFormat: fa fa-%%prefix%%
@@ -1303,6 +1300,41 @@ content/cq:tags/swinburne/component-style-icon:
       - book
       - reply-all
       - life-ring
+      - calculator
+      - calendar-alt
+      - envelope
+      - star
+      - car
+      - street-view
+      - globe
+      - train
+      - play-circle
+      - user
+      - users
+      - users-class
+      - user-graduate
+      - balance-scale
+      - building
+      - chalkboard-teacher
+      - child
+      - comment-alt-exclamation
+      - comment-alt-smile
+      - comment-alt-check
+      - comment-alt-dots
+      - comments-alt
+      - info-circle
+      - laptop
+      - location-circle
+      - map-pin
+      - plane-arrival
+      - plane-departure
+      - thumbs-up
+      - thumbs-down
+      - trophy
+      - wheelchair
+      - star
+      - school
+      - paper-plane
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -1560,17 +1592,17 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
   styles/styles:
     template: 'text-rtePlugins-styles-styles'
     contents:
-      - textC1: { cssName: 'text-c1', text: "Colour C1 (#85C441)" }
-      - textC2: { cssName: 'text-c2', text: "Colour C2 (#00AEEF)" }
-      - textC3: { cssName: 'text-c3', text: "Colour C3 (#00BED8)" }
-      - textC4: { cssName: 'text-c4', text: "Colour C4 (#FCB945)" }
-      - textC5: { cssName: 'text-c5', text: "Colour C5 (#883681)" }
-      - textC6: { cssName: 'text-c6', text: "Colour C6 (#808285)" }
-      - textC7: { cssName: 'text-c7', text: "Colour C7 (#DC2D27)" }
-      - textC8: { cssName: 'text-c8', text: "Colour C8 (#000000)" }
-      - textC9: { cssName: 'text-c9', text: "Colour C9 (#ffffff)" }
-      - textC10: { cssName: 'text-c10', text: "Colour C10 (#292625)" }
-      - textC11: { cssName: 'text-c11', text: "Colour C11 (#d9d5d1)" }
+      - textC1: { cssName: 'text-c1', text: "Colour C1 (Green)" }
+      - textC2: { cssName: 'text-c2', text: "Colour C2 (Blue)" }
+      - textC3: { cssName: 'text-c3', text: "Colour C3 (Turquoise)" }
+      - textC4: { cssName: 'text-c4', text: "Colour C4 (Gold)" }
+      - textC5: { cssName: 'text-c5', text: "Colour C5 (Purple)" }
+      - textC6: { cssName: 'text-c6', text: "Colour C6 (Grey)" }
+      - textC7: { cssName: 'text-c7', text: "Colour C7 (Swinburne Red)" }
+      - textC8: { cssName: 'text-c8', text: "Colour C8 (Black)" }
+      - textC9: { cssName: 'text-c9', text: "Colour C9 (White)" }
+      - textC10: { cssName: 'text-c10', text: "Colour C10 (Dark Grey)" }
+      - textC11: { cssName: 'text-c11', text: "Colour C11 (Light Grey)" }
       - textRed: { cssName: 'text-red', text: "Text Colour Primary" }
       - textBlack: { cssName: 'text-black', text: "Text Colour Secondary" }
       - textWhite: { cssName: 'text-white', text: "Text Colour White" }

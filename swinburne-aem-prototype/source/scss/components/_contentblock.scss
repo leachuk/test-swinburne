@@ -60,7 +60,7 @@
     }
     .owl-item {
       @include media-breakpoint-up(xl) {
-         min-height: 435px;
+         height: 450px;
       }
     }
   }

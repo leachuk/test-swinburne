@@ -1268,13 +1268,10 @@ content/cq:tags/swinburne/component-style-icon:
 
   social:
     prefixes:
-      - vimeo
       - youtube
       - facebook-f
-      - github
       - pinterest-p
       - twitter
-      - weibo
       - instagram
       - linkedin-in
     valueFormat: fa fa-%%prefix%%
@@ -1303,6 +1300,41 @@ content/cq:tags/swinburne/component-style-icon:
       - book
       - reply-all
       - life-ring
+      - calculator
+      - calendar-alt
+      - envelope
+      - star
+      - car
+      - street-view
+      - globe
+      - train
+      - play-circle
+      - user
+      - users
+      - users-class
+      - user-graduate
+      - balance-scale
+      - building
+      - chalkboard-teacher
+      - child
+      - comment-alt-exclamation
+      - comment-alt-smile
+      - comment-alt-check
+      - comment-alt-dots
+      - comments-alt
+      - info-circle
+      - laptop
+      - location-circle
+      - map-pin
+      - plane-arrival
+      - plane-departure
+      - thumbs-up
+      - thumbs-down
+      - trophy
+      - wheelchair
+      - star
+      - school
+      - paper-plane
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 

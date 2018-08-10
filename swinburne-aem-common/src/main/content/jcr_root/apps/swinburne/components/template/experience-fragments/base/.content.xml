@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Swinburne Base template"
     jcr:primaryType="cq:Component"
     jcr:title="Swinburne Base Page"
-    jcr:description="Swinburne Base template"
-    sling:resourceSuperType="core/wcm/components/page/v1/page"
+    sling:resourceSuperType="swinburne/components/template/experience-fragments/base/v1/xfpage"
     componentGroup=".hidden"/>

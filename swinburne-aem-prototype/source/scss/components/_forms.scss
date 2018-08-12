@@ -15,59 +15,72 @@
   -webkit-appearance: none;
 }
 
-
-.guideFieldNode {
-  & * {
-    font-family: $font-family-open-sans;
+.theme--brand-form {
+  height: 100%;
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 100%;
   }
-  // Text inputs
-  input:not([type="radio"]):not([type="checkbox"]){
-    @include inputStyle();
-    @include placeholder {
-      color: map-deep-get($brand-colours, 'core', 'c6');
+  .guideContainerNode {
+    width: 100%;
+  }
+  .guideFieldNode {
+    * {
+      font-family: $font-family-open-sans;
     }
-    &:focus {
-      border: 1px solid map-deep-get($brand-colours, 'core', 'c2');
-      outline: none;
+    &.guideTextBox {
+      display: none;
+    }
+    // Text inputs
+    input:not([type="radio"]):not([type="checkbox"]){
+      @include inputStyle();
       @include placeholder {
         color: map-deep-get($brand-colours, 'core', 'c6');
       }
-    }
-  }
-  .guideFieldLabel {
-    &.top {
-      label {
-        display: block;
-        margin-bottom: .35em;
+      &:focus {
+        border: 1px solid map-deep-get($brand-colours, 'core', 'c2');
+        outline: none;
+        @include placeholder {
+          color: map-deep-get($brand-colours, 'core', 'c6');
+        }
       }
     }
-  }
-  &.error {
-    input:not([type="radio"]):not([type="checkbox"]) {
-      border: 1px solid map-deep-get($brand-colours, 'core', 'c7')
+    .guideFieldLabel {
+      &.top {
+        label {
+          display: block;
+          margin-bottom: .35em;
+        }
+      }
     }
-  }
-  &.success {
-    input:not([type="radio"]):not([type="checkbox"]) {
-      border: 1px solid map-deep-get($brand-colours, 'core', 'c1')
+    &.error {
+      input:not([type="radio"]):not([type="checkbox"]) {
+        border: 1px solid map-deep-get($brand-colours, 'core', 'c7')
+      }
     }
-  }
-  &.guideCheckBox {
-    .guideFieldLabel label {
-      margin-bottom: 0;
+    &.success {
+      input:not([type="radio"]):not([type="checkbox"]) {
+        border: 1px solid map-deep-get($brand-colours, 'core', 'c1')
+      }
     }
-  }
-  .guideFieldHorizontalAlignment {
-    padding: 10px 20px 10px 10px;
-    &,
-    * {
-      display: inline-block;
+    &.guideCheckBox {
+      .guideFieldLabel label {
+        margin-bottom: 0;
+      }
     }
-    input[type="radio"] {
-      margin-right: 15px;
-    }
-    label {
-      margin-bottom: 0;
+    .guideFieldHorizontalAlignment {
+      padding: 10px 20px 10px 10px;
+      &,
+      * {
+        display: inline-block;
+      }
+      input[type="radio"] {
+        margin-right: 15px;
+      }
+      label {
+        margin-bottom: 0;
+      }
     }
   }
 }

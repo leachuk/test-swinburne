@@ -21,5 +21,7 @@
         <exclude pattern="/etc/clientlibs/swinburne/images.*"/>
     </filter>
 
+    <filter root="/content/dam/formsanddocuments-themes/swinburne"/>
+    <filter root="/etc/clientlibs/swinburne/forms"/>
 
 </workspaceFilter>

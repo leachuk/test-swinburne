@@ -190,6 +190,25 @@
           </execution>
 
           <execution>
+            <id>copy-css-vault-resources-forms</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/forms/default/css</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/css</directory>
+                  <includes>
+                    <include>theme.css</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
             <id>copy-image-vault-resources</id>
             <phase>generate-resources</phase>
             <goals>

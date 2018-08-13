@@ -1,12 +1,12 @@
 #!/bin/bash
 
 POM_FILE="../pom.xml"
+SCRIPT_PARAMS="$@"
 
 source "../scripts/functions-debug.sh"
 source "../scripts/functions-maven.sh"
 source "../scripts/functions-curl.sh"
 
-SCRIPT_PARAMS="$@"
 
 set_term_title "Turn-off Workflows"
 echo "- Workflows Turn-off"

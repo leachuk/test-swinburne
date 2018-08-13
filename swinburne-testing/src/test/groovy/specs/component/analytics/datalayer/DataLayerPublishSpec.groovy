@@ -34,14 +34,17 @@ class DataLayerPublishSpec extends ComponentSpec {
         then: 'The digitalData.page.pageInfo.pageType should equals "common"'
         assert js.exec("return window.digitalData.page.pageInfo.pageType == 'common';")
 
-        then: 'The digitalData.page.pageInfo.contentLanguage should equals "Australia"'
-        assert js.exec("return window.digitalData.page.pageInfo.contentLanguage == 'Australia';")
+        then: 'The digitalData.page.pageInfo.contentLanguage should equals "english"'
+        assert js.exec("return window.digitalData.page.pageInfo.contentLanguage == 'english';")
 
-        then: 'The digitalData.page.pageInfo.contentCountry should equals "english"'
-        assert js.exec("return window.digitalData.page.pageInfo.contentCountry == 'english';")
+        then: 'The digitalData.page.pageInfo.contentCountry should equals "Australia"'
+        assert js.exec("return window.digitalData.page.pageInfo.contentCountry == 'Australia';")
 
-        then: 'The digitalData.page.pageInfo.pageName should equals "swinburne-showcase:en:component:analytics:datalayer"'
-        assert js.exec("return window.digitalData.page.pageInfo.pageName == 'swinburne-showcase:en:component:analytics:datalayer';")
+        then: 'The digitalData.page.pageInfo.pageName should equals ""'
+        assert js.exec("return window.digitalData.page.pageInfo.pageName == '';")
+
+        then: 'The digitalData.page.pageInfo.pagePath should end with "datalayer"'
+        assert js.exec("return window.digitalData.page.pageInfo.pagePath.endsWith(\"datalayer\");")
 
         then: 'The digitalData.page.pageInfo.effectiveDate should equals ""'
         assert js.exec("return window.digitalData.page.pageInfo.effectiveDate == '';")

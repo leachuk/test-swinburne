@@ -32,14 +32,14 @@
 .btn-secondary {
   background-color: $secondary;
   &:hover {
-    background-color: lighten($secondary, 10%);
+    background-color: lighten($secondary, 25%);
   }
 }
 
 .btn-primary {
   background-color: $primary;
   &:hover {
-    background-color: lighten($primary, 25%);
+    background-color: lighten($primary, 10%);
   }
 }
 

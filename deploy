@@ -1,11 +1,10 @@
 #!/bin/bash
 
+SCRIPT_PARAMS="$@"
+
 source "./scripts/functions-debug.sh"
 source "./scripts/functions-maven.sh"
 source "./scripts/functions-curl.sh"
-
-#./check_maven
-SCRIPT_PARAMS="$@"
 
 set_term_title "Turn-off Workflows"
 echo "- Workflows Turn-off"

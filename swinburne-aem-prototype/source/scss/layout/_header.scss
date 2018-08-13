@@ -45,6 +45,11 @@ html.aem-AuthorLayer-Edit {
       float: none;
     }
   }
+  div[component].theme--image-headerlogo {
+    &:last-of-type {
+     display: none;
+    }
+  }
   button[data-modules="navtoggler"] {
     float: none;
   }

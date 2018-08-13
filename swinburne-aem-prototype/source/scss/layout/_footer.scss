@@ -84,7 +84,7 @@ footer[component],
           ul {
             display: inline-block;
             width: auto;
-            li:after {
+            & > li:not(:last-of-type):after {
               content: " ";
             }
           }

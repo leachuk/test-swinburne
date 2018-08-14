@@ -17,6 +17,6 @@ title: Page List Carousel
 5. Icon
  * none
 6. Badge Config / Badge CTA Config
- * Swinburne : Component Style Modifier / Button / Normal / Primary (On all pages)
- * Swinburne : Component Style Modifier / Button / Normal / Icon (On page 3)
+ * Swinburne : Component Style Modifier / Button / Normal / Primary ( On all pages )
+ * Swinburne : Component Style Modifier / Modal / Size / Large, Medium or Small ( CTA with youtube link )
 

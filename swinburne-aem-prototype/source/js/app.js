@@ -10,6 +10,7 @@ import LoadMore from './modules/load-more'
 import Renderers from './modules/renderers'
 import Subscribers from './modules/subscribers'
 import NavToggler from './modules/navtoggler'
+import FancyBox from './modules/fancybox'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -54,6 +55,8 @@ $(() => {
   HashLinks()
 
   NavToggler();
+
+  FancyBox();
 
   // 'object-fit' polyfill for unsupported browsers
   /* global objectFitImages */

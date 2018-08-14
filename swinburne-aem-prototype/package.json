@@ -15,6 +15,7 @@
     }
   ],
   "dependencies": {
+    "@fancyapps/fancybox": "^3.3.5",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/fontawesome-free-regular": "^5.0.13",

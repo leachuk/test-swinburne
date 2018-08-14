@@ -144,7 +144,13 @@
         }
       }
     }
-
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      &::-ms-expand {
+        display: none;
+      }
+    }
     &.error {
       input:not([type="radio"]):not([type="checkbox"]) {
         border: 1px solid map-deep-get($brand-colours, 'core', 'c7')

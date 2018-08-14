@@ -69,9 +69,6 @@
     @include media-breakpoint-up(md) {
       padding: 105px 0;
     }
-    .colctrl {
-      max-width: 100%;
-    }
     div[component].colctrl {
       @include media-breakpoint-up(md) {
         max-width: 80%;

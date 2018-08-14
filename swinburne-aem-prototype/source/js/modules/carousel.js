@@ -70,6 +70,19 @@ const bindSlickToElement = (element, options = {}) => {
     $parent.find('.owl-stage').wrap('<div class="owl-stage-outer"></div>');
     $parent.find('.owl-prev, .owl-next').wrapAll('<div class="owl-nav"></div>');
   }
+
+  // Add analytics data attributes
+  $parent.find('.owl-prev')
+    .attr('data-layer-event', 'site interaction')
+    .attr('data-layer-linktype', 'link')
+    .attr('data-layer-linklocation', 'pagelist')
+    .attr('data-layer-linkdescription', 'carousel left');
+
+  $parent.find('.owl-next')
+    .attr('data-layer-event', 'site interaction')
+    .attr('data-layer-linktype', 'link')
+    .attr('data-layer-linklocation', 'pagelist')
+    .attr('data-layer-linkdescription', 'carousel right');
 }
 
 export default () => {

@@ -220,6 +220,22 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: disabled
     title: 'Disabled'
 
+  ## Modal size
+  modal/size/small:
+    flat: true
+    prefix: fancybox-sm
+    title: 'Small'
+
+  modal/size/medium:
+    flat: true
+    prefix: fancybox-md
+    title: 'Medium'
+
+  modal/size/large:
+    flat: true
+    prefix: fancybox-lg
+    title: 'Large'
+
   # Cards
   card:
     prefixes:

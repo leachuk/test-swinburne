@@ -79,10 +79,16 @@
       @include media-breakpoint-up(lg) {
         max-width: 100%;
       }
+      & > .row {
+        background-color: $white;
+      }
     }
     .row {
-      background-color: $white;
       .parsys_column {
+        padding: 40px 20px;
+        @include media-breakpoint-up(md) {
+          padding: 40px;
+        }
         &:first-child {
           padding: 40px 20px;
           p {
@@ -101,13 +107,6 @@
         }
         &:last-child {
           background-color: $black;
-          padding-left: 0;
-          padding-right: 0;
-          img {
-            height: auto;
-            width: 100%;
-            display: block;
-          }
         }
       }
     }

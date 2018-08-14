@@ -421,6 +421,9 @@ $border-color: #1d1f20;
             background-color: #4577b8;
           }
         }
+        &:after {
+          content: " ";
+        }
       }
       a {
         width: 40px;

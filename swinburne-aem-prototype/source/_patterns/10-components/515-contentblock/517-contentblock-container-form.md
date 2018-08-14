@@ -3,7 +3,7 @@ title: Content Block container Form theme
 ---
 ## Component
 #### Overview
-  Component for displaying a default content block container with a theme.
+ Component for displaying a default content block container with a theme.
 #### Variant
  Container
 #### Design
@@ -21,9 +21,9 @@ title: Content Block container Form theme
 ## Components
 ### 1.Forms container theme
 #### Overview
-Component the theme Swinburne registration form.
+ Component the theme Swinburne registration form.
 #### Variant
-Default
+ Default
 #### Design
 1. Theme
  * theme--brand-form
@@ -35,5 +35,3 @@ Default
  * none
 5. Icon
  * none
-6. Style
- * none 

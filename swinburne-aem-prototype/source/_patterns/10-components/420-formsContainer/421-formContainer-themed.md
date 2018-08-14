@@ -1,10 +1,10 @@
 ---
-title: Forms container theme
+title: Form container theme
 ---
 ### Overview
-Component the theme Swinburne registration form.
+ Component the theme Swinburne registration form.
 ### Variant
-Default
+ Default
 ### Design
 1. Theme
  * theme--brand-form

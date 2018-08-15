@@ -41,7 +41,6 @@
                 <image
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/media/image"
-                    componentId="image_EBXJB9UCQ"
                     fileReference="/content/dam/swinburne/move-into-midyear.jpg"/>
             </par>
         </article>

@@ -27,7 +27,6 @@
                     sling:resourceType="swinburne/components/details/page-details"
                     cardIcon="[swinburne:component-style-icon/general/fast-forward]"
                     cardIconShow="true"
-                    componentId="page_details_J0BELB2VK"
                     description="&lt;p>You don’t always need a bachelor degree to start postgraduate study. If you have substantial relevant work experience, you may be able to progress with a recognition of prior learning.&lt;/p>&#xd;&#xa;&lt;p>Academic credit is available on previous study, too. So it’s worth checking out your eligibility. You could achieve your qualifications sooner and get closer to your goals.&lt;/p>&#xd;&#xa;"
                     hideDescription="true"
                     hideTitle="false"

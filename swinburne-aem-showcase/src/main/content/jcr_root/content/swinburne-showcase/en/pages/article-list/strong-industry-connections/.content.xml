@@ -25,7 +25,6 @@
                     sling:resourceType="swinburne/components/details/page-details"
                     cardIcon="[swinburne:component-style-icon/general/briefcase]"
                     cardIconShow="true"
-                    componentId="page_details_J0BELB2VK"
                     description="&lt;p>Whether you’re a&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/master-phd-graduate/reasons-to-choose-swinburne/&quot;>postgrad&lt;/a>&amp;nbsp;or undergrad student, our strong industry relationships mean you’ll gain professional experience before graduating, whether through placements, internships or industry projects&lt;g class=&quot;gr_ gr_8 gr-alert gr_gramm gr_inline_cards gr_run_anim Style replaceWithoutSep&quot; id=&quot;8&quot; data-gr-id=&quot;8&quot;>.&lt;/g>&lt;a href=&quot;https://www.swinburne.edu.au/current-students/work-integrated-learning/&quot;>&lt;g class=&quot;gr_ gr_8 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style replaceWithoutSep&quot; id=&quot;8&quot; data-gr-id=&quot;8&quot;>Explore&lt;/g> your options&lt;/a>&lt;/p>&#xd;&#xa;"
                     hideDescription="false"
                     hideTitle="false"

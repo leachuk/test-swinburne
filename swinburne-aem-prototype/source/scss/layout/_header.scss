@@ -6,9 +6,12 @@ header[component],
     height: 90px;
   }
   &.theme--header-swinburne {
-    .container {
-      padding-left: 0;
-      padding-right: 0;
+    &.container {
+      @include container();
+      @media (max-width: 1399px) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
     }
     div[component].parsys {
       float: left;

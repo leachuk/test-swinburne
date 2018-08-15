@@ -60,11 +60,6 @@
         padding: 60px 20px 0 20px;
       }
     }
-    .owl-item {
-      @include media-breakpoint-up(xl) {
-         height: 450px;
-      }
-    }
   }
   &.theme--contentblock-form {
     padding: 25px 0;

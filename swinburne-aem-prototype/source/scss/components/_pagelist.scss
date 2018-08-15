@@ -134,6 +134,11 @@ $border-color: #1d1f20;
       .owl-dot {
         display: none;
       }
+      .owl-item {
+        @include media-breakpoint-up(xl) {
+          height: 450px;
+        }
+      }
       .owl-nav {
         & > button {
           position: absolute;
@@ -230,6 +235,8 @@ $border-color: #1d1f20;
         font-size: 14px;
         padding-top: 0;
         margin: 0;
+        max-height: 150px;
+        overflow: auto;
         @include media-breakpoint-down(lg) {
           display: none;
         }

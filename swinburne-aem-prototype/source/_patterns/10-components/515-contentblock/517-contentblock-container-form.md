@@ -19,7 +19,26 @@ title: Content Block container Form theme
  * none
  
 ## Components
-### 1.Forms container theme
+### 1.Two Columns
+#### Overview
+ Component producing a 2 columns template 50% each.
+#### Variant
+ Default
+#### Design
+1. Theme
+ * none
+2. Modifier
+ * none
+3. Modules
+ * none
+4. Chevron
+ * none
+5. Icon
+ * none
+6. Attributes
+ * Swinburne : Component Style Theme / Layout / Colctrl / Column / Medium / 6 Columns
+ * Swinburne : Component Style Theme / Layout / Colctrl / Column / Medium / 6 Columns
+### 2.Forms container theme
 #### Overview
  Component the theme Swinburne registration form.
 #### Variant

@@ -20,12 +20,12 @@
       background-position: 75% top;
     }
     & > .container > [class*="aem-Grid"] {
-      margin: 50px 5px 5px 10px;
+      margin: 50px 5px 5px 0;
       width: 60%;
       z-index: 11;
       @media (min-width: 578px) {
         width: 35%;
-        margin: 100px 5px;
+        margin: 100px 5px 100px 0;
       }
       background-color: $white;
       padding: 13px;
@@ -80,6 +80,8 @@
       }
       & > .row {
         background-color: $white;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
     .row {

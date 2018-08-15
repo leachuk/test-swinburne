@@ -12,8 +12,16 @@
     "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/work-experience.jpg\")",
     "componentTheme": "theme--contentblock-banner",
     "linkHref": "http://google.com",
-    "linkText": "<h2>tell me more</h2>",
-    "text": "REAL WORK AS YOU STUDY"
+    "text": "<h2>tell me more</h2>",
+    "linkText": "REAL WORK AS YOU STUDY"
+  },
+  "contentblock3": {
+    "componentId": "contentblock3",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/apply-now.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "linkHref": "http://google.com",
+    "text": "<h2>Ready to apply</h2>",
+    "linkText": "LET'S DO THIS!"
   },
   "contentblock5": {
     "componentId": "contentblock5",

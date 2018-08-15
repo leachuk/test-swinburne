@@ -1099,6 +1099,11 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: brand-footer__bottom
     title: 'Brand Footer - Bottom'
 
+  layout/form/form-container:
+    flat: true
+    prefix: theme--brand-form
+    title: 'Brand Form'
+
   # Nav list
   lists/navlist/navbar/nav:
     flat: true

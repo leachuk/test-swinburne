@@ -33,6 +33,7 @@ function evalMaven() {
 
 }
 
+POM_FILE="./${DEFAULT_POM_FILE}"
 AEM_USER=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.password" "$POM_FILE")
 AEM_PASS=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.username" "$POM_FILE")
 AEM_HOST=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.host" "$POM_FILE")

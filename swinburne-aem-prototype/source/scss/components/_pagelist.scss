@@ -114,12 +114,12 @@ $border-color: #1d1f20;
         margin-right: 0;
         margin-left: 0;
       }
-      .btn-icon {
+      [class*="fancybox-"] {
         &:before {
           content: "\f144";
           display: inline-block;
           font-family: $font-family-awesome;
-          font-size: 16px;
+          font-size: 14px;
           margin-right: 6px;
           color: $white;
         }
@@ -421,6 +421,9 @@ $border-color: #1d1f20;
             background-color: #4577b8;
           }
         }
+        &:after {
+          content: " ";
+        }
       }
       a {
         width: 40px;
@@ -436,6 +439,7 @@ $border-color: #1d1f20;
           position: relative;
           top: 50%;
           left: 50%;
+          font-size: 18px;
           transform: translate(-50%, -50%);
         }
         &:hover {

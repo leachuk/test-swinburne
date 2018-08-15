@@ -65,6 +65,7 @@
     "componentModule": "",
     "linkHref": "",
     "linkText": "",
+    "formTheme": "theme--brand-form",
     "src": "../../images/form.png",
     "alt": "Form",
     "text": "<h1>SWINBURNE <span style=\"color:#eb1d25\">INFO EVENING</span></h1><p>Attend the Swinburne Info Evening to learn about the range of postgrad programs, master and bachelor degrees, and pathways that can take you where you want to go.</p><p>Chat with academics about the courses that are right for you and just where they can lead. You’ll leave feeling cool, calm and confident about your future.</p><p>To register, just drop your details in here.</p>"

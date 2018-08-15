@@ -24,4 +24,7 @@
     <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/styles/styles" mode="update"/>
     <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/paraformat/formats" mode="update"/>
 
+    <filter root="/content/dam/formsanddocuments-themes/swinburne" mode="update"/>
+    <filter root="/etc/clientlibs/swinburne/forms" mode="update"/>
+
 </workspaceFilter>

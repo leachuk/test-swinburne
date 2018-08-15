@@ -1,3 +1,4 @@
+
 @mixin inputStyle() {
   display: block;
   width: 100%;
@@ -15,59 +16,219 @@
   -webkit-appearance: none;
 }
 
-
-.guideFieldNode {
-  & * {
-    font-family: $font-family-open-sans;
+.theme--brand-form {
+  .mobileLayout {
+    display: none;
   }
-  // Text inputs
-  input:not([type="radio"]):not([type="checkbox"]){
-    @include inputStyle();
-    @include placeholder {
-      color: map-deep-get($brand-colours, 'core', 'c6');
+  .afHeader,
+  .guideTextDraw.headerText {
+    height: auto;
+  }
+  .afHeader {
+    background-color: transparent;
+    border-bottom: 0;
+    margin-bottom: 25px;
+    &,
+    .container {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
-    &:focus {
-      border: 1px solid map-deep-get($brand-colours, 'core', 'c2');
-      outline: none;
+  }
+  .guideTextDraw.headerText {
+    margin-bottom: 0;
+    color: $white;
+    line-height: 1.1;
+    font-weight: bold;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    p {
+      font-size: 40px;
+      text-align: left;
+      line-height: 1.1;
+    }
+    @include media-breakpoint-up(md) {
+      p {
+        font-size: 52px;
+      }
+    }
+  }
+  .guidePanelNode {
+    .row {
+      [class*="col-"] {
+        &:first-child {
+          flex: 0 0 35%;
+          max-width: 35%;
+          padding-right: 5px;
+          margin-top: -6px;
+        }
+        &:last-child {
+          flex: 0 0 65%;
+          max-width: 65%;
+          padding-left: 0;
+        }
+        @include media-breakpoint-down(sm) {
+          &:first-child,
+          &:last-child {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+  .guideFieldWidget:not(.guideFieldButtonWidget) {
+    width: auto;
+  }
+  height: 100%;
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+  }
+  .guideContainerNode {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .guidePanelDescription {
+    font-size: 1rem;
+    color: $white;
+    margin: 0 0 0.35em 0;
+  }
+  .guideFieldNode {
+    &:not(.guideButton):not(.guideChart) {
+      margin-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+    * {
+      font-family: $font-family-open-sans;
+    }
+    legend,
+    label,
+    .guidePanelDescription,
+    p {
+      color: $white;
+    }
+    p {
+      font-size: 20px;
+    }
+    select,
+    input:not([type="radio"]):not([type="checkbox"]){
+      @include inputStyle();
       @include placeholder {
         color: map-deep-get($brand-colours, 'core', 'c6');
       }
-    }
-  }
-  .guideFieldLabel {
-    &.top {
-      label {
-        display: block;
-        margin-bottom: .35em;
+      &:focus {
+        outline: none;
+        border: 0;
+        outline-offset: 0;
+        @include placeholder {
+          color: map-deep-get($brand-colours, 'core', 'c6');
+        }
       }
     }
-  }
-  &.error {
-    input:not([type="radio"]):not([type="checkbox"]) {
-      border: 1px solid map-deep-get($brand-colours, 'core', 'c7')
+    .guideFieldLabel {
+      &.top {
+        label {
+          display: block;
+          margin-bottom: .35em;
+        }
+      }
     }
-  }
-  &.success {
-    input:not([type="radio"]):not([type="checkbox"]) {
-      border: 1px solid map-deep-get($brand-colours, 'core', 'c1')
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      &::-ms-expand {
+        display: none;
+      }
     }
-  }
-  &.guideCheckBox {
-    .guideFieldLabel label {
-      margin-bottom: 0;
+    &.error {
+      input:not([type="radio"]):not([type="checkbox"]) {
+        border: 1px solid map-deep-get($brand-colours, 'core', 'c7')
+      }
     }
-  }
-  .guideFieldHorizontalAlignment {
-    padding: 10px 20px 10px 10px;
-    &,
-    * {
-      display: inline-block;
+    &.success {
+      input:not([type="radio"]):not([type="checkbox"]) {
+        border: 1px solid map-deep-get($brand-colours, 'core', 'c1')
+      }
     }
-    input[type="radio"] {
-      margin-right: 15px;
+    &.guideCheckBox {
+      .guideFieldLabel label {
+        margin-bottom: 0;
+      }
     }
-    label {
-      margin-bottom: 0;
+    .dropDownList {
+      position: relative;
+      &:before {
+        content: "\f0dd";
+        position: absolute;
+        display: block;
+        font-size: 18px;
+        width: 15px;
+        height: 8px;
+        right: 0;
+        margin-right: 15px;
+        top: 20%;
+        transform: translateY(-20%);
+        z-index: 2;
+        color: $primary;
+        font-family: $font-family-awesome;
+      }
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 13px;
+      margin:0;
+      border: 2px solid $primary;
+      color: $primary;
+      font-weight: bold;
+      font-size: 20px;
+      background-color: transparent;
+      border-radius: 0;
+      text-transform: uppercase;
+      transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      &:after {
+        content: "\f105";
+        font-family: $font-family-awesome;
+        color: $primary;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: lighter;
+        transition: color 0.3s ease-in-out;
+      }
+      &:hover {
+        border: 2px solid $white;
+        color: $white;
+        &:after {
+          color: $white;
+        }
+      }
+    }
+    .guideFieldHorizontalAlignment {
+      padding: 10px 20px 10px 10px;
+      &,
+      * {
+        display: inline-block;
+      }
+      input[type="radio"],
+      & {
+        vertical-align: middle;
+      }
+      input[type="radio"] {
+        margin-right: 15px;
+      }
+      label {
+        margin-bottom: 0;
+      }
     }
   }
 }

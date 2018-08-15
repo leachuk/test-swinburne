@@ -444,6 +444,21 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: container-flush
     title: 'Container Flush'
 
+  grid/list/pagelist/columns/column-1:
+    flat: true
+    prefix: column-1
+    title: 'Column 1'
+
+  grid/list/pagelist/columns/column-2:
+    flat: true
+    prefix: column-2
+    title: 'Column 2'
+
+  grid/list/pagelist/columns/column-3:
+    flat: true
+    prefix: column-3
+    title: 'Column 3'
+
   # Icons
   icon/size:
     prefixes:
@@ -1098,6 +1113,11 @@ content/cq:tags/swinburne/component-style-theme:
     flat: true
     prefix: brand-footer__bottom
     title: 'Brand Footer - Bottom'
+
+  layout/form/form-container:
+    flat: true
+    prefix: theme--brand-form
+    title: 'Brand Form'
 
   # Nav list
   lists/navlist/navbar/nav:

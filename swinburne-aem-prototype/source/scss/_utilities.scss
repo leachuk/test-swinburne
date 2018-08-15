@@ -25,7 +25,7 @@
 ;
 
 .grid,
-.container:not(.my-large, .my-5) {
+.container:not(.my-large, .my-5, .guideContainerNode) {
   @include container();
 }
 

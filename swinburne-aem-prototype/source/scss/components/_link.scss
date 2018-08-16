@@ -6,6 +6,8 @@
   text-transform: uppercase;
   transition: background-color 300ms ease-in-out, border-radius 300ms ease-in-out;
   font-weight: bold;
+  white-space: normal;
+  text-align: left;
   &:not([class*="btn-outline-"]) {
     color: $white;
     &:hover {

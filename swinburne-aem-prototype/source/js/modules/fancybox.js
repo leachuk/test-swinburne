@@ -10,7 +10,7 @@ export default () => {
           afterShow: function( instance, current ) {
             let $element = $(instance.$lastFocus);
             let size_class = $element[0].className.split(' ').filter( item => item.split('fancybox-').length === 2 ).pop();
-            $('.fancybox-container .fancybox-content').addClass(size_class);
+            $('.fancybox-container').find('.fancybox-content').addClass(size_class);
           }
         });
       })

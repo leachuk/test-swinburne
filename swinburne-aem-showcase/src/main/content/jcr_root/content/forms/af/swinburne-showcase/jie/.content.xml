@@ -20,7 +20,7 @@
             guideNodeClass="guideContainerNode"
             name="guide1"
             textIsRich="true"
-            themeRef="/content/dam/formsanddocuments-themes/reference-themes/canvas-2-0"
+            themeRef="/content/dam/formsanddocuments-themes/swinburneThemeLibrary/jieTheme"
             useExistingAF="false">
             <layout
                 jcr:primaryType="nt:unstructured"

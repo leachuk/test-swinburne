@@ -30,7 +30,7 @@
 }
 
 //Overwrite nested container to prevent more sides padding.
-body > .container:not(.my-large, .my-5),
+body > .container:not(.my-large, .my-5, .header),
 .contentblock.container:not(.my-large, .my-5){
   max-width: 100% !important;
   width: 100%;

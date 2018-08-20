@@ -3,7 +3,7 @@
     jcr:primaryType="dam:Asset">
     <jcr:content
         cq:conf=""
-        jcr:lastModified="{Date}2018-08-09T17:30:26.716+10:00"
+        jcr:lastModified="{Date}2018-08-19T20:54:23.833+10:00"
         jcr:primaryType="dam:AssetContent"
         sling:resourceType="fd/fm/theme/render"
         theme="1"
@@ -13,11 +13,11 @@
             fd:version="1.1"
             jcr:primaryType="nt:unstructured"
             author="admin"
-            clientlibCategory="fdtheme.swinburne.default"
-            clientlibRef="/etc/clientlibs/swinburne/forms"
+            clientlibCategory="fdtheme.swinburneThemeLibrary.jieTheme"
+            clientlibRef="/etc/clientlibs/swinburne/forms/themes"
             formRef="/content/dam/formsanddocuments/swinburne-showcase/jie"
             hasCustomThumbnail="{Boolean}false"
-            title="default">
+            title="JIE Theme">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <smallScreen
                     jcr:primaryType="nt:unstructured"

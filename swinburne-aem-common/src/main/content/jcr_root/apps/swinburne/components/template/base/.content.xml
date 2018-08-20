@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Swinburne Base Page"
     jcr:description="Swinburne Base template"
-    sling:resourceSuperType="swinburne/components/template/base/v2"
+    sling:resourceSuperType="swinburne/components/template/base/v1/base"
     componentGroup=".hidden"/>

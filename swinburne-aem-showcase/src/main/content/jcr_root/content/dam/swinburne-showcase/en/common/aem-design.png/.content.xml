@@ -7,9 +7,7 @@
         dam:assetState="processed"
         dam:relativePath="swinburne/en/common/aem-design.png"
         dam:s7damType="Image"
-        jcr:lastModified="{Date}2017-12-13T13:42:48.776+11:00"
-        jcr:lastModifiedBy="admin"
-        jcr:primaryType="dam:AssetContent">
+          jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}32"
             dam:Comments="Software: Adobe ImageReady&#xa;"

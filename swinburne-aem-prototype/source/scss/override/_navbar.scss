@@ -5,7 +5,7 @@
 // generates for us automatically.
 
 .navbar-toggler::before {
-  @include pseudo-icon('bars', rem-calc(19px), $needs-margin: false);
+
 }
 
 .navbar {

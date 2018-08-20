@@ -1,9 +1,98 @@
-footer[component] {
-  &,
-  &.footer  {
-    padding: 40px 0;
-    background-size: cover;
-    background-position: center;
-    & > .aem-Grid {}
+
+footer[component],
+.footer[component] {
+  padding: 40px 0;
+  background-size: cover;
+  background-position: center;
+
+  &.theme--footer-brand {
+    background-color: $secondary;
+    padding: 40px 0 100px 0;
+    & > .aem-Grid {
+      @include container();
+    }
+    div[component].text {
+      &,
+      & > * {
+        color: $white;
+        display: inline-block;
+      }
+    }
+    div[component].pagelist {
+      width: 100%;
+      display: block;
+      max-width: 100%;
+      padding-left: 0;
+      margin-top: 15px;
+      ul > li {
+        display: inline-block;
+        padding: 0;
+        max-width: inherit;
+        width: auto;
+      }
+      & > .content {
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+        display:block;
+        & > li {
+          &:not(:last-of-type){
+            &:after {
+              content: "|";
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .colctrl:not([class*='col-']) {
+      max-width: 100%;
+    }
+    [class*='col-'] {
+      &:first-of-type {
+        @include media-breakpoint-down(md) {
+          text-align: center;
+        }
+        * {
+          font-size: 12px;
+          color: $primary;
+          text-transform: uppercase;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        ul > li {
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3) {
+            a  * {
+              color: $white;
+            }
+          }
+        }
+      }
+      &:last-of-type {
+        div[component].pagelist {
+          min-width: 100%;
+          .content {
+            display: flex;
+            justify-content: flex-end;
+            @include media-breakpoint-down(md) {
+              justify-content: center;
+              margin-top: 20px;
+            }
+          }
+          ul {
+            display: inline-block;
+            width: auto;
+            & > li:not(:last-of-type):after {
+              content: " ";
+            }
+          }
+        }
+      }
+    }
   }
 }
+

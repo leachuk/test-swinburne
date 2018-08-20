@@ -1,9 +1,9 @@
 .navlist {
   @include make-container;
-  background-color: theme-color('c7');
+  background-color: $white;
 
-  border-bottom: 0px;
-  border-top: 0px;
+  border-bottom: 0;
+  border-top: 0;
   padding-bottom: get-spacer(15);
   padding-top: get-spacer(15);
 
@@ -16,18 +16,18 @@
   }
 
   a {
-    color: theme-color('c3');
-    padding-bottom: rem-calc(25px);
-    font-weight: 300;
-    text-transform: uppercase;
+    color: $link-color;
+    padding-bottom: rem-calc(15px);
     display: inline-flex;
     text-decoration: none;
     position: relative;
     height: 100%;
     transition: $transition-base;
-
+    @include media-breakpoint-down(sm) {
+     margin-left: 15px;
+    }
     &::after {
-      background-color: theme-color('c3');
+      background-color: $link-color;
       bottom: 0;
       content: '';
       height: 3px;
@@ -44,8 +44,8 @@
     }
 
     &:hover {
-      color: theme-color('c3');
-
+      color: $link-color;
+      text-decoration: underline;
       &::after {
         opacity: 1;
       }
@@ -61,7 +61,6 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
-
     li:not(:first-child) {
       margin-left: map-get($spacers, 30);
     }
@@ -96,7 +95,7 @@
     &:hover {
       &::after {
         @include media-breakpoint-down(sm) {
-          background-color: theme-color('c3');
+          background-color: $link-color;
         }
       }
     }

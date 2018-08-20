@@ -51,11 +51,12 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin: 8px 0 0 -20px;
-        vertical-align: middle;
-        border-top: 5px solid transparent;
-        border-left: 10px solid $secondary;
-        border-bottom: 5px solid transparent;
+        margin: 7px 0 0 -20px;
+        width: 0;
+        height: 0;
+        transform: rotate(315deg);
+        border-bottom: 9px solid $primary;
+        border-left: 9px solid transparent;
       }
     }
   }
@@ -66,14 +67,14 @@
 }
 
 //modifiers
-.bg-c8 {
+.bg-c8:not(.card) {
   &,
   * {
     color: $white !important;
   }
 }
 
-.bg-c9  {
+.bg-c9:not(.card)  {
   &,
   * {
     color: $black !important;
@@ -95,13 +96,13 @@
 .text-red {
   &,
   * {
-    color: $secondary !important;
+    color: $primary !important;
   }
 }
 .text-black {
   &,
   * {
-    color: $primary !important;
+    color: $secondary !important;
   }
 }
 .text-white {

@@ -29,47 +29,53 @@
                 <contentblock1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock1"
                     title="Variant: Default"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <footer
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/footer"/>
-                    </par>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                </contentblock1>
-                <contentblock2
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <footer
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/footer"
-                            cancelInheritParent="false"/>
+                            componentId="footer1"/>
+                    </par>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/media/image"/>
+                </contentblock1>
+                <contentblock2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock2">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <footer
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/footer"
+                            cancelInheritParent="false"
+                            componentId="footer2"/>
                     </par>
                 </contentblock2>
                 <contentblock3
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock">
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock3">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <footer
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/footer"
-                            cancelInheritParent="false">
+                            cancelInheritParent="false"
+                            componentId="footer3">
                             <bgimage
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/components/media/image"/>
                         </footer>
                     </par>
                 </contentblock3>
@@ -78,13 +84,14 @@
         <footer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
-            cancelInheritParent="false">
+            cancelInheritParent="false"
+            componentId="footer4">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
             <bgimage
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="aemdesign/components/media/image"/>
+                sling:resourceType="swinburne/components/media/image"/>
         </footer>
     </jcr:content>
 </jcr:root>

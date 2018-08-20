@@ -2,16 +2,15 @@
 <workspaceFilter version="1.0">
     <filter root="/apps/swinburne/config"/>
 
-
     <!-- cloud services -->
-    <filter root="/etc/cloudservices/addthisconnect" mode="update"/>
-    <filter root="/etc/cloudservices/googleanalytics" mode="update"/>
+    <!--<filter root="/etc/cloudservices/addthisconnect" mode="update"/>-->
+    <!--<filter root="/etc/cloudservices/googleanalytics" mode="update"/>-->
 
     <!-- dam config -->
-    <filter root="/etc/dam/dynamicmediaconfig" mode="update"/>
+    <!--<filter root="/etc/dam/dynamicmediaconfig" mode="update"/>-->
 
     <!-- langiage config -->
-    <filter root="/etc/languages" mode="update"/>
+    <!--<filter root="/etc/languages" mode="update"/>-->
 
     <!-- maping rules -->
     <filter root="/etc/map/http/" mode="update"/>
@@ -19,9 +18,9 @@
 
     <filter root="/etc/tenants/swinburne" mode="update"/>
 
-    <filter root="/conf/swinburne/settings/cloudconfigs" mode="update"/>
+    <!--<filter root="/conf/swinburne/settings/cloudconfigs" mode="update"/>-->
 
-    <filter root="/apps/granite/operations/config/maintenance">
-        <include pattern="/apps/granite/operations/config/maintenance/swinburne-.*"/>
-    </filter>
+    <!--<filter root="/apps/granite/operations/config/maintenance">-->
+        <!--<include pattern="/apps/granite/operations/config/maintenance/swinburne-.*"/>-->
+    <!--</filter>-->
 </workspaceFilter>

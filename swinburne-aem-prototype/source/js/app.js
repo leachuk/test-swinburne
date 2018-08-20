@@ -5,10 +5,12 @@ import '../scss/app.scss'
 // Core modules...
 import Carousels from './modules/carousel'
 import HashLinks from './modules/hash-links'
-import Header from './modules/header'
+import ParallaxImage from './modules/parallaximage'
 import LoadMore from './modules/load-more'
 import Renderers from './modules/renderers'
 import Subscribers from './modules/subscribers'
+import NavToggler from './modules/navtoggler'
+import FancyBox from './modules/fancybox'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -47,10 +49,14 @@ $(() => {
   Subscribers()
 
   // Brand header
-  Header()
+  ParallaxImage()
 
   // Take over any hash links on the page so they correctly jump to the content
   HashLinks()
+
+  NavToggler();
+
+  FancyBox();
 
   // 'object-fit' polyfill for unsupported browsers
   /* global objectFitImages */

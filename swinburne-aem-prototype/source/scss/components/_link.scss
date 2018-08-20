@@ -1,4 +1,4 @@
-.btn[component] {
+.btn {
   font-size: 16px;
   display: inline-block;
   border: 0;
@@ -6,6 +6,8 @@
   text-transform: uppercase;
   transition: background-color 300ms ease-in-out, border-radius 300ms ease-in-out;
   font-weight: bold;
+  white-space: normal;
+  text-align: left;
   &:not([class*="btn-outline-"]) {
     color: $white;
     &:hover {
@@ -29,17 +31,17 @@
 }
 
 //Modifiers
-.btn-secondary[component] {
+.btn-secondary {
   background-color: $secondary;
   &:hover {
-    background-color: lighten($secondary, 10%);
+    background-color: lighten($secondary, 25%);
   }
 }
 
-.btn-primary[component] {
+.btn-primary {
   background-color: $primary;
   &:hover {
-    background-color: lighten($primary, 25%);
+    background-color: lighten($primary, 10%);
   }
 }
 
@@ -71,7 +73,7 @@
     font-weight: 700;
     font-size: 45px;
     & > * {
-      color: $secondary;
+      color: $primary;
     }
   }
 }

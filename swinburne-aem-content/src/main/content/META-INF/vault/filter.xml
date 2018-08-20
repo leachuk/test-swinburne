@@ -2,6 +2,7 @@
 <workspaceFilter version="1.0">
 
     <filter root="/content/dam/swinburne"/>
+    <filter root="/content/dam/formsanddocuments-themes"/>
     <filter root="/content/swinburne"/>
 
     <filter root="/content/api/swinburne" mode="update"/>

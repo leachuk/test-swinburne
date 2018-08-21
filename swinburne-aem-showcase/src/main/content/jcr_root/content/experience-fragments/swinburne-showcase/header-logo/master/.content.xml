@@ -7,7 +7,7 @@
             cq:xfMasterVariation="{Boolean}true"
             jcr:primaryType="cq:PageContent"
             jcr:title="Header Logo"
-            sling:resourceType="swinburne/components/template/base">
+            sling:resourceType="swinburne/components/template/experience-fragments/base/v1/xfpage">
         <article
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/article"

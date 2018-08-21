@@ -121,6 +121,58 @@
                     </par>
                 </contentblock5>
 
+
+                <contentblock6
+                        jcr:primaryType="nt:unstructured"
+                        title="Link: Default with Analytics"
+                        hideTitle="false"
+                        componentId="contentblock6"
+                        variant="advsection"
+                        sling:resourceType="swinburne/components/layout/contentblock">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                        <link
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/link"
+                                componentId="link6"
+                                hitType="event"
+                                linkTarget="_blank"
+                                componentModifiers="[swinburne:component-style-modifier/button]"
+                                analyticsEventType="site interaction"
+                                analyticsLinkDescription="link description"
+                                analyticsLinkLocation="link page"
+                                analyticsLinkType="link"
+                                linkUrl="/content/swinburne-showcase/en/component/content/link"/>
+                    </par>
+                </contentblock6>
+
+                <contentblock7
+                        jcr:primaryType="nt:unstructured"
+                        title="Link: Button with Analytics"
+                        hideTitle="false"
+                        componentId="contentblock7"
+                        variant="advsection"
+                        sling:resourceType="swinburne/components/layout/contentblock">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                        <link
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/link"
+                                componentId="link7"
+                                hitType="event"
+                                linkTarget="_blank"
+                                variant="button"
+                                componentModifiers="[swinburne:component-style-modifier/button]"
+                                analyticsEventType="site interaction"
+                                analyticsLinkDescription="link description"
+                                analyticsLinkLocation="link page"
+                                analyticsLinkType="button"
+                                linkUrl="/content/swinburne-showcase/en/component/content/link"/>
+                    </par>
+                </contentblock7>
+
             </par>
         </article>
     </jcr:content>

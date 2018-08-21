@@ -8,10 +8,16 @@ header[component],
   &.theme--header-swinburne {
     &.container {
       @include container();
+      padding-left: 15px !important;
+      padding-right: 15px !important;
       @media (max-width: 1399px) {
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
+    }
+    .container {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
     div[component].parsys {
       float: left;

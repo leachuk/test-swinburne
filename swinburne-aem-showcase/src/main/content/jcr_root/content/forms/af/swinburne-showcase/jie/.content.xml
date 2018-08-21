@@ -132,7 +132,6 @@
                                 jcr:primaryType="nt:unstructured"
                                 jcr:title="Telephone *"
                                 sling:resourceType="fd/af/components/guidetelephone"
-                                autocomplete="true"
                                 autofillFieldKeyword="tel"
                                 displayPatternType="text{X99999999999999}"
                                 displayPictureClause="text{X99999999999999}"

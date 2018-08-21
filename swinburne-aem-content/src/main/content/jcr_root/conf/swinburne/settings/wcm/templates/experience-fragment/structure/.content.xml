@@ -5,7 +5,7 @@
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:template="/conf/swinburne/settings/wcm/templates/experience-fragment"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="swinburne/components/template/experience-fragments/base">
+        sling:resourceType="swinburne/components/template/experience-fragments/base/v1/xfpage">
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"

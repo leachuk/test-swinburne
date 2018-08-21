@@ -21,7 +21,7 @@ class FooterScreenshotSpec extends ComponentSpec {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#plainfooter"
+        def selector = "#footer1"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

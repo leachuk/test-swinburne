@@ -3,7 +3,7 @@
       "componentId": "contentblock1",
       "componentTheme": "theme--contentblock-banner",
       "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/juggling.jpg)\"",
-      "text": "Juggling life and uni?",
+      "text": "<h2>Juggling life and uni?</h2>",
       "linkHref": "http://google.com",
       "linkText": "tell me how"
   },
@@ -12,8 +12,16 @@
     "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/work-experience.jpg\")",
     "componentTheme": "theme--contentblock-banner",
     "linkHref": "http://google.com",
-    "linkText": "tell me more",
-    "text": "REAL WORK AS YOU STUDY"
+    "text": "<h2>tell me more</h2>",
+    "linkText": "REAL WORK AS YOU STUDY"
+  },
+  "contentblock3": {
+    "componentId": "contentblock3",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/apply-now.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "linkHref": "http://google.com",
+    "text": "<h2>Ready to apply</h2>",
+    "linkText": "LET'S DO THIS!"
   },
   "contentblock5": {
     "componentId": "contentblock5",
@@ -30,5 +38,44 @@
     "linkHref": "",
     "linkText": "",
     "text": "Content block container"
+  },
+  "contentblock7": {
+    "componentId": "contentblock7",
+    "componentStyle": "",
+    "componentTheme": "",
+    "componentModule": "parallaximage",
+    "linkHref": "https://www.google.com",
+    "linkText": "",
+    "text": ""
+  },
+  "contentblock8": {
+    "componentId": "contentblock8",
+    "componentModifier": "bg-c10",
+    "componentTheme": "",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": ""
+  },
+  "contentblock9": {
+    "componentId": "contentblock9",
+    "componentModifier": "bg-c10 theme--contentblock-carousel",
+    "componentTheme": "",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": "<h2>Go your own way</h2>"
+  },
+  "contentblock10": {
+    "componentId": "contentblock10",
+    "componentModifier": "bg-c10",
+    "componentTheme": "theme--contentblock-form",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "formTheme": "theme--brand-form",
+    "src": "../../images/form.png",
+    "alt": "Form",
+    "text": "<h1>SWINBURNE <span style=\"color:#eb1d25\">INFO EVENING</span></h1><p>Attend the Swinburne Info Evening to learn about the range of postgrad programs, master and bachelor degrees, and pathways that can take you where you want to go.</p><p>Chat with academics about the courses that are right for you and just where they can lead. You’ll leave feeling cool, calm and confident about your future.</p><p>To register, just drop your details in here.</p>"
   }
 }

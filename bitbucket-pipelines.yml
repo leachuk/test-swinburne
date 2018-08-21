@@ -1,0 +1,104 @@
+image: aemdesign/centos-java-buildpack:latest
+
+clone:
+  lfs: true
+
+pipelines:
+  default:
+    - step:
+        name: package
+        caches:
+          - maven # adds docker layer caching
+          - node
+        script:
+          - echo $PATH
+          - ls -latr /apps/maven/bin
+          - export PATH=/apps/maven/bin:${PATH}
+          - export PATH=/usr/lib/node_modules/yarn/bin:${PATH}
+          - echo $PATH
+          - which mvn
+          - which yarn
+          - which node
+          - mvn -version
+          - yarn --version
+          - npm --version
+  branches:
+    master:
+      - step:
+          name: package
+          caches:
+            - maven # adds docker layer caching
+            - node
+          script:
+            - git checkout master
+            - git reset --hard "origin/master"
+            - git submodule sync
+            - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
+            - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+  #          - git config --global user.email "$email"
+  #          - git config --global user.name "$name
+  #          - mvn -batch-mode release:prepare -Dusername=$USERNAME -Dpassword=$PASSWORD -DscmCommentPrefix="[skip ci]"
+  #          - mvn release:perform -Dgoals=install
+          artifacts:
+            - swinburne-aem-deploy/target/*.zip
+            - swinburne-testing/target/**
+    develop:
+      - step:
+          name: package
+          caches:
+            - maven # adds docker layer caching
+            - node
+            - git-modules
+          script:
+            - git checkout develop
+            - git reset --hard "origin/develop"
+            - git submodule sync
+            - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
+            - git submodule foreach "git lfs pull"
+            - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+          artifacts:
+            - swinburne-aem-deploy/target/*.zip
+            - swinburne-testing/target/**
+
+      - step:
+          name: install to dev
+          trigger: manual
+          deployment: test
+          script:
+            - mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=$DEV_AUTHOR_HOST -Dcrx.port=$DEV_AUTHOR_PORT -Dcrx.username=$DEV_AUTHOR_USER -Dcrx.password=$DEV_AUTHOR_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+            - mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=$DEV_PUBLISH1_HOST -Dcrx.port=$DEV_PUBLISH1_PORT -Dcrx.username=$DEV_PUBLISH1_USER -Dcrx.password=$DEV_PUBLISH1_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+
+    test:
+      - step:
+          name: package
+          caches:
+            - maven # adds docker layer caching
+            - node
+            - git-modules
+          script:
+            - git checkout test
+            - git reset --hard "origin/test"
+            - git submodule sync
+            - git submodule update --remote --init && echo "OK - git submodule update --remote --init"
+            - git submodule foreach "git lfs pull"
+            - mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+          artifacts:
+            - swinburne-aem-deploy/target/*.zip
+            - swinburne-testing/target/**
+
+      - step:
+          name: install to test
+          trigger: manual
+          deployment: test
+          script:
+            - mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=$TEST_AUTHOR_HOST -Dcrx.port=$TEST_AUTHOR_PORT -Dcrx.username=$TEST_AUTHOR_USER -Dcrx.password=$TEST_AUTHOR_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+            - mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=$TEST_PUBLISH1_HOST -Dcrx.port=$TEST_PUBLISH1_PORT -Dcrx.username=$TEST_PUBLISH1_USER -Dcrx.password=$TEST_PUBLISH1_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+            - mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=$TEST_PUBLISH2_HOST -Dcrx.port=$TEST_PUBLISH2_PORT -Dcrx.username=$TEST_PUBLISH2_USER -Dcrx.password=$TEST_PUBLISH2_USER_PASSWORD -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+
+
+definitions:
+  services:
+    docker:
+      memory: 2048
+  caches:
+    git-modules: .git/modules

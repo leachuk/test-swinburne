@@ -1,0 +1,14 @@
+<div {{> components-componentAttributes( componentName: "contentblock",
+                                         componentId: "{{{ id }}}",
+                                         componentModifier: "{{{ modifier }}}",
+                                         componentChevron: "{{{ chevron }}}",
+                                         componentIcon: "{{{ icon }}}",
+                                         componentStyle: "{{{ style }}}") }}>
+  <div class="container">
+    <div class="aem-Grid">
+      {{> components-text.default( text: "{{{ text }}}") }}
+      {{> components-pagelist.carousel( modules: " {{{ modules }}}", theme: "{{{ theme }}}" ) }}
+      </div>
+    </div>
+  </div>
+</div>

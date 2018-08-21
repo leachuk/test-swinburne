@@ -19,7 +19,7 @@ class LinkPublishSpec extends ComponentSpec {
     @Unroll("Functionality of Component Variant: Default in #viewport.label")
     def "Functionality of Component Variant: Default"() {
 
-        given: 'The page hierarchy is created as "Components" > "Content" > "Link"'
+        given: 'Page hierarchy is created as "Components" > "Content" > "Link"'
         def selector = "#link1"
 
         when: "I am on the component showcase page"
@@ -29,13 +29,9 @@ class LinkPublishSpec extends ComponentSpec {
         then: "The component should be on the page"
         def component = waitForComponent(selector)
 
-        and: "Should have sample component text"
+        and: "Should have sample component link"
         assert $(selector).text().trim() == "Link: Default"
-        report("Should have sample component text")
-
-        and: "Should have video-play module tag"
-        assert $(selector).attr("data-modules") == "play-video"
-        report("Should have sample component text")
+        report("Should have sample component link")
 
         where:
         viewport << getViewPorts()
@@ -44,7 +40,7 @@ class LinkPublishSpec extends ComponentSpec {
     @Unroll("Functionality of Component Variant: Button in #viewport.label")
     def "Functionality of Component Variant: Button"() {
 
-        given: 'The page hierarchy is created as "Components" > "Content" > "Link"'
+        given: 'Page hierarchy is created as "Components" > "Content" > "Link"'
         def selector = "#link2"
 
         when: "I am on the component showcase page"
@@ -54,9 +50,9 @@ class LinkPublishSpec extends ComponentSpec {
         then: "The component should be on the page"
         def component = waitForComponent(selector)
 
-        and: "Should have sample component text"
+        and: "Should have sample component link"
         assert $(selector).text().trim() == "Link: Button"
-        report("Should have sample component text")
+        report("Should have sample component link")
 
         where:
         viewport << getViewPorts()
@@ -75,9 +71,9 @@ class LinkPublishSpec extends ComponentSpec {
         then: "The component should be on the page"
         def component = waitForComponent(selector)
 
-        and: "Should have sample component text"
+        and: "Should have sample component link"
         assert $(selector).text().trim() == "Link"
-        report("Should have sample component text")
+        report("Should have sample component link")
 
         where:
         viewport << getViewPorts()

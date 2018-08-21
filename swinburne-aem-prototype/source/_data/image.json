@@ -16,5 +16,20 @@
       "componentChevron": "",
       "componentIcon": ""
     }
+  },
+  "image1": {
+    "componentId": "image2",
+    "componentTheme": "theme--image-headerlogo",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "src": "https://www.swinburne.edu.au/infoevening/_assets/textures/logo.png",
+    "src1": "",
+    "src2": "",
+    "src3": "",
+    "src4": "",
+    "alt": "Swinburne",
+    "title": "Swinburne"
   }
 }

@@ -71,6 +71,8 @@ content/cq:tags/swinburne/component-style-modifier:
       - c7
       - c8
       - c9
+      - c10
+      - c11
     startWith: text-
     title: 'Text Colour - %%prefix_normalised%%'
 
@@ -169,6 +171,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - secondary
       - success
       - warning
+      - icon
     valueFormat: btn btn-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -216,6 +219,22 @@ content/cq:tags/swinburne/component-style-modifier:
     flat: true
     prefix: disabled
     title: 'Disabled'
+
+  ## Modal size
+  modal/size/small:
+    flat: true
+    prefix: fancybox-sm
+    title: 'Small'
+
+  modal/size/medium:
+    flat: true
+    prefix: fancybox-md
+    title: 'Medium'
+
+  modal/size/large:
+    flat: true
+    prefix: fancybox-lg
+    title: 'Large'
 
   # Cards
   card:
@@ -396,13 +415,23 @@ content/cq:tags/swinburne/component-style-modifier:
 
   font/font-weight-bold:
     flat: true
-    prefix: fw-500
+    prefix: fw-600
     title: 'Font Weight (Bold)'
 
   font/font-weight-bolder:
     flat: true
-    prefix: fw-600
+    prefix: fw-700
     title: 'Font Weight (Bolder)'
+
+  font/font-brush-up:
+    flat: true
+    prefix: f-brush-up
+    title: 'Font Family (Brush up)'
+
+  font/font-open-sans:
+    flat: true
+    prefix: f-open-sans
+    title: 'Font Family (Open sans)'
 
   # Grid
   grid/container:
@@ -414,6 +443,21 @@ content/cq:tags/swinburne/component-style-modifier:
     flat: true
     prefix: container-flush
     title: 'Container Flush'
+
+  grid/list/pagelist/columns/column-1:
+    flat: true
+    prefix: column-1
+    title: 'Column 1'
+
+  grid/list/pagelist/columns/column-2:
+    flat: true
+    prefix: column-2
+    title: 'Column 2'
+
+  grid/list/pagelist/columns/column-3:
+    flat: true
+    prefix: column-3
+    title: 'Column 3'
 
   # Icons
   icon/size:
@@ -640,6 +684,16 @@ content/cq:tags/swinburne/component-style-module:
     prefix: play-video
     title: 'Play Popup Video'
 
+  layout/contentblock/parallaximage:
+    flat: true
+    prefix: parallaximage
+    title: 'Parallax Image'
+
+  layout/button/navtoggler:
+    flat: true
+    prefix: navtoggler
+    title: 'Nav Toggler (button)'
+
   # Search widget
   widgets/search/global-search:
     flat: true
@@ -851,13 +905,16 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: '${title}<span class="subtitle">${subtitle}</span>'
     title: 'Including Subtitle'
 
+  layout/page-details:
+    prefix: theme--pagedetail-brand
+    title: 'Page Details - theme--pagedetail-brand'
+
   # Content Block
   layout/contentblock:
     prefixes:
-      - alert
-      - hero
-      - pull-quote
       - banner
+      - carousel
+      - form
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 
@@ -976,6 +1033,11 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: theme--image-caption
     title: 'Captioned Image'
 
+  media/image/headerlogo:
+    flat: true
+    prefix: theme--image-headerlogo
+    title: 'Header Logo'
+
   media/image/pull:
     prefixes:
       - left
@@ -997,14 +1059,14 @@ content/cq:tags/swinburne/component-style-theme:
   # Footer
   layout/brand-footer:
     flat: true
-    prefix: brand-footer
+    prefix: theme--footer-brand
     title: 'Brand Footer'
 
   # Header
   layout/header/fixed-top:
     flat: true
-    prefix: brand-header fixed-top
-    title: 'Brand Header - Fixed Top'
+    prefix: theme--header-swinburne
+    title: 'Brand Header Default'
 
   # Content Block
   layout/contentblock/header/brand-top:
@@ -1052,6 +1114,11 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: brand-footer__bottom
     title: 'Brand Footer - Bottom'
 
+  layout/form/form-container:
+    flat: true
+    prefix: theme--brand-form
+    title: 'Brand Form'
+
   # Nav list
   lists/navlist/navbar/nav:
     flat: true
@@ -1071,6 +1138,22 @@ content/cq:tags/swinburne/component-style-theme:
     flat: true
     prefix: navbar-expand-lg navbar-light bg-white
     title: 'Header Nav'
+
+
+  lists/navlist/socialnav:
+     flat: true
+     prefix: theme--list-social
+     title: 'Social Nav'
+
+  lists/cardslist/cardsnav:
+     flat: true
+     prefix: theme--list-card
+     title: 'Cards Nav'
+
+  lists/cardslist/images:
+     flat: true
+     prefix: theme--list-images
+     title: 'Image List'
 
   # Colctrl
   layout/colctrl/flush:
@@ -1180,26 +1263,61 @@ content/cq:tags/swinburne/component-style-theme:
     valueFormat: '%%prefix%%;colctrl-%%prefix%%c'
     title: '%%prefix_normalised%% Column'
 
-  # WARNING: Reference to these path is hardcoded into component dialogs
-  #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
-  layout/colctrl/layout/col2-3-9:
+# WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-mdlg-3-9:
     flat: true
-    prefix: '2;col-md-,3,9'
-    title: '2 Column - 3 | 9'
+    prefix: '2;col-md-,3,9;col-lg-,3,9'
+    title: '2 Column (md+lg) - 3 | 9'
 
-  # WARNING: Reference to these path is hardcoded into component dialogs
-  #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
-  layout/colctrl/layout/col5-2-3-2-3-2:
+# WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-lg-9-3:
     flat: true
-    prefix: '5;col-md-,2,3,2,3,2'
-    title: '5 Column - 2 | 3 | 2 | 3 | 2'
+    prefix: '2;col-lg-,9,3'
+    title: '2 Column (lg) - 9 | 3'
 
-  # WARNING: Reference to these path is hardcoded into component dialogs
+ # WARNING: Reference to these path is hardcoded into component dialogs
   #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
-  layout/colctrl/layout/col8-centered:
+  layout/colctrl/layout/col2-lg-6-6:
     flat: true
-    prefix: 'col-md-8 mx-md-auto'
-    title: '8 Column - Centered'
+    prefix: '2;col-lg-,6,6'
+    title: '2 Column (lg) - 6 | 6'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-8-4:
+    flat: true
+    prefix: '2;col-md-,8,4'
+    title: '2 Column - 8 | 4'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-lg-4-7:
+    flat: true
+    prefix: '2;col-lg-,4,7;col-xl-,3,8'
+    title: '2 Column (Large - 4 | 7, XLarge - 3 | 8)'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col1-mdlg-10-xl-8:
+    flat: true
+    prefix: '1;col-md-,10;col-lg-,10;col-xl-,8'
+    title: '1 Column (Medium - 10, Large 10, XLarge - 8)'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col1-mdlg-10-xl-6:
+    flat: true
+    prefix: '1;col-md-,10;col-lg-,10;col-xl-,6'
+    title: '1 Column (Medium - 10, Large - 10, XLarge - 6)'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col1-md-8-offset-lg-10-offest-xl-6-offest:
+    flat: true
+    prefix: '1;col-md-,8;offset-md-,2;col-lg-,10;offset-lg-,1;col-xl-,6;offset-xl-,3'
+    title: '1 Column (Medium - 8 + offset 2, Large - 10 + offset 1, XLarge - 6 + offset 3)'
 
 
   # Widgets
@@ -1221,13 +1339,10 @@ content/cq:tags/swinburne/component-style-icon:
 
   social:
     prefixes:
-      - vimeo
       - youtube
       - facebook-f
-      - github
       - pinterest-p
       - twitter
-      - weibo
       - instagram
       - linkedin-in
     valueFormat: fa fa-%%prefix%%
@@ -1256,6 +1371,41 @@ content/cq:tags/swinburne/component-style-icon:
       - book
       - reply-all
       - life-ring
+      - calculator
+      - calendar-alt
+      - envelope
+      - star
+      - car
+      - street-view
+      - globe
+      - train
+      - play-circle
+      - user
+      - users
+      - users-class
+      - user-graduate
+      - balance-scale
+      - building
+      - chalkboard-teacher
+      - child
+      - comment-alt-exclamation
+      - comment-alt-smile
+      - comment-alt-check
+      - comment-alt-dots
+      - comments-alt
+      - info-circle
+      - laptop
+      - location-circle
+      - map-pin
+      - plane-arrival
+      - plane-departure
+      - thumbs-up
+      - thumbs-down
+      - trophy
+      - wheelchair
+      - star
+      - school
+      - paper-plane
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -1286,6 +1436,13 @@ content/cq:tags/swinburne/component-analytics:
       - social
       - timing
       - transaction
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  pagetype:
+    prefixes:
+    - common
+    - marketing
     valueFormat: '%%prefix%%'
     title: '%%prefix_normalised%%'
 
@@ -1513,17 +1670,19 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
   styles/styles:
     template: 'text-rtePlugins-styles-styles'
     contents:
-      - textC1: { cssName: 'text-c1', text: "Colour C1 (#85C441)" }
-      - textC2: { cssName: 'text-c2', text: "Colour C2 (#00AEEF)" }
-      - textC3: { cssName: 'text-c3', text: "Colour C3 (#00BED8)" }
-      - textC4: { cssName: 'text-c4', text: "Colour C4 (#FCB945)" }
-      - textC5: { cssName: 'text-c5', text: "Colour C5 (#883681)" }
-      - textC6: { cssName: 'text-c6', text: "Colour C6 (#808285)" }
-      - textC7: { cssName: 'text-c7', text: "Colour C7 (#DC2D27)" }
-      - textC8: { cssName: 'text-c8', text: "Colour C8 (#000000)" }
-      - textC9: { cssName: 'text-c9', text: "Colour C9 (#ffffff)" }
-      - textRed: { cssName: 'text-red', text: "Text Colour Secondary" }
-      - textBlack: { cssName: 'text-black', text: "Text Colour Primary" }
+      - textC1: { cssName: 'text-c1', text: "Colour C1 (Green)" }
+      - textC2: { cssName: 'text-c2', text: "Colour C2 (Blue)" }
+      - textC3: { cssName: 'text-c3', text: "Colour C3 (Turquoise)" }
+      - textC4: { cssName: 'text-c4', text: "Colour C4 (Gold)" }
+      - textC5: { cssName: 'text-c5', text: "Colour C5 (Purple)" }
+      - textC6: { cssName: 'text-c6', text: "Colour C6 (Grey)" }
+      - textC7: { cssName: 'text-c7', text: "Colour C7 (Swinburne Red)" }
+      - textC8: { cssName: 'text-c8', text: "Colour C8 (Black)" }
+      - textC9: { cssName: 'text-c9', text: "Colour C9 (White)" }
+      - textC10: { cssName: 'text-c10', text: "Colour C10 (Dark Grey)" }
+      - textC11: { cssName: 'text-c11', text: "Colour C11 (Light Grey)" }
+      - textRed: { cssName: 'text-red', text: "Text Colour Primary" }
+      - textBlack: { cssName: 'text-black', text: "Text Colour Secondary" }
       - textWhite: { cssName: 'text-white', text: "Text Colour White" }
       - textQuoteSuffix: { cssName: 'text-quote-suffix', text: "Quote Suffix" }
       - fontWeight300: { cssName: 'fw-300', text: "Font Weight (Light)" }
@@ -1548,3 +1707,5 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_h5: { description: 'Heading 5', tag: "h5" }
       - default_h6: { description: 'Heading 6', tag: "h6" }
       - default_blockquote: { description: 'Quote', tag: "blockquote" }
+      - default_small: { description: 'Small', tag: "small" }
+      - default_emphasis: { description: 'Emphasis', tag: "em" }

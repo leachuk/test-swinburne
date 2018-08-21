@@ -1,17 +1,29 @@
 #!/bin/bash
 
-function set_term_title() {
-   echo -en "\033]0;$1\a"
-}
+POM_FILE="../pom.xml"
+SCRIPT_PARAMS="$@"
 
-set_term_title "Deploying Project"
-#mvn -DskipTests clean install -P autoCleanInstallPackage
-#mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallBundle,autoInstallPackage,autoInstallPackagePublish
-#mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallBundle,autoInstallPackage
+source "../scripts/functions-debug.sh"
+source "../scripts/functions-maven.sh"
+source "../scripts/functions-curl.sh"
 
-#mvn -Dvault.useProxy=false -DskipTests clean -P turnoffdamworkflow
-mvn -Dvault.useProxy=false -DskipTests install -P autoInstallPackage
-#mvn -Dvault.useProxy=false -DskipTests clean -P turnondamworkflow
+
+set_term_title "Turn-off Workflows"
+echo "- Workflows Turn-off"
+doWorkflowsTurnOff
+
+
+set_term_title "Deploying Monolith Package: mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallPackage "$@""
+echo "- Deploy"
+mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallPackage "$@"
+set_term_title "Deployed"
+
+
+set_term_title "Turn-on Workflows"
+echo "- Workflows Turn-on "
+doWorkflowsTurnOn
+
 
 set_term_title "Deployed"
+echo "- Deployed"
 

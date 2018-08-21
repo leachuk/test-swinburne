@@ -5,7 +5,7 @@
         cq:tags="[]"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Pages configured to be used as cards"
+        jcr:title="Pages - plain pages"
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"

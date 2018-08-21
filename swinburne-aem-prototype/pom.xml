@@ -68,7 +68,7 @@
                 </goals>
                 <configuration>
                   <targetURL>${package.uploadProtocol}://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
-                  <username>${crx.username}</username>
+                  <userId>${crx.username}</userId>
                   <password>${crx.password}</password>
                 </configuration>
               </execution>
@@ -128,7 +128,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>run aem:build</arguments>
+              <arguments>run aem:build --env.clientLibsFolder=${package.clientLibsFolder}</arguments>
             </configuration>
           </execution>
           <execution>
@@ -183,6 +183,25 @@
                   <directory>public/css</directory>
                   <includes>
                     <include>app.css</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-css-vault-resources-forms</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/forms/default/css</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/css</directory>
+                  <includes>
+                    <include>theme.css</include>
                   </includes>
                 </resource>
               </resources>

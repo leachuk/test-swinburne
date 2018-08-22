@@ -32,7 +32,9 @@ input,select,textarea,.guideScribble img,.afTermsAndConditions {
     background:#ffffff;
     margin-bottom: 1.0625rem;
 }
-
+.mobileLayout {
+    display: none !important;
+}
 .guidePanelDescription,
 label {
     margin-bottom: .35em;
@@ -117,7 +119,6 @@ input[type="radio"] {
     right: 0;
     margin-right: 15px;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 2;
     color: #DC2D27;
     transform: rotate(45deg);
@@ -138,6 +139,14 @@ input[type="radio"] {
         margin-top: -14px;
     }
 }
-.mobileLayout {
-    display: none;
+@media (min-width: 992px) {
+    .container {
+        width: 605px;
+        margin: 0;
+    }
+}
+@media (max-width: 639px) {
+    .headerText p {
+        font-size: 48px;
+    }
 }

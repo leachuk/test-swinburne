@@ -108,7 +108,6 @@ button[type="submit"]:hover > span:last-child:after {
 }
 button[type="submit"]:hover {
     border: 2px solid #fff;
-    border: 0.125rem solid #fff;
     color: #fff;
 }
 .headerText p {

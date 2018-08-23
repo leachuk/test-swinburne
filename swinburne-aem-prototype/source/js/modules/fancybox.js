@@ -8,8 +8,8 @@ export default () => {
 
         $('[data-fancybox]').fancybox({
           afterShow: function( instance, current ) {
-            let $element = $(instance.$lastFocus);
-            let size_class = $element[0].className.split(' ').filter( item => item.split('fancybox-').length === 2 ).pop();
+            let $element = $(this.opts.$orig[0]);
+            let size_class = $element.attr('class').split(' ').filter( item => item.split('fancybox-').length === 2 ).pop();
             $('.fancybox-container').find('.fancybox-content').addClass(size_class);
           }
         });

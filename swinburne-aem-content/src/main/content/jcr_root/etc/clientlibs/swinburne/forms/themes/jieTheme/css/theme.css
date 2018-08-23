@@ -63,23 +63,23 @@ label {
     margin: 10px 0;
 }
 .guideRadioButtonItem {
-    margin-right: 20px;
+	margin-right: 20px;
 }
 .guideFieldNode p {
-    font-size: 20px;
+	font-size: 20px;
     margin-bottom: 5px;
     margin-top: 0;
 }
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
     appearance: none;
 }
 .afEditorPlaceholder {
-    display: none;
+ 	display: none;
 }
 .col-md-6 select {
-    margin-top: -6px;
+	margin-top: -6px;
 }
 button[type="submit"] {
     width: 100%;
@@ -95,7 +95,7 @@ button[type="submit"] {
     transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 button[type="submit"] > span:last-child:after {
-    content: ">";
+	content: ">";
     display: inline-block;
     color: #DC2D27;
     font-size: 16px;
@@ -104,11 +104,10 @@ button[type="submit"] > span:last-child:after {
     transition: color 0.3s ease-in-out
 }
 button[type="submit"]:hover > span:last-child:after {
-    color: #ffffff;
+	color: #ffffff;
 }
 button[type="submit"]:hover {
     border: 2px solid #fff;
-    border: 0.125rem solid #fff;
     color: #fff;
 }
 .headerText p {
@@ -118,8 +117,8 @@ button[type="submit"]:hover {
     margin-bottom: 1.5625rem;
 }
 input[type="radio"] {
-    width: 14px;
-    padding: 0;
+     width: 14px;
+     padding: 0;
 }
 .guideFieldNode .dropDownList:before {
     content: " ";
@@ -151,14 +150,24 @@ input[type="radio"] {
         margin-top: -14px;
     }
 }
+
 @media (min-width: 992px) {
     .container {
         width: 605px;
         margin: 0;
+    }
+    .col-md-6:first-child {
+        width: 33.33333333%;
+    }
+    .col-md-6:last-child {
+        width: 66.66666667%;
     }
 }
 @media (max-width: 639px) {
     .headerText p {
         font-size: 48px;
     }
+}
+.mobileLayout {
+	display: none;
 }

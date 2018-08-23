@@ -35,9 +35,8 @@ title: Footer 2 Columns template.
  * none
 5. Icon
  * none
-6. Attributes
- * Swinburne : Component Style Theme / Layout / Colctrl / Column / Large / 9 Columns
- * Swinburne : Component Style Theme / Layout / Colctrl / Column / Large / 3 Columns
+6. Column Layout
+ * 2 Column (lg) - 9 | 3
  
 ### 2. Page List
 #### Overview 

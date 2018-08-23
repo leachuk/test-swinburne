@@ -11,7 +11,11 @@ body{
     font-weight:normal;
     margin: 0;
 }
-input,select,textarea,.guideScribble img,.afTermsAndConditions {
+input:not([type="radio"]),
+select,
+textarea,
+.guideScribble img,
+.afTermsAndConditions {
     border-style:solid;
     border-top-width:1px;
     border-left-width:1px;
@@ -47,8 +51,16 @@ label {
 .guideRadioButtonItem .guideWidgetLabel {
     display: inline-block;
     vertical-align: top;
-    margin-top: 5px;
+    margin-bottom: 0px;
     margin-left: 15px;
+}
+.guideRadioButtonItem .guideWidgetLabel label {
+	line-height: 16px;
+    margin-top: 2px;
+    display: block;
+}
+.guideRadioButtonGroupItems {
+    margin: 10px 0;
 }
 .guideRadioButtonItem {
     margin-right: 20px;

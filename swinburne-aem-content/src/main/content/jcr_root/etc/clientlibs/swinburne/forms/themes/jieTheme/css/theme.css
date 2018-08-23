@@ -11,7 +11,11 @@ body{
     font-weight:normal;
     margin: 0;
 }
-input,select,textarea,.guideScribble img,.afTermsAndConditions {
+input:not([type="radio"]),
+select,
+textarea,
+.guideScribble img,
+.afTermsAndConditions {
     border-style:solid;
     border-top-width:1px;
     border-left-width:1px;
@@ -33,11 +37,11 @@ input,select,textarea,.guideScribble img,.afTermsAndConditions {
     margin-bottom: 1.0625rem;
 }
 .mobileLayout {
-	display: none !important;
+    display: none !important;
 }
 .guidePanelDescription,
 label {
-	margin-bottom: .35em;
+    margin-bottom: .35em;
 }
 .afHeader p {
     font-size: 3.25rem;
@@ -45,10 +49,18 @@ label {
     font-weight: bold;
 }
 .guideRadioButtonItem .guideWidgetLabel {
-   display: inline-block;
-   vertical-align: top;
-   margin-top: 5px;
-   margin-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+.guideRadioButtonItem .guideWidgetLabel label {
+	line-height: 16px;
+    margin-top: 2px;
+    display: block;
+}
+.guideRadioButtonGroupItems {
+    margin: 10px 0;
 }
 .guideRadioButtonItem {
 	margin-right: 20px;
@@ -152,7 +164,7 @@ input[type="radio"] {
         width: 66.66666667%;
     }
 }
-@media (max-width: 639px) { 
+@media (max-width: 639px) {
     .headerText p {
         font-size: 48px;
     }

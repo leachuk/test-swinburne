@@ -47,9 +47,9 @@ const bindSlickToElement = (element, options = {}) => {
         stagePadding: get(options, 'breakpoint.0.stagePadding', 0),
       }, isNil),
 
-      576: omitBy({
-        items        : get(options, 'breakpoint.576.items', 1),
-        stagePadding : get(options, 'breakpoint.576.stagePadding', 0),
+      640: omitBy({
+        items        : get(options, 'breakpoint.640.items', 1),
+        stagePadding : get(options, 'breakpoint.640.stagePadding', 0),
       }, isNil),
 
       768: omitBy({
@@ -58,10 +58,10 @@ const bindSlickToElement = (element, options = {}) => {
         slideBy : get(options, 'breakpoint.768.slideBy', 1),
       }, isNil),
 
-      1440: omitBy({
-        center  : get(options, 'breakpoint.1440.center', false),
-        items   : get(options, 'breakpoint.1440.items', 3),
-        slideBy : get(options, 'breakpoint.1440.slideBy', 1),
+      1400: omitBy({
+        center  : get(options, 'breakpoint.1400.center', false),
+        items   : get(options, 'breakpoint.1400.items', 3),
+        slideBy : get(options, 'breakpoint.1400.slideBy', 1),
       }, isNil),
     },
   }, isNil))

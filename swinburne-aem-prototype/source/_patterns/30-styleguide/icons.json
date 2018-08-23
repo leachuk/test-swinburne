@@ -56,6 +56,26 @@
     {
       "name": "chevron-down",
       "value": "chevron-down"
+    },
+    {
+      "name": "school",
+      "value": "school"
+    },
+    {
+      "name": "paper-plane",
+      "value": "paper-plane"
+    },
+    {
+      "name": "star",
+      "value": "star"
+    },
+    {
+      "name": "wheelchair",
+      "value": "wheelchair"
+    },
+    {
+      "name": "trophy",
+      "value": "trophy"
     }
   ],
   "social_icons": [

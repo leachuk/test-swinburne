@@ -30,6 +30,12 @@
   }
 }
 
+a[component] {
+  &.link {
+    font-size: 20px;
+  }
+}
+
 //Modifiers
 .btn-secondary {
   background-color: $secondary;

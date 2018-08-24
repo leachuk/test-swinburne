@@ -920,6 +920,7 @@ content/cq:tags/swinburne/component-style-theme:
       - banner
       - carousel
       - form
+      - article
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 

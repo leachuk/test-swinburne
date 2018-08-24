@@ -77,5 +77,21 @@
     "src": "../../images/form.png",
     "alt": "Form",
     "text": "<h1>SWINBURNE <span style=\"color:#eb1d25\">INFO EVENING</span></h1><p>Attend the Swinburne Info Evening to learn about the range of postgrad programs, master and bachelor degrees, and pathways that can take you where you want to go.</p><p>Chat with academics about the courses that are right for you and just where they can lead. You’ll leave feeling cool, calm and confident about your future.</p><p>To register, just drop your details in here.</p>"
+  },
+  "contentblock11": {
+    "componentId": "contentblock11",
+    "componentModifier": "bg-c10 theme--contentblock-article",
+    "componentTheme": "",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "text1": "<h1><span style=\"color: red\">(Career) change</span>  is as good as a holiday</h1><p>Picture this: You’re a few (or more!) years into your career, but it isn’t quite fulfilling you. Or maybe your passion for your current industry has faded and a new interest has sparked.</p>",
+    "src1": "https://www.swinburne.edu.au/choose/articles/career-change-is-as-good-as-a-holiday/change-as-good-holiday.jpg",
+    "text2": "<p>While some may find their ‘true calling’ straight after they finish high school, others can take years, even decades, to find a career path that’s right for them. The beauty of living in 2018 is it’s easier and more common than ever for people to make many career changes throughout their working lives.</p><p>The thought of changing it up can be daunting. Here are some tips for taking the leap into a new field.</p><p><em><a href=\"\">Register for an Advice Night</a> this September to take the first step to that new future.</em></p><h4>Network, network, network</h4>",
+    "src2": "https://www.swinburne.edu.au/choose/articles/career-change-is-as-good-as-a-holiday/network.jpg",
+    "text3": "<p>As they say it’s often not what you know, but who you know. When thinking about a new career, knowing how and where to connect with people in the field can be hard. <a href=\"/choose/#events\">Advice nights</a> and short courses are great places to meet like-minded people and find out more about the industry.</p><h4>Skill up</h4>",
+    "src3": "https://www.swinburne.edu.au/choose/articles/career-change-is-as-good-as-a-holiday/skill-up.jpg",
+    "text4": "<p><strong>READ:</strong> <a href=\"http://leadingontheedge.com/\">Leading On The Edge – Rachael Robinson</a><br><strong>LISTEN:</strong> <a href=\"http://grantbaldwin.com/podcast-archive/\">How Did You Get Into That – Grant Baldwin</a><br><strong>WATCH:</strong> <a href=\"https://www.ted.com/talks/scott_dinsmore_how_to_find_work_you_love#t-18280\">How To Find Work You Love – Scott Dismore</a></p>",
+    "text5": "<p><em>Written by Mia Burgess, Bachelor of Arts (Journalism). This article first appeared on Swinburne’s Knowing blog.</em></p>"
   }
 }

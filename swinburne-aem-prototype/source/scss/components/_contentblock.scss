@@ -93,6 +93,9 @@
           }
           h1 {
             font-size: 45px;
+            @include media-breakpoint-down(sm) {
+              font-size: 40px;
+            }
           }
           @include media-breakpoint-up(md) {
             padding: 40px;
@@ -103,8 +106,90 @@
         }
         &:last-child {
           background-color: $black;
+          iframe {
+            border: 0;
+          }
+          @include media-breakpoint-up(xl) {
+            overflow: hidden;
+            iframe {
+              width: 992px;
+              height: 1069px !important;
+            }
+          }
         }
       }
     }
+  }
+  &.theme--contentblock-article {
+      & > .container {
+        max-width: 800px !important;
+        padding: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        @include media-breakpoint-up(md) {
+          padding: 50px 0;
+        }
+        & > .aem-Grid {
+          background-color: $white;
+          padding: 20px 30px;
+          @include media-breakpoint-up(md) {
+            padding: 50px 50px;
+          }
+        }
+        h1 {
+          font-size: 32px;
+          line-height: 1;
+          margin-bottom: 30px;
+          text-transform: uppercase;
+          @include media-breakpoint-up(md) {
+            font-size: 48px;
+          }
+        }
+        p,
+        p:last-of-type {
+          font-size: 16px;
+          margin-bottom: 15px;
+          line-height: 1.2;
+          @include media-breakpoint-up(md) {
+            font-size: 20px;
+          }
+        }
+        a {
+          color: $primary;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        h4 {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        img {
+          display: block;
+          margin: auto;
+          max-width: 85%;
+          min-width: 85%;
+          height: auto;
+          padding-top: 1em;
+          padding-bottom: 2em;
+          &:last-of-type:not(:first-of-type) {
+            padding-bottom: 0;
+          }
+        }
+        .pagelist[component] {
+          padding: 0;
+          margin-top: 25px;
+          p {
+            font-size: 16px;
+          }
+          i.fa {
+            font-size: 4em;
+            display: block;
+          }
+          .card-body {
+            padding-top: 0;
+          }
+        }
+      }
   }
 }

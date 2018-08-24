@@ -19,25 +19,8 @@ title: Content Block container Article
  * none
 
 
-## Components
-### 1. Page List Cards Article
-#### Overview
-  Component for displaying a page list of cards with 3 columns.
-#### Variant 
-  Clickable Card with Icon, Title and Description
-#### Design
-1. Theme
- * Swinburne : Component Style Theme / Lists / Cardslist / Cards Nav
-2. Modifier
- * none
-3. Modules
- * none
-4. Chevron
- * none
-5. Icon
- * fa-calendar-alt
- 
-### 2. Text
+## Components 
+### 1. Text
 #### Overview
   Component for displaying a rich text.
 #### Design
@@ -52,7 +35,7 @@ title: Content Block container Article
 5. Icon
  * none
 
-### 3. Image
+### 2. Image
 #### Overview
   Component to display an Image with wrapper.
 #### Variant 

@@ -9,7 +9,7 @@
             sling:resourceType="swinburne/components/template/base">
         <article
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="/apps/swinburne/components/layout/article">
+                sling:resourceType="swinburne/components/layout/article">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">

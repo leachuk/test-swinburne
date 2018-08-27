@@ -1,6 +1,7 @@
 import get from 'lodash/get'
 import isNil from 'lodash/isNil'
 import omitBy from 'lodash/omitBy'
+import 'owl.carousel'
 
 /**
  * Page list configuration.
@@ -89,22 +90,16 @@ export default () => {
   const carousels = [ ...document.querySelectorAll('[data-modules*="carousel"]') ]
 
   if (carousels.length) {
-      import(/* webpackChunkName: "js/vendorlib/owl.carousel" */ 'owl.carousel')
-      .then(() => {
-        console.info('OwlCarousel has been loaded and bound to `$.fn.owlCarousel()`')
+    // Initalise the carousels
+    carousels.forEach(carousel => {
+      switch (true) {
+        case carousel.classList.contains('pagelist'):
+          bindSlickToElement(carousel.querySelector('ul'), pageListConfiguration)
+          break
 
-        // Initalise the carousels
-        carousels.forEach(carousel => {
-          switch (true) {
-            case carousel.classList.contains('pagelist'):
-              bindSlickToElement(carousel.querySelector('ul'), pageListConfiguration)
-              break
-
-            default:
-              console.warn('Carousel definition not defined for:', carousel)
-          }
-        })
-      })
-      .catch(console.error)
+        default:
+          console.warn('Carousel definition not defined for:', carousel)
+      }
+    })
   }
 }

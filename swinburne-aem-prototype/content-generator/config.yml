@@ -805,6 +805,11 @@ content/cq:tags/swinburne/component-style-theme:
     valueFormat: 'theme-%%prefix%%'
     title: '%%prefix_normalised%%'
 
+  content/aem-forms:
+    flat: true
+    prefix: theme--brand-form
+    title: 'AEM Forms'
+
 
   # Details
   ## Contact Details
@@ -915,6 +920,7 @@ content/cq:tags/swinburne/component-style-theme:
       - banner
       - carousel
       - form
+      - article
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 

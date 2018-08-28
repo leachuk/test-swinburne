@@ -811,6 +811,12 @@ content/cq:tags/swinburne/component-style-theme:
     title: 'AEM Forms'
 
 
+  content/ssi-forms:
+    flat: true
+    prefix: theme--brand-formSSI
+    title: 'SSI Forms'
+
+
   # Details
   ## Contact Details
   details/contact-details/format/description/default:

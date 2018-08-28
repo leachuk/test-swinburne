@@ -1,0 +1,100 @@
+<form id="mkt-form" class="mkt-form" name="mkt-form" action="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/forms/submit/submit.php" method="post" data-analytics-track-form="Timely - Hawthorn Advice Night">
+    <fieldset>
+      <legend>Are you an international student?&nbsp; <abbr title="Required">*</abbr><a role="tooltip" title="You are an international student if you're not an Australian citizen or an Australian permanent resident, and you're not a New Zealand citizen." href="#" class="help"><span class="fas fa-fw fa-question-circle"></span></a></legend>
+      <span class="radio inline"><label><input type="radio" data-fe-adobe-value="local" data-fe-adobe-var="residency" value="local" name="r:residency" id="mkt_residency_local" required="" checked="checked"> No</label></span>
+      <span class="radio inline"><label><input type="radio" data-fe-adobe-value="international" data-fe-adobe-var="residency" value="international" name="r:residency" id="mkt_residency_international" required=""> Yes</label></span>
+    </fieldset>
+    <div id="hidden_fields">
+      <input name="l:_list" value="2018 Timely - Advice Nights" type="hidden">
+      <input id="mkt_thankyou" name="f:_thankyou" value="/choose/events/thankyou/" type="hidden">
+      <!-- Don't change these -->
+      <input type="hidden" name="r:referralSource|l:referralSource" data-fe-dmp-get="cmpgn" value="">
+      <input name="r:salesChannel|l:salesChannel" id="mkt_salesChannel" type="hidden" value="Direct">
+      <input name="r:contactChannel|l:contactChannel" id="mkt_contactChannel" type="hidden" value="Prospect">
+      <!-- Interaction source needs to be defined in RightNow. For events, it is always as below -->
+      <input type="hidden" name="r:interactionSource|l:interactionSource" value="Register for Marketing Event">
+      <!-- Interaction tag must be in the following format -->
+      <input type="hidden" name="r:interactionTag|l:interactionTag|qr:interactionTag" value="2018;Timely;AdviceNight;Hawthorn;Registered">
+      <!--  Set the email response for a QR email (including interaction tag above) -->
+      <!--
+        <div data-fe-show-when="r:areaOfInterest|l:Area of interest[value='Aviation']">
+          <input type="hidden" name="qr:_layout" value="https://www.swinburne.edu.au/resources/email/marketing/autothanks/2018/hawthorn-advice-night-autothanks-aviation.html">
+        </div>
+      -->
+      <!--
+       <div data-fe-hide-when="r:areaOfInterest|l:Area of interest[value='Aviation']">
+         <input type="hidden" name="qr:_layout" value="https://www.swinburne.edu.au/resources/email/marketing/autothanks/2018/hawthorn-advice-night-autothanks.html">
+       </div>
+     -->
+      <input type="hidden" id="qr_layout" name="qr:_layout" value="https://www.swinburne.edu.au/resources/email/marketing/autothanks/2018/hawthorn-advice-night-autothanks.html">
+      <script type="text/javascript">
+        // Change the email layout based on study area selection.
+        $('#mkt_areaOfInterest').change(function(){
+          if($(this).val() == "Aviation"){
+            $('#qr_layout').val('https://www.swinburne.edu.au/resources/email/marketing/autothanks/2018/hawthorn-advice-night-autothanks-aviation.html');
+          }else{
+            $('#qr_layout').val('https://www.swinburne.edu.au/resources/email/marketing/autothanks/2018/hawthorn-advice-night-autothanks.html');
+          }
+        });
+      </script>
+      <!-- Optionals for QR -->
+      <input type="hidden" name="qr:_subject" value="You’re registered and ready to go for our Hawthorn Advice Night!">
+      <input type="hidden" name="qr:_from" value="Study at Swinburne <study@swinburne.edu.au>">
+    </div>
+    <div class="row">
+      <p class="col-6">
+        <label for="mkt_firstName">First name  <abbr title="Required">*</abbr></label>
+        <input id="mkt_firstName" type="text" name="r:firstName|l:First name|qr:firstName" placeholder="First name" value="" aria-label="First name" required="">
+      </p>
+      <p class="col-6">
+        <label for="mkt_lastName">Last name  <abbr title="Required">*</abbr></label>
+        <input id="mkt_lastName" type="text" name="r:lastName|l:Last name|qr:lastName" placeholder="Last name" value="" aria-label="Last name" required="">
+      </p>
+      <p class="col-6">
+        <label for="mkt_emailAddress">Email address <abbr title="Required">*</abbr></label>
+        <input id="mkt_emailAddress" type="email" name="r:emailAddress|l:Email address|qr:emailAddress" placeholder="Email address" value="" aria-label="Email address" required="">
+      </p>
+      <span class="col-6">
+        <label for="mkt_mobileNumber">Mobile number  <abbr title="Required">*</abbr></label>
+        <p style="width: 35%; display:inline-block; vertical-align: top;">
+          <select id="mkt_countryCode" name="r:countryCode|l:Country code" aria-label="Phone number country code" placeholder="Country code" class="autocomplete" required=""></select>
+        </p>
+        <p style="width:63%; display:inline-block; vertical-align: top;">
+          <input id="mkt_mobileNumber" type="number" name="r:mobileNumber|l:Mobile number" placeholder="Mobile number" value="" title="Please use between 4 and 15 numbers [0-9] only" minlength="4" maxlength="15" aria-label="Mobile number" required="">
+        </p>
+      </span>
+      <p class="col-6" data-fe-show-when="r:residency[value='international']">
+        <label for="mkt_countryOfResidence">Where do you live?<abbr title="Required">*</abbr></label>
+        <select id="mkt_countryOfResidence" name="r:countryOfResidence|l:Country of residence" class="search col-11" placeholder="Select your region of residence" aria-label="Country of residence" required=""></select>
+      </p>
+      <p class="col-6">
+        <label for="mkt_bestDescribes">Which best describes you? <abbr title="Required">*</abbr></label>
+        <select name="r:bestDescribes|l:Best describes" id="mkt_bestDescribes" class="search col-11 autocomplete" placeholder="Select an option" aria-label="Best describes" required=""></select>
+      </p>
+      <p class="col-6">
+        <label for="mkt_highestQualification">What is your highest qualification? <abbr title="Required">*</abbr></label>
+        <select name="r:highestQualification|l:Highest qualification" id="mkt_highestQualification" class="search col-11" placeholder="Select an option" aria-label="Highest qualification" required=""></select>
+      </p>
+      <p class="col-6" data-fe-show-when="r:bestDescribes|l:Best describes[value*='Current Year']">
+        <label for="mkt_secondarySchool">Secondary school</label>
+        <input name="r:secondarySchool|l:Secondary school" id="mkt_secondarySchool" placeholder="Start typing for suggestions..." aria-label="Secondary school"><!-- </select> -->
+      </p>
+      <p class="col-6">
+        <label for="mkt_areaOfInterest">Area of interest</label>
+        <select name="r:areaOfInterest|l:Area of interest" id="mkt_areaOfInterest" class="search col-11" placeholder="Select an option" aria-label="Area of interest"><option value="">Select a study area</option><option value="all">All areas</option><option data-id="25" value="Apprenticeships">Apprenticeships</option><option data-id="20" value="Arts and Humanities">Arts and Humanities</option><option data-id="16" value="Aviation">Aviation</option><option data-id="27" value="Built Environment and Architecture">Built Environment and Architecture</option><option data-id="2" value="Business">Business</option><option data-id="19" value="Design">Design</option><option data-id="23" value="Education">Education</option><option data-id="5" value="Engineering">Engineering</option><option data-id="9" value="English Language and Study Skills">English Language and Study Skills</option><option data-id="18" value="Film and Television">Film and Television</option><option data-id="17" value="Games and Animation">Games and Animation</option><option data-id="6" value="Health">Health</option><option data-id="3" value="Information Technology">Information Technology</option><option data-id="26" value="Law">Law</option><option data-id="22" value="Media and Communication">Media and Communication</option><option data-id="28" value="Nursing">Nursing</option><option data-id="11" value="Performing and Creative Arts">Performing and Creative Arts</option><option data-id="24" value="Pre-apprenticeships">Pre-apprenticeships</option><option data-id="21" value="Psychology">Psychology</option><option data-id="1" value="Science">Science</option><option data-id="13" value="Traineeships">Traineeships</option></select>
+      </p>
+      <p class="col-6">
+        <label for="mkt_courseOfInterest">Intended course</label>
+        <select name="r:courseOfInterest|l:Course of interest" id="mkt_courseOfInterest" class="search col-11" placeholder="Select a study area to filter" aria-label="Intended course"></select>
+      </p>
+    </div>
+    <div class="row">
+      <p>
+        <button type="submit" class="btn btn--primary">Submit <span class="fas fa-angle-right"></span></button>
+      </p>
+    </div>
+  </form>
+  <script src="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/resources/form-enhancer/jquery.validate.min.js"></script>
+  <script src="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/resources/jquery/jquery-ui/jquery.easy-autocomplete.min.js"></script>
+  <script src="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/resources/form-enhancer/form-enhancer.min.js"></script>
+  <script src="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/resources/form-enhancer/c1-form-helper.js"></script>

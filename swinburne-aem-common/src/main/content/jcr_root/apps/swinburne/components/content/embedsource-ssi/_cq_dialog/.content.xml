@@ -16,7 +16,7 @@
 
             <sourceTab
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Layout"
+                    jcr:title="SSI URL"
                     sling:resourceType="granite/ui/components/foundation/section">
                 <layout
                         jcr:primaryType="nt:unstructured"
@@ -29,7 +29,7 @@
                         <items jcr:primaryType="nt:unstructured">
                             <variant
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="Layout"
+                                    jcr:title="URL"
                                     sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
                                 <items jcr:primaryType="nt:unstructured">
                                     <html

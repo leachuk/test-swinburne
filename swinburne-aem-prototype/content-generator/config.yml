@@ -1458,6 +1458,12 @@ content/cq:tags/swinburne/component-analytics:
     valueFormat: '%%prefix%%'
     title: '%%prefix_normalised%%'
 
+  eventtype:
+    prefixes:
+    - site interaction
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
 # Aria
 content/cq:tags/swinburne/component-aria:
   live:

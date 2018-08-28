@@ -4,7 +4,7 @@
     <jcr:content
         cq:designPath="/apps/settings/wcm/design/swinburne"
         cq:tags="[swinburne:content-type/page]"
-        cq:template="/apps/swinburne/templates/column/three"
+        cq:template="/conf/swinburne/settings/wcm/templates/threecolumn"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"

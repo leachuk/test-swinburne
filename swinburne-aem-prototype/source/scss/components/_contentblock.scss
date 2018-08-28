@@ -75,18 +75,21 @@
       }
       & > .row {
         background-color: $white;
-        margin-left: 0;
-        margin-right: 0;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
       }
     }
     .row {
       .parsys_column {
-        padding: 40px 20px;
+        padding: 40px 15px;
         @include media-breakpoint-up(md) {
           padding: 40px;
         }
         &:first-child {
-          padding: 40px 20px;
           p {
             font-size: 16px;
             margin-bottom: 15px;

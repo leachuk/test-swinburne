@@ -16,7 +16,8 @@
   -webkit-appearance: none;
 }
 
-.theme--brand-form {
+.theme--brand-form,
+.theme--brand-formSSI {
   background-color: $black;
   .mobileLayout {
     display: none;
@@ -101,7 +102,8 @@
     color: $white;
     margin: 0 0 0.35em 0;
   }
-  .guideFieldNode {
+  .guideFieldNode,
+  .mkt-form {
     &:not(.guideButton):not(.guideChart) {
       margin-top: 0;
       padding-left: 0;
@@ -197,6 +199,7 @@
       border-radius: 0;
       text-transform: uppercase;
       transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      text-align: center;
       &:after {
         content: "\f105";
         font-family: $font-family-awesome;
@@ -230,6 +233,100 @@
       label {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+.theme--brand-formSSI {
+  legend .fas {
+    font-family: $font-family-awesome;
+  }
+  .easy-autocomplete {
+    width: 100% !important;
+  }
+  .col-6,
+  .col-11 {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    flex: 0 0 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+  legend,
+  label {
+    display: block;
+    margin-bottom: .35em;
+    font-size: 16px;
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    &:last-of-type {
+      .fas {
+        display: none;
+      }
+      p {
+        width: 100%;
+      }
+    }
+    span.col-6 {
+        p {
+          box-sizing: border-box;
+          float: left;
+          margin: 0;
+          &:first-of-type {
+            padding-right: 5px;
+          }
+          &:last-of-type {
+            width: 65% !important;
+          }
+          @include media-breakpoint-down(md) {
+            &:last-of-type,
+            &:first-of-type {
+              padding-right: 0;
+              width: 100% !important;
+            }
+          }
+        }
+    }
+    .col-6 {
+      &:nth-child(4) > p:first-of-type,
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10){
+        position: relative;
+        &:before {
+          content: "\f0dd";
+          position: absolute;
+          display: block;
+          font-size: 18px;
+          width: 15px;
+          height: 8px;
+          right: 0;
+          margin-right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-top: -6px;
+          z-index: 2;
+          color: $primary;
+          font-family: $font-family-awesome-solid;
+        }
+      }
+      &:nth-child(4) > p:first-of-type:before {
+        margin-top: -21px;
+      }
+    }
+  }
+  .radio.inline {
+    display: inline-block;
+    padding: 10px 20px 10px 10px;
+    input[type="radio"] {
+      margin-right: 15px;
     }
   }
 }

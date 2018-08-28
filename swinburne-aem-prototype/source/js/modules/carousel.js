@@ -1,6 +1,7 @@
 import get from 'lodash/get'
 import isNil from 'lodash/isNil'
 import omitBy from 'lodash/omitBy'
+import 'owl.carousel'
 
 /**
  * Page list configuration.
@@ -47,9 +48,9 @@ const bindSlickToElement = (element, options = {}) => {
         stagePadding: get(options, 'breakpoint.0.stagePadding', 0),
       }, isNil),
 
-      576: omitBy({
-        items        : get(options, 'breakpoint.576.items', 1),
-        stagePadding : get(options, 'breakpoint.576.stagePadding', 0),
+      640: omitBy({
+        items        : get(options, 'breakpoint.640.items', 1),
+        stagePadding : get(options, 'breakpoint.640.stagePadding', 0),
       }, isNil),
 
       768: omitBy({
@@ -58,10 +59,10 @@ const bindSlickToElement = (element, options = {}) => {
         slideBy : get(options, 'breakpoint.768.slideBy', 1),
       }, isNil),
 
-      1440: omitBy({
-        center  : get(options, 'breakpoint.1440.center', false),
-        items   : get(options, 'breakpoint.1440.items', 3),
-        slideBy : get(options, 'breakpoint.1440.slideBy', 1),
+      1400: omitBy({
+        center  : get(options, 'breakpoint.1400.center', false),
+        items   : get(options, 'breakpoint.1400.items', 3),
+        slideBy : get(options, 'breakpoint.1400.slideBy', 1),
       }, isNil),
     },
   }, isNil))
@@ -89,22 +90,16 @@ export default () => {
   const carousels = [ ...document.querySelectorAll('[data-modules*="carousel"]') ]
 
   if (carousels.length) {
-      import(/* webpackChunkName: "js/vendorlib/owl.carousel" */ 'owl.carousel')
-      .then(() => {
-        console.info('OwlCarousel has been loaded and bound to `$.fn.owlCarousel()`')
+    // Initalise the carousels
+    carousels.forEach(carousel => {
+      switch (true) {
+        case carousel.classList.contains('pagelist'):
+          bindSlickToElement(carousel.querySelector('ul'), pageListConfiguration)
+          break
 
-        // Initalise the carousels
-        carousels.forEach(carousel => {
-          switch (true) {
-            case carousel.classList.contains('pagelist'):
-              bindSlickToElement(carousel.querySelector('ul'), pageListConfiguration)
-              break
-
-            default:
-              console.warn('Carousel definition not defined for:', carousel)
-          }
-        })
-      })
-      .catch(console.error)
+        default:
+          console.warn('Carousel definition not defined for:', carousel)
+      }
+    })
   }
 }

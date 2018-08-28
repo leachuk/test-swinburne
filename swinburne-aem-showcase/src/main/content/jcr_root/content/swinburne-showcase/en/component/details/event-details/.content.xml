@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:tags="[swinburne:content-type/page]"
-        cq:template="/apps/swinburne/templates/content/event/parent"
+        cq:template="swinburne/templates/content/event/parent"
         jcr:primaryType="cq:PageContent"
         jcr:title="Event Parent"
         sling:resourceType="swinburne/components/template/base">

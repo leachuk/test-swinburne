@@ -35,9 +35,8 @@ title: Content Block container Form theme
  * none
 5. Icon
  * none
-6. Attributes
- * Swinburne : Component Style Theme / Layout / Colctrl / Column / Medium / 6 Columns
- * Swinburne : Component Style Theme / Layout / Colctrl / Column / Medium / 6 Columns
+6. Column Layout
+ * 2 Column (lg) - 9 | 3
 ### 2.Forms container theme
 #### Overview
  Component the theme Swinburne registration form.

@@ -298,7 +298,8 @@
                                 formType="adaptiveForm"
                                 submitType="inline"
                                 textIsRich="true"
-                                thankyouConfig="message"
+                                thankyouConfig="page"
+                                thankyouPage="/content/swinburne-showcase/en/pages/thank-you.html?wcmmode=disabled"
                                 useiframe="true"/>
                         <col_end15337074997760
                                 jcr:primaryType="nt:unstructured"

@@ -83,6 +83,8 @@ module.exports = env => {
       ],
 
       'js/vendorlib/jquery': 'jquery',
+      'js/vendorlib/fancybox': '@fancyapps/fancybox',
+      'js/vendorlib/owl.carousel': 'owl.carousel',
     },
 
     output: {

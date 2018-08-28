@@ -5,18 +5,19 @@ title: Header Parallax Logo
 #### Overview
 Component for displaying a header With parallax logo
 #### Variant
-Container
+Default
 #### Design
 1. Theme
 * Swinburne : Component Style Theme / Layout / Header / Brand Header Default
 2. Modifier
-* none
+* Swinburne : Component Style Modifier / Grid / Container
 3. Modules
 * none
 4. Chevron
 * none
 5. Icon
 * none
+
 ## Components
 ### 1. Embed source Parsys Parallax
 #### Overview

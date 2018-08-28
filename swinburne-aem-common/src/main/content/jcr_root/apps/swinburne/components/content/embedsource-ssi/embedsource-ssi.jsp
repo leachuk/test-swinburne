@@ -28,13 +28,11 @@
 %>
 
 <c:set var="componentProperties" value="<%= componentProperties %>"/>
-<c:choose>
-    <c:when test="${componentProperties.variant == 'default' and not empty componentProperties.html}">
-        <c:import url="${componentProperties.html}" />
-    </c:when>
-    <c:otherwise>
-        <%@ include file="variant.empty.jsp" %>
-    </c:otherwise>
-</c:choose>
-
+<div ${componentProperties.componentAttributes}>
+    <c:choose>
+        <c:when test="${componentProperties.variant == 'default' and not empty componentProperties.html}">
+            <c:import url="${componentProperties.html}" />
+        </c:when>
+    </c:choose>
+</div>
 <%@include file="/apps/aemdesign/global/component-badge.jsp" %>

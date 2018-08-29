@@ -27,16 +27,6 @@
        </div>
      -->
       <input type="hidden" id="qr_layout" name="qr:_layout" value="https://www.swinburne.edu.au/resources/email/marketing/autothanks/2018/hawthorn-advice-night-autothanks.html">
-      <script type="text/javascript">
-        // Change the email layout based on study area selection.
-        $('#mkt_areaOfInterest').change(function(){
-          if($(this).val() == "Aviation"){
-            $('#qr_layout').val('https://www.swinburne.edu.au/resources/email/marketing/autothanks/2018/hawthorn-advice-night-autothanks-aviation.html');
-          }else{
-            $('#qr_layout').val('https://www.swinburne.edu.au/resources/email/marketing/autothanks/2018/hawthorn-advice-night-autothanks.html');
-          }
-        });
-      </script>
       <!-- Optionals for QR -->
       <input type="hidden" name="qr:_subject" value="You’re registered and ready to go for our Hawthorn Advice Night!">
       <input type="hidden" name="qr:_from" value="Study at Swinburne <study@swinburne.edu.au>">
@@ -94,7 +84,3 @@
       </p>
     </div>
   </form>
-  <script src="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/resources/form-enhancer/jquery.validate.min.js"></script>
-  <script src="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/resources/jquery/jquery-ui/jquery.easy-autocomplete.min.js"></script>
-  <script src="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/resources/form-enhancer/form-enhancer.min.js"></script>
-  <script src="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/resources/form-enhancer/c1-form-helper.js"></script>

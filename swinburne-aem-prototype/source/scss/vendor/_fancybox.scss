@@ -3,7 +3,8 @@
 ;
 
 .fancybox-content {
-  transition: all 0.3s ease-in-out;
+  max-height: 1px;
+  max-width: 1px;
 }
 
 .fancybox-sm {

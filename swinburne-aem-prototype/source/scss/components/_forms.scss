@@ -329,3 +329,13 @@
     }
   }
 }
+
+.easy-autocomplete-container {
+  z-index: 10;
+  ul li {
+    &,
+    .selected {
+      color: #000;
+    }
+  }
+}

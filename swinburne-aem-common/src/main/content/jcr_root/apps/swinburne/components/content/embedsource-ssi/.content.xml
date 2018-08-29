@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Component"
+    jcr:description="This is a component which enable HTML editing to allow user to enter source URL to insert in a page."
+    jcr:title="Embed Source SSI"
+    cq:icon="code"
+    allowedParents="[*/parsys]"
+          componentGroup="Swinburne - Content"
+          sling:resourceSuperType="aemdesign/components/content/embedsource"/>

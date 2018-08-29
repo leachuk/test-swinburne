@@ -124,6 +124,7 @@ module.exports = env => {
       port             : plConfig.server.port,
       open             : true,
       watchContentBase : false,
+      headers: { "Access-Control-Allow-Origin": "http://localhost:3000/" }
     },
   }, customization(env))
 

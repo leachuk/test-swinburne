@@ -85,6 +85,10 @@ module.exports = env => {
       'js/vendorlib/jquery': 'jquery',
       'js/vendorlib/fancybox': '@fancyapps/fancybox',
       'js/vendorlib/owl.carousel': 'owl.carousel',
+      'js/vendorlib/form-enhancer.min': './js/form-enhancer.min.js',
+      'js/vendorlib/jquery.easy-autocomplete.min': './js/jquery.easy-autocomplete.min.js',
+      'js/vendorlib/jquery.validate.min': './js/jquery.validate.min.js',
+      'js/vendorlib/c1-form-helper.min': './js/c1-form-helper.js'
     },
 
     output: {

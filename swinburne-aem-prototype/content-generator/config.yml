@@ -1717,13 +1717,13 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
   paraformat/formats:
     template: 'text-rtePlugins-paraformat-formats'
     contents:
-      - default_blockquote: { description: 'Quote', tag: "blockquote" }
+      - default_blockquote: { description: 'BlockQuote', tag: "blockquote" }
       - default_emphasis: { description: 'Emphasis', tag: "em" }
       - default_h1: { description: 'Heading 1', tag: "h1" }
       - default_h2: { description: 'Heading 2', tag: "h2" }
       - default_h3: { description: 'Heading 3', tag: "h3" }
+      - default_p: { description: 'Paragraph', tag: "p" }
       - default_h4: { description: 'Heading 4', tag: "h4" }
       - default_h5: { description: 'Heading 5', tag: "h5" }
       - default_h6: { description: 'Heading 6', tag: "h6" }
-      - default_p: { description: 'Paragraph', tag: "p" }
       - default_small: { description: 'Small', tag: "small" }

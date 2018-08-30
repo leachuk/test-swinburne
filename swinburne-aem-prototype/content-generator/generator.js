@@ -5,7 +5,6 @@ const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
 const yaml   = require('js-yaml')
 
-
 const {
   each,
   isArray,
@@ -204,7 +203,7 @@ try {
         categoryTemplateDefault = tagParentTemplate || loadTemplateForCategory('tag-parent')
       } else if (category.startsWith(pathPrefixApps)) {
         categoryTemplate = contentTemplate || loadTemplateForCategory('content')
-        categoryTemplateDefault = contentTemplate || loadTemplateForCategory('content')
+        categoryTemplateDefault = contentTemplate || loadTemplateForCategory('content-parent')
       } else {
         return
       }
@@ -212,9 +211,9 @@ try {
       if (!groupedItems[category]) {
         groupedItems[category] = {
           category,
-          categoryTemplate        : categoryTemplate,
-          categoryTemplateDefault : categoryTemplateDefault,
-          items                   : [],
+          categoryTemplate,
+          categoryTemplateDefault,
+          items: [],
         }
       }
 

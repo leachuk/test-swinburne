@@ -1,7 +1,8 @@
+@import '../vendor/auto-complete';
 
 @mixin inputStyle() {
   display: block;
-  width: 100%;
+  width: 100% !important;
   margin-bottom: 17px;
   height: 50px;
   box-sizing: border-box;
@@ -187,6 +188,7 @@
         font-family: $font-family-awesome-solid;
       }
     }
+    button.btn--primary,
     button[type="submit"] {
       width: 100%;
       padding: 13px;
@@ -235,6 +237,13 @@
       }
     }
   }
+  input[type='number'],
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance:textfield;
+    margin: 0;
+  }
 }
 
 .theme--brand-formSSI {
@@ -246,8 +255,8 @@
   }
   .col-6,
   .col-11 {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     display: block;
     flex: 0 0 100%;
     padding-left: 0;
@@ -264,7 +273,7 @@
     margin-left: 0;
     margin-right: 0;
     &:last-of-type {
-      .fas {
+      .fas, .fa {
         display: none;
       }
       p {
@@ -296,7 +305,6 @@
       &:nth-child(5),
       &:nth-child(6),
       &:nth-child(7),
-      &:nth-child(8),
       &:nth-child(9),
       &:nth-child(10){
         position: relative;
@@ -327,6 +335,16 @@
     padding: 10px 20px 10px 10px;
     input[type="radio"] {
       margin-right: 15px;
+    }
+  }
+}
+
+.easy-autocomplete-container {
+  z-index: 10;
+  ul li {
+    &,
+    .selected {
+      color: #000;
     }
   }
 }

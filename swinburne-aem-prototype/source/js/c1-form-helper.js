@@ -224,6 +224,5 @@ $(document).ready(function(e) {
 //
 
 FormEnhancer.prepare("mkt-form",{
-  validate: true,
-  spamFilterTypes: ['invisibleReCaptcha']
+  validate: false
 });

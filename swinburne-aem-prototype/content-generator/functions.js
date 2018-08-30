@@ -1,10 +1,14 @@
 /* eslint-disable no-loop-func */
 /* eslint-disable no-param-reassign */
-const colors      = require('colors')
-const fs          = require('fs')
-const mkdirp      = require('mkdirp')
-const { resolve } = require('path')
-const util        = require('util');
+const colors = require('colors')
+const fs     = require('fs')
+const mkdirp = require('mkdirp')
+
+const { readFileSync, existsSync, lstatSync, readdirSync, writeFile } = require('fs')
+const { join, resolve } = require('path')
+
+const isDirectory    = source => lstatSync(source).isDirectory()
+const getDirectories = source => readdirSync(source).map(name => join(source, name)).filter(isDirectory)
 
 const {
   each,
@@ -63,9 +67,11 @@ const prefixes = {
   c11: 'C11 (Light Grey)',
 
   // Specific styles
-  'col'          : 'Columns',
-  'quote-suffix' : 'Quote Suffix',
-  'nowrap'       : 'No Wrap'
+  'col'            : 'Columns',
+  'quote-suffix'   : 'Quote Suffix',
+  'nowrap'         : 'No Wrap',
+  'playsinline'    : 'Plays Inline',
+  'v-centered-nav' : 'Verticial Aligned Nav Arrows',
 }
 
 function currentPath(path) {
@@ -90,7 +96,7 @@ function loadTemplateForCategory(category = null) {
     return templateCache[category]
   }
 
-  templateCache[category] = fs.readFileSync(currentPath(`./templates/${category}.xml`), 'utf-8').toString()
+  templateCache[category] = readFileSync(currentPath(`./templates/${category}.xml`), 'utf-8').toString()
   return templateCache[category]
 }
 
@@ -212,7 +218,7 @@ function writeTemplate(outputPath, templateDefault, template) {
 
     if (paths.length > 0) {
       while (paths.length !== 0) {
-        let node = paths[paths.length - 1] || ''
+        let node = paths[paths.length - 1]  || ''
         let title = paths[paths.length - 1] || ''
 
         title = normalisePrefix(title)
@@ -221,15 +227,22 @@ function writeTemplate(outputPath, templateDefault, template) {
           .replace('%%title%%', title)
           .replace('%%node%%', node)
 
-        promises.push(createTemplate(paths.join('/'), templateDefaultPatch))
+        const currentDirectory = paths.join('/')
+        const workingDirectory = currentPath(currentDirectory)
+
+        // Get all the child directories and list them in the parent template
+        const directories = getDirectories(workingDirectory).map(directory => {
+          return `<${directory.replace(workingDirectory, '').substr(1)}/>`
+        })
+
+        templateDefaultPatch = templateDefaultPatch.replace('%%children%%', directories.join('\n    '))
+
+        promises.push(createTemplate(currentDirectory, templateDefaultPatch))
         paths.pop()
       }
     }
 
     Promise.all(promises).then(walks => {
-      // console.log('---------------------------------------------------------------------')
-      // console.log('Finished walking up the tree!')
-      // console.log('---------------------------------------------------------------------')
       walks.forEach(walk => consoleResult(...walk))
     })
   })
@@ -239,8 +252,8 @@ function createTemplate(outputPath, template) {
   mkdirp.sync(currentPath(outputPath))
 
   return new Promise(res => {
-    if (!fs.existsSync(currentPath(`${outputPath}/.content.xml`))) {
-      fs.writeFile(currentPath(`${outputPath}/.content.xml`), template, err => {
+    if (!existsSync(currentPath(`${outputPath}/.content.xml`))) {
+      writeFile(currentPath(`${outputPath}/.content.xml`), template, err => {
         if (err) {
           res([false, outputPath, err])
         } else {

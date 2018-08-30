@@ -49,6 +49,8 @@ header[component],
 
 html.aem-AuthorLayer-Edit {
   .header[component].theme--header-swinburne {
+    height: auto;
+
     div[component].parsys,
     div[component].embedsource > a {
       float: none;
@@ -61,11 +63,5 @@ html.aem-AuthorLayer-Edit {
   }
   button[data-modules="navtoggler"] {
     float: none;
-  }
-}
-
-html.aem-AuthorLayer-Edit {
-  details.component.badge.badge-pill {
-    margin-top: 50px;
   }
 }

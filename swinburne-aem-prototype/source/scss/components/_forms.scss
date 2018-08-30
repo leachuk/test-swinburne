@@ -187,6 +187,7 @@
         font-family: $font-family-awesome-solid;
       }
     }
+    button.btn--primary,
     button[type="submit"] {
       width: 100%;
       padding: 13px;
@@ -271,7 +272,7 @@
     margin-left: 0;
     margin-right: 0;
     &:last-of-type {
-      .fas {
+      .fas, .fa {
         display: none;
       }
       p {

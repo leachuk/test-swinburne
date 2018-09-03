@@ -1,9 +1,9 @@
 ---
-title: Content Block container one column
+title: Content Block container banner only
 ---
 ## Component
 #### Overview
- Component for displaying a default content block container with one column.
+ Component for displaying a default content block container banner only.
 #### Variant
  Container
 #### Design

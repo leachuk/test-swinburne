@@ -38,7 +38,24 @@ title: Footer 2 Columns template.
 6. Column Layout
  * 2 Column (lg) - 9 | 3
  
-### 2. Page List
+### 2. Text
+#### Overview 
+  Component displaying a Text.
+#### Variant
+  Default
+#### Design
+1. Theme
+ * none
+2. Modifier
+ * none
+3. Modules
+ * none
+4. Chevron
+ * none
+5. Icon
+ * none
+ 
+### 3. Page List
 #### Overview 
  Component displaying a Page list with links.
 #### Variant
@@ -56,7 +73,7 @@ title: Footer 2 Columns template.
 * none
 #### Config
 1. Limit
-* 6
+* 3
 
 ### 4. Page List
 #### Overview 

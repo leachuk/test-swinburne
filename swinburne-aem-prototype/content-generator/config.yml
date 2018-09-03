@@ -1599,7 +1599,7 @@ content/cq:tags/swinburne/component-dialog:
 # WARNING: Reference to these path is hardcoded into component dialogs
   html/heading:
     prefixes:
-      - 1h1
+      - h1
       - h2
       - h3
       - h4

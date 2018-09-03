@@ -8,9 +8,10 @@ title: Content Block container one column
  Container
 #### Design
 1. Theme
- * Swinburne : Component Style Theme / Layout / Contentblock / Content Block - Text
+ * Swinburne : Component Style Theme / Layout / Contentblock / Content Block - Banner
 2. Modifier
  * Swinburne : Component Style Modifier / Background / Background Colour - C10 (#292625)
+ * Swinburne : Component Style Modifier / Contentblock / Banner / Image Only
 3. Modules
  * none
 4. Chevron

@@ -236,6 +236,11 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: fancybox-lg
     title: 'Large'
 
+  contentblock/banner/image:
+    flat: true
+    prefix: image-only
+    title: 'Image Only'
+
   # Cards
   card:
     prefixes:
@@ -927,6 +932,7 @@ content/cq:tags/swinburne/component-style-theme:
       - carousel
       - form
       - article
+      - text
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 

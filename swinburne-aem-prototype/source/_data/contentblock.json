@@ -103,8 +103,9 @@
   },
   "contentblock13": {
     "componentId": "contentblock13",
+    "componentModifier": "image-only",
     "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/contact-us.jpg\")",
     "componentTheme": "theme--contentblock-banner",
     "text": ""
-  },
+  }
 }

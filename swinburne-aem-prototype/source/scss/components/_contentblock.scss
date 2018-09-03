@@ -19,7 +19,7 @@
     @media (min-width: $screen-lg) {
       background-position: 75% top;
     }
-    &.no-content * {
+    &.image-only * {
       display: none;
     }
     & > .container > [class*="aem-Grid"] {

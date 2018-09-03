@@ -1460,7 +1460,19 @@ content/cq:tags/swinburne/component-analytics:
 
   eventtype:
     prefixes:
-    - site interaction
+    - site-interaction
+    valueFormat: 'site interaction'
+    title: '%%prefix_normalised%%'
+
+  linktype:
+    prefixes:
+    - button
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  linklocation:
+    prefixes:
+    - link
     valueFormat: '%%prefix%%'
     title: '%%prefix_normalised%%'
 
@@ -1587,7 +1599,7 @@ content/cq:tags/swinburne/component-dialog:
 # WARNING: Reference to these path is hardcoded into component dialogs
   html/heading:
     prefixes:
-      - h1
+      - 1h1
       - h2
       - h3
       - h4

@@ -3,6 +3,7 @@
 ;
 
 .fancybox-content {
+  transition: all 0.2s ease-in-out;
   max-height: 1px;
   max-width: 1px;
 }

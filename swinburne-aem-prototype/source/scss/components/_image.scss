@@ -11,12 +11,17 @@ html:not(.aem-AuthorLayer-Edit) {
       width: 100%;
       height: auto;
     }
-
+    &:last-child  {
+      position: absolute;
+      top: 90px;
+    }
   }
 }
 
 html.aem-AuthorLayer-Edit {
   div[component].theme--image-headerlogo {
+    position: relative;
+    top: 0;
     picture {
       &,
       img {

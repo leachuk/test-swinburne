@@ -28,7 +28,7 @@ title: Content Block container one column containing a page list component
 1. Theme
  * Swinburne : Component Style Theme / Lists / Cardslist / Cards Nav
 2. Modifier
- * none
+ * Swinburne : Component Style Modifier / Button / Icon / Chevron right
 3. Modules
  * none
 4. Chevron

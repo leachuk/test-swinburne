@@ -7,6 +7,7 @@ export default () => {
       let $body = $('body');
 
       $navToggler.click(function(){
+        $(this).toggleClass('collapsed');
         $body.toggleClass('collapsed');
         $navBar.slideToggle();
       });

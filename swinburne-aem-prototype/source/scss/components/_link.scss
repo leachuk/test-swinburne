@@ -51,6 +51,17 @@ a[component] {
   }
 }
 
+.btn-arrow {
+  &:after {
+    content: "\f054";
+    color: $white;
+    font-size: 16px;
+    font-family: $font-family-awesome-solid;
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
 .nav[component] {
   color: lighten($tertiary, 15%);
   text-decoration: none;

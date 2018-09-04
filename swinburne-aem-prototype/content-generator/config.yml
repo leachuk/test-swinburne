@@ -188,6 +188,11 @@ content/cq:tags/swinburne/component-style-modifier:
     valueFormat: btn btn-outline-%%prefix%%
     title: '%%prefix_normalised%%'
 
+  button/icon/chevron:
+    flat: true
+    prefix: btn-arrow
+    title: 'Chevron right'
+
   ## Button Size
   button/size/block:
     flat: true

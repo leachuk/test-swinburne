@@ -345,6 +345,13 @@ $border-color: #1d1f20;
             * {
               color: $white;
             }
+            @include media-breakpoint-up(lg) {
+              background-color: $white;
+              &,
+              * {
+                color: $tertiary;
+              }
+            }
           }
           @include media-breakpoint-up(lg) {
             display: inline-block;

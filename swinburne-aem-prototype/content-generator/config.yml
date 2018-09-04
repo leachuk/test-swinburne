@@ -188,6 +188,11 @@ content/cq:tags/swinburne/component-style-modifier:
     valueFormat: btn btn-outline-%%prefix%%
     title: '%%prefix_normalised%%'
 
+  button/icon/chevron:
+    flat: true
+    prefix: btn-arrow
+    title: 'Chevron right'
+
   ## Button Size
   button/size/block:
     flat: true
@@ -235,6 +240,11 @@ content/cq:tags/swinburne/component-style-modifier:
     flat: true
     prefix: fancybox-lg
     title: 'Large'
+
+  contentblock/banner/image:
+    flat: true
+    prefix: image-only
+    title: 'Image Only'
 
   # Cards
   card:
@@ -927,6 +937,7 @@ content/cq:tags/swinburne/component-style-theme:
       - carousel
       - form
       - article
+      - text
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 
@@ -1460,7 +1471,19 @@ content/cq:tags/swinburne/component-analytics:
 
   eventtype:
     prefixes:
-    - site interaction
+    - site-interaction
+    valueFormat: 'site interaction'
+    title: '%%prefix_normalised%%'
+
+  linktype:
+    prefixes:
+    - button
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  linklocation:
+    prefixes:
+    - link
     valueFormat: '%%prefix%%'
     title: '%%prefix_normalised%%'
 

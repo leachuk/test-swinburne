@@ -25,4 +25,7 @@
     <filter root="/content/dam/formsanddocuments-themes/swinburne"/>
     <filter root="/etc/clientlibs/swinburne/forms"/>
 
+    <!--TODO: Used to backport analytics tags from Prod-->
+    <filter root="/content/cq:tags/swinburne/component-analytics" mode="update"/>
+
 </workspaceFilter>

@@ -19,6 +19,9 @@
     @media (min-width: $screen-lg) {
       background-position: 75% top;
     }
+    &.image-only * {
+      display: none;
+    }
     & > .container > [class*="aem-Grid"] {
       margin: 50px 5px 5px 0;
       width: 60%;
@@ -31,6 +34,15 @@
       padding: 13px;
       @media (min-width: $screen-sm) {
         padding: 20px;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        line-height: 1.1;
+        @media (min-width: $screen-sm) {
+          font-size: 50px;
+        }
       }
       h2 {
         font-size: 20px;
@@ -197,4 +209,52 @@
         }
       }
   }
+  &.theme--contentblock-text {
+    & > .container {
+      padding-top: 0;
+      padding-bottom: 55px;
+      @include media-breakpoint-down(sm) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      & > .aem-Grid {
+        padding: 20px 15px;
+        background-color: $white;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 1;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+      @include media-breakpoint-up(md) {
+        padding-top: 55px;
+        padding-bottom: 55px;
+        & > .aem-Grid {
+          padding: 58px 50px;
+        }
+        h1 {
+          font-size: 48px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+
+    }
+    .card-text {
+      margin-top: 25px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+ .header[component] + [component] {
+   margin-top: 50px;
+ }
 }

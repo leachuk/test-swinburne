@@ -35,6 +35,15 @@
       @media (min-width: $screen-sm) {
         padding: 20px;
       }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        line-height: 1.1;
+        @media (min-width: $screen-sm) {
+          font-size: 50px;
+        }
+      }
       h2 {
         font-size: 20px;
         margin-bottom: 10px;
@@ -236,6 +245,16 @@
           font-size: 20px;
         }
       }
+
+    }
+    .card-text {
+      margin-top: 25px;
     }
   }
+}
+
+@include media-breakpoint-down(md) {
+ .header[component] + [component] {
+   margin-top: 50px;
+ }
 }

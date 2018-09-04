@@ -107,5 +107,19 @@
     "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/contact-us.jpg\")",
     "componentTheme": "theme--contentblock-banner",
     "text": ""
+  },
+  "contentblock14": {
+    "componentId": "contentblock14",
+    "componentModifier": "",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/apply.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "text": "<h1>HOW TO<br>APPLY</h1>"
+  },
+  "contentblock15": {
+    "componentId": "contentblock15",
+    "componentModifier": "bg-c10",
+    "componentStyle": "",
+    "componentTheme": "theme--contentblock-text",
+    "text": "<p>So you're ready to apply for 2019. Excellent - and great decision, by the way. (We knew you had good taste.)</p><p>For Year 12 students (or anyone applying for multiple courses listed in VTAC), you'll need to apply through VTAC. For anyone else - including postgrad, mature age, gap year or international students - you're welcome to apply directly to Swinburne. VTAC applications <strong>open from 9am on 6 August and close at 5pm on 27 September.</strong> Direct applications, for both Australian and international students, can be made at any time.<p>So, go on, what are you waiting for?! Simply pick the option below that matches your situation.</p></p>"
   }
 }

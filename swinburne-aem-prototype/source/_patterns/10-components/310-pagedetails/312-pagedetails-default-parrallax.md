@@ -1,5 +1,5 @@
 ---
-title: Page Details
+title: Page Details Parallax
 ---
 ## Component
 #### Overview

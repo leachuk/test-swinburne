@@ -12,13 +12,13 @@
       {{> components-image.imageOnly( src: "{{{ src }}}",
                                       alt: "{{{ alt }}}") }}
       {{> components-text.default( text: "{{{ text }}}" ) }}
-      <span component class="pagetitle">
-        {{{ title }}}
-      </span>
-      {{> components-text.default( text: "{{{ description }}}" ) }}
-      {{> components-link.default(  label: "{{{ btnText }}}",
-                                    href: "{{{ btnHref }}}",
-                                    modifier: "{{{ btnModifier }}}") }}
+      <span component class="pagetitle">{{{ title }}}</span>
+      <div class="description">
+        {{> components-text.default( text: "{{{ description }}}" ) }}
+      </div>
+      {{> components-link.default( label: "{{{ btnText }}}",
+                                   href: "{{{ btnHref }}}",
+                                   modifier: "{{{ btnModifier }}}") }}
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@ title: Page Details Parallax
 ---
 ## Component
 #### Overview
-  Component for displaying a default page details.
+  Component for displaying a default page details with parallax background.
 #### Variant
   Default
 #### Design

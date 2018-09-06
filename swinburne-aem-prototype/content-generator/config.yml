@@ -28,6 +28,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - primary
       - success
       - warning
+      - parallax
     valueFormat: bg-%%prefix%%
     title: '%%prefix_normalised%%'
 

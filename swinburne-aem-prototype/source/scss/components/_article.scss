@@ -4,3 +4,11 @@ article[component] {
     & > .aem-Grid {}
   }
 }
+
+html:not(.aem-AuthorLayer-Edit) {
+  article[component][data-layer-componentpath="article"] {
+    min-height: calc( 100vh - 274px );
+  }
+}
+
+

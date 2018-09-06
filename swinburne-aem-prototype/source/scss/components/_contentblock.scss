@@ -254,7 +254,10 @@
 }
 
 @include media-breakpoint-down(md) {
- .header[component] + [component] {
-   margin-top: 50px;
+ .header[component] {
+   & + .article,
+   & + [component] {
+     margin-top: 50px;
+   }
  }
 }

@@ -3,8 +3,10 @@ article[component] {
   &.article {
     & > .aem-Grid {}
   }
-  &[data-layer-componentpath="article"] {
-    background: url("https://www.swinburne.edu.au/media/swinburneeduau/style-assets/images/concrete_seamless.gif") repeat;
+}
+
+html:not(.aem-AuthorLayer-Edit) {
+  article[component][data-layer-componentpath="article"] {
     min-height: calc( 100vh - 274px );
   }
 }

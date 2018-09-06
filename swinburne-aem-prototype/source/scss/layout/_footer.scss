@@ -16,6 +16,7 @@ footer[component],
       & > * {
         color: $white;
         display: inline-block;
+        vertical-align: top;
       }
     }
     div[component].pagelist {
@@ -25,6 +26,7 @@ footer[component],
         padding: 0;
         max-width: inherit;
         width: auto;
+        vertical-align: top;
       }
       & > .content {
         margin: 0;

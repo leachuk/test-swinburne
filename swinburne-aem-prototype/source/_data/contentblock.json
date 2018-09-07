@@ -128,6 +128,12 @@
     "componentStyle": "",
     "componentTheme": "theme--contentblock-accordion"
   },
+  "contentblock17": {
+    "componentId": "contentblock17",
+    "componentModifier": "bg-c10",
+    "componentStyle": "",
+    "componentTheme": "theme--contentblock-fluid"
+  },
   "accordionItems": [
     {
       "itemId": "a",

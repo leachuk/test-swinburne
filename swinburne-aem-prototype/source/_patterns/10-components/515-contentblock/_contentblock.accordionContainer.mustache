@@ -1,0 +1,15 @@
+<div {{> components-componentAttributes( componentName: "contentblock",
+                                         componentId: "{{{ id }}}",
+                                         componentTheme: "{{{ theme }}}",
+                                         componentModifier: "{{{ modifier }}}",
+                                         componentModules: "{{{ modules }}}",
+                                         componentChevron: "{{{ chevron }}}",
+                                         componentIcon: "{{{ icon }}}",
+                                         componentStyle: "{{{ style }}}" ) }}>
+  <div class="aem-Grid">
+    {{> components-contentblock.accordion( modifier: "{{{ contentblock16.componentModifier }}}",
+                                           modules: "{{{ contentblock16.componentModules }}}",
+                                           theme: "{{{ contentblock16.componentTheme }}}",
+                                           id: "{{{ contentblock16.componentId }}}" )}}
+  </div>
+</div>

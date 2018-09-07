@@ -126,13 +126,56 @@
     "componentId": "contentblock16",
     "componentModifier": "",
     "componentStyle": "",
-    "componentTheme": "theme--contentblock-accordion"
+    "componentTheme": "theme--contentblock-accordion",
+    "text": "<h2>TURN KNOWING INTO KNOW-HOW</h2>",
+    "src": "https://www.swinburne.edu.au/choose/__archive/2017-timely/_assets/images/knowing.png",
+    "imgModifier": "img-fluid"
   },
   "contentblock17": {
     "componentId": "contentblock17",
     "componentModifier": "bg-c10",
     "componentStyle": "",
     "componentTheme": "theme--contentblock-fluid"
+  },
+  "contentblock18": {
+    "componentId": "contentblock18",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/vtac-explained-banner.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "linkHref": "http://google.com",
+    "text": "<h2>I want insider</h2>",
+    "linkText": "See upcoming events"
+  },
+  "contentblock19": {
+    "componentId": "contentblock19",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/vce-exam-revision.jpg\")",
+    "componentTheme": "theme--contentblock-banner mb-30",
+    "linkHref": "http://google.com",
+    "text": "<h2>BLITZ YOUR EXAM PREP</h2>",
+    "linkText": "Tell me all the tips!"
+  },
+  "contentblock20": {
+    "componentId": "contentblock20",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/atar-calc.jpg\")",
+    "componentTheme": "theme--contentblock-banner mb-30",
+    "linkHref": "http://google.com",
+    "text": "<h2>See where your ATAR could take you</h2>",
+    "linkText": "Use the calculator"
+  },
+  "contentblock21": {
+    "componentId": "contentblock21",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/study-pack-banner.jpg\")",
+    "componentTheme": "theme--contentblock-banner mb-30",
+    "linkHref": "http://google.com",
+    "text": "<h2>Score loads of prizes</h2>",
+    "linkText": "Find out how"
+  },
+  "contentblock22": {
+    "componentId": "contentblock22",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/find-a-course-banner.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "linkHref": "http://google.com",
+    "text": "<h2>Find my ideal course</h2>",
+    "linkText": "Take me there"
   },
   "accordionItems": [
     {

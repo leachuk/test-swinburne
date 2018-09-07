@@ -939,6 +939,7 @@ content/cq:tags/swinburne/component-style-theme:
       - form
       - article
       - text
+      - accordion
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 

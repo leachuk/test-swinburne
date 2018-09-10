@@ -60,6 +60,11 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: inverted
     title: 'Inverted'
 
+  image/responsive:
+    flat: true
+    prefix: img-fluid
+    title: 'Img Fluid'
+
   # Colours
   color:
     prefixes:
@@ -940,6 +945,7 @@ content/cq:tags/swinburne/component-style-theme:
       - article
       - text
       - accordion
+      - fluid
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 

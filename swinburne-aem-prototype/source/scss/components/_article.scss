@@ -6,8 +6,13 @@ article[component] {
 }
 
 html:not(.aem-AuthorLayer-Edit) {
-  article[component][data-layer-componentpath="article"] {
-    min-height: calc( 100vh - 274px );
+  @include media-breakpoint-up(lg) {
+    article[component][data-layer-componentpath="article"] {
+      min-height: calc( 100vh - 274px );
+    }
+    header article[component][data-layer-componentpath="article"] {
+      min-height: auto !important;
+    }
   }
 }
 

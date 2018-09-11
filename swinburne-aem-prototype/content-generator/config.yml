@@ -537,6 +537,12 @@ content/cq:tags/swinburne/component-style-modifier:
     prefixValue: fa-
     title: '%%prefix_normalised%%'
 
+  content/alignment/center:
+    flat: true
+    prefix: align-center
+    title: 'Align Center'
+
+
   # Margin
   margin:
     breakpoints:

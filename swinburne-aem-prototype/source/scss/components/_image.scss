@@ -18,6 +18,17 @@ html:not(.aem-AuthorLayer-Edit) {
   }
 }
 
+.image[component] {
+  &.img-fluid {
+    img {
+      min-width: auto;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
 html.aem-AuthorLayer-Edit {
   div[component].theme--image-headerlogo {
     position: relative;

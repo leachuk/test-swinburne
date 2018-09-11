@@ -1,0 +1,18 @@
+<div {{> components-componentAttributes( componentName: "contentblock",
+                                         componentId: "{{{ id }}}",
+                                         componentTheme: "{{{ theme }}}",
+                                         componentModifier: "{{{ modifier }}}",
+                                         componentModules: "{{{ modules }}}",
+                                         componentChevron: "{{{ chevron }}}",
+                                         componentIcon: "{{{ icon }}}",
+                                         componentStyle: "{{{ style }}}" ) }}>
+  <div class="aem-Grid">
+    {{> components-text.default( text: "{{{ contentblock16.text }}}") }}
+    {{> components-contentblock.accordion( modifier: "{{{ contentblock16.componentModifier }}}",
+                                           modules: "{{{ contentblock16.componentModules }}}",
+                                           theme: "{{{ contentblock16.componentTheme }}}",
+                                           id: "{{{ contentblock16.componentId }}}" )}}
+    {{> components-image.imageOnly(modifier: "{{{ contentblock16.imgModifier }}}",
+                                   src: "{{{ contentblock16.src }}}") }}
+  </div>
+</div>

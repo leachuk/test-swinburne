@@ -30,9 +30,10 @@
 }
 
 body {
-  &.collapsed {
+  &.collapsed > .container {
     @include media-breakpoint-down(md) {
       overflow: hidden;
+      position: fixed;
     }
   }
 }

@@ -517,6 +517,7 @@ $border-color: #1d1f20;
         font-weight: normal;
         a:not(.btn) {
           color: $primary;
+          display: inline-block;
           &:hover {
             color: $primary;
             text-decoration: none;

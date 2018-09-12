@@ -13,9 +13,10 @@
       "description": "<p>Tuesday 23 January, 4pm – 6pm<br/>Hawthorn campus</p>",
       "text": "<p>It’s time to stop thinking, start doing, and step into study. Find out all you need to know about our course options and how you can start studying in 2018.</p>",
       "btnText": "register now",
-      "btnHref": "www.google.fr"
+      "btnHref": "http://localhost:3000/patterns/20-pages-jie/20-pages-jie.rendered.html#mkt-form"
   },
   "pagedetails2": {
+
     "componentId": "pagedetails2",
     "componentTheme": "theme--pagedetail-brand",
     "componentModifier": "bg-parallax",

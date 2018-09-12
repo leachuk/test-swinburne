@@ -67,6 +67,15 @@ $(() => {
     $('.collapse[data-parent]').collapse('dispose')
   }
 
+
+  $('a').click( (e) => {
+    let link = e.target.attributes[4].value;
+    if(link.split('#').length > 1) {
+      let hash = link.split('#').pop();
+      location.hash = hash;
+    }
+  })
+
 })
 
 // HMR (Hot Module Replacement)

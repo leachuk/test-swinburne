@@ -69,7 +69,7 @@ $(() => {
 
 
   $('a').click( (e) => {
-    let link = e.target.attributes[4].value;
+    let link = $(e.target).attr('href');
     if(link.split('#').length > 1) {
       let hash = link.split('#').pop();
       location.hash = hash;

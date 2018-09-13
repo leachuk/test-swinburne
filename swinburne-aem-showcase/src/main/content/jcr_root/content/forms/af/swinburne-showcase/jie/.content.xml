@@ -8,6 +8,17 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="test"
         sling:resourceType="fd/af/components/page2/aftemplatedpage">
+        <metadata
+                fd:version="1.1"
+                jcr:mixinTypes="[]"
+                jcr:primaryType="nt:unstructured"
+                allowedRenderFormat="HTML"
+                analyticsEnabled="enabled"
+                availableInMobileApp="{Boolean}false"
+                dorType="none"
+                formmodel="none"
+                hasCustomThumbnail="{Boolean}false"
+                title="jie"/>
         <guideContainer
             fd:version="1.1"
             jcr:primaryType="nt:unstructured"

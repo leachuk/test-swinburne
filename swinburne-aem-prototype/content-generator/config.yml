@@ -269,11 +269,6 @@ content/cq:tags/swinburne/component-style-modifier:
     valueFormat: card--%%prefix%%
     title: 'Card - %%prefix_normalised%%'
 
-  card/inverse:
-    flat: true
-    prefix: card-inverse
-    title: 'Inverse'
-
   card/container:
     prefixes:
       - columns

@@ -297,6 +297,10 @@ content/cq:tags/swinburne/component-style-modifier:
     valueFormat: card-outline-%%prefix%%
     title: 'Outline - %%prefix_normalised%%'
 
+  cards/direction:
+    prefix: cards-horizontal
+    title: 'Horizontal'
+
 
   # Embed
   embed/default:

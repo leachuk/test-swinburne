@@ -193,7 +193,7 @@
             padding-bottom: 0;
           }
         }
-        .pagelist[component] {
+        [class*="list"][component]{
           padding: 0;
           margin-top: 25px;
           p {

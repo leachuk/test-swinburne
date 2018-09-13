@@ -27,6 +27,13 @@ html:not(.aem-AuthorLayer-Edit) {
       height: auto;
     }
   }
+  &.img-center {
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    transform: translateX(-50%);
+    left: 50%;
+  }
 }
 
 html.aem-AuthorLayer-Edit {

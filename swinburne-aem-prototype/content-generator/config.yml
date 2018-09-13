@@ -65,6 +65,11 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: img-fluid
     title: 'Img Fluid'
 
+  image/alignment:
+    flat: true
+    prefix: img-center
+    title: 'Img Center'
+
   # Colours
   color:
     prefixes:

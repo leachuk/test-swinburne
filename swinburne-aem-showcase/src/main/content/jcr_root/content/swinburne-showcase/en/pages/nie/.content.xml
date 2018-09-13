@@ -6,13 +6,13 @@
             jcr:isCheckedOut="{Boolean}true"
             jcr:mixinTypes="[mix:versionable]"
             jcr:primaryType="cq:PageContent"
-            jcr:title="Timely"
+            jcr:title="November Info Evening"
             jcr:uuid="1630dd89-bf6d-4b62-bb8a-849ce48a1b7d"
             sling:resourceType="swinburne/components/template/base">
         <article
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/article"
-                componentId="article_timely">
+                componentId="article_nie">
             <par
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/container">
@@ -20,7 +20,7 @@
                         jcr:mixinTypes="[cq:Taggable]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/details/page-details"
-                        componentId="page_details_timely"
+                        componentId="page_details_nie"
                         componentModifiers="[swinburne:component-style-modifier/background/standard/parallax]"
                         componentTheme="[swinburne:component-style-theme/layout/page-details/theme--pagedetail-brand]"
                         hideDescription="true"
@@ -46,13 +46,13 @@
                         <image
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/media/image"
-                                componentId="image_timely"
+                                componentId="image_nie"
                                 fileReference="/content/dam/swinburne-showcase/en/common/youve-got-this.png"/>
                         <text
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/content/text"
-                                componentId="text_timely"
-                                text="&lt;p>Yep, exams suck. But you’re nearly there! And we’ve got a couple of things to help get you over the line.&lt;/p>&#xd;&#xa;&lt;p>If you need a D&amp;amp;M about your study options for after school, come speak to us at a&amp;nbsp;&lt;a href=&quot;http://localhost:3000/patterns/20-pages-2017-timely/20-pages-2017-timely.rendered.html?1536810376422&quot;>Swinburne Information Evening&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>Or if you just want to knuckle down and get it done, check out these&amp;nbsp;&lt;a href=&quot;http://localhost:3000/patterns/20-pages-2017-timely/20-pages-2017-timely.rendered.html?1536810376422&quot;>handy exam tips&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                componentId="text_nie"
+                                text="&lt;p>Yep, exams suck. But you’re nearly there! And we’ve got a couple of things to help get you over the line.&lt;/p>&#xd;&#xa;&lt;p>If you need a D&amp;amp;M about your study options for after school, come speak to us at a&amp;nbsp;&lt;a href=&quot;http://localhost:3000/patterns/20-pages-2017-nie/20-pages-2017-nie.rendered.html?1536810376422&quot;>Swinburne Information Evening&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>Or if you just want to knuckle down and get it done, check out these&amp;nbsp;&lt;a href=&quot;http://localhost:3000/patterns/20-pages-2017-nie/20-pages-2017-nie.rendered.html?1536810376422&quot;>handy exam tips&lt;/a>.&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                     </par>
                 </page_details>
@@ -322,7 +322,7 @@
                                         dataToggle="collapse"
                                         hideTitle="false"
                                         hideTitleSeparator="true"
-                                        title="I've missed the cut-off date for timely VTAC applications! Can I still apply?"
+                                        title="I've missed the cut-off date for nie VTAC applications! Can I still apply?"
                                         variant="childsection">
                                     <par
                                             jcr:primaryType="nt:unstructured"

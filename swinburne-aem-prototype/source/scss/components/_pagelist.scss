@@ -25,7 +25,7 @@
 }
 
 $border-color: #1d1f20;
-
+.eventlist[component],
 .pagelist {
   @include make-container;
   @include make-container-max-widths;
@@ -474,6 +474,7 @@ $border-color: #1d1f20;
     }
   }
   &.theme--list-card {
+    &.eventlist,
     &.pagelist {
       max-width: 100%;
       padding: 1.4rem 0 3.125rem 0;

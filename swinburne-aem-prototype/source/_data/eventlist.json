@@ -10,7 +10,7 @@
   "eventList2": {
     "componentId": "eventlist2",
     "componentTheme": "theme--list-card",
-    "componentModifier": "column-3 cards-horizontal",
+    "componentModifier": "column-1 cards-horizontal",
     "componentModules": "",
     "componentChevron": "",
     "componentIcon": ""

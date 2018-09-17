@@ -14,7 +14,7 @@ pipeline {
 	echo "Running branch build number: ${env.BUILD_ID}"
       }
     }
-    stage() {
+    stage('Deploy') {
       when {
         branch 'develop'
       }

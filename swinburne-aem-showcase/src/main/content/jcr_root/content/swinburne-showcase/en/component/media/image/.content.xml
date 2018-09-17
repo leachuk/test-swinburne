@@ -686,6 +686,29 @@
                     </par>
                 </contentblock23>
 
+                <contentblock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        title="Image: Content Block - Fluid"
+                        componentId="contentblock_HIRNQCQKK"
+                        componentTheme="[swinburne:component-style-theme/layout/contentblock/fluid]">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/layout/container">
+                        <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"
+                                componentId="image_65XXF0CVI"
+                                componentModifiers="[swinburne:component-style-modifier/image/responsive]"
+                                fileReference="/content/dam/swinburne-showcase/en/common/knowing.png"/>
+                    </par>
+                    <bgimage
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/media/image"/>
+                </contentblock>
 
             </par>
         </article>

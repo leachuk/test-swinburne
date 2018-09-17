@@ -7,9 +7,19 @@ pipeline {
       }
     }
     stage('Test') {
+      when {
+        branch 'feature/S3KMD-887_jenkins'
+      }
       steps {
-	echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-        echo 'Testing..'
+	echo "Running branch build number: ${env.BUILD_ID}"
+      }
+    }
+    stage() {
+      when {
+        branch 'develop'
+      }
+      steps {
+        echo 'Deploying to test environment'
       }
     }
   }

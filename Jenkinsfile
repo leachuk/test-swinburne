@@ -12,9 +12,10 @@ pipeline {
       }
     }
     stage('Deploy') {
-      steps {
-        echo 'Deploying....'
-        echo 'We are currently working on branch: ${env.BRANCH_NAME}'
+      if (env.BRANCH_NAME == 'master') {
+        echo 'I only execute on the master branch'
+      } else {
+        echo "I execute on the ${env.BRANCH_NAME} branch"
       }
     }
   }

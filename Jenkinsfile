@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-	    echo "Running branch ${env.BRANCH} build number: ${env.BUILD_ID}"
+	    echo "Running build number: ${env.BUILD_ID}"
       	sh 'mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
       }
     }

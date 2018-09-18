@@ -33,7 +33,7 @@ pipeline {
         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=13.238.172.197 -Dcrx.port=4503 -Dcrx.username=${TEST_PUBLISH2_CREDS_USR} -Dcrx.password=${TEST_PUBLISH2_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
       }
     }
-    stage('Deploy to Production') {
+    stage('Deploy to Prod') {
       when { branch 'master' }
       steps {
         echo 'Production environment has not been configured'

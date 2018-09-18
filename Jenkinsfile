@@ -2,22 +2,8 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      environment {
-        DEV_AUTHOR_CREDS = credentials('dev-author-creds')
-        DEV_PUBLISH1_CREDS = credentials('dev-publish1-creds')
-      }
-      parallel {
-        stage('Build properties') {
-          steps {
-            echo "Running build number: ${env.BUILD_ID}"
-            echo "Dev author user: ${DEV_AUTHOR_CREDS_USR}"
-          }
-        }
-        stage('Package') {
-          steps {
-            sh 'mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          }
-        }
+      steps {
+        sh 'mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
       }
     }
     stage('Develop') {

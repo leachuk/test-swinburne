@@ -3,8 +3,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo "Running build number: ${env.BUILD_ID}"
-        sh 'mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+        parallel {
+          stage('Build number') {
+            steps {
+              echo "Running build number: ${env.BUILD_ID}"
+            }
+          }
+          stage('Package') {
+            steps {
+              sh 'mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+            }
+          }
+        }
       }
     }
     stage('Develop') {

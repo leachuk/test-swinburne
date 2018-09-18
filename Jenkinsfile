@@ -15,7 +15,7 @@ pipeline {
       }
       steps {
         echo 'Deploying to Development environment'
-        sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=swinburne-author-dev-01.at.isobaraustralia.com -Dcrx.port=80 -Dcrx.username=${DEV_AUTHOR_CREDS_USR} -Dcrx.password=${DEV_AUTHOR_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+        sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=52.63.25.46 -Dcrx.port=4502 -Dcrx.username=${DEV_AUTHOR_CREDS_USR} -Dcrx.password=${DEV_AUTHOR_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=52.63.236.227 -Dcrx.port=4503 -Dcrx.username=${DEV_PUBLISH1_CREDS_USR} -Dcrx.password=${DEV_PUBLISH1_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
       }
     }
@@ -28,7 +28,7 @@ pipeline {
       }
       steps {
         echo 'Deploying to Testing environment'
-        sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=13.211.194.181 -Dcrx.port=80 -Dcrx.username=${TEST_AUTHOR_CREDS_USR} -Dcrx.password=${TEST_AUTHOR_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+        sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=13.211.194.181 -Dcrx.port=4502 -Dcrx.username=${TEST_AUTHOR_CREDS_USR} -Dcrx.password=${TEST_AUTHOR_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=13.237.162.203 -Dcrx.port=4503 -Dcrx.username=${TEST_PUBLISH1_CREDS_USR} -Dcrx.password=${TEST_PUBLISH1_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=13.238.172.197 -Dcrx.port=4503 -Dcrx.username=${TEST_PUBLISH2_CREDS_USR} -Dcrx.password=${TEST_PUBLISH2_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
       }

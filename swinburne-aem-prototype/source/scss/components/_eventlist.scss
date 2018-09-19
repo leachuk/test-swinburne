@@ -1,5 +1,10 @@
 $disabled: #808080;
 
+
+.hidden {
+  display: none;
+}
+
 .eventlist[component] {
   &.theme--list-card {
     .card {
@@ -18,8 +23,26 @@ $disabled: #808080;
         }
         a.btn {
           background-color: $disabled;
+          pointer-events: none;
+          cursor: not-allowed;
           &:hover {
             background-color: lighten($disabled, 7%);
+          }
+          &:before {
+            content: "event over";
+          }
+          &:after {
+            content: "";
+          }
+          & > span {
+            display: none;
+          }
+        }
+      }
+      &.event-finished {
+        a.btn {
+          &:before {
+            content: "event finished";
           }
         }
       }

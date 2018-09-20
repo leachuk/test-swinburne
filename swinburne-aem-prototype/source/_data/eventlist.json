@@ -2,7 +2,7 @@
   "eventList1": {
     "componentId": "eventlist1",
     "componentTheme": "theme--list-card",
-    "componentModifier": "column-3",
+    "componentModifier": "column-3 hidden",
     "componentModules": "",
     "componentChevron": "",
     "componentIcon": ""

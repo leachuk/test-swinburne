@@ -1,10 +1,5 @@
 $disabled: #808080;
 
-
-.hidden {
-  display: none;
-}
-
 .eventlist[component] {
   &.theme--list-card {
     .card {
@@ -45,6 +40,11 @@ $disabled: #808080;
             content: "event finished";
           }
         }
+      }
+    }
+    &.hidden {
+      .card.finished {
+        display: none;
       }
     }
     .card-date {

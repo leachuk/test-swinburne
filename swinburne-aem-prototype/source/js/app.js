@@ -76,6 +76,9 @@ $(() => {
     }
   })
 
+  //Hide event card's parent when hidden modifier is set to event list.
+  $('.eventlist[component].hidden .card.finished').parent().hide();
+
 })
 
 // HMR (Hot Module Replacement)

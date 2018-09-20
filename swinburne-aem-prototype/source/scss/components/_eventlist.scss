@@ -43,9 +43,7 @@ $disabled: #808080;
       }
     }
     &.hidden {
-      .card.finished {
-        display: none;
-      }
+      .card.finished {}
     }
     .card-date {
       margin-bottom: 15px;

@@ -4,9 +4,6 @@
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
 
-$nav-color: #aaa;
-$nav-hover-color: #777;
-
 @mixin pagelist-variant($selector: false) {
   $selector: if($selector != false, unquote($selector), $selector);
 
@@ -353,7 +350,7 @@ $border-color: #1d1f20;
               background-color: $white;
               &,
               * {
-                color: $nav-hover-color;
+                color: $tertiary;
               }
             }
           }
@@ -378,7 +375,7 @@ $border-color: #1d1f20;
             }
           }
           a > * {
-            color: $nav-color;
+            color: lighten($tertiary, 15%);
             transition: color 0.3s ease-in-out;
             text-align: center;
             position: relative;
@@ -396,7 +393,7 @@ $border-color: #1d1f20;
               a {
                 text-decoration: none;
                 & > * {
-                  color: $nav-hover-color;
+                  color: $tertiary;
                 }
               }
             }

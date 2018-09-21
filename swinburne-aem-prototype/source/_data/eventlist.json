@@ -2,7 +2,7 @@
   "eventList1": {
     "componentId": "eventlist1",
     "componentTheme": "theme--list-card",
-    "componentModifier": "column-3",
+    "componentModifier": "column-3 hidden",
     "componentModules": "",
     "componentChevron": "",
     "componentIcon": ""
@@ -10,7 +10,7 @@
   "eventList2": {
     "componentId": "eventlist2",
     "componentTheme": "theme--list-card",
-    "componentModifier": "column-3 cards-horizontal",
+    "componentModifier": "column-1 cards-horizontal",
     "componentModules": "",
     "componentChevron": "",
     "componentIcon": ""
@@ -31,7 +31,7 @@
       "icon": "fa fa-calendar-alt",
       "title": "Wantirna Advice Night",
       "datetime": "MON 10 SEPTEMBER</br>4pm – 6pm",
-      "link": "event over",
+      "link": "register",
       "description": "Considering nursing, early education, apprenticeships or vocational courses? Find out more and let our specialist staff answer all your questions.",
       "status": "",
       "eventStatus": "finished"

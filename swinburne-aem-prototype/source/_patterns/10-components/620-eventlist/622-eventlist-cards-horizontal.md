@@ -10,6 +10,7 @@ title: Event List Cards
  * Swinburne : Component Style Theme / Lists / Cardslist / Cards Nav
 2. Modifier
  * Swinburne : Component Style Modifier / Cards / Direction / Horizontal
+ * Swinburne : Component Style Modifier / Grid / List / Pagelist / Columns / Column 1
 3. Modules
  * none
 4. Chevron

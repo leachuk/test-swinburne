@@ -479,6 +479,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: column-3
     title: 'Column 3'
 
+  grid/list/eventlist/visibility/hidden:
+    flat: true
+    prefix: hidden
+    title: 'hidden'
+
   # Icons
   icon/size:
     prefixes:

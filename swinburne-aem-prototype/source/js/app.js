@@ -83,7 +83,7 @@ $(() => {
 
   // Disable parallax effect on touch screen.
   let $pagesParallax = $('[component].bg-parallax');
-  if( 'ontouchstart' in document.documentElement ) {
+  if( 'ontouchstart' in document.documentElement && $(window).width() < 992 ) {
     $pagesParallax.addClass('bg-scroll');
     console.log('Parallax disabled')
   }
@@ -93,4 +93,13 @@ $(() => {
 // HMR (Hot Module Replacement)
 if (module.hot) {
   module.hot.accept()
+}
+
+if(navigator.userAgent.match(/Trident\/7\./)) {
+  document.body.addEventListener("mousewheel", function() {
+    event.preventDefault();
+    let wd = event.wheelDelta;
+    let csp = window.pageYOffset;
+    window.scrollTo(0, csp - wd);
+  });
 }

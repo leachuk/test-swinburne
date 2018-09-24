@@ -33,6 +33,7 @@ pipeline {
     stage('CacheClearPublish-1') {
       when { branch 'test' }
       environment {
+        TEST_AUTHOR_CREDS = credentials('test-author-creds')
         TEST_PUBLISH1_CREDS = credentials('test-publish1-creds')
       }
       steps {
@@ -42,6 +43,7 @@ pipeline {
     stage('CacheClearPublish-2') {
       when { branch 'test' }
         environment {
+          TEST_AUTHOR_CREDS = credentials('test-author-creds')
           TEST_PUBLISH2_CREDS = credentials('test-publish2-creds')
         }
       steps {

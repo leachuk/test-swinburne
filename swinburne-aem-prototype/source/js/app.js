@@ -83,7 +83,7 @@ $(() => {
 
   // Disable parallax effect on touch screen.
   let $pagesParallax = $('[component].bg-parallax');
-  if( 'ontouchstart' in document.documentElement ) {
+  if( 'ontouchstart' in document.documentElement && $(window).width() < 992 ) {
     $pagesParallax.addClass('bg-scroll');
     console.log('Parallax disabled')
   }

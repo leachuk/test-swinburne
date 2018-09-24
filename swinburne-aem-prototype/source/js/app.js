@@ -94,3 +94,12 @@ $(() => {
 if (module.hot) {
   module.hot.accept()
 }
+
+if(navigator.userAgent.match(/Trident\/7\./)) {
+  document.body.addEventListener("mousewheel", function() {
+    event.preventDefault();
+    let wd = event.wheelDelta;
+    let csp = window.pageYOffset;
+    window.scrollTo(0, csp - wd);
+  });
+}

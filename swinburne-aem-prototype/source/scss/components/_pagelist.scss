@@ -525,6 +525,12 @@ $border-color: #1d1f20;
           }
         }
       }
+      .card-action {
+        .card-link {
+          font-weight: bold;
+          color: $primary;
+        }
+      }
     }
     .content > ul {
       justify-content: left;

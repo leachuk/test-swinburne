@@ -901,6 +901,16 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: '${eventStartDateText}'
     title: 'Event Start Date Formatted'
 
+  details/event-details/format/subtitle/singleDateUppercase:
+    flat: true
+    prefix: '${eventStartDateUppercase}'
+    title: 'Event Start Date Formatted - UpperCase'
+
+  details/event-details/format/subtitle/singleDateLowercase:
+    flat: true
+    prefix: '${eventStartDateLowercase}'
+    title: 'Event Start Date Formatted - LowerCase'
+
   details/event-details/format/subtitle/singledatetime:
     flat: true
     prefix: '${eventStartDateText}, ${eventStartTimeText}'
@@ -926,15 +936,30 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: '${eventStartDateText} - ${eventEndDateText}'
     title: 'Hyphen Separated Start and End Date formatted'
 
+  details/event-details/format/displaydate/emdash-separator:
+    flat: true
+    prefix: '${eventStartDateUppercase} &#x2014; ${eventEndDateTextUppercase}'
+    title: 'EM Dash Separated Start and End Date formatted - UpperCase'
+
   details/event-details/format/displaytime/default:
     flat: true
-    prefix: '${eventStartTimeText} to ${eventStartTimeText}'
+    prefix: '${eventStartTimeText} to ${eventEndTimeText}'
     title: 'Default Start and End Time formatted'
 
   details/event-details/format/displaytime/hyphen-separator:
     flat: true
-    prefix: '${eventStartTimeText} - ${eventStartTimeText}'
+    prefix: '${eventStartTimeText} - ${eventEndTimeText}'
     title: 'Hyphen Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/emdash-separator:
+    flat: true
+    prefix: '${eventStartTimeText} &#x2014; ${eventEndTimeText}'
+    title: 'EM Dash Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/emdash-separator-lower:
+    flat: true
+    prefix: '${eventStartTimeLowercase} &#x2014; ${eventEndTimeLowercase}'
+    title: 'EM Dash Separated Start and End Time formatted - LowerCase'
 
   ## Page Details
   details/page-details/format/title/default:

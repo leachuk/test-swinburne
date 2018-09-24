@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="9655f9db-fd17-471b-9629-c412468971b7">
+    <jcr:content
+        cq:lastReplicated="{Date}2018-09-19T05:07:55.161Z"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:name="apply.jpg"
+        cq:parentPath="/content/dam/swinburne-showcase/en/components/content/download"
+        dam:assetState="processed"
+        dam:relativePath="swinburne-showcase/en/components/content/download/apply.jpg"
+        jcr:lastModified="{Date}2018-09-18T23:32:51.380Z"
+        jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2018-09-18T02:56:39.823Z"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="413ff02ba74e8737fa0cfe3b78c6f170209ec13c"
+            dam:size="{Long}247703"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2018-09-18T02:56:42.910Z"
+            jcr:lastModified="{Date}2018-09-18T23:32:51.286Z"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}600"
+            tiff:ImageWidth="{Long}2000"
+            xmp:CreatorTool="Adobe Photoshop CC (Windows)"
+            xmpMM:DocumentID="xmp.did:069E0FFB8E2E11E886B09A3DA4D7E48F"
+            xmpMM:InstanceID="xmp.iid:069E0FFA8E2E11E886B09A3DA4D7E48F">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:069E0FF98E2E11E886B09A3DA4D7E48F"
+                stRef:instanceID="xmp.iid:069E0FF88E2E11E886B09A3DA4D7E48F"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

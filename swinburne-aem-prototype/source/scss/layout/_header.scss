@@ -44,11 +44,21 @@ header[component],
         display: none;
       }
     }
+    @include media-breakpoint-down(md) {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: $white;
+    }
   }
 }
 
 html.aem-AuthorLayer-Edit {
   .header[component].theme--header-swinburne {
+    height: auto;
+    position: relative !important;
+
     div[component].parsys,
     div[component].embedsource > a {
       float: none;
@@ -63,4 +73,3 @@ html.aem-AuthorLayer-Edit {
     float: none;
   }
 }
-

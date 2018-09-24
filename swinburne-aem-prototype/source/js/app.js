@@ -67,6 +67,27 @@ $(() => {
     $('.collapse[data-parent]').collapse('dispose')
   }
 
+
+  // Force to add # key to url when available.
+  $('a').click( (e) => {
+    let link = $(e.target).attr('href');
+    if(link.split('#').length > 1) {
+      let hash = link.split('#').pop();
+      location.hash = hash;
+    }
+  })
+
+  //Hide event card's parent when hidden modifier is set to event list.
+  $('.eventlist[component].hidden .card.finished').parent().hide();
+
+
+  // Disable parallax effect on touch screen.
+  let $pagesParallax = $('[component].bg-parallax');
+  if( 'ontouchstart' in document.documentElement ) {
+    $pagesParallax.addClass('bg-scroll');
+    console.log('Parallax disabled')
+  }
+
 })
 
 // HMR (Hot Module Replacement)

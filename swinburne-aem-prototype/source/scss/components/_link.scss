@@ -30,6 +30,13 @@
   }
 }
 
+.advsection .childsection .btn-link {
+  color: $secondary;
+  &:hover {
+    color: $secondary;
+  }
+}
+
 a[component] {
   &.link {
     font-size: 20px;
@@ -48,6 +55,17 @@ a[component] {
   background-color: $primary;
   &:hover {
     background-color: lighten($primary, 10%);
+  }
+}
+
+.btn-arrow {
+  &:after {
+    content: "\f054";
+    color: $white;
+    font-size: 16px;
+    font-family: $font-family-awesome-solid;
+    display: inline-block;
+    margin-left: 5px;
   }
 }
 

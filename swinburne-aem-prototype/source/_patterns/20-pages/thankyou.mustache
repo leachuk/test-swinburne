@@ -1,0 +1,28 @@
+<div class="container">
+  {{> components-header.containerOneColumn( theme: "{{{ header2.componentTheme }}}",
+  modifier: "{{{ header2.componentModifier }}}",
+  id: "{{{ header2.componentId }}}",
+  style: "{{{ header2.componentStyle }}}",
+  modules: "{{{ header2.componentModule }}}",
+  text: "{{{ header2.text }}}") }}
+  <div class="article">
+    <article component data-layer-componentpath="article">
+      {{> components-contentblock.containerbanner( theme: "{{{ contentblock13.componentTheme }}}",
+      modifier: "{{{ contentblock13.componentModifier }}}",
+      id: "{{{ contentblock13.componentId }}}",
+      style: "{{{ contentblock13.componentStyle }}}",
+      text: "{{{ contentblock13.text }}}") }}
+      {{> components-contentblock.containerOneColumn( modifier: "{{{ contentblock12.componentModifier }}}",
+      modules: "{{{ contentblock12.componentModules }}}",
+      theme: "{{{ contentblock12.componentTheme }}}",
+      id: "{{{ contentblock12.componentId }}}",
+      text: "{{{ contentblock12.text }}}" ) }}
+    </article>
+  </div>
+  {{> components-footer.defaultTwoColumn( modifier: "{{{ footer6.componentModifier }}}",
+  id: "{{{ footer6.componentId }}}",
+  style: "{{{ footer6.componentStyle }}}",
+  text: "{{{ footer6.text }}}",
+  theme: "{{{ footer6.componentTheme }}}")
+  }}
+</div>

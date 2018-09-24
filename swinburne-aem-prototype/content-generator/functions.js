@@ -63,7 +63,7 @@ const prefixes = {
   c7: 'C7 (Swinburne Red)',
   c8: 'C8 (Black)',
   c9: 'C9 (White)',
-  c10: 'C10 (Dark Grey)',
+  c10: 'C10 (Concrete Texture)',
   c11: 'C11 (Light Grey)',
 
   // Specific styles

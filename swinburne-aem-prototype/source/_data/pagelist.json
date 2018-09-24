@@ -87,5 +87,31 @@
     "componentIcon": "",
     "componentStyle": "",
     "links": []
-  }
+  },
+  "pageList5": {
+    "componentId": "pagelist5",
+    "componentTheme": "theme--list-card",
+    "componentModifier": "column-3",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": ""
+  },
+  "pageList5links": [
+    {
+      "icon": "fa fa-book",
+      "title": "Current Year 12 student",
+      "link": "<p><a href='' class='btn btn-primary btn-arrow'>APPLY NOW</a></p>"
+    },
+    {
+      "icon": "fa fa-street-view",
+      "title": "AUSTRALIAN CITIZEN OR PERMANENT RESIDENT",
+      "link": "<p><a href='' class='btn btn-primary btn-arrow'>APPLY NOW</a></p>"
+    },
+    {
+      "icon": "fa fa-globe",
+      "title": "ON A STUDENT VISA AND APPLYING DIRECTLY",
+      "link": "<p><a href='' class='btn btn-primary btn-arrow'>APPLY NOW</a></p>"
+    }
+  ]
 }

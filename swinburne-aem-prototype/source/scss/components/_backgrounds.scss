@@ -1,3 +1,11 @@
 .bg-c10 {
   background: url("https://www.swinburne.edu.au/media/swinburneeduau/style-assets/images/concrete_seamless.gif") repeat;
 }
+
+.bg-parallax {
+  background-attachment: fixed;
+}
+
+.bg-scroll {
+  background-attachment: scroll !important;
+}

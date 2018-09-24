@@ -11,12 +11,35 @@ html:not(.aem-AuthorLayer-Edit) {
       width: 100%;
       height: auto;
     }
+    &:last-child  {
+      position: absolute;
+      top: 90px;
+    }
+  }
+}
 
+.image[component] {
+  &.img-fluid {
+    img {
+      min-width: auto;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &.img-center {
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    transform: translateX(-50%);
+    left: 50%;
   }
 }
 
 html.aem-AuthorLayer-Edit {
   div[component].theme--image-headerlogo {
+    position: relative;
+    top: 0;
     picture {
       &,
       img {

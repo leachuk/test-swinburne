@@ -25,7 +25,7 @@
 }
 
 $border-color: #1d1f20;
-
+.eventlist[component],
 .pagelist {
   @include make-container;
   @include make-container-max-widths;
@@ -298,6 +298,10 @@ $border-color: #1d1f20;
         z-index: 10;
         overflow: hidden;
         display: none;
+        @include media-breakpoint-down(md) {
+          overflow: auto;
+          max-height: calc( 100vh - 49px );
+        }
         @include media-breakpoint-up(lg) {
           position: relative;
           top: 0;
@@ -319,6 +323,7 @@ $border-color: #1d1f20;
           transition: background-color 0.3s ease-in-out;
           padding-left: 0;
           padding-right: 0;
+          vertical-align: top;
           &:first-of-type {
             border-top: 1px solid $border-color;
           }
@@ -335,6 +340,19 @@ $border-color: #1d1f20;
             width: 100%;
             height: 66px;
             max-width: 100%;
+          }
+          a:active {
+            background-color: $black;
+            * {
+              color: $white;
+            }
+            @include media-breakpoint-up(lg) {
+              background-color: $white;
+              &,
+              * {
+                color: $tertiary;
+              }
+            }
           }
           @include media-breakpoint-up(lg) {
             display: inline-block;
@@ -456,6 +474,7 @@ $border-color: #1d1f20;
     }
   }
   &.theme--list-card {
+    &.eventlist,
     &.pagelist {
       max-width: 100%;
       padding: 1.4rem 0 3.125rem 0;
@@ -497,12 +516,19 @@ $border-color: #1d1f20;
       .card-text {
         font-size: 16px;
         font-weight: normal;
-        a {
+        a:not(.btn) {
           color: $primary;
+          display: inline-block;
           &:hover {
             color: $primary;
             text-decoration: none;
           }
+        }
+      }
+      .card-action {
+        .card-link {
+          font-weight: bold;
+          color: $primary;
         }
       }
     }

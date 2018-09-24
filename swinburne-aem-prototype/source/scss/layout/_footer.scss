@@ -16,20 +16,17 @@ footer[component],
       & > * {
         color: $white;
         display: inline-block;
+        vertical-align: top;
       }
-      padding-top: 10px;
     }
     div[component].pagelist {
-      width: 100%;
-      display: block;
-      max-width: 100%;
-      padding-left: 0;
-      margin-top: 0;
+      &,
       ul > li {
         display: inline-block;
         padding: 0;
         max-width: inherit;
         width: auto;
+        vertical-align: top;
       }
       & > .content {
         margin: 0;
@@ -52,6 +49,7 @@ footer[component],
     }
     [class*='col-'] {
       &:first-of-type {
+        padding-top: 9px;
         @include media-breakpoint-down(md) {
           text-align: center;
         }
@@ -61,15 +59,6 @@ footer[component],
           text-transform: uppercase;
           &:hover {
             text-decoration: none;
-          }
-        }
-        ul > li {
-          &:nth-child(1),
-          &:nth-child(2),
-          &:nth-child(3) {
-            a  * {
-              color: $white;
-            }
           }
         }
       }

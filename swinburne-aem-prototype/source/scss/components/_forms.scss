@@ -19,7 +19,6 @@
 
 .theme--brand-form,
 .theme--brand-formSSI {
-  background-color: $black;
   .mobileLayout {
     display: none;
   }
@@ -37,6 +36,7 @@
       padding-right: 0 !important;
     }
   }
+  h1,
   .guideTextDraw.headerText {
     margin-bottom: 0;
     color: $white;
@@ -46,12 +46,14 @@
     padding-left: 0;
     padding-right: 0;
     text-align: left;
+    &,
     p {
       font-size: 40px;
       text-align: left;
       line-height: 1.1;
     }
     @include media-breakpoint-up(md) {
+      &,
       p {
         font-size: 52px;
       }
@@ -247,6 +249,9 @@
 }
 
 .theme--brand-formSSI {
+  h1 {
+    margin-bottom: 15px;
+  }
   legend .fas {
     font-family: $font-family-awesome;
   }

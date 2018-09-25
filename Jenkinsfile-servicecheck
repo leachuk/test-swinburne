@@ -1,13 +1,14 @@
 def remote = [:]
 remote.allowAnyHosts = true
 
-node {
-    withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ec2-user', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
-        remote.user = "ec2-user"
-        remote.identityFile = identity
+parallel {
+    dev: {
 
-        parallel {
-            dev: {
+        node {
+            withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ec2-user', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
+                remote.user = "ec2-user"
+                remote.identityFile = identity
+
                 stage("swinburne-author-dev") {
                     remote.name = "swinburne-author-dev"
                     remote.host = "52.63.25.46"
@@ -23,8 +24,17 @@ node {
                     remote.host = "13.211.6.240"
                     sshCommand remote: remote, command: 'ls'
                 }
+
             }
-            test: {
+        }
+    }
+
+    test: {
+        node {
+            withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ec2-user', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
+                remote.user = "ec2-user"
+                remote.identityFile = identity
+
                 stage("swinburne-author-test-01") {
                     remote.name = "swinburne-author-test-01"
                     remote.host = "13.211.194.181"
@@ -51,7 +61,9 @@ node {
                     remote.host = "54.79.76.87"
                     sshCommand remote: remote, command: 'ls'
                 }
+
             }
         }
+
     }
 }

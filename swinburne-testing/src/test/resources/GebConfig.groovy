@@ -1,5 +1,4 @@
 import com.google.common.io.Files
-import geb.driver.BrowserStackDriverFactory
 import geb.driver.SauceLabsDriverFactory
 import groovy.json.JsonOutput
 import org.openqa.selenium.Dimension
@@ -21,6 +20,7 @@ import support.ReportListener
 import java.util.logging.Level
 
 import static org.apache.commons.lang3.SystemUtils.*
+
 //find and select driver bin to use
 File findDriverExecutable(String named) {
 
@@ -271,19 +271,48 @@ environments {
 
     // run as  -Dgeb.env=htmlunit
     "remote-browserstack" {
-        printDebug("DRIVER", "local-browserstack")
+        printDebug("DRIVER", "remote-browserstack")
 
-        def browserStackBrowser = System.getProperty("geb.browserstack.browser")
-        if (browserStackBrowser) {
+        String GEB_BROWSERSTACK_USERNAME = System.properties.getProperty("GEB_BROWSERSTACK_USERNAME","")
+        String GEB_BROWSERSTACK_AUTHKEY = System.properties.getProperty("GEB_BROWSERSTACK_AUTHKEY","")
+        String GEB_BROWSERSTACK_SCHEMA = System.properties.getProperty("GEB_BROWSERSTACK_SCHEMA","https")
+        String GEB_BROWSERSTACK_HOST = System.properties.getProperty("GEB_BROWSERSTACK_HOST","hub-cloud.browserstack.com/wd/hub")
+        String GEB_BROWSERSTACK_URL = "$GEB_BROWSERSTACK_SCHEMA://$GEB_BROWSERSTACK_USERNAME:$GEB_BROWSERSTACK_AUTHKEY@$GEB_BROWSERSTACK_HOST"
+        String GEB_BROWSERSTACK_BROWSER = System.properties.getProperty("geb.browserstack.browser","Chrome")
+        String GEB_BROWSERSTACK_BROWSER_NAME = System.properties.getProperty("geb.browserstack.browser.name","")
+        String GEB_BROWSERSTACK_BROSWER_VERSION = System.properties.getProperty("geb.browserstack.browser.version","69.0")
+        String GEB_BROWSERSTACK_BUILD = System.properties.getProperty("geb.browserstack.build","")
+        String GEB_BROWSERSTACK_OS = System.properties.getProperty("geb.browserstack.os","Windows")
+        String GEB_BROWSERSTACK_OS_VERSION = System.properties.getProperty("geb.browserstack.os.version","10")
+        String GEB_BROWSERSTACK_DEBUG = System.properties.getProperty("geb.browserstack.debug","true")
+        String GEB_BROWSERSTACK_DEVICE = System.properties.getProperty("geb.browserstack.device","")
+        String GEB_BROWSERSTACK_REALMOBILE = System.properties.getProperty("geb.browserstack.device","true")
+        String GEB_BROWSERSTACK_RESOLUTION = System.properties.getProperty("geb.browserstack.resolution","2048x1536")
+        printDebug("DRIVER URL", "$GEB_BROWSERSTACK_URL")
+
+        if (GEB_BROWSERSTACK_BROWSER) {
             driver = {
-                def username = System.getenv("GEB_BROWSERSTACK_USERNAME")
-                assert username
-                def accessKey = System.getenv("GEB_BROWSERSTACK_AUTHKEY")
-                assert accessKey
-                new BrowserStackDriverFactory().create(browserStackBrowser, username, accessKey)
-//                def localId = System.getenv("GEB_BROWSERSTACK_LOCALID")
-//                assert localId
-//                new BrowserStackDriverFactory().create(browserStackBrowser, username, accessKey, localId)
+
+                DesiredCapabilities caps = new DesiredCapabilities();
+
+                // Capabilities from environment
+                GEB_BROWSERSTACK_BROWSER ? caps.setCapability("browser", GEB_BROWSERSTACK_BROWSER) : ""
+                GEB_BROWSERSTACK_BROSWER_VERSION ? caps.setCapability("browser_version", GEB_BROWSERSTACK_BROSWER_VERSION) : ""
+                GEB_BROWSERSTACK_BUILD ? caps.setCapability("build", GEB_BROWSERSTACK_BUILD) : ""
+                GEB_BROWSERSTACK_OS ? caps.setCapability("os", GEB_BROWSERSTACK_OS) : ""
+                GEB_BROWSERSTACK_OS_VERSION ? caps.setCapability("os_version", GEB_BROWSERSTACK_OS_VERSION) : ""
+                GEB_BROWSERSTACK_BROWSER_NAME ? caps.setCapability("browserName", GEB_BROWSERSTACK_BROWSER_NAME) : ""
+                GEB_BROWSERSTACK_DEVICE ? caps.setCapability("device", GEB_BROWSERSTACK_DEVICE) : ""
+                GEB_BROWSERSTACK_REALMOBILE ? caps.setCapability("realMobile", GEB_BROWSERSTACK_REALMOBILE) : ""
+                GEB_BROWSERSTACK_RESOLUTION ? caps.setCapability("resolution", GEB_BROWSERSTACK_RESOLUTION) : ""
+
+                // Hardcoded capabilities
+                GEB_BROWSERSTACK_DEBUG ? caps.setCapability("browserstack.debug", GEB_BROWSERSTACK_DEBUG) : ""
+
+                URL remoteURL = new URL(GEB_BROWSERSTACK_URL)
+
+                driver = new RemoteWebDriver(remoteURL, caps)
+                return driver
             }
         }
     }

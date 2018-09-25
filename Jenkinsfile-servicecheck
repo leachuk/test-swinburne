@@ -8,7 +8,11 @@ node {
         stage("swinburne-author-dev") {
             remote.name = "swinburne-author-dev"
             remote.host = "52.63.25.46"
-            sshCommand remote: remote, command: 'ls'
+            try{
+                sshCommand remote: remote, command: 'ls'
+            } catch (err){
+                echo currentBuild.result
+            }
         }
         stage("swinburne-publisher-dev") {
             remote.name = "swinburne-publisher-dev"
@@ -23,34 +27,58 @@ node {
         stage("swinburne-dispatcher-dev") {
             remote.name = "swinburne-dispatcher-dev"
             remote.host = "13.211.6.240"
-            sshCommand remote: remote, command: 'ls'
+            try{
+                sshCommand remote: remote, command: 'ls'
+            } catch (err){
+                echo currentBuild.result
+            }
         }
 
         stage("swinburne-author-test-01") {
             remote.name = "swinburne-author-test-01"
             remote.host = "13.211.194.181"
-            sshCommand remote: remote, command: 'ls'
+            try{
+                sshCommand remote: remote, command: 'ls'
+            } catch (err){
+                echo currentBuild.result
+            }
         }
         stage("swinburne-publish-test-01") {
             remote.name = "swinburne-publish-test-01"
             remote.host = "13.237.162.203"
-            sshCommand remote: remote, command: 'ls'
+            try{
+                sshCommand remote: remote, command: 'ls'
+            } catch (err){
+                echo currentBuild.result
+            }
         }
         stage("swinburne-dispatcher-test-01") {
             remote.name = "swinburne-dispatcher-test-01"
             remote.host = "13.238.86.144"
-            sshCommand remote: remote, command: 'ls'
+            try{
+                sshCommand remote: remote, command: 'ls'
+            } catch (err){
+                echo currentBuild.result
+            }
         }
 
         stage("swinburne-publish-test-02") {
             remote.name = "swinburne-publish-test-02"
             remote.host = "13.238.172.197"
-            sshCommand remote: remote, command: 'ls'
+            try{
+                sshCommand remote: remote, command: 'ls'
+            } catch (err){
+                echo currentBuild.result
+            }
         }
         stage("swinburne-dispatcher-test-02") {
             remote.name = "swinburne-dispatcher-test-01"
             remote.host = "54.79.76.87"
-            sshCommand remote: remote, command: 'ls'
+            try{
+                sshCommand remote: remote, command: 'ls'
+            } catch (err){
+                echo currentBuild.result
+            }
         }
     }
 }

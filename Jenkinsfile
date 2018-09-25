@@ -33,21 +33,19 @@ pipeline {
     stage('CacheClearPublish-1') {
       when { branch 'test' }
       environment {
-        TEST_AUTHOR_CREDS = credentials('test-author-creds')
         TEST_PUBLISH1_CREDS = credentials('test-publish1-creds')
       }
       steps {
-        sh 'curl -u ${TEST_AUTHOR_CREDS_USR}:${TEST_PUBLISH1_CREDS} -X POST  http://13.238.172.197:4503/etc/acs-commons/dispatcher-flush/disp-flush/_jcr_content/configuration.flush.html'
+        sh 'curl -u ${TEST_PUBLISH1_CREDS} -X POST  http://13.238.172.197:4503/etc/acs-commons/dispatcher-flush/disp-flush/_jcr_content/configuration.flush.html'
       }
     }
     stage('CacheClearPublish-2') {
       when { branch 'test' }
-        environment {
-          TEST_AUTHOR_CREDS = credentials('test-author-creds')
-          TEST_PUBLISH2_CREDS = credentials('test-publish2-creds')
-        }
+      environment {
+        TEST_PUBLISH2_CREDS = credentials('test-publish2-creds')
+      }
       steps {
-        sh 'curl -u ${TEST_AUTHOR_CREDS_USR}:${TEST_PUBLISH2_CREDS} -X POST  http://13.237.162.203:4503/etc/acs-commons/dispatcher-flush/disp-flush/_jcr_content/configuration.flush.html'
+        sh 'curl -u ${TEST_PUBLISH2_CREDS} -X POST  http://13.237.162.203:4503/etc/acs-commons/dispatcher-flush/disp-flush/_jcr_content/configuration.flush.html'
       }
     }
   }

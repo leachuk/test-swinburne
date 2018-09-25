@@ -331,7 +331,7 @@ environments {
                 caps.setCapability("browserstack.timezone", GEB_BROWSERSTACK_TIMEZONE)
                 caps.setCapability("browserstack.geoLocation", GEB_BROWSERSTACK_GEOLOCATION)
                 caps.setCapability("browserstack.customNetwork", GEB_BROWSERSTACK_NETWORKSPEED)
-                caps.setCapability("bdeviceOrientation", GEB_BROWSERSTACK_DEVICEORIENTATION)
+                caps.setCapability("deviceOrientation", GEB_BROWSERSTACK_DEVICEORIENTATION)
                 caps.setCapability("browserstack.debug", GEB_BROWSERSTACK_DEBUG)
 
                 URL remoteURL = new URL(GEB_BROWSERSTACK_URL)

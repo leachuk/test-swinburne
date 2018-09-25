@@ -13,7 +13,12 @@ node {
         stage("swinburne-publisher-dev") {
             remote.name = "swinburne-publisher-dev"
             remote.host = "52.63.236.227"
-            sshCommand remote: remote, command: 'ls'
+            try{
+                sshCommand remote: remote, command: 'ls'
+            } catch (err){
+                echo currentBuild.result
+            }
+
         }
         stage("swinburne-dispatcher-dev") {
             remote.name = "swinburne-dispatcher-dev"

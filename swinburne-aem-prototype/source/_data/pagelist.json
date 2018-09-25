@@ -97,6 +97,85 @@
     "componentIcon": "",
     "componentStyle": ""
   },
+  "pageList7": {
+    "componentId": "pagelist7",
+    "componentTheme": "theme--list-tiles",
+    "componentModifier": "column-6",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": ""
+  },
+  "pageList6links": [
+    {
+      "icon": "fa-comments",
+      "title": "Arts and Humanities"
+    },
+    {
+      "icon": "fa-plane",
+      "title": "Aviation"
+    },
+    {
+      "icon": "fa-university",
+      "title": "Built Environment and Architecture"
+    },
+    {
+      "icon": "fa-bar-chart",
+      "title": "Business"
+    },
+    {
+      "icon": "fa-connectdevelop",
+      "title": "Design"
+    },
+    {
+      "icon": "fa-book",
+      "title": "Education"
+    },
+    {
+      "icon": "fa-cogs",
+      "title": "Engineering"
+    },
+    {
+      "icon": "fa-video",
+      "title": "Film and Television"
+    },
+    {
+      "icon": "fa-gamepad",
+      "title": "Games and Animation"
+    },
+    {
+      "icon": "fa-heartbeat",
+      "title": "Health"
+    },
+    {
+      "icon": "fa-code",
+      "title": "Information Technology"
+    },
+    {
+      "icon": "fa-gavel",
+      "title": "Law"
+    },
+    {
+      "icon": "fa-newspaper",
+      "title": "Media and Communication"
+    },
+    {
+      "icon": "fa-stethoscope",
+      "title": "Nursing"
+    },
+    {
+      "icon": "fa-users",
+      "title": "Psychology"
+    },
+    {
+      "icon": "fa-flask",
+      "title": "Science"
+    },
+    {
+      "icon": "fa-wrench",
+      "title": "Apprenticeships"
+    }
+  ],
   "pageList5links": [
     {
       "icon": "fa fa-book",

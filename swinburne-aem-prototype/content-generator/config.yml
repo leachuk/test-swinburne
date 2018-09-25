@@ -1482,6 +1482,12 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - star
       - school
       - paper-plane
+      - connectdevelop
+      - graduation-cap
+      - video
+      - university
+      - bar-chart
+      - newspaper
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 

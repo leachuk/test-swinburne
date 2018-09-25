@@ -10,6 +10,7 @@ node {
             remote.host = "52.63.25.46"
             try{
                 sshCommand remote: remote, command: 'ls'
+                currentBuild.result = 'SUCCESS'
             } catch (err){
                 echo currentBuild.result
                 currentBuild.result = 'FAILURE'
@@ -20,6 +21,7 @@ node {
             remote.host = "52.63.236.227"
             try{
                 sshCommand remote: remote, command: 'ls'
+                currentBuild.result = 'SUCCESS'
             } catch (err){
                 echo currentBuild.result
                 currentBuild.result = 'FAILURE'
@@ -31,6 +33,7 @@ node {
             remote.host = "13.211.6.240"
             try{
                 sshCommand remote: remote, command: 'ls'
+                currentBuild.result = 'SUCCESS'
             } catch (err){
                 echo currentBuild.result
                 currentBuild.result = 'FAILURE'
@@ -42,6 +45,7 @@ node {
             remote.host = "13.211.194.181"
             try{
                 sshCommand remote: remote, command: 'ls'
+                currentBuild.result = 'SUCCESS'
             } catch (err){
                 echo currentBuild.result
                 currentBuild.result = 'FAILURE'
@@ -52,6 +56,7 @@ node {
             remote.host = "13.237.162.203"
             try{
                 sshCommand remote: remote, command: 'ls'
+                currentBuild.result = 'SUCCESS'
             } catch (err){
                 echo currentBuild.result
                 currentBuild.result = 'FAILURE'
@@ -62,6 +67,7 @@ node {
             remote.host = "13.238.86.144"
             try{
                 sshCommand remote: remote, command: 'ls'
+                currentBuild.result = 'SUCCESS'
             } catch (err){
                 echo currentBuild.result
                 currentBuild.result = 'FAILURE'
@@ -73,6 +79,7 @@ node {
             remote.host = "13.238.172.197"
             try{
                 sshCommand remote: remote, command: 'ls'
+                currentBuild.result = 'SUCCESS'
             } catch (err){
                 echo currentBuild.result
                 currentBuild.result = 'FAILURE'
@@ -83,6 +90,7 @@ node {
             remote.host = "54.79.76.87"
             try{
                 sshCommand remote: remote, command: 'ls'
+                currentBuild.result = 'SUCCESS'
             } catch (err){
                 echo currentBuild.result
                 currentBuild.result = 'FAILURE'

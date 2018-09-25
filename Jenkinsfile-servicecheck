@@ -1,0 +1,19 @@
+def remote = [:]
+remote.allowAnyHosts = true
+
+node {
+    withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ec2-user', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
+        stage("swinburne-author-dev") {
+            remote.host = "52.63.25.46"
+            remote.user = "ec2-user"
+            remote.identityFile = identity
+            sshCommand remote: remote, command: 'ls'
+        }
+        stage("swinburne-publisher-dev") {
+            remote.host = "52.63.236.227"
+            remote.user = "ec2-user"
+            remote.identityFile = identity
+            sshCommand remote: remote, command: 'ls'
+        }
+    }
+}

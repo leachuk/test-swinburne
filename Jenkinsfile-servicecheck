@@ -8,7 +8,7 @@ node {
 
         stage('Test Servers') {
             parallel {
-                stage('Dev') {
+                dev: {
                     stage("swinburne-author-dev") {
                         remote.name = "swinburne-author-dev"
                         remote.host = "52.63.25.46"
@@ -25,7 +25,7 @@ node {
                         sshCommand remote: remote, command: 'ls'
                     }
                 }
-                stage('Test') {
+                test: {
                     stage("swinburne-author-test-01") {
                         remote.name = "swinburne-author-test-01"
                         remote.host = "13.211.194.181"
@@ -54,9 +54,6 @@ node {
                     }
                 }
             }
-
         }
-
-
     }
 }

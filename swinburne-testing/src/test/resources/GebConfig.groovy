@@ -273,21 +273,35 @@ environments {
     "remote-browserstack" {
         printDebug("DRIVER", "remote-browserstack")
 
-        String GEB_BROWSERSTACK_USERNAME = System.properties.getProperty("GEB_BROWSERSTACK_USERNAME","")
-        String GEB_BROWSERSTACK_AUTHKEY = System.properties.getProperty("GEB_BROWSERSTACK_AUTHKEY","")
-        String GEB_BROWSERSTACK_SCHEMA = System.properties.getProperty("GEB_BROWSERSTACK_SCHEMA","https")
-        String GEB_BROWSERSTACK_HOST = System.properties.getProperty("GEB_BROWSERSTACK_HOST","hub-cloud.browserstack.com/wd/hub")
+        //ref: https://www.browserstack.com/automate/capabilities
+        String GEB_BROWSERSTACK_USERNAME = System.properties.getProperty("geb.browserstack.username","")
+        String GEB_BROWSERSTACK_AUTHKEY = System.properties.getProperty("geb.browserstack.authkey","")
+        String GEB_BROWSERSTACK_SCHEMA = System.properties.getProperty("geb.browserstack.schema","https")
+        String GEB_BROWSERSTACK_HOST = System.properties.getProperty("geb.browserstack.host","hub-cloud.browserstack.com/wd/hub")
         String GEB_BROWSERSTACK_URL = "$GEB_BROWSERSTACK_SCHEMA://$GEB_BROWSERSTACK_USERNAME:$GEB_BROWSERSTACK_AUTHKEY@$GEB_BROWSERSTACK_HOST"
         String GEB_BROWSERSTACK_BROWSER = System.properties.getProperty("geb.browserstack.browser","Chrome")
-        String GEB_BROWSERSTACK_BROWSER_NAME = System.properties.getProperty("geb.browserstack.browser.name","")
-        String GEB_BROWSERSTACK_BROSWER_VERSION = System.properties.getProperty("geb.browserstack.browser.version","69.0")
+        String GEB_BROWSERSTACK_BROSWER_VERSION = System.properties.getProperty("geb.browserstack.browserversion","69.0")
         String GEB_BROWSERSTACK_BUILD = System.properties.getProperty("geb.browserstack.build","")
         String GEB_BROWSERSTACK_OS = System.properties.getProperty("geb.browserstack.os","Windows")
-        String GEB_BROWSERSTACK_OS_VERSION = System.properties.getProperty("geb.browserstack.os.version","10")
+        String GEB_BROWSERSTACK_OS_VERSION = System.properties.getProperty("geb.browserstack.osversion","10")
         String GEB_BROWSERSTACK_DEBUG = System.properties.getProperty("geb.browserstack.debug","true")
         String GEB_BROWSERSTACK_DEVICE = System.properties.getProperty("geb.browserstack.device","")
-        String GEB_BROWSERSTACK_REALMOBILE = System.properties.getProperty("geb.browserstack.device","true")
+        String GEB_BROWSERSTACK_REALMOBILE = System.properties.getProperty("geb.browserstack.device","")
         String GEB_BROWSERSTACK_RESOLUTION = System.properties.getProperty("geb.browserstack.resolution","2048x1536")
+        String GEB_BROWSERSTACK_LOCAL= System.properties.getProperty("geb.browserstack.local","false")
+        String GEB_BROWSERSTACK_LOCALID= System.properties.getProperty("geb.browserstack.localIdentifier","")
+        String GEB_BROWSERSTACK_PROJECT= System.properties.getProperty("geb.browserstack.project","")
+        String GEB_BROWSERSTACK_ACCESPTSSL= System.properties.getProperty("geb.browserstack.acceptSslCerts","")
+        String GEB_BROWSERSTACK_PLATFORM = System.properties.getProperty("geb.browserstack.platform","")
+        String GEB_BROWSERSTACK_SELENIUMVERSION = System.properties.getProperty("geb.browserstack.selenium_version","3.5.2")
+        String GEB_BROWSERSTACK_NAME = System.properties.getProperty("geb.browserstack.name","")
+        String GEB_BROWSERSTACK_CONSOLE = System.properties.getProperty("geb.browserstack.console","")
+        String GEB_BROWSERSTACK_VIDEO = System.properties.getProperty("geb.browserstack.video","")
+        String GEB_BROWSERSTACK_NETWORKLOGS = System.properties.getProperty("geb.browserstack.networkLogs","")
+        String GEB_BROWSERSTACK_TIMEZONE = System.properties.getProperty("geb.browserstack.timezone","")
+        String GEB_BROWSERSTACK_GEOLOCATION = System.properties.getProperty("geb.browserstack.geoLocation","")
+        String GEB_BROWSERSTACK_NETWORKSPEED = System.properties.getProperty("geb.browserstack.customNetwork","")
+        String GEB_BROWSERSTACK_DEVICEORIENTATION = System.properties.getProperty("geb.browserstack.deviceOrientation","")
         printDebug("DRIVER URL", "$GEB_BROWSERSTACK_URL")
 
         if (GEB_BROWSERSTACK_BROWSER) {
@@ -296,18 +310,29 @@ environments {
                 DesiredCapabilities caps = new DesiredCapabilities();
 
                 // Capabilities from environment
-                GEB_BROWSERSTACK_BROWSER ? caps.setCapability("browser", GEB_BROWSERSTACK_BROWSER) : ""
-                GEB_BROWSERSTACK_BROSWER_VERSION ? caps.setCapability("browser_version", GEB_BROWSERSTACK_BROSWER_VERSION) : ""
-                GEB_BROWSERSTACK_BUILD ? caps.setCapability("build", GEB_BROWSERSTACK_BUILD) : ""
-                GEB_BROWSERSTACK_OS ? caps.setCapability("os", GEB_BROWSERSTACK_OS) : ""
-                GEB_BROWSERSTACK_OS_VERSION ? caps.setCapability("os_version", GEB_BROWSERSTACK_OS_VERSION) : ""
-                GEB_BROWSERSTACK_BROWSER_NAME ? caps.setCapability("browserName", GEB_BROWSERSTACK_BROWSER_NAME) : ""
-                GEB_BROWSERSTACK_DEVICE ? caps.setCapability("device", GEB_BROWSERSTACK_DEVICE) : ""
-                GEB_BROWSERSTACK_REALMOBILE ? caps.setCapability("realMobile", GEB_BROWSERSTACK_REALMOBILE) : ""
-                GEB_BROWSERSTACK_RESOLUTION ? caps.setCapability("resolution", GEB_BROWSERSTACK_RESOLUTION) : ""
-
-                // Hardcoded capabilities
-                GEB_BROWSERSTACK_DEBUG ? caps.setCapability("browserstack.debug", GEB_BROWSERSTACK_DEBUG) : ""
+                caps.setCapability("browser", GEB_BROWSERSTACK_BROWSER)
+                caps.setCapability("browser_version", GEB_BROWSERSTACK_BROSWER_VERSION)
+                caps.setCapability("build", GEB_BROWSERSTACK_BUILD)
+                caps.setCapability("os", GEB_BROWSERSTACK_OS)
+                caps.setCapability("os_version", GEB_BROWSERSTACK_OS_VERSION)
+                caps.setCapability("device", GEB_BROWSERSTACK_DEVICE)
+                caps.setCapability("realMobile", GEB_BROWSERSTACK_REALMOBILE)
+                caps.setCapability("resolution", GEB_BROWSERSTACK_RESOLUTION)
+                caps.setCapability("browserstack.local", GEB_BROWSERSTACK_LOCAL)
+                caps.setCapability("browserstack.localIdentifier", GEB_BROWSERSTACK_LOCALID)
+                caps.setCapability("project", GEB_BROWSERSTACK_PROJECT)
+                caps.setCapability("acceptSslCerts", GEB_BROWSERSTACK_ACCESPTSSL)
+                caps.setCapability("platform", GEB_BROWSERSTACK_PLATFORM)
+                caps.setCapability("selenium_version", GEB_BROWSERSTACK_SELENIUMVERSION)
+                caps.setCapability("name", GEB_BROWSERSTACK_NAME)
+                caps.setCapability("browserstack.console", GEB_BROWSERSTACK_CONSOLE)
+                caps.setCapability("browserstack.video", GEB_BROWSERSTACK_VIDEO)
+                caps.setCapability("browserstack.networkLogs", GEB_BROWSERSTACK_NETWORKLOGS)
+                caps.setCapability("browserstack.timezone", GEB_BROWSERSTACK_TIMEZONE)
+                caps.setCapability("browserstack.geoLocation", GEB_BROWSERSTACK_GEOLOCATION)
+                caps.setCapability("browserstack.customNetwork", GEB_BROWSERSTACK_NETWORKSPEED)
+                caps.setCapability("bdeviceOrientation", GEB_BROWSERSTACK_DEVICEORIENTATION)
+                caps.setCapability("browserstack.debug", GEB_BROWSERSTACK_DEBUG)
 
                 URL remoteURL = new URL(GEB_BROWSERSTACK_URL)
 

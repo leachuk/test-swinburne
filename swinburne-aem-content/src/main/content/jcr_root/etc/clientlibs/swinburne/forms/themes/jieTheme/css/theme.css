@@ -171,3 +171,9 @@ input[type="radio"] {
 .mobileLayout {
     display: none;
 }
+.validation-failure .guideFieldError {
+    color: #DC2D27;
+    font-size: 14px;
+    margin: -10px 0 10px 0;
+    font-weight: 500;
+}

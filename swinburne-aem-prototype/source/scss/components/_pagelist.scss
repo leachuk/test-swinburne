@@ -571,6 +571,7 @@ $border-color: #1d1f20;
     .card-icon,
     .card-text {
       background-color: map-deep-get($brand-colours, 'core', 'c2');
+      transition: background-color 0.3s ease-in-out;
       cursor: pointer;
     }
     .card {

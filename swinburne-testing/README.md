@@ -223,4 +223,4 @@ For more information please see following reference site [https://www.browsersta
 | GEB_BROWSERSTACK_TIMEZONE          | geb.browserstack.timezone          | browserstack.timezone        |
 | GEB_BROWSERSTACK_GEOLOCATION       | geb.browserstack.geoLocation       | browserstack.geoLocation     |
 | GEB_BROWSERSTACK_NETWORKSPEED      | geb.browserstack.customNetwork     | browserstack.customNetwork   |
-| GEB_BROWSERSTACK_DEVICEORIENTATION | geb.browserstack.deviceOrientation | bdeviceOrientation           |
+| GEB_BROWSERSTACK_DEVICEORIENTATION | geb.browserstack.deviceOrientation | deviceOrientation            |

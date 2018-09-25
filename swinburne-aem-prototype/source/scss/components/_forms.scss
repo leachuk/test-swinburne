@@ -142,12 +142,12 @@
         }
       }
     }
+    .guideWidgetLabel,
     .guideFieldLabel {
-      &.top {
-        label {
-          display: block;
-          margin-bottom: .35em;
-        }
+      label {
+        display: block;
+        margin-bottom: .35em;
+        font-size: 16px;
       }
     }
     select {

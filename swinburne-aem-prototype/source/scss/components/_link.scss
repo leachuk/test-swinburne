@@ -8,7 +8,6 @@
   font-weight: bold;
   white-space: normal;
   text-align: left;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
   &:not([class*="btn-outline-"]) {
     color: $white;
     &:hover {
@@ -36,6 +35,10 @@
   &:hover {
     color: $secondary;
   }
+}
+
+.btn-shadow {
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 a[component] {

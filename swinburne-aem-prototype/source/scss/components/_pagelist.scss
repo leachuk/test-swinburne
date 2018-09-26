@@ -563,39 +563,46 @@ $border-color: #1d1f20;
     }
     .card-body {
       display: block;
-      flex: 0;
+      flex: inherit;
       padding: 0;
     }
     .card,
     .card-body,
     .card-icon,
+    .card-title,
     .card-text {
       background-color: map-deep-get($brand-colours, 'core', 'c2');
+      transition: background-color 0.3s ease-in-out;
       cursor: pointer;
     }
     .card {
       &:hover {
         &,
+        .card-title,
         .card-body,
         .card-icon,
         .card-text {
           background-color: lighten( map-deep-get($brand-colours, 'core', 'c2'), 20% );
+          text-decoration: none;
         }
       }
     }
-    .card-body,
-    .card-icon {}
+    .card-title + .card-text {
+      display: none;
+    }
     .card {
       height: 130px;
       margin-bottom: 30px;
       display: flex;
       align-items: center;
+      justify-content: center;
       box-shadow: none;
       border-radius: 3px;
-      padding: 0;
+      padding:0;
       * {
         text-align: center;
       }
+      .card-title,
       .card-text {
         text-transform: uppercase;
         font-size: 12px;
@@ -603,6 +610,7 @@ $border-color: #1d1f20;
         color: $white;
         padding: 0 15px;
         line-height: 1.5;
+        margin: 0;
       }
       .card-icon {
         max-height: inherit;

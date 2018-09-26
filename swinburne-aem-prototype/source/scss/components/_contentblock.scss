@@ -96,8 +96,6 @@
       }
     }
     .row {
-      margin-right: 0;
-      margin-left: 0;
       .parsys_column {
         padding: 40px 15px;
         @include media-breakpoint-up(md) {
@@ -130,7 +128,6 @@
             overflow: hidden;
             iframe {
               width: 992px;
-              height: 1069px !important;
             }
           }
         }

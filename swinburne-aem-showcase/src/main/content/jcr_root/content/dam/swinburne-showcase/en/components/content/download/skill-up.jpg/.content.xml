@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="ba0d682d-b4e7-47b3-9b88-7c03fba7c03c">
+    <jcr:content
+        cq:lastReplicated="{Date}2018-09-19T06:56:12.069Z"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:name="skill-up.jpg"
+        cq:parentPath="/content/dam/swinburne-showcase/en/components/content/download"
+        dam:assetState="processed"
+        dam:relativePath="swinburne-showcase/en/components/content/download/skill-up.jpg"
+        jcr:lastModified="{Date}2018-09-18T23:32:53.428Z"
+        jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2018-09-18T02:56:39.273Z"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="32a7f00e3167f54d3b3355d93921489aab1b09d9"
+            dam:size="{Long}290953"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2018-09-05T00:16:22.413Z"
+            jcr:lastModified="{Date}2018-09-18T23:32:53.307Z"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}1080"
+            tiff:ImageWidth="{Long}1620"
+            xmp:CreatorTool="Adobe Photoshop CC (Windows)"
+            xmpMM:DocumentID="xmp.did:5F8C82998A3E11E8AF9287975AFA1C56"
+            xmpMM:InstanceID="xmp.iid:5F8C82988A3E11E8AF9287975AFA1C56">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:5F8C82978A3E11E8AF9287975AFA1C56"
+                stRef:instanceID="xmp.iid:5F8C82968A3E11E8AF9287975AFA1C56"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+        <usages
+            dam:score="{Long}1"
+            jcr:primaryType="nt:unstructured"
+            usedBy="[aem]">
+            <aem
+                jcr:primaryType="nt:unstructured"
+                count="{Long}1"
+                lastUsed="{Date}2018-08-30T01:21:03.093Z"/>
+        </usages>
+    </jcr:content>
+</jcr:root>

@@ -68,6 +68,7 @@ $(() => {
   }
 
 
+  // Force to add # key to url when available.
   $('a').click( (e) => {
     let link = $(e.target).attr('href');
     if(link.split('#').length > 1) {
@@ -76,9 +77,29 @@ $(() => {
     }
   })
 
+  //Hide event card's parent when hidden modifier is set to event list.
+  $('.eventlist[component].hidden .card.finished').parent().hide();
+
+
+  // Disable parallax effect on touch screen.
+  let $pagesParallax = $('[component].bg-parallax');
+  if( 'ontouchstart' in document.documentElement && $(window).width() < 992 ) {
+    $pagesParallax.addClass('bg-scroll');
+    console.log('Parallax disabled')
+  }
+
 })
 
 // HMR (Hot Module Replacement)
 if (module.hot) {
   module.hot.accept()
+}
+
+if(navigator.userAgent.match(/Trident\/7\./)) {
+  document.body.addEventListener("mousewheel", function() {
+    event.preventDefault();
+    let wd = event.wheelDelta;
+    let csp = window.pageYOffset;
+    window.scrollTo(0, csp - wd);
+  });
 }

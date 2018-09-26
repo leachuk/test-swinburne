@@ -4,9 +4,6 @@
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
 
-$nav-color: #aaa;
-$nav-hover-color: #777;
-
 @mixin pagelist-variant($selector: false) {
   $selector: if($selector != false, unquote($selector), $selector);
 
@@ -353,7 +350,7 @@ $border-color: #1d1f20;
               background-color: $white;
               &,
               * {
-                color: $nav-hover-color;
+                color: $tertiary;
               }
             }
           }
@@ -378,7 +375,7 @@ $border-color: #1d1f20;
             }
           }
           a > * {
-            color: $nav-color;
+            color: lighten($tertiary, 15%);
             transition: color 0.3s ease-in-out;
             text-align: center;
             position: relative;
@@ -396,7 +393,7 @@ $border-color: #1d1f20;
               a {
                 text-decoration: none;
                 & > * {
-                  color: $nav-hover-color;
+                  color: $tertiary;
                 }
               }
             }
@@ -482,6 +479,12 @@ $border-color: #1d1f20;
       max-width: 100%;
       padding: 1.4rem 0 3.125rem 0;
     }
+    .card-action {
+      .card-link:not(.btn) {
+        font-weight: bold;
+        color: $primary;
+      }
+    }
     .card {
       box-shadow: none;
       margin-bottom: 0;
@@ -549,6 +552,69 @@ $border-color: #1d1f20;
       }
     }
   }
+  &.theme--list-tiles {
+    .content {
+      & > ul {
+        justify-content: flex-start;
+        & > li {
+          width: 50%;
+        }
+      }
+    }
+    .card-body {
+      display: block;
+      flex: 0;
+      padding: 0;
+    }
+    .card,
+    .card-body,
+    .card-icon,
+    .card-text {
+      background-color: map-deep-get($brand-colours, 'core', 'c2');
+      cursor: pointer;
+    }
+    .card {
+      &:hover {
+        &,
+        .card-body,
+        .card-icon,
+        .card-text {
+          background-color: lighten( map-deep-get($brand-colours, 'core', 'c2'), 20% );
+        }
+      }
+    }
+    .card-body,
+    .card-icon {}
+    .card {
+      height: 130px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      box-shadow: none;
+      border-radius: 3px;
+      padding: 0;
+      * {
+        text-align: center;
+      }
+      .card-text {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        color: $white;
+        padding: 0 15px;
+        line-height: 1.5;
+      }
+      .card-icon {
+        max-height: inherit;
+        margin-bottom: 6px;
+        & > * {
+          color: $white;
+          display: block;
+          font-size: 28px;
+        }
+      }
+    }
+  }
   &.column-1 {
     .content > ul > li {
       flex: 0 0 100%;
@@ -572,6 +638,26 @@ $border-color: #1d1f20;
       @include media-breakpoint-up(lg) {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
+      }
+    }
+  }
+  &.column-6 {
+    .content > ul > li {
+      @include media-breakpoint-up(sm) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @include media-breakpoint-up(md) {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+      }
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+      @include media-breakpoint-up(xl) {
+        flex: 0 0 16.666666666666667%;
+        max-width: 16.666666666666667%;
       }
     }
   }

@@ -1,71 +1,55 @@
-pipeline {
-    agent any
+def remote = [:]
+remote.allowAnyHosts = true
 
-    triggers {
-        cron('H * * 1 0')
-    }
+node {
+    withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ec2-user', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
+        remote.user = "ec2-user"
+        remote.identityFile = identity
 
-    stages {
+        //DEV
+        stage("swinburne-author-dev") {
+            remote.name = "swinburne-author-dev"
+            remote.host = "52.63.25.46"
+            sshCommand remote: remote, command: 'ls'
+        }
+        stage("swinburne-publisher-dev") {
+            remote.name = "swinburne-publisher-dev"
+            remote.host = "52.63.236.227"
+            sshCommand remote: remote, command: 'ls'
+        }
+        stage("swinburne-dispatcher-dev") {
+            remote.name = "swinburne-dispatcher-dev"
+            remote.host = "13.211.6.240"
+            sshCommand remote: remote, command: 'ls'
+        }
 
-        stage('Build') {
-            steps {
-//                def remote = [:]
-//                remote.allowAnyHosts = true
-                sshagent ( ['jenkins-ec2-user']) {
-//                    sshCommand remote: remote, command: 'ls'
-                    sh "ssh -o StrictHostKeyChecking=no ec2-user@52.63.25.46 ls"
-                }
-//                withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ec2-user', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
-//                    remote.user = "ec2-user"
-//                    remote.identityFile = identity
-//
-//                    //DEV
-//                    step("swinburne-author-dev") {
-//                        remote.name = "swinburne-author-dev"
-//                        remote.host = "52.63.25.46"
-//                        sshCommand remote: remote, command: 'ls'
-//                    }
-//                    stage("swinburne-publisher-dev") {
-//                        remote.name = "swinburne-publisher-dev"
-//                        remote.host = "52.63.236.227"
-//                        sshCommand remote: remote, command: 'ls'
-//                    }
-//                    stage("swinburne-dispatcher-dev") {
-//                        remote.name = "swinburne-dispatcher-dev"
-//                        remote.host = "13.211.6.240"
-//                        sshCommand remote: remote, command: 'ls'
-//                    }
-//
-//                    //TEST
-//                    stage("swinburne-author-test-01") {
-//                        remote.name = "swinburne-author-test-01"
-//                        remote.host = "13.211.194.181"
-//                        sshCommand remote: remote, command: 'ls'
-//                    }
-//                    stage("swinburne-publish-test-01") {
-//                        remote.name = "swinburne-publish-test-01"
-//                        remote.host = "13.237.162.203"
-//                        sshCommand remote: remote, command: 'ls'
-//                    }
-//                    stage("swinburne-dispatcher-test-01") {
-//                        remote.name = "swinburne-dispatcher-test-01"
-//                        remote.host = "13.238.86.144"
-//                        sshCommand remote: remote, command: 'ls'
-//                    }
-//
-//                    stage("swinburne-publish-test-02") {
-//                        remote.name = "swinburne-publish-test-02"
-//                        remote.host = "13.238.172.197"
-//                        sshCommand remote: remote, command: 'ls'
-//                    }
-//                    stage("swinburne-dispatcher-test-02") {
-//                        remote.name = "swinburne-dispatcher-test-01"
-//                        remote.host = "54.79.76.87"
-//                        sshCommand remote: remote, command: 'ls'
-//                    }
-//                }
-            }
+
+        //TEST
+        stage("swinburne-author-test-01") {
+            remote.name = "swinburne-author-test-01"
+            remote.host = "13.211.194.181"
+            sshCommand remote: remote, command: 'ls'
+        }
+        stage("swinburne-publish-test-01") {
+            remote.name = "swinburne-publish-test-01"
+            remote.host = "13.237.162.203"
+            sshCommand remote: remote, command: 'ls'
+        }
+        stage("swinburne-dispatcher-test-01") {
+            remote.name = "swinburne-dispatcher-test-01"
+            remote.host = "13.238.86.144"
+            sshCommand remote: remote, command: 'ls'
+        }
+
+        stage("swinburne-publish-test-02") {
+            remote.name = "swinburne-publish-test-02"
+            remote.host = "13.238.172.197"
+            sshCommand remote: remote, command: 'ls'
+        }
+        stage("swinburne-dispatcher-test-02") {
+            remote.name = "swinburne-dispatcher-test-01"
+            remote.host = "54.79.76.87"
+            sshCommand remote: remote, command: 'ls'
         }
     }
-
 }

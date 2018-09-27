@@ -1206,6 +1206,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
      prefix: theme--list-images
      title: 'Image List'
 
+  lists/cardslist/tiles:
+     flat: true
+     prefix: theme--list-tiles
+     title: 'Tiles List'
+
   # Colctrl
   layout/colctrl/flush:
     prefixes:

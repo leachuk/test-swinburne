@@ -1,5 +1,5 @@
 ---
-title: Content Block container one column containing a page list component
+title: Content Block container one column
 ---
 ## Component
 #### Overview

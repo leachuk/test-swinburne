@@ -250,6 +250,20 @@
     .card-text {
       margin-top: 25px;
     }
+    div[component].pagelist {
+      margin-top: 30px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .theme--list-tiles[component].column-6 {
+      max-width: 1400px;
+      .content > ul > li {
+        @media ( min-width: 1200px ) {
+          flex: 0 0 16.666666666666667%;
+          max-width: 16.666666666666667%;
+        }
+      }
+    }
   }
   &.theme--contentblock-accordion {
     padding: 0 15px;

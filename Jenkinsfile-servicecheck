@@ -1,3 +1,6 @@
+def remote = [:]
+remote.allowAnyHosts = true
+
 pipeline {
     agent any
 
@@ -8,8 +11,6 @@ pipeline {
     stages {
 
         stage('Build') {
-            def remote = [:]
-            remote.allowAnyHosts = true
 
             withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ec2-user', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
                 remote.user = "ec2-user"

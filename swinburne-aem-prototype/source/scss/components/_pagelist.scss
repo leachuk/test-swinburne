@@ -381,7 +381,7 @@ $border-color: #1d1f20;
             position: relative;
           }
           &:hover {
-            background-color: $black;
+            background-color: $secondary;
             a {
               text-decoration: none;
               & > * {
@@ -497,7 +497,7 @@ $border-color: #1d1f20;
       }
       h3,
       .card-text {
-        color: $secondary;
+        color: $black;
       }
       &,
       .card-body,

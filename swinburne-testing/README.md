@@ -185,3 +185,42 @@ For multi-screenshot print check following block to ensure columns are printed.
 ```
 
 If HTML report are not showing expected result check base templates in ```spock-reports/.ad``` these are converted to html.
+
+# Driver Specific Parameters
+
+## BrowserStack Variables
+
+You can pass following variable via command line to specify browserstack parameters.
+
+For more information please see following reference site [https://www.browserstack.com/automate/capabilities](https://www.browserstack.com/automate/capabilities)
+
+| Internal Name                      | Command Line Param                 | Browserstack Variable        |
+|------------------------------------|------------------------------------|------------------------------|
+| GEB_BROWSERSTACK_USERNAME          | geb.browserstack.username          |                              |
+| GEB_BROWSERSTACK_AUTHKEY           | geb.browserstack.authkey           |                              |
+| GEB_BROWSERSTACK_SCHEMA            | geb.browserstack.schema            |                              |
+| GEB_BROWSERSTACK_HOST              | geb.browserstack.host              |                              |
+| GEB_BROWSERSTACK_URL               | "SCHEMA://USERNAME:AUTHKEY@HOST"   |                              |
+| GEB_BROWSERSTACK_BROWSER           | geb.browserstack.browser           | browser                      |
+| GEB_BROWSERSTACK_BROSWER_VERSION   | geb.browserstack.browserversion    | browser_version              |
+| GEB_BROWSERSTACK_BUILD             | geb.browserstack.build             | build                        |
+| GEB_BROWSERSTACK_OS                | geb.browserstack.os                | os                           |
+| GEB_BROWSERSTACK_OS_VERSION        | geb.browserstack.osversion         | os_version                   |
+| GEB_BROWSERSTACK_DEBUG             | geb.browserstack.debug             | browserstack.debug           |
+| GEB_BROWSERSTACK_DEVICE            | geb.browserstack.device            | device                       |
+| GEB_BROWSERSTACK_REALMOBILE        | geb.browserstack.device            | realMobile                   |
+| GEB_BROWSERSTACK_RESOLUTION        | geb.browserstack.resolution        | resolution                   |
+| GEB_BROWSERSTACK_LOCAL             | geb.browserstack.local             | browserstack.local           |
+| GEB_BROWSERSTACK_LOCALID           | geb.browserstack.localIdentifier   | browserstack.localIdentifier |
+| GEB_BROWSERSTACK_PROJECT           | geb.browserstack.project           | project                      |
+| GEB_BROWSERSTACK_ACCESPTSSL        | geb.browserstack.acceptSslCerts    | acceptSslCerts               |
+| GEB_BROWSERSTACK_PLATFORM          | geb.browserstack.platform          | platform                     |
+| GEB_BROWSERSTACK_SELENIUMVERSION   | geb.browserstack.selenium_version  | selenium_version             |
+| GEB_BROWSERSTACK_NAME              | geb.browserstack.name              | name                         |
+| GEB_BROWSERSTACK_CONSOLE           | geb.browserstack.console           | browserstack.console         |
+| GEB_BROWSERSTACK_VIDEO             | geb.browserstack.video             | browserstack.video           |
+| GEB_BROWSERSTACK_NETWORKLOGS       | geb.browserstack.networkLogs       | browserstack.networkLogs     |
+| GEB_BROWSERSTACK_TIMEZONE          | geb.browserstack.timezone          | browserstack.timezone        |
+| GEB_BROWSERSTACK_GEOLOCATION       | geb.browserstack.geoLocation       | browserstack.geoLocation     |
+| GEB_BROWSERSTACK_NETWORKSPEED      | geb.browserstack.customNetwork     | browserstack.customNetwork   |
+| GEB_BROWSERSTACK_DEVICEORIENTATION | geb.browserstack.deviceOrientation | deviceOrientation            |

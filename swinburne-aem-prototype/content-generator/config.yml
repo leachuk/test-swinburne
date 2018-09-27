@@ -204,6 +204,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: btn-arrow
     title: 'Chevron right'
 
+  button/transform/shadow:
+    flat: true
+    prefix: btn-shadow
+    title: 'Shadow'
+
   ## Button Size
   button/size/block:
     flat: true
@@ -673,6 +678,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - none
       - uppercase
       - xsmall
+      - shadow
     prefixValue: text-
     title: 'Text Transform (%%prefix_normalised%%)'
 
@@ -901,6 +907,16 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: '${eventStartDateText}'
     title: 'Event Start Date Formatted'
 
+  details/event-details/format/subtitle/singleDateUppercase:
+    flat: true
+    prefix: '${eventStartDateUppercase}'
+    title: 'Event Start Date Formatted - UpperCase'
+
+  details/event-details/format/subtitle/singleDateLowercase:
+    flat: true
+    prefix: '${eventStartDateLowercase}'
+    title: 'Event Start Date Formatted - LowerCase'
+
   details/event-details/format/subtitle/singledatetime:
     flat: true
     prefix: '${eventStartDateText}, ${eventStartTimeText}'
@@ -926,15 +942,30 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: '${eventStartDateText} - ${eventEndDateText}'
     title: 'Hyphen Separated Start and End Date formatted'
 
+  details/event-details/format/displaydate/emdash-separator:
+    flat: true
+    prefix: '${eventStartDateUppercase} &#x2014; ${eventEndDateTextUppercase}'
+    title: 'EM Dash Separated Start and End Date formatted - UpperCase'
+
   details/event-details/format/displaytime/default:
     flat: true
-    prefix: '${eventStartTimeText} to ${eventStartTimeText}'
+    prefix: '${eventStartTimeText} to ${eventEndTimeText}'
     title: 'Default Start and End Time formatted'
 
   details/event-details/format/displaytime/hyphen-separator:
     flat: true
-    prefix: '${eventStartTimeText} - ${eventStartTimeText}'
+    prefix: '${eventStartTimeText} - ${eventEndTimeText}'
     title: 'Hyphen Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/emdash-separator:
+    flat: true
+    prefix: '${eventStartTimeText} &#x2014; ${eventEndTimeText}'
+    title: 'EM Dash Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/emdash-separator-lower:
+    flat: true
+    prefix: '${eventStartTimeLowercase} &#x2014; ${eventEndTimeLowercase}'
+    title: 'EM Dash Separated Start and End Time formatted - LowerCase'
 
   ## Page Details
   details/page-details/format/title/default:
@@ -1739,7 +1770,7 @@ content/cq:tags/swinburne/component-topic: &component-topic
     title: '%%prefix_normalised%%'
 
 apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins: &global-dialog-text-rtePlugins
-  misctools/specialCharsConfig/chars:
+  misctools/specialCharsConfig/chars: &global-dialog-text-rtePlugins-misctools-specialCharsConfig-chars
     template: 'text-misctools-specialCharsConfig-chars'
     contents:
       - default_copyright: { entity: '&amp;copy;', name: "copyright" }
@@ -1747,7 +1778,7 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_registered: { entity: '&amp;reg;', name: "registered" }
       - default_trademark: { entity: '&amp;trade;', name: "trademark" }
 
-  styles/styles:
+  styles/styles: &global-dialog-text-rtePlugins-styles-styles
     template: 'text-rtePlugins-styles-styles'
     contents:
       - textC1: { cssName: 'text-c1', text: "Colour C1 (Green)" }
@@ -1776,7 +1807,7 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - fontFamillyOpenSans: { cssName : 'f-open-sans', text: 'Font Family (Open Sans)'}
       - fontFamillyBrushUp: { cssName : 'f-brush-up', text: 'Font Family (Brush Up)'}
 
-  paraformat/formats:
+  paraformat/formats: &global-dialog-text-rtePlugins-paraformat-formats
     template: 'text-rtePlugins-paraformat-formats'
     contents:
       - default_blockquote: { description: 'BlockQuote', tag: "blockquote" }
@@ -1791,6 +1822,12 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_small: { description: 'Small', tag: "small" }
 
 apps/aemdesign/global/dialog/touch/description/content/items/descriptionTab/items/column/items/description/rtePlugins: *global-dialog-text-rtePlugins
+
+apps/aemdesign/global/dialog/touch/table/content/items/tableTab/items/column/items/table/rtePlugins: &global-dialog-table-rtePlugins
+  misctools/specialCharsConfig/chars: *global-dialog-text-rtePlugins-misctools-specialCharsConfig-chars
+  styles/styles: *global-dialog-text-rtePlugins-styles-styles
+  paraformat/formats: *global-dialog-text-rtePlugins-paraformat-formats
+
 
 content/cq:tags/swinburne-showcase/component-style-modifier: *component-style-modifier
 content/cq:tags/swinburne-showcase/component-style-module: *component-style-module

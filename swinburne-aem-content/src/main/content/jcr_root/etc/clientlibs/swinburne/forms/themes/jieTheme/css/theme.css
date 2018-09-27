@@ -129,7 +129,8 @@ input[type="radio"] {
     height: 0;
     right: 0;
     margin-right: 15px;
-    top: 50%;
+    top: 0;
+    margin-top: 15px;
     z-index: 2;
     color: #DC2D27;
     transform: rotate(45deg);
@@ -137,7 +138,7 @@ input[type="radio"] {
     border-left: 7px solid transparent;
 }
 .col-md-6 .guideFieldNode .dropDownList:before {
-    margin-top: -13px;
+    margin-top: 9px;
 }
 .col-md-6:first-child {
     padding-right: 5px;
@@ -147,7 +148,7 @@ input[type="radio"] {
         padding-right: 0;
     }
     .col-md-6 .guideFieldNode .dropDownList:before {
-        margin-top: -14px;
+        margin-top: 7px;
     }
 }
 
@@ -174,6 +175,52 @@ input[type="radio"] {
 .validation-failure .guideFieldError {
     color: #DC2D27;
     font-size: 14px;
-    margin: -10px 0 10px 0;
+    margin: -8px 0 10px 0;
     font-weight: 500;
+}
+.guideHelpQuestionMark {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 1rem;
+    height: 1rem;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background: url(default/resources/questionmark.svg) center center / cover no-repeat, #DC2D27;
+    cursor: pointer;
+}
+.guideHelpQuestionMark:before {
+    content: "?";
+    font-size: 12px;
+    color: #21201E;
+    display: block;
+    text-align: center;
+    margin: 1px 2px 1px 1px;
+    font-weight: bold;
+}
+.guideFieldDescription.long {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: -32px;
+    display: none;
+}
+@media (min-width: 992px) {
+    .guideHelpQuestionMark:hover ~ .guideFieldDescription {
+    	display: inline-block;
+	}
+}
+.guideFieldDescription.long p {
+	font-size: 14px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #21201E;
+    padding: 5px 10px;
+    border: 1px solid #21201E;
+}
+.dropDownList {
+	position: relative;
 }

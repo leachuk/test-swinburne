@@ -1765,7 +1765,7 @@ content/cq:tags/swinburne/component-topic: &component-topic
     title: '%%prefix_normalised%%'
 
 apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins: &global-dialog-text-rtePlugins
-  misctools/specialCharsConfig/chars:
+  misctools/specialCharsConfig/chars: &global-dialog-text-rtePlugins-misctools-specialCharsConfig-chars
     template: 'text-misctools-specialCharsConfig-chars'
     contents:
       - default_copyright: { entity: '&amp;copy;', name: "copyright" }
@@ -1773,7 +1773,7 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_registered: { entity: '&amp;reg;', name: "registered" }
       - default_trademark: { entity: '&amp;trade;', name: "trademark" }
 
-  styles/styles:
+  styles/styles: &global-dialog-text-rtePlugins-styles-styles
     template: 'text-rtePlugins-styles-styles'
     contents:
       - textC1: { cssName: 'text-c1', text: "Colour C1 (Green)" }
@@ -1802,7 +1802,7 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - fontFamillyOpenSans: { cssName : 'f-open-sans', text: 'Font Family (Open Sans)'}
       - fontFamillyBrushUp: { cssName : 'f-brush-up', text: 'Font Family (Brush Up)'}
 
-  paraformat/formats:
+  paraformat/formats: &global-dialog-text-rtePlugins-paraformat-formats
     template: 'text-rtePlugins-paraformat-formats'
     contents:
       - default_blockquote: { description: 'BlockQuote', tag: "blockquote" }
@@ -1817,6 +1817,12 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_small: { description: 'Small', tag: "small" }
 
 apps/aemdesign/global/dialog/touch/description/content/items/descriptionTab/items/column/items/description/rtePlugins: *global-dialog-text-rtePlugins
+
+apps/aemdesign/global/dialog/touch/table/content/items/tableTab/items/column/items/table/rtePlugins: &global-dialog-table-rtePlugins
+  misctools/specialCharsConfig/chars: *global-dialog-text-rtePlugins-misctools-specialCharsConfig-chars
+  styles/styles: *global-dialog-text-rtePlugins-styles-styles
+  paraformat/formats: *global-dialog-text-rtePlugins-paraformat-formats
+
 
 content/cq:tags/swinburne-showcase/component-style-modifier: *component-style-modifier
 content/cq:tags/swinburne-showcase/component-style-module: *component-style-module

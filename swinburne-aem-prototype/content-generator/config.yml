@@ -204,6 +204,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: btn-arrow
     title: 'Chevron right'
 
+  button/transform/shadow:
+    flat: true
+    prefix: btn-shadow
+    title: 'Shadow'
+
   ## Button Size
   button/size/block:
     flat: true
@@ -673,6 +678,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - none
       - uppercase
       - xsmall
+      - shadow
     prefixValue: text-
     title: 'Text Transform (%%prefix_normalised%%)'
 

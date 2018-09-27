@@ -1,0 +1,26 @@
+<div {{> components-componentAttributes(componentName: "pagelist",
+                                        componentId: "{{{ id }}}",
+                                        componentTheme: "{{{ theme }}}",
+                                        componentModifier: "{{{ modifier }}}",
+                                        componentModules: "{{{ modules }}}",
+                                        componentChevron: "{{{ chevron }}}",
+                                        componentIcon: "{{{ icon }}}",
+                                        componentStyle: "{{{ style }}}") }}
+  data-list-split-enabled="false" data-list-split-every="5" data-badge="cardIconDescription" data-has-pages="false">
+  <div class="content">
+    <ul>
+    {{#pageList6links}}
+      <li class="first">
+        <a href="#" class="card small">
+          <div class="card-icon">
+            <i class="fa {{icon}}"></i>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{title}}</h3>
+          </div>
+        </a>
+      </li>
+    {{/pageList6links}}
+    </ul>
+  </div>
+</div>

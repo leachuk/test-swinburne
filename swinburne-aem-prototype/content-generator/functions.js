@@ -1,10 +1,14 @@
 /* eslint-disable no-loop-func */
 /* eslint-disable no-param-reassign */
-const colors      = require('colors')
-const fs          = require('fs')
-const mkdirp      = require('mkdirp')
-const { resolve } = require('path')
-const util        = require('util');
+const colors = require('colors')
+const fs     = require('fs')
+const mkdirp = require('mkdirp')
+
+const { readFileSync, existsSync, lstatSync, readdirSync, writeFile } = require('fs')
+const { join, resolve } = require('path')
+
+const isDirectory    = source => lstatSync(source).isDirectory()
+const getDirectories = source => readdirSync(source).map(name => join(source, name)).filter(isDirectory)
 
 const {
   each,
@@ -50,28 +54,24 @@ const prefixes = {
   px : '(X-Axis)',
   py : '(Y-Axis)',
 
-  c1: 'C1 (#008e9e)',
-  c2: 'C2 (#7fe4e0)',
-  c3: 'C3 (#c3e8e7)',
-  c4: 'C4 (#e6f4f6)',
-  c5: 'C5 (#f1f9fa)',
-  c6: 'C6 (#003781)',
-  c7: 'C7 (#007ab3)',
-  c8: 'C8 (#fdd25c)',
-  c9: 'C9 (#ffe8b0)',
-
-  g1: 'G1 (#414141)',
-  g2: 'G2 (#5a5360)',
-  g3: 'G3 (#635c69)',
-  g4: 'G4 (#cad4de)',
-  g5: 'G5 (#f2f2f2)',
-  g6: 'G6 (#f7f6f7)',
-  g7: 'G7 (#fff)',
+  c1: 'C1 (Green)',
+  c2: 'C2 (Blue)',
+  c3: 'C3 (Turquoise)',
+  c4: 'C4 (Gold)',
+  c5: 'C5 (Purple)',
+  c6: 'C6 (Grey)',
+  c7: 'C7 (Swinburne Red)',
+  c8: 'C8 (Black)',
+  c9: 'C9 (White)',
+  c10: 'C10 (Concrete Texture)',
+  c11: 'C11 (Light Grey)',
 
   // Specific styles
-  'col'          : 'Columns',
-  'quote-suffix' : 'Quote Suffix',
-  'nowrap'       : 'No Wrap'
+  'col'            : 'Columns',
+  'quote-suffix'   : 'Quote Suffix',
+  'nowrap'         : 'No Wrap',
+  'playsinline'    : 'Plays Inline',
+  'v-centered-nav' : 'Verticial Aligned Nav Arrows',
 }
 
 function currentPath(path) {
@@ -96,7 +96,7 @@ function loadTemplateForCategory(category = null) {
     return templateCache[category]
   }
 
-  templateCache[category] = fs.readFileSync(currentPath(`./templates/${category}.xml`), 'utf-8').toString()
+  templateCache[category] = readFileSync(currentPath(`./templates/${category}.xml`), 'utf-8').toString()
   return templateCache[category]
 }
 
@@ -218,7 +218,7 @@ function writeTemplate(outputPath, templateDefault, template) {
 
     if (paths.length > 0) {
       while (paths.length !== 0) {
-        let node = paths[paths.length - 1] || ''
+        let node = paths[paths.length - 1]  || ''
         let title = paths[paths.length - 1] || ''
 
         title = normalisePrefix(title)
@@ -227,15 +227,22 @@ function writeTemplate(outputPath, templateDefault, template) {
           .replace('%%title%%', title)
           .replace('%%node%%', node)
 
-        promises.push(createTemplate(paths.join('/'), templateDefaultPatch))
+        const currentDirectory = paths.join('/')
+        const workingDirectory = currentPath(currentDirectory)
+
+        // Get all the child directories and list them in the parent template
+        const directories = getDirectories(workingDirectory).map(directory => {
+          return `<${directory.replace(workingDirectory, '').substr(1)}/>`
+        })
+
+        templateDefaultPatch = templateDefaultPatch.replace('%%children%%', directories.join('\n    '))
+
+        promises.push(createTemplate(currentDirectory, templateDefaultPatch))
         paths.pop()
       }
     }
 
     Promise.all(promises).then(walks => {
-      // console.log('---------------------------------------------------------------------')
-      // console.log('Finished walking up the tree!')
-      // console.log('---------------------------------------------------------------------')
       walks.forEach(walk => consoleResult(...walk))
     })
   })
@@ -245,8 +252,8 @@ function createTemplate(outputPath, template) {
   mkdirp.sync(currentPath(outputPath))
 
   return new Promise(res => {
-    if (!fs.existsSync(currentPath(`${outputPath}/.content.xml`))) {
-      fs.writeFile(currentPath(`${outputPath}/.content.xml`), template, err => {
+    if (!existsSync(currentPath(`${outputPath}/.content.xml`))) {
+      writeFile(currentPath(`${outputPath}/.content.xml`), template, err => {
         if (err) {
           res([false, outputPath, err])
         } else {

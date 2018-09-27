@@ -26,3 +26,27 @@ function getParamOrDefault() {
         fi
     fi
 }
+
+function evalMaven() {
+    local PARAM=${1:-}
+    echo $(mvn help:evaluate -q -DforceStdout -D"expression=$PARAM")
+
+}
+
+AEM_USER=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.password" "$POM_FILE")
+AEM_PASS=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.username" "$POM_FILE")
+AEM_HOST=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.host" "$POM_FILE")
+AEM_PORT=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.port" "$POM_FILE")
+AEM_SCHEMA=$(getParamOrDefault "$SCRIPT_PARAMS" "package.uploadProtocol" "$POM_FILE")
+
+#if [[ "$SCRIPT_PARAMS" == *"localhost"* ]]; then
+#    AEM_HOST = "localhost"
+#fi
+
+echo "Params:     $SCRIPT_PARAMS"
+echo "AEM_USER:   $AEM_USER"
+echo "AEM_PASS:   $(sed "s/\w/*/g" <<< ${AEM_PASS})"
+echo "AEM_HOST:   $AEM_HOST"
+echo "AEM_PORT:   $AEM_PORT"
+echo "AEM_SCHEMA: $AEM_SCHEMA"
+echo "POM_FILE:   ${POM_FILE:-$DEFAULT_POM_FILE}"

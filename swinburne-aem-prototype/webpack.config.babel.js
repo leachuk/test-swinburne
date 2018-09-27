@@ -120,10 +120,13 @@ module.exports = env => {
     ]),
 
     devServer: {
+      host             : "0.0.0.0",
+      useLocalIp       : true,
       contentBase      : resolve(__dirname, 'public'),
       port             : plConfig.server.port,
       open             : true,
       watchContentBase : false,
+      headers: { "Access-Control-Allow-Origin": "http://localhost:3000/" }
     },
   }, customization(env))
 

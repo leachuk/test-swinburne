@@ -20,8 +20,7 @@ class TextScreenshotSpec extends ComponentSpec {
     @Unroll("Appearance of Component Variant: Default in #viewport.label")
     def "Appearance of Component Variant: Default"() {
 
-        given: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
+        given: '>Component has already been added to component showcase page'
         def selector = "#text1"
 
         when: 'I am in the component showcase page'

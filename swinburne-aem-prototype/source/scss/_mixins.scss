@@ -2,8 +2,10 @@
 @mixin container() {
   display: block;
   margin: 0 auto;
-  max-width: 1400px;
-  position: relative
+  max-width: 1430px;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 // =============================================================================

@@ -1,6 +1,6 @@
 
 # Modifiers
-content/cq:tags/swinburne/component-style-modifier:
+content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Backgrounds
   background:
     prefixes:
@@ -28,6 +28,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - primary
       - success
       - warning
+      - parallax
     valueFormat: bg-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -59,6 +60,16 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: inverted
     title: 'Inverted'
 
+  image/responsive:
+    flat: true
+    prefix: img-fluid
+    title: 'Img Fluid'
+
+  image/alignment:
+    flat: true
+    prefix: img-center
+    title: 'Img Center'
+
   # Colours
   color:
     prefixes:
@@ -71,6 +82,8 @@ content/cq:tags/swinburne/component-style-modifier:
       - c7
       - c8
       - c9
+      - c10
+      - c11
     startWith: text-
     title: 'Text Colour - %%prefix_normalised%%'
 
@@ -169,6 +182,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - secondary
       - success
       - warning
+      - icon
     valueFormat: btn btn-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -184,6 +198,16 @@ content/cq:tags/swinburne/component-style-modifier:
       - warning
     valueFormat: btn btn-outline-%%prefix%%
     title: '%%prefix_normalised%%'
+
+  button/icon/chevron:
+    flat: true
+    prefix: btn-arrow
+    title: 'Chevron right'
+
+  button/transform/shadow:
+    flat: true
+    prefix: btn-shadow
+    title: 'Shadow'
 
   ## Button Size
   button/size/block:
@@ -217,6 +241,27 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: disabled
     title: 'Disabled'
 
+  ## Modal size
+  modal/size/small:
+    flat: true
+    prefix: fancybox-sm
+    title: 'Small'
+
+  modal/size/medium:
+    flat: true
+    prefix: fancybox-md
+    title: 'Medium'
+
+  modal/size/large:
+    flat: true
+    prefix: fancybox-lg
+    title: 'Large'
+
+  contentblock/banner/image:
+    flat: true
+    prefix: image-only
+    title: 'Image Only'
+
   # Cards
   card:
     prefixes:
@@ -233,11 +278,6 @@ content/cq:tags/swinburne/component-style-modifier:
       - promoted
     valueFormat: card--%%prefix%%
     title: 'Card - %%prefix_normalised%%'
-
-  card/inverse:
-    flat: true
-    prefix: card-inverse
-    title: 'Inverse'
 
   card/container:
     prefixes:
@@ -266,6 +306,10 @@ content/cq:tags/swinburne/component-style-modifier:
       - warning
     valueFormat: card-outline-%%prefix%%
     title: 'Outline - %%prefix_normalised%%'
+
+  cards/direction:
+    prefix: cards-horizontal
+    title: 'Horizontal'
 
 
   # Embed
@@ -396,13 +440,23 @@ content/cq:tags/swinburne/component-style-modifier:
 
   font/font-weight-bold:
     flat: true
-    prefix: fw-500
+    prefix: fw-600
     title: 'Font Weight (Bold)'
 
   font/font-weight-bolder:
     flat: true
-    prefix: fw-600
+    prefix: fw-700
     title: 'Font Weight (Bolder)'
+
+  font/font-brush-up:
+    flat: true
+    prefix: f-brush-up
+    title: 'Font Family (Brush up)'
+
+  font/font-open-sans:
+    flat: true
+    prefix: f-open-sans
+    title: 'Font Family (Open sans)'
 
   # Grid
   grid/container:
@@ -414,6 +468,26 @@ content/cq:tags/swinburne/component-style-modifier:
     flat: true
     prefix: container-flush
     title: 'Container Flush'
+
+  grid/list/pagelist/columns/column-1:
+    flat: true
+    prefix: column-1
+    title: 'Column 1'
+
+  grid/list/pagelist/columns/column-2:
+    flat: true
+    prefix: column-2
+    title: 'Column 2'
+
+  grid/list/pagelist/columns/column-3:
+    flat: true
+    prefix: column-3
+    title: 'Column 3'
+
+  grid/list/eventlist/visibility/hidden:
+    flat: true
+    prefix: hidden
+    title: 'hidden'
 
   # Icons
   icon/size:
@@ -481,6 +555,12 @@ content/cq:tags/swinburne/component-style-modifier:
       - inverse
     prefixValue: fa-
     title: '%%prefix_normalised%%'
+
+  content/alignment/center:
+    flat: true
+    prefix: align-center
+    title: 'Align Center'
+
 
   # Margin
   margin:
@@ -598,6 +678,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - none
       - uppercase
       - xsmall
+      - shadow
     prefixValue: text-
     title: 'Text Transform (%%prefix_normalised%%)'
 
@@ -629,7 +710,7 @@ content/cq:tags/swinburne/component-style-modifier:
     title: '%%prefix_normalised%%'
 
 # Modules
-content/cq:tags/swinburne/component-style-module:
+content/cq:tags/swinburne/component-style-module: &component-style-module
   media/video/background:
     flat: true
     prefix: play-video
@@ -639,6 +720,16 @@ content/cq:tags/swinburne/component-style-module:
     flat: true
     prefix: play-video
     title: 'Play Popup Video'
+
+  layout/contentblock/parallaximage:
+    flat: true
+    prefix: parallaximage
+    title: 'Parallax Image'
+
+  layout/button/navtoggler:
+    flat: true
+    prefix: navtoggler
+    title: 'Nav Toggler (button)'
 
   # Search widget
   widgets/search/global-search:
@@ -658,7 +749,7 @@ content/cq:tags/swinburne/component-style-module:
     title: 'Carousel'
 
 # Themes
-content/cq:tags/swinburne/component-style-theme:
+content/cq:tags/swinburne/component-style-theme: &component-style-theme
   # Cards
   common/cards:
     prefixes:
@@ -751,6 +842,17 @@ content/cq:tags/swinburne/component-style-theme:
     valueFormat: 'theme-%%prefix%%'
     title: '%%prefix_normalised%%'
 
+  content/aem-forms:
+    flat: true
+    prefix: theme--brand-form
+    title: 'AEM Forms'
+
+
+  content/ssi-forms:
+    flat: true
+    prefix: theme--brand-formSSI
+    title: 'SSI Forms'
+
 
   # Details
   ## Contact Details
@@ -805,6 +907,16 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: '${eventStartDateText}'
     title: 'Event Start Date Formatted'
 
+  details/event-details/format/subtitle/singleDateUppercase:
+    flat: true
+    prefix: '${eventStartDateUppercase}'
+    title: 'Event Start Date Formatted - UpperCase'
+
+  details/event-details/format/subtitle/singleDateLowercase:
+    flat: true
+    prefix: '${eventStartDateLowercase}'
+    title: 'Event Start Date Formatted - LowerCase'
+
   details/event-details/format/subtitle/singledatetime:
     flat: true
     prefix: '${eventStartDateText}, ${eventStartTimeText}'
@@ -820,20 +932,40 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: '${eventLoc}, ${eventStartDateText}'
     title: 'Event Location with Start Date Formatted'
 
-  details/event-details/format/displaytime/default:
-    flat: true
-    prefix: '${eventStartTimeText} to ${eventEndTimeText}'
-    title: 'Default Start and End Time formatted'
-
   details/event-details/format/displaydate/default:
     flat: true
     prefix: '${eventStartDateText} to ${eventEndDateText}'
     title: 'Default Start and End Date formatted'
 
-  details/event-details/format/displaydate/hyphen-seprator:
+  details/event-details/format/displaydate/hyphen-separator:
     flat: true
     prefix: '${eventStartDateText} - ${eventEndDateText}'
     title: 'Hyphen Separated Start and End Date formatted'
+
+  details/event-details/format/displaydate/emdash-separator:
+    flat: true
+    prefix: '${eventStartDateUppercase} &#x2014; ${eventEndDateTextUppercase}'
+    title: 'EM Dash Separated Start and End Date formatted - UpperCase'
+
+  details/event-details/format/displaytime/default:
+    flat: true
+    prefix: '${eventStartTimeText} to ${eventEndTimeText}'
+    title: 'Default Start and End Time formatted'
+
+  details/event-details/format/displaytime/hyphen-separator:
+    flat: true
+    prefix: '${eventStartTimeText} - ${eventEndTimeText}'
+    title: 'Hyphen Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/emdash-separator:
+    flat: true
+    prefix: '${eventStartTimeText} &#x2014; ${eventEndTimeText}'
+    title: 'EM Dash Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/emdash-separator-lower:
+    flat: true
+    prefix: '${eventStartTimeLowercase} &#x2014; ${eventEndTimeLowercase}'
+    title: 'EM Dash Separated Start and End Time formatted - LowerCase'
 
   ## Page Details
   details/page-details/format/title/default:
@@ -851,13 +983,20 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: '${title}<span class="subtitle">${subtitle}</span>'
     title: 'Including Subtitle'
 
+  layout/page-details:
+    prefix: theme--pagedetail-brand
+    title: 'Page Details - theme--pagedetail-brand'
+
   # Content Block
   layout/contentblock:
     prefixes:
-      - alert
-      - hero
-      - pull-quote
       - banner
+      - carousel
+      - form
+      - article
+      - text
+      - accordion
+      - fluid
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 
@@ -976,6 +1115,11 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: theme--image-caption
     title: 'Captioned Image'
 
+  media/image/headerlogo:
+    flat: true
+    prefix: theme--image-headerlogo
+    title: 'Header Logo'
+
   media/image/pull:
     prefixes:
       - left
@@ -997,14 +1141,14 @@ content/cq:tags/swinburne/component-style-theme:
   # Footer
   layout/brand-footer:
     flat: true
-    prefix: brand-footer
+    prefix: theme--footer-brand
     title: 'Brand Footer'
 
   # Header
   layout/header/fixed-top:
     flat: true
-    prefix: brand-header fixed-top
-    title: 'Brand Header - Fixed Top'
+    prefix: theme--header-swinburne
+    title: 'Brand Header Default'
 
   # Content Block
   layout/contentblock/header/brand-top:
@@ -1052,6 +1196,11 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: brand-footer__bottom
     title: 'Brand Footer - Bottom'
 
+  layout/form/form-container:
+    flat: true
+    prefix: theme--brand-form
+    title: 'Brand Form'
+
   # Nav list
   lists/navlist/navbar/nav:
     flat: true
@@ -1071,6 +1220,22 @@ content/cq:tags/swinburne/component-style-theme:
     flat: true
     prefix: navbar-expand-lg navbar-light bg-white
     title: 'Header Nav'
+
+
+  lists/navlist/socialnav:
+     flat: true
+     prefix: theme--list-social
+     title: 'Social Nav'
+
+  lists/cardslist/cardsnav:
+     flat: true
+     prefix: theme--list-card
+     title: 'Cards Nav'
+
+  lists/cardslist/images:
+     flat: true
+     prefix: theme--list-images
+     title: 'Image List'
 
   # Colctrl
   layout/colctrl/flush:
@@ -1180,26 +1345,61 @@ content/cq:tags/swinburne/component-style-theme:
     valueFormat: '%%prefix%%;colctrl-%%prefix%%c'
     title: '%%prefix_normalised%% Column'
 
-  # WARNING: Reference to these path is hardcoded into component dialogs
-  #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
-  layout/colctrl/layout/col2-3-9:
+# WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-mdlg-3-9:
     flat: true
-    prefix: '2;col-md-,3,9'
-    title: '2 Column - 3 | 9'
+    prefix: '2;col-md-,3,9;col-lg-,3,9'
+    title: '2 Column (md+lg) - 3 | 9'
 
-  # WARNING: Reference to these path is hardcoded into component dialogs
-  #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
-  layout/colctrl/layout/col5-2-3-2-3-2:
+# WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-lg-9-3:
     flat: true
-    prefix: '5;col-md-,2,3,2,3,2'
-    title: '5 Column - 2 | 3 | 2 | 3 | 2'
+    prefix: '2;col-lg-,9,3'
+    title: '2 Column (lg) - 9 | 3'
 
-  # WARNING: Reference to these path is hardcoded into component dialogs
+ # WARNING: Reference to these path is hardcoded into component dialogs
   #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
-  layout/colctrl/layout/col8-centered:
+  layout/colctrl/layout/col2-lg-6-6:
     flat: true
-    prefix: 'col-md-8 mx-md-auto'
-    title: '8 Column - Centered'
+    prefix: '2;col-lg-,6,6'
+    title: '2 Column (lg) - 6 | 6'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-8-4:
+    flat: true
+    prefix: '2;col-md-,8,4'
+    title: '2 Column - 8 | 4'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col2-lg-4-7:
+    flat: true
+    prefix: '2;col-lg-,4,7;col-xl-,3,8'
+    title: '2 Column (Large - 4 | 7, XLarge - 3 | 8)'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col1-mdlg-10-xl-8:
+    flat: true
+    prefix: '1;col-md-,10;col-lg-,10;col-xl-,8'
+    title: '1 Column (Medium - 10, Large 10, XLarge - 8)'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col1-mdlg-10-xl-6:
+    flat: true
+    prefix: '1;col-md-,10;col-lg-,10;col-xl-,6'
+    title: '1 Column (Medium - 10, Large - 10, XLarge - 6)'
+
+ # WARNING: Reference to these path is hardcoded into component dialogs
+ #ONLY ADD NEW LAYOUTS AS OLD ONES CAN'T BE CHANGED ONCE USED
+  layout/colctrl/layout/col1-md-8-offset-lg-10-offest-xl-6-offest:
+    flat: true
+    prefix: '1;col-md-,8;offset-md-,2;col-lg-,10;offset-lg-,1;col-xl-,6;offset-xl-,3'
+    title: '1 Column (Medium - 8 + offset 2, Large - 10 + offset 1, XLarge - 6 + offset 3)'
 
 
   # Widgets
@@ -1209,7 +1409,7 @@ content/cq:tags/swinburne/component-style-theme:
     title: 'Inline Share Toolbox'
 
 # Icon
-content/cq:tags/swinburne/component-style-icon:
+content/cq:tags/swinburne/component-style-icon: &component-style-icon
   feed/rss:
     flat: true
     prefix: 'fa fa-rss'
@@ -1221,13 +1421,10 @@ content/cq:tags/swinburne/component-style-icon:
 
   social:
     prefixes:
-      - vimeo
       - youtube
       - facebook-f
-      - github
       - pinterest-p
       - twitter
-      - weibo
       - instagram
       - linkedin-in
     valueFormat: fa fa-%%prefix%%
@@ -1256,11 +1453,52 @@ content/cq:tags/swinburne/component-style-icon:
       - book
       - reply-all
       - life-ring
+      - calculator
+      - calendar-alt
+      - envelope
+      - star
+      - car
+      - street-view
+      - globe
+      - train
+      - play-circle
+      - user
+      - users
+      - users-class
+      - user-graduate
+      - balance-scale
+      - building
+      - chalkboard-teacher
+      - child
+      - comment-alt-exclamation
+      - comment-alt-smile
+      - comment-alt-check
+      - comment-alt-dots
+      - comments-alt
+      - info-circle
+      - laptop
+      - location-circle
+      - map-pin
+      - plane-arrival
+      - plane-departure
+      - thumbs-up
+      - thumbs-down
+      - trophy
+      - wheelchair
+      - star
+      - school
+      - paper-plane
+      - connectdevelop
+      - graduation-cap
+      - video
+      - university
+      - bar-chart
+      - newspaper
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
 # Chevron
-content/cq:tags/swinburne/component-style-chevron:
+content/cq:tags/swinburne/component-style-chevron: &component-style-chevron
   chevron:
     prefixes:
       - circle-down
@@ -1275,7 +1513,7 @@ content/cq:tags/swinburne/component-style-chevron:
     title: '%%prefix_normalised%%'
 
 # Analytics
-content/cq:tags/swinburne/component-analytics:
+content/cq:tags/swinburne/component-analytics: &component-analytics
   hittype:
     prefixes:
       - event
@@ -1289,8 +1527,33 @@ content/cq:tags/swinburne/component-analytics:
     valueFormat: '%%prefix%%'
     title: '%%prefix_normalised%%'
 
+  pagetype:
+    prefixes:
+    - common
+    - marketing
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  eventtype:
+    prefixes:
+    - site-interaction
+    valueFormat: 'site interaction'
+    title: '%%prefix_normalised%%'
+
+  linktype:
+    prefixes:
+    - button
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  linklocation:
+    prefixes:
+    - link
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
 # Aria
-content/cq:tags/swinburne/component-aria:
+content/cq:tags/swinburne/component-aria: &component-aria
   live:
     prefixes:
       - assertive
@@ -1312,7 +1575,7 @@ content/cq:tags/swinburne/component-aria:
     title: '%%prefix_normalised%%'
 
 # Dialog
-content/cq:tags/swinburne/component-dialog:
+content/cq:tags/swinburne/component-dialog: &component-dialog
   # WARNING: Reference to these path is hardcoded into component dialogs
   asset/rendition/prefix:
     prefixes:
@@ -1465,7 +1728,7 @@ content/cq:tags/swinburne/component-dialog:
     valueFormat: '%%prefix%%'
     title: '%%prefix_normalised%%'
 
-content/cq:tags/swinburne/content-type:
+content/cq:tags/swinburne/content-type: &content-type
   # WARNING: Reference to these path is hardcoded into component dialogs
   asset:
     prefixes:
@@ -1486,7 +1749,7 @@ content/cq:tags/swinburne/content-type:
       - profile
     title: '%%prefix_normalised%%'
 
-content/cq:tags/swinburne/component-topic:
+content/cq:tags/swinburne/component-topic: &component-topic
   #used for comms between components
   group:
     prefixes:
@@ -1501,7 +1764,7 @@ content/cq:tags/swinburne/component-topic:
       - mapMarkerFilterSelected     #when map marker is filtered
     title: '%%prefix_normalised%%'
 
-apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins:
+apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins: &global-dialog-text-rtePlugins
   misctools/specialCharsConfig/chars:
     template: 'text-misctools-specialCharsConfig-chars'
     contents:
@@ -1513,17 +1776,19 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
   styles/styles:
     template: 'text-rtePlugins-styles-styles'
     contents:
-      - textC1: { cssName: 'text-c1', text: "Colour C1 (#85C441)" }
-      - textC2: { cssName: 'text-c2', text: "Colour C2 (#00AEEF)" }
-      - textC3: { cssName: 'text-c3', text: "Colour C3 (#00BED8)" }
-      - textC4: { cssName: 'text-c4', text: "Colour C4 (#FCB945)" }
-      - textC5: { cssName: 'text-c5', text: "Colour C5 (#883681)" }
-      - textC6: { cssName: 'text-c6', text: "Colour C6 (#808285)" }
-      - textC7: { cssName: 'text-c7', text: "Colour C7 (#DC2D27)" }
-      - textC8: { cssName: 'text-c8', text: "Colour C8 (#000000)" }
-      - textC9: { cssName: 'text-c9', text: "Colour C9 (#ffffff)" }
-      - textRed: { cssName: 'text-red', text: "Text Colour Secondary" }
-      - textBlack: { cssName: 'text-black', text: "Text Colour Primary" }
+      - textC1: { cssName: 'text-c1', text: "Colour C1 (Green)" }
+      - textC2: { cssName: 'text-c2', text: "Colour C2 (Blue)" }
+      - textC3: { cssName: 'text-c3', text: "Colour C3 (Turquoise)" }
+      - textC4: { cssName: 'text-c4', text: "Colour C4 (Gold)" }
+      - textC5: { cssName: 'text-c5', text: "Colour C5 (Purple)" }
+      - textC6: { cssName: 'text-c6', text: "Colour C6 (Grey)" }
+      - textC7: { cssName: 'text-c7', text: "Colour C7 (Swinburne Red)" }
+      - textC8: { cssName: 'text-c8', text: "Colour C8 (Black)" }
+      - textC9: { cssName: 'text-c9', text: "Colour C9 (White)" }
+      - textC10: { cssName: 'text-c10', text: "Colour C10 (Dark Grey)" }
+      - textC11: { cssName: 'text-c11', text: "Colour C11 (Light Grey)" }
+      - textRed: { cssName: 'text-red', text: "Text Colour Primary" }
+      - textBlack: { cssName: 'text-black', text: "Text Colour Secondary" }
       - textWhite: { cssName: 'text-white', text: "Text Colour White" }
       - textQuoteSuffix: { cssName: 'text-quote-suffix', text: "Quote Suffix" }
       - fontWeight300: { cssName: 'fw-300', text: "Font Weight (Light)" }
@@ -1540,11 +1805,37 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
   paraformat/formats:
     template: 'text-rtePlugins-paraformat-formats'
     contents:
-      - default_p: { description: 'Paragraph', tag: "p" }
+      - default_blockquote: { description: 'BlockQuote', tag: "blockquote" }
+      - default_emphasis: { description: 'Emphasis', tag: "em" }
       - default_h1: { description: 'Heading 1', tag: "h1" }
       - default_h2: { description: 'Heading 2', tag: "h2" }
       - default_h3: { description: 'Heading 3', tag: "h3" }
       - default_h4: { description: 'Heading 4', tag: "h4" }
       - default_h5: { description: 'Heading 5', tag: "h5" }
       - default_h6: { description: 'Heading 6', tag: "h6" }
-      - default_blockquote: { description: 'Quote', tag: "blockquote" }
+      - default_p: { description: 'Paragraph', tag: "p" }
+      - default_small: { description: 'Small', tag: "small" }
+
+apps/aemdesign/global/dialog/touch/description/content/items/descriptionTab/items/column/items/description/rtePlugins: *global-dialog-text-rtePlugins
+
+content/cq:tags/swinburne-showcase/component-style-modifier: *component-style-modifier
+content/cq:tags/swinburne-showcase/component-style-module: *component-style-module
+content/cq:tags/swinburne-showcase/component-style-theme: *component-style-theme
+content/cq:tags/swinburne-showcase/component-style-icon: *component-style-icon
+content/cq:tags/swinburne-showcase/component-style-chevron: *component-style-chevron
+content/cq:tags/swinburne-showcase/component-analytics: *component-analytics
+content/cq:tags/swinburne-showcase/component-aria: *component-aria
+content/cq:tags/swinburne-showcase/component-dialog: *component-dialog
+content/cq:tags/swinburne-showcase/content-type: *content-type
+content/cq:tags/swinburne-showcase/component-topic: *component-topic
+
+content/cq:tags/swinburne-training/component-style-modifier: *component-style-modifier
+content/cq:tags/swinburne-training/component-style-module: *component-style-module
+content/cq:tags/swinburne-training/component-style-theme: *component-style-theme
+content/cq:tags/swinburne-training/component-style-icon: *component-style-icon
+content/cq:tags/swinburne-training/component-style-chevron: *component-style-chevron
+content/cq:tags/swinburne-training/component-analytics: *component-analytics
+content/cq:tags/swinburne-training/component-aria: *component-aria
+content/cq:tags/swinburne-training/component-dialog: *component-dialog
+content/cq:tags/swinburne-training/content-type: *content-type
+content/cq:tags/swinburne-training/component-topic: *component-topic

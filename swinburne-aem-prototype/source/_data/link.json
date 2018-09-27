@@ -77,4 +77,24 @@
     "text": "Link",
     "href": ""
   },
+  "link9": {
+    "componentId": "link9",
+    "componentTheme": "",
+    "componentModifier": "btn btn-sm btn-primary",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "text": "Primary small",
+    "href": "www.google.com"
+  },
+  "link10": {
+    "componentId": "link10",
+    "componentTheme": "",
+    "componentModifier": "navbar-toggler",
+    "componentModules": "navtoggler",
+    "componentChevron": "",
+    "componentIcon": "",
+    "text": "",
+    "href": ""
+  }
 }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Embed Source (SSI)"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <plugins
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                <items jcr:primaryType="nt:unstructured">
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Layout"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        maximized="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <fixedcol
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                maximized="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <col1
+                                        granite:class="foundation-layout-util-maximized-alt"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <layout
+                                                granite:class="js-cq-IPEPlugin-group"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Layout"
+                                                sling:resourceType="granite/ui/components/coral/foundation/include"
+                                                path="/apps/aemdesign/components/content/embedsource/cq:dialog/content/items/layoutTab"
+                                                resourceType="granite/ui/components/coral/foundation/container"/>
+                                        </items>
+                                    </col1>
+                                </items>
+                            </fixedcol>
+                        </items>
+                    </layout>
+                    <features
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Features"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/aemdesign/global/dialog/touch/text_design/features"
+                        resourceType="granite/ui/components/coral/foundation/container"/>
+                    <formatting
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Formatting"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/aemdesign/global/dialog/touch/text_design/formatting"
+                        resourceType="granite/ui/components/coral/foundation/container"/>
+                    <paraformat
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Paraformat"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/aemdesign/global/dialog/touch/text_design/paraformat"
+                        resourceType="granite/ui/components/coral/foundation/container"/>
+                    <characters
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Characters"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/aemdesign/global/dialog/touch/text_design/characters"
+                        resourceType="granite/ui/components/coral/foundation/container"/>
+                    <style
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Style"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/aemdesign/global/dialog/touch/style_design/content"
+                        resourceType="granite/ui/components/coral/foundation/container"/>
+                    <accessibility
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Accessibility"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/apps/aemdesign/global/dialog/touch/accessibility_design/content"
+                        resourceType="granite/ui/components/coral/foundation/container"/>
+                </items>
+            </plugins>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,38 @@
+<div {{> components-componentAttributes( componentName: "contentblock",
+                                         componentId: "{{{ id }}}",
+                                         componentTheme: "{{{ theme }}}",
+                                         componentModifier: "{{{ modifier }}}",
+                                         componentModules: "{{{ modules }}}",
+                                         componentChevron: "{{{ chevron }}}",
+                                         componentIcon: "{{{ icon }}}",
+                                         componentStyle: "{{{ style }}}" ) }}
+>
+  <div class="container">
+    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+      {{> components-text.default( text: "{{{ text }}}" ) }}
+      <div {{> components-componentAttributes( componentName: "pagelist",
+                                               componentId: "{{{ pageList5.componentId }}}",
+                                               componentTheme: "{{{ pageList5.componentTheme }}}",
+                                               componentModifier: "{{{ pageList5.componentModifier }}}") }}
+      >
+        <div class="content">
+          <ul>
+            {{#pageList5links}}
+              <li class="first">
+                <div class="card small">
+                  <div class="card-icon">
+                    <i class="{{{ icon }}}"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">{{{ title }}}</h3>
+                    <div class="card-text">{{{ link }}}</div>
+                  </div>
+                </div>
+              </li>
+            {{/pageList5links}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,31 +1,21 @@
-a.link[component] {
-  color: $link;
-  text-decoration: none;
-  background-color: transparent;
-  &:hover {
-    text-decoration: underline;
-    color: $link-hover;
-  }
-}
-
-button.link[component]:not([class*="btn"]) {
-  border-width: 2px;
-  border-style: outset;
-  border-color: buttonface;
-  border-image: initial;
-}
-
-.btn[component] {
+.btn {
   font-size: 16px;
   display: inline-block;
-  color: $white;
   border: 0;
   padding: 10px 14px;
   text-transform: uppercase;
   transition: background-color 300ms ease-in-out, border-radius 300ms ease-in-out;
   font-weight: bold;
-  &:hover {
+  white-space: normal;
+  text-align: left;
+  &:not([class*="btn-outline-"]) {
     color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  &:hover {
+    text-decoration: none;
   }
   & > * {
     font-weight: bold;
@@ -35,20 +25,51 @@ button.link[component]:not([class*="btn"]) {
   & > h3 {
     font-size: 24px;
   }
-}
-
-//Modifiers
-.btn-secondary[component] {
-  background-color: $secondary;
-  &:hover {
-    background-color: lighten($secondary, 10%);
+  &.btn-sm {
+    padding: 5px 12px;
   }
 }
 
-.btn-primary[component] {
+.advsection .childsection .btn-link {
+  color: $secondary;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.btn-shadow {
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+a[component] {
+  &.link {
+    font-size: 20px;
+  }
+}
+
+//Modifiers
+.btn-secondary {
+  background-color: $secondary;
+  &:hover {
+    background-color: lighten($secondary, 25%);
+  }
+}
+
+.btn-primary {
   background-color: $primary;
   &:hover {
-    background-color: lighten($primary, 25%);
+    background-color: lighten($primary, 10%);
+  }
+}
+
+.btn-arrow {
+  &:after {
+    content: "\f054";
+    color: $white;
+    font-size: 16px;
+    font-family: $font-family-awesome-solid;
+    display: inline-block;
+    margin-left: 5px;
   }
 }
 
@@ -80,7 +101,7 @@ button.link[component]:not([class*="btn"]) {
     font-weight: 700;
     font-size: 45px;
     & > * {
-      color: $secondary;
+      color: $primary;
     }
   }
 }

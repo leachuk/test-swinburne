@@ -16,17 +16,6 @@
 ;
 
 @font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  src: url('../fonts/webfonts/fa-solid-900.eot');
-  src: url('../fonts/webfonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/webfonts/fa-solid-900.woff2') format('woff2'),
-  url('../fonts/webfonts/fa-solid-900.woff') format('woff'),
-  url('../fonts/webfonts/fa-solid-900.ttf') format('truetype'),
-  url('../fonts/webfonts/fa-solid-900.svg#fontawesome') format('svg');
-}
-
-@font-face {
   font-family: 'BrushUp';
   font-style: normal;
   src: url('../fonts/brush-up/BrushUp.eot');
@@ -50,6 +39,10 @@
   &-main {
     margin: 0 auto;
     max-width: rem-calc(1200px);
+  }
+
+  &-pattern-extra {
+    overflow: auto;
   }
 
   &-heading {
@@ -82,6 +75,10 @@
     }
   }
 
+  &-pattern-example {
+    position: relative;
+  }
+
   &-code {
     color: #fa3a57;
     font-family: monospace, monospace;
@@ -96,6 +93,11 @@
     padding-left: 5px;
     padding-right: 5px;
   }
+}
+
+#components-contentblock-parsys-parallax.sg-pattern,
+#components-embedsource-parsysParallax.sg-pattern {
+  min-height: 240px;
 }
 
 #sg-patterns {
@@ -231,6 +233,7 @@
       font-size: 3.5em;
       position: relative;
       margin: 0.3em auto;
+      display: block;
     }
   }
 

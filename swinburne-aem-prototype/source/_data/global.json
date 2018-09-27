@@ -96,6 +96,14 @@
     {
       "name": "text-black",
       "value": "#000000"
+    },
+    {
+      "name": "text-c10",
+      "value": "#292625"
+    },
+    {
+      "name": "text-c11",
+      "value": "#d9d5d1"
     }
   ],
 

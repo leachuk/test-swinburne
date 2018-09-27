@@ -5,10 +5,12 @@ import '../scss/app.scss'
 // Core modules...
 import Carousels from './modules/carousel'
 import HashLinks from './modules/hash-links'
-import Header from './modules/header'
+import ParallaxImage from './modules/parallaximage'
 import LoadMore from './modules/load-more'
 import Renderers from './modules/renderers'
 import Subscribers from './modules/subscribers'
+import NavToggler from './modules/navtoggler'
+import FancyBox from './modules/fancybox'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -47,10 +49,14 @@ $(() => {
   Subscribers()
 
   // Brand header
-  Header()
+  ParallaxImage()
 
   // Take over any hash links on the page so they correctly jump to the content
   HashLinks()
+
+  NavToggler();
+
+  FancyBox();
 
   // 'object-fit' polyfill for unsupported browsers
   /* global objectFitImages */
@@ -61,9 +67,39 @@ $(() => {
     $('.collapse[data-parent]').collapse('dispose')
   }
 
+
+  // Force to add # key to url when available.
+  $('a').click( (e) => {
+    let link = $(e.target).attr('href');
+    if(link.split('#').length > 1) {
+      let hash = link.split('#').pop();
+      location.hash = hash;
+    }
+  })
+
+  //Hide event card's parent when hidden modifier is set to event list.
+  $('.eventlist[component].hidden .card.finished').parent().hide();
+
+
+  // Disable parallax effect on touch screen.
+  let $pagesParallax = $('[component].bg-parallax');
+  if( 'ontouchstart' in document.documentElement && $(window).width() < 992 ) {
+    $pagesParallax.addClass('bg-scroll');
+    console.log('Parallax disabled')
+  }
+
 })
 
 // HMR (Hot Module Replacement)
 if (module.hot) {
   module.hot.accept()
+}
+
+if(navigator.userAgent.match(/Trident\/7\./)) {
+  document.body.addEventListener("mousewheel", function() {
+    event.preventDefault();
+    let wd = event.wheelDelta;
+    let csp = window.pageYOffset;
+    window.scrollTo(0, csp - wd);
+  });
 }

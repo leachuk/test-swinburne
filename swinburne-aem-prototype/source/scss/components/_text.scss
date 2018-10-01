@@ -21,11 +21,9 @@
     text-transform: uppercase;
     line-height: 120%;
     font-size: 32px;
-    text-shadow: 5px 5px 10px rgba(0,0,0,0);
     color: $black;
     @include media-breakpoint-up(md) {
       font-size: 48px;
-      text-shadow: none;
     }
   }
   h2 {
@@ -81,6 +79,13 @@
   .row li {
     line-height: 1.2;
     padding-bottom: .5em;
+  }
+}
+
+.text-shadow {
+  &.text[component] > *,
+  & {
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
   }
 }
 

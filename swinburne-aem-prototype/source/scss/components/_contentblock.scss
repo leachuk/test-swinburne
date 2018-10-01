@@ -75,6 +75,10 @@
   }
   &.theme--contentblock-form {
     padding: 25px 0;
+    .aem-Grid > div[class*='colctrl']:not([class*='col-']) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     @include media-breakpoint-up(md) {
       padding: 105px 0;
     }

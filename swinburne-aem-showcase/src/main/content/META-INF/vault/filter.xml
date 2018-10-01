@@ -6,7 +6,6 @@
     <!--                        W A R N I N G                     -->
     <filter root="/content/swinburne-showcase"/>
     <filter root="/content/dam/swinburne-showcase"/>
-    <filter root="/content/cq:tags/swinburne-showcase"/>
 
     <filter root="/content/forms/af/swinburne-showcase"/>
     <filter root="/content/dam/formsanddocuments/swinburne-showcase"/>

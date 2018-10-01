@@ -1506,6 +1506,11 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - newspaper
       - cogs
       - gamepad
+      - code
+      - gavel
+      - stethoscope
+      - flask
+      - wrench
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 

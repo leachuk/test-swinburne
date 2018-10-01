@@ -1504,6 +1504,8 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - university
       - bar-chart
       - newspaper
+      - cogs
+      - gamepad
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 

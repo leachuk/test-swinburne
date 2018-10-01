@@ -1,6 +1,10 @@
 body {
     font-size: 16px;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
     font-family: $font-family-open-sans;
+    color: $black;
 
   &.no-scroll {
     min-height: 100%;

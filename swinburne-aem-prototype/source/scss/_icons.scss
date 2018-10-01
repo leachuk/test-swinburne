@@ -181,6 +181,21 @@
   &-paper-plane:before {
     content: "\f1d8"
   }
+  &-newspaper:before {
+    content: "\f1ea"
+  }
+  &-bar-chart:before {
+    content: "\f080"
+  }
+  &-university:before {
+    content: "\f19c"
+  }
+  &-video:before {
+    content: "\f03d"
+  }
+  &-graduation-cap:before {
+    content: "\f19d"
+  }
 }
 
 .fa,
@@ -191,6 +206,7 @@
   &-twitter,
   &-pinterest-p,
   &-linkedin-in,
+  &-connectdevelop,
   &-youtube {
     &:before {
       font-family: 'Font Awesome Brands';
@@ -213,5 +229,8 @@
   }
   &-youtube:before {
     content: "\F167";
+  }
+  &-connectdevelop:before {
+    content: "\f20e"
   }
 }

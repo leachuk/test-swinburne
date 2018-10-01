@@ -1,6 +1,6 @@
 
 # Modifiers
-content/cq:tags/swinburne/component-style-modifier:
+content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Backgrounds
   background:
     prefixes:
@@ -203,6 +203,11 @@ content/cq:tags/swinburne/component-style-modifier:
     flat: true
     prefix: btn-arrow
     title: 'Chevron right'
+
+  button/transform/shadow:
+    flat: true
+    prefix: btn-shadow
+    title: 'Shadow'
 
   ## Button Size
   button/size/block:
@@ -479,6 +484,11 @@ content/cq:tags/swinburne/component-style-modifier:
     prefix: column-3
     title: 'Column 3'
 
+  grid/list/eventlist/visibility/hidden:
+    flat: true
+    prefix: hidden
+    title: 'hidden'
+
   # Icons
   icon/size:
     prefixes:
@@ -668,6 +678,7 @@ content/cq:tags/swinburne/component-style-modifier:
       - none
       - uppercase
       - xsmall
+      - shadow
     prefixValue: text-
     title: 'Text Transform (%%prefix_normalised%%)'
 
@@ -699,7 +710,7 @@ content/cq:tags/swinburne/component-style-modifier:
     title: '%%prefix_normalised%%'
 
 # Modules
-content/cq:tags/swinburne/component-style-module:
+content/cq:tags/swinburne/component-style-module: &component-style-module
   media/video/background:
     flat: true
     prefix: play-video
@@ -738,7 +749,7 @@ content/cq:tags/swinburne/component-style-module:
     title: 'Carousel'
 
 # Themes
-content/cq:tags/swinburne/component-style-theme:
+content/cq:tags/swinburne/component-style-theme: &component-style-theme
   # Cards
   common/cards:
     prefixes:
@@ -896,6 +907,16 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: '${eventStartDateText}'
     title: 'Event Start Date Formatted'
 
+  details/event-details/format/subtitle/singleDateUppercase:
+    flat: true
+    prefix: '${eventStartDateUppercase}'
+    title: 'Event Start Date Formatted - UpperCase'
+
+  details/event-details/format/subtitle/singleDateLowercase:
+    flat: true
+    prefix: '${eventStartDateLowercase}'
+    title: 'Event Start Date Formatted - LowerCase'
+
   details/event-details/format/subtitle/singledatetime:
     flat: true
     prefix: '${eventStartDateText}, ${eventStartTimeText}'
@@ -911,20 +932,40 @@ content/cq:tags/swinburne/component-style-theme:
     prefix: '${eventLoc}, ${eventStartDateText}'
     title: 'Event Location with Start Date Formatted'
 
-  details/event-details/format/displaytime/default:
-    flat: true
-    prefix: '${eventStartTimeText} to ${eventEndTimeText}'
-    title: 'Default Start and End Time formatted'
-
   details/event-details/format/displaydate/default:
     flat: true
     prefix: '${eventStartDateText} to ${eventEndDateText}'
     title: 'Default Start and End Date formatted'
 
-  details/event-details/format/displaydate/hyphen-seprator:
+  details/event-details/format/displaydate/hyphen-separator:
     flat: true
     prefix: '${eventStartDateText} - ${eventEndDateText}'
     title: 'Hyphen Separated Start and End Date formatted'
+
+  details/event-details/format/displaydate/emdash-separator:
+    flat: true
+    prefix: '${eventStartDateUppercase} &#x2014; ${eventEndDateTextUppercase}'
+    title: 'EM Dash Separated Start and End Date formatted - UpperCase'
+
+  details/event-details/format/displaytime/default:
+    flat: true
+    prefix: '${eventStartTimeText} to ${eventEndTimeText}'
+    title: 'Default Start and End Time formatted'
+
+  details/event-details/format/displaytime/hyphen-separator:
+    flat: true
+    prefix: '${eventStartTimeText} - ${eventEndTimeText}'
+    title: 'Hyphen Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/emdash-separator:
+    flat: true
+    prefix: '${eventStartTimeText} &#x2014; ${eventEndTimeText}'
+    title: 'EM Dash Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/emdash-separator-lower:
+    flat: true
+    prefix: '${eventStartTimeLowercase} &#x2014; ${eventEndTimeLowercase}'
+    title: 'EM Dash Separated Start and End Time formatted - LowerCase'
 
   ## Page Details
   details/page-details/format/title/default:
@@ -1196,6 +1237,11 @@ content/cq:tags/swinburne/component-style-theme:
      prefix: theme--list-images
      title: 'Image List'
 
+  lists/cardslist/tiles:
+     flat: true
+     prefix: theme--list-tiles
+     title: 'Tiles List'
+
   # Colctrl
   layout/colctrl/flush:
     prefixes:
@@ -1368,7 +1414,7 @@ content/cq:tags/swinburne/component-style-theme:
     title: 'Inline Share Toolbox'
 
 # Icon
-content/cq:tags/swinburne/component-style-icon:
+content/cq:tags/swinburne/component-style-icon: &component-style-icon
   feed/rss:
     flat: true
     prefix: 'fa fa-rss'
@@ -1447,11 +1493,17 @@ content/cq:tags/swinburne/component-style-icon:
       - star
       - school
       - paper-plane
+      - connectdevelop
+      - graduation-cap
+      - video
+      - university
+      - bar-chart
+      - newspaper
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
 # Chevron
-content/cq:tags/swinburne/component-style-chevron:
+content/cq:tags/swinburne/component-style-chevron: &component-style-chevron
   chevron:
     prefixes:
       - circle-down
@@ -1466,7 +1518,7 @@ content/cq:tags/swinburne/component-style-chevron:
     title: '%%prefix_normalised%%'
 
 # Analytics
-content/cq:tags/swinburne/component-analytics:
+content/cq:tags/swinburne/component-analytics: &component-analytics
   hittype:
     prefixes:
       - event
@@ -1506,7 +1558,7 @@ content/cq:tags/swinburne/component-analytics:
     title: '%%prefix_normalised%%'
 
 # Aria
-content/cq:tags/swinburne/component-aria:
+content/cq:tags/swinburne/component-aria: &component-aria
   live:
     prefixes:
       - assertive
@@ -1528,7 +1580,7 @@ content/cq:tags/swinburne/component-aria:
     title: '%%prefix_normalised%%'
 
 # Dialog
-content/cq:tags/swinburne/component-dialog:
+content/cq:tags/swinburne/component-dialog: &component-dialog
   # WARNING: Reference to these path is hardcoded into component dialogs
   asset/rendition/prefix:
     prefixes:
@@ -1681,7 +1733,7 @@ content/cq:tags/swinburne/component-dialog:
     valueFormat: '%%prefix%%'
     title: '%%prefix_normalised%%'
 
-content/cq:tags/swinburne/content-type:
+content/cq:tags/swinburne/content-type: &content-type
   # WARNING: Reference to these path is hardcoded into component dialogs
   asset:
     prefixes:
@@ -1702,7 +1754,7 @@ content/cq:tags/swinburne/content-type:
       - profile
     title: '%%prefix_normalised%%'
 
-content/cq:tags/swinburne/component-topic:
+content/cq:tags/swinburne/component-topic: &component-topic
   #used for comms between components
   group:
     prefixes:
@@ -1717,8 +1769,8 @@ content/cq:tags/swinburne/component-topic:
       - mapMarkerFilterSelected     #when map marker is filtered
     title: '%%prefix_normalised%%'
 
-apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins:
-  misctools/specialCharsConfig/chars:
+apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins: &global-dialog-text-rtePlugins
+  misctools/specialCharsConfig/chars: &global-dialog-text-rtePlugins-misctools-specialCharsConfig-chars
     template: 'text-misctools-specialCharsConfig-chars'
     contents:
       - default_copyright: { entity: '&amp;copy;', name: "copyright" }
@@ -1726,7 +1778,7 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_registered: { entity: '&amp;reg;', name: "registered" }
       - default_trademark: { entity: '&amp;trade;', name: "trademark" }
 
-  styles/styles:
+  styles/styles: &global-dialog-text-rtePlugins-styles-styles
     template: 'text-rtePlugins-styles-styles'
     contents:
       - textC1: { cssName: 'text-c1', text: "Colour C1 (Green)" }
@@ -1755,7 +1807,7 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - fontFamillyOpenSans: { cssName : 'f-open-sans', text: 'Font Family (Open Sans)'}
       - fontFamillyBrushUp: { cssName : 'f-brush-up', text: 'Font Family (Brush Up)'}
 
-  paraformat/formats:
+  paraformat/formats: &global-dialog-text-rtePlugins-paraformat-formats
     template: 'text-rtePlugins-paraformat-formats'
     contents:
       - default_blockquote: { description: 'BlockQuote', tag: "blockquote" }
@@ -1768,3 +1820,33 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - default_h6: { description: 'Heading 6', tag: "h6" }
       - default_p: { description: 'Paragraph', tag: "p" }
       - default_small: { description: 'Small', tag: "small" }
+
+apps/aemdesign/global/dialog/touch/description/content/items/descriptionTab/items/column/items/description/rtePlugins: *global-dialog-text-rtePlugins
+
+apps/aemdesign/global/dialog/touch/table/content/items/tableTab/items/column/items/table/rtePlugins: &global-dialog-table-rtePlugins
+  misctools/specialCharsConfig/chars: *global-dialog-text-rtePlugins-misctools-specialCharsConfig-chars
+  styles/styles: *global-dialog-text-rtePlugins-styles-styles
+  paraformat/formats: *global-dialog-text-rtePlugins-paraformat-formats
+
+
+content/cq:tags/swinburne-showcase/component-style-modifier: *component-style-modifier
+content/cq:tags/swinburne-showcase/component-style-module: *component-style-module
+content/cq:tags/swinburne-showcase/component-style-theme: *component-style-theme
+content/cq:tags/swinburne-showcase/component-style-icon: *component-style-icon
+content/cq:tags/swinburne-showcase/component-style-chevron: *component-style-chevron
+content/cq:tags/swinburne-showcase/component-analytics: *component-analytics
+content/cq:tags/swinburne-showcase/component-aria: *component-aria
+content/cq:tags/swinburne-showcase/component-dialog: *component-dialog
+content/cq:tags/swinburne-showcase/content-type: *content-type
+content/cq:tags/swinburne-showcase/component-topic: *component-topic
+
+content/cq:tags/swinburne-training/component-style-modifier: *component-style-modifier
+content/cq:tags/swinburne-training/component-style-module: *component-style-module
+content/cq:tags/swinburne-training/component-style-theme: *component-style-theme
+content/cq:tags/swinburne-training/component-style-icon: *component-style-icon
+content/cq:tags/swinburne-training/component-style-chevron: *component-style-chevron
+content/cq:tags/swinburne-training/component-analytics: *component-analytics
+content/cq:tags/swinburne-training/component-aria: *component-aria
+content/cq:tags/swinburne-training/component-dialog: *component-dialog
+content/cq:tags/swinburne-training/content-type: *content-type
+content/cq:tags/swinburne-training/component-topic: *component-topic

@@ -1511,6 +1511,7 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - stethoscope
       - flask
       - wrench
+      - heartbeat
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 

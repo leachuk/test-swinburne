@@ -4,6 +4,7 @@
     jcr:primaryType="cq:Page">
     <rep:policy/>
     <base/>
+    <blankforms/>
     <onecolumn/>
     <twocolumn/>
     <threecolumn/>

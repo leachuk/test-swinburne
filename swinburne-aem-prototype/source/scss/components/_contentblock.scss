@@ -87,6 +87,8 @@
       }
       & > .row {
         background-color: $white;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
     @include media-breakpoint-down(sm) {
@@ -260,6 +262,9 @@
           max-width: 16.666666666666667%;
         }
       }
+    }
+    a:hover {
+      text-decoration: none;
     }
   }
   &.theme--contentblock-accordion {

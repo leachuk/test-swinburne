@@ -484,6 +484,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: column-3
     title: 'Column 3'
 
+  grid/list/pagelist/columns/column-6:
+    flat: true
+    prefix: column-6
+    title: 'Column 6'
+
   grid/list/eventlist/visibility/hidden:
     flat: true
     prefix: hidden
@@ -1499,6 +1504,14 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - university
       - bar-chart
       - newspaper
+      - cogs
+      - gamepad
+      - code
+      - gavel
+      - stethoscope
+      - flask
+      - wrench
+      - heartbeat
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 

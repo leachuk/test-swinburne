@@ -1813,6 +1813,11 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - fontWeight400: { cssName: 'fw-400', text: "Font Weight (Normal)" }
       - fontWeight600: { cssName: 'fw-600', text: "Font Weight (Bold)" }
       - fontWeight700: { cssName: 'fw-700', text: "Font Weight (Bolder)" }
+      - fontSize12: { cssName: 'fs-12', text: "Font Size (12px)" }
+      - fontSize14: { cssName: 'fs-14', text: "Font Size (14px)" }
+      - fontSize16: { cssName: 'fs-16', text: "Font Size (16px)" }
+      - fontSize18: { cssName: 'fs-18', text: "Font Size (18px)" }
+      - fontSize20: { cssName: 'fs-20', text: "Font Size (20px)" }
       - textStyleLead: { cssName: 'lead', text: "Text Style (Lead)" }
       - textStyleP2: { cssName: 'p2', text: "Text Style (P2)" }
       - textStyleP3: { cssName: 'p3', text: "Text Style (P3)" }

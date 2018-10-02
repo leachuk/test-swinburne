@@ -1,0 +1,98 @@
+[
+  {
+    "description": "  Automated Visual (Applitools) Tests",
+    "keyword": "Feature",
+    "name": "Visual Test",
+    "line": 2,
+    "id": "visual-test",
+    "tags": [
+      {
+        "name": "@applitools",
+        "line": 1
+      }
+    ],
+    "uri": "features/34954/1-visual-test.feature",
+    "elements": [
+      {
+        "id": "visual-test;visual-testing-for-showcase-pages",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Visual Testing for Showcase pages",
+        "tags": [
+          {
+            "name": "@applitools",
+            "line": 1
+          },
+          {
+            "name": "@ORPHAN",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "that I am on the \"NIE\" page at \"/content/swinburne/en/campaign/2018/actual-nie.html\"",
+            "match": {
+              "location": "steps/1-visual-test.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1780000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I view the page visually",
+            "match": {
+              "location": "steps/1-visual-test.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27296000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the visual elements should not have changed",
+            "match": {
+              "location": "steps/1-visual-test.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1878000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "Chrome",
+        "version": "61.0.3163.79"
+      },
+      "device": "chrome_win",
+      "platform": {
+        "name": "Windows",
+        "version": "8"
+      }
+    }
+  }
+]

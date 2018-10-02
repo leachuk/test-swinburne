@@ -6,6 +6,6 @@
         cq:lastModifiedBy="admin"
         cq:templateType="/libs/settings/wcm/template-types/afpage"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Blank"
+        jcr:title="Blank Forms"
         status="enabled"/>
 </jcr:root>

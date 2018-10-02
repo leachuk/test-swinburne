@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
-        cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/blank"
+        cq:template="/conf/swinburne/settings/wcm/templates/blankforms"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="fd/af/components/page2/aftemplatedpage"
         guideComponentType="fd/af/templates">

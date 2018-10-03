@@ -19,7 +19,8 @@
     {
       "icon": "fa fa-calendar-alt",
       "title": "Wantirna Advice Night",
-      "datetime": "MON 10 SEPTEMBER</br>4pm – 6pm",
+      "subtitle": "TUES 18 SEPTEMBER",
+      "datetime": "5pm – 7pm",
       "link": "",
       "description": "",
       "status": "",
@@ -30,7 +31,8 @@
     {
       "icon": "fa fa-calendar-alt",
       "title": "Wantirna Advice Night",
-      "datetime": "MON 10 SEPTEMBER</br>4pm – 6pm",
+      "subtitle": "TUES 18 SEPTEMBER",
+      "datetime": "5pm – 7pm",
       "link": "register",
       "description": "Considering nursing, early education, apprenticeships or vocational courses? Find out more and let our specialist staff answer all your questions.",
       "status": "",
@@ -39,7 +41,8 @@
     {
       "icon": "fa fa-calendar-alt",
       "title": "Hawthorn Advice Night",
-      "datetime": "WED 12 SEPTEMBER</br>4pm – 6pm",
+      "subtitle": "TUES 18 SEPTEMBER",
+      "datetime": "5pm – 7pm",
       "link": "register",
       "description": "From A to Z, all our bachelor degrees, diplomas and certificates will be represented here. Get advice and even apply on the spot.",
       "status": "btn-arrow"
@@ -47,7 +50,8 @@
     {
       "icon": "fa fa-calendar-alt",
       "title": "Postgrad Advice Night",
-      "datetime": "TUES 18 SEPTEMBER</br>5pm – 7pm",
+      "subtitle": "TUES 18 SEPTEMBER",
+      "datetime": "5pm – 7pm",
       "link": "register",
       "description": "Thinking about returning to study or keen to kickstart a new career? Have all your questions answered at our event at Rydges Melbourne CBD.",
       "status": "btn-arrow"

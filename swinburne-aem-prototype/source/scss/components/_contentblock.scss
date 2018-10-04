@@ -385,3 +385,14 @@
    }
  }
 }
+
+
+$containers: xl "1400", lg "992", md "768", sm "640";
+@each $container in $containers {
+  $key: nth($container, 1);
+  $value: nth($container, 2);
+
+  .container-#{$key} {
+    max-width: #{$value}px !important;
+  }
+}

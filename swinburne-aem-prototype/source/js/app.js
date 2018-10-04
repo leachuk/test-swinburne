@@ -67,16 +67,6 @@ $(() => {
     $('.collapse[data-parent]').collapse('dispose')
   }
 
-
-  // Force to add # key to url when available.
-  $('a').click( (e) => {
-    let link = $(e.target).attr('href');
-    if(link.split('#').length > 1) {
-      let hash = link.split('#').pop();
-      location.hash = hash;
-    }
-  })
-
   //Hide event card's parent when hidden modifier is set to event list.
   $('.eventlist[component].hidden .card.finished').parent().hide();
 

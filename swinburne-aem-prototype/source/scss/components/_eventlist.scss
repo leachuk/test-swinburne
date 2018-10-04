@@ -1,6 +1,6 @@
 $disabled: #808080;
 
-.eventlist[component] {
+div[component].event-details {
   &.theme--list-card {
     .card {
       .card-title + .card-action {
@@ -33,6 +33,9 @@ $disabled: #808080;
             display: none;
           }
         }
+        a.disabled {
+          opacity: 1;
+        }
       }
       &.event-finished {
         a.btn {
@@ -44,6 +47,12 @@ $disabled: #808080;
     }
     &.hidden {
       .card.finished {}
+    }
+    .card-subtitle {
+      margin-bottom: 0px !important;
+      line-height: 1.2;
+      font-size: 16px;
+      font-weight: normal;
     }
     .card-date {
       margin-bottom: 15px;
@@ -87,7 +96,13 @@ $disabled: #808080;
     .card-body {
       padding-top: 0;
       .card-title,
-      .card-date p {
+      .card-subtitle {
+        text-align: left !important;
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 0;
+      }
+      .card-date {
         text-align: left !important;
         font-size: 20px;
         font-weight: normal;

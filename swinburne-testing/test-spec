@@ -4,10 +4,10 @@
 mvn clean verify -DskipTests=true
 
 #THIS WILL RUN ALL WORKING TESTS
-EXEC_TEST="${1:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*}"
+#EXEC_TEST="${1:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*}"
 
 #THIS WILL RUN ONLY ONE TEST YOU CAN USE THIS IN DEV
-#EXEC_TEST="${1:-PageListA*}"
+EXEC_TEST="${1:-EventListP*}"
 
 EXEC_ENV="${2:-local-chrome}" #localremote - seleniumhub - local-phantomjs
 EXEC_TEST_EXCLUDE="${3:-}"

@@ -4,7 +4,14 @@
 // Font weights
 @each $weight in 300 400 600 700 {
   .fw-#{$weight} {
-    font-weight: $weight;
+    font-weight: $weight !important;
+  }
+}
+
+// Font size
+@each $size in 12 14 16 18 20 {
+  .fs-#{$size} {
+    font-size: #{$size}px !important;
   }
 }
 

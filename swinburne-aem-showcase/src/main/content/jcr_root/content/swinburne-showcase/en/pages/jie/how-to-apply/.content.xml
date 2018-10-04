@@ -29,11 +29,11 @@
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"
+                        sling:resourceType="swinburne/components/media/image"
                         fileReference="/content/dam/swinburne-showcase/en/components/content/download/apply.jpg"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <aemform
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="fd/af/components/aemform"
@@ -49,10 +49,10 @@
                         componentModifiers="[swinburne:component-style-modifier/background/bg-c10]">
                         <bgimage
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"/>
+                            sling:resourceType="swinburne/components/media/image"/>
                         <bgvideo
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"/>
+                            sling:resourceType="swinburne/components/media/image"/>
                         <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout">
@@ -75,7 +75,7 @@
                                 controlType="break"/>
                             <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"
+                                sling:resourceType="swinburne/components/media/image"
                                 fileReference="/content/dam/swinburne-showcase/en/common/form.png"/>
                             <col_end15336141805520
                                 jcr:primaryType="nt:unstructured"
@@ -85,7 +85,7 @@
                     </contentblock_4-2>
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -102,10 +102,10 @@
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                 </contentblock>
             </par>
         </article>

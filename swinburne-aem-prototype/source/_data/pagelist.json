@@ -23,14 +23,14 @@
     "links": [
       {
         "name": "Home",
-        "href": "",
+        "href": "#register",
         "icon": "fa fa-home",
         "title": "",
         "class": "first"
       },
       {
         "name": "Juggling life and uni?",
-        "href": "",
+        "href": "http://wwww.google.fr",
         "icon": "fa fa-life-saver",
         "title": "",
         "class": "item"

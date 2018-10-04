@@ -15,17 +15,12 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"
-                    menuColor="green">
-                </page-details>
-                <contentblock_upcomingEvents
+                    sling:resourceType="swinburne/components/details/page-details"/>
+                <contentblock1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="upcomingEvents"
-                    componentTheme="[]"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Upcoming Events"
+                    componentId="contentblock1"
+                    title="Badge: Default"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -33,22 +28,19 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            cssClassItem="col-3 left"
-                            detailsBadge="imageTitleDate"
-                            listFrom="querybuilder"
-                            savedquery="path=/content/swinburne-showcase/en/content/events&#xa;tagid=swinburne:content-type/page&#xa;tagid.property=jcr:content/cq:tags&#xa;p.limit=1000&#xa;p.offset=0&#xa;type=cq:Page&#xa;orderby=@jcr:content/article/par/event-details/eventStartDate&#xa;orderby.index=true&#xa;orderby.sort=asc&#xa;&#xa;&#xa;&#xa;1_group.p.and=true&#xa;&#xa;1_group.1_group.p.or=true&#xa;&#xa;&#xa;1_group.1_group.2_relativedaterange.property=jcr:content/onTime&#xa;1_group.1_group.2_relativedaterange.upperBound=0d&#xa;1_group.1_group.1_property=jcr:content/onTime, &#xa;1_group.1_group.1_property.operation=not&#xa;&#xa;&#xa;1_group.2_group.p.or=true&#xa;1_group.2_group.1_property.operation=not&#xa;1_group.2_group.1_property=jcr:content/offTime&#xa;1_group.2_group.2_relativedaterange.property=jcr:content/offTime&#xa;1_group.2_group.2_relativedaterange.lowerBound=0d&#xa;&#xa;1_group.3_group.p.or=true&#xa;1_group.3_group.1_property.value=false&#xa;1_group.3_group.1_property=jcr:content/hideInNav&#xa;1_group.3_group.1_property.operation=not&#xa;&#xa;1_group.4_group.p.and=true&#xa;1_group.4_group.1_relativedaterange.property=jcr:content/article/par/event-details/eventStartDate&#xa;1_group.4_group.1_relativedaterange.lowerBound=0d&#xa;1_group.4_group.2_relativedaterange.property=jcr:content/article/par/event-details/eventStartDate&#xa;1_group.4_group.2_relativedaterange.upperBound=1y"
-                            searchIn="/content/swinburne-showcase/en/content/events"
-                            tagsMatch="any"/>
+                            componentId="eventlist1"
+                            detailsBadge="default"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_upcomingEvents>
-                <contentblock_past12Months
+                </contentblock1>
+                <contentblock2
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="past12Months"
-                    componentTheme="[]"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Last 12 Month Events"
+                    componentId="contentblock2"
+                    title="Badge: Icon"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -56,21 +48,20 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            cssClassItem="col-3 left"
-                            detailsBadge="imageTitleDateLocationDescriptionReference"
-                            listFrom="querybuilder"
-                            savedquery="path=/content/swinburne-showcase/en/content/events&#xa;tagid=swinburne:content-type/page&#xa;tagid.property=jcr:content/cq:tags&#xa;p.limit=1000&#xa;p.offset=0&#xa;type=cq:Page&#xa;orderby=@jcr:content/article/par/event-details/eventEndDate&#xa;orderby.index=true&#xa;orderby.sort=desc&#xa;&#xa;&#xa;&#xa;1_group.p.and=true&#xa;&#xa;1_group.1_group.p.or=true&#xa;&#xa;&#xa;1_group.1_group.2_relativedaterange.property=jcr:content/onTime&#xa;1_group.1_group.2_relativedaterange.upperBound=0d&#xa;1_group.1_group.1_property=jcr:content/onTime, &#xa;1_group.1_group.1_property.operation=not&#xa;&#xa;&#xa;1_group.2_group.p.or=true&#xa;1_group.2_group.1_property.operation=not&#xa;1_group.2_group.1_property=jcr:content/offTime&#xa;1_group.2_group.2_relativedaterange.property=jcr:content/offTime&#xa;1_group.2_group.2_relativedaterange.lowerBound=0d&#xa;&#xa;1_group.3_group.p.or=true&#xa;1_group.3_group.1_property.value=false&#xa;1_group.3_group.1_property=jcr:content/hideInNav&#xa;1_group.3_group.1_property.operation=not&#xa;&#xa;1_group.4_group.p.and=true&#xa;1_group.4_group.1_relativedaterange.property=jcr:content/article/par/event-details/eventEndDate&#xa;1_group.4_group.1_relativedaterange.lowerBound=-1y&#xa;1_group.4_group.2_relativedaterange.property=jcr:content/article/par/event-details/eventEndDate&#xa;1_group.4_group.2_relativedaterange.upperBound=0d"
-                            searchIn="/content/swinburne-showcase/en/content/events/public-events"
-                            tagsMatch="any"/>
+                            componentId="eventlist2"
+                            detailsBadge="icon"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_past12Months>
-                <contentblock_event2015
+                </contentblock2>
+
+                <contentblock3
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="event2015"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Events 2015"
+                    componentId="contentblock3"
+                    title="Badge: Card with Icon"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -78,25 +69,20 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            cssClassItem="col-3 left"
-                            detailsBadge="imageTitleDateLocationDescriptionReference"
-                            listFrom="tags"
-                            orderBy="jcr:created"
-                            parentPage="/content/swinburne-showcase/en/content/events/2015"
-                            printStructure="true"
-                            tags="[swinburne-showcase:event]"
-                            tagsMatch="any"
-                            tagsSearchRoot="/content/swinburne-showcase/en/content/events/2015"
-                            variant="masonry"/>
+                            componentId="eventlist3"
+                            detailsBadge="cardIcon"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_event2015>
-                <contentblock_meeting
+                </contentblock3>
+
+                <contentblock4
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="meeting"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Meeting"
+                    componentId="contentblock4"
+                    title="Badge: Card with Icon, Title and Action"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -104,26 +90,20 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            cssClassItem="dated"
-                            cssClassListContainer="page_list "
-                            detailsBadge="titleDateTimeCategory"
-                            listFrom="tags"
-                            orderBy="jcr:created"
-                            parentPage="/content/swinburne-showcase/en/content/events"
-                            printStructure="true"
-                            tags="[swinburne-showcase:event]"
-                            tagsMatch="any"
-                            tagsSearchRoot="/content/swinburne-showcase/en/content/events"
-                            variant="masonry"/>
+                            componentId="eventlist4"
+                            detailsBadge="cardIconTitleAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_meeting>
-                <contentblock_badgeRelatedInfo
+                </contentblock4>
+
+                <contentblock5
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="badgeRelatedInfo"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Badge - Date Time Location Enquiry Info"
+                    componentId="contentblock5"
+                    title="Badge: Card with Icon, Title, Category, Description and Action"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -131,21 +111,20 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            detailsBadge="dateTimeLocationEnquiryInfo"
-                            listFrom="static"
-                            orderBy="jcr:created"
-                            pages="/content/swinburne-showcase/en/content/events"
-                            printStructure="false"
-                            variant="masonry"/>
+                            componentId="eventlist5"
+                            detailsBadge="cardIconTitleCategoryDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_badgeRelatedInfo>
-                <contentblock_1189105733
+                </contentblock5>
+
+                <contentblock6
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="badgeApartOf"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Badge - A Part Of"
+                    componentId="contentblock6"
+                    title="Badge: Card with Icon, Title and Date"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -153,21 +132,20 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            detailsBadge="aPartOf"
-                            listFrom="static"
-                            orderBy="jcr:created"
-                            pages="/content/swinburne-showcase/en/content/events"
-                            printStructure="false"
-                            variant="masonry"/>
+                            componentId="eventlist6"
+                            detailsBadge="cardIconTitleDate"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_1189105733>
-                <contentblock_289753844
+                </contentblock6>
+
+                <contentblock7
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="eventlist6"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Image Title Description Category (Mansory)"
+                    componentId="contentblock7"
+                    title="Badge: Card with Icon, Title, Description and Action"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -175,20 +153,20 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            detailsBadge="imageTitleDescriptionCategoryMansory"
-                            listFrom="static"
-                            pages="[/content/swinburne-showcase/en/content/events/public-events/2016/01/15/event-details-1,/content/swinburne-showcase/en/content/events/public-events/2016/01/06/event-details,/content/swinburne-showcase/en/content/events/public-events/2016/01/11/event-details-2,/content/swinburne-showcase/en/content/events/public-events/2016/08/25/event-details-10,/content/swinburne-showcase/en/content/events/public-events/2016/09/01/event-details-11,/content/swinburne-showcase/en/content/events/public-events/2016/07/07/event-details-9]"
-                            printStructure="false"
-                            tagsMatch="any"/>
+                            componentId="eventlist7"
+                            detailsBadge="cardIconTitleDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_289753844>
-                <contentblock_1877606279
+                </contentblock7>
+
+                <contentblock8
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="eventlist7"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Image Title Description Category"
+                    componentId="contentblock8"
+                    title="Badge: Card with Icon, Title, Subtitle and Date"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -196,19 +174,21 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            cssClassListContainer="page_grid"
-                            detailsBadge="imageTitleDescriptionCategory"
-                            listFrom="static"
-                            pages="[/content/swinburne-showcase/en/content/events/public-events/2016/01/15/event-details-1,/content/swinburne-showcase/en/content/events/public-events/2016/01/06/event-details,/content/swinburne-showcase/en/content/events/public-events/2016/01/11/event-details-2,/content/swinburne-showcase/en/content/events/public-events/2016/08/25/event-details-10,/content/swinburne-showcase/en/content/events/public-events/2016/09/01/event-details-11,/content/swinburne-showcase/en/content/events/public-events/2016/07/07/event-details-9]"
-                            tagsMatch="any"/>
+                            componentId="eventlist8"
+                            detailsBadge="cardIconTitleSubtitleDate"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_1877606279>
-                <contentblock_1321554982
+                </contentblock8>
+
+
+                <contentblock9
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Image Title Date Location Description Reference 2"
+                    componentId="contentblock9"
+                    title="Badge: Card with Icon, Title, Subtitle, Date, Description and Action"
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -216,19 +196,329 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            cssClassItem="col-3 left"
-                            detailsBadge="imageTitleDateLocationDescriptionReference2"
-                            listFrom="static"
-                            pages="[/content/swinburne-showcase/en/content/events/public-events/2015/08/25/event-details-10,/content/swinburne-showcase/en/content/events/public-events/2015/09/01/event-details-11,/content/swinburne-showcase/en/content/events/public-events/2015/07/07/event-details-9]"
-                            savedquery="path=/content/swinburne-showcase/en/content/events/public-events&#xa;tagid=swinburne:content-type/page&#xa;tagid.property=jcr:content/cq:tags&#xa;p.limit=1000&#xa;p.offset=0&#xa;type=cq:Page&#xa;orderby=@jcr:content/article/par/event-details/eventStartDate&#xa;orderby.index=true&#xa;orderby.sort=asc&#xa;&#xa;&#xa;&#xa;1_group.p.and=true&#xa;&#xa;1_group.1_group.p.or=true&#xa;&#xa;&#xa;1_group.1_group.2_relativedaterange.property=jcr:content/onTime&#xa;1_group.1_group.2_relativedaterange.upperBound=0d&#xa;1_group.1_group.1_property=jcr:content/onTime, &#xa;1_group.1_group.1_property.operation=not&#xa;&#xa;&#xa;1_group.2_group.p.or=true&#xa;1_group.2_group.1_property.operation=not&#xa;1_group.2_group.1_property=jcr:content/offTime&#xa;1_group.2_group.2_relativedaterange.property=jcr:content/offTime&#xa;1_group.2_group.2_relativedaterange.lowerBound=0d&#xa;&#xa;1_group.3_group.p.or=true&#xa;1_group.3_group.1_property.value=false&#xa;1_group.3_group.1_property=jcr:content/hideInNav&#xa;1_group.3_group.1_property.operation=not&#xa;&#xa;1_group.4_group.p.and=true&#xa;1_group.4_group.1_relativedaterange.property=jcr:content/article/par/event-details/eventStartDate&#xa;1_group.4_group.1_relativedaterange.lowerBound=0d&#xa;1_group.4_group.2_relativedaterange.property=jcr:content/article/par/event-details/eventStartDate&#xa;1_group.4_group.2_relativedaterange.upperBound=1y"
-                            searchIn="/content/swinburne-showcase/en/content/events/public-events"
-                            tagsMatch="any"/>
+                            componentId="eventlist9"
+                            detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
                     </par>
-                </contentblock_1321554982>
+                </contentblock9>
+
+                <contentblock10
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock10"
+                    title="Badge: Card with Icon, Title, Subtitle, Description and Action"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist10"
+                            detailsBadge="cardIconTitleSubtitleDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock10>
+
+
+                <contentblock11
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock11"
+                    title="Badge: Card with Image, Title and Action"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist11"
+                            detailsBadge="cardImageTitleAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock11>
+
+
+                <contentblock12
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock12"
+                    title="Badge: Card with Image, Title, Category, Description and Action"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist12"
+                            detailsBadge="cardImageTitleCategoryDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock12>
+
+                <contentblock13
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock13"
+                    title="Badge: Card with Image, Title, Description and Action"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist13"
+                            detailsBadge="cardImageTitleDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock13>
+
+
+                <contentblock14
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock14"
+                    title="Badge: Card with Image, Title, Subtitle, Description and Action"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist14"
+                            detailsBadge="cardImageTitleSubtitleDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock14>
+
+
+                <contentblock15
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock15"
+                    title="Badge: Card with Title, Description and Action"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist15"
+                            detailsBadge="cardTitleDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock15>
+
+                <contentblock16
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock16"
+                    title="Badge: Clickable Card with Icon, Title, Category and Description"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist16"
+                            detailsBadge="cardActionIconTitleCategoryDescription"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock16>
+
+                <contentblock17
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock17"
+                    title="Badge: Clickable Card with Image and Title"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist17"
+                            detailsBadge="cardActionImageTitle"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock17>
+
+
+
+                <contentblock18
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock18"
+                    title="Badge: Clickable Card with Image, Title, Category and Description"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist18"
+                            detailsBadge="cardActionImageTitleCategoryDescription"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock18>
+
+
+                <contentblock19
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock19"
+                    title="Badge: Horizontal Card with Icon, Title, Category and Description"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist19"
+                            detailsBadge="cardHorizontalIconTitleCategoryDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock19>
+
+
+
+                <contentblock20
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock20"
+                    title="Badge: Card with Icon, Title, Subtitle, Date, Description and Action with Styles"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist20"
+                            detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
+                            listFrom="children"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/separator/emdash]"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock20>
+
+
+                <contentblock21
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock21"
+                    title="Badge: Card with Icon, Title, Subtitle, Date, Description and Action with Chevron Styles"
+                    variant="advsection">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist21"
+                            detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
+                            listFrom="children"
+                            badgeLinkStyle="[swinburne-showcase:component-style-modifier/button/icon/chevron]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/grid/list/pagelist/columns/column-3]"
+                            componentTheme="[swinburne-showcase:component-style-theme/lists/cardslist/cardsnav]"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock21>
+
+                <contentblock22
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock22"
+                        title="Badge: Card with Icon, Title, Subtitle and Date with Horizontal Style"
+                        variant="advsection">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/lists/eventlist"
+                                componentId="eventlist22"
+                                detailsBadge="cardIconTitleSubtitleDate"
+                                componentModifiers="[swinburne:component-style-modifier/cards/direction/cards-horizontal,swinburne:component-style-modifier/grid/list/pagelist/columns/column-1]"
+                                listFrom="children"
+                                parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                                tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock22>
+
+
+                <contentblock23
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock23"
+                        title="Badge: Card with Icon, Title, Subtitle, Date, Description and Action with Hidden Past Events"
+                        variant="advsection">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                        <eventlist
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/lists/eventlist"
+                                componentId="eventlist23"
+                                detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
+                                listFrom="children"
+                                componentModifiers="[swinburne-showcase:component-style-modifier/grid/list/eventlist/visibility/hidden]"
+                                parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                                tagsMatch="any">
+                        </eventlist>
+                    </par>
+                </contentblock23>
+
+
             </par>
         </article>
-        <image
-            jcr:primaryType="nt:unstructured"
-            imageRotate="0"/>
     </jcr:content>
+    <events/>
 </jcr:root>

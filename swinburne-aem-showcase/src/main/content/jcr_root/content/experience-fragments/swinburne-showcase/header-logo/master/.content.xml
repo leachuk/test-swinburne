@@ -42,7 +42,7 @@
                         tagsMatch="any">
                     <badgeThumbnail
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"/>
+                            sling:resourceType="swinburne/components/media/image"/>
                 </pagelist>
                 <embedsource_4
                         jcr:primaryType="nt:unstructured"

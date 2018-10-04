@@ -1,0 +1,49 @@
+{
+    "paths": {
+        "features": "features",
+        "reports": "reports",
+        "steps": "steps"
+    },
+    "protractor": {
+        "baseUrl": "http://localhost:4502",
+        "remoteTestSettings": {
+            "project": null,
+            "browserstackUser": null,
+            "browserstackKey": null
+        },
+        "restartBrowserBetweenTests": false,
+        "framework": "custom",
+        "frameworkPath": "/Users/stephane.lemaitre/projects/swinburne-parent/swinburne-aem-showcase/e2e/node_modules/protractor-cucumber-framework",
+        "ignoreUncaughtExceptions": true,
+        "specs": [
+            "/Users/stephane.lemaitre/projects/swinburne-parent/swinburne-aem-showcase/e2e/features/**/*.feature"
+        ],
+        "cucumberOpts": {
+            "require": [
+                "/Users/stephane.lemaitre/projects/swinburne-parent/swinburne-aem-showcase/e2e/steps/**/*.js"
+            ],
+            "profile": false,
+            "no-source": true,
+            "format": "json:/Users/stephane.lemaitre/projects/swinburne-parent/swinburne-aem-showcase/e2e/reports/report.json"
+        },
+        "allScriptsTimeout": 15000,
+        "seleniumAddress": "http://127.0.0.1:4444/wd/hub",
+        "plugins": [
+            {
+                "package": "protractor-multiple-cucumber-html-reporter-plugin",
+                "options": {
+                    "automaticallyGenerateReport": true,
+                    "removeExistingJsonReportFile": true,
+                    "pageTitle": "Test Automation Report",
+                    "reportName": "Test Automation Report"
+                }
+            }
+        ]
+    },
+    "behavePro": {
+        "host": "https://behave.pro",
+        "id": "x",
+        "userId": "x",
+        "apiKey": "x"
+    }
+}

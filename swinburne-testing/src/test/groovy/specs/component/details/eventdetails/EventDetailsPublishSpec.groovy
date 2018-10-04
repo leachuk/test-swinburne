@@ -43,7 +43,7 @@ class EventDetailsPublishSpec extends ComponentSpec {
         assert $("${selector} div.card-subtitle").text().trim() == "Tue 2 October to Tue 2 October"
 
         and: "Has Description line with content"
-        assert $("${selector} div.card-date").text().trim().toLowerCase() == "2pm to 2pm"
+        assert $("${selector} div.card-date").text().trim().toLowerCase() == "1pm to 5pm"
 
         where:
         viewport << getViewPorts()

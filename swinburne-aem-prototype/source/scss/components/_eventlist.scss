@@ -33,6 +33,9 @@ div[component].event-details {
             display: none;
           }
         }
+        a.disabled {
+          opacity: 1;
+        }
       }
       &.event-finished {
         a.btn {

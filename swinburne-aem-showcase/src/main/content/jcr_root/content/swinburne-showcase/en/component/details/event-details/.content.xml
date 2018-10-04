@@ -32,6 +32,8 @@
                             sling:resourceType="swinburne/components/details/event-details"
                             componentId="eventdetails1"
                             description="&lt;p>Event to showcase all events&lt;/p>"
+                            eventEndDate="{Date}2018-10-02T17:00:00.000+10:00"
+                            eventStartDate="{Date}2018-10-02T13:00:00.000+10:00"
                             textIsRich="true">
                         </event_details>
                     </par>
@@ -73,12 +75,12 @@
                             componentId="eventdetails3"
                             description="&lt;p>Event to showcase all events&lt;/p>"
                             componentModifiers="[swinburne-showcase:component-style-modifier/separator/emdash]"
+                            eventDisplayDateFormat="swinburne-showcase:component-style-theme/details/event-details/format/displaydate/default"
                             eventDisplayTimeFormat="swinburne-showcase:component-style-theme/details/event-details/format/displaytime/schema-separator-lower"
                             eventEndDate="{Date}2018-10-05T09:20:00.000+10:00"
                             eventLoc="Melbourne"
                             eventStartDate="{Date}2018-10-01T09:20:00.000+10:00"
                             showTags="true"
-                            subTitleFormat="swinburne-showcase:component-style-theme/details/event-details/format/subtitle/singledatetimerange"
                             textIsRich="true"
                             titleFormat="swinburne-showcase:component-style-theme/details/event-details/format/title/italic"
                             titleType="h3">

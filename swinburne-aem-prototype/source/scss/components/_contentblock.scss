@@ -161,6 +161,9 @@
             font-size: 48px;
           }
         }
+        h2, h3 {
+          font-weight: bold;
+        }
         p,
         p:last-of-type {
           font-size: 16px;
@@ -170,7 +173,7 @@
             font-size: 20px;
           }
         }
-        a {
+        a[href] {
           color: $primary;
           &:hover {
             text-decoration: none;
@@ -352,7 +355,7 @@
     @include media-breakpoint-up(md) {
       padding: 70px 0;
     }
-    .text[component] > {
+    .text[component] {
       h1, h2 {
         font-size: 32px;
         padding-bottom: 1.4em;
@@ -364,6 +367,13 @@
         line-height: 1.1;
         @include media-breakpoint-up(md) {
           font-size: 52px;
+        }
+      }
+      a[href] {
+        &,
+        &:hover {
+          color: $primary;
+          text-decoration: none;
         }
       }
     }

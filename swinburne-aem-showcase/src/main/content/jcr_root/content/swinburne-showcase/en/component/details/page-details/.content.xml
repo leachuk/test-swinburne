@@ -133,20 +133,20 @@
                             textIsRich="true">
                         <secondaryImage
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/components/media/image"/>
                         <thumbnail
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/components/media/image"/>
                         <bgimage
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"
+                                sling:resourceType="swinburne/components/media/image"
                                 fileReference="/content/dam/swinburne-showcase/en/common/good-luck-for-exams.jpg"/>
                         <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                             <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/media/image"
+                                    sling:resourceType="swinburne/components/media/image"
                                     componentId="image_timely"
                                     fileReference="/content/dam/swinburne-showcase/en/common/youve-got-this.png"/>
                             <text

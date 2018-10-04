@@ -1,6 +1,15 @@
 
 # Modifiers
 content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
+
+  # Separators
+  separator:
+    prefixes:
+      - dash
+      - emdash
+    valueFormat: separator-%%prefix%%
+    title: 'Separator - %%prefix_normalised%%'
+
   # Backgrounds
   background:
     prefixes:
@@ -991,6 +1000,16 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     flat: true
     prefix: '${eventStartTimeLowercase} &#x2014; ${eventEndTimeLowercase}'
     title: 'EM Dash Separated Start and End Time formatted - LowerCase'
+
+  details/event-details/format/displaytime/schema-separator:
+    flat: true
+    prefix: '<time itemprop="startDate" datetime="${eventStartDateISO}" content="${eventStartDateISO}">${eventStartTimeText}</time><span class="separator"></span><time itemprop="endDate" datetime="${eventEndDateISO}" content="${eventEndDateISO}">${eventEndTimeText}</time>'
+    title: 'Schema - Separated Start and End Time formatted'
+
+  details/event-details/format/displaytime/schema-separator-lower:
+    flat: true
+    prefix: '<time itemprop="startDate" datetime="${eventStartDateISO}" content="${eventStartDateISO}">${eventStartTimeLowercase}</time><span class="separator"></span><time itemprop="endDate" datetime="${eventEndDateISO}" content="${eventEndDateISO}">${eventEndTimeLowercase}</time>'
+    title: 'Schema - Separated Start and End Time formatted - LowerCase'
 
   ## Page Details
   details/page-details/format/title/default:

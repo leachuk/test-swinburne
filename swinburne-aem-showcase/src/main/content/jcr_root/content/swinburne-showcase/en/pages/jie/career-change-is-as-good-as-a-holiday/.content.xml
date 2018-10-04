@@ -33,13 +33,13 @@
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -48,7 +48,7 @@
                             textIsRich="true"/>
                         <image_1965802448
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"
+                            sling:resourceType="swinburne/components/media/image"
                             componentId="image_1965802448_XV2KSDCV1"
                             fileReference="/content/dam/swinburne-showcase/en/components/content/download/change-as-good-holiday.jpg"/>
                         <text_1111846849
@@ -65,7 +65,7 @@
                             textIsRich="true"/>
                         <image
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"
+                            sling:resourceType="swinburne/components/media/image"
                             componentId="image_JVAJKQWLX"
                             fileReference="/content/dam/swinburne-showcase/en/components/content/download/network.jpg"/>
                         <text_905848996
@@ -82,7 +82,7 @@
                             textIsRich="true"/>
                         <image_394217147
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"
+                            sling:resourceType="swinburne/components/media/image"
                             componentId="image_394217147_WPBAMKVYI"
                             fileReference="/content/dam/swinburne-showcase/en/components/content/download/skill-up.jpg"/>
                         <text_187989436
@@ -103,7 +103,7 @@
                             tagsMatch="any">
                             <badgeThumbnail
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/components/media/image"/>
                         </eventlist>
                     </par>
                 </contentblock>
@@ -116,11 +116,11 @@
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"
+                        sling:resourceType="swinburne/components/media/image"
                         fileReference="/content/dam/swinburne-showcase/en/components/content/download/andrew.jpg"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <aemform
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="fd/af/components/aemform"
@@ -136,10 +136,10 @@
                         componentModifiers="[swinburne:component-style-modifier/background/bg-c10]">
                         <bgimage
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"/>
+                            sling:resourceType="swinburne/components/media/image"/>
                         <bgvideo
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"/>
+                            sling:resourceType="swinburne/components/media/image"/>
                         <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout">
@@ -162,7 +162,7 @@
                                 controlType="break"/>
                             <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"
+                                sling:resourceType="swinburne/components/media/image"
                                 fileReference="/content/dam/swinburne-showcase/en/common/form.png"/>
                             <col_end15336141805520
                                 jcr:primaryType="nt:unstructured"
@@ -172,7 +172,7 @@
                     </contentblock_6-1>
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -198,11 +198,11 @@
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"
+                        sling:resourceType="swinburne/components/media/image"
                         fileReference="/content/dam/swinburne-showcase/en/components/content/download/suzanne-banner.jpg"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"
+                        sling:resourceType="swinburne/components/media/image"
                         fileReference="/content/dam/swinburne-showcase/en/components/content/download/work-experience.jpg"/>
                     <aemform
                         jcr:primaryType="nt:unstructured"
@@ -219,10 +219,10 @@
                         componentModifiers="[swinburne:component-style-modifier/background/bg-c10]">
                         <bgimage
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"/>
+                            sling:resourceType="swinburne/components/media/image"/>
                         <bgvideo
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"/>
+                            sling:resourceType="swinburne/components/media/image"/>
                         <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout">
@@ -245,7 +245,7 @@
                                 controlType="break"/>
                             <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"
+                                sling:resourceType="swinburne/components/media/image"
                                 fileReference="/content/dam/swinburne-showcase/en/common/form.png"/>
                             <col_end15336141805520
                                 jcr:primaryType="nt:unstructured"
@@ -255,7 +255,7 @@
                     </contentblock_6-1>
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -275,7 +275,7 @@
             </par>
             <bgimage
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="aemdesign/components/media/image"/>
+                sling:resourceType="swinburne/components/media/image"/>
         </article>
         <footer
             jcr:primaryType="nt:unstructured"

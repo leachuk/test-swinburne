@@ -366,7 +366,7 @@
           font-size: 52px;
         }
       }
-      a {
+      a[href] {
         &,
         &:hover {
           color: $primary;

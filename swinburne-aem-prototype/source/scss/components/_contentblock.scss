@@ -366,6 +366,13 @@
           font-size: 52px;
         }
       }
+      a {
+        &,
+        &:hover {
+          color: $primary;
+          text-decoration: none;
+        }
+      }
     }
     .image[component] {
       padding: 90px;

@@ -98,7 +98,11 @@ class EventDetailsPublishSpec extends ComponentSpec {
         assert $("${selector} div.description").text().trim() == "Event to showcase all events"
 
         and: "Has Description line with content"
-        assert $("${selector} div.card-subtitle").text().trim() == "Mon 1 October, 9AM to 9AM"
+        assert $("${selector} div.card-subtitle").text().trim() == "Mon 1 October to Fri 5 October"
+
+        and: "Has Description line with content"
+        assert $("${selector} div.card-date").text().trim().toLowerCase() == "9am9am"
+
 
         where:
         viewport << getViewPorts()

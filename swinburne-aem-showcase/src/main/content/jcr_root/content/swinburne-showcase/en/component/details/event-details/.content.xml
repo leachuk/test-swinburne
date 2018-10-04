@@ -32,6 +32,8 @@
                             sling:resourceType="swinburne/components/details/event-details"
                             componentId="eventdetails1"
                             description="&lt;p>Event to showcase all events&lt;/p>"
+                            eventEndDate="{Date}2018-10-02T17:00:00.000+10:00"
+                            eventStartDate="{Date}2018-10-02T13:00:00.000+10:00"
                             textIsRich="true">
                         </event_details>
                     </par>

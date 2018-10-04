@@ -1,0 +1,15 @@
+{
+    "name": "pace-e2e",
+    "version": "1.0.0",
+    "dependencies": {
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "cucumber": "^4.2.1",
+        "protractor": "^5.4.1",
+        "protractor-cucumber-framework": "^6.1.1",
+        "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0"
+    },
+    "devDependencies": {
+        "eyes.selenium": "0.0.83"
+    }
+}

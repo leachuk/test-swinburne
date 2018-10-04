@@ -87,6 +87,8 @@
       }
       & > .row {
         background-color: $white;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
     @include media-breakpoint-down(sm) {
@@ -246,6 +248,23 @@
     }
     .card-text {
       margin-top: 25px;
+    }
+    div[component].pagelist {
+      margin-top: 30px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .theme--list-tiles[component].column-6 {
+      max-width: 1400px;
+      .content > ul > li {
+        @media ( min-width: 1200px ) {
+          flex: 0 0 16.666666666666667%;
+          max-width: 16.666666666666667%;
+        }
+      }
+    }
+    a:hover {
+      text-decoration: none;
     }
   }
   &.theme--contentblock-accordion {

@@ -5,7 +5,7 @@
 // and other component level changes.
 .text[component] {
   color: $black;
-  p {
+  p{
     font-size: 20px;
     margin-bottom: 15px;
     &:last-of-type {
@@ -80,10 +80,8 @@
     line-height: 1.2;
     padding-bottom: .5em;
   }
-  @include media-breakpoint-down(md) {
-    a[href*="tel:"] {
-      color: $primary;
-    }
+  b, strong {
+    font-weight: bold;
   }
 }
 

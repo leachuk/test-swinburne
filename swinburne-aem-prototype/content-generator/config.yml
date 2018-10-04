@@ -469,6 +469,26 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: container-flush
     title: 'Container Flush'
 
+  grid/container-width/container-sm:
+    flat: true
+    prefix: container-sm
+    title: 'Container Small ( max 640px )'
+
+  grid/container-width/container-md:
+    flat: true
+    prefix: container-md
+    title: 'Container Medium ( max 768px )'
+
+  grid/container-width/container-lg:
+    flat: true
+    prefix: container-lg
+    title: 'Container Large ( max 992px )'
+
+  grid/container-width/container-xl:
+    flat: true
+    prefix: container-xl
+    title: 'Container X Large ( max 1400px )'
+
   grid/list/pagelist/columns/column-1:
     flat: true
     prefix: column-1
@@ -483,6 +503,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     flat: true
     prefix: column-3
     title: 'Column 3'
+
+  grid/list/pagelist/columns/column-6:
+    flat: true
+    prefix: column-6
+    title: 'Column 6'
 
   grid/list/eventlist/visibility/hidden:
     flat: true
@@ -1499,6 +1524,14 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - university
       - bar-chart
       - newspaper
+      - cogs
+      - gamepad
+      - code
+      - gavel
+      - stethoscope
+      - flask
+      - wrench
+      - heartbeat
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -1800,6 +1833,11 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - fontWeight400: { cssName: 'fw-400', text: "Font Weight (Normal)" }
       - fontWeight600: { cssName: 'fw-600', text: "Font Weight (Bold)" }
       - fontWeight700: { cssName: 'fw-700', text: "Font Weight (Bolder)" }
+      - fontSize12: { cssName: 'fs-12', text: "Font Size (12px)" }
+      - fontSize14: { cssName: 'fs-14', text: "Font Size (14px)" }
+      - fontSize16: { cssName: 'fs-16', text: "Font Size (16px)" }
+      - fontSize18: { cssName: 'fs-18', text: "Font Size (18px)" }
+      - fontSize20: { cssName: 'fs-20', text: "Font Size (20px)" }
       - textStyleLead: { cssName: 'lead', text: "Text Style (Lead)" }
       - textStyleP2: { cssName: 'p2', text: "Text Style (P2)" }
       - textStyleP3: { cssName: 'p3', text: "Text Style (P3)" }

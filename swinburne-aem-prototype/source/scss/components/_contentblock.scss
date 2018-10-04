@@ -263,6 +263,9 @@
         }
       }
     }
+    a:hover {
+      text-decoration: none;
+    }
   }
   &.theme--contentblock-accordion {
     padding: 0 15px;
@@ -363,6 +366,13 @@
           font-size: 52px;
         }
       }
+      a {
+        &,
+        &:hover {
+          color: $primary;
+          text-decoration: none;
+        }
+      }
     }
     .image[component] {
       padding: 90px;
@@ -381,4 +391,15 @@
      margin-top: 50px;
    }
  }
+}
+
+
+$containers: xl "1400", lg "992", md "768", sm "640";
+@each $container in $containers {
+  $key: nth($container, 1);
+  $value: nth($container, 2);
+
+  .container-#{$key} {
+    max-width: #{$value}px !important;
+  }
 }

@@ -266,8 +266,12 @@
         }
       }
     }
-    a:hover {
-      text-decoration: none;
+    a[href]{
+      &,
+      &:hover {
+        text-decoration: none;
+        color: $primary
+      }
     }
   }
   &.theme--contentblock-accordion {

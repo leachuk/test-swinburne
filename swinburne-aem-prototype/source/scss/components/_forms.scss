@@ -18,6 +18,7 @@
 }
 
 .theme--brand-form,
+.theme--brand-formSSI-calculator,
 .theme--brand-formSSI {
   .mobileLayout {
     display: none;
@@ -106,6 +107,7 @@
     margin: 0 0 0.35em 0;
   }
   .guideFieldNode,
+  &.mkt-form,
   .mkt-form {
     &:not(.guideButton):not(.guideChart) {
       margin-top: 0;
@@ -345,6 +347,33 @@
     padding: 10px 20px 10px 10px;
     input[type="radio"] {
       margin-right: 15px;
+    }
+  }
+}
+
+.theme--brand-formSSI-calculator {
+  form {
+    * {
+      color: $black !important;
+    }
+    .row {
+      margin-left: -8px;
+      margin-right: -8px;
+      display: block;
+      legend {
+        padding: 0 8px;
+        width: 33.333333%;
+        max-width: 33.333333%;
+        position: relative;
+        margin: 0;
+      }
+    }
+    label,
+    .multiline-lbl {
+      font-size: 18px;
+    }
+    legend {
+      font-size: 16px;
     }
   }
 }

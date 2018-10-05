@@ -32,7 +32,7 @@
             guideNodeClass="guideContainerNode"
             name="guide1"
             redirect="/content/swinburne-showcase/en/pages/thank-you"
-            restEndpointPostUrl="/content/swinburne-showcase/en/pages/jie"
+            restEndpointPostUrl="/content/usergenerated/content/forms"
             textIsRich="true"
             thankYouMessage="Thank you for submitting the form."
             thankYouOption="page"

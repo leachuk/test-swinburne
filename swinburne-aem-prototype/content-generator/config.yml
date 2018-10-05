@@ -3,7 +3,7 @@
 content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
 
   # BACKGROUND POSITION
-  background/position:
+  background/position/phone: #sm
     prefixes:
       - 0
       - 5
@@ -28,11 +28,92 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - 100
     breakpoints:
       - sm
+    startWith: bg-posx-
+    title: 'Left - %%prefix_normalised%%'
+
+  background/position/tablet: #md
+    prefixes:
+      - 0
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
+      - 30
+      - 35
+      - 40
+      - 45
+      - 50
+      - 55
+      - 60
+      - 65
+      - 70
+      - 75
+      - 80
+      - 85
+      - 90
+      - 95
+      - 100
+    breakpoints:
       - md
+    startWith: bg-posx-
+    title: 'Left - %%prefix_normalised%%'
+
+  background/position/laptop:
+    prefixes:
+      - 0
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
+      - 30
+      - 35
+      - 40
+      - 45
+      - 50
+      - 55
+      - 60
+      - 65
+      - 70
+      - 75
+      - 80
+      - 85
+      - 90
+      - 95
+      - 100
+    breakpoints:
       - lg
+    startWith: bg-posx-
+    title: 'Left - %%prefix_normalised%%'
+
+  background/position/desktop:
+    prefixes:
+      - 0
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
+      - 30
+      - 35
+      - 40
+      - 45
+      - 50
+      - 55
+      - 60
+      - 65
+      - 70
+      - 75
+      - 80
+      - 85
+      - 90
+      - 95
+      - 100
+    breakpoints:
       - xl
     startWith: bg-posx-
-    title: 'Bg Position %%breakpoint%% - %%prefix_normalised%%'
+    title: 'Left - %%prefix_normalised%%'
 
   # Separators
   separator:

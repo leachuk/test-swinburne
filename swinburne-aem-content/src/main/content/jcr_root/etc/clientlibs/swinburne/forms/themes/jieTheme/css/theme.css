@@ -227,7 +227,7 @@ input[type="radio"] {
 
 
 .autocomplete .guideFieldWidget.textField:before {
-    position: relative;
+    position: absolute;
     content: " ";
     display: block;
     font-size: 18px;

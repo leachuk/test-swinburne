@@ -27,6 +27,7 @@
             disableSwipeGesture="{Boolean}false"
             dorType="none"
             enableAsyncSubmission="true"
+            enableRestEndpointPost="false"
             guideCss="guideContainer"
             guideNodeClass="guideContainerNode"
             name="guide1"
@@ -147,6 +148,7 @@
                                 guideNodeClass="guideTextBox"
                                 hideTitle="true"
                                 name="mobilearea"
+                                placeholderText="Country Code"
                                 textIsRich="[true,true,true]">
                                 <fd:rules jcr:primaryType="nt:unstructured"/>
                                 <fd:scripts

@@ -152,7 +152,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/lists/pagelist"
                                 componentId="pagelist5"
-                                detailsBadge="cardHorizontal"
+                                detailsBadge="cardHorizontalIconTitleCategoryDescriptionAction"
                                 listFrom="children"
                                 listType="list"
                                 limit="3"

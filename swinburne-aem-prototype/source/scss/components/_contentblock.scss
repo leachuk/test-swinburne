@@ -173,7 +173,7 @@
             font-size: 20px;
           }
         }
-        a[href] {
+        a[href]:not(.card-link) {
           color: $primary;
           &:hover {
             text-decoration: none;
@@ -266,8 +266,12 @@
         }
       }
     }
-    a:hover {
-      text-decoration: none;
+    a[href]{
+      &,
+      &:hover {
+        text-decoration: none;
+        color: $primary
+      }
     }
   }
   &.theme--contentblock-accordion {

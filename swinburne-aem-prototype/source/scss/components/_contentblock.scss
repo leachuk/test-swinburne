@@ -247,7 +247,16 @@
           font-size: 20px;
         }
       }
-
+      ul {
+        padding-left: 15px;
+        li {
+          font-size: 16px;
+          margin-bottom: 8px;
+          @include media-breakpoint-up(md) {
+            font-size: 20px;
+          }
+        }
+      }
     }
     .card-text {
       margin-top: 25px;

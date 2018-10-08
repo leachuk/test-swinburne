@@ -125,15 +125,6 @@
                     <bgvideo
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/media/image"/>
-                    <aemform
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="fd/af/components/aemform"
-                            formRef="/content/dam/formsanddocuments/we-finance/test"
-                            formType="adaptiveForm"
-                            submitType="inline"
-                            textIsRich="true"
-                            thankyouConfig="message"
-                            useiframe="true"/>
                     <contentblock_2-1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
@@ -200,15 +191,6 @@
                     <bgvideo
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/media/image"/>
-                    <aemform
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="fd/af/components/aemform"
-                            formRef="/content/dam/formsanddocuments/we-finance/test"
-                            formType="adaptiveForm"
-                            submitType="inline"
-                            textIsRich="true"
-                            thankyouConfig="message"
-                            useiframe="true"/>
                     <contentblock_4-2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
@@ -273,6 +255,7 @@
                         sling:resourceType="swinburne/components/layout/contentblock"
                         componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
                         componentTheme="[swinburne:component-style-theme/layout/contentblock/form]"
+                        componentId="contentblock_5"
                         variant="container">
                     <par
                             jcr:primaryType="nt:unstructured"
@@ -281,6 +264,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/layout/colctrl"
                                 controlType="start"
+                                componentId="columns1"
                                 layout="2;colctrl-2c"/>
                         <text
                                 jcr:primaryType="nt:unstructured"
@@ -326,15 +310,6 @@
                     <bgvideo
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/media/image"/>
-                    <aemform
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="fd/af/components/aemform"
-                            formRef="/content/dam/formsanddocuments/we-finance/test"
-                            formType="adaptiveForm"
-                            submitType="inline"
-                            textIsRich="true"
-                            thankyouConfig="message"
-                            useiframe="true"/>
                     <contentblock_6-1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"

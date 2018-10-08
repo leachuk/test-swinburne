@@ -18,6 +18,7 @@
 }
 
 .theme--brand-form,
+.theme--brand-formSSI-calculator,
 .theme--brand-formSSI {
   .mobileLayout {
     display: none;
@@ -106,6 +107,7 @@
     margin: 0 0 0.35em 0;
   }
   .guideFieldNode,
+  &.mkt-form,
   .mkt-form {
     &:not(.guideButton):not(.guideChart) {
       margin-top: 0;
@@ -345,6 +347,158 @@
     padding: 10px 20px 10px 10px;
     input[type="radio"] {
       margin-right: 15px;
+    }
+  }
+}
+
+.theme--brand-formSSI-calculator {
+  form.mkt-form {
+    * {
+      color: $black !important;
+    }
+    .row,
+    fieldset {
+      margin-left: -8px;
+      margin-right: -8px;
+      display: block;
+      legend {
+        padding: 0 8px;
+        width: 33.333333%;
+        max-width: 33.333333%;
+        margin: 0;
+        vertical-align: top;
+        margin-top: 15px;
+      }
+      .col-8 {
+        width: 66.66667%;
+        max-width: 66.66667%;
+        label {
+          margin-bottom: 5px;
+        }
+        padding-right: 0;
+        .col-4 {
+          padding: 0;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      .col-8,
+      legend {
+        float: left;
+        display: inline-block;
+        flex: none;
+        box-sizing: border-box;
+        position: relative;
+        @include media-breakpoint-down(md) {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    label,
+    .multiline-lbl {
+      font-size: 18px;
+      .multiline-span,
+      .multiline-input {
+        position: relative;
+        display: inline-block;
+      }
+      .multiline-span {
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 2px;
+        margin-left: 0;
+        width: calc(100% - 30px);
+      }
+      .multiline-input {
+        position: relative;
+        display: inline-block
+      }
+    }
+    input[type="radio"] {
+      width: 15px;
+    }
+    legend {
+      font-size: 16px;
+    }
+    select {
+      height: 44px;
+      font-size: 18px;
+      padding: 0.5rem .9375rem;
+      margin-bottom: 0;
+      border: 1px solid #d9d5d1 !important;
+      &:focus {
+        border-color: #96c8da !important;
+      }
+      &:hover {
+        border-color: rgba(34,36,38,.35) !important;
+      }
+    }
+    fieldset {
+      &:nth-of-type(1),
+      &:nth-of-type(7) {
+        .col-8 {
+          &:after {
+            content: "\f0dd";
+            position: absolute;
+            display: block;
+            font-size: 18px;
+            width: 15px;
+            height: 8px;
+            right: 0;
+            margin-right: 15px;
+            bottom: 0;
+            margin-bottom: 36px;
+            z-index: 2;
+            color:rgba(0,0,0,.87);
+            font-family: $font-family-awesome-solid;
+          }
+        }
+      }
+    }
+    .slider {
+      width: 99%;
+    }
+    .slider-high,
+    .slider-low {
+      width: 39%;
+    }
+    .slider-low {
+      text-align: center;
+    }
+    .slider-high {
+      margin-left: 4px;
+    }
+    .font-76 {
+      font-size: 50px;
+      line-height: 60px;
+      @include media-breakpoint-down(md) {
+        font-size: 28px;
+        line-height: 38px;
+      }
+    }
+    .column {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 40px;
+      margin-bottom: 0;
+      height: 100%;
+      font-size: 20px;
+      text-align: left;
+    }
+    .ui.selection.dropdown {
+      height: 44px;
+      font-size: 18px;
+      width: 100% !important;
+      .dropdown.icon{
+        padding: 14px .78571429em .78571429em .78571429em;
+        &:before {
+          color:rgba(0,0,0,.87);
+          font-family: $font-family-awesome-solid;
+          font-size: 18px;
+        }
+      }
     }
   }
 }

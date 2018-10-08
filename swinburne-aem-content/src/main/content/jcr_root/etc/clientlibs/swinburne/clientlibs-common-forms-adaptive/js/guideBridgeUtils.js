@@ -25,16 +25,19 @@ $(document).ready(function() {
     $('iframe').each(function() {
         $(this).on("load",function() {
             //console.log(["frame",this.id,this.contentWindow,this.contentWindow.guideBridge,this.contentWindow.guideBridge.isGuideLoaded()]);
-            if (this.contentWindow.guideBridge.isGuideLoaded()) {
-                populateGuideBridgeWithQueryStringValues(this.contentWindow.guideBridge,window.location.search.substring(1));
+            if (this.contentWindow["guideBridge"]) {
+                if (this.contentWindow.guideBridge.isGuideLoaded()) {
+                    populateGuideBridgeWithQueryStringValues(this.contentWindow.guideBridge, window.location.search.substring(1));
+                }
             }
-
         });
     });
 
-    if (guideBridge.isGuideLoaded()) {
-        //console.log(["form",guideBridge.isGuideLoaded()]);
-        populateGuideBridgeWithQueryStringValues(guideBridge,window.location.search.substring(1));
+    if (window["guideBridge"]) {
+        if (guideBridge.isGuideLoaded()) {
+            //console.log(["form",guideBridge.isGuideLoaded()]);
+            populateGuideBridgeWithQueryStringValues(guideBridge, window.location.search.substring(1));
+        }
     }
 
 });

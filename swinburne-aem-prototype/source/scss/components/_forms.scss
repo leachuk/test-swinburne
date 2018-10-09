@@ -503,6 +503,46 @@
   }
 }
 
+.theme--brand-formSSI-atar {
+  #atar_calculator_include {
+    #query-form {
+      padding-left: 0;
+      padding-right: 0;
+      button {
+        padding: 3px 10px;
+      }
+      .dropdown-options {
+        padding-top: 5px;
+      }
+    }
+    table {
+      font-size: 18px;
+      td {
+        padding: 10px;
+      }
+      tr {
+        line-height: inherit;
+      }
+    }
+    h3 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      line-height: 1.1;
+      font-weight: bold;
+      text-transform: uppercase;
+      @include media-breakpoint-up(md) {
+        font-size: 52px;
+        margin-bottom: 40px;
+      }
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.4285em;
+      margin-bottom: 15px;
+    }
+  }
+}
+
 .easy-autocomplete-container {
   z-index: 10;
   ul li {

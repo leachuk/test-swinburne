@@ -173,7 +173,7 @@
             font-size: 20px;
           }
         }
-        a[href] {
+        a[href]:not(.card-link) {
           color: $primary;
           &:hover {
             text-decoration: none;
@@ -247,7 +247,16 @@
           font-size: 20px;
         }
       }
-
+      ul {
+        padding-left: 15px;
+        li {
+          font-size: 16px;
+          margin-bottom: 8px;
+          @include media-breakpoint-up(md) {
+            font-size: 20px;
+          }
+        }
+      }
     }
     .card-text {
       margin-top: 25px;
@@ -256,6 +265,9 @@
       margin-top: 30px;
       padding-left: 0;
       padding-right: 0;
+      ul {
+        padding-left: 0;
+      }
     }
     .theme--list-tiles[component].column-6 {
       max-width: 1400px;
@@ -266,8 +278,12 @@
         }
       }
     }
-    a:hover {
-      text-decoration: none;
+    a[href]:not(.card-link){
+      &,
+      &:hover {
+        text-decoration: none;
+        color: $primary
+      }
     }
   }
   &.theme--contentblock-accordion {

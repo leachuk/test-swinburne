@@ -8,6 +8,7 @@ header[component],
   &.theme--header-swinburne {
     &.container {
       @include container();
+      width: 100% !important;
       padding-left: 15px !important;
       padding-right: 15px !important;
       @media (max-width: 1399px) {

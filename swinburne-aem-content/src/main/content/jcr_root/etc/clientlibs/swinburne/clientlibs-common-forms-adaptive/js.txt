@@ -2,5 +2,6 @@
 
 ../../aemdesign/vendorlib/jquery-ui/jquery-ui.js
 
-./jqueryui-extend.js
+./js/jqueryui-extend.js
+./js/guideBridgeUtils.js
 

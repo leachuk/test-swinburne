@@ -265,6 +265,9 @@
       margin-top: 30px;
       padding-left: 0;
       padding-right: 0;
+      ul {
+        padding-left: 0;
+      }
     }
     .theme--list-tiles[component].column-6 {
       max-width: 1400px;
@@ -275,7 +278,7 @@
         }
       }
     }
-    a[href]{
+    a[href]:not(.card-link){
       &,
       &:hover {
         text-decoration: none;

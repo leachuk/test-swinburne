@@ -1005,6 +1005,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--brand-formSSI-calculator
     title: 'SSI Calculator Forms'
 
+  content/ssi-atar-forms:
+    flat: true
+    prefix: theme--brand-formSSI-atar
+    title: 'SSI ATAR Calculator Form'
+
 
   # Details
   ## Contact Details

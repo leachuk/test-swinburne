@@ -96,6 +96,7 @@ $border-color: #1d1f20;
     }
   }
 
+  &.theme--list-media,
   &.theme--list-images {
     &.pagelist {
       max-width: 100%;
@@ -267,6 +268,67 @@ $border-color: #1d1f20;
 
       .owl-item:last-child {
         margin-right: 0 !important;
+      }
+    }
+  }
+
+  // Theme for carousel of media
+  &.theme--list-media {
+    .owl-carousel {
+      .owl-stage {
+        display: flex;
+      }
+      .owl-item {
+        max-height: 580px;
+        min-height: 100%;
+        flex: 1;
+        @include media-breakpoint-up(xl) {
+          height: auto;
+        }
+        overflow: visible;
+      }
+    }
+    .card {
+      min-height: 100%;
+      padding-top: 0;
+      &.video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .card-img-top {
+          position: relative;
+          &:before {
+            padding-top: 0;
+          }
+          img {
+            display: none;
+          }
+        }
+        .card-body {
+          margin-top: 0;
+        }
+        iframe {
+          border: 0;
+          min-height: 100%;
+          min-width: 100%;
+          @include media-breakpoint-down(xs) {
+            min-height: 250px;
+          }
+        }
+      }
+      &.image {}
+      .card-title,
+      .card-text,
+      .card-action {
+        visibility: hidden;
+        a[href] {
+          pointer-events: none;
+        }
+      }
+      .card-body {
+        margin-top: 100%;
+        padding: 0;
+        background-color: transparent;
       }
     }
   }

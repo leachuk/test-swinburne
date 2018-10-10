@@ -1,6 +1,7 @@
 $disabled: #808080;
 
-div[component].event-list {
+div[component].event-list,
+div[component].eventlist{
   &.theme--list-card {
     .card {
       .card-title + .card-action {

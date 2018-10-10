@@ -177,6 +177,12 @@
     "text": "<h2>Find my ideal course</h2>",
     "linkText": "Take me there"
   },
+  "contentblock23": {
+    "componentId": "contentblock23",
+    "componentStyle": "",
+    "componentTheme": "theme--contentblock-media",
+    "text": "<h2>A SNEAK PEEK OF THE FESTIVITIES</h2>",
+  },
   "accordionItems": [
     {
       "itemId": "a",

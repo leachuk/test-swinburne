@@ -101,7 +101,7 @@ const bindSlickToElement = (element, options = {}) => {
   if($videos.length) {
     $videos.each( (_, video)  => {
       let $video = $(video);
-      let videoId = $video.find('a[href]').attr('href');
+      let videoId = $video.find('a[title]').attr('title');
       $video.html(`<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>`);
     });
   }

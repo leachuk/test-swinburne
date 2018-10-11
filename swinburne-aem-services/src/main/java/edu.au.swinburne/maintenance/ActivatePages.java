@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * A simple job process to activate pages .This job will be available
  * in AEM maintenance console.Users configure this job to run daily
- * and weekly basis and can also run this job on demand basis as well .
+ * or bi-weekly basis and can also run this job on demand basis as well .
  */
 @Component(
         immediate = true,
@@ -62,7 +62,7 @@ public final class ActivatePages implements JobExecutor {
          *  @return  list resource paths to be flushed
          */
         @AttributeDefinition(
-                name = "Paths to flush",
+                name = "Paths to activate",
                 description = "Enter resource paths"
         )
         String[] resource_paths() default
@@ -172,7 +172,7 @@ public final class ActivatePages implements JobExecutor {
                     logger.info("Activating Page >>{}", pagePath);
 
                     result = context.result().message(String.
-                            format("Deleted files.")).succeeded();
+                            format("Activated pages.")).succeeded();
                 }
             }
 

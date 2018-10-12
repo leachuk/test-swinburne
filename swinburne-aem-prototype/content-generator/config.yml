@@ -631,6 +631,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: column-6
     title: 'Column 6'
 
+  grid/list/pagelist/slides/slide-1:
+    flat: true
+    prefix: slide-1
+    title: 'Slide 1'
+
   grid/list/eventlist/visibility/hidden:
     flat: true
     prefix: hidden
@@ -993,7 +998,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
   content/embedsource:
     prefixes:
     - course-table
-    valueFormat: 'theme-%%prefix%%'
+    valueFormat: 'theme--%%prefix%%'
     title: '%%prefix_normalised%%'
 
   content/aem-forms:
@@ -1171,6 +1176,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
       - text
       - accordion
       - fluid
+      - media
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 
@@ -1410,6 +1416,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
      flat: true
      prefix: theme--list-images
      title: 'Image List'
+
+  lists/cardslist/media:
+     flat: true
+     prefix: theme--list-media
+     title: 'Media List'
 
   lists/cardslist/tiles:
      flat: true

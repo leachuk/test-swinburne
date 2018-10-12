@@ -1,14 +1,14 @@
 ---
-title: Embed hamburger Button
+title: Embed Countdown 
 ---
 ## Component
 #### Overview
-  Component for displaying a link button with hamburger icon. 
+  Component for displaying a count of days, hours, seconds that decrements every 1 second. 
 #### Variant
  Default
 #### Design
 1. Theme
- * none
+ * Swinburne : Component Style Theme / Content / EmbedSource / Countdown
 2. Modifier
  * none
 3. Modules
@@ -17,22 +17,3 @@ title: Embed hamburger Button
  * none
 5. Icon
  * none
- 
-## Components
-### 1. Link
-#### Overview
- Component for displaying a link button with hamburger icon. 
-#### Variant
- Button 
-#### Design
-1. Theme
- * none
-2. Modifier
- * none
-3. Modules
- * none
-4. Chevron
- * none
-5. Icon
- * none
-

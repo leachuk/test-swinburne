@@ -1,26 +1,30 @@
-<div component class="embedsource">
-  <div class="countdown" style="display: block">
-    <div class="display">
-      <div class="time-left">
-        <div class="time-wrapper">
-          <div class="time day">0</div><div class="time-after">days</div>
-        </div>
-        <div class="time-wrapper">
-          <div class="time hour">0</div><div class="time-after">hours</div>
-        </div>
-        <div class="time-wrapper">
-          <div class="time minute">0</div><div class="time-after">minutes</div>
-        </div>
-        <div class="time-wrapper">
-          <div class="time second">0</div><div class="time-after">seconds</div>
-        </div>
+<div {{> components-componentAttributes( componentName: "embedsource",
+  componentId: "{{{ id }}}",
+  componentTheme: "{{{ theme }}}",
+  componentModifier: "{{{ modifier }}}",
+  componentModules: "{{{ modules }}}",
+  componentChevron: "{{{ chevron }}}",
+  componentIcon: "{{{ icon }}}",
+  componentStyle: "{{{ style }}}") }}
+  >
+  <div class="display">
+    <div class="time-left">
+      <div class="time-wrapper">
+        <div class="time day">0</div><div class="time-after">days</div>
+      </div>
+      <div class="time-wrapper">
+        <div class="time hour">0</div><div class="time-after">hours</div>
+      </div>
+      <div class="time-wrapper">
+        <div class="time minute">0</div><div class="time-after">minutes</div>
+      </div>
+      <div class="time-wrapper">
+        <div class="time second">0</div><div class="time-after">seconds</div>
       </div>
     </div>
   </div>
-
   <script>
     // timer functionality
-
     const timerDisplay = document.querySelector('.time-left');
     const dayDisplay = document.querySelector('.day');
     const hourDisplay = document.querySelector('.hour');
@@ -29,10 +33,10 @@
     const endTime = document.querySelector('.end-time');
 
     // Set countdown date
-    const countDownDate = new Date("July 29, 2018 10:00:00").getTime();
+    const countDownDate = new Date("December 20, 2018 10:00:00").getTime();
 
     // Starts counter update every second
-    var x = setInterval(function() x{
+    var x = setInterval(function() {
 
       // Current date/time.
       var now = new Date().getTime();

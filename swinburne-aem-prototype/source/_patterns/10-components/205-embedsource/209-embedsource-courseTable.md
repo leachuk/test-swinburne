@@ -8,7 +8,7 @@ title: Embed source Course Table
   Default
 #### Design
 1. Theme
- * Swinburne : Component Style Theme / Content / Course Table
+ * Swinburne : Component Style Theme / Content / EmbedSource / Course Table
 2. Modifier
  * none
 3. Modules

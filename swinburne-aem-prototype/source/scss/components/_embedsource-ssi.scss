@@ -1,6 +1,9 @@
 div[component].embedsource-ssi {
   &.theme--course-table {
     font-size: 16px;
+    p {
+      font-size: 16px;
+    }
 
     table {
       margin-bottom: 20px;

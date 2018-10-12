@@ -1,0 +1,32 @@
+div[component].embedsource {
+  &.theme--countdown {
+    .time-wrapper {
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+
+    .time {
+      display: block;
+      font-size: 54px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      line-height: 1.25;
+      color: white;
+      text-align: center;
+      background: $primary;
+      height: 80px;
+      padding: 5px;
+      width: 90px;
+    }
+
+    .time-after {
+      @include text-shadow-light;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}

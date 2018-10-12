@@ -998,7 +998,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
   content/embedsource:
     prefixes:
     - course-table
-    valueFormat: 'theme-%%prefix%%'
+    valueFormat: 'theme--%%prefix%%'
     title: '%%prefix_normalised%%'
 
   content/aem-forms:

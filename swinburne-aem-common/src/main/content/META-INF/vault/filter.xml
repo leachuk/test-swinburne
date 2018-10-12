@@ -23,7 +23,7 @@
     <!--</filter>-->
 
     <!-- required for templates -->
-    <filter root="/conf/swinburne/install"></filter>
+    <!--<filter root="/conf/swinburne/install"></filter>-->
 
 
 </workspaceFilter>

@@ -35,7 +35,6 @@
                             sling:resourceType="swinburne/components/widgets/onlinemedia"
                             componentId="onlinemedia1"
                             mediaId="qxpEV3VY6T8"
-                            provider="youtube"
                             providerUrl="https://www.youtube.com/embed/tL46xeIV5mc"
                             variant="default"/>
                     </par>
@@ -64,7 +63,6 @@
                             mediaId="qxpEV3VY6T8"
                             positionX="400"
                             positionY="300"
-                            provider="youtube"
                             providerUrl="https://player.vimeo.com/video/204029471?title=0&amp;byline=0&amp;portrait=0"
                             variant="videoIframe"/>
                     </par>

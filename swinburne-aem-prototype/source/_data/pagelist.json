@@ -88,6 +88,16 @@
     "componentStyle": "",
     "links": []
   },
+  "pageList10": {
+    "componentId": "pagelist10",
+    "componentTheme": "theme--list-media",
+    "componentModifier": "slide-1",
+    "componentModules": "carousel",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
   "pageList5": {
     "componentId": "pagelist5",
     "componentTheme": "theme--list-card",
@@ -191,6 +201,28 @@
       "icon": "fa fa-globe",
       "title": "ON A STUDENT VISA AND APPLYING DIRECTLY",
       "link": "<p><a href='' class='card-link btn btn-primary btn-arrow'>APPLY NOW</a></p>"
+    }
+  ],
+  "pageListMedias": [
+    {
+      "image": "https://www.swinburne.edu.au/infoevening/_assets/images/apprentice-of-the-year.jpg",
+      "video": "",
+      "modifier": "image"
+    },
+    {
+      "image": "",
+      "video": "MGGFu-C2j1k",
+      "modifier": "video"
+    },
+    {
+      "image": "https://www.swinburne.edu.au/infoevening/_assets/images/SuzanneSQ2.jpg",
+      "video": "",
+      "modifier": "image"
+    },
+    {
+      "image": "",
+      "video": "a-M_5rGhPdg",
+      "modifier": "video"
     }
   ]
 }

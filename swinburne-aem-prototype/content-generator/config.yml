@@ -192,6 +192,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: img-center
     title: 'Img Center'
 
+  online-media/responsive:
+    flat: true
+    prefix: media-responsive
+    title: 'Media Responsive'
+
   # Colours
   color:
     prefixes:
@@ -631,6 +636,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: column-6
     title: 'Column 6'
 
+  grid/list/pagelist/slides/slide-1:
+    flat: true
+    prefix: slide-1
+    title: 'Slide 1'
+
   grid/list/eventlist/visibility/hidden:
     flat: true
     prefix: hidden
@@ -989,6 +999,14 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     valueFormat: 'theme-%%prefix%%'
     title: '%%prefix_normalised%%'
 
+  # EmbedSource
+  content/embedsource:
+    prefixes:
+    - course-table
+    - countdown
+    valueFormat: 'theme--%%prefix%%'
+    title: '%%prefix_normalised%%'
+
   content/aem-forms:
     flat: true
     prefix: theme--brand-form
@@ -1164,6 +1182,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
       - text
       - accordion
       - fluid
+      - media
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
 
@@ -1404,6 +1423,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
      prefix: theme--list-images
      title: 'Image List'
 
+  lists/cardslist/media:
+     flat: true
+     prefix: theme--list-media
+     title: 'Media List'
+
   lists/cardslist/tiles:
      flat: true
      prefix: theme--list-tiles
@@ -1579,6 +1603,17 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     flat: true
     prefix: addthis_inline_share_toolbox
     title: 'Inline Share Toolbox'
+
+  # Online Media
+  widgets/onlinemedia/layout/variant/default:
+    flat: true
+    prefix: default
+    title: 'Default'
+
+  widgets/onlinemedia/layout/variant/videoIframe:
+    flat: true
+    prefix: videoIframe
+    title: 'Video IFrame'
 
 # Icon
 content/cq:tags/swinburne/component-style-icon: &component-style-icon

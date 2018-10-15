@@ -7,7 +7,7 @@ mvn clean verify -DskipTests=true
 #EXEC_TEST="${1:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*}"
 
 #THIS WILL RUN ONLY ONE TEST YOU CAN USE THIS IN DEV
-EXEC_TEST="${1:-JIESpec}"
+EXEC_TEST="${1:-PageDetailsPublishSpec}"
 
 EXEC_ENV="${2:-local-chrome}" #localremote - seleniumhub - local-phantomjs
 EXEC_TEST_EXCLUDE="${3:-}"

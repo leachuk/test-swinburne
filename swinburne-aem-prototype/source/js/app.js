@@ -11,6 +11,7 @@ import Renderers from './modules/renderers'
 import Subscribers from './modules/subscribers'
 import NavToggler from './modules/navtoggler'
 import FancyBox from './modules/fancybox'
+import ResponsiveIframes from './modules/responsive-iframes'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -57,6 +58,8 @@ $(() => {
   NavToggler();
 
   FancyBox();
+
+  ResponsiveIframes();
 
   // 'object-fit' polyfill for unsupported browsers
   /* global objectFitImages */

@@ -110,11 +110,11 @@
 
                     <!-- embedded dependencies in the content package -->
                     <embeddeds>
-                        <!--<embedded>-->
-                        <!--<groupId>${project.parent.groupId}</groupId>-->
-                        <!--<artifactId>swinburne-aem-services</artifactId>-->
-                        <!--<target>/apps/swinburne/install</target>-->
-                        <!--</embedded>-->
+                        <embedded>
+                        <groupId>${project.parent.groupId}</groupId>
+                        <artifactId>swinburne-aem-services</artifactId>
+                        <target>/apps/swinburne/install</target>
+                        </embedded>
                     </embeddeds>
 
                     <dependencies>

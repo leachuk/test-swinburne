@@ -1,0 +1,2 @@
+js/theme.js
+/etc/clientlibs/aemdesign/vendorlib/jquery-ui/jquery-ui.js

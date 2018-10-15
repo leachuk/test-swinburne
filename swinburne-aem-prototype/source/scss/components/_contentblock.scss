@@ -326,6 +326,13 @@
         }
       }
     }
+    &.header--icon {
+      button.btn {
+        &:after {
+
+        }
+      }
+    }
     .heading {
       display: none;
     }
@@ -425,6 +432,38 @@
       @include media-breakpoint-up(lg){
          width: 75%;
       }
+    }
+  }
+  // modifiers
+  &.acc-icon {
+    .header button.btn {
+      padding-left: 85px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 48px;
+        top: 50%;
+
+        color: $tertiary;
+        transform: translateY(-50%);
+        font-size: 18px;
+      }
+    }
+  }
+  &.acc-icon-arrow-up {
+    .header button.btn:after {
+      content: "\2191";
+    }
+  }
+  &.acc-icon-arrow-down {
+    .header button.btn:after {
+      content: "\2193"
+    }
+  }
+  &.acc-icon-arrow-right {
+    .header button.btn:after {
+      content: "\2192"
     }
   }
 }

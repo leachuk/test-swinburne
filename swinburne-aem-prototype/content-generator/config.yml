@@ -1599,6 +1599,17 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: addthis_inline_share_toolbox
     title: 'Inline Share Toolbox'
 
+  # Online Media
+  widgets/onlinemedia/layout/variant/default:
+    flat: true
+    prefix: default
+    title: 'Default'
+
+  widgets/onlinemedia/layout/variant/videoIframe:
+    flat: true
+    prefix: videoIframe
+    title: 'Video IFrame'
+
 # Icon
 content/cq:tags/swinburne/component-style-icon: &component-style-icon
   feed/rss:

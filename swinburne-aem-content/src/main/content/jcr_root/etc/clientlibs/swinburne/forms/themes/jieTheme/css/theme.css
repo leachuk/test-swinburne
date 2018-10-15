@@ -51,6 +51,11 @@ textarea,
 .ui-menu .ui-menu-item-wrapper {
     padding: 7px 24px;
 }
+.ui-state-active, .ui-widget-content .ui-state-active {
+    border: 1px solid #c7c8ca;
+    background: #c7c8ca;
+    color: #000;
+}
 .ui-selectmenu-button {
 	padding-top: 11px;
 }

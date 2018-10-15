@@ -192,6 +192,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: img-center
     title: 'Img Center'
 
+  online-media/responsive:
+    flat: true
+    prefix: media-responsive
+    title: 'Media Responsive'
+
   # Colours
   color:
     prefixes:

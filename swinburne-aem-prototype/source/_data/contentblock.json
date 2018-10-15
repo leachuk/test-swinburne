@@ -221,7 +221,13 @@
     {
       "itemId": "c",
       "itemModifier": "acc-icon acc-icon-arrow-down",
-      "title": "Your ATAR is lower than hyou expected",
+      "title": "Your ATAR is lower than you expected",
+      "text": "<p>Stay calm, life doesn't have to be all about your study scores and first preferences. If you haven't nailed your exams the way you were planning, you've still got plenty of options.</p><p>There are other pathways you can take to study at Swinburne, including <a href>UniLink diplomas</a>. Complete one of these successfully, and you can progress directly into the second year of a related bachelor degree.</p>"
+    },
+    {
+      "itemId": "c",
+      "itemModifier": "acc-icon acc-icon-arrow-down",
+      "title": "Your ATAR is lower than you expected",
       "text": "<p>Stay calm, life doesn't have to be all about your study scores and first preferences. If you haven't nailed your exams the way you were planning, you've still got plenty of options.</p><p>There are other pathways you can take to study at Swinburne, including <a href>UniLink diplomas</a>. Complete one of these successfully, and you can progress directly into the second year of a related bachelor degree.</p>"
     }
   ]

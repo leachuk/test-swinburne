@@ -60,7 +60,7 @@
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_TEG3BMQJR"
                             componentModifiers="[swinburne-showcase:component-style-modifier/font/font-open-sans,swinburne-showcase:component-style-modifier/font/font-weight-bold]"
-                            text="&lt;p>Business&lt;/p>&#xd;&#xa;"
+                            text="&lt;h1>BUSINESS&lt;/h1>&#xd;&#xa;"
                             textIsRich="true"/>
                     </par>
                     <bgimage

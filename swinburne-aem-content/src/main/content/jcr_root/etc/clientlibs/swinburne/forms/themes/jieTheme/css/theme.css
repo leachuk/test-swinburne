@@ -42,11 +42,18 @@ textarea,
 	width: 100%;
     border-color: #d9d5d1;
 }
+.autocomplete input[type="text"],
+.ui-selectmenu-button,
+select,
 .ui-button:hover,
 .ui-button:focus,
-.ui-button:active{
-	background: #fff;
+.ui-button:active {
+	background-color: #fff;
 	color: #000;
+	background-image: url(../assets/input-bg.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain; 
 }
 .ui-menu .ui-menu-item-wrapper {
     padding: 7px 24px;
@@ -149,7 +156,6 @@ input[type="radio"] {
     padding: 0;
 }
 .guideFieldNode .dropDownList:before {
-    content: " ";
     position: absolute;
     display: block;
     font-size: 18px;
@@ -252,47 +258,8 @@ input[type="radio"] {
 .dropDownList {
 	position: relative;
 }
-
-
-.autocomplete .guideFieldWidget.textField:before {
-    position: absolute;
-    content: " ";
-    display: block;
-    font-size: 18px;
-    width: 0;
-    height: 0;
-    right: 0;
-    margin-right: 15px;
-    top: 0;
-    margin-top: 15px;
-    z-index: 2;
-    color: #DC2D27;
-    transform: rotate(45deg);
-    border-bottom: 7px solid #DC2D27;
-    border-left: 7px solid transparent;
-}
-.autocomplete .guideFieldWidget.textField[data-disabled='true']:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    font-size: 18px;
-    width: 0;
-    height: 0;
-    right: 0;
-    margin-right: 15px;
-    top: 0;
-    margin-top: 15px;
-    z-index: 2;
-    color: gray;
-    transform: rotate(45deg);
-    border-bottom: 7px solid gray;
-    border-left: 7px solid transparent;
-
-}
 .autocomplete .guideFieldWidget.textField {
-
     position: relative;
-
 }
 .ui-autocomplete {
     overflow-y: scroll;

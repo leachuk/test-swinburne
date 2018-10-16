@@ -6,8 +6,6 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="swinburne-showcase/en/common/phone.png"
-        jcr:lastModified="{Date}2018-10-16T11:44:00.983+11:00"
-        jcr:lastModifiedBy=""
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}32"

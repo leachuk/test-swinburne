@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2018-10-16T12:36:50.082+11:00"
+        cq:lastModifiedBy=""
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="How to get there?"
@@ -43,18 +45,38 @@
                             componentId="text_6FYDRZO7V"
                             text="&lt;h1>HOW DO I GET TO &lt;span class=&quot;text-c7&quot;>SWINBURNE OPEN DAY&lt;/span>?&lt;/h1>&#xa;&lt;p>Our Hawthorn campus is easy to get o no matter your mode of transport!&lt;br>&#xa;Check out this &lt;a href=&quot;http://google.com/&quot;>handy campus map&lt;/a> to get your bearings.&lt;/p>&#xa;"
                             textIsRich="true"/>
+                        <image
+                            jcr:createdBy=""
+                            jcr:lastModified="{Date}2018-10-16T12:29:14.031+11:00"
+                            jcr:lastModifiedBy=""
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/media/image"
+                            componentId="image_IXMXDWBJW"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/image/alignment]"
+                            fileReference="/content/dam/swinburne-showcase/en/common/phone.png"/>
                         <text_302125279
+                            jcr:lastModified="{Date}2018-10-16T12:36:50.072+11:00"
+                            jcr:lastModifiedBy=""
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentIcon="[swinburne:component-style-icon/general/train]"
                             componentId="text_302125279_PERLE27EL"
-                            componentModifiers="[swinburne:component-style-modifier/icon/size/lg]"
-                            text="&lt;h4 style=&quot;text-align: center;&quot;>BY TRAIN&lt;/h4>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Glenferrie Station is otherwise knows as the Swinburne University of Technology stop (yes, really!) as it's practically located on campus!&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Simply take a Belgrave, Lilydale or Alamein line train, and get off at Glenferrie Station. We've just meters from the train tracks.&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4 style=&quot;text-align: center;&quot;>BY TRAIN&lt;br>&#xd;&#xa;&lt;/h4>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Glenferrie Station is otherwise knows as the Swinburne University of Technology stop (yes, really!) as it's practically located on campus!&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Simply take a Belgrave, Lilydale or Alamein line train, and get off at Glenferrie Station. We've just meters from the train tracks.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
+                        <image_2131959526
+                            jcr:created="{Date}2018-10-16T12:29:52.952+11:00"
+                            jcr:createdBy=""
+                            jcr:lastModified="{Date}2018-10-16T12:31:22.216+11:00"
+                            jcr:lastModifiedBy=""
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/media/image"
+                            componentId="image_2131959526_T23JPGCUD"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/image/alignment,swinburne-showcase:component-style-modifier/padding/pb-0]"
+                            fileReference="/content/dam/swinburne-showcase/en/common/phone.png"/>
                         <text_302125279_copy
+                            jcr:lastModified="{Date}2018-10-16T12:29:03.465+11:00"
+                            jcr:lastModifiedBy=""
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentIcon="[swinburne:component-style-icon/general/car]"
                             componentId="text_302125279_PERLE27EL"
                             text="&lt;h4 style=&quot;text-align: center;&quot;>BY CAR&lt;/h4>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Our official address is john Street, Hawthorn - right near bustling Glenferrie Road - but we're also flanked by Park Street, William Street and Burwood Road.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>There's free and ticketed parking in an umber of sports near campus, including off Wakefield Street (near Glenferrie Road) and George Street (near Central Gardens).&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;> &lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;> &lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>We'll see you soon!&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>

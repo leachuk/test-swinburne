@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f1ebdc22-5042-4b0c-a193-c20491d437df">
+    <jcr:content
+        dam:assetState="processed"
+        dam:relativePath="swinburne-showcase/en/common/phone.png"
+        jcr:lastModified="{Date}2018-10-16T11:44:00.983+11:00"
+        jcr:lastModifiedBy=""
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:Comments="Software: Adobe ImageReady&#xa;XML:com.adobe.xmp: &lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?> &lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        &quot;> &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;> &lt;rdf:Description rdf:about=&quot;&quot; xmlns:xmp=&quot;http://ns.adobe.com/xap/1.0/&quot; xmlns:xmpMM=&quot;http://ns.adobe.com/xap/1.0/mm/&quot; xmlns:stRef=&quot;http://ns.adobe.com/xap/1.0/sType/ResourceRef#&quot; xmp:CreatorTool=&quot;Adobe Photoshop CC (Windows)&quot; xmpMM:InstanceID=&quot;xmp.iid:FAD15789C21711E8B5F1BEF8BAE88229&quot; xmpMM:DocumentID=&quot;xmp.did:FAD1578AC21711E8B5F1BEF8BAE88229&quot;> &lt;xmpMM:DerivedFrom stRef:instanceID=&quot;xmp.iid:FAD15787C21711E8B5F1BEF8BAE88229&quot; stRef:documentID=&quot;xmp.did:FAD15788C21711E8B5F1BEF8BAE88229&quot;/> &lt;/rdf:Description> &lt;/rdf:RDF> &lt;/x:xmpmeta> &lt;?xpacket end=&quot;r&quot;?>&#xa;"
+            dam:extracted="{Date}2018-10-16T11:44:00.449+11:00"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}2"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="ffb90f3337d10f660bab82fbcb4fbe1a2153ec13"
+            dam:size="{Long}1870"
+            dc:format="image/png"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}50"
+            tiff:ImageWidth="{Long}50"
+            xmp:CreatorTool="Adobe Photoshop CC (Windows)"
+            xmpMM:DocumentID="xmp.did:FAD1578AC21711E8B5F1BEF8BAE88229"
+            xmpMM:InstanceID="xmp.iid:FAD15789C21711E8B5F1BEF8BAE88229">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:FAD15788C21711E8B5F1BEF8BAE88229"
+                stRef:instanceID="xmp.iid:FAD15787C21711E8B5F1BEF8BAE88229"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+        <usages
+            dam:score="{Long}2"
+            jcr:primaryType="nt:unstructured"
+            usedBy="[aem]">
+            <aem
+                jcr:primaryType="nt:unstructured"
+                count="{Long}2"
+                lastUsed="{Date}2018-10-16T12:29:57.643+11:00"/>
+        </usages>
+    </jcr:content>
+</jcr:root>

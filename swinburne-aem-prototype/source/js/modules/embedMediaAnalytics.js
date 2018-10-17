@@ -205,7 +205,7 @@ const initializeComponents = (components) => {
       const playerId = component.getAttribute('data-player-id');
       const partnerId = component.getAttribute('data-partner-id');
 
-      kWidget.addReadyCallback( function( kalturaPlayerId) {
+      kWidget.addReadyCallback( function(kalturaPlayerId) {
         player = document.getElementById(kalturaPlayerId);
         createVideoDetails({
           id,
@@ -224,10 +224,10 @@ const initializeComponents = (components) => {
       });
 
       kWidget.embed({
-        "targetId": videoId, // kaltura requires an ID on the div
-        "wid": partnerId, // partner id
-        "uiconf_id": playerId, // player id
-        entry_id: entryId // media
+        targetId: videoId, // kaltura requires an ID on the div
+        wid: partnerId, // partner id, specific to kaltura account
+        uiconf_id: playerId, // ui config, set up in kaltura
+        entry_id: entryId // unique identifier of video
       });
     }
   });

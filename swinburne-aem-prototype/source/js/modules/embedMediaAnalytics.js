@@ -18,18 +18,18 @@ const onPlayerStateChange = (event, id) => {
     provider
   } = getVideoDetails(id);
 
-  if ((provider === "youtube" && event.data === 1) // youtube start playing
-  || (provider === "kaltura" && event === 'playing')) { // kaltura start playing
+  if ((provider === "youtube" && event.data === 1) // start playing
+  || (provider === "kaltura" && event === 'playing')) {
     if (!timeSpent.length) {
       for (let i = 0; i < 10; i++) {
         videos[id].timeSpent.push(false);
       }
     }
     videos[id].timer = setInterval(record.bind(this, id), 100);
-  } else if ((provider === 'youtube') // any other youtube event
+  } else if ((provider === 'youtube') // any other youtube state change is considered a pause
   || (provider === 'kaltura' && event === 'paused')) { // kaltura paused playing
     if ((provider==="youtube" && event.data === 0)) { // youtube finished playing
-      videoFinish();
+      videoFinish(id);
     }
     clearInterval(timer);
   }
@@ -47,8 +47,8 @@ const record = (id) => {
   let currentTime;
 
   if (provider === 'youtube') {
-    duration = player.getCurrentTime();
-    currentTime = player.getDuration();
+    duration = player.getDuration();
+    currentTime = player.getCurrentTime();
   } else if (provider === 'kaltura') {
     duration = player.evaluate('{duration}');
     currentTime = player.evaluate('{video.player.currentTime}');
@@ -83,7 +83,7 @@ const setAnalytics = (id) => {
 
   window.digitalData.video = {
     title: '',
-    progress: `${lastProgress}0`,
+    progress: `${lastProgress}0`, // percentage value in 10% increments, eg '10', '20', '30' etc
     provider: provider
   };
   window.digitalData.event.push({"eventAction" : "video-interact"});

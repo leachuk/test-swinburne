@@ -117,7 +117,6 @@ const setAnalytics = (id) => {
     provider: provider
   };
   window.digitalData.event.push({"eventAction" : "video-interact"});
-  console.log('aaaaa', window.digitalData);
 };
 
 /**
@@ -149,6 +148,11 @@ const loadScripts = (provider) => {
   })
 };
 
+/**
+ * Stores the details for a given video
+ *
+ * @param {id} ID attribute of video component
+ */
 const createVideoDetails = ({ id, player, provider, title }) => {
   if (!videos[id]) {
     videos[id] = {
@@ -231,7 +235,7 @@ const initializeComponents = (components) => {
 };
 
 /**
- * Checks if embedded video components are on the page and if so
+ * Checks if embedded video components are on the page and if so, initializes them
  */
 export default () => {
   const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-provider="youtube"]');

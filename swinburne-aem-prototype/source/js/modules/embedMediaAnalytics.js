@@ -48,6 +48,7 @@ const onPlayerStateChange = (event, id) => {
 
   if ((provider === "youtube" && event.data === 1) // start playing
   || (provider === "kaltura" && event === 'playing')) {
+    clearTimer(id);
     videos[id].timer = setInterval(record.bind(this, id), 100);
   } else if ((provider === 'youtube') // any other youtube state change is considered a pause
   || (provider === 'kaltura' && event === 'paused')) { // kaltura paused playing
@@ -115,7 +116,7 @@ const setAnalytics = (id) => {
     progress: `${lastWatchedSegment}0`, // percentage value in 10% increments, eg '10', '20', '30' etc
     provider: provider
   };
-  window.digitalData.event.push({"eventAction" : "video-interact"});o
+  window.digitalData.event.push({"eventAction" : "video-interact"});
 };
 
 /**

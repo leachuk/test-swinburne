@@ -87,6 +87,7 @@ const setAnalytics = (id) => {
     provider: provider
   };
   window.digitalData.event.push({"eventAction" : "video-interact"});
+  console.log('aaaa', window.digitalData);
 };
 
 const loadScripts = (provider) => {
@@ -134,7 +135,6 @@ const initializeComponents = (components) => {
     const entryId = component.getAttribute('data-entry-id');
     const provider = component.getAttribute('data-provider');
     const title = component.getAttribute('data-linkdescription');
-    console.log('title1', title);
     let player;
 
     if (provider === 'youtube') {

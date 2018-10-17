@@ -1,28 +1,47 @@
-const videos = {};
+import ResponsiveIframes from './responsive-iframes';
+
+const videos = {}; // object to store video information. Indexed by component id attribute
 let youTubeScriptAttached = false;
 let kalturaScriptAttached = false;
 
+/**
+ * Retrieves a given video's information from the object videos (see above)
+ *
+ * @param {id} ID attribute of video component
+ */
 const getVideoDetails = (id) => {
   return videos[id];
 }
 
+/**
+ * Sets a given video's status to complete and executes the analytics update
+ *
+ * @param {id} ID attribute of video component
+ */
 const videoFinish = (id) => {
   videos[id].lastProgress = 10;
   setAnalytics(id);
 };
 
+/**
+ * Handles a state change of a given media player.
+ *
+ * @param {Object} State change event, provided by 3rd party API
+ * @param {id} ID attribute of video component
+ */
 const onPlayerStateChange = (event, id) => {
   const {
     timer,
-    timeSpent,
+    segments,
     provider
   } = getVideoDetails(id);
 
   if ((provider === "youtube" && event.data === 1) // start playing
   || (provider === "kaltura" && event === 'playing')) {
-    if (!timeSpent.length) {
+    if (!segments.length) {
+      // create array with 10 booleans, each representing 1/10 of the video
       for (let i = 0; i < 10; i++) {
-        videos[id].timeSpent.push(false);
+        videos[id].segments.push(false);
       }
     }
     videos[id].timer = setInterval(record.bind(this, id), 100);
@@ -35,10 +54,16 @@ const onPlayerStateChange = (event, id) => {
   }
 };
 
+/**
+ * Checks the current progress of the given video. If the video watched time has progressed by at least 10%, then
+ * execute analytics update
+ *
+ * @param {id} ID attribute of video component
+ */
 const record = (id) => {
   const {
     player,
-    timeSpent,
+    segments,
     lastProgress,
     provider
   } = getVideoDetails(id);
@@ -55,9 +80,9 @@ const record = (id) => {
   }
 
   const progress = Math.floor(currentTime / duration * 10);
-  timeSpent.forEach((value, index) => {
+  segments.forEach((value, index) => {
     if (index < progress) {
-      videos[id].timeSpent[Math.floor(index)] = true;
+      videos[id].segments[Math.floor(index)] = true;
     }
   });
 
@@ -67,6 +92,11 @@ const record = (id) => {
   }
 };
 
+/**
+ * Updates the window's analytics object with details of a given video
+ *
+ * @param {id} ID attribute of video component
+ */
 const setAnalytics = (id) => {
   const {
     lastProgress,
@@ -87,17 +117,22 @@ const setAnalytics = (id) => {
     provider: provider
   };
   window.digitalData.event.push({"eventAction" : "video-interact"});
-  console.log('aaaa', window.digitalData);
+  console.log('aaaaa', window.digitalData);
 };
 
+/**
+* Dynamically loads 3rd party javascript files into the page. Returns a promise that resolves after done.
+*
+* @param {String} Provider, either 'youtube' or 'kaltura'
+*/
 const loadScripts = (provider) => {
   return new Promise((resolve) => {
     let source;
     if (provider === 'youtube') {
-      if (youTubeScriptAttached) { resolve(); }
+      if (youTubeScriptAttached) { resolve(); } // check if script is already attached
       source = 'https://www.youtube.com/iframe_api';
     } else if (provider === 'kaltura') {
-      if (kalturaScriptAttached) { resolve(); }
+      if (kalturaScriptAttached) { resolve(); } // check if script is already attached
       source = 'https://cdnapisec.kaltura.com/p/691292/sp/69129200/embedIframeJs/uiconf_id/20499062/partner_id/691292';
     }
 
@@ -119,7 +154,7 @@ const createVideoDetails = ({ id, player, provider, title }) => {
     videos[id] = {
       player,
       timer: null,
-      timeSpent: [],
+      segments: [],
       lastProgress: null,
       provider,
       title
@@ -127,6 +162,11 @@ const createVideoDetails = ({ id, player, provider, title }) => {
   }
 };
 
+/**
+ * Dynamically loads an embedded video in each of the given set of nodes.
+ *
+ * @param {Array} Array of nodes
+ */
 const initializeComponents = (components) => {
   components.forEach((component) => {
     const id = component.getAttribute('id');
@@ -187,8 +227,12 @@ const initializeComponents = (components) => {
       });
     }
   });
+  ResponsiveIframes();
 };
 
+/**
+ * Checks if embedded video components are on the page, and if so initializes them
+ */
 export default () => {
   const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-provider="youtube"]');
   const kalturaVideos =  document.querySelectorAll('.onlinemedia[data-provider="kaltura"]');

@@ -19,7 +19,7 @@ const getVideoDetails = (id) => {
  * @param {id} ID attribute of video component
  */
 const videoFinish = (id) => {
-  videos[id].lastProgress = 10;
+  videos[id].lastWatchedSegment = 10;
   setAnalytics(id);
 };
 
@@ -64,7 +64,7 @@ const record = (id) => {
   const {
     player,
     segments,
-    lastProgress,
+    lastWatchedSegment,
     provider
   } = getVideoDetails(id);
 
@@ -79,15 +79,15 @@ const record = (id) => {
     currentTime = player.evaluate('{video.player.currentTime}');
   }
 
-  const progress = Math.floor(currentTime / duration * 10);
+  const currentSegment = Math.floor(currentTime / duration * 10);
   segments.forEach((value, index) => {
-    if (index < progress) {
+    if (index < currentSegment) {
       videos[id].segments[Math.floor(index)] = true;
     }
   });
 
-  if (progress !== lastProgress) {
-    videos[id].lastProgress = progress;
+  if (currentSegment !== lastWatchedSegment) {
+    videos[id].lastWatchedSegment = currentSegment;
     setAnalytics(id);
   }
 };
@@ -99,7 +99,7 @@ const record = (id) => {
  */
 const setAnalytics = (id) => {
   const {
-    lastProgress,
+    lastWatchedSegment,
     iframe,
     provider,
     title
@@ -113,7 +113,7 @@ const setAnalytics = (id) => {
 
   window.digitalData.video = {
     title,
-    progress: `${lastProgress}0`, // percentage value in 10% increments, eg '10', '20', '30' etc
+    progress: `${lastWatchedSegment}0`, // percentage value in 10% increments, eg '10', '20', '30' etc
     provider: provider
   };
   window.digitalData.event.push({"eventAction" : "video-interact"});
@@ -155,7 +155,7 @@ const createVideoDetails = ({ id, player, provider, title }) => {
       player,
       timer: null,
       segments: [],
-      lastProgress: null,
+      lastWatchedSegment: null,
       provider,
       title
     }
@@ -231,7 +231,7 @@ const initializeComponents = (components) => {
 };
 
 /**
- * Checks if embedded video components are on the page, and if so initializes them
+ * Checks if embedded video components are on the page and if so
  */
 export default () => {
   const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-provider="youtube"]');

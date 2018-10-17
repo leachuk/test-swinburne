@@ -299,6 +299,15 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: btn btn-toolbar
     title: 'Toolbar'
 
+  ## Accordion Icon
+  accordion/icon:
+    prefixes:
+    - arrow-up
+    - arrow-down
+    - arrow-right
+    valueFormat: acc-icon acc-icon-%%prefix%%
+    title: '%%prefix_normalised%%'
+
   ## Button Normal
   button/normal:
     prefixes:

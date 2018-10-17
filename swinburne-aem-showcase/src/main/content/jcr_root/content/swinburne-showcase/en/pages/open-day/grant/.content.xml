@@ -77,7 +77,7 @@
                         <aemform
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="fd/af/components/aemform"
-                            formRef="/content/dam/formsanddocuments/swinburne-showcase/jie"
+                            formRef="/content/dam/formsanddocuments/swinburne-showcase/open-day-grant"
                             formType="adaptiveForm"
                             submitType="inline"
                             textIsRich="true"

@@ -7,6 +7,24 @@
     "componentChevron": "",
     "componentIcon": "",
     "text": "",
-    "src": "https://www.youtube.com/embed/tL46xeIV5mc"
+    "provider":"kaltura",
+    "partnerId":"_691292",
+    "playerId":"20499062",
+    "entryId":"1_lph7zzb1",
+    "title":"kaltura video"
+  },
+  "onlinemedia2": {
+    "componentId": "onlinemedia2",
+    "componentTheme": "",
+    "componentModifier": "media-responsive",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "text": "",
+    "provider":"youtube",
+    "partnerId":"",
+    "playerId":"",
+    "entryId":"w01V5FI03MQ",
+    "title":"youtube video"
   }
 }

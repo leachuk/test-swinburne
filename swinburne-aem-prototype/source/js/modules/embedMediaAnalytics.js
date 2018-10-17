@@ -98,7 +98,7 @@ const loadScripts = (provider) => {
       source = 'https://www.youtube.com/iframe_api';
     } else if (provider === 'kaltura') {
       if (kalturaScriptAttached) { resolve(); }
-      source = 'https://cdnapisec.kaltura.com/p/1971581/sp/197158100/embedIframeJs/uiconf_id/35724971/partner_id/1971581';
+      source = 'https://cdnapisec.kaltura.com/p/691292/sp/69129200/embedIframeJs/uiconf_id/20499062/partner_id/691292';
     }
 
     const tag = document.createElement('script');

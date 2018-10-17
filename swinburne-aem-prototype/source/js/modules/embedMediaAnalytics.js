@@ -178,7 +178,7 @@ const initializeComponents = (components) => {
     const source = videoDiv.getAttribute('src');
     const entryId = component.getAttribute('data-entry-id');
     const provider = component.getAttribute('data-provider');
-    const title = component.getAttribute('data-linkdescription');
+    const title = component.getAttribute('data-title');
     let player;
 
     if (provider === 'youtube') {

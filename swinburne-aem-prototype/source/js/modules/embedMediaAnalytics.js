@@ -82,12 +82,11 @@ const setAnalytics = (id) => {
   }
 
   window.digitalData.video = {
-    title: '',
+    title,
     progress: `${lastProgress}0`, // percentage value in 10% increments, eg '10', '20', '30' etc
     provider: provider
   };
   window.digitalData.event.push({"eventAction" : "video-interact"});
-  console.log('progress', window.digitalData);
 };
 
 const loadScripts = (provider) => {
@@ -135,6 +134,7 @@ const initializeComponents = (components) => {
     const entryId = component.getAttribute('data-entry-id');
     const provider = component.getAttribute('data-provider');
     const title = component.getAttribute('data-linkdescription');
+    console.log('title1', title);
     let player;
 
     if (provider === 'youtube') {

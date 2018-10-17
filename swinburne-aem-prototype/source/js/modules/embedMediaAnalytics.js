@@ -21,6 +21,20 @@ const getVideoDetails = (id) => {
 const videoFinish = (id) => {
   videos[id].lastWatchedSegment = 10;
   setAnalytics(id);
+  clearTimer(id);
+};
+
+/**
+ * Clears the Interval timer that watches while a video is playing
+ *
+ * @param {id} ID attribute of video component
+ */
+const clearTimer = (id) => {
+  const { timer } = getVideoDetails(id);
+  if (timer) {
+    clearInterval(timer);
+    videos[id].timer = null;
+  }
 };
 
 /**
@@ -30,27 +44,18 @@ const videoFinish = (id) => {
  * @param {id} ID attribute of video component
  */
 const onPlayerStateChange = (event, id) => {
-  const {
-    timer,
-    segments,
-    provider
-  } = getVideoDetails(id);
+  const { provider } = getVideoDetails(id);
 
   if ((provider === "youtube" && event.data === 1) // start playing
   || (provider === "kaltura" && event === 'playing')) {
-    if (!segments.length) {
-      // create array with 10 booleans, each representing 1/10 of the video
-      for (let i = 0; i < 10; i++) {
-        videos[id].segments.push(false);
-      }
-    }
     videos[id].timer = setInterval(record.bind(this, id), 100);
   } else if ((provider === 'youtube') // any other youtube state change is considered a pause
   || (provider === 'kaltura' && event === 'paused')) { // kaltura paused playing
     if ((provider==="youtube" && event.data === 0)) { // youtube finished playing
       videoFinish(id);
+    } else {
+      clearTimer(id);
     }
-    clearInterval(timer);
   }
 };
 
@@ -63,7 +68,6 @@ const onPlayerStateChange = (event, id) => {
 const record = (id) => {
   const {
     player,
-    segments,
     lastWatchedSegment,
     provider
   } = getVideoDetails(id);
@@ -80,11 +84,6 @@ const record = (id) => {
   }
 
   const currentSegment = Math.floor(currentTime / duration * 10);
-  segments.forEach((value, index) => {
-    if (index < currentSegment) {
-      videos[id].segments[Math.floor(index)] = true;
-    }
-  });
 
   if (currentSegment !== lastWatchedSegment) {
     videos[id].lastWatchedSegment = currentSegment;
@@ -116,7 +115,7 @@ const setAnalytics = (id) => {
     progress: `${lastWatchedSegment}0`, // percentage value in 10% increments, eg '10', '20', '30' etc
     provider: provider
   };
-  window.digitalData.event.push({"eventAction" : "video-interact"});
+  window.digitalData.event.push({"eventAction" : "video-interact"});o
 };
 
 /**
@@ -158,7 +157,6 @@ const createVideoDetails = ({ id, player, provider, title }) => {
     videos[id] = {
       player,
       timer: null,
-      segments: [],
       lastWatchedSegment: null,
       provider,
       title

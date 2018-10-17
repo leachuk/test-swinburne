@@ -293,7 +293,7 @@ input[type="radio"] {
     box-sizing: border-box;
 }
 input.afcaptcha-refresh-btn {
-    padding-top: 7px;
+    padding: 7px;
     margin: 0;
     border-color: #fff;
     color: #fff !important;

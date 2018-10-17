@@ -6,36 +6,55 @@ const getVideoDetails = (id) => {
   return videos[id];
 }
 
-const onYouTubePlayerStateChange = (event, id) => {
+const videoFinish = (id) => {
+  videos[id].lastProgress = 10;
+  setAnalytics(id);
+};
+
+const onPlayerStateChange = (event, id) => {
   const {
     timer,
-    timeSpent
+    timeSpent,
+    provider
   } = getVideoDetails(id);
 
-  if (event.data === 1) { // Started playing
+  if ((provider === "youtube" && event.data === 1) // youtube start playing
+  || (provider === "kaltura" && event === 'playing')) { // kaltura start playing
     if (!timeSpent.length) {
       for (let i = 0; i < 10; i++) {
         videos[id].timeSpent.push(false);
       }
     }
     videos[id].timer = setInterval(record.bind(this, id), 100);
-  } else {
-    if (event.data === 0) { // finished playing
-      videos[id].lastProgress = 10;
-      setAnalytics(id);
+  } else if ((provider === 'youtube') // any other youtube event
+  || (provider === 'kaltura' && event === 'paused')) { // kaltura paused playing
+    if ((provider==="youtube" && event.data === 0)) { // youtube finished playing
+      videoFinish();
     }
     clearInterval(timer);
   }
-}
+};
 
 const record = (id) => {
-  console.log('record');
   const {
     player,
     timeSpent,
-    lastProgress
+    lastProgress,
+    provider
   } = getVideoDetails(id);
-  var progress = Math.floor(player.getCurrentTime() / player.getDuration() * 10);
+
+  let duration;
+  let currentTime;
+
+  if (provider === 'youtube') {
+    duration = player.getCurrentTime();
+    currentTime = player.getDuration();
+  } else if (provider === 'kaltura') {
+    duration = player.evaluate('{duration}');
+    currentTime = player.evaluate('{video.player.currentTime}');
+  }
+
+  const progress = Math.floor(currentTime / duration * 10);
   timeSpent.forEach((value, index) => {
     if (index < progress) {
       videos[id].timeSpent[Math.floor(index)] = true;
@@ -46,15 +65,30 @@ const record = (id) => {
     videos[id].lastProgress = progress;
     setAnalytics(id);
   }
-}
+};
 
 const setAnalytics = (id) => {
   const {
     lastProgress,
-    iframe
+    iframe,
+    provider,
+    title
   } = getVideoDetails(id);
-  console.log(getVideoDetails(id));
-}
+
+  if (!window.digitalData) {
+    window.digitalData = {
+      event: []
+    }
+  }
+
+  window.digitalData.video = {
+    title: '',
+    progress: `${lastProgress}0`,
+    provider: provider
+  };
+  window.digitalData.event.push({"eventAction" : "video-interact"});
+  console.log('progress', window.digitalData);
+};
 
 const loadScripts = (provider) => {
   return new Promise((resolve) => {
@@ -80,6 +114,19 @@ const loadScripts = (provider) => {
   })
 };
 
+const createVideoDetails = ({ id, player, provider, title }) => {
+  if (!videos[id]) {
+    videos[id] = {
+      player,
+      timer: null,
+      timeSpent: [],
+      lastProgress: null,
+      provider,
+      title
+    }
+  }
+};
+
 const initializeComponents = (components) => {
   components.forEach((component) => {
     const id = component.getAttribute('id');
@@ -88,73 +135,59 @@ const initializeComponents = (components) => {
     const entryId = component.getAttribute('data-entry-id');
     const provider = component.getAttribute('data-provider');
     const title = component.getAttribute('data-linkdescription');
-    const playerId = component.getAttribute('data-player-id');
     let player;
 
-    loadScripts(provider).then(() => {
-      if (provider === 'youtube') {
-        player = new YT.Player(videoDiv, {
-          videoId: entryId,
-          events: {
-            'onStateChange': (event) => {
-              onYouTubePlayerStateChange(event, id);
-            }
+    if (provider === 'youtube') {
+      player = new YT.Player(videoDiv, {
+        videoId: entryId,
+        events: {
+          'onStateChange': (event) => {
+            onPlayerStateChange(event, id);
           }
-        });
-      }
-      else if (provider === 'kaltura') {
-        kWidget.addReadyCallback( function( playerId ){
-          console.log('loaded!!!!!!!!!!!!!!!', playerId);
-        });
-        kWidget.embed({
-          "targetId": id, // unique object id
-          "wid": "_691292", // partner id
-          "uiconf_id": 20499062, // player id
-          entry_id: "1_lph7zzb1" // media
-        });
-      }
-
-      if (!videos[id]) {
-        videos[id] = {
-          player,
-          videoDiv,
-          timer: null,
-          timeSpent: [],
-          lastProgress: null,
-          provider,
         }
+      });
+      createVideoDetails({
+        id,
+        player,
+        provider,
+        title
+      });
+    } else if (provider === 'kaltura') {
+      let videoId = videoDiv.getAttribute('id');
+      if (!videoId) {
+        videoId = `${id}-video`;
+        videoDiv.setAttribute('id', videoId);
       }
-    });
+      const playerId = component.getAttribute('data-player-id');
+      const partnerId = component.getAttribute('data-partner-id');
+
+      kWidget.addReadyCallback( function( kalturaPlayerId) {
+        player = document.getElementById(kalturaPlayerId);
+        createVideoDetails({
+          id,
+          player,
+          provider,
+          title
+        });
+
+        player.kBind('playerStateChange', (event) => {
+          onPlayerStateChange(event, id);
+        });
+
+        player.kBind('playerPlayEnd', () => {
+          videoFinish(id);
+        });
+      });
+
+      kWidget.embed({
+        "targetId": videoId, // kaltura requires an ID on the div
+        "wid": partnerId, // partner id
+        "uiconf_id": playerId, // player id
+        entry_id: entryId // media
+      });
+    }
   });
 };
-// if (!youTubeScriptAttached) {
-//   const tag = document.createElement('script');
-//   tag.src = "//www.youtube.com/iframe_api";
-//   const firstScriptTag = document.getElementsByTagName('script')[0];
-//   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-//   youTubeScriptAttached = true;
-// }
-//
-// if (!kalturaScriptAttached) {
-//   const tag = document.createElement('script');
-//   tag.src = "https://cdnapisec.kaltura.com/p/1971581/sp/197158100/embedIframeJs/uiconf_id/35724971/partner_id/1971581";
-//   const firstScriptTag = document.getElementsByTagName('script')[0];
-//   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-//   var kalturaScriptAttached = true;
-//   tag.addEventListener('load', () => {
-//     console.log('kWidget loaded', kWidget);
-//     console.log('kWidget', kWidget);
-//     kWidget.addReadyCallback( function( playerId ){
-//       console.log('loaded!!!!!!!!!!!!!!!', playerId);
-//     });
-//     kWidget.embed({
-//       "targetId": "kaltura-player", // unique object id
-//       "wid": "_691292", // partner id
-//       "uiconf_id": 20499062, // player id
-//       entry_id: "1_lph7zzb1" // media
-//     });
-//   });
-// }
 
 export default () => {
   const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-provider="youtube"]');

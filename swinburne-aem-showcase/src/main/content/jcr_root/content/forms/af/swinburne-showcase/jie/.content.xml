@@ -3,8 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
-        cq:lastModified="{Date}2018-10-16T12:37:52.563+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/blank"
         jcr:language="en"
         jcr:primaryType="cq:PageContent"
@@ -23,7 +21,6 @@
         <guideContainer
             fd:version="1.1"
             jcr:lastModified="{Date}2018-10-16T12:21:16.680+11:00"
-            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="fd/af/components/guideContainer"
             actionType="fd/af/components/guidesubmittype/restendpoint"
@@ -79,10 +76,6 @@
                             textIsRich="true"/>
                     </guideheader>
                     <guidetextbox_710193482
-                        jcr:created="{Date}2018-10-11T06:45:00.109+11:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-10-11T06:54:33.098+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Contact Channel - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -93,10 +86,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_934172405
-                        jcr:created="{Date}2018-10-11T06:44:24.579+11:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-10-11T06:54:39.030+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Interaction Tag Details - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -107,10 +96,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_434383756
-                        jcr:created="{Date}2018-10-11T06:43:41.359+11:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-10-11T06:54:45.323+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Sales Channel - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -121,10 +106,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_1862318497
-                        jcr:created="{Date}2018-10-11T06:14:59.168+11:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-10-11T06:15:47.744+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Interaction Source - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -135,10 +116,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_1878853809
-                        jcr:created="{Date}2018-10-11T07:08:37.683+11:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-10-11T07:09:18.701+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Referral Source - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -149,8 +126,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guideradiobutton
-                        jcr:lastModified="{Date}2018-10-11T06:46:56.754+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Are you an international students? *"
                         sling:resourceType="fd/af/components/guideradiobutton"
@@ -165,8 +140,6 @@
                         <fd:scripts jcr:primaryType="nt:unstructured"/>
                     </guideradiobutton>
                     <guidetextbox
-                        jcr:lastModified="{Date}2018-10-11T06:46:46.097+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="First name *"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -177,8 +150,6 @@
                         placeholderText="First name"
                         textIsRich="[true,true,true]"/>
                     <guidetextbox_1915379945
-                        jcr:lastModified="{Date}2018-10-11T06:47:07.601+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Last name *"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -220,8 +191,6 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="fd/af/layouts/gridFluidLayout">
                             <guidetextbox
-                                jcr:lastModified="{Date}2018-10-11T06:31:14.531+11:00"
-                                jcr:lastModifiedBy="admin"
                                 jcr:primaryType="nt:unstructured"
                                 jcr:title="Mobile Area"
                                 sling:resourceType="fd/af/components/guidetextbox"
@@ -239,8 +208,6 @@
                                     jcr:primaryType="nt:unstructured"/>
                             </guidetextbox>
                             <guidetelephone
-                                jcr:lastModified="{Date}2018-10-11T07:02:53.304+11:00"
-                                jcr:lastModifiedBy="admin"
                                 jcr:primaryType="nt:unstructured"
                                 jcr:title="Telephone *"
                                 sling:resourceType="fd/af/components/guidetelephone"
@@ -281,8 +248,6 @@
                         name="textdraw1532308536197"
                         textIsRich="true"/>
                     <guidedropdownlist_99652624
-                        jcr:lastModified="{Date}2018-10-16T12:21:29.254+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Which best describes you? *"
                         sling:resourceType="fd/af/components/guidedropdownlist"
@@ -298,8 +263,6 @@
                         <fd:scripts jcr:primaryType="nt:unstructured"/>
                     </guidedropdownlist_99652624>
                     <guidedropdownlist_548774665
-                        jcr:lastModified="{Date}2018-10-11T06:50:35.264+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="What is your highest qualification? *"
                         sling:resourceType="fd/af/components/guidedropdownlist"
@@ -311,8 +274,6 @@
                         textIsRich="[true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_1682134043
-                        jcr:lastModified="{Date}2018-10-11T06:49:39.376+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Secondary school"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -325,12 +286,10 @@
                         visible="{Boolean}false">
                         <fd:rules jcr:primaryType="nt:unstructured"/>
                         <fd:scripts
-                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;\\nconsole.log([\\&quot;loading school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n  url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=schools&amp;onlyvalues=true&amp;callback=\\&quot;\,\\n  type: 'GET'\,\\n  crossDomain: true\,\\n  dataType: 'jsonp'\,\\n  componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n  success: function (data) {\\n    //console.log(data.response);\\n    var vals = data.response.map(function(item){\\n      return {\\n        label: item\,\\n        value: item\\n      };\\n    });\\n\\n    $(this.componentId).autocomplete({\\n      minLength: 0\, //0 to allow autofocus to open the list \\n      source : vals\,\\n      classes: {\\n        \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n      }\\n    }).focus(function() {\\n      $(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n    });\\n  }\\n});\\nconsole.log([\\&quot;loaded school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.secondarySchool&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;var vals_clone = [];\\nfunction validateSearch($val\, vals) {\\n  var val = $val.val();\\n  var hasMatch = false;\\n  vals.map(function (item) {                      \\n    if(item.value.toLowerCase().indexOf(val.toLowerCase()) !== -1) {\\n      hasMatch = true;\\n    }\\n  });\\n  val = !hasMatch ? \\&quot;\\&quot; : val;\\n  $val.val(val);\\n}\\nconsole.log([\\&quot;loading school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n  url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=schools&amp;onlyvalues=true&amp;callback=\\&quot;\,\\n  type: 'GET'\,\\n  crossDomain: true\,\\n  dataType: 'jsonp'\,\\n  componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n  success: function (data) {\\n    //console.log(data.response);\\n    var vals = data.response.map(function(item){\\n      return {\\n        label: item\,\\n        value: item\\n      };\\n    });\\n    vals_clone = vals;\\n    $(this.componentId).autocomplete({\\n      minLength: 0\, //0 to allow autofocus to open the list \\n      source : vals\,\\n      classes: {\\n        \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n      }\\n    }).blur(function () {\\n      validateSearch($(this)\, vals_clone);\\n\\t}).focus(function() {\\n      validateSearch($(this)\, vals_clone);\\n      $(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n    });\\n  }\\n});\\nconsole.log([\\&quot;loaded school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.secondarySchool&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
                     </guidetextbox_1682134043>
                     <guidetextbox_1204529226
-                        jcr:lastModified="{Date}2018-10-11T06:47:20.051+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Area of interest"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -342,12 +301,10 @@
                         textIsRich="[true,true,true]">
                         <fd:rules jcr:primaryType="nt:unstructured"/>
                         <fd:scripts
-                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;console.log([\\&quot;loading areaofinterest\\&quot;\, \\&quot;#\\&quot; + this.id + \\&quot;_widget\\&quot;]);\\nvar vals_clone = [];\\n\\nfunction validateSearch($val\, vals) {\\n  var val = $val.val();\\n  var hasMatch = false;\\n  vals.map(function (item) {                      \\n    if(item.value.toLowerCase().indexOf(val.toLowerCase()) !== -1) {\\n      hasMatch = true;\\n    }\\n  });\\n  val = !hasMatch ? \\&quot;\\&quot; : val;\\n  $val.val(val);\\n}\\n\\n$.ajax({\\n\\turl: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/coursesearch-v2/system/api/json/?p=cs&amp;q=study_areas&amp;exportjson=Y&amp;c=noread%2Cnowrite\\&quot;\,\\n\\ttype: 'GET'\,\\n\\tcrossDomain: true\,\\n\\tdataType: 'jsonp'\,\\n\\tcomponentId: \\&quot;#\\&quot; + this.id + \\&quot;_widget\\&quot;\,\\n\\tsuccess: function (data) {\\n\\t\\t//console.log(data.response);\\n\\t\\tvar vals = data.response.map(function (item) {\\n\\t\\t\\treturn {\\n\\t\\t\\t\\tlabel: item.Name\,\\n\\t\\t\\t\\tvalue: item.Name\,\\n\\t\\t\\t\\tdataid: item.Id\\n\\t\\t\\t};\\n\\t\\t});\\n      \\tvals.unshift({label: \\&quot;All Areas\\&quot;\, value: \\&quot;All Areas\\&quot;\, dataid: 0});\\n      \\tvals_clone = vals;\\n\\t\\t//console.log(vals);\\n\\t\\t$(this.componentId).autocomplete({\\n\\t\\t\\tminLength: 0\, //0 to allow autofocus to open the list \\n\\t\\t\\tsource: vals\,\\n\\t\\t\\tclasses: {\\n\\t\\t\\t\\t\\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n\\t\\t\\t}\\n\\t\\t}).focus(function () {\\n          \\tvalidateSearch($(this)\, vals_clone);\\n\\t\\t\\t$(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n\\t\\t}).blur(function () {\\n          \\tvalidateSearch($(this)\, vals_clone);\\n\\t\\t}).on(\\&quot;autocompleteselect\\&quot;\, function (event\, ui) {\\n\\t\\t\\tconsole.log([\\&quot;autocompleteselect areaofinterest\\&quot;\, \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;\, event\, ui]);\\n\\t\\t\\tconsole.log([\\&quot;reloading intendedcourse\\&quot;\, \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;]);\\n\\t\\t\\t//update hidden fields with values that select \\n\\t\\t\\t//areaofinterestid.value = ui.item.dataid;\\n\\t\\t\\tcourseOfInterest.enabled = false;\\n\\t\\t\\tcourseOfInterest.value = \\&quot;\\&quot;;\\n\\t\\t\\t$.ajax({\\n\\t\\t\\t\\turl: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/coursesearch-v2/system/api/json/?p=cs&amp;q=all_courses&amp;exportjson=Y&amp;StudyAreaId=\\&quot; + ui.item.dataid + \\&quot;&amp;m=define_fields_to_return&amp;m_fields=CourseTitle&amp;m_flatten=1&amp;c=noread%2Cnowrite\\&quot;\,\\n\\t\\t\\t\\ttype: 'GET'\,\\n\\t\\t\\t\\tcrossDomain: true\,\\n\\t\\t\\t\\tasync: false\,\\n\\t\\t\\t\\tdataType: 'jsonp'\,\\n\\t\\t\\t\\tcomponentId: \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;\,\\n\\t\\t\\t\\tsuccess: function (data) {\\n\\t\\t\\t\\t\\t//console.log(data.response);\\n\\t\\t\\t\\t\\tvar vals = data.response.SearchResultsList.map(function (item) {\\n\\t\\t\\t\\t\\t\\treturn {\\n\\t\\t\\t\\t\\t\\t\\tlabel: item\,\\n\\t\\t\\t\\t\\t\\t\\tvalue: item\,\\n                            dataid: item.Id\\n\\t\\t\\t\\t\\t\\t};\\n\\t\\t\\t\\t\\t});\\n\\t\\t\\t\\t\\t//console.log(vals);\\n\\t\\t\\t\\t\\t$(this.componentId).autocomplete({\\n\\t\\t\\t\\t\\t\\tminLength: 0\, //0 to allow autofocus to open the list \\n\\t\\t\\t\\t\\t\\tsource: vals\,\\n\\t\\t\\t\\t\\t\\tclasses: {\\n\\t\\t\\t\\t\\t\\t\\t\\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t}).focus(function () {\\n\\t\\t\\t\\t\\t\\t$(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n                    }).on(\\&quot;autocompleteselect\\&quot;\, function (event\, ui) {\\n                      //update hidden fields with values that select \\n                      console.log([\\&quot;autocompleteselect courseofinterest\\&quot;\, \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;\, event\, ui]);\\n                      //courseofinterestid.value = ui.item.dataid;\\n                    });\\n\\t\\t\\t\\t\\tcourseOfInterest.enabled = true;\\n\\t\\t\\t\\t}\\n\\t\\t\\t});\\n\\t\\t\\tconsole.log([\\&quot;reloaded intendedcourse\\&quot;\, \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;]);\\n\\t\\t});\\n\\t}\\n});\\nconsole.log([\\&quot;loaded areaofinterest\\&quot;\, \\&quot;#\\&quot; + this.id + \\&quot;_widget\\&quot;]);&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.areaOfInterest&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;console.log([\\&quot;loading areaofinterest\\&quot;\, \\&quot;#\\&quot; + this.id + \\&quot;_widget\\&quot;]);\\nvar vals_clone = [];\\nvar vals_clone1 = [];\\nfunction validateSearch($val\, vals) {\\n  var val = $val.val();\\n  var hasMatch = false;\\n  vals.map(function (item) {                      \\n    if(item.value.toLowerCase().indexOf(val.toLowerCase()) !== -1) {\\n      hasMatch = true;\\n    }\\n  });\\n  val = !hasMatch ? \\&quot;\\&quot; : val;\\n  $val.val(val);\\n}\\n$.ajax({\\n\\turl: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/coursesearch-v2/system/api/json/?p=cs&amp;q=study_areas&amp;exportjson=Y&amp;c=noread%2Cnowrite\\&quot;\,\\n\\ttype: 'GET'\,\\n\\tcrossDomain: true\,\\n\\tdataType: 'jsonp'\,\\n\\tcomponentId: \\&quot;#\\&quot; + this.id + \\&quot;_widget\\&quot;\,\\n\\tsuccess: function (data) {\\n\\t\\t//console.log(data.response);\\n\\t\\tvar vals = data.response.map(function (item) {\\n\\t\\t\\treturn {\\n\\t\\t\\t\\tlabel: item.Name\,\\n\\t\\t\\t\\tvalue: item.Name\,\\n\\t\\t\\t\\tdataid: item.Id\\n\\t\\t\\t};\\n\\t\\t});\\n      \\tvals.unshift({label: \\&quot;All Areas\\&quot;\, value: \\&quot;All Areas\\&quot;\, dataid: 0});\\n        vals_clone = vals;\\n\\t\\t//console.log(vals);\\n\\t\\t$(this.componentId).autocomplete({\\n\\t\\t\\tminLength: 0\, //0 to allow autofocus to open the list \\n\\t\\t\\tsource: vals\,\\n\\t\\t\\tclasses: {\\n\\t\\t\\t\\t\\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n\\t\\t\\t}\\n\\t\\t}).focus(function () {\\n          \\tvalidateSearch($(this)\, vals_clone);\\n\\t\\t\\t$(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n\\t\\t}).blur(function () {\\n          \\tvalidateSearch($(this)\, vals_clone);\\n\\t\\t}).on(\\&quot;autocompleteselect\\&quot;\, function (event\, ui) {\\n\\t\\t\\tconsole.log([\\&quot;autocompleteselect areaofinterest\\&quot;\, \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;\, event\, ui]);\\n\\t\\t\\tconsole.log([\\&quot;reloading intendedcourse\\&quot;\, \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;]);\\n\\t\\t\\t//update hidden fields with values that select \\n\\t\\t\\t//areaofinterestid.value = ui.item.dataid;\\n\\t\\t\\tcourseOfInterest.enabled = false;\\n\\t\\t\\tcourseOfInterest.value = \\&quot;\\&quot;;\\n          \\tareaOfInterest.enabled = false;\\n\\t\\t\\t$.ajax({\\n\\t\\t\\t\\turl: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/coursesearch-v2/system/api/json/?p=cs&amp;q=all_courses&amp;exportjson=Y&amp;StudyAreaId=\\&quot; + ui.item.dataid + \\&quot;&amp;m=define_fields_to_return&amp;m_fields=CourseTitle&amp;m_flatten=1&amp;c=noread%2Cnowrite\\&quot;\,\\n\\t\\t\\t\\ttype: 'GET'\,\\n\\t\\t\\t\\tcrossDomain: true\,\\n\\t\\t\\t\\tasync: false\,\\n\\t\\t\\t\\tdataType: 'jsonp'\,\\n\\t\\t\\t\\tcomponentId: \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;\,\\n\\t\\t\\t\\tsuccess: function (data) {\\n                  \\tareaOfInterest.enabled = true;\\n\\t\\t\\t\\t\\t//console.log(data.response);\\t\\t\\t\\t\\n\\t\\t\\t\\t\\tvar vals = data.response.SearchResultsList.map(function (item) {\\n\\t\\t\\t\\t\\t\\treturn {\\n\\t\\t\\t\\t\\t\\t\\tlabel: item\,\\n\\t\\t\\t\\t\\t\\t\\tvalue: item\,\\n                            dataid: item.Id\\n\\t\\t\\t\\t\\t\\t};\\n\\t\\t\\t\\t\\t});\\n                  \\tvals_clone1 = vals;\\n\\t\\t\\t\\t\\t//console.log(vals);\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t$(this.componentId).autocomplete({\\n\\t\\t\\t\\t\\t\\tminLength: 0\, //0 to allow autofocus to open the list \\n\\t\\t\\t\\t\\t\\tsource: vals\,\\n\\t\\t\\t\\t\\t\\tclasses: {\\n\\t\\t\\t\\t\\t\\t\\t\\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t}).focus(function () {\\n                      \\tvalidateSearch($(this)\, vals_clone1);\\n\\t\\t\\t\\t\\t\\t$(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n                    }).blur(function () {\\n                        validateSearch($(this)\, vals_clone1);\\n                    }).on(\\&quot;autocompleteselect\\&quot;\, function (event\, ui) {\\n                      //update hidden fields with values that select \\n                      console.log([\\&quot;autocompleteselect courseofinterest\\&quot;\, \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;\, event\, ui]);\\n                      //courseofinterestid.value = ui.item.dataid;\\n                    });\\n\\t\\t\\t\\t\\tcourseOfInterest.enabled = true;\\n\\t\\t\\t\\t}\\n\\t\\t\\t});\\n\\t\\t\\tconsole.log([\\&quot;reloaded intendedcourse\\&quot;\, \\&quot;#\\&quot; + courseOfInterest.id + \\&quot;_widget\\&quot;]);\\n\\t\\t});\\n\\t}\\n});\\nconsole.log([\\&quot;loaded areaofinterest\\&quot;\, \\&quot;#\\&quot; + this.id + \\&quot;_widget\\&quot;]);&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.areaOfInterest&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
                     </guidetextbox_1204529226>
                     <guidetextbox_1204529
-                        jcr:lastModified="{Date}2018-10-11T06:46:35.030+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Intended course"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -360,9 +317,21 @@
                         textIsRich="[true,true,true]">
                         <fd:rules jcr:primaryType="nt:unstructured"/>
                         <fd:scripts
-                            fd:visible="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.courseOfInterest&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;\\nconsole.log([\\&quot;loading intendedcourse\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\ncourseOfInterest.enabled = false;\\n$.ajax({\\n  url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/coursesearch-v2/system/api/json/?p=cs&amp;q=all_courses&amp;exportjson=Y&amp;m=define_fields_to_return&amp;m_fields=CourseTitle&amp;m_flatten=1&amp;c=noread%2Cnowrite\\&quot;\,\\n  type: 'GET'\,\\n  crossDomain: true\,\\n  async: false\,\\n  dataType: 'jsonp'\,\\n  componentId: \\&quot;#\\&quot; + this.id + \\&quot;_widget\\&quot;\,\\n  success: function (data) {\\n    //console.log(data.response);\\n    var vals = data.response.SearchResultsList.map(function (item) {\\n      return {\\n        label: item\,\\n        value: item\,\\n        dataid: item.Id\\n      };\\n    });\\n    //console.log(vals);\\n    $(this.componentId).autocomplete({\\n      minLength: 0\, //0 to allow autofocus to open the list \\n      source: vals\,\\n      classes: {\\n        \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n      }\\n    }).focus(function () {\\n      $(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n    }).on(\\&quot;autocompleteselect\\&quot;\, function (event\, ui) {\\n      //update hidden fields with values that select \\n      //courseOfInterestId.value = ui.item.dataid;\\n    });\\n    courseOfInterest.enabled = true;\\n  }\\n});\\n\\nconsole.log([\\&quot;loaded intendedcourse\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:false}]"
+                            fd:visible="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.courseOfInterest&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;console.log([\\&quot;loading intendedcourse\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\ncourseOfInterest.enabled = false;\\n$.ajax({\\n  url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/coursesearch-v2/system/api/json/?p=cs&amp;q=all_courses&amp;exportjson=Y&amp;m=define_fields_to_return&amp;m_fields=CourseTitle&amp;m_flatten=1&amp;c=noread%2Cnowrite\\&quot;\,\\n  type: 'GET'\,\\n  crossDomain: true\,\\n  async: false\,\\n  dataType: 'jsonp'\,\\n  componentId: \\&quot;#\\&quot; + this.id + \\&quot;_widget\\&quot;\,\\n  success: function (data) {\\n    //console.log(data.response);\\n    var vals = data.response.SearchResultsList.map(function (item) {\\n      return {\\n        label: item\,\\n        value: item\,\\n        dataid: item.Id\\n      };\\n    });\\n    //console.log(vals);\\n    $(this.componentId).autocomplete({\\n      minLength: 0\, //0 to allow autofocus to open the list \\n      source: vals\,\\n      classes: {\\n        \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n      }\\n    }).focus(function () {\\n      $(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n    }).on(\\&quot;autocompleteselect\\&quot;\, function (event\, ui) {\\n      //update hidden fields with values that select \\n      //courseOfInterestId.value = ui.item.dataid;\\n    });\\n    courseOfInterest.enabled = true;\\n  }\\n});\\n\\nconsole.log([\\&quot;loaded intendedcourse\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:false}]"
                             jcr:primaryType="nt:unstructured"/>
                     </guidetextbox_1204529>
+                    <guidecaptcha
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Captcha"
+                        sling:resourceType="fd/af/components/guideCaptcha"
+                        captchaService="afcaptcha"
+                        guideNodeClass="guideCaptcha"
+                        mandatoryMessage="Provide Captcha phrase to proceed."
+                        name="captcha1539656579290"
+                        rcSize="normal"
+                        rcTheme="light"
+                        rcType="image"
+                        validateExpMessage="Invalid Captcha. Try again."/>
                     <submit
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Submit"
@@ -376,6 +345,8 @@
                             jcr:primaryType="nt:unstructured"/>
                     </submit>
                 </items>
+                <fd:rules jcr:primaryType="nt:unstructured"/>
+                <fd:scripts jcr:primaryType="nt:unstructured"/>
             </rootPanel>
             <autoSaveInfo
                 jcr:primaryType="nt:unstructured"

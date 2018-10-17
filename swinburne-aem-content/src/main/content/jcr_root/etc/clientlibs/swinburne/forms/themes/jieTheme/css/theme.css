@@ -38,7 +38,7 @@ textarea,
     margin-bottom: 1.0625rem;
     width: 100% !important;
 }
-.ui-selectmenu-button {        
+.ui-selectmenu-button {
 	width: 100%;
     border-color: #d9d5d1;
 }
@@ -53,7 +53,7 @@ select,
 	background-image: url(../assets/input-bg.png);
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: contain; 
+    background-size: contain;
 }
 .ui-menu .ui-menu-item-wrapper {
     padding: 7px 24px;
@@ -265,4 +265,71 @@ input[type="radio"] {
     overflow-y: scroll;
     overflow-x: hidden;
     height:8em;
+}
+.guide-af-captcha {
+    border: 0.125rem solid #fff;
+}
+.afcaptcha-img {
+    background-color: #fff;
+    text-align: center;
+}
+.afcaptcha-img img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+.afcaptcha-input {
+    display: inline-block;
+    width: 60%;
+    box-sizing: border-box;
+    padding-right: 9px;
+}
+.afcaptcha-refresh {
+    float: left;
+    margin-left: 0;
+    margin-top: 0;
+    width: 40%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+input.afcaptcha-refresh-btn {
+    padding: 7px;
+    margin: 0;
+    border-color: #fff;
+    color: #fff !important;
+    font-weight: bold;
+    background-color: transparent !important;
+    border-top-width: 2px !important;
+    border-left-width: 2px !important;
+    border-bottom-width: 2px !important;
+    border-right-width: 2px !important;
+}
+.timer-bar-holder {
+    max-width: 75px;
+    position: relative;
+    margin: 0 auto;
+    height: 20px;
+}
+.afcaptchatimer {
+    border: 1px solid #ffffff;
+}
+.afcaptchatimer-bar {
+    background-color: #fff;
+}
+.GuideCaptcha ~ .guideFieldError {
+    margin: 7px 0 10px 0;
+}
+@media (max-width: 767px){
+    .afcaptcha-refresh,
+    .afcaptcha-input {
+        display: inline-block;
+        width: 100%;
+        padding-right: 0;
+    }
+    .afcaptcha-input input {
+        margin-bottom: 10px;
+    }
+    .timer-bar-holder {
+        padding-top: 7px;
+    }
 }

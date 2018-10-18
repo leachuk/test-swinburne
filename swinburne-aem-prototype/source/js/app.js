@@ -12,7 +12,7 @@ import Subscribers from './modules/subscribers'
 import NavToggler from './modules/navtoggler'
 import FancyBox from './modules/fancybox'
 import ResponsiveIframes from './modules/responsive-iframes'
-import EmbedMediaAnalytics from './modules/embedMediaAnalytics'
+import EmbedMedia from './modules/embedMedia'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -62,7 +62,7 @@ $(() => {
 
   ResponsiveIframes();
 
-  EmbedMediaAnalytics();
+  EmbedMedia();
 
   // 'object-fit' polyfill for unsupported browsers
   /* global objectFitImages */

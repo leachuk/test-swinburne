@@ -1,3 +1,7 @@
+/**
+ * Dynamically embeds video media and sets up analytics
+ */
+
 import ResponsiveIframes from './responsive-iframes';
 
 const videos = {}; // object to store video information. Indexed by component id attribute
@@ -175,10 +179,15 @@ const initializeComponents = (components) => {
     const id = component.getAttribute('id');
     const videoDiv = component.querySelector('.js-video-embed');
     const source = videoDiv.getAttribute('src');
-    const entryId = component.getAttribute('data-entry-id');
-    const provider = component.getAttribute('data-provider');
-    const title = component.getAttribute('data-title');
+    const entryId = component.getAttribute('data-mediaid');
+    const provider = component.getAttribute('data-mediaprovider');
+    const title = component.getAttribute('data-mediatitle');
+    const width = component.getAttribute('width');
+    const height = component.getAttribute('height');
     let player;
+
+    if (width) { component.style.width = `${width}px`; }
+    if (height) { component.style.height = `${height}px`; }
 
     if (provider === 'youtube') {
       player = new YT.Player(videoDiv, {
@@ -201,8 +210,8 @@ const initializeComponents = (components) => {
         videoId = `${id}-video`;
         videoDiv.setAttribute('id', videoId);
       }
-      const playerId = component.getAttribute('data-player-id');
-      const partnerId = component.getAttribute('data-partner-id');
+      const playerId = component.getAttribute('data-mediaplayerid');
+      const partnerId = component.getAttribute('data-mediapartnerid');
 
       kWidget.addReadyCallback( function(kalturaPlayerId) {
         player = document.getElementById(kalturaPlayerId);
@@ -237,8 +246,8 @@ const initializeComponents = (components) => {
  * Checks if embedded video components are on the page and if so, initializes them
  */
 export default () => {
-  const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-provider="youtube"]');
-  const kalturaVideos =  document.querySelectorAll('.onlinemedia[data-provider="kaltura"]');
+  const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="youtube"]');
+  const kalturaVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="kaltura"]');
   if (youTubeVideos.length) {
     loadScripts('youtube').then(() => {
       window.onYouTubeIframeAPIReady = () => {

@@ -20,11 +20,6 @@ body{
     top: 0;
     left: 0;
     background-color: transparent;   
-
-}
-.loading * {
-	z-index: -1 !important;
-    pointer-events: none !important;
 }
 input:not([type="radio"]),
 .ui-selectmenu-button,

@@ -246,8 +246,8 @@ const initializeComponents = (components) => {
  * Checks if embedded video components are on the page and if so, initializes them
  */
 export default () => {
-  const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="youtube"]');
-  const kalturaVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="kaltura"]');
+  const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="youtube"]:not(.iframe)');
+  const kalturaVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="kaltura"]:not(.iframe)');
   if (youTubeVideos.length) {
     loadScripts('youtube').then(() => {
       window.onYouTubeIframeAPIReady = () => {
@@ -256,6 +256,7 @@ export default () => {
     });
   }
   if (kalturaVideos.length) {
+    console.log("loading youtube")
     loadScripts('kaltura').then(() => {
       initializeComponents(kalturaVideos);
     });

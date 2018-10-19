@@ -232,7 +232,7 @@
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_821384976_G0KCY194E"
                             componentModifiers="[swinburne:component-style-modifier/padding/px-15]"
-                            text="&lt;h3 style=&quot;text-align: center;&quot;>&lt;b>&lt;img src=&quot;/content/dam/media/campaigns/envelope.png&quot;>&lt;/b>&lt;/h3>&#xd;&#xa;&lt;h3 style=&quot;text-align: center;&quot;>&lt;b>&amp;nbsp;&lt;/b>&lt;/h3>&#xd;&#xa;&lt;h3 style=&quot;text-align: center;&quot;>&lt;b>EMAIL US&lt;/b>&lt;/h3>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;small>Our course adviser on hand to answer your questions.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;small>&lt;a title=&quot;email us&quot; href=&quot;https://www.swinburne.edu.au/study/options/connect/email/&quot; target=&quot;_self&quot;>&lt;span class=&quot;text-red&quot;>Drop us a line&lt;/span>&lt;/a> now.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                            text="&lt;h3 style=&quot;text-align: center;&quot;>&lt;b>&lt;img src=&quot;/content/dam/media/campaigns/envelope.png&quot;>&lt;/b>&lt;/h3>&#xd;&#xa;&lt;h3 style=&quot;text-align: center;&quot;>&lt;b>&amp;nbsp;&lt;/b>&lt;/h3>&#xd;&#xa;&lt;h3 style=&quot;text-align: center;&quot;>&lt;b>EMAIL US&lt;/b>&lt;/h3>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;small>Our course adviser on hand to answer your questions.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;small>&lt;a title=&quot;email us&quot; href=&quot;/content/swinburne-showcase/en/pages/mid-year/email-us.html&quot; target=&quot;_self&quot;>&lt;span class=&quot;text-red&quot;>Drop us a line&lt;/span>&lt;/a> now.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <col_end15385392153910
                             jcr:primaryType="nt:unstructured"
@@ -268,4 +268,5 @@
     <registration-page/>
     <fashioning-a-career-in-visual-merchandising/>
     <how-to-apply/>
+    <email-us/>
 </jcr:root>

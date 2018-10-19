@@ -1,7 +1,8 @@
 export default () => {
   $(document).ready( () => {
-    let $responsiveIframes = $('div[component].media-responsive > iframe');
+    let $responsiveIframes = $('div[component].media-responsive iframe');
     let $window = $(window);
+
     if($responsiveIframes.length) {
       let setIframesHeight = () => {
         $responsiveIframes.each( (_, iframe)  => {

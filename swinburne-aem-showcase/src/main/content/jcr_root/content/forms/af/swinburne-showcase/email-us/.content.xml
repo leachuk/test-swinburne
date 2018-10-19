@@ -283,9 +283,8 @@
                     </guidetextbox_1204529>
                     <guidetextbox_488508768
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Enquiry"
+                        jcr:title="Enquiry *"
                         sling:resourceType="fd/af/components/guidetextbox"
-                        allowRichText="true"
                         autofillFieldKeyword="name"
                         guideNodeClass="guideTextBox"
                         mandatory="true"

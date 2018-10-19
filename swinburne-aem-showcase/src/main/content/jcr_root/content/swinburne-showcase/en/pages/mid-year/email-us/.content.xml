@@ -48,56 +48,54 @@
                             textIsRich="true"/>
                     </par>
                 </contentblock>
-                <contentblock_1913627296
+                <contentblock_1841367937
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_1913627296_0IWN3BXPI"
+                    componentId="contentblock_1841367937_FM9IFTQ0J"
                     componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-c10]"
                     componentTheme="[swinburne-showcase:component-style-theme/layout/contentblock/form]"
                     variant="container">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_YJTGAOB2G"
-                            text="&lt;h2>Email us your question&lt;/h2>&#xd;&#xa;&lt;p>Complete the form below and we'll respond to your enquiry within two business days.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <contentblock
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock_EZYFGBCNI"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/content/alignment/center,swinburne-showcase:component-style-modifier/padding/p-30,swinburne-showcase:component-style-modifier/grid/container-width/container-lg,swinburne-showcase:component-style-modifier/background/bg-c8]">
-                            <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
-                                <aemform
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="fd/af/components/aemform"
-                                    formRef="/content/dam/formsanddocuments/swinburne-showcase/email-us"
-                                    formType="adaptiveForm"
-                                    submitType="inline"
-                                    textIsRich="true"
-                                    thankyouConfig="message"
-                                    thankyouMessage="&lt;p>Thanks for raising your question.&lt;/p>&#xd;&#xa;"
-                                    useiframe="true"/>
-                            </par>
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <bgvideo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </contentblock>
-                    </par>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
-                </contentblock_1913627296>
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout">
+                        <colctrl
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/colctrl"
+                            componentId="colctrl_QVEHQCHJO"
+                            controlType="start"
+                            layout="2;colctrl-2c"/>
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_4EUM23PKO"
+                            text="&lt;h1>Email us your question&lt;/h1>&#xd;&#xa;&lt;p>Complete the form below and we'll respond to your enquiry within two business days.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <col_break15399075903600
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/colctrl"
+                            controlType="break"/>
+                        <aemform
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/components/aemform"
+                            formRef="/content/dam/formsanddocuments/swinburne-showcase/email-us"
+                            formType="adaptiveForm"
+                            submitType="inline"
+                            textIsRich="true"
+                            thankyouConfig="message"
+                            thankyouMessage="&lt;p>Thank you for your message.&lt;/p>&#xd;&#xa;"
+                            useiframe="true"/>
+                        <col_end15399075738200
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/colctrl"
+                            controlType="end"/>
+                    </par>
+                </contentblock_1841367937>
             </par>
             <bgimage
                 jcr:primaryType="nt:unstructured"

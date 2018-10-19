@@ -10,7 +10,7 @@ class OnlineMediaAuthorSpec extends ComponentSpec {
     String pathPage = "component/widgets/online-media"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
-    String componentPath = "jcr:content/article/par/contentblock/par/onlinemedia"
+    String componentPath = "jcr:content/article/par/contentblock1/par/onlinemedia"
 
     def setupSpec() {
         loginAsAdmin()

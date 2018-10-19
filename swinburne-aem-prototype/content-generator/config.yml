@@ -1622,15 +1622,13 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     title: 'Inline Share Toolbox'
 
   # Online Media
-  widgets/onlinemedia/layout/variant/default:
+  widgets/onlinemedia/layout/variant:
     flat: true
-    prefix: default
-    title: 'Default'
-
-  widgets/onlinemedia/layout/variant/iframe:
-    flat: true
-    prefix: iframe
-    title: 'IFrame'
+    prefixes:
+    - default
+    - iframe
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
 
 # Icon
 content/cq:tags/swinburne/component-style-icon: &component-style-icon

@@ -256,7 +256,6 @@ export default () => {
     });
   }
   if (kalturaVideos.length) {
-    console.log("loading youtube")
     loadScripts('kaltura').then(() => {
       initializeComponents(kalturaVideos);
     });

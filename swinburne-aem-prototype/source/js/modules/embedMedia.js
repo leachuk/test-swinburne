@@ -177,7 +177,7 @@ const createVideoDetails = ({ id, player, provider, title }) => {
 const initializeComponents = (components) => {
   components.forEach((component) => {
     const id = component.getAttribute('id');
-    const videoDiv = component.querySelector('.js-video-embed');
+    const videoDiv = component.querySelector('.contents');
     const source = videoDiv.getAttribute('src');
     const entryId = component.getAttribute('data-mediaid');
     const provider = component.getAttribute('data-mediaprovider');

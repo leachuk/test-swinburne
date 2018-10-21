@@ -177,7 +177,7 @@ const createVideoDetails = ({ id, player, provider, title }) => {
 const initializeComponents = (components) => {
   components.forEach((component) => {
     const id = component.getAttribute('id');
-    const videoDiv = component.querySelector('.js-video-embed');
+    const videoDiv = component.querySelector('.contents');
     const source = videoDiv.getAttribute('src');
     const entryId = component.getAttribute('data-mediaid');
     const provider = component.getAttribute('data-mediaprovider');
@@ -246,8 +246,8 @@ const initializeComponents = (components) => {
  * Checks if embedded video components are on the page and if so, initializes them
  */
 export default () => {
-  const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="youtube"]');
-  const kalturaVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="kaltura"]');
+  const youTubeVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="youtube"]:not(.iframe)');
+  const kalturaVideos =  document.querySelectorAll('.onlinemedia[data-mediaprovider="kaltura"]:not(.iframe)');
   if (youTubeVideos.length) {
     loadScripts('youtube').then(() => {
       window.onYouTubeIframeAPIReady = () => {

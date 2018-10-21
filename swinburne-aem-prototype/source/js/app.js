@@ -54,7 +54,7 @@ $(() => {
   ParallaxImage()
 
   // Take over any hash links on the page so they correctly jump to the content
-  HashLinks()
+  //HashLinks()
 
   NavToggler();
 

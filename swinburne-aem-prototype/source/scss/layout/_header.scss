@@ -20,6 +20,13 @@ header[component],
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
+
+    ul {
+      margin-top: 0 !important;
+    }
+    .pagelist ul > li > a > i {
+      font-size: 1.25rem !important;
+    }
     div[component].parsys {
       float: left;
       div[component].theme--image-headerlogo {

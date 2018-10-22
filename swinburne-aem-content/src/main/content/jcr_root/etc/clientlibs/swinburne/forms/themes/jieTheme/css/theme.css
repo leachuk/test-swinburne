@@ -202,10 +202,10 @@ input[type="radio"] {
         margin: 0;
     }
     .col-md-6:first-child {
-        width: 33.33333333%;
+        width: 45%;
     }
     .col-md-6:last-child {
-        width: 66.66666667%;
+        width: 55%;
     }
 }
 @media (max-width: 639px) {

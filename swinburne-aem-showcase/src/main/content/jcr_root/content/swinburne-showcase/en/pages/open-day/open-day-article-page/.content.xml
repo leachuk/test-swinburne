@@ -49,8 +49,10 @@
                             sling:resourceType="swinburne/components/widgets/onlinemedia"
                             componentId="onlinemedia_XKWF8EE1G"
                             componentModifiers="[swinburne-showcase:component-style-modifier/online-media/responsive]"
+                            mediaId="PBW7aYzvMCE"
+                            mediaProvider="youtube"
                             providerUrl="https://www.youtube.com/embed/v74G5-BIIHM?rel=0&amp;amp;showinfo=0&quot;"
-                            variant="videoIframe"/>
+                            variant="default"/>
                         <text_1935741856
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"

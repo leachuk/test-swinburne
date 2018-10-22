@@ -222,6 +222,7 @@
   }
 }
 
+// !important for overwritting the styles coming the SSI forms
 .fa,
 .icn {
   // Social Icons
@@ -233,28 +234,28 @@
   &-connectdevelop,
   &-youtube {
     &:before {
-      font-family: 'Font Awesome Brands';
+      font-family: 'Font Awesome Brands' !important;
     }
   }
   &-facebook-f:before {
-    content:"\f39e";
+    content:"\f39e" !important;
   }
   &-instagram:before {
-    content:"\f16d";
+    content:"\f16d" !important;
   }
   &-twitter:before {
-    content:"\f099";
+    content:"\f099" !important;
   }
   &-pinterest-p:before {
-    content:"\f231";
+    content:"\f231" !important;
   }
   &-linkedin-in:before {
-    content: "\F0E1";
+    content: "\F0E1" !important;
   }
   &-youtube:before {
-    content: "\F167";
+    content: "\F167" !important;
   }
   &-connectdevelop:before {
-    content: "\f20e"
+    content: "\f20e" !important;
   }
 }

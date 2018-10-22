@@ -4,7 +4,7 @@
     jcr:primaryType="sling:OsgiConfig"
           scheduler.concurrent="{Boolean}false"
           scheduler.period="{Long}5"
-          service.bad_link_tolerance_interval="{Integer}48"
+          service.bad_link_tolerance_interval="{Long}48"
           service.cache_broken_internal_links="{Boolean}false"
           service.check_override_patterns="[ ^system/, ]"
           service.pid="com.day.cq.rewriter.linkchecker.impl.LinkCheckerImpl"

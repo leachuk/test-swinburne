@@ -26,7 +26,8 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
                     componentId="page_details_1"
-                    pageIcon="[swinburne:component-style-icon/social/linkedin-in]"
+                    cardIconShow="true"
+                    cardIcon="[swinburne:component-style-icon/social/linkedin-in]"
                     textIsRich="true">
                     <secondaryImage
                         jcr:primaryType="nt:unstructured"

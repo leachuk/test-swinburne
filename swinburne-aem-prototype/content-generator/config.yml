@@ -853,6 +853,9 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - loop
       - muted
       - playsinline
+      - allowfullscreen
+      - webkitallowfullscreen
+      - mozAllowFullScreen
     title: '%%prefix_normalised%%'
 
   visibility:
@@ -874,6 +877,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - text-hide
       - visible
     title: '%%prefix_normalised%%'
+
+  schema/widgets/onlinemedia:
+    contents:
+    - video: { value: "itemscope itemtype=&quot;http://schema.org/VideoObject&quot;", title: "Video Object" }
+
 
 # Modules
 content/cq:tags/swinburne/component-style-module: &component-style-module
@@ -1614,15 +1622,13 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     title: 'Inline Share Toolbox'
 
   # Online Media
-  widgets/onlinemedia/layout/variant/default:
+  widgets/onlinemedia/layout/variant:
     flat: true
-    prefix: default
-    title: 'Default'
-
-  widgets/onlinemedia/layout/variant/videoIframe:
-    flat: true
-    prefix: videoIframe
-    title: 'Video IFrame'
+    prefixes:
+    - default
+    - iframe
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
 
 # Icon
 content/cq:tags/swinburne/component-style-icon: &component-style-icon
@@ -1972,6 +1978,22 @@ content/cq:tags/swinburne/content-type: &content-type
       - news: {title: "News Page"}
       - profile
     title: '%%prefix_normalised%%'
+
+  # Online Media
+  widgets/onlinemedia/provider/default:
+    flat: true
+    prefix: default
+    title: 'Default'
+
+  widgets/onlinemedia/provider/kaltura:
+    flat: true
+    prefix: kaltura
+    title: 'Kaltura'
+
+  widgets/onlinemedia/provider/youtube:
+    flat: true
+    prefix: youtube
+    title: 'Youtube'
 
 content/cq:tags/swinburne/component-topic: &component-topic
   #used for comms between components

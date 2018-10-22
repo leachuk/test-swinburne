@@ -9,5 +9,5 @@
 
     <filter root="/content/forms/af/swinburne-showcase"/>
     <filter root="/content/dam/formsanddocuments/swinburne-showcase"/>
-    <filter root="/content/experience-fragments/swinburne-showcase" mode="update"/>
+    <filter root="/content/experience-fragments/swinburne-showcase"/>
 </workspaceFilter>

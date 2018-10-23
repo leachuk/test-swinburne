@@ -4,5 +4,5 @@
     <!--        This change can make the AEM content removed      -->
     <!--    http://jackrabbit.apache.org/filevault/filter.html    -->
     <!--                        W A R N I N G                     -->
-    <filter root="/etc/packages/aemdesign/aemdesign-aem-core-deploy-de7eb1b.zip" />
+    <filter root="/etc/packages/aemdesign/aemdesign-aem-core-deploy-5788508.zip" />
 </workspaceFilter>

@@ -172,10 +172,11 @@ const createVideoDetails = ({ id, player, provider, title }) => {
 /**
  * Dynamically loads an embedded video in each of the given set of nodes.
  *
- * @param {Array} Array of nodes
+ * @param {NodeList or Array} Array of nodes
  */
 const initializeComponents = (components) => {
-  components.forEach((component) => {
+  // use Array prototype method for IE11 compatibility
+  Array.prototype.forEach.call (components, (component) => {
     const id = component.getAttribute('id');
     const videoDiv = component.querySelector('.contents');
     const source = videoDiv.getAttribute('src');

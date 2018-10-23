@@ -96,13 +96,23 @@ const bindSlickToElement = (element, options = {}) => {
     $parent.find('.owl-prev, .owl-next').wrapAll('<div class="owl-nav"></div>');
   }
 
-  //Set IFrame to slide if video modifier
+  //Set IFrame depending of providers Youtube or Kaltura
   let $videos = $parent.find('.owl-item .card.video');
+
+  // Kaltura videos
+  let playerId  = 32783592;
+  let partnerId = 811441;
+
   if($videos.length) {
     $videos.each( (_, video)  => {
       let $video = $(video);
       let videoId = $video.find('a[title]').attr('title');
-      $video.html(`<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>`);
+      let hasKaltura = $video.hasClass('video-kaltura');
+      if (hasKaltura) {
+        $video.html(`<iframe src="https://cdnapisec.kaltura.com/p/${partnerId}/sp/${partnerId}00/embedIframeJs/uiconf_id/${playerId}/partner_id/${partnerId}?iframeembed=true&playerId=kaltura_player&entry_id=${videoId}" allowfullscreen></iframe>`);
+      } else {
+        $video.html(`<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>`);
+      }
     });
   }
 

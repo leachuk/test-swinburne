@@ -197,6 +197,13 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: media-responsive
     title: 'Media Responsive'
 
+  online-media/providers:
+    prefixes:
+     - youtube
+     - kaltura
+    valueFormat: video-%%prefix%%
+    title: '%%prefix_normalised%%'
+
   # Colours
   color:
     prefixes:

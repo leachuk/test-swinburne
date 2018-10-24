@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/swinburne/config"/>
+    <filter root="/apps/swinburne/config.author"/>
 
     <!-- cloud services -->
     <!--<filter root="/etc/cloudservices/addthisconnect" mode="update"/>-->
@@ -17,6 +18,25 @@
     <filter root="/etc/map/https" mode="update"/>
 
     <filter root="/etc/tenants/swinburne" mode="update"/>
+    <filter root="/libs/settings/workflow/notification/email/default/en"/>
+    <filter root="/conf/global/settings/workflow"/>
+
+    <!--ACL-->
+    <filter root="/content/rep:policy"/>
+    <filter root="/etc/rep:policy"/>
+
+    <filter root="/home/groups/c/content-authors">
+        <exclude pattern="/home/groups/c/content-authors/\.tokens"/>
+    </filter>
+    <filter root="/home/groups/w/workflow-users">
+        <exclude pattern="/home/groups/w/workflow-users/\.tokens"/>
+    </filter>
+    <filter root="/home/groups/w/workflow-administrators">
+        <exclude pattern="/home/groups/w/workflow-administrators/\.tokens"/>
+    </filter>
+    <filter root="/home/groups/swinburne/power-authors">
+        <exclude pattern="/home/groups/swinburne/power-authors/\.tokens"/>
+    </filter>
 
     <!--<filter root="/conf/swinburne/settings/cloudconfigs" mode="update"/>-->
 

@@ -50,6 +50,7 @@
                             sling:resourceType="swinburne/components/widgets/onlinemedia"
                             componentId="onlinemedia_OFJEEWSWK"
                             mediaId="UrbrwfUKAks"
+                            mediaProvider="youtube"
                             provider="youtube"/>
                         <text_1111846849
                             jcr:primaryType="nt:unstructured"

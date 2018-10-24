@@ -36,7 +36,6 @@
                     description="&lt;p>Considering nursing, early education, apprenticeships or vocational courses?&amp;nbsp;&lt;/p>&#xd;&#xa;"
                     eventEndDate="{Date}2018-09-10T18:00:00.000+10:00"
                     eventStartDate="{Date}2018-09-10T16:00:00.000+10:00"
-                    pageIcon="[swinburne-showcase:component-style-icon/general/calendar-alt]"
                     subTitleFormat="swinburne-showcase:component-style-theme/details/event-details/format/subtitle/singledate"
                     textIsRich="true">
                     <secondaryImage

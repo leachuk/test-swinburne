@@ -19,7 +19,6 @@
             title="jie"/>
         <guideContainer
             fd:version="1.1"
-
             jcr:primaryType="nt:unstructured"
             sling:resourceType="fd/af/components/guideContainer"
             actionType="fd/af/components/guidesubmittype/restendpoint"

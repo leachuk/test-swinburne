@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    cq:lastReplicated="{Date}2018-10-08T21:12:56.064+11:00"
+    cq:lastReplicatedBy="workflow-process-service"
+    cq:lastReplicationAction="Activate"
+    jcr:mixinTypes="[cq:ReplicationStatus,rep:AccessControllable]"
+    jcr:primaryType="sling:OrderedFolder">
+    <rep:policy/>
+    <dam/>
+    <experience-fragments/>
+    <cq:tags/>
+    <projects/>
+    <usergenerated/>
+    <screens/>
+    <catalogs/>
+    <launches/>
+    <campaigns/>
+    <communities/>
+    <sites/>
+    <forms/>
+    <community/>
+    <community-components/>
+    <we-retail/>
+    <task-manage/>
+    <swinburne/>
+    <api/>
+    <swinburne-training/>
+    <swinburne-showcase/>
+</jcr:root>

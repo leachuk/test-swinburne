@@ -205,24 +205,14 @@
   ],
   "pageListMedias": [
     {
-      "image": "https://www.swinburne.edu.au/infoevening/_assets/images/apprentice-of-the-year.jpg",
-      "video": "",
-      "modifier": "image"
-    },
-    {
       "image": "",
-      "video": "MGGFu-C2j1k",
-      "modifier": "video"
-    },
-    {
-      "image": "https://www.swinburne.edu.au/infoevening/_assets/images/SuzanneSQ2.jpg",
-      "video": "",
-      "modifier": "image"
+      "video": "1_rot1i5vx",
+      "modifier": "video media-responsive video-kaltura"
     },
     {
       "image": "",
       "video": "a-M_5rGhPdg",
-      "modifier": "video"
+      "modifier": "video media-responsive video-youtube"
     }
   ]
 }

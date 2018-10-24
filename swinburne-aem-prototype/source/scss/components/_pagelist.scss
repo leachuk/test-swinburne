@@ -330,6 +330,19 @@ $border-color: #1d1f20;
         padding: 0;
         background-color: transparent;
       }
+      &.video {}
+      &.media-responsive {
+        position: relative;
+        padding-top: 53%;
+        & > iframe {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          min-height: auto;
+        }
+      }
     }
   }
 

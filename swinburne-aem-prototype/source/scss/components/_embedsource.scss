@@ -15,9 +15,9 @@ div[component].embedsource {
       color: white;
       text-align: center;
       background: $primary;
-      height: 80px;
+      min-height: 80px;
       padding: 5px;
-      width: 90px;
+      min-width: 90px;
     }
 
     .time-after {
@@ -28,5 +28,20 @@ div[component].embedsource {
       text-align: center;
       text-transform: uppercase;
     }
+
+    @include media-breakpoint-down(xs) {
+      .time-wrapper {
+        margin-right: 2vw;
+      }
+      .time {
+        font-size: 10vw;
+        min-height: 10vw;
+        min-width: 18vw;
+      }
+      .time-after {
+        font-size: 3.6vw;
+      }
+    }
+
   }
 }

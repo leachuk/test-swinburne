@@ -220,6 +220,9 @@
   &-heartbeat:before {
     content: "\F21E";
   }
+  &-link:before {
+    content: "\F0C1";
+  }
 }
 
 // !important for overwritting the styles coming the SSI forms

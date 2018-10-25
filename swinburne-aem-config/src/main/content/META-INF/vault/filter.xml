@@ -3,7 +3,7 @@
     <filter root="/apps/swinburne/config"/>
 
     <!-- cloud services -->
-    <!--<filter root="/etc/cloudservices/addthisconnect" mode="update"/>-->
+    <filter root="/etc/cloudservices/livechat" mode="update"/>
     <!--<filter root="/etc/cloudservices/googleanalytics" mode="update"/>-->
 
     <!-- dam config -->

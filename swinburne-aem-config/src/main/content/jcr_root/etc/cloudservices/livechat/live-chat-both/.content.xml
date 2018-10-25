@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:cloudservicename="livechat"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/cq/analytics/templates/livechat"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Live Chat - Both"
+        sling:resourceType="cq/analytics/components/livechatpage"
+        snippetCode="window.digitalData.page.livechat = { &#xa;userInitiated: &quot;true&quot;,&#xa;proactive: &quot;true&quot; &#xa;}"/>
+</jcr:root>

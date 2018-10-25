@@ -17,9 +17,9 @@ mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploym
 set_term_title "Deployed"
 
 
-set_term_title "Turn-on Workflows"
-echo "- Workflows Turn-on "
-doWorkflowsTurnOn
+#set_term_title "Turn-on Workflows"
+#echo "- Workflows Turn-on "
+#doWorkflowsTurnOn
 
 
 set_term_title "Clear Cache"

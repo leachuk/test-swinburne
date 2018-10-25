@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/cloudserviceconfigs/templates/servicepage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Generic Analytics Snippet"
+        sling:resourceType="cq/cloudserviceconfigs/components/servicepage"
+        componentReference="cq/analytics/components/generictracker"
+        inclusionRank="{Long}300"
+        ranking="100"/>
+    <live-chat-user-initiated/>
+    <live-chat-proactive/>
+    <live-chat-both/>
+</jcr:root>

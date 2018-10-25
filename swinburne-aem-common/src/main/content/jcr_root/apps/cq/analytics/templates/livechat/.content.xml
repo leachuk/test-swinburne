@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Live Chat JavaScript snippet configuration"
+    jcr:mixinTypes="[granite:FinalArea]"
+    jcr:primaryType="cq:Template"
+    jcr:title="Live Chat Configuration"
+    sling:resourceSuperType="cq/cloudserviceconfigs/templates/configpage"
+    allowedChildren="[/apps/cq/analytics/templates/livechat]"
+    allowedPaths="[/etc/cloudservices/livechat(/.*)?]"
+    ranking="{Long}90">
+    <jcr:content
+        cq:cloudservicename="livechat"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="/apps/cq/analytics/components/livechatpage"/>
+</jcr:root>

@@ -3,8 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
-        cq:lastModified="{Date}2018-10-26T15:28:00.987+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/blank"
         jcr:language="en"
         jcr:mixinTypes="[]"

@@ -82,7 +82,7 @@ const bindSlickToElement = (element, options = {}) => {
       itemElement  : get(options, 'itemElement', null),
       items        : get(options, 'items', 1),
       loop         : get(options, 'loop', true),
-      margin       : get(options, 'margin', 1),
+      margin       : get(options, 'margin', 3),
       mouseDrag    : get(options, 'mouseDrag', true),
       nav          : get(options, 'nav', true),
       slideBy      : get(options, 'slideBy', 1),

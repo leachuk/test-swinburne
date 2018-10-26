@@ -39,7 +39,7 @@ textarea,
     border-color: #d9d5d1;
     height:2.5rem !important;
     color:#292625;
-    font-size:0.875rem;
+    font-size:0.875rem !important;
     padding-bottom:8px;
     padding-left:25px;
     padding-top:8px;

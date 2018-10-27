@@ -9,6 +9,19 @@ $(document).ready(function() {
         };
     });
 
+    //Tooltips hover handler when screen is not a touchscreen
+    var $tooltips = $('.guideHelpQuestionMark');
+    if (!("ontouchstart" in document.documentElement)) {
+        $tooltips.mouseenter(function(){
+            var $description = $(this).next();
+            $description.show();
+        });
+        $tooltips.mouseleave(function(){
+            var $description = $(this).next();
+            $description.hide();
+        });
+    }
+
 });
 
 //function to validate auto complete fields.

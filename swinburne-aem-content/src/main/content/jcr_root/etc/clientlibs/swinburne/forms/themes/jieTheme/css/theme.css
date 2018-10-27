@@ -252,11 +252,6 @@ input[type="radio"] {
     margin-top: -32px;
     display: none;
 }
-@media (min-width: 992px) {
-    .guideHelpQuestionMark:hover ~ .guideFieldDescription {
-    	display: inline-block;
-	}
-}
 .guideFieldDescription.long p {
 	font-size: 14px;
     border-radius: 5px;

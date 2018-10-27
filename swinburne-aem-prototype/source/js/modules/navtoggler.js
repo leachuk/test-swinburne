@@ -12,8 +12,10 @@ export default () => {
       });
 
       $menuItems.click(() => {
+        if($navToggler.hasClass('collapsed')) {
           $navToggler.removeClass('collapsed');
           $navBar.slideUp();
+        }
       });
   });
 }

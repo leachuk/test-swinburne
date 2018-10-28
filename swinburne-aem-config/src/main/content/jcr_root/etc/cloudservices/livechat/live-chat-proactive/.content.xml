@@ -3,12 +3,15 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:cloudservicename="livechat"
+        cq:lastReplicated="{Date}2018-10-29T09:35:49.672+11:00"
+        cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
         cq:template="/apps/cq/analytics/templates/livechat"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Live Chat - Proactive"
+        jcr:uuid="283ddd3d-a942-46c7-8e08-2cf79a30fce6"
         sling:resourceType="cq/analytics/components/livechatpage"
         snippetCode="window.digitalData.page.livechat = { &#xa;proactive: &quot;true&quot; &#xa;}"/>
 </jcr:root>

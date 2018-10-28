@@ -2,9 +2,15 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastReplicated="{Date}2018-10-29T09:35:39.821+11:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:template="/libs/cq/cloudserviceconfigs/templates/servicepage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Live Chat"
+        jcr:uuid="02703d67-c249-45d7-b497-c53d3412e75e"
         sling:resourceType="cq/cloudserviceconfigs/components/servicepage"
         componentReference="cq/analytics/components/livechat"/>
     <live-chat-user-initiated/>

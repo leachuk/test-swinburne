@@ -1,6 +1,6 @@
 {
   "contentblock1": {
-      "componentId": "contentblock1",
+      "componentId": "home",
       "componentTheme": "theme--contentblock-banner",
       "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/juggling.jpg)\"",
       "text": "<h2>Juggling life and uni?</h2>",

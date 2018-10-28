@@ -6,8 +6,8 @@ export default () => {
       let $navBar = $('div[component].navbar-nav ul');
       let $menuItems = $('div[component].navbar-nav ul > li');
 
-      $navToggler.click((e) => {
-        $(e.target).toggleClass('collapsed');
+      $navToggler.click(() => {
+        $navToggler.toggleClass('collapsed');
         $navBar.slideToggle();
       });
 

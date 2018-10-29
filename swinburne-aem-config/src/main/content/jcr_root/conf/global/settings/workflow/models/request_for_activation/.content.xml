@@ -6,7 +6,7 @@
         cq:template="/libs/cq/workflow/templates/model"
         jcr:description="This is the default request for activation workflow"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Swinburne: Request to Publish"
+        jcr:title="Request for Activation"
         sling:resourceType="cq/workflow/components/pages/model"
         multiResourceSupport="true">
         <flow

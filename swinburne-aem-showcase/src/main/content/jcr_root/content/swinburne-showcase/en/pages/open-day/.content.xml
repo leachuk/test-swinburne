@@ -59,8 +59,6 @@
                             componentId="image_G1WKQR220"
                             fileReference="/content/dam/media/campaigns/2018-open-day/the-most-open-of-open-days.png"/>
                         <pagetitle
-                            jcr:lastModified="{Date}2018-10-29T14:46:44.310+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             jcr:title="SWINBURNE OPEN DAY"
                             sling:resourceType="swinburne/components/content/pagetitle"

@@ -59,8 +59,6 @@
                             componentId="image_G1WKQR220"
                             fileReference="/content/dam/media/campaigns/2018-open-day/the-most-open-of-open-days.png"/>
                         <pagetitle
-                            jcr:lastModified="{Date}2018-10-29T14:46:44.310+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             jcr:title="SWINBURNE OPEN DAY"
                             sling:resourceType="swinburne/components/content/pagetitle"
@@ -73,8 +71,6 @@
                             componentTheme="[swinburne-showcase:component-style-theme/content/embedsource/countdown]"
                             html=" &lt;div class=&quot;display&quot;>&#xd;&#xa;    &lt;div class=&quot;time-left&quot;>&#xd;&#xa;      &lt;div class=&quot;time-wrapper&quot;>&#xd;&#xa;        &lt;div class=&quot;time day&quot;>0&lt;/div>&lt;div class=&quot;time-after&quot;>days&lt;/div>&#xd;&#xa;      &lt;/div>&#xd;&#xa;      &lt;div class=&quot;time-wrapper&quot;>&#xd;&#xa;        &lt;div class=&quot;time hour&quot;>0&lt;/div>&lt;div class=&quot;time-after&quot;>hours&lt;/div>&#xd;&#xa;      &lt;/div>&#xd;&#xa;      &lt;div class=&quot;time-wrapper&quot;>&#xd;&#xa;        &lt;div class=&quot;time minute&quot;>0&lt;/div>&lt;div class=&quot;time-after&quot;>minutes&lt;/div>&#xd;&#xa;      &lt;/div>&#xd;&#xa;      &lt;div class=&quot;time-wrapper&quot;>&#xd;&#xa;        &lt;div class=&quot;time second&quot;>0&lt;/div>&lt;div class=&quot;time-after&quot;>seconds&lt;/div>&#xd;&#xa;      &lt;/div>&#xd;&#xa;    &lt;/div>&#xd;&#xa;  &lt;/div>&#xd;&#xa;  &lt;script>&#xd;&#xa;    const timerDisplay = document.querySelector('.time-left');&#xd;&#xa;    const dayDisplay = document.querySelector('.day');&#xd;&#xa;    const hourDisplay = document.querySelector('.hour');&#xd;&#xa;    const minuteDisplay = document.querySelector('.minute');&#xd;&#xa;    const secondDisplay = document.querySelector('.second');&#xd;&#xa;    const endTime = document.querySelector('.end-time');&#xd;&#xa;&#xd;&#xa;    const countDownDate = new Date(&quot;December 20, 2018 10:00:00&quot;).getTime();&#xd;&#xa;&#xd;&#xa;    var x = setInterval(function() {&#xd;&#xa;&#xd;&#xa;      var now = new Date().getTime();&#xd;&#xa;&#xd;&#xa;      var time = countDownDate - now;&#xd;&#xa;&#xd;&#xa;      const months = Math.floor(time / (1000 * 60 * 60 * 24));&#xd;&#xa;      var days = Math.floor(time / (1000 * 60 * 60 * 24));&#xd;&#xa;      var hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));&#xd;&#xa;      var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));&#xd;&#xa;      var seconds = Math.floor((time % (1000 * 60)) / 1000);&#xd;&#xa;&#xd;&#xa;      if (time > 0 ) {&#xd;&#xa;        dayDisplay.innerHTML = days;&#xd;&#xa;        hourDisplay.innerHTML = hours;&#xd;&#xa;        minuteDisplay.innerHTML = minutes;&#xd;&#xa;        secondDisplay.innerHTML = seconds;&#xd;&#xa;      }&#xd;&#xa;&#xd;&#xa;      else {&#xd;&#xa;        clearInterval(x);&#xd;&#xa;        endTime.innerHTML = &quot;Event Has Started!&quot;;&#xd;&#xa;        dayDisplay.innerHTML = 0;&#xd;&#xa;        hourDisplay.innerHTML = 0;&#xd;&#xa;        minuteDisplay.innerHTML = 0;&#xd;&#xa;        secondDisplay.innerHTML = 0;&#xd;&#xa;      }&#xd;&#xa;    }, 1000);&#xd;&#xa;  &lt;/script>"/>
                         <text_copy
-                            jcr:lastModified="{Date}2018-10-29T14:47:58.290+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_JL3MJT5PJ"
@@ -82,8 +78,6 @@
                             text="&lt;h4>&lt;span class=&quot;fs-26&quot;>&lt;span class=&quot;fw-700&quot;>SUNDAY 29 JULY 2018 | 10AM - 4 PM&lt;br>&#xd;&#xa; HAWTHORN CAMPUS&lt;/span>&lt;/span>&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text
-                            jcr:lastModified="{Date}2018-10-29T14:44:30.634+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_JL3MJT5PJ"

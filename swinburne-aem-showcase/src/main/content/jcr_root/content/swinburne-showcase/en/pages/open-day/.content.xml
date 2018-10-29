@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
+    <open-day-article-page/>
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Open Day"
+        jcr:uuid="e5c21d0d-b184-49ce-af33-8ab186eca4b4"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
@@ -61,19 +63,26 @@
                             jcr:title="SWINBURNE OPEN DAY"
                             sling:resourceType="swinburne/components/content/pagetitle"
                             componentId="pagetitle_NUYFEUEV0"
-                            componentModifiers="[swinburne:component-style-modifier/text/transform/shadow]"/>
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_JL3MJT5PJ"
-                            text="&lt;h2>SUNDAY 29 JULY 2018 | 10AM - 4 PM&lt;br>&#xa;HAWTHORN CAMPUS&lt;/h2>&#xa;&lt;p>Explore our campus, speak to our students and staff, and discover your dream course. Make our place your place on Open Day.&lt;/p>&#xa;"
-                            textIsRich="true"/>
+                            componentModifiers="[swinburne:component-style-modifier/text/transform/shadow,swinburne-showcase:component-style-modifier/margin/mb-15]"/>
                         <embedsource
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/embedsource"
                             componentId="embedsource_4ESJ3FRPB"
                             componentTheme="[swinburne-showcase:component-style-theme/content/embedsource/countdown]"
                             html=" &lt;div class=&quot;display&quot;>&#xd;&#xa;    &lt;div class=&quot;time-left&quot;>&#xd;&#xa;      &lt;div class=&quot;time-wrapper&quot;>&#xd;&#xa;        &lt;div class=&quot;time day&quot;>0&lt;/div>&lt;div class=&quot;time-after&quot;>days&lt;/div>&#xd;&#xa;      &lt;/div>&#xd;&#xa;      &lt;div class=&quot;time-wrapper&quot;>&#xd;&#xa;        &lt;div class=&quot;time hour&quot;>0&lt;/div>&lt;div class=&quot;time-after&quot;>hours&lt;/div>&#xd;&#xa;      &lt;/div>&#xd;&#xa;      &lt;div class=&quot;time-wrapper&quot;>&#xd;&#xa;        &lt;div class=&quot;time minute&quot;>0&lt;/div>&lt;div class=&quot;time-after&quot;>minutes&lt;/div>&#xd;&#xa;      &lt;/div>&#xd;&#xa;      &lt;div class=&quot;time-wrapper&quot;>&#xd;&#xa;        &lt;div class=&quot;time second&quot;>0&lt;/div>&lt;div class=&quot;time-after&quot;>seconds&lt;/div>&#xd;&#xa;      &lt;/div>&#xd;&#xa;    &lt;/div>&#xd;&#xa;  &lt;/div>&#xd;&#xa;  &lt;script>&#xd;&#xa;    const timerDisplay = document.querySelector('.time-left');&#xd;&#xa;    const dayDisplay = document.querySelector('.day');&#xd;&#xa;    const hourDisplay = document.querySelector('.hour');&#xd;&#xa;    const minuteDisplay = document.querySelector('.minute');&#xd;&#xa;    const secondDisplay = document.querySelector('.second');&#xd;&#xa;    const endTime = document.querySelector('.end-time');&#xd;&#xa;&#xd;&#xa;    const countDownDate = new Date(&quot;December 20, 2018 10:00:00&quot;).getTime();&#xd;&#xa;&#xd;&#xa;    var x = setInterval(function() {&#xd;&#xa;&#xd;&#xa;      var now = new Date().getTime();&#xd;&#xa;&#xd;&#xa;      var time = countDownDate - now;&#xd;&#xa;&#xd;&#xa;      const months = Math.floor(time / (1000 * 60 * 60 * 24));&#xd;&#xa;      var days = Math.floor(time / (1000 * 60 * 60 * 24));&#xd;&#xa;      var hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));&#xd;&#xa;      var minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));&#xd;&#xa;      var seconds = Math.floor((time % (1000 * 60)) / 1000);&#xd;&#xa;&#xd;&#xa;      if (time > 0 ) {&#xd;&#xa;        dayDisplay.innerHTML = days;&#xd;&#xa;        hourDisplay.innerHTML = hours;&#xd;&#xa;        minuteDisplay.innerHTML = minutes;&#xd;&#xa;        secondDisplay.innerHTML = seconds;&#xd;&#xa;      }&#xd;&#xa;&#xd;&#xa;      else {&#xd;&#xa;        clearInterval(x);&#xd;&#xa;        endTime.innerHTML = &quot;Event Has Started!&quot;;&#xd;&#xa;        dayDisplay.innerHTML = 0;&#xd;&#xa;        hourDisplay.innerHTML = 0;&#xd;&#xa;        minuteDisplay.innerHTML = 0;&#xd;&#xa;        secondDisplay.innerHTML = 0;&#xd;&#xa;      }&#xd;&#xa;    }, 1000);&#xd;&#xa;  &lt;/script>"/>
+                        <text_copy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_JL3MJT5PJ"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/font/font-weight-bolder,swinburne:component-style-modifier/text/transform/shadow,swinburne-showcase:component-style-modifier/margin/mb-15]"
+                            text="&lt;h4>&lt;span class=&quot;fs-26&quot;>&lt;span class=&quot;fw-700&quot;>SUNDAY 29 JULY 2018 | 10AM - 4 PM&lt;br>&#xd;&#xa; HAWTHORN CAMPUS&lt;/span>&lt;/span>&lt;/h4>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_JL3MJT5PJ"
+                            text="&lt;p>Explore our campus, speak to our students and staff, and discover your dream course. Make our place your place on Open Day.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
                         <link
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/link"
@@ -719,7 +728,6 @@
                                         sling:resourceType="aemdesign/components/media/image"/>
                                 </contentblock11d_copy_35963838>
                                 <image
-
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="aemdesign/components/media/image"
                                     componentId="image_1KS9SFOAJ"
@@ -758,4 +766,5 @@
     <competition/>
     <grant/>
     <getting-there/>
+    <online-media-carousel/>
 </jcr:root>

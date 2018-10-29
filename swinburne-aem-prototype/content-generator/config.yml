@@ -2054,6 +2054,14 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - fontSize16: { cssName: 'fs-16', text: "Font Size (16px)" }
       - fontSize18: { cssName: 'fs-18', text: "Font Size (18px)" }
       - fontSize20: { cssName: 'fs-20', text: "Font Size (20px)" }
+      - fontSize22: { cssName: 'fs-22', text: "Font Size (22px)" }
+      - fontSize24: { cssName: 'fs-24', text: "Font Size (24px)" }
+      - fontSize26: { cssName: 'fs-26', text: "Font Size (26px)" }
+      - fontSize28: { cssName: 'fs-28', text: "Font Size (28px)" }
+      - fontSize30: { cssName: 'fs-30', text: "Font Size (30px)" }
+      - fontSize32: { cssName: 'fs-32', text: "Font Size (32px)" }
+      - fontSize34: { cssName: 'fs-34', text: "Font Size (34px)" }
+      - fontSize36: { cssName: 'fs-36', text: "Font Size (36px)" }
       - textStyleLead: { cssName: 'lead', text: "Text Style (Lead)" }
       - textStyleP2: { cssName: 'p2', text: "Text Style (P2)" }
       - textStyleP3: { cssName: 'p3', text: "Text Style (P3)" }

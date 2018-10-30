@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-10-30T13:01:44.429+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
@@ -27,8 +25,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <event_details
-                    jcr:lastModified="{Date}2018-10-30T11:21:26.054+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/event-details"
@@ -44,18 +40,12 @@
                     textIsRich="true"
                     titleType="[,]">
                     <secondaryImage
-                        jcr:lastModified="{Date}2018-10-30T11:21:26.054+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                     <thumbnail
-                        jcr:lastModified="{Date}2018-10-30T11:21:26.054+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                     <bgimage
-                        jcr:lastModified="{Date}2018-10-30T11:21:26.054+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                 </event_details>

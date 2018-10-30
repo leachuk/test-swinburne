@@ -5,7 +5,6 @@
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/blank"
         jcr:language="en"
-        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="jie"
         sling:resourceType="fd/af/components/page2/aftemplatedpage">

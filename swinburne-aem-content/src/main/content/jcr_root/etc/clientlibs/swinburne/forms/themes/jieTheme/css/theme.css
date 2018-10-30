@@ -247,8 +247,8 @@ input[type="radio"] {
 }
 .guideFieldDescription.long {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     margin-top: -58px;
     display: none;
 }

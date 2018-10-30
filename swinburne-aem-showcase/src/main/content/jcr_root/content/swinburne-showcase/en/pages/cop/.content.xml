@@ -8,6 +8,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Choose Swinburne | Swinburne University of Technology, Melbourne"
+        jcr:uuid="2b80deb4-33f6-446f-9aca-ff14a304e9a8"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
@@ -130,6 +131,7 @@
                             analyticsLinkLocation="link"
                             analyticsLinkType="button"
                             componentId="contentblock100a"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/accordion/icon/arrow-up]"
                             dataParent="contentblock"
                             dataToggle="collapse"
                             hideInMenu="true"
@@ -157,6 +159,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
                             componentId="contentblock100c"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/accordion/icon/arrow-right]"
                             dataParent="contentblock"
                             dataToggle="collapse"
                             hideInMenu="true"
@@ -184,6 +187,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
                             componentId="contentblock100d"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/accordion/icon/arrow-down]"
                             dataParent="contentblock"
                             dataToggle="collapse"
                             hideInMenu="true"

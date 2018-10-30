@@ -7,6 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Wantirna Advice Night"
+        jcr:uuid="c95db4bc-1a0f-4da9-af29-9b117a4a8eac"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

@@ -2,12 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2018-10-30T13:01:44.429+11:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Postgrad Advice Night"
-        jcr:uuid="a013254b-f660-40ed-995a-23324d158d14"
+        jcr:title="Croydon Advice Night"
+        jcr:uuid="2d63629e-97c5-4582-8f2c-40d33f3a583c"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
@@ -25,27 +27,35 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <event_details
+                    jcr:lastModified="{Date}2018-10-30T11:21:26.054+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/event-details"
-                    badgeLinkStyle="[swinburne-showcase:component-style-modifier/button/normal/primary,swinburne-showcase:component-style-modifier/button/icon/chevron]"
+                    badgeLinkStyle="[swinburne-showcase:component-style-modifier/button/normal/primary]"
                     badgeLinkText="Register"
                     badgeLinkTitle="Register"
                     cardIcon="[swinburne-showcase:component-style-icon/general/calendar-alt]"
                     cardIconShow="true"
                     componentId="event_details_ASUUGFSJU"
-                    description="&lt;p>Considering nursing, early education, apprenticeships or vocational courses? Find out more and let our specialist staff answer all your questions.&lt;/p>&#xd;&#xa;"
-                    eventEndDate="{Date}2018-09-28T18:00:00.000+10:00"
-                    eventStartDate="{Date}2018-09-20T16:00:00.000+10:00"
-                    subTitleFormat="swinburne-showcase:component-style-theme/details/event-details/format/subtitle/singledate"
-                    textIsRich="true">
+                    description="&lt;p>Considering nursing, early education, apprenticeships or vocational courses? &lt;/p>&#xd;&#xa;"
+                    eventEndDate="{Date}2019-06-04T18:00:00.000+10:00"
+                    eventStartDate="{Date}2019-06-04T16:00:00.000+10:00"
+                    textIsRich="true"
+                    titleType="[,]">
                     <secondaryImage
+                        jcr:lastModified="{Date}2018-10-30T11:21:26.054+11:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                     <thumbnail
+                        jcr:lastModified="{Date}2018-10-30T11:21:26.054+11:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                     <bgimage
+                        jcr:lastModified="{Date}2018-10-30T11:21:26.054+11:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                 </event_details>

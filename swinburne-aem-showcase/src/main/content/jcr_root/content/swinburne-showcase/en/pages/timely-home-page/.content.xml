@@ -31,4 +31,6 @@
                 sling:resourceType="swinburne/components/layout/container"/>
         </footer>
     </jcr:content>
+    <seas-calculator/>
+    <timely-article-page/>
 </jcr:root>

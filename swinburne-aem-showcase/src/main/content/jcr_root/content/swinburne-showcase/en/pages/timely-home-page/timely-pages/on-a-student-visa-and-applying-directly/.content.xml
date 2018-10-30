@@ -22,10 +22,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page_details
-                    jcr:created="{Date}2018-10-08T16:07:51.779+11:00"
-                    jcr:createdBy="jonathan.r"
-                    jcr:lastModified="{Date}2018-10-08T16:08:42.284+11:00"
-                    jcr:lastModifiedBy="jonathan.r"
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
@@ -39,18 +35,12 @@
                     titleType="[,]"
                     variant="hidden">
                     <secondaryImage
-                        jcr:lastModified="{Date}2018-10-08T16:08:42.284+11:00"
-                        jcr:lastModifiedBy="jonathan.r"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <thumbnail
-                        jcr:lastModified="{Date}2018-10-08T16:08:42.284+11:00"
-                        jcr:lastModifiedBy="jonathan.r"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <bgimage
-                        jcr:lastModified="{Date}2018-10-08T16:08:42.284+11:00"
-                        jcr:lastModifiedBy="jonathan.r"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                 </page_details>

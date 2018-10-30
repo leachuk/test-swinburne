@@ -46,8 +46,6 @@
                         sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock>
                 <contentblock_1388783476
-                    jcr:created="{Date}2018-10-08T14:15:33.800+11:00"
-                    jcr:createdBy="jonathan.r"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_1388783476_6HZLQB3GY"
@@ -58,16 +56,12 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
                         <text
-                            jcr:created="{Date}2018-10-08T14:16:26.438+11:00"
-                            jcr:createdBy="jonathan.r"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_VTVU1LMGN"
                             text="&lt;p>So you're ready to apply for 2019. Excellent - and great decision, by the way. (We knew you had good taste.)&lt;/p>&#xd;&#xa;&lt;p>For Year 12 students (or anyone applying for multiple courses listed in VTAC), you'll need to apply through VTAC. For anyone else - including postgrad, mature age, gap year or international students - you're welcome to apply directly to Swinburne. VTAC applications&amp;nbsp;&lt;b>open from 9am on 6 August and close at 5pm on 27 September.&lt;/b>&amp;nbsp;Direct applications, for both Australian and international students, can be made at any time.&lt;/p>&#xd;&#xa;&lt;p>So, go on, what are you waiting for?! Simply pick the option below that matches your situation. (Got any last-minute questions?&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/one-on-one/&quot;>&lt;span class=&quot;text-c7&quot;>Book a one-on-one&lt;/span>&lt;/a>&amp;nbsp;with our friendly experts!)&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <pagelist>
-                            jcr:created="{Date}2018-10-08T14:16:46.320+11:00"
-                            jcr:createdBy="jonathan.r""
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
                             componentId="pagelist_FPNBKMTAP"

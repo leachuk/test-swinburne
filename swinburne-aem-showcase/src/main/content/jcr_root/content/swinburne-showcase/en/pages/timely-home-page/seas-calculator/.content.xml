@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="SEAS Calculator"
-        jcr:uuid="32e89090-bac7-4519-882e-6ea8669db26c"
+        jcr:uuid="5aca146f-d5ed-4c3d-858f-e8b10cae28ca"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

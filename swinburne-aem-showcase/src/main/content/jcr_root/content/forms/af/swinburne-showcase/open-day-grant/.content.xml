@@ -73,7 +73,6 @@
                             textIsRich="true"/>
                     </guideheader>
                     <guidetextbox_710193482
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Contact Channel - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -84,7 +83,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_934172405
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Interaction Tag Details - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -95,7 +93,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_434383756
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Sales Channel - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -106,7 +103,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_1862318497
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Interaction Source - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -117,7 +113,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guidetextbox_1878853809
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Referral Source - HIDDEN"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -128,7 +123,6 @@
                         textIsRich="[true,true,true]"
                         visible="{Boolean}false"/>
                     <guideradiobutton
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Are you an international students? *"
                         sling:resourceType="fd/af/components/guideradiobutton"
@@ -143,7 +137,6 @@
                         <fd:scripts jcr:primaryType="nt:unstructured"/>
                     </guideradiobutton>
                     <guidetextbox
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="First name *"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -154,7 +147,6 @@
                         placeholderText="First name"
                         textIsRich="[true,true,true]"/>
                     <guidetextbox_1915379945
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Last name *"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -253,7 +245,6 @@
                         name="textdraw1532308536197"
                         textIsRich="true"/>
                     <guidedropdownlist_99652624
-
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Which best describes you? *"
@@ -269,7 +260,6 @@
                         <fd:scripts jcr:primaryType="nt:unstructured"/>
                     </guidedropdownlist_99652624>
                     <guidedropdownlist_548774665
-
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="What is your highest qualification? *"
@@ -313,7 +303,6 @@
                             jcr:primaryType="nt:unstructured"/>
                     </guidetextbox_1204529226>
                     <guidetextbox_1204529
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Intended course"
                         sling:resourceType="fd/af/components/guidetextbox"
@@ -330,7 +319,6 @@
                             jcr:primaryType="nt:unstructured"/>
                     </guidetextbox_1204529>
                     <guideemail_copy
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Main mode of transport *"
                         sling:resourceType="fd/af/components/guideemail"
@@ -343,7 +331,6 @@
                         validatePictureClause="^(([^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+(\\.[^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+)*)|(&quot;.+&quot;))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
                         validationPatternType="custom"/>
                     <guideemail_copy_copy
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Expected arrival time *"
                         sling:resourceType="fd/af/components/guideemail"
@@ -356,7 +343,6 @@
                         validatePictureClause="^(([^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+(\\.[^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+)*)|(&quot;.+&quot;))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
                         validationPatternType="custom"/>
                     <guidedropdownlist
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Will you be bringing ONE family member or friend? *"
                         sling:resourceType="fd/af/components/guidedropdownlist"
@@ -366,7 +352,6 @@
                         options="[Please Select,0=I'll be flying solo,1=I'm bringing someone]"
                         textIsRich="[true,true]"/>
                     <guidedropdownlist_co
-
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Are you interested in lunch? *"
                         sling:resourceType="fd/af/components/guidedropdownlist"
@@ -376,7 +361,6 @@
                         options="[Please Select,0=No\, I am good,1=Yes Pleaase!]"
                         textIsRich="[true,true]"/>
                     <guidetextdraw_1808649233
-
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="fd/af/components/guidetextdraw"
                         _value="&lt;p>Please note&lt;/p>&#xa;&lt;p>Grant recipients must check in at the Equity and &lt;g class=&quot;gr_ gr_8 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace&quot; id=&quot;8&quot; data-gr-id=&quot;8&quot;>AccessAbility&lt;/g> Services stand (ATC Building, Level 2) or at GS Building level 2 upon arrival at Open Day. Grants will be paid via a cheque made out to the student named in this form, and will be sent after attendance at Open Day is confirmed. Please email&amp;nbsp;&lt;a rel=&quot;nofollow&quot; target=&quot;_blank&quot; data-clickable-id=&quot;clickable-21&quot;>&lt;/a>&lt;a href=&quot;mailto:%20equity@swinburne.edu.au&quot; data-clickable-id=&quot;clickable-27&quot;>&lt;span class=&quot;red&quot;>equity@swinburne.edu.au&lt;/span>&lt;/a>&amp;nbsp;if you have any questions.&lt;/p>&#xa;&lt;p>By completing this form, you are agreeing to receive further communications from Swinburne about potential courses of study, news, events &lt;g class=&quot;gr_ gr_10 gr-alert gr_gramm gr_inline_cards gr_run_anim Punctuation only-ins replaceWithoutSep&quot; id=&quot;10&quot; data-gr-id=&quot;10&quot;>and&lt;/g> activities.&lt;/p>&#xa;"

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-10-30T16:46:24.779+11:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[workflow:wcm]"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:description="This is the default request for deactivation workflow"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Swinburne Unpublish"
+        sling:resourceType="cq/workflow/components/pages/model"
+        multiResourceSupport="true">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <lockpayloadprocess
+                jcr:created="{Date}2018-10-30T16:07:26.249+11:00"
+                jcr:createdBy="admin"
+                jcr:description="A process to lock the payload."
+                jcr:lastModified="{Date}2018-10-30T16:07:35.837+11:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Lock Payload Process"
+                sling:resourceType="cq/workflow/components/workflow/lockpayloadprocess">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.day.cq.workflow.impl.process.LockProcess"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </lockpayloadprocess>
+            <participant
+                jcr:lastModified="{Date}2018-10-30T16:45:17.125+11:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Review to unpublish"
+                sling:resourceType="cq/workflow/components/model/participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DO_NOTIFY="true"
+                    PARTICIPANT="swin-reviewers"/>
+            </participant>
+            <or
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/workflow/components/model/or"
+                branches="2"
+                orSplit="true">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <goto_copy
+                        jcr:description="Goto Step"
+                        jcr:lastModified="{Date}2018-10-30T16:09:00.327+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Approve"
+                        sling:resourceType="cq/workflow/components/model/goto">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                            PROCESS_AUTO_ADVANCE="false"
+                            script="function check() {&#xd;&#xa;        return true;&#xd;&#xa;} "
+                            TARGET_NODE_PATH="/conf/global/settings/workflow/models/swinburne_unpublish/jcr:content/flow/or/1/participant_0"/>
+                    </goto_copy>
+                    <participant_0
+                        jcr:description="Review and Unpublish"
+                        jcr:lastModified="{Date}2018-10-30T16:46:24.773+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Unpublish"
+                        sling:resourceType="cq/workflow/components/model/participant">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            DO_NOTIFY="true"
+                            PARTICIPANT="swin-publishers"
+                            timeoutMillis="0"/>
+                    </participant_0>
+                    <or
+                        jcr:created="{Date}2018-10-30T16:24:22.469+11:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2018-10-30T16:24:22.469+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/workflow/components/model/or"
+                        branches="2"
+                        orSplit="true">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <process
+                                jcr:description="Deactivates the page/asset."
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Deactivate Page/Asset"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.day.cq.wcm.workflow.process.DeactivatePageProcess"
+                                    PROCESS_AUTO_ADVANCE="true"/>
+                            </process>
+                        </_x0031_>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <goto_copy
+                                jcr:description="Goto Step"
+                                jcr:lastModified="{Date}2018-10-30T16:27:14.952+11:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Reject Unpublish"
+                                sling:resourceType="cq/workflow/components/model/goto">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                                    PROCESS_AUTO_ADVANCE="false"
+                                    script="function check() {&#xd;&#xa;        return true;&#xd;&#xa;} "
+                                    TARGET_NODE_PATH="/conf/global/settings/workflow/models/swinburne_unpublish/jcr:content/flow/or/1/unlockpayloadprocess"/>
+                            </goto_copy>
+                        </_x0032_>
+                    </or>
+                    <unlockpayloadprocess
+                        jcr:created="{Date}2018-10-30T16:09:40.582+11:00"
+                        jcr:createdBy="admin"
+                        jcr:description="A process to unlock the payload."
+                        jcr:lastModified="{Date}2018-10-30T16:09:40.582+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Unlock Payload Process"
+                        sling:resourceType="cq/workflow/components/workflow/unlockpayloadprocess">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </unlockpayloadprocess>
+                    <sendtransientworkflo
+                        jcr:description="This process will send email to current user when a transient workflow is completed"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Send Transient Workflow Completed Email"
+                        sling:resourceType="dam/components/workflow/sendtransientworkflowcompletedemailprocess">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.day.cq.dam.core.impl.process.SendTransientWorkflowCompletedEmailProcess"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </sendtransientworkflo>
+                </_x0031_>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/flow/components/parsys">
+                    <goto
+                        jcr:description="Goto Step"
+                        jcr:lastModified="{Date}2018-10-30T16:27:24.539+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Reject"
+                        sling:resourceType="cq/workflow/components/model/goto"
+                        PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                        PROCESS_AUTO_ADVANCE="true">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.adobe.granite.workflow.core.process.GotoProcess"
+                            PROCESS_AUTO_ADVANCE="true"
+                            script="function check() {&#xd;&#xa;        return true;&#xd;&#xa;} "
+                            TARGET_NODE_PATH="/conf/global/settings/workflow/models/swinburne_unpublish/jcr:content/flow/or/2/unlockpayloadprocess"/>
+                    </goto>
+                    <unlockpayloadprocess
+                        jcr:created="{Date}2018-10-30T16:09:40.582+11:00"
+                        jcr:createdBy="admin"
+                        jcr:description="A process to unlock the payload."
+                        jcr:lastModified="{Date}2018-10-30T16:09:40.582+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Unlock Payload Process"
+                        sling:resourceType="cq/workflow/components/workflow/unlockpayloadprocess">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </unlockpayloadprocess>
+                    <sendtransientworkflo
+                        jcr:description="This process will send email to current user when a transient workflow is completed"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Send Transient Workflow Completed Email"
+                        sling:resourceType="dam/components/workflow/sendtransientworkflowcompletedemailprocess">
+                        <metaData
+                            jcr:primaryType="nt:unstructured"
+                            PROCESS="com.day.cq.dam.core.impl.process.SendTransientWorkflowCompletedEmailProcess"
+                            PROCESS_AUTO_ADVANCE="true"/>
+                    </sendtransientworkflo>
+                </_x0032_>
+            </or>
+        </flow>
+    </jcr:content>
+</jcr:root>

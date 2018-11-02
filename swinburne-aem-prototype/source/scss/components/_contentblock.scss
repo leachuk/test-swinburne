@@ -56,6 +56,10 @@
           margin-bottom: 10px;
         }
       }
+      h1,
+      h2 {
+        hyphens: auto;
+      }
       a {
         @media (max-width: $screen-sm-max) {
           padding: 5px 5px;

@@ -13,5 +13,5 @@
         jcr:title="Live Chat - User Initiated"
         jcr:uuid="ac981c4f-cb50-4c0e-af22-e54c0deed952"
         sling:resourceType="cq/analytics/components/livechatpage"
-        snippetCode="window.digitalData.page.livechat = {&#xa;  userInitiated: &quot;true&quot;&#xa;}"/>
+        snippetCode="window.digitalData.page.attributes.liveChat = &quot;conditional&quot;"/>
 </jcr:root>

@@ -3,6 +3,7 @@
     jcr:primaryType="dam:Asset">
     <jcr:content
         dam:relativePath="formsanddocuments/swinburne-showcase/advice"
+        jcr:lastModified="{Date}2018-11-01T08:59:45.382+11:00"
         jcr:primaryType="dam:AssetContent"
         sling:resourceType="fd/fm/af/render"
         guide="1"

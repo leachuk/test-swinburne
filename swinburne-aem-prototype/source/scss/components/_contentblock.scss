@@ -27,7 +27,7 @@
       width: 60%;
       z-index: 11;
       @media (min-width: 578px) {
-        width: 35%;
+        width: 40%;
         margin: 100px 5px 100px 0;
       }
       background-color: $white;
@@ -54,6 +54,12 @@
         @media (min-width: $screen-sm) {
           font-size: 40px;
           margin-bottom: 10px;
+        }
+      }
+      @media (max-width: $screen-sm-max) {
+        h1,
+        h2 {
+          hyphens: auto;
         }
       }
       a {

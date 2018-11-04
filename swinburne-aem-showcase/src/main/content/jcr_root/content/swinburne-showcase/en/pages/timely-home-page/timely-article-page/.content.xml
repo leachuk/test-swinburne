@@ -1,261 +1,261 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="cq:Page">
+          jcr:primaryType="cq:Page">
     <jcr:content
-        cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
-        jcr:primaryType="cq:PageContent"
-        jcr:title="Timely Article page"
-        sling:resourceType="swinburne/components/template/base">
+            cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+            jcr:primaryType="cq:PageContent"
+            jcr:title="Timely Article page"
+            sling:resourceType="swinburne/components/template/base">
         <header
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/header"
-            componentId="header_W6XINGPAZ">
-            <par
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
+                sling:resourceType="swinburne/components/layout/header"
+                componentId="header_W6XINGPAZ">
+            <par
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/container"/>
         </header>
         <article
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article"
-            componentId="article_GKWQRP8LK">
-            <par
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container">
-                <contentblock
+                sling:resourceType="swinburne/components/layout/article"
+                componentId="article_GKWQRP8LK">
+            <par
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_6TAVW6VCD"
-                    componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
-                    componentTheme="[swinburne:component-style-theme/layout/contentblock/article]"
-                    variant="container">
+                    sling:resourceType="swinburne/components/layout/container">
+                <contentblock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock_6TAVW6VCD"
+                        componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
+                        componentTheme="[swinburne:component-style-theme/layout/contentblock/article]"
+                        variant="container">
                     <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/media/image"/>
                     <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/media/image"/>
                     <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/layout/container">
                         <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_S2J6ANGIZ"
-                            text="&lt;h1>HAVE YOU&amp;nbsp;&lt;span class=&quot;text-c7&quot;>LOST SIGHT&lt;/span>&amp;nbsp;OF WHAT YOU LOVE?&lt;/h1>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_527712602
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_527712602_3BXY2OSXR"
-                            text="&lt;p>&lt;b>Ten minutes of introspection to help you get career direction&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Floating. Drifting. But wait. You’re not on a lilo in Southeast Asia. The adventure of a lifetime is fading into a distant memory and you’re feeling a bit directionless. Maybe you just don’t know where to start. Take comfort in the fact we’ve all been there. Then take a few minutes to look inwards.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <image
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            componentId="image_ITDENVMTJ"
-                            fileReference="/content/dam/swinburne-showcase/en/common/images/cablecar.jpg"/>
-                        <text_1558149263
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_1558149263_XF0FJIV1D"
-                            text="&lt;p>As an adult, we get so busy in the doing we can lose sight of what we love. If you’re working or studying five days a week that’s about 70% of your time. And if your job or course is making you feel a bit stale, that means 70% of your life feels a bit stale. Staleness finds a way of sapping the juice from other areas of your life too – your relationships, your mental and physical well-being, even your choice of media. (We’re looking at you reality dating shows.) Depressing huh? Enough of that. We’ve got eight steps to help you rediscover what you love, and make a career out of it. So grab a notebook and find somewhere quiet to ponder these points. It might just kick-off your next adventure.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_68074081
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_68074081_E2RC5V2F9"
-                            text="&lt;p>&lt;b>STEP 1: IF YOU ALREADY HAVE A JOB IN MIND – QUESTION IT&lt;/b>&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <image_360504219
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            componentId="image_360504219_DRQ6WKOPU"
-                            fileReference="/content/dam/media/campaigns/article/change-as-good-holiday.jpg"/>
-                        <text_713890112
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_713890112_MBXIJWQBH"
-                            text="&lt;p>Ask yourself: are you in love with the job title or the qualities of the job? Job titles are a bit like brands: they can be a handy shortcut to social cred. They might suggest how creative, smart or practical you are. They might also steer you in the wrong direction.&lt;/p>&#xd;&#xa;&lt;p>Say you like the sound of ‘Architect’ and all it represents (doesn’t everyone?): a sleekness in all aspects of your life, a high-intellect, and the obligatory round-framed spectacles. You identify with this. And you love creative problem-solving. But you don’t have the patience for being methodical. You’re an act-on-the-spot-kind-of-a person. There’s no avoiding it: that’s a problem. Because being methodical and patient are key qualities of being an architect. Perhaps a career in the fast-paced world of media is more suited to you?&lt;/p>&#xd;&#xa;&lt;p>Instead of thinking title first, start with the qualities you find appealing and let them guide you. If they match up – good for you, you’re already on the right track. Go ahead and make a list of the top five qualities you want in a job.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_2017496388
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_2017496388_8J1EXPYJV"
-                            text="&lt;p>&lt;b>STEP 2: TAP INTO YOUR INNER CHILD&lt;/b>&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <image_725587573
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            componentId="image_725587573_JDRMACJRI"
-                            fileReference="/content/dam/media/campaigns/2018-open-day/article-slider/_05A7917 best.jpg"/>
-                        <text_349482121
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_349482121_W7ZSWMFK5"
-                            text="&lt;p>Trawl your memory bank. Look for things that got you excited as a kid – those kooky traits unique to you. Maybe instead of reading books, you liked car manuals. Or perhaps you were more enthusiastic than most when it came to staging home-theatre productions (take a moment to feel sorry for your parents). Track your journey from then to now and jot down the moments of pure pleasure etched in your mind. If you think you’ve forgotten your passions, this should spark the fire.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_1016321542
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_1016321542_XQPLNGVJL"
-                            text="&lt;p>&lt;b>STEP 3: SEARCH YOUR BROWSING HISTORY&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Potential embarrassment aside, there are clues here. You’ll find a database of stuff that fascinates you. You might spend hours poring over political opinion pieces, design blogs, or seeking out nutritious recipes. What is it that you enjoy about the process? Just because you like design and nutrition it doesn’t mean you have to choose between designer or nutritionist. Look deeper. You might realise it’s not nutrition that really interests you: it’s making healthy food readily available to everyone. Your passion is, in fact, sustainable organic farming.&lt;/p>&#xd;&#xa;&lt;p>It’s also worth thinking about physical activities in the real world that get you into a ‘state of flow’: the place where the ego disappears and time flies. Write down what you google and spend time with the ‘why?’.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_1106694954
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_1106694954_8D6MFMVVT"
-                            text="&lt;p>&lt;b>STEP 4: GET ENVIOUS&lt;/b>&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <image_1033602221
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            componentId="image_1033602221_7FYTDCCAR"
-                            fileReference="/content/dam/media/campaigns/2018-open-day/article-slider/_05A4356 best.jpg"/>
-                        <text_2127983147
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_2127983147_066HI6LK3"
-                            text="&lt;p>We’re all told not to compare ourselves to others. But there’s benefit in this form of torture: it can provide clarity on your own goals. Go ahead and think of someone who makes you feel a bit ordinary (this will make you feel good at the end – we promise.) Now, instead of feeling deflated, use them as motivation. What is it about their life that you want? Scribble away. If you think on it long enough you’ll discover there are only a few things you really want. And it’s not the surface stuff.&lt;/p>&#xd;&#xa;&lt;p>Envy can help you realise what you want. And there’s nothing wrong with acknowledging your shortcomings: it’ll help you develop the skills you need to reach your goals quicker.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_961936171
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_961936171_Z8XVWMLLQ"
-                            text="&lt;p>&lt;b>STEP 5: REMIND YOURSELF HOW GREAT YOU ARE&lt;/b>&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <image_1745442312
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            componentId="image_1745442312_9AU8PNYAZ"
-                            fileReference="/content/dam/media/campaigns/2018-open-day/article-slider/_E6A9449 best.jpg"/>
-                        <text_664967179
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_664967179_WC4XCNSHV"
-                            text="&lt;p>It’s good to know where you can improve. But it’s also beneficial to reflect on your unique brand of awesome. What traits or skills do you already have that set you apart from everyone else? Play to your strengths. Now’s not the time for modesty. Go ahead and toot your own horn – only you are going to see what you’ve written down.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_984639027
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_984639027_QNDNG3XCJ"
-                            text="&lt;p>&lt;b>STEP 6: PULL IT ALL TOGETHER&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>You should now have a comprehensive list of the qualities you’re seeking, things you enjoy doing, the gap in your skills, and the things you’re great at. Together they sketch a picture of the kind of career best suited to you. Whether it cements the path you’re already on, suggests a slight change in direction, or a fresh new start, aren’t you glad you did this now and not in five years’ time?&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_1947130266
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_1947130266_ECCOAM0KL"
-                            text="&lt;p>&lt;b>STEP 7: IF ANALYSIS PARALYSIS IS TAKING OVER – JUST JUMP IN&lt;/b>&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <image_1976967687
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            componentId="image_1976967687_UN6LY6SR7"
-                            fileReference="/content/dam/media/campaigns/article/network.jpg"/>
-                        <text_494264081
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_494264081_YDQKQETT9"
-                            text="&lt;p>Sometimes the best way to find your way is by making a start. Get out of your head and into your heart. We’re overwhelmed by choice in every aspect of our lives. Waiting to find the elusive ‘perfect course’ is just another form of procrastination. Remember, no experience is a wasted one. And if you do happen to change direction along the way we have heaps of ways to help you switch gears.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <text_1116286522
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_1116286522_WO70Q9WUT"
-                            text="&lt;p>&lt;b>STEP 8: COME TO ONE OF OUR INFO EVENINGS&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Got questions about what to do next? We’ve got you covered. You’ll hear stories of people who’ve switched, changed course and started over. Speak directly with our teachers. Ask all the questions. And, you can even get your application done and dusted on the night.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <eventlist
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/eventlist"
-                            componentId="eventlist_3WYKXSCKN"
-                            componentModifiers="[swinburne:component-style-modifier/grid/list/pagelist/columns/column-3]"
-                            componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
-                            detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
-                            listFrom="children"
-                            parentPage="/content/swinburne-showcase/en/pages/mid-year/events"
-                            tagsMatch="any">
-                            <badgeThumbnail
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_S2J6ANGIZ"
+                                text="&lt;h1>HAVE YOU&amp;nbsp;&lt;span class=&quot;text-c7&quot;>LOST SIGHT&lt;/span>&amp;nbsp;OF WHAT YOU LOVE?&lt;/h1>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_527712602
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_527712602_3BXY2OSXR"
+                                text="&lt;p>&lt;b>Ten minutes of introspection to help you get career direction&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Floating. Drifting. But wait. You’re not on a lilo in Southeast Asia. The adventure of a lifetime is fading into a distant memory and you’re feeling a bit directionless. Maybe you just don’t know where to start. Take comfort in the fact we’ve all been there. Then take a few minutes to look inwards.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/media/image"
+                                componentId="image_ITDENVMTJ"
+                                fileReference="/content/dam/swinburne-showcase/en/common/images/cablecar.jpg"/>
+                        <text_1558149263
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_1558149263_XF0FJIV1D"
+                                text="&lt;p>As an adult, we get so busy in the doing we can lose sight of what we love. If you’re working or studying five days a week that’s about 70% of your time. And if your job or course is making you feel a bit stale, that means 70% of your life feels a bit stale. Staleness finds a way of sapping the juice from other areas of your life too – your relationships, your mental and physical well-being, even your choice of media. (We’re looking at you reality dating shows.) Depressing huh? Enough of that. We’ve got eight steps to help you rediscover what you love, and make a career out of it. So grab a notebook and find somewhere quiet to ponder these points. It might just kick-off your next adventure.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_68074081
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_68074081_E2RC5V2F9"
+                                text="&lt;p>&lt;b>STEP 1: IF YOU ALREADY HAVE A JOB IN MIND – QUESTION IT&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <image_360504219
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/media/image"
+                                componentId="image_360504219_DRQ6WKOPU"
+                                fileReference="/content/dam/media/campaigns/article/change-as-good-holiday.jpg"/>
+                        <text_713890112
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_713890112_MBXIJWQBH"
+                                text="&lt;p>Ask yourself: are you in love with the job title or the qualities of the job? Job titles are a bit like brands: they can be a handy shortcut to social cred. They might suggest how creative, smart or practical you are. They might also steer you in the wrong direction.&lt;/p>&#xd;&#xa;&lt;p>Say you like the sound of ‘Architect’ and all it represents (doesn’t everyone?): a sleekness in all aspects of your life, a high-intellect, and the obligatory round-framed spectacles. You identify with this. And you love creative problem-solving. But you don’t have the patience for being methodical. You’re an act-on-the-spot-kind-of-a person. There’s no avoiding it: that’s a problem. Because being methodical and patient are key qualities of being an architect. Perhaps a career in the fast-paced world of media is more suited to you?&lt;/p>&#xd;&#xa;&lt;p>Instead of thinking title first, start with the qualities you find appealing and let them guide you. If they match up – good for you, you’re already on the right track. Go ahead and make a list of the top five qualities you want in a job.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_2017496388
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_2017496388_8J1EXPYJV"
+                                text="&lt;p>&lt;b>STEP 2: TAP INTO YOUR INNER CHILD&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <image_725587573
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/media/image"
+                                componentId="image_725587573_JDRMACJRI"
+                                fileReference="/content/dam/media/campaigns/2018-open-day/article-slider/_05A7917 best.jpg"/>
+                        <text_349482121
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_349482121_W7ZSWMFK5"
+                                text="&lt;p>Trawl your memory bank. Look for things that got you excited as a kid – those kooky traits unique to you. Maybe instead of reading books, you liked car manuals. Or perhaps you were more enthusiastic than most when it came to staging home-theatre productions (take a moment to feel sorry for your parents). Track your journey from then to now and jot down the moments of pure pleasure etched in your mind. If you think you’ve forgotten your passions, this should spark the fire.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_1016321542
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_1016321542_XQPLNGVJL"
+                                text="&lt;p>&lt;b>STEP 3: SEARCH YOUR BROWSING HISTORY&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Potential embarrassment aside, there are clues here. You’ll find a database of stuff that fascinates you. You might spend hours poring over political opinion pieces, design blogs, or seeking out nutritious recipes. What is it that you enjoy about the process? Just because you like design and nutrition it doesn’t mean you have to choose between designer or nutritionist. Look deeper. You might realise it’s not nutrition that really interests you: it’s making healthy food readily available to everyone. Your passion is, in fact, sustainable organic farming.&lt;/p>&#xd;&#xa;&lt;p>It’s also worth thinking about physical activities in the real world that get you into a ‘state of flow’: the place where the ego disappears and time flies. Write down what you google and spend time with the ‘why?’.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_1106694954
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_1106694954_8D6MFMVVT"
+                                text="&lt;p>&lt;b>STEP 4: GET ENVIOUS&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <image_1033602221
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/media/image"
+                                componentId="image_1033602221_7FYTDCCAR"
+                                fileReference="/content/dam/media/campaigns/2018-open-day/article-slider/_05A4356 best.jpg"/>
+                        <text_2127983147
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_2127983147_066HI6LK3"
+                                text="&lt;p>We’re all told not to compare ourselves to others. But there’s benefit in this form of torture: it can provide clarity on your own goals. Go ahead and think of someone who makes you feel a bit ordinary (this will make you feel good at the end – we promise.) Now, instead of feeling deflated, use them as motivation. What is it about their life that you want? Scribble away. If you think on it long enough you’ll discover there are only a few things you really want. And it’s not the surface stuff.&lt;/p>&#xd;&#xa;&lt;p>Envy can help you realise what you want. And there’s nothing wrong with acknowledging your shortcomings: it’ll help you develop the skills you need to reach your goals quicker.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_961936171
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_961936171_Z8XVWMLLQ"
+                                text="&lt;p>&lt;b>STEP 5: REMIND YOURSELF HOW GREAT YOU ARE&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <image_1745442312
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/media/image"
+                                componentId="image_1745442312_9AU8PNYAZ"
+                                fileReference="/content/dam/media/campaigns/2018-open-day/article-slider/_E6A9449 best.jpg"/>
+                        <text_664967179
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_664967179_WC4XCNSHV"
+                                text="&lt;p>It’s good to know where you can improve. But it’s also beneficial to reflect on your unique brand of awesome. What traits or skills do you already have that set you apart from everyone else? Play to your strengths. Now’s not the time for modesty. Go ahead and toot your own horn – only you are going to see what you’ve written down.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_984639027
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_984639027_QNDNG3XCJ"
+                                text="&lt;p>&lt;b>STEP 6: PULL IT ALL TOGETHER&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>You should now have a comprehensive list of the qualities you’re seeking, things you enjoy doing, the gap in your skills, and the things you’re great at. Together they sketch a picture of the kind of career best suited to you. Whether it cements the path you’re already on, suggests a slight change in direction, or a fresh new start, aren’t you glad you did this now and not in five years’ time?&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_1947130266
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_1947130266_ECCOAM0KL"
+                                text="&lt;p>&lt;b>STEP 7: IF ANALYSIS PARALYSIS IS TAKING OVER – JUST JUMP IN&lt;/b>&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <image_1976967687
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/media/image"
+                                componentId="image_1976967687_UN6LY6SR7"
+                                fileReference="/content/dam/media/campaigns/article/network.jpg"/>
+                        <text_494264081
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_494264081_YDQKQETT9"
+                                text="&lt;p>Sometimes the best way to find your way is by making a start. Get out of your head and into your heart. We’re overwhelmed by choice in every aspect of our lives. Waiting to find the elusive ‘perfect course’ is just another form of procrastination. Remember, no experience is a wasted one. And if you do happen to change direction along the way we have heaps of ways to help you switch gears.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <text_1116286522
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_1116286522_WO70Q9WUT"
+                                text="&lt;p>&lt;b>STEP 8: COME TO ONE OF OUR INFO EVENINGS&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>Got questions about what to do next? We’ve got you covered. You’ll hear stories of people who’ve switched, changed course and started over. Speak directly with our teachers. Ask all the questions. And, you can even get your application done and dusted on the night.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <eventlist
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/lists/eventlist"
+                                componentId="eventlist_3WYKXSCKN"
+                                componentModifiers="[swinburne:component-style-modifier/grid/list/pagelist/columns/column-3]"
+                                componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
+                                detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
+                                listFrom="children"
+                                parentPage="/content/swinburne-showcase/en/pages/mid-year/events"
+                                tagsMatch="any">
+                            <badgeThumbnail
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/media/image"/>
                         </eventlist>
                     </par>
                 </contentblock>
                 <contentblock_1182660049
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_1182660049_WPYMOGCSZ"
-                    componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
-                    componentTheme="[swinburne:component-style-theme/layout/contentblock/fluid]">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock_1182660049_WPYMOGCSZ"
+                        componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
+                        componentTheme="[swinburne:component-style-theme/layout/contentblock/fluid]">
                     <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <contentblock_8448765
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock_844876525_IIDVGWKH6"
-                            componentModifiers="[swinburne:component-style-modifier/margin/mb-30]"
-                            componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
-                            variant="container">
+                            sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/media/image"/>
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/layout/container">
+                        <contentblock_8448765
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/contentblock"
+                                componentId="contentblock_844876525_IIDVGWKH6"
+                                componentModifiers="[swinburne:component-style-modifier/margin/mb-30]"
+                                componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
+                                variant="container">
                             <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"
-                                fileReference="/content/dam/swinburne-showcase/en/common/vtac-explained-banner.jpg"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/media/image"
+                                    fileReference="/content/dam/swinburne-showcase/en/common/vtac-explained-banner.jpg"/>
                             <bgvideo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/media/image"/>
                             <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/layout/container">
                                 <text
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_KUS33LR5Y"
-                                    text="&lt;h2>study after a gap year?&lt;/h2>&#xd;&#xa;"
-                                    textIsRich="true"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/text"
+                                        componentId="text_KUS33LR5Y"
+                                        text="&lt;h2>study after a gap year?&lt;/h2>&#xd;&#xa;"
+                                        textIsRich="true"/>
                                 <link
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_5HFHFJUVQ"
-                                    componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
-                                    label="TELL ME NOW"
-                                    variant="button"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/link"
+                                        componentId="link_5HFHFJUVQ"
+                                        componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
+                                        label="TELL ME NOW"
+                                        variant="button"/>
                             </par>
                         </contentblock_8448765>
                         <contentblock_8448765_241880515
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock_844876525_IIDVGWKH6"
-                            componentModifiers="[swinburne:component-style-modifier/margin/mb-30]"
-                            componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
-                            variant="container">
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/contentblock"
+                                componentId="contentblock_844876525_IIDVGWKH6"
+                                componentModifiers="[swinburne:component-style-modifier/margin/mb-30]"
+                                componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
+                                variant="container">
                             <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"
-                                fileReference="/content/dam/media/campaigns/article/suzanne-banner.jpg"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/media/image"
+                                    fileReference="/content/dam/media/campaigns/article/suzanne-banner.jpg"/>
                             <bgvideo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/media/image"/>
                             <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/layout/container">
                                 <text
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_KUS33LR5Y"
-                                    text="&lt;h2>dear 17 year-old me...&lt;/h2>&#xd;&#xa;"
-                                    textIsRich="true"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/text"
+                                        componentId="text_KUS33LR5Y"
+                                        text="&lt;h2>dear 17 year-old me...&lt;/h2>&#xd;&#xa;"
+                                        textIsRich="true"/>
                                 <link
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_5HFHFJUVQ"
-                                    componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
-                                    label="ADVICE FROM THE FUTURE"
-                                    variant="button"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/link"
+                                        componentId="link_5HFHFJUVQ"
+                                        componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
+                                        label="ADVICE FROM THE FUTURE"
+                                        variant="button"/>
                             </par>
                         </contentblock_8448765_241880515>
                     </par>
@@ -263,12 +263,12 @@
             </par>
         </article>
         <footer
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/footer"
-            componentId="footer_N0RL1KBXW">
-            <par
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
+                sling:resourceType="swinburne/components/layout/footer"
+                componentId="footer_N0RL1KBXW">
+            <par
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/container"/>
         </footer>
     </jcr:content>
 </jcr:root>

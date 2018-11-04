@@ -1,13 +1,22 @@
 $(document).ready(function() {
-    var $select = $(".describe-you select");
-    $select.selectmenu();
+    var $select = $(".describe-you");
+    var $selects = $(".select-menu");
 
+
+
+	//Best describe you logics.
+    initDropDowns($select);
+    var $selectDescribe = $select.find("select");
     $('input[type=radio][name=guideContainer-rootPanel-guideradiobutton___jqName]').change(function() {
-        if($select.selectmenu( "instance" )) {
-            $select.selectmenu( "destroy" );
-            $select.selectmenu();
+        if($selectDescribe.selectmenu( "instance" )) {
+           guideBridge.setProperty(["describesYou"],"value",[""]); // Reset value
+           $selectDescribe.selectmenu( "destroy" );
+           $selectDescribe.selectmenu();
         };
-    });
+    }); 
+
+    //Init custom drop downs
+    initDropDowns($selects);
 
     //Tooltips hover handler when screen is not a touchscreen
     var $tooltips = $('.guideHelpQuestionMark');
@@ -44,4 +53,14 @@ function isValuePresent(val, items) {
         }
     });
     return hasMatch;
+}
+function initDropDowns($elements) {
+    $elements.each(function( index ) {
+      	var $element = $(this).find('select');
+        var name = $(this).get(0).classList.item(2); // Get property name
+        $element.selectmenu();
+        $element.on( "selectmenuchange", function( event, ui ) {
+    		guideBridge.setProperty([name],"value",[ui.item.value]);
+  		}); 
+    });
 }

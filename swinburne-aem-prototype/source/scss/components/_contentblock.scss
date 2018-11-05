@@ -56,11 +56,9 @@
           margin-bottom: 10px;
         }
       }
-      @media (max-width: $screen-sm-max) {
-        h1,
-        h2 {
-          hyphens: auto;
-        }
+      h1,
+      h2 {
+        hyphens: auto;
       }
       a {
         @media (max-width: $screen-sm-max) {

@@ -76,6 +76,9 @@ $(() => {
   //Hide event card's parent when hidden modifier is set to event list.
   $('.eventlist[component].hidden .card.finished').parent().hide();
 
+  //Add tab index -1 to past events.
+  $('.card.finished .btn').attr('tabindex', '-1');
+
 
   // Disable parallax effect on touch screen.
   let $pagesParallax = $('[component].bg-parallax');
@@ -83,6 +86,7 @@ $(() => {
     $pagesParallax.addClass('bg-scroll');
     console.log('Parallax disabled')
   }
+
 
 })
 

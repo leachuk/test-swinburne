@@ -9,6 +9,7 @@ $(document).ready(function() {
     var $selectDescribe = $select.find("select");
     $('input[type=radio][name=guideContainer-rootPanel-guideradiobutton___jqName]').change(function() {
         if($selectDescribe.selectmenu( "instance" )) {
+           guideBridge.setProperty(["describesYou"],"value",[""]); // Reset value
            $selectDescribe.selectmenu( "destroy" );
            $selectDescribe.selectmenu();
         };

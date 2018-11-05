@@ -6,13 +6,13 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="registration-page"
-        jcr:uuid="63dde832-b00c-4170-b9c5-d7fbfcc4d9c3"
+        jcr:title="Advice Registration"
+        jcr:uuid="a8c94b65-5588-4b68-a27d-45dbdce81f76"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/header"
-            componentId="header_PR4H4FPZH">
+            componentId="header_GAAJDPQ8J">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -20,7 +20,7 @@
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
-            componentId="article_GHQRGBKRM"
+            componentId="article_MY2QK39MR"
             componentModifiers="[swinburne:component-style-modifier/background/bg-c10]">
             <par
                 jcr:primaryType="nt:unstructured"
@@ -28,13 +28,13 @@
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_FSY2M3Q7J"
+                    componentId="contentblock_VVIYPYGOA"
                     componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"
-                        fileReference="/content/dam/swinburne-showcase/en/common/images/grass.jpg"/>
+                        fileReference="/content/dam/swinburne-showcase/en/components/content/download/year12-advice-month.jpg"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
@@ -44,102 +44,69 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_AI6FCQK9K"
-                            text="&lt;h1>&lt;span class=&quot;text-c7&quot;>YEAR 12&lt;/span> ADVICE MONTH&lt;/h1>&#xa;"
+                            componentId="text_AULGUTDTU"
+                            text="&lt;h1>&lt;span class=&quot;text-c7&quot;>YEAR 12 &lt;/span>&lt;span class=&quot;text-c8&quot;>ADVICE MONTH&lt;/span>&lt;/h1>&#xd;&#xa;"
                             textIsRich="true"/>
                     </par>
                 </contentblock>
-                <contentblock_5_copy
+                <contentblock_381000185
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_5_BB4BFV1MS"
-                    componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
+                    componentId="contentblock_381000185_ITQNVBCI3"
                     componentTheme="[swinburne:component-style-theme/layout/contentblock/form]"
                     variant="container">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout">
                         <colctrl
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/colctrl"
-                            componentId="colctrl_R3BWJJWAH"
+                            componentId="colctrl_B5HYFEYNO"
                             controlType="start"
-                            layout="2;colctrl-2c"/>
+                            layout="2;col-lg-,6,6"/>
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_GBJGX4MBB"
-                            text="&lt;p>Find all the info you need to make a great midyear start. Ask academics and teacherrs about our bachelor degrees and alternative pathways, diplomas and cetificates.&lt;/p>&#xa;&lt;p>Every area of study will be present, so you can truly investigate your options. You'll even be able to apply on-the-spot!&lt;/p>&#xa;"
+                            componentId="text_Q9SOVKUCW"
+                            text="&lt;p>Over the whole month on hand to answer all your questions about the rest of the year, how to choose a course, and planning for uni life in a session that suits you.&lt;/p>&#xd;&#xa;&lt;p>Simply tell us your query and we'll be in touch to arrange a one-on-one appointment to get you sorted with all the info you need to nail the rest of Year 12.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <eventlist_2138026743
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/eventlist"
-                            cardIcon="[swinburne:component-style-icon/general/calendar-alt]"
-                            cardIconShow="true"
-                            componentId="eventlist_2138026743_QTIMB9DON"
-                            componentModifiers="[swinburne:component-style-modifier/cards/direction/cards-horizontal,swinburne:component-style-modifier/grid/list/pagelist/columns/column-1]"
-                            componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
-                            detailsBadge="cardIconTitleDate"
-                            listFrom="static"
-                            pages="/content/swinburne-showcase/en/pages/mid-year/events/hawthorn"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </eventlist_2138026743>
-                        <eventlist
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/eventlist"
-                            cardIcon="[swinburne:component-style-icon/general/calendar-alt]"
-                            cardIconShow="true"
-                            componentId="eventlist_HW2XBDTEF"
-                            componentModifiers="[swinburne:component-style-modifier/cards/direction/cards-horizontal,swinburne:component-style-modifier/grid/list/pagelist/columns/column-1]"
-                            componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
-                            detailsBadge="cardIconTitleDate"
-                            listFrom="static"
-                            pages="/content/swinburne-showcase/en/pages/event-list/hawthorn-advice-night"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </eventlist>
-                        <col_break15337075723480
+                        <col_break15408499925220
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/colctrl"
                             controlType="break"/>
                         <aemform
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="fd/af/components/aemform"
-                            formRef="/content/dam/formsanddocuments/swinburne-showcase/jie"
+                            formRef="/content/dam/formsanddocuments/swinburne-showcase/advice"
                             formType="adaptiveForm"
-                            submitType="inline"
+                            submitType="pageRefresh"
                             textIsRich="true"
                             thankyouConfig="page"
-                            thankyouPage="/content/swinburne-showcase/en/pages/thank-you.html?wcmmode=disabled"
+                            thankyouPage="/content/swinburne/en/campaign/2018/actual-nie/thank-you"
                             useiframe="true"/>
-                        <col_end15337074997760
+                        <col_end15408499438270
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/colctrl"
                             controlType="end"/>
                     </par>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                </contentblock_5_copy>
-                <contentblock_copy
+                </contentblock_381000185>
+                <contentblock_1639387709
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_FSY2M3Q7J"
+                    componentId="contentblock_1639387709_7CJJUTUBA"
                     componentModifiers="[swinburne:component-style-modifier/margin/mb-30]"
                     componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"
-                        fileReference="/content/dam/swinburne-showcase/en/common/find-a-course-banner.jpg"/>
+                        fileReference="/content/dam/media/campaigns/2018-timely/_05A1038.jpg"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
@@ -149,30 +116,29 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_AI6FCQK9K"
-                            text="&lt;h1>SWAPPING WORK FOR STUDY&lt;/h1>&#xa;"
+                            componentId="text_JE9ZCGJ9I"
+                            text="&lt;h2>FROM MALAYSIA TO MELBOURNE&lt;/h2>&#xd;&#xa;"
                             textIsRich="true"/>
                         <link
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/link"
-                            componentId="link_NY1BLYGSE"
+                            componentId="link_2AA3UZEQQ"
                             componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
-                            label="EASE YOUR FEARS"
-                            linkTarget="_self"
-                            linkUrl="http://google.com/"/>
+                            label="IAN'S STORY"
+                            variant="button"/>
                     </par>
-                </contentblock_copy>
-                <contentblock_copy_co
+                </contentblock_1639387709>
+                <contentblock_1927506265
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_FSY2M3Q7J"
-                    componentModifiers="[swinburne:component-style-modifier/margin/mb-15]"
+                    componentId="contentblock_1927506265_2IFKJGH2N"
+                    componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
                     componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"
-                        fileReference="/content/dam/swinburne-showcase/en/common/atar-calc.jpg"/>
+                        fileReference="/content/dam/media/campaigns/2017-nie/wakefield-gardens_E6A3380.jpg"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
@@ -182,19 +148,24 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_AI6FCQK9K"
-                            text="&lt;h1>CREATING YOUR OWN CAREER&lt;/h1>&#xa;"
+                            componentId="text_YFBRELQKS"
+                            text="&lt;h2>WHY SWINBURNE?&lt;/h2>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <link_copy
+                        <link
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/link"
-                            componentId="link_NY1BLYGSE"
+                            componentId="link_B07PQA993"
                             componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
-                            label="GET INSPIRED"
-                            linkTarget="_self"
-                            linkUrl="http://google.com/"/>
+                            label="SHOW ME"
+                            variant="button"/>
                     </par>
-                </contentblock_copy_co>
+                </contentblock_1927506265>
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/content/text"
+                    componentId="text_SAXN3Q2EM"
+                    componentModifiers="[swinburne:component-style-modifier/padding/pb-30]"
+                    textIsRich="true"/>
             </par>
             <bgimage
                 jcr:primaryType="nt:unstructured"
@@ -203,7 +174,7 @@
         <footer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
-            componentId="footer_XBZBQ3HBB">
+            componentId="footer_M3QU7IDYX">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>

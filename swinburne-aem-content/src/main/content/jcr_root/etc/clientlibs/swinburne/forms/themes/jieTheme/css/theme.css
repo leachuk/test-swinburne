@@ -52,9 +52,6 @@ textarea,
     width: 100%;
     border-color: #d9d5d1;
 }
-.ui-menu .ui-menu-item-wrapper, .ui-selectmenu-text {
-    font-size: 16px;
-}
 .autocomplete input[type="text"],
 .ui-selectmenu-button,
 select,
@@ -81,7 +78,7 @@ select,
 }
 .ui-menu .ui-menu-item-wrapper,
 .ui-selectmenu-text {
-    font-size:0.875rem;
+    font-size: 16px;
 }
 .ui-button .ui-icon,
 .mobileLayout {

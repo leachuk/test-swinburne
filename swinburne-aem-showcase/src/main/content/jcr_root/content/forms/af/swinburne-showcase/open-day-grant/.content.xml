@@ -279,7 +279,7 @@
                         css="select-menu"
                         guideNodeClass="guideDropDownList"
                         name="highestQualification"
-                        options="[HQ05. None]"
+                        options="[HQ05. None=None]"
                         placeholderText="Select an option "
                         textIsRich="[true,true]"
                         visible="{Boolean}false"/>

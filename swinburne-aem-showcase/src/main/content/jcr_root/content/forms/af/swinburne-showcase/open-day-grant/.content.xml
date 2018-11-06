@@ -271,6 +271,18 @@
                             fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;if ( this.value === \\&quot;BD04.Current Year 12 student\\&quot; || this.value === \\&quot;BD03.Current Year 11 student\\&quot; ) {\\n    secondarySchool.visible = true;\\n}\\n&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.describesYou&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true},{&quot;script&quot;:{&quot;content&quot;:&quot;if ( this.value !== \\&quot;BD04.Current Year 12 student\\&quot; &amp;&amp; this.value !== \\&quot;BD03.Current Year 11 student\\&quot; ) {\\n    secondarySchool.visible = false;\\n}&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.describesYou&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
                     </guidedropdownlist_99652624>
+                    <guidedropdownlist_1845223654
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="What is your highest qualification? *"
+                        sling:resourceType="fd/af/components/guidedropdownlist"
+                        _value="HQ05. None"
+                        css="select-menu"
+                        guideNodeClass="guideDropDownList"
+                        name="highestQualification"
+                        options="[HQ05. None]"
+                        placeholderText="Select an option "
+                        textIsRich="[true,true]"
+                        visible="{Boolean}false"/>
                     <guidetextbox_1682134043
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Secondary school"

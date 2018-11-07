@@ -52,6 +52,9 @@ textarea,
     width: 100%;
     border-color: #d9d5d1;
 }
+.ui-selectmenu-menu .ui-menu {
+	max-height: 13em;
+}
 .autocomplete input[type="text"],
 .ui-selectmenu-button,
 select,

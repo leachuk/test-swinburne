@@ -18,6 +18,11 @@ $(document).ready(function() {
     //Init custom drop downs
     initDropDowns($selects);
 
+    // Close dropdown on blur
+    $('.ui-selectmenu-button').blur( function(){
+        $(this).prev().selectmenu( "close" );
+    });
+
     //Tooltips hover handler when screen is not a touchscreen
     var $tooltips = $('.guideHelpQuestionMark');
     if (!("ontouchstart" in document.documentElement)) {
@@ -30,6 +35,12 @@ $(document).ready(function() {
             $description.hide();
         });
     }
+
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            guideBridge.submit();        
+        }
+    });
 
 });
 

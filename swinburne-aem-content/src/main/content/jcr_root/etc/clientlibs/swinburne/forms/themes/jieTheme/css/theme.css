@@ -236,6 +236,11 @@ input[type="radio"] {
     background: url(default/resources/questionmark.svg) center center / cover no-repeat, #DC2D27;
     cursor: pointer;
 }
+.international-student .guideHelpQuestionMark {
+    margin-left: 260px;
+    right: inherit;
+    left: 0;
+}
 .guideHelpQuestionMark:before {
     content: "?";
     font-size: 12px;
@@ -357,4 +362,13 @@ input.afcaptcha-refresh-btn {
     .timer-bar-holder {
         padding-top: 7px;
     }
+}
+.description p,.description a {
+	font-size: 16px;
+}
+.description p {
+   margin-bottom: 15px;
+}
+.description a {
+	color: #DC2D27;
 }

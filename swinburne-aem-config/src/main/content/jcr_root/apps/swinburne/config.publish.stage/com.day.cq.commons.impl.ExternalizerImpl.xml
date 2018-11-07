@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          externalizer.domains="[local https://swinburne-stage-63-01.adobecqms.net/,
+                                  author https://swinburne-author-stage-01.at.isobaraustralia.com/,
+                                  publish https://swinburne-stage-63-01.adobecqms.net/]"
+
+/>

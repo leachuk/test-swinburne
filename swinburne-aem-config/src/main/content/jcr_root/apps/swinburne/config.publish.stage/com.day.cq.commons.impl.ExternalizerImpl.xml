@@ -3,7 +3,7 @@
           xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="sling:OsgiConfig"
           externalizer.domains="[local https://swinburne-stage-63-01.adobecqms.net/,
-                                  author https://swinburne-author-stage-01.at.isobaraustralia.com/,
+                                  author https://author-swinburne-stage-64-01.adobecqms.net/,
                                   publish https://swinburne-stage-63-01.adobecqms.net/]"
 
 />

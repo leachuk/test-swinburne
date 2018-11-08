@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     $(document).keypress(function(e) {
         if(e.which === 13) {
-            guideBridge.submit();
+            submitForm();
         }
     });
 
@@ -78,6 +78,25 @@ function initDropDowns($elements) {
         $element.on( "selectmenuchange", function( event, ui ) {
             guideBridge.setProperty([name],"value",[ui.item.value]);
         });
+    });
+}
+function submitForm() {
+    guideBridge.submit({
+        error : function (guideResultObject) {
+            unConcatLabelToValue();
+        },
+        success : function (guideResultObject) {
+            unConcatLabelToValue();
+        }
+    });
+}
+function unConcatLabelToValue() {
+    guideBridge.visit(function(item) {
+        if(item.cssClassName === "label-to-value") {
+            var value = item.value;
+            var newValue = value.split(":").pop();
+            guideBridge.setProperty([item.name],"value",[newValue]);
+        }
     });
 }
 function concatLabelToValue() {

@@ -253,8 +253,6 @@
                             name="textdraw1532308536197"
                             textIsRich="true"/>
                     <guidedropdownlist_99652624
-
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             jcr:title="Which best describes you?"
                             sling:resourceType="fd/af/components/guidedropdownlist"
@@ -269,8 +267,6 @@
                         <fd:scripts jcr:primaryType="nt:unstructured"/>
                     </guidedropdownlist_99652624>
                     <guidedropdownlist_548774665
-
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             jcr:title="What is your highest qualification?"
                             sling:resourceType="fd/af/components/guidedropdownlist"

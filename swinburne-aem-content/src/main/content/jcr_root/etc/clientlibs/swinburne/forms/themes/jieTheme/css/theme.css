@@ -53,7 +53,7 @@ textarea,
     border-color: #d9d5d1;
 }
 .ui-selectmenu-menu .ui-menu {
-	max-height: 13em;
+    max-height: 13em;
 }
 .autocomplete input[type="text"],
 .ui-selectmenu-button,
@@ -243,6 +243,7 @@ input[type="radio"] {
     margin-left: 260px;
     right: inherit;
     left: 0;
+    margin-top: 4px;
 }
 .guideHelpQuestionMark:before {
     content: "?";
@@ -367,11 +368,18 @@ input.afcaptcha-refresh-btn {
     }
 }
 .description p,.description a {
-	font-size: 16px;
+    font-size: 16px;
 }
 .description p {
-   margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 .description a {
-	color: #DC2D27;
+    color: #DC2D27;
+}
+div[data-mandatory="true"] > .guideFieldLabel > label:after {
+    content: "*";
+    display: inline-block;
+    font-size: 21px;
+    color: #DC2D27;
+    margin-left: 5px;
 }

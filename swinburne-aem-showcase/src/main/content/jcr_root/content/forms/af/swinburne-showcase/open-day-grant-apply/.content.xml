@@ -130,7 +130,7 @@
                     <guideradiobutton
 
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Are you an international students? *"
+                            jcr:title="Are you an international students?"
                             sling:resourceType="fd/af/components/guideradiobutton"
                             alignment="guideFieldHorizontalAlignment"
                             guideNodeClass="guideRadioButton"
@@ -145,7 +145,7 @@
                     <guidetextbox
 
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="First name *"
+                            jcr:title="First name"
                             sling:resourceType="fd/af/components/guidetextbox"
                             autofillFieldKeyword="name"
                             guideNodeClass="guideTextBox"
@@ -156,7 +156,7 @@
                     <guidetextbox_1915379945
 
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Last name *"
+                            jcr:title="Last name"
                             sling:resourceType="fd/af/components/guidetextbox"
                             autofillFieldKeyword="name"
                             guideNodeClass="guideTextBox"
@@ -166,7 +166,7 @@
                             textIsRich="[true,true,true]"/>
                     <guideemail
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Email address *"
+                            jcr:title="Email address"
                             sling:resourceType="fd/af/components/guideemail"
                             autofillFieldKeyword="email"
                             guideNodeClass="guideTextBox"
@@ -214,7 +214,7 @@
                             </guidetextbox>
                             <guidetelephone
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="Telephone *"
+                                    jcr:title="Telephone"
                                     sling:resourceType="fd/af/components/guidetelephone"
                                     autofillFieldKeyword="tel"
                                     displayPatternType="text{X99999999999999}"
@@ -230,7 +230,7 @@
                     </panel>
                     <guidetextbox_1494040348
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Country of residence *"
+                            jcr:title="Country of residence"
                             sling:resourceType="fd/af/components/guidetextbox"
                             autofillFieldKeyword="name"
                             css="autocomplete"
@@ -253,10 +253,8 @@
                             name="textdraw1532308536197"
                             textIsRich="true"/>
                     <guidedropdownlist_99652624
-
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Which best describes you? *"
+                            jcr:title="Which best describes you?"
                             sling:resourceType="fd/af/components/guidedropdownlist"
                             guideNodeClass="guideDropDownList"
                             name="describesYou"
@@ -269,10 +267,8 @@
                         <fd:scripts jcr:primaryType="nt:unstructured"/>
                     </guidedropdownlist_99652624>
                     <guidedropdownlist_548774665
-
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="What is your highest qualification? *"
+                            jcr:title="What is your highest qualification?"
                             sling:resourceType="fd/af/components/guidedropdownlist"
                             enabled="{Boolean}true"
                             guideNodeClass="guideDropDownList"
@@ -332,7 +328,7 @@
                     <guideemail_copy
 
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Main mode of transport *"
+                            jcr:title="Main mode of transport"
                             sling:resourceType="fd/af/components/guideemail"
                             autofillFieldKeyword="email"
                             guideNodeClass="guideTextBox"
@@ -345,7 +341,7 @@
                     <guideemail_copy_copy
 
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Expected arrival time *"
+                            jcr:title="Expected arrival time"
                             sling:resourceType="fd/af/components/guideemail"
                             autofillFieldKeyword="email"
                             guideNodeClass="guideTextBox"
@@ -358,7 +354,7 @@
                     <guidedropdownlist
 
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Will you be bringing ONE family member or friend? *"
+                            jcr:title="Will you be bringing ONE family member or friend?"
                             sling:resourceType="fd/af/components/guidedropdownlist"
                             guideNodeClass="guideDropDownList"
                             mandatory="true"
@@ -368,7 +364,7 @@
                     <guidedropdownlist_co
 
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Are you interested in lunch? *"
+                            jcr:title="Are you interested in lunch?"
                             sling:resourceType="fd/af/components/guidedropdownlist"
                             guideNodeClass="guideDropDownList"
                             mandatory="true"

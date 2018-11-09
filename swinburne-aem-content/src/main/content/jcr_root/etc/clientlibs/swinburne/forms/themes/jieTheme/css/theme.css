@@ -1,9 +1,6 @@
 body{
     background:#21201E;
-    padding-right:40px;
-    padding-bottom:40px;
-    padding-left:40px;
-    padding-top:40px;
+    padding: 0;
     line-height:1.1;
     text-align:left;
     color:rgb(255,255,255);
@@ -11,6 +8,9 @@ body{
     font-weight:normal;
     margin: 0;
     position: relative;
+}
+body * {
+    font-family: Open Sans, Arial, sans-serif;
 }
 .loading {
 	position: fixed;
@@ -24,7 +24,6 @@ body{
 input:not([type="radio"]),
 .ui-selectmenu-button,
 select,
-textarea,
 .guideScribble img,
 .afTermsAndConditions {
     border-style:solid;
@@ -49,7 +48,26 @@ textarea,
     width: 100% !important;
 }
 textarea {
-    height: 80px !important;
+    border-style:solid;
+    border-top-width:1px;
+    border-left-width:1px;
+    border-bottom-width:1px;
+    border-right-width:1px;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+    border-color: #d9d5d1;
+    height:80px;
+    color:#292625;
+    font-size:16px !important;
+    padding-bottom:8px;
+    padding-left:25px;
+    padding-top:8px;
+    padding-right:15px;
+    background:#ffffff;
+    margin-bottom: 1.0625rem;
+    width: 100%;
 }
 .ui-selectmenu-button {
 	width: 100%;

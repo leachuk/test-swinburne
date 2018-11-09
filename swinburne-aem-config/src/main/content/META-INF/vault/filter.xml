@@ -20,6 +20,7 @@
     <!-- maping rules -->
     <filter root="/etc/map/http/" mode="update"/>
     <filter root="/etc/map/https" mode="update"/>
+    <filter root="/etc/map.publish" mode="update"/>
 
     <filter root="/etc/tenants/swinburne" mode="update"/>
 

@@ -11,11 +11,16 @@ $(document).ready(function() {
         if($selectDescribe.selectmenu( "instance" )) {
            $selectDescribe.selectmenu( "destroy" );
            $selectDescribe.selectmenu();
+
+            //Rebind blur event on selectdrop downs.
+            bindBlurEvent($select.find('.ui-selectmenu-button'));
         };
     }); 
 
     //Init custom drop downs
     initDropDowns($selects);
+
+    bindBlurEvent($('.ui-selectmenu-button'));
 
     // Close dropdown on blur
     $('.ui-selectmenu-button').blur( function(){
@@ -36,7 +41,11 @@ $(document).ready(function() {
     }
 
 });
-
+function bindBlurEvent($selector){
+    $selector.blur( function(){
+        $(this).prev().selectmenu( "close" );
+    });
+};
 //function to validate auto complete fields.
 function validateSearch($field, items) {
     var val = $field.val();

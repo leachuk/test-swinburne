@@ -83,6 +83,12 @@
   b, strong {
     font-weight: bold;
   }
+  a {
+    &,
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .text-shadow {

@@ -4,23 +4,19 @@ $(document).ready(function() {
 
 
 
-	//Best describe you logics.
+    //Best describe you logics.
     initDropDowns($select);
     var $selectDescribe = $select.find("select");
     $('input[type=radio][name=guideContainer-rootPanel-guideradiobutton___jqName]').change(function() {
         if($selectDescribe.selectmenu( "instance" )) {
-           $selectDescribe.selectmenu( "destroy" );
-           $selectDescribe.selectmenu();
-
-            //Rebind blur event on selectdrop downs.
-            bindBlurEvent($select.find('.ui-selectmenu-button'));
+            guideBridge.setProperty(["describesYou"],"value",[""]); // Reset value
+            $selectDescribe.selectmenu( "destroy" );
+            $selectDescribe.selectmenu();
         };
-    }); 
+    });
 
     //Init custom drop downs
     initDropDowns($selects);
-
-    bindBlurEvent($('.ui-selectmenu-button'));
 
     // Close dropdown on blur
     $('.ui-selectmenu-button').blur( function(){
@@ -40,12 +36,19 @@ $(document).ready(function() {
         });
     }
 
-});
-function bindBlurEvent($selector){
-    $selector.blur( function(){
-        $(this).prev().selectmenu( "close" );
+    $(document).keypress(function(e) {
+        if(e.which === 13) {
+            submitForm();
+        }
     });
-};
+
+
+    guideBridge.on('submitStart', function (event, payload) {
+        concatLabelToValue();
+    });
+
+});
+
 //function to validate auto complete fields.
 function validateSearch($field, items) {
     var val = $field.val();
@@ -69,11 +72,41 @@ function isValuePresent(val, items) {
 }
 function initDropDowns($elements) {
     $elements.each(function( index ) {
-      	var $element = $(this).find('select');
+        var $element = $(this).find('select');
         var name = $(this).get(0).classList.item(2); // Get property name
         $element.selectmenu();
         $element.on( "selectmenuchange", function( event, ui ) {
-    		guideBridge.setProperty([name],"value",[ui.item.value]);
-  		}); 
+            guideBridge.setProperty([name],"value",[ui.item.value]);
+        });
+    });
+}
+function submitForm() {
+    guideBridge.submit({
+        error : function (guideResultObject) {
+            unConcatLabelToValue();
+        },
+        success : function (guideResultObject) {
+            unConcatLabelToValue();
+        }
+    });
+}
+function unConcatLabelToValue() {
+    guideBridge.visit(function(item) {
+        if(item.cssClassName === "label-to-value") {
+            var value = item.value;
+            var newValue = value.split(":").pop();
+            guideBridge.setProperty([item.name],"value",[newValue]);
+        }
+    });
+}
+function concatLabelToValue() {
+    guideBridge.visit(function(item) {
+        if(item.cssClassName === "label-to-value") {
+            var name = item.name;
+            var title = item.title;
+            var value = item.value;
+            var newValue = title + ":" + value;
+            guideBridge.setProperty([name],"value",[newValue]);
+        }
     });
 }

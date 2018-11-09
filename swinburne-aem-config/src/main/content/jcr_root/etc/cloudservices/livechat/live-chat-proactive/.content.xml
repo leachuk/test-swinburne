@@ -13,5 +13,5 @@
         jcr:title="Live Chat - Proactive"
         jcr:uuid="283ddd3d-a942-46c7-8e08-2cf79a30fce6"
         sling:resourceType="cq/analytics/components/livechatpage"
-        snippetCode="window.digitalData.page.livechat = { &#xa;proactive: &quot;true&quot; &#xa;}"/>
+        snippetCode="window.digitalData.page.attributes.liveChat = &quot;proactive&quot;"/>
 </jcr:root>

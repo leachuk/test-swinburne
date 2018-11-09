@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Timely Home Page"
+        jcr:uuid="dea071d8-a45d-4902-bb39-ede9a3d0036e"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/header"
-            componentId="header_VSPNETO3U">
+            componentId="header_VAWI4Q5MF">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -17,18 +20,412 @@
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
-            componentId="article_RGVKDGKTE">
+            componentId="article_8C0KRRO9A">
             <par
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
+                sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details_GQAEDWHTL"
+                    componentTheme="[swinburne:component-style-theme/layout/page-details/theme--pagedetail-brand]"
+                    hideDescription="true"
+                    hideTitle="true"
+                    showBreadcrumb="false"
+                    showPageDate="false"
+                    showParsys="true"
+                    showToolbar="false"
+                    textIsRich="true"
+                    titleType="[,]">
+                    <secondaryImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <thumbnail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"
+                        fileReference="/content/dam/media/campaigns/2018-timely/TBE3634_Timely_flat.jpg"/>
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/media/image"
+                            componentId="image_9DMEFN0KF"
+                            fileReference="/content/dam/media/campaigns/2018-timely/its-you-time.png"/>
+                        <pagetitle
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="SWINBURNE ADVICE NIGHTS"
+                            sling:resourceType="swinburne/components/content/pagetitle"
+                            componentId="pagetitle_UJ2LQ2JUI"/>
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_Z66O5IDBI"
+                            text="&lt;p>You've got an exciting decision to make. Pick Swinburne the creative, different and innovative university. Our Advice Nights can help you find your perfect course. And if you're in Year 12, you could get your preferences sorted early. Winner.&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <link
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            componentId="link_YBJTL36HX"
+                            componentModifiers="[swinburne:component-style-modifier/button/normal/primary,swinburne:component-style-modifier/button/icon/chevron]"
+                            label="CHOOSE MY EVENT"
+                            variant="button"/>
+                    </par>
+                </page_details>
+                <contentblock
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_3U8TMKAK5"
+                    componentModifiers="[swinburne:component-style-modifier/margin/mb-30]"
+                    componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
+                    variant="container">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"
+                        fileReference="/content/dam/media/campaigns/2018-timely/FullSizeRender 2.jpg"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_I94NQMNBU"
+                            text="&lt;h2>FIND MY IDEAL COURSE&lt;/h2>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <link
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            componentId="link_C29OFW7RO"
+                            componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
+                            label="TAKE ME THERE"
+                            variant="button"/>
+                    </par>
+                </contentblock>
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/content/text"
+                    componentId="text_MTO9FWOW3"
+                    componentModifiers="[swinburne:component-style-modifier/text/alignment/center]"
+                    text="&lt;h2>GET ADVICE&lt;/h2>&#xd;&#xa;&lt;p>Got questions about a course or more general queries about applying to uni?&lt;/p>&#xd;&#xa;&lt;p>Whether you're a current Year 12 student or considering coming back for further study, we've got the advice you need.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <eventlist
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/lists/eventlist"
+                    componentId="eventlist_RYNMJVYVX"
+                    componentModifiers="[swinburne:component-style-modifier/grid/container]"
+                    componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
+                    detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
+                    listFrom="children"
+                    parentPage="/content/swinburne-showcase/en/pages/event-list"
+                    tagsMatch="any">
+                    <badgeThumbnail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                </eventlist>
+                <contentblock_818519603
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_818519603_OTB1G8VJL"
+                    componentModifiers="[swinburne:component-style-modifier/background/bg-c10]">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <par jcr:primaryType="nt:unstructured">
+                        <contentblock_copy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/contentblock"
+                            componentId="contentblock_3U8TMKAK5"
+                            componentModifiers="[swinburne:component-style-modifier/margin/mb-30]"
+                            componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
+                            variant="container">
+                            <bgimage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"
+                                fileReference="/content/dam/swinburne-showcase/en/common/juggling.jpg"/>
+                            <bgvideo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/layout/container">
+                                <text
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_I94NQMNBU"
+                                    text="&lt;h2>WHERE COULD YOUR ATAR TAKE YOU?&lt;/h2>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <link
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/link"
+                                    componentId="link_C29OFW7RO"
+                                    componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
+                                    label="USE THE CALCULATOR"
+                                    variant="button"/>
+                            </par>
+                        </contentblock_copy>
+                        <contentblock_copy_18
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/contentblock"
+                            componentId="contentblock_3U8TMKAK5"
+                            componentModifiers="[swinburne:component-style-modifier/margin/mb-30]"
+                            componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
+                            variant="container">
+                            <bgimage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"
+                                fileReference="/content/dam/media/campaigns/article/skill-up.jpg"/>
+                            <bgvideo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/layout/container">
+                                <text
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_I94NQMNBU"
+                                    text="&lt;h2>CAREER NOT SATIDFYING YOU?&lt;/h2>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <link
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/link"
+                                    componentId="link_C29OFW7RO"
+                                    componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
+                                    label="CHANGE IT"
+                                    variant="button"/>
+                            </par>
+                        </contentblock_copy_18>
+                        <contentblock_copy_76
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/contentblock"
+                            componentId="contentblock_3U8TMKAK5"
+                            componentTheme="[swinburne:component-style-theme/layout/contentblock/banner]"
+                            variant="container">
+                            <bgimage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"
+                                fileReference="/content/dam/swinburne-showcase/en/common/move-into-midyear.jpg"/>
+                            <bgvideo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/layout/container">
+                                <text
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_I94NQMNBU"
+                                    text="&lt;h2>READY TO APPLY?&lt;/h2>&#xd;&#xa;&lt;h2>(YEAH!)&lt;/h2>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                                <link
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/link"
+                                    componentId="link_C29OFW7RO"
+                                    componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
+                                    label="TELL ME HOW"
+                                    variant="button"/>
+                            </par>
+                        </contentblock_copy_76>
+                    </par>
+                </contentblock_818519603>
+                <contentblock_1219863242
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_1219863242_FQXZCZTZN"
+                    componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
+                    componentTheme="[swinburne:component-style-theme/layout/contentblock/accordion,swinburne:component-style-theme/layout/contentblock/fluid]"
+                    hideTopLink="true"
+                    variant="advsection">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_QIOHDMZGV"
+                            componentModifiers="[swinburne:component-style-modifier/text/alignment/center]"
+                            text="&lt;h2>HELP! WHERE CAN I...&lt;/h2>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <contentblock
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/contentblock"
+                            componentId="contentblock_5MN3HDZ3O"
+                            dataParent="contentblock_1219863242"
+                            dataToggle="collapse"
+                            hideInMenu="true"
+                            hideTopLink="true"
+                            title="Get advice?"
+                            variant="childsection">
+                            <bgimage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <bgvideo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/layout/container">
+                                <text
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_WOD67MRUX"
+                                    text="&lt;p>Lorem ipsum dolor sit amet, &lt;b>cu graeco&lt;/b> fastidii gloriatur sed, malis velit vel ut, tale perpetua vim ex. Vide eius dolor ne per, sed te partem interesset, aeterno adipisci qui in. Augue soleat qui et, civibus eleifend dignissim te qui. In impedit suavitate iudicabit vel. Et omnis nobis ius, utinam omnium accusam per in.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </par>
+                        </contentblock>
+                        <contentblock_1061402191
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/contentblock"
+                            componentId="contentblock_1061402191_WL6HTM4LM"
+                            dataParent="contentblock_1219863242"
+                            dataToggle="collapse"
+                            title="Find out more about aviation?"
+                            variant="childsection">
+                            <bgimage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <bgvideo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <par jcr:primaryType="nt:unstructured">
+                                <text_528270036
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_528270036_UL295TYTW"
+                                    text="&lt;p>iugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuyiugiugiulh igiu giuyg igiu iuyguyi iuygiuy iuyg iuy&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </par>
+                        </contentblock_1061402191>
+                        <contentblock_53166993
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/contentblock"
+                            componentId="contentblock_53166993_M49RLGS3G"
+                            dataParent="contentblock_1219863242"
+                            dataToggle="collapse"
+                            hideTopLink="true"
+                            title="Submit my preferences through VTAC?"
+                            variant="childsection">
+                            <bgimage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <bgvideo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/layout/container">
+                                <text
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_ITLDXHM3G"
+                                    text="&lt;p>Et summo malorum sit, usu nulla voluptatum no, et diam esse est. At nam clita quando phaedrum, ei dolorum accumsan sea. No probo apeirian dignissim has, ne mea justo hendrerit, quo ut ubique prompta. Probo appetere nam at. Nec te vide mediocrem intellegam, dicam erroribus cu vix. In usu prompta docendi incorrupte.&lt;/p>&#xd;&#xa;"
+                                    textIsRich="true"/>
+                            </par>
+                        </contentblock_53166993>
+                    </par>
+                </contentblock_1219863242>
+                <contentblock_1080263551
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_1080263551_PYNAXH6DR"
+                    componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
+                    componentTheme="[swinburne:component-style-theme/layout/contentblock/fluid]">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <text_1857050696
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/content/text"
+                        componentId="text_1857050696_ACS5XWPRU"
+                        text="&lt;p style=&quot;text-align: center;&quot;>&lt;b>&lt;img src=&quot;/content/dam/media/campaigns/envelope.png&quot;>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>EMAIL US&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Our course adviser on hand to answer your questions.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;a title=&quot;email us&quot; href=&quot;/content/swinburne-showcase/en/pages/mid-year/email-us.html&quot;>Drop us a line&lt;/a>&amp;nbsp;now.&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_KLDVOG9DA"
+                            text="&lt;h2>GET IN TOUCH&lt;/h2>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <colctrl
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/colctrl"
+                            componentId="colctrl_MLFVX2FBG"
+                            controlType="start"
+                            layout="2;colctrl-2c"/>
+                        <text_1087634917
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1087634917_WH2AMZ6HV"
+                            componentModifiers="[swinburne:component-style-modifier/margin/m-30]"
+                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;b>&lt;img src=&quot;/content/dam/media/campaigns/phone.png&quot; />&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>CALL US&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>In Australia&lt;/b>&lt;br />&#xd;&#xa;&lt;a>&lt;/a>&lt;a>&lt;/a>&lt;a>&lt;/a>&lt;a>&lt;/a>&lt;a>1300 SWINBURNE&lt;/a> (&lt;a>&lt;/a>&lt;a>1300 275 794&lt;/a>)&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>Outside Australia&lt;/b>&lt;br />&#xd;&#xa;+61 3 9214 8444&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Call us between 8am and 6pm Monday to Friday and&lt;br />&#xd;&#xa;10am to 2pm AEST Saturday.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_183023135
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_183023135_DTZEAZZAD"/>
+                        <col_break15407927231650
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/colctrl"
+                            controlType="break"/>
+                        <text_1997740782
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1997740782_NZLIPLEYN"
+                            text="&lt;p style=&quot;text-align: center;&quot;>&lt;b>&lt;img src=&quot;/content/dam/media/campaigns/envelope.png&quot;>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;b>EMAIL US&lt;/b>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>Our course adviser on hand to answer your questions.&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&lt;a title=&quot;email us&quot; href=&quot;/content/swinburne-showcase/en/pages/mid-year/email-us.html&quot;>Drop us a line&lt;/a>&amp;nbsp;now.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <col_end15407926678100
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/colctrl"
+                            controlType="end"/>
+                        <image_copy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/media/image"
+                            componentId="image_4Z9HKINMF"
+                            componentModifiers="[swinburne:component-style-modifier/image/responsive]"
+                            fileReference="/content/dam/swinburne-showcase/en/common/knowing.png"
+                            height="109"
+                            imageOption="rendition"
+                            width="109"/>
+                    </par>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/content/text"
+                        componentId="text_FWMR80VBW"/>
+                </contentblock_1080263551>
+            </par>
         </article>
         <footer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
-            componentId="footer_W5PL9XKV7">
+            componentId="footer_KOG1Q7UZS">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
         </footer>
     </jcr:content>
+    <how-to-apply/>
+    <timely-pages/>
+    <timely-article-page/>
+    <seas-calculator/>
 </jcr:root>

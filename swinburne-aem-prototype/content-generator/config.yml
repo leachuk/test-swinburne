@@ -192,6 +192,13 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: img-center
     title: 'Img Center'
 
+  image/spacing:
+    prefixes:
+      - no-margin
+      - no-padding
+    valueFormat: img-%%prefix%%
+    title: '%%prefix_normalised%%'
+
   online-media/responsive:
     flat: true
     prefix: media-responsive

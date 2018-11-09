@@ -13,5 +13,5 @@
         jcr:title="Live Chat - Both"
         jcr:uuid="2f52a91c-bbfc-4235-90bb-d0d77f22d606"
         sling:resourceType="cq/analytics/components/livechatpage"
-        snippetCode="window.digitalData.page.livechat = { &#xa;userInitiated: &quot;true&quot;,&#xa;proactive: &quot;true&quot; &#xa;}"/>
+        snippetCode="window.digitalData.page.attributes.liveChat = &quot;both&quot;"/>
 </jcr:root>

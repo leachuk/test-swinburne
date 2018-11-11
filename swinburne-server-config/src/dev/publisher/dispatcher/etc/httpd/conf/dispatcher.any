@@ -85,7 +85,6 @@
 #     /0021 { /type "allow" /url "/apps/*"   }  # allow apps access
 #     /0022 { /type "allow" /url "/bin/*"    }
       /0023 { /type "allow" /url "/content*" }  # disable this rule to allow mapped content only
-      /0029 { /type "allow" /url "/infoevening*"} #Custome allow to mapped keyword
 
 #     /0024 { /type "allow" /url "/libs/*"   }
 #     /0025 { /type "deny"  /url "/libs/shindig/proxy*" } # if you enable /libs close access to proxy
@@ -93,6 +92,9 @@
 #     /0026 { /type "allow" /url "/home/*"   }
 #     /0027 { /type "allow" /url "/tmp/*"    }
 #     /0028 { /type "allow" /url "/var/*"    }
+
+      /0029 { /type "allow" /url "/infoevening*"} #Custom allow mapped to keyword infoevening for swinburne campaign
+
 
       # Enable extensions in non-public content directories, using a regular expression
       /0041

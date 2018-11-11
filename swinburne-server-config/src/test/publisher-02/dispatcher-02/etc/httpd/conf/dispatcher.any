@@ -134,6 +134,8 @@
 #     /0027 { /type "allow" /url "/tmp/*"    }
 #     /0028 { /type "allow" /url "/var/*"    }
 
+      /0029 { /type "allow" /url "/infoevening*"} #Custom allow mapped to keyword infoevening for swinburne campaign
+
       # Enable extensions in non-public content directories, using a regular expression
       /0041
         {

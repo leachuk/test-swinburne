@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    auth.sudo.cookie="sling.sudo"
+    sling.auth.anonymous.user=""
+    auth.annonymous="{Boolean}true"
+    sling.auth.requirements="[+/libs/granite/oauth/content/authorization]"
+    osgi.http.whiteboard.listener="{Boolean}true"
+    auth.sudo.parameter="sudo"
+    auth.http="preemptive"
+    auth.uri.suffix="[/j_security_check]"
+    auth.http.realm="Sling\ (Development)"
+    osgi.http.whiteboard.context.select="(osgi.http.whiteboard.context.name\=*)"/>

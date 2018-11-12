@@ -20,5 +20,5 @@
           resource.resolver.vanitypath.blacklist="[/content/usergenerated,]"
           resource.resolver.vanity.precedence="{Boolean}false"
           resource.resolver.providerhandling.paranoid="{Boolean}false"
-          resource.resolver.log.closinßg="{Boolean}false"
+          resource.resolver.log.closing="{Boolean}false"
           resource.resolver.log.unclosed="{Boolean}false" />

@@ -2,10 +2,15 @@
 <workspaceFilter version="1.0">
 
     <filter root="/apps/swinburne/config"/>
+    <filter root="/apps/swinburne/config.publish"/>
     <filter root="/apps/swinburne/config.author.dev"/>
     <filter root="/apps/swinburne/config.author.test"/>
+    <filter root="/apps/swinburne/config.author.stage"/>
+    <filter root="/apps/swinburne/config.author.prod"/>
     <filter root="/apps/swinburne/config.publish.dev"/>
     <filter root="/apps/swinburne/config.publish.test"/>
+    <filter root="/apps/swinburne/config.publish.stage"/>
+    <filter root="/apps/swinburne/config.publish.prod"/>
 
     <!-- cloud services -->
     <filter root="/etc/cloudservices/livechat" mode="update"/>

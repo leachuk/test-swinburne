@@ -12,6 +12,9 @@ $(document).ready(function() {
             guideBridge.setProperty(["describesYou"],"value",[""]); // Reset value
             $selectDescribe.selectmenu( "destroy" );
             $selectDescribe.selectmenu();
+
+            //Rebind blur event on selectdrop downs.
+            bindBlurEvent($select.find('.ui-selectmenu-button'));
         };
     });
 
@@ -19,9 +22,7 @@ $(document).ready(function() {
     initDropDowns($selects);
 
     // Close dropdown on blur
-    $('.ui-selectmenu-button').blur( function(){
-        $(this).prev().selectmenu( "close" );
-    });
+    bindBlurEvent($('.ui-selectmenu-button'));
 
     //Tooltips hover handler when screen is not a touchscreen
     var $tooltips = $('.guideHelpQuestionMark');
@@ -38,7 +39,7 @@ $(document).ready(function() {
 
     $(document).keypress(function(e) {
         if(e.which === 13) {
-            guideBridge.submit();
+            submitForm();
         }
     });
 
@@ -48,7 +49,11 @@ $(document).ready(function() {
     });
 
 });
-
+function bindBlurEvent($selector){
+    $selector.blur( function(){
+        $(this).prev().selectmenu( "close" );
+    });
+};
 //function to validate auto complete fields.
 function validateSearch($field, items) {
     var val = $field.val();
@@ -78,6 +83,25 @@ function initDropDowns($elements) {
         $element.on( "selectmenuchange", function( event, ui ) {
             guideBridge.setProperty([name],"value",[ui.item.value]);
         });
+    });
+}
+function submitForm() {
+    guideBridge.submit({
+        error : function (guideResultObject) {
+            unConcatLabelToValue();
+        },
+        success : function (guideResultObject) {
+            unConcatLabelToValue();
+        }
+    });
+}
+function unConcatLabelToValue() {
+    guideBridge.visit(function(item) {
+        if(item.cssClassName === "label-to-value") {
+            var value = item.value;
+            var newValue = value.split(":").pop();
+            guideBridge.setProperty([item.name],"value",[newValue]);
+        }
     });
 }
 function concatLabelToValue() {

@@ -6,4 +6,5 @@
           linkcheckertransformer.disableRewriting="{Boolean}false"
           linkcheckertransformer.disableChecking="{Boolean}false"
           linkcheckertransformer.stripHtmltExtension="{Boolean}true"
-          linkcheckertransformer.mapCacheSize="{Long}5000"/>
+          linkcheckertransformer.mapCacheSize="{Long}5000"
+/>

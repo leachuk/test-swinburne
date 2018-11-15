@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 
     guideBridge.on('submitStart', function (event, payload) {
-        concatLabelToValue();
+        //concatLabelToValue();
     });
 
 });
@@ -88,10 +88,10 @@ function initDropDowns($elements) {
 function submitForm() {
     guideBridge.submit({
         error : function (guideResultObject) {
-            unConcatLabelToValue();
+            //unConcatLabelToValue();
         },
         success : function (guideResultObject) {
-            unConcatLabelToValue();
+            //unConcatLabelToValue();
         }
     });
 }

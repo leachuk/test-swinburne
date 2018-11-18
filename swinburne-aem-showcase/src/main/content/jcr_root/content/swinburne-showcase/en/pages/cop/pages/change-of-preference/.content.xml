@@ -7,6 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Change of Preference Expo"
+        jcr:uuid="ee4b3f75-e7ee-4b28-ad29-6c6cb990d4c7"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

@@ -192,6 +192,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: img-center
     title: 'Img Center'
 
+  image/metadata:
+    flat: true
+    prefix: img-data-visible
+    title: 'Img Data Visible'
+
   image/spacing:
     prefixes:
       - no-margin

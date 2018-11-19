@@ -58,7 +58,7 @@
       }
       h1,
       h2 {
-        hyphens: auto;
+        word-wrap: break-word;
       }
       a {
         @media (max-width: $screen-sm-max) {

@@ -176,7 +176,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="mobile number"
                         sling:resourceType="fd/af/components/panel"
-                        css="form-columns-override"
+                        css="form-columns-override "
                         guideNodeClass="guidePanel"
                         name="panel1532308618054"
                         textIsRich="true"
@@ -196,9 +196,10 @@
                                 sling:resourceType="fd/af/components/guidetextbox"
                                 autofillFieldKeyword="name"
                                 css="autocomplete"
-                                enabled="{Boolean}false"
+                                enabled="{Boolean}true"
                                 guideNodeClass="guideTextBox"
                                 hideTitle="true"
+                                mandatory="true"
                                 name="phMobileCountryCode"
                                 placeholderText="Country Code"
                                 textIsRich="[true,true,true]">
@@ -216,6 +217,7 @@
                                 displayPictureClause="text{X99999999999999}"
                                 guideNodeClass="guideTelephone"
                                 hideTitle="true"
+                                mandatory="true"
                                 name="phMobile"
                                 placeholderText="Mobile number"
                                 textIsRich="[true,true]"
@@ -230,13 +232,14 @@
                         autofillFieldKeyword="name"
                         enabled="{Boolean}true"
                         guideNodeClass="guideTextBox"
+                        mandatory="true"
                         name="address"
                         placeholderText="Address including suburb"
                         textIsRich="[true,true,true]"
-                        visible="{Boolean}false">
+                        visible="{Boolean}true">
                         <fd:rules jcr:primaryType="nt:unstructured"/>
                         <fd:scripts
-                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;\\nconsole.log([\\&quot;loading country\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n     url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=countries_c1&amp;onlyvalues=true\\&quot;\,\\n    type: 'GET'\,\\n      crossDomain: true\,\\n      dataType: 'jsonp'\,\\n    componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n     success: function (data) {\\n       //console.log(data.response);\\n       var vals = data.response.map(function(item){\\n         return {\\n           label: item\,\\n           value: item\\n         };\\n       });\\n//console.log(vals);\\n       $(this.componentId).autocomplete({\\n         minLength: 0\, //0 to allow autofocus to open the list \\n         source : vals\,\\n         classes: {\\n           \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n         }\\n\\n       }).focus(function() {\\n         $(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n       });\\n     }\\n\\n  });\\nconsole.log([\\&quot;loaded country\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.country&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;/*\\nconsole.log([\\&quot;loading country\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n     url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=countries_c1&amp;onlyvalues=true\\&quot;\,\\n    type: 'GET'\,\\n      crossDomain: true\,\\n      dataType: 'jsonp'\,\\n    componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n     success: function (data) {\\n       //console.log(data.response);\\n       var vals = data.response.map(function(item){\\n         return {\\n           label: item\,\\n           value: item\\n         };\\n       });\\n//console.log(vals);\\n       $(this.componentId).autocomplete({\\n         minLength: 0\, //0 to allow autofocus to open the list \\n         source : vals\,\\n         classes: {\\n           \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n         }\\n\\n       }).focus(function() {\\n         $(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n       });\\n     }\\n\\n  });\\nconsole.log([\\&quot;loaded country\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n*/\\n&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.address&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
                     </guidetextbox_1494040348>
                     <guidenumericbox
@@ -250,7 +253,7 @@
                         mandatory="true"
                         maximum="7000"
                         minimum="200"
-                        name="postcode"
+                        name="postCode"
                         placeholderText="Postcode"
                         textIsRich="[true,true]"/>
                     <guidedropdownlist_99652624

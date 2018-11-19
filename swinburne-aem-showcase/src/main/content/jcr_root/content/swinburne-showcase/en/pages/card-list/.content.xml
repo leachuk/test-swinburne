@@ -8,24 +8,28 @@
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/header">
+            sling:resourceType="swinburne/components/layout/header"
+            componentId="header_IQBVUNVAS">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
         </header>
         <article
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article">
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_GQ9WQ8BST">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <image
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/media/image"
+                    componentId="image_IDZZB3PCK"
                     fileReference="/content/dam/swinburne/juggling1.jpg"/>
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_RXO5BKEER"
                     componentModifiers="[swinburne:component-style-modifier/background/bg-c10]">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
@@ -39,11 +43,13 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_OZIGUJSUI"
                             text="&lt;p>&lt;g class=&quot;gr_ gr_12 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace&quot; id=&quot;12&quot; data-gr-id=&quot;12&quot;>Ricj&lt;/g>&amp;nbsp;Text&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Headline (optional)&lt;/li>&#xd;&#xa;&lt;li>Headline (optional)Headline (optional)Headline (optional)&lt;/li>&#xd;&#xa;&lt;li>Headline (optional)Headline (optional)&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Headline (optional)Headline (optional)&lt;/li>&#xd;&#xa;&lt;li>Headline (optional)Headline (optional)Headline (optional)&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
                             textIsRich="true"/>
                         <image
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/media/image"
+                            componentId="image_Y8UTNW9UB"
                             fileReference="/content/dam/swinburne-showcase/en/components/content/download/apprentice-of-the-year.jpg"/>
                     </par>
                 </contentblock>
@@ -51,7 +57,8 @@
         </article>
         <footer
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/footer">
+            sling:resourceType="swinburne/components/layout/footer"
+            componentId="footer_Z8RNN9WAQ">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>

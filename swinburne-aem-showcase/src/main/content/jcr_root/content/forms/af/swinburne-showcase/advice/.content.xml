@@ -176,7 +176,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="mobile number"
                         sling:resourceType="fd/af/components/panel"
-                        css="form-columns-override"
+                        css="form-columns-override panel-mandatory"
                         guideNodeClass="guidePanel"
                         name="panel1532308618054"
                         textIsRich="true"

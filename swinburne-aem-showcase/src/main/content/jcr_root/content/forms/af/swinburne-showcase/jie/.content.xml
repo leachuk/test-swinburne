@@ -5,6 +5,7 @@
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:template="/conf/ReferenceEditableTemplates/settings/wcm/templates/blank"
         jcr:language="en"
+        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="jie"
         sling:resourceType="fd/af/components/page2/aftemplatedpage">
@@ -228,6 +229,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Country of residence"
                         sling:resourceType="fd/af/components/guidetextbox"
+                        _value="Australia"
                         autofillFieldKeyword="name"
                         css="autocomplete"
                         enabled="{Boolean}true"
@@ -275,11 +277,12 @@
                         css="select-menu"
                         enabled="{Boolean}true"
                         guideNodeClass="guideDropDownList"
+                        mandatory="true"
                         name="highestQualification"
                         options="[HQ01. High school / VCE year 12 equivalent=High school / VCE year 12 equivalent,HQ01. High school / VCE year 12 equivalent=Foundation year,HQ02. Undergraduate=Undergraduate,HQ03. Postgraduate=Postgraduate,HQ04. TAFE/Vocational certificate or degree=TAFE / Vocational certificate or diploma,HQ05. None=None]"
                         placeholderText="Select an option "
                         textIsRich="[true,true]"
-                        visible="{Boolean}false"/>
+                        visible="{Boolean}true"/>
                     <guidedropdownlist
                         jcr:primaryType="nt:unstructured"
                         jcr:title="International Best Describes"
@@ -308,7 +311,7 @@
                         css="autocomplete"
                         enabled="{Boolean}true"
                         guideNodeClass="guideTextBox"
-                        mandatory="true"
+                        maxChars="255"
                         name="secondarySchool"
                         placeholderText="Start typing for suggestions..."
                         textIsRich="[true,true,true]"

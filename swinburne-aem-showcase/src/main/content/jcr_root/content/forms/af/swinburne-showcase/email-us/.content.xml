@@ -64,6 +64,21 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Adaptive Form Header"
                         sling:resourceType="fd/af/components/guideheader"/>
+                    <guideheader_1583093223
+                        jcr:created="{Date}2018-11-20T15:40:37.499+11:00"
+                        jcr:createdBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Adaptive Form Header"
+                        sling:resourceType="fd/af/components/guideheader">
+                        <guidetextdraw
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/components/guidetextdraw"
+                            _value="&lt;p>EMAIL US YOUR QUESTION&lt;/p>&#xa;"
+                            css="headerText"
+                            guideNodeClass="guideTextDraw"
+                            name="headerText"
+                            textIsRich="true"/>
+                    </guideheader_1583093223>
                     <guidetextbox_710193482
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Contact Channel - HIDDEN"
@@ -121,6 +136,7 @@
                         _value="No"
                         alignment="guideFieldHorizontalAlignment"
                         guideNodeClass="guideRadioButton"
+                        longDescription="&lt;p>You are an international student if you're not an Australian citizen or an Australian permanent resident, and you're not a New Zealand citizen.&lt;/p>&#xd;&#xa;"
                         name="isInternational"
                         options="[No=No,Yes=Yes]"
                         textIsRich="[true,true]">

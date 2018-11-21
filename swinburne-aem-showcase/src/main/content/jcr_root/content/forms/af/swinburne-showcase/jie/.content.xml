@@ -131,6 +131,7 @@
                         _value="No"
                         alignment="guideFieldHorizontalAlignment"
                         guideNodeClass="guideRadioButton"
+                        longDescription="&lt;p>You are an international student if you're not an Australian citizen or an Australian permanent resident, and you're not a New Zealand citizen.&lt;/p>&#xd;&#xa;"
                         mandatory="true"
                         name="isInternational"
                         options="[No=No,Yes=Yes]"
@@ -177,7 +178,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="mobile number"
                         sling:resourceType="fd/af/components/panel"
-                        css="form-columns-override"
+                        css="form-columns-override panel-mandatory"
                         guideNodeClass="guidePanel"
                         name="panel1532308618054"
                         textIsRich="true"
@@ -218,6 +219,7 @@
                                 displayPictureClause="text{X99999999999999}"
                                 guideNodeClass="guideTelephone"
                                 hideTitle="true"
+                                mandatory="true"
                                 name="phMobile"
                                 placeholderText="Mobile number"
                                 textIsRich="[true,true]"
@@ -249,7 +251,8 @@
                         _value="&lt;p>&lt;sup>†&lt;/sup>&amp;nbsp;Note: If you are already in Australia on a student visa, select Australia as your country of residence&lt;/p>&#xa;"
                         guideNodeClass="guideTextDraw"
                         name="international-note"
-                        textIsRich="true"/>
+                        textIsRich="true"
+                        visible="{Boolean}false"/>
                     <guidedropdownlist_99652624
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Which best describes you?"
@@ -270,6 +273,24 @@
                             fd:valueCommit="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.describesYou&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;if ( ( ( this.value == \\&quot;BD04.Current Year 12 student\\&quot; ||  ( this.value == \\&quot;BD03.Current Year 11 student\\&quot; ||  ( this.value == \\&quot;BD01. Current Year 9 student\\&quot; || this.value == \\&quot;BD02. Current Year 10 student\\&quot; )  )  ) ) &amp;&amp; isInternational.value === \\&quot;No\\&quot; ) {\\n    secondarySchool.visible = true;\\n    secondarySchool.validationsDisabled = false;\\n}\\n\\n&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
                     </guidedropdownlist_99652624>
+                    <guidetextbox_1682134043
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Secondary school"
+                        sling:resourceType="fd/af/components/guidetextbox"
+                        autofillFieldKeyword="name"
+                        css="autocomplete"
+                        enabled="{Boolean}true"
+                        guideNodeClass="guideTextBox"
+                        mandatory="true"
+                        name="secondarySchool"
+                        placeholderText="Start typing for suggestions..."
+                        textIsRich="[true,true,true]"
+                        visible="{Boolean}true">
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;var vals_clone = [];\\nfunction validateSearch($val\, vals) {\\n  var val = $val.val();\\n  var hasMatch = false;\\n  vals.map(function (item) {                      \\n    if(item.value.toLowerCase().indexOf(val.toLowerCase()) !== -1) {\\n      hasMatch = true;\\n    }\\n  });\\n  val = !hasMatch ? \\&quot;\\&quot; : val;\\n  $val.val(val);\\n}\\n\\nfunction showList(input) {\\n  var isOpen = $(input).autocomplete( \\&quot;widget\\&quot; ).is( \\&quot;:visible\\&quot; );\\n  if (!isOpen){\\n    $(input).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n\\n    // clear binding to improve performance.\\n    // see https://stackoverflow.com/a/43393889/1909499\\n    $(input).data(\\&quot;ui-autocomplete\\&quot;).menu.bindings = $();\\n  }\\n}\\n\\nconsole.log([\\&quot;loading school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n  url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=schools&amp;onlyvalues=true&amp;callback=\\&quot;\,\\n  type: 'GET'\,\\n  crossDomain: true\,\\n  dataType: 'jsonp'\,\\n  componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n  success: function (data) {\\n    //console.log(data.response);\\n    var vals = data.response.map(function(item){\\n      return {\\n        label: item\,\\n        value: item\\n      };\\n    });\\n    vals_clone = vals;\\n    $(this.componentId).autocomplete({\\n      minLength: 0\, //0 to allow autofocus to open the list \\n      source : vals\,\\n      classes: {\\n        \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n      }\\n    }).blur(function () {\\n      validateSearch($(this)\, vals_clone);\\n\\t}).focus(function() {\\n      validateSearch($(this)\, vals_clone);\\n\\t  showList(this);\\n    }).click(function() {\\n      showList(this);\\n    });\\n  }\\n});\\nconsole.log([\\&quot;loaded school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.secondarySchool&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </guidetextbox_1682134043>
                     <guidedropdownlist_548774665
                         jcr:primaryType="nt:unstructured"
                         jcr:title="What is your highest qualification?"
@@ -303,24 +324,6 @@
                         options="[BD01. Current Year 9 student=Current Year 9 student,BD02. Current Year 10 student=Current Year 10 student,BD03.Current Year 11 student=Current Year 11 student,BD04.Current Year 12 student=Current Year 12 student,BD05.Current TAFE student=Current TAFE student,BD06.Current Undergraduate student=Current Undergraduate student,BD07.Current Postgraduate student=Current Postgraduate student,BD08. Currently undertaking a gap year=Currently undertaking a gap year,BD09. Looking to switch university or course=Looking to switch university or course,BD010.Looking to advance or change career=Looking to advance or change career,BD011.Parent of a student=Parent of a student]"
                         textIsRich="[true,true]"
                         visible="{Boolean}false"/>
-                    <guidetextbox_1682134043
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Secondary school"
-                        sling:resourceType="fd/af/components/guidetextbox"
-                        autofillFieldKeyword="name"
-                        css="autocomplete"
-                        enabled="{Boolean}true"
-                        guideNodeClass="guideTextBox"
-                        maxChars="255"
-                        name="secondarySchool"
-                        placeholderText="Start typing for suggestions..."
-                        textIsRich="[true,true,true]"
-                        visible="{Boolean}true">
-                        <fd:rules jcr:primaryType="nt:unstructured"/>
-                        <fd:scripts
-                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;var vals_clone = [];\\nfunction validateSearch($val\, vals) {\\n  var val = $val.val();\\n  var hasMatch = false;\\n  vals.map(function (item) {                      \\n    if(item.value.toLowerCase().indexOf(val.toLowerCase()) !== -1) {\\n      hasMatch = true;\\n    }\\n  });\\n  val = !hasMatch ? \\&quot;\\&quot; : val;\\n  $val.val(val);\\n}\\n\\nfunction showList(input) {\\n  var isOpen = $(input).autocomplete( \\&quot;widget\\&quot; ).is( \\&quot;:visible\\&quot; );\\n  if (!isOpen){\\n    $(input).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n\\n    // clear binding to improve performance.\\n    // see https://stackoverflow.com/a/43393889/1909499\\n    $(input).data(\\&quot;ui-autocomplete\\&quot;).menu.bindings = $();\\n  }\\n}\\n\\nconsole.log([\\&quot;loading school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n  url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=schools&amp;onlyvalues=true&amp;callback=\\&quot;\,\\n  type: 'GET'\,\\n  crossDomain: true\,\\n  dataType: 'jsonp'\,\\n  componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n  success: function (data) {\\n    //console.log(data.response);\\n    var vals = data.response.map(function(item){\\n      return {\\n        label: item\,\\n        value: item\\n      };\\n    });\\n    vals_clone = vals;\\n    $(this.componentId).autocomplete({\\n      minLength: 0\, //0 to allow autofocus to open the list \\n      source : vals\,\\n      classes: {\\n        \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n      }\\n    }).blur(function () {\\n      validateSearch($(this)\, vals_clone);\\n\\t}).focus(function() {\\n      validateSearch($(this)\, vals_clone);\\n\\t  showList(this);\\n    }).click(function() {\\n      showList(this);\\n    });\\n  }\\n});\\nconsole.log([\\&quot;loaded school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.secondarySchool&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
-                            jcr:primaryType="nt:unstructured"/>
-                    </guidetextbox_1682134043>
                     <guidetextbox_1204529226
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Area of interest"

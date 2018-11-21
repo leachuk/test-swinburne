@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Business"
-        jcr:uuid="d9c018be-1dbe-44d1-b60f-133ecc05bbe8"
+        jcr:uuid="7193a2d9-bc7b-4551-89a7-2a9be5408af1"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

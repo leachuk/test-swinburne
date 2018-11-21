@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Built Environment And Architecture"
-        jcr:uuid="11ed95be-1f32-4cca-88e3-9827c690281d"
+        jcr:uuid="ade0e823-6d60-44fd-92e9-3c1e4a94f1cb"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

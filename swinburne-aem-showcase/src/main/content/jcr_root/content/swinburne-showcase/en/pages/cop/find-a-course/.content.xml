@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Find a course"
-        jcr:uuid="ef0da894-689d-4925-86d7-aeaf7d9c9448"
+        jcr:uuid="585e5954-c9e8-4542-acb3-529d5e120de5"
         sling:resourceType="swinburne/components/template/base"
         navTitle="Find a course"
         pageTitle="Find a course">

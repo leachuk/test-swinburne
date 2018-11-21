@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Pages"
-        jcr:uuid="e90c0335-92a6-4b38-a032-06c48935fb35"
+        jcr:uuid="3a4adb78-2078-453f-844f-a69cc4914bf0"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

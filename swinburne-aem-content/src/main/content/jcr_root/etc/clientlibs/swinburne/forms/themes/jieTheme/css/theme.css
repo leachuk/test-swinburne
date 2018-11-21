@@ -379,6 +379,7 @@ input.afcaptcha-refresh-btn {
 .description a {
     color: #DC2D27;
 }
+div.panel-mandatory .guidePanelDescription:after,
 div[data-mandatory="true"] > .guideFieldLabel > label:after {
     content: "*";
     display: inline-block;

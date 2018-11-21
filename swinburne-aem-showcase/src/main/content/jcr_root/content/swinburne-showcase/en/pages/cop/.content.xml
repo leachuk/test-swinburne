@@ -3,12 +3,13 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:conf="/conf/swinburne"
+        cq:lastReplicationAction="Activate"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Choose Swinburne | Swinburne University of Technology, Melbourne"
-        jcr:uuid="2b80deb4-33f6-446f-9aca-ff14a304e9a8"
+        jcr:uuid="22356157-2bf5-4b3d-9085-c16c803add5f"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
@@ -255,7 +256,6 @@
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_641331958_H0ALRI9OA"
                     componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
-                    componentModules="[swinburne:component-style-modifier/background/bg-c10]"
                     componentTheme="[swinburne:component-style-theme/layout/contentblock/carousel]"
                     variant="container">
                     <bgimage
@@ -286,9 +286,10 @@
                             componentModules="[swinburne:component-style-module/lists/carousel]"
                             componentTheme="[swinburne:component-style-theme/lists/cardslist/images]"
                             detailsBadge="cardImageTitleDescriptionAction"
-                            listFrom="static"
+                            listFrom="children"
                             orderBy="jcr:created"
-                            pages="[/content/swinburne/en/campaign/2018/jie/find-the-right-uni-for-you,/content/swinburne/en/campaign/2018/jie/from-intern-to-employee,/content/swinburne/en/campaign/2018/jie/build-your-future,/content/swinburne/en/campaign/2018/jie/change-for-the-better]"
+                            pages="[/content/swinburne/au/en/campaign/2018/jie/find-the-right-uni-for-you,/content/swinburne/en/campaign/2018/jie/from-intern-to-employee,/content/swinburne/en/campaign/2018/jie/build-your-future,/content/swinburne/en/campaign/2018/jie/change-for-the-better]"
+                            parentPage="/content/swinburne-showcase/en/pages/card-list"
                             tagsMatch="any">
                             <badgeThumbnail
                                 jcr:primaryType="nt:unstructured"
@@ -299,9 +300,10 @@
                             sling:resourceType="swinburne/components/lists/pagelist"
                             componentId="pagelist_H1HQWMFP7"
                             componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
-                            detailsBadge="cardTitleDescriptionAction"
-                            listFrom="static"
+                            detailsBadge="cardIconTitleDescription"
+                            listFrom="children"
                             pages="[/content/swinburne-showcase/en/pages/cop.html,/content/swinburne/en/campaign/2018/jie/take-a-different-route,/content/swinburne/en/campaign/2018/jie/student-orgs,/content/swinburne/en/campaign/2018/jie/career-support-at-your-fingertips]"
+                            parentPage="/content/swinburne-showcase/en/pages/article-list"
                             tagsMatch="any">
                             <badgeThumbnail
                                 jcr:primaryType="nt:unstructured"

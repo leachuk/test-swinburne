@@ -192,6 +192,18 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: img-center
     title: 'Img Center'
 
+  image/metadata:
+    flat: true
+    prefix: img-data-visible
+    title: 'Img Data Visible'
+
+  image/spacing:
+    prefixes:
+      - no-margin
+      - no-padding
+    valueFormat: img-%%prefix%%
+    title: '%%prefix_normalised%%'
+
   online-media/responsive:
     flat: true
     prefix: media-responsive
@@ -834,14 +846,96 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     flat: true
     prefix: text-center
     title: '%%prefix_normalised%%'
+
   text/alignment/text-right:
     flat: true
     prefix: text-right
     title: '%%prefix_normalised%%'
+
   text/alignment/text-left:
     flat: true
     prefix: text-left
     title: '%%prefix_normalised%%'
+
+  text/size/phone: #sm
+    prefixes:
+      - 12
+      - 14
+      - 16
+      - 18
+      - 20
+      - 22
+      - 24
+      - 26
+      - 28
+      - 30
+      - 32
+      - 34
+      - 36
+    breakpoints:
+      - sm
+    startWith: fs-
+    title: 'Font Size - %%prefix_normalised%%'
+
+  text/size/tablet: #md
+    prefixes:
+      - 12
+      - 14
+      - 16
+      - 18
+      - 20
+      - 22
+      - 24
+      - 26
+      - 28
+      - 30
+      - 32
+      - 34
+      - 36
+    breakpoints:
+      - md
+    startWith: fs-
+    title: 'Font Size - %%prefix_normalised%%'
+
+  text/size/laptop:
+    prefixes:
+      - 12
+      - 14
+      - 16
+      - 18
+      - 20
+      - 22
+      - 24
+      - 26
+      - 28
+      - 30
+      - 32
+      - 34
+      - 36
+    breakpoints:
+      - lg
+    startWith: fs-
+    title: 'Font Size - %%prefix_normalised%%'
+
+  text/size/desktop:
+    prefixes:
+      - 12
+      - 14
+      - 16
+      - 18
+      - 20
+      - 22
+      - 24
+      - 26
+      - 28
+      - 30
+      - 32
+      - 34
+      - 36
+    breakpoints:
+      - xl
+    startWith: fs-
+    title: 'Font Size - %%prefix_normalised%%'
 
   # Text transforms
   text/transform:

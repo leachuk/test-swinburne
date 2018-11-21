@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Information Technology"
-        jcr:uuid="f43ef877-2b45-424a-a446-1b256f833d53"
+        jcr:uuid="e7957408-bcf0-4116-b992-04af5335897b"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

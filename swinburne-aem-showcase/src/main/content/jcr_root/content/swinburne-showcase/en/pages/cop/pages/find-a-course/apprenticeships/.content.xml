@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Apprenticeships"
-        jcr:uuid="f9004a11-fa3f-4b15-bf38-cf40510ddd5d"
+        jcr:uuid="bd299ac4-6260-4015-948c-45b9f3eb17ff"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

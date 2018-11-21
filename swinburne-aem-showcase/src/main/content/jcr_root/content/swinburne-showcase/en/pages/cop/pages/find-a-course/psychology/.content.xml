@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Psychology"
-        jcr:uuid="0836ee00-087f-472b-838f-f19a7249ebd2"
+        jcr:uuid="db280602-4eee-49bb-91bc-3a3efb2b75f7"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

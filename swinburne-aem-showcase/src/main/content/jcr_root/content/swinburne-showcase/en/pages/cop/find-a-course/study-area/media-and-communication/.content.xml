@@ -7,6 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Media and Communication"
+        jcr:uuid="fc50274a-126a-4755-a831-9d6069f6bf1c"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

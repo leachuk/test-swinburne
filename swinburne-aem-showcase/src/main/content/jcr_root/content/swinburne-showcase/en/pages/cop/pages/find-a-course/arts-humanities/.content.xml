@@ -7,6 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Arts and humanities"
+        jcr:uuid="e130bf7c-6713-46cf-ad9c-36b5b45786f1"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

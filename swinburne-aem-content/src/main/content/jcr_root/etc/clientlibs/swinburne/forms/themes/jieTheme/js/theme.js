@@ -44,9 +44,7 @@ $(document).ready(function() {
     });
 
 
-    guideBridge.on('submitStart', function (event, payload) {
-        //concatLabelToValue();
-    });
+    guideBridge.on('submitStart', function (event, payload) {});
 
 });
 function bindBlurEvent($selector){
@@ -88,12 +86,19 @@ function initDropDowns($elements) {
 function submitForm() {
     guideBridge.submit({
         error : function (guideResultObject) {
-            //unConcatLabelToValue();
+            alert(setErrorsMessage(guideResultObject));
         },
-        success : function (guideResultObject) {
-            //unConcatLabelToValue();
-        }
+        success : function (guideResultObject) {}
     });
+}
+function setErrorsMessage(response) {
+    var message = response.data.statusText + ";";
+
+    response.data.responseJSON.errors.map( function(error) {
+        message += " " + error.errorMessage + "; ";
+    });
+
+    return message;
 }
 function unConcatLabelToValue() {
     guideBridge.visit(function(item) {
@@ -114,4 +119,14 @@ function concatLabelToValue() {
             guideBridge.setProperty([name],"value",[newValue]);
         }
     });
+}
+function showList(input) {
+    var isOpen = $(input).autocomplete( "widget" ).is( ":visible" );
+    if (!isOpen){
+        $(input).autocomplete("search", "");
+
+        // clear binding to improve performance.
+        // see https://stackoverflow.com/a/43393889/1909499
+        $(input).data("ui-autocomplete").menu.bindings = $();
+    }
 }

@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Science"
-        jcr:uuid="dd0971e6-93fc-4234-b5a1-959fa2370298"
+        jcr:uuid="7c89cc7a-d92d-41af-9ac5-afa6f50d46ed"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

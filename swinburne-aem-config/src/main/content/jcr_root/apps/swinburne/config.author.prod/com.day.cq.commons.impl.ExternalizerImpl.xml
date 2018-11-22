@@ -4,7 +4,6 @@
           jcr:primaryType="sling:OsgiConfig"
           externalizer.domains="[local https://author-swinburne-prod-64-01.adobecqms.net/,
                                   author https://author-swinburne-prod-64-01.adobecqms.net/,
-                                  publish https://swinburne-prod-64-01.adobecqms.net/]"
+                                  publish https://www.swinburne.edu.au/]"
 
 />
-

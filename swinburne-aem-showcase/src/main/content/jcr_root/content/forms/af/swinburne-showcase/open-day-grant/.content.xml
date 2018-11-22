@@ -67,7 +67,7 @@
                         <guidetextdraw
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="fd/af/components/guidetextdraw"
-                            _value="&lt;p>REGISTER MY PLACE&lt;/p>&#xa;"
+                            _value="&lt;p>REGISTER NOW&lt;/p>&#xa;"
                             css="headerText"
                             guideNodeClass="guideTextDraw"
                             name="headerText"
@@ -131,13 +131,13 @@
                         alignment="guideFieldHorizontalAlignment"
                         guideNodeClass="guideRadioButton"
                         longDescription="&lt;p>You are an international student if you're not an Australian citizen or an Australian permanent resident, and you're not a New Zealand citizen.&lt;/p>&#xd;&#xa;"
-                        name="residency"
+                        name="isInternational"
                         options="[No=No,Yes=Yes]"
                         textIsRich="[true,true]">
-                        <fd:rules
-                            fd:valueCommit="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.international&quot;\,&quot;type&quot;:&quot;RADIO BUTTON|FIELD|AFCOMPONENT|STRING&quot;\,&quot;name&quot;:&quot;international&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;HAS_SELECTED&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;STRING_LITERAL&quot;\,&quot;value&quot;:&quot;1&quot;}}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SHOW_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.country&quot;\,&quot;displayName&quot;:&quot;Country of residence *&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/Root Panel/Country of residence */&quot;\,&quot;name&quot;:&quot;country&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nif (this.value.split('\,').indexOf(\\&quot;1\\&quot;) > -1) {\\n    country.visible = true;\\n}\\n&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;},{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.international&quot;\,&quot;type&quot;:&quot;RADIO BUTTON&quot;\,&quot;name&quot;:&quot;international&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;HAS_SELECTED&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;STRING_LITERAL&quot;\,&quot;value&quot;:&quot;0&quot;}}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;HIDE_STATEMENT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;AFCOMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.country&quot;\,&quot;displayName&quot;:&quot;Country of residence *&quot;\,&quot;type&quot;:&quot;AFCOMPONENT&quot;\,&quot;displayPath&quot;:&quot;FORM/Root Panel/Country of residence */&quot;\,&quot;name&quot;:&quot;country&quot;\,&quot;parent&quot;:&quot;guide.guideRootPanel&quot;}}]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nif (this.value.split('\,').indexOf(\\&quot;0\\&quot;) > -1) {\\n    country.visible = false;\\n}\\n&quot;\,&quot;eventName&quot;:&quot;Value Commit&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:valueCommit="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.isInternational&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;if (this.value === \\&quot;Yes\\&quot;) {\\n    describesYou.items = guideBridge.resolveNode(\\&quot;international-best-describes\\&quot;).items;\\n  \\tsecondarySchool.visible = false;\\n    secondarySchool.validationsDisabled = true;\\n}&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true},{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.isInternational&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;if (this.value === \\&quot;No\\&quot;) {\\n    describesYou.items = guideBridge.resolveNode(\\&quot;australia-best-describes\\&quot;).items;\\n}&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
-                        <fd:scripts jcr:primaryType="nt:unstructured"/>
                     </guideradiobutton>
                     <guidetextbox
                         jcr:primaryType="nt:unstructured"
@@ -166,7 +166,7 @@
                         autofillFieldKeyword="email"
                         guideNodeClass="guideTextBox"
                         mandatory="true"
-                        name="email"
+                        name="emailAddress"
                         placeholderText="Email address"
                         textIsRich="[true,true]"
                         validatePictureClause="^(([^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+(\\.[^&lt;>()\\[\\]\\\\.,;:\\s@&quot;]+)*)|(&quot;.+&quot;))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
@@ -176,7 +176,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="mobile number"
                         sling:resourceType="fd/af/components/panel"
-                        css="form-columns-override"
+                        css="form-columns-override panel-mandatory"
                         guideNodeClass="guidePanel"
                         name="panel1532308618054"
                         textIsRich="true"
@@ -196,9 +196,10 @@
                                 sling:resourceType="fd/af/components/guidetextbox"
                                 autofillFieldKeyword="name"
                                 css="autocomplete"
-                                enabled="{Boolean}false"
+                                enabled="{Boolean}true"
                                 guideNodeClass="guideTextBox"
                                 hideTitle="true"
+                                mandatory="true"
                                 name="phMobileCountryCode"
                                 placeholderText="Country Code"
                                 textIsRich="[true,true,true]">
@@ -216,6 +217,7 @@
                                 displayPictureClause="text{X99999999999999}"
                                 guideNodeClass="guideTelephone"
                                 hideTitle="true"
+                                mandatory="true"
                                 name="phMobile"
                                 placeholderText="Mobile number"
                                 textIsRich="[true,true]"
@@ -230,13 +232,14 @@
                         autofillFieldKeyword="name"
                         enabled="{Boolean}true"
                         guideNodeClass="guideTextBox"
+                        mandatory="true"
                         name="address"
                         placeholderText="Address including suburb"
                         textIsRich="[true,true,true]"
-                        visible="{Boolean}false">
+                        visible="{Boolean}true">
                         <fd:rules jcr:primaryType="nt:unstructured"/>
                         <fd:scripts
-                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;\\nconsole.log([\\&quot;loading country\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n     url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=countries_c1&amp;onlyvalues=true\\&quot;\,\\n    type: 'GET'\,\\n      crossDomain: true\,\\n      dataType: 'jsonp'\,\\n    componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n     success: function (data) {\\n       //console.log(data.response);\\n       var vals = data.response.map(function(item){\\n         return {\\n           label: item\,\\n           value: item\\n         };\\n       });\\n//console.log(vals);\\n       $(this.componentId).autocomplete({\\n         minLength: 0\, //0 to allow autofocus to open the list \\n         source : vals\,\\n         classes: {\\n           \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n         }\\n\\n       }).focus(function() {\\n         $(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n       });\\n     }\\n\\n  });\\nconsole.log([\\&quot;loaded country\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.country&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;/*\\nconsole.log([\\&quot;loading country\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n     url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=countries_c1&amp;onlyvalues=true\\&quot;\,\\n    type: 'GET'\,\\n      crossDomain: true\,\\n      dataType: 'jsonp'\,\\n    componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n     success: function (data) {\\n       //console.log(data.response);\\n       var vals = data.response.map(function(item){\\n         return {\\n           label: item\,\\n           value: item\\n         };\\n       });\\n//console.log(vals);\\n       $(this.componentId).autocomplete({\\n         minLength: 0\, //0 to allow autofocus to open the list \\n         source : vals\,\\n         classes: {\\n           \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n         }\\n\\n       }).focus(function() {\\n         $(this).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n       });\\n     }\\n\\n  });\\nconsole.log([\\&quot;loaded country\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n*/\\n&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.address&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
                     </guidetextbox_1494040348>
                     <guidenumericbox
@@ -250,27 +253,47 @@
                         mandatory="true"
                         maximum="7000"
                         minimum="200"
-                        name="postcode"
+                        name="postCode"
                         placeholderText="Postcode"
                         textIsRich="[true,true]"/>
                     <guidedropdownlist_99652624
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Which best describes you?"
                         sling:resourceType="fd/af/components/guidedropdownlist"
-                        css="select-menu"
+                        css="describe-you"
                         enabled="{Boolean}true"
                         guideNodeClass="guideDropDownList"
                         mandatory="true"
                         name="describesYou"
-                        options="[BD03.Current Year 11 student=Current Year 11 student,BD04.Current Year 12 student=Current Year 12 student]"
                         placeholderText="Select an option "
                         textIsRich="[true,true]"
                         visible="{Boolean}true">
                         <fd:rules jcr:primaryType="nt:unstructured"/>
                         <fd:scripts
-                            fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;if ( this.value === \\&quot;BD04.Current Year 12 student\\&quot; || this.value === \\&quot;BD03.Current Year 11 student\\&quot; ) {\\n    secondarySchool.visible = true;\\n}\\n&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.describesYou&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true},{&quot;script&quot;:{&quot;content&quot;:&quot;if ( this.value !== \\&quot;BD04.Current Year 12 student\\&quot; &amp;&amp; this.value !== \\&quot;BD03.Current Year 11 student\\&quot; ) {\\n    secondarySchool.visible = false;\\n}&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.describesYou&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            fd:init="[{&quot;script&quot;:{&quot;content&quot;:&quot;this.items = guideBridge.resolveNode(\\&quot;australia-best-describes\\&quot;).items;\\nsecondarySchool.visible = false;&quot;\,&quot;event&quot;:&quot;Initialize&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.describesYou&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
+                            fd:valueCommit="[{&quot;script&quot;:{&quot;content&quot;:&quot;if ( ( ( this.value == \\&quot;BD04.Current Year 12 student\\&quot; ||  ( this.value == \\&quot;BD03.Current Year 11 student\\&quot; ||  ( this.value == \\&quot;BD01. Current Year 9 student\\&quot; || this.value == \\&quot;BD02. Current Year 10 student\\&quot; )  )  ) ) &amp;&amp; isInternational.value === \\&quot;No\\&quot; ) {\\n    secondarySchool.visible = true;\\n    secondarySchool.validationsDisabled = false;\\n}else{\\n  \\tsecondarySchool.visible = false;\\n}\\n&quot;\,&quot;event&quot;:&quot;Value Commit&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.describesYou&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
                     </guidedropdownlist_99652624>
+                    <guidedropdownlist_783704377
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Australia Best Describes"
+                        sling:resourceType="fd/af/components/guidedropdownlist"
+                        guideNodeClass="guideDropDownList"
+                        name="australia-best-describes"
+                        options="[BD01. Current Year 9 student=Current Year 9 student,BD02. Current Year 10 student=Current Year 10 student,BD03.Current Year 11 student=Current Year 11 student,BD04.Current Year 12 student=Current Year 12 student,BD05.Current TAFE student=Current TAFE student,BD06.Current Undergraduate student=Current Undergraduate student,BD07.Current Postgraduate student=Current Postgraduate student,BD08. Currently undertaking a gap year=Currently undertaking a gap year,BD09. Looking to switch university or course=Looking to switch university or course,BD010.Looking to advance or change career=Looking to advance or change career,BD011.Parent of a student=Parent of a student]"
+                        placeholderText="Select an option "
+                        textIsRich="[true,true]"
+                        visible="{Boolean}false"/>
+                    <guidedropdownlist_2056922622
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="International Best Describes"
+                        sling:resourceType="fd/af/components/guidedropdownlist"
+                        guideNodeClass="guideDropDownList"
+                        name="international-best-describes"
+                        options="[BD03.Current Year 11 student=Currently in High school not in final year,BD04.Current Year 12 student=Currently in High school in final year,BD05.Current TAFE student=Currently studying a non-degree course,BD06.Current Undergraduate student=Currently in Undergraduate degree,BD07.Current Postgraduate student=Currently in Postgraduate degree,BD010.Looking to advance or change career=Looking to advance or change career,BD011.Parent of a student=Parent of a student]"
+                        placeholderText="Select an option "
+                        textIsRich="[true,true]"
+                        visible="{Boolean}false"/>
                     <guidedropdownlist_1845223654
                         jcr:primaryType="nt:unstructured"
                         jcr:title="What is your highest qualification?"
@@ -293,7 +316,7 @@
                         name="secondarySchool"
                         placeholderText="Start typing for suggestions..."
                         textIsRich="[true,true,true]"
-                        visible="{Boolean}false">
+                        visible="{Boolean}true">
                         <fd:rules jcr:primaryType="nt:unstructured"/>
                         <fd:scripts
                             fd:visible="[{&quot;script&quot;:{&quot;content&quot;:&quot;var vals_clone = [];\\nfunction validateSearch($val\, vals) {\\n  var val = $val.val();\\n  var hasMatch = false;\\n  vals.map(function (item) {                      \\n    if(item.value.toLowerCase().indexOf(val.toLowerCase()) !== -1) {\\n      hasMatch = true;\\n    }\\n  });\\n  val = !hasMatch ? \\&quot;\\&quot; : val;\\n  $val.val(val);\\n}\\n\\nfunction showList(input) {\\n  var isOpen = $(input).autocomplete( \\&quot;widget\\&quot; ).is( \\&quot;:visible\\&quot; );\\n  if (!isOpen){\\n    $(input).autocomplete(\\&quot;search\\&quot;\, \\&quot;\\&quot;);\\n\\n    // clear binding to improve performance.\\n    // see https://stackoverflow.com/a/43393889/1909499\\n    $(input).data(\\&quot;ui-autocomplete\\&quot;).menu.bindings = $();\\n  }\\n}\\n\\nconsole.log([\\&quot;loading school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);\\n$.ajax({\\n  url: \\&quot;//www.swinburne.edu.au/cwis/php_pages/webapps/marketing/lists/api/?list=schools&amp;onlyvalues=true&amp;callback=\\&quot;\,\\n  type: 'GET'\,\\n  crossDomain: true\,\\n  dataType: 'jsonp'\,\\n  componentId: \\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;\,\\n  success: function (data) {\\n    //console.log(data.response);\\n    var vals = data.response.map(function(item){\\n      return {\\n        label: item\,\\n        value: item\\n      };\\n    });\\n    vals_clone = vals;\\n    $(this.componentId).autocomplete({\\n      minLength: 0\, //0 to allow autofocus to open the list \\n      source : vals\,\\n      classes: {\\n        \\&quot;ui-autocomplete\\&quot;: \\&quot;highlight\\&quot;\\n      }\\n    }).blur(function () {\\n      validateSearch($(this)\, vals_clone);\\n\\t}).focus(function() {\\n      validateSearch($(this)\, vals_clone);\\n\\t  showList(this);\\n    }).click(function() {\\n      showList(this);\\n    });\\n  }\\n});\\nconsole.log([\\&quot;loaded school\\&quot;\,\\&quot;#\\&quot;+this.id+\\&quot;_widget\\&quot;]);&quot;\,&quot;event&quot;:&quot;Visibility&quot;\,&quot;field&quot;:&quot;guide.guideRootPanel.secondarySchool&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
@@ -391,10 +414,10 @@
                         <fd:rulesx
                             fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;XX&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;XX&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SUBMIT_FORM&quot;\,&quot;items&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nguideBridge.submit();\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;}]"
                             jcr:primaryType="nt:unstructured"/>
-                        <fd:rules
-                            fd:click="[{&quot;nodeName&quot;:&quot;ROOT&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;EVENT_CONDITION&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;COMPONENT&quot;\,&quot;value&quot;:{&quot;id&quot;:&quot;guide.guideRootPanel.submit1532309421040&quot;\,&quot;type&quot;:&quot;BUTTON&quot;\,&quot;name&quot;:&quot;submit1532309421040&quot;}}\,{&quot;nodeName&quot;:&quot;EVENT_AND_COMPARISON_OPERATOR&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;is clicked&quot;\,&quot;value&quot;:null}}\,{&quot;nodeName&quot;:&quot;PRIMITIVE_EXPRESSION&quot;\,&quot;choice&quot;:null}]}\,&quot;nested&quot;:false}\,{&quot;nodeName&quot;:&quot;Then&quot;\,&quot;value&quot;:null}\,{&quot;nodeName&quot;:&quot;BLOCK_STATEMENTS&quot;\,&quot;items&quot;:[{&quot;nodeName&quot;:&quot;BLOCK_STATEMENT&quot;\,&quot;choice&quot;:{&quot;nodeName&quot;:&quot;SUBMIT_FORM&quot;\,&quot;items&quot;:[]}}]}]}}]\,&quot;isValid&quot;:true\,&quot;enabled&quot;:true\,&quot;version&quot;:1\,&quot;script&quot;:&quot;/**\\n\\n * This is a machine-generated code for the rule.\\n * If you modify it in the code editor\, you will not be able to view and edit the rule in the visual editor.\\n */\\n\\nguideBridge.submit();\\n\\n&quot;\,&quot;eventName&quot;:&quot;Click&quot;\,&quot;ruleType&quot;:&quot;&quot;\,&quot;description&quot;:&quot;&quot;}]"
+                        <fd:rules jcr:primaryType="nt:unstructured"/>
+                        <fd:scripts
+                            fd:click="[{&quot;script&quot;:{&quot;field&quot;:&quot;guide.guideRootPanel.submit1532309421040&quot;\,&quot;event&quot;:&quot;Click&quot;\,&quot;model&quot;:{&quot;nodeName&quot;:&quot;EVENT_SCRIPTS&quot;}\,&quot;content&quot;:&quot;submitForm();\\n\\n&quot;}\,&quot;nodeName&quot;:&quot;SCRIPTMODEL&quot;\,&quot;version&quot;:1\,&quot;enabled&quot;:true}]"
                             jcr:primaryType="nt:unstructured"/>
-                        <fd:scripts jcr:primaryType="nt:unstructured"/>
                     </submit>
                 </items>
             </rootPanel>

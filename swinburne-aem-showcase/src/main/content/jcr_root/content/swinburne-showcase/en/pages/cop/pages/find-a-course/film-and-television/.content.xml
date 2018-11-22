@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Film and Television"
-        jcr:uuid="d3c072c1-bbd5-4604-91c1-8566ae55f6db"
+        jcr:uuid="94d30820-0f10-4048-a200-9d26a2598a03"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

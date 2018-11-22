@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Nursing"
-        jcr:uuid="aa51efa9-085b-41b8-8ec2-9090abdb169f"
+        jcr:uuid="332ac869-7ebc-4517-bffc-ed6cba5f70e7"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

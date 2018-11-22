@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Education"
-        jcr:uuid="0900108b-bc82-4fec-a846-ca58420b83b6"
+        jcr:uuid="5009e762-edaf-4719-84cb-e7dfabcf305a"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

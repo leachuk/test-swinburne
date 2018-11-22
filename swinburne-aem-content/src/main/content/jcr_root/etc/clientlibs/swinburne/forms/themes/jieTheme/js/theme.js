@@ -87,6 +87,7 @@ function submitForm() {
     guideBridge.submit({
         error : function (guideResultObject) {
             alert(setErrorsMessage(guideResultObject));
+            console.error(setErrorsMessage(guideResultObject));
         },
         success : function (guideResultObject) {}
     });

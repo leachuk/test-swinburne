@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="ATAR calculator"
-        jcr:uuid="2ee68904-5e55-4c4e-b8cf-b9d95aa7dd36"
+        jcr:uuid="bf5de186-5e11-40f6-8219-bcd89e16dfc6"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

@@ -115,3 +115,13 @@ function concatLabelToValue() {
         }
     });
 }
+function showList(input) {
+  var isOpen = $(input).autocomplete( "widget" ).is( ":visible" );
+  if (!isOpen){
+    $(input).autocomplete("search", "");
+
+    // clear binding to improve performance.
+    // see https://stackoverflow.com/a/43393889/1909499
+    $(input).data("ui-autocomplete").menu.bindings = $();
+  }
+}

@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Aviation"
-        jcr:uuid="ed03f1c9-1fdd-494a-9b20-ecde85d0fb04"
+        jcr:uuid="8c283ad3-312b-4e82-a8f3-dbb4829216d3"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

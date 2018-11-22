@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-11-16T14:12:51.634+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Timely Article page"
@@ -182,20 +180,14 @@
                     </par>
                 </contentblock>
                 <contentblock_1182660049
-                    jcr:lastModified="{Date}2018-11-16T14:08:35.658+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_1182660049_WPYMOGCSZ"
                     componentModifiers="[swinburne:component-style-modifier/background/bg-c10]">
                     <bgimage
-                        jcr:lastModified="{Date}2018-11-16T14:08:35.658+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <bgvideo
-                        jcr:lastModified="{Date}2018-11-16T14:08:35.658+11:00"
-                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <par
@@ -219,8 +211,6 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/layout/container">
                                 <text
-                                    jcr:lastModified="{Date}2018-11-16T14:12:51.622+11:00"
-                                    jcr:lastModifiedBy="admin"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
                                     componentId="text_KUS33LR5Y"
@@ -253,8 +243,6 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/layout/container">
                                 <text
-                                    jcr:lastModified="{Date}2018-11-16T14:12:38.791+11:00"
-                                    jcr:lastModifiedBy="admin"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
                                     componentId="text_KUS33LR5Y"

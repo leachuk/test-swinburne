@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
 
-    <filter root="/content/dam/swinburne"/>
+    <!--<filter root="/content/dam/swinburne"/>-->
     <filter root="/content/dam/formsanddocuments-themes"/>
-    <filter root="/content/swinburne"/>
+    <!--<filter root="/content/swinburne"/>-->
 
     <filter root="/content/api/swinburne" mode="update"/>
-    <filter root="/content/experience-fragments/swinburne" mode="update"/>
+    <!--<filter root="/content/experience-fragments/swinburne" mode="update"/>-->
 
     <filter root="/etc/blueprints/swinburne" mode="update"/>
     <filter root="/etc/designs/swinburne" mode="update"/>
@@ -22,7 +22,7 @@
         <exclude pattern="/etc/clientlibs/swinburne/images.*"/>
     </filter>
 
-    <filter root="/content/dam/formsanddocuments-themes/swinburne"/>
+    <!--<filter root="/content/dam/formsanddocuments-themes/swinburne"/>-->
     <filter root="/etc/clientlibs/swinburne/forms"/>
 
     <!--TODO: Used to backport analytics tags from Prod-->

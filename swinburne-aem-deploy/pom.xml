@@ -199,7 +199,10 @@
         <profile>
             <id>installdeploymentpackage</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <property>
+                    <name>deploypackage</name>
+                    <value>true</value>
+                </property>
             </activation>
             <build>
                 <plugins>

@@ -96,6 +96,7 @@ div[component].eventlist{
     }
     .card-body {
       padding-top: 0;
+      max-width: calc(100% - 40px);
       .card-title,
       .card-subtitle {
         text-align: left !important;

@@ -1225,6 +1225,16 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: '${eventLoc}, ${eventStartDateText}'
     title: 'Event Location with Start Date Formatted'
 
+  details/event-details/format/subtitle/hyphen-separator-widthlocaltion:
+    flat: true
+    prefix: '${eventStartDateText} - ${eventEndDateText} <br/>${eventLoc}'
+    title: 'Hyphen Separated Start and End Time formatted with location'
+
+  details/event-details/format/subtitle/hyphen-separator:
+    flat: true
+    prefix: '${eventStartDateText} - ${eventEndDateText}'
+    title: 'Hyphen Separated Start and End Time formatted'
+
   details/event-details/format/displaydate/default:
     flat: true
     prefix: '${eventStartDateText} to ${eventEndDateText}'

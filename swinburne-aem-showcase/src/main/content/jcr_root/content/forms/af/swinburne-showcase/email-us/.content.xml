@@ -135,8 +135,10 @@
                         sling:resourceType="fd/af/components/guideradiobutton"
                         _value="No"
                         alignment="guideFieldHorizontalAlignment"
+                        css="international-student"
                         guideNodeClass="guideRadioButton"
                         longDescription="&lt;p>You are an international student if you're not an Australian citizen or an Australian permanent resident, and you're not a New Zealand citizen.&lt;/p>&#xd;&#xa;"
+                        mandatory="true"
                         name="isInternational"
                         options="[No=No,Yes=Yes]"
                         textIsRich="[true,true]">
@@ -185,7 +187,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="mobile number"
                         sling:resourceType="fd/af/components/panel"
-                        css="form-columns-override panel-mandatory"
+                        css="panel-mandatory"
                         guideNodeClass="guidePanel"
                         name="panel1532308618054"
                         textIsRich="true"
@@ -263,7 +265,7 @@
                         guideNodeClass="guideDropDownList"
                         mandatory="true"
                         mandatoryMessage="This field is required."
-                        name="describesYou_copy_1"
+                        name="describesYou"
                         placeholderText="Select an option "
                         textIsRich="[true,true]">
                         <fd:rules jcr:primaryType="nt:unstructured"/>

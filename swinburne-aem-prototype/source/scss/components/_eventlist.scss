@@ -47,7 +47,9 @@ div[component].eventlist{
       }
     }
     &.hidden {
-      .card.finished {}
+      .card.finished {
+        display:none;
+      }
     }
     .card-subtitle {
       margin-bottom: 0px !important;

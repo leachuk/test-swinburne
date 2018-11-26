@@ -265,7 +265,7 @@
                         guideNodeClass="guideDropDownList"
                         mandatory="true"
                         mandatoryMessage="This field is required."
-                        name="describesYou_copy_1"
+                        name="describesYou"
                         placeholderText="Select an option "
                         textIsRich="[true,true]">
                         <fd:rules jcr:primaryType="nt:unstructured"/>

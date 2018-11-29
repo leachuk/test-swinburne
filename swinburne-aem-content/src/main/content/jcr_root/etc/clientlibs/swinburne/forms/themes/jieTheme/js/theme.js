@@ -44,15 +44,20 @@ $(document).ready(function() {
     });
 
 
-    guideBridge.on('submitStart', function (event, payload) {});
+    guideBridge.on('submitStart', function (event, payload) {
+        setNewValue();
+    });
 
 });
+
+// CONSTANT
+var newValues = "div[class*='to-value']";
+
 function bindBlurEvent($selector){
     $selector.blur( function(){
         $(this).prev().selectmenu( "close" );
     });
 };
-//function to validate auto complete fields.
 function validateSearch($field, items) {
     var val = $field.val();
     var hasMatch = false;
@@ -88,8 +93,11 @@ function submitForm() {
         error : function (guideResultObject) {
             alert(setErrorsMessage(guideResultObject));
             console.error(setErrorsMessage(guideResultObject));
+            unsetNewValue();
         },
-        success : function (guideResultObject) {}
+        success : function (guideResultObject) {
+            unsetNewValue();
+        }
     });
 }
 function setErrorsMessage(response) {
@@ -120,6 +128,21 @@ function concatLabelToValue() {
             guideBridge.setProperty([name],"value",[newValue]);
         }
     });
+}
+function proceedNewValue(datatype) {
+    $elements = $(newValues);
+    $elements.each(function( index ) {
+        var $this = $(this);
+        var newValue = $this.find("input[type='text']").attr(datatype);
+        var name = $this.get(0).classList.item(2); // Get property name
+        guideBridge.setProperty([name],"value",[newValue]);
+    });
+}
+function setNewValue() {
+    proceedNewValue('data-new-value');
+}
+function unsetNewValue() {
+    proceedNewValue('data-value');
 }
 function showList(input) {
     var isOpen = $(input).autocomplete( "widget" ).is( ":visible" );

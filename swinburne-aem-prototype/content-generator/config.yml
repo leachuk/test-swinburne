@@ -1192,7 +1192,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
 
   details/event-details/format/subtitle/daterangewithlocation:
     flat: true
-    prefix: '${eventStartDateText} to ${eventEndDateText}, ${eventLoc}'
+    prefix: '${eventStartDateText} to ${eventEndDateText} , ${eventLoc}'
     title: 'Date Start and End Date with Location'
 
   details/event-details/format/subtitle/singledate:

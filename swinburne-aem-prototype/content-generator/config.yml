@@ -1192,7 +1192,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
 
   details/event-details/format/subtitle/daterangewithlocation:
     flat: true
-    prefix: '${eventStartDateText} to ${eventEndDateText} , ${eventLoc}'
+    prefix: '${eventStartDateText} to ${eventEndDateText}, ${eventLoc}'
     title: 'Date Start and End Date with Location'
 
   details/event-details/format/subtitle/singledate:
@@ -1225,15 +1225,25 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: '${eventLoc}, ${eventStartDateText}'
     title: 'Event Location with Start Date Formatted'
 
-  details/event-details/format/subtitle/hyphen-separator-widthlocaltion:
+  details/event-details/format/subtitle/emdash-separator-widthlocaltion:
     flat: true
-    prefix: '${eventStartDateText} - ${eventEndDateText} <br/>${eventLoc}'
-    title: 'Hyphen Separated Start and End Time formatted with location'
+    prefix: '${eventStartDateText} &#x2014; ${eventEndDateText} <br/>${eventLoc}'
+    title: 'EM Dash Separated Start and End Time formatted with location'
 
-  details/event-details/format/subtitle/hyphen-separator:
+  details/event-details/format/subtitle/emdash-separator:
     flat: true
-    prefix: '${eventStartDateText} - ${eventEndDateText}'
-    title: 'Hyphen Separated Start and End Time formatted'
+    prefix: '${eventStartDateText} &#x2014; ${eventEndDateText}'
+    title: 'EM Dash Separated Start and End Time formatted'
+
+  details/event-details/format/subtitle/emdash-separator-widthlocaltion-uppercase:
+    flat: true
+    prefix: '${eventStartDateUppercase} &#x2014; ${eventEndDateUppercase} <br/>${eventLoc}'
+    title: 'EM Dash Separated Start and End Time formatted with location uppercase'
+
+  details/event-details/format/subtitle/emdash-separator-uppercase:
+    flat: true
+    prefix: '${eventStartDateUppercase} &#x2014; ${eventEndDateUppercase}'
+    title: 'EM Dash Separated Start and End Time formatted uppercase'
 
   details/event-details/format/displaydate/default:
     flat: true
@@ -1279,6 +1289,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     flat: true
     prefix: '<time itemprop="startDate" datetime="${eventStartDateISO}" content="${eventStartDateISO}">${eventStartTimeLowercase}</time><span class="separator"></span><time itemprop="endDate" datetime="${eventEndDateISO}" content="${eventEndDateISO}">${eventEndTimeLowercase}</time>'
     title: 'Schema - Separated Start and End Time formatted - LowerCase'
+
+  details/event-details/format/displaytime/not-displayed:
+    flat: true
+    prefix: '<span style="display:none">${eventStartTimeText} &#x2014; ${eventEndTimeText}</span>'
+    title: 'Start and End Time hidden'
 
   ## Page Details
   details/page-details/format/title/default:

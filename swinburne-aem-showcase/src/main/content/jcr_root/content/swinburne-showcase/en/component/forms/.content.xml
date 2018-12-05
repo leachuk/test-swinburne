@@ -16,6 +16,7 @@
                 <page-details
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_9F48NWJT2"
                     menuColor="cyan"/>
                 <pagelist
                     jcr:primaryType="nt:unstructured"

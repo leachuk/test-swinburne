@@ -8,13 +8,15 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Content"
+        jcr:uuid="7b9d1ea8-1688-4a4e-afa4-3fcb7ccb505d"
         sling:resourceType="swinburne/components/template/base">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/container">
             <page-details
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/details/page-details"/>
+                sling:resourceType="swinburne/components/details/page-details"
+                componentId="page-details_17N2HQ8MK"/>
         </par>
         <image
             jcr:primaryType="nt:unstructured"
@@ -33,14 +35,27 @@
                     sling:resourceType="swinburne/components/lists/list"
                     imageRotate="0"
                     listFrom="children"
+                    listItemShowLink="false"
                     listLinkTitle="More Items"
                     listType="list"
                     parentPage="/content/swinburne-showcase/en/component/content"
-                    listItemShowLink="false"
                     showTitle="true"
                     tagsMatch="any"
                     title="List of Components"/>
             </par>
         </article>
     </jcr:content>
+    <pagetags/>
+    <pagetitle/>
+    <embedsource/>
+    <link/>
+    <download/>
+    <table/>
+    <pagedate/>
+    <text/>
+    <external/>
+    <pageauthor/>
+    <pagedescription/>
+    <reference/>
+    <embedsource-ssi/>
 </jcr:root>

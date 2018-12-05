@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="CAREER SUPPORT AT YOUR FINGERTIPS"
-        jcr:uuid="d0c13933-6f1d-4dd5-95c4-5d694b34a248"
+        jcr:uuid="ccedd586-062d-4759-a11b-aefac3ea4cfa"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

@@ -17,6 +17,7 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/event-details"
+                    cardSize="large"
                     componentId="event-details"
                     description="&lt;p>Event Description&lt;/p>&#xa;"
                     eventDisplayDate="25.08.2015 to 25.09.2015"
@@ -28,10 +29,8 @@
                     eventRefLink2="http://www.yahoo.com"
                     eventStartDate="{Date}2015-08-25T16:21:00.000+08:00"
                     metaDataSep=","
-                    cardSize="large"
                     subTitleFormat="swinburne:component-style-theme/details/event-details/format/subtitle/singledatetimerange"
-                    title="Event Title">
-                </event-details>
+                    title="Event Title"/>
             </par>
         </article>
         <image

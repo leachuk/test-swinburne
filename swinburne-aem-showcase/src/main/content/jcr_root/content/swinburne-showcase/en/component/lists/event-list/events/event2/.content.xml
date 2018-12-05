@@ -3,7 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2018-09-01T21:21:25.859+10:00"
-        jcr:created="{Date}2018-09-01T21:21:25.859+10:00"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Event2"
@@ -20,15 +19,14 @@
                     sling:resourceType="swinburne/components/details/event-details"
                     cardIconShow="true"
                     cardStyle="[swinburne-showcase:component-style-icon/general/globe]"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/separator/emdash]"
-                    eventDisplayTimeFormat="swinburne-showcase:component-style-theme/details/event-details/format/displaytime/schema-separator-lower"
-                    subTitleFormat="swinburne-showcase:component-style-theme/details/event-details/format/subtitle/singledatetimerange"
                     componentId="eventdetails2"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/separator/emdash]"
                     description="&lt;p>Event to showcase all events&lt;/p>"
+                    eventDisplayTimeFormat="swinburne-showcase:component-style-theme/details/event-details/format/displaytime/schema-separator-lower"
                     eventEndDate="{Date}2018-08-03T09:24:00.000+10:00"
                     eventStartDate="{Date}2018-08-01T09:24:00.000+10:00"
-                    textIsRich="true">
-                </event_details>
+                    subTitleFormat="swinburne-showcase:component-style-theme/details/event-details/format/subtitle/singledatetimerange"
+                    textIsRich="true"/>
             </par>
         </article>
     </jcr:content>

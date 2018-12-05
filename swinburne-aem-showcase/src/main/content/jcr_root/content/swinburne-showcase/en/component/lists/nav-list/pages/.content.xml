@@ -15,7 +15,8 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_CUM9NPR1J"/>
                 <list
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/lists/list"

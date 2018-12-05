@@ -17,6 +17,7 @@
                     cq:tags="[]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/contact-details"
+                    componentId="contact-details_OICCPO0VF"
                     title="The Honourable Ronald ARCULLI, GBM, GBS, JP"/>
             </par>
         </article>

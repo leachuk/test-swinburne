@@ -15,23 +15,24 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_9EBSDOUVJ"/>
                 <contentblock1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        hideTitle="false"
-                        hideTitleSeparator="true"
-                        componentId="contentblock1"
-                        variant="advsection"
-                        title="Default Style">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock1"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Default Style"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <embedsource-ssi
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/embedsource-ssi"
-                                componentId="embedsource-ssi1"
-                                html="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/forms/inc/2018/timely/hawthorn-advice-night/form.php"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/embedsource-ssi"
+                            componentId="embedsource-ssi1"
+                            html="https://www.swinburne.edu.au/cwis/php_pages/webapps/marketing/forms/inc/2018/timely/hawthorn-advice-night/form.php"/>
                     </par>
                 </contentblock1>
             </par>

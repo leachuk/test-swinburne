@@ -15,13 +15,14 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_DWQRYBA2F"/>
                 <contentblock1
                     jcr:primaryType="nt:unstructured"
-                    title="Link: Default"
+                    sling:resourceType="swinburne/components/layout/contentblock"
                     hideTitle="false"
-                    variant="advsection"
-                    sling:resourceType="swinburne/components/layout/contentblock">
+                    title="Link: Default"
+                    variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
@@ -31,17 +32,17 @@
                             componentId="link1"
                             componentModules="[swinburne:component-style-module/media/video/popup]"
                             hitType="event"
-                            linkTarget="_blank"
                             label="Link: Default"
+                            linkTarget="_blank"
                             linkUrl="/content/swinburne-showcase/en/component/content/link"/>
                     </par>
                 </contentblock1>
                 <contentblock2
                     jcr:primaryType="nt:unstructured"
-                    title="Link: Button"
+                    sling:resourceType="swinburne/components/layout/contentblock"
                     hideTitle="false"
-                    variant="advsection"
-                    sling:resourceType="swinburne/components/layout/contentblock">
+                    title="Link: Button"
+                    variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
@@ -50,18 +51,18 @@
                             sling:resourceType="swinburne/components/content/link"
                             componentId="link2"
                             hitType="event"
-                            variant="button"
-                            linkTarget="_blank"
                             label="Link: Button"
-                            linkUrl="/content/swinburne-showcase/en/component/content/link"/>
+                            linkTarget="_blank"
+                            linkUrl="/content/swinburne-showcase/en/component/content/link"
+                            variant="button"/>
                     </par>
                 </contentblock2>
                 <contentblock3
                     jcr:primaryType="nt:unstructured"
-                    title="Link: Default no Label"
+                    sling:resourceType="swinburne/components/layout/contentblock"
                     hideTitle="false"
-                    variant="advsection"
-                    sling:resourceType="swinburne/components/layout/contentblock">
+                    title="Link: Default no Label"
+                    variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
@@ -75,104 +76,100 @@
                     </par>
                 </contentblock3>
                 <contentblock4
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock4"
-                        title="Link: Themed"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock4"
+                    title="Link: Themed"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <linkprimary
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="linkprimary"
-                                componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
-                                label="PRIMARY"
-                                link="Primary"
-                                variant="button"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            componentId="linkprimary"
+                            componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
+                            label="PRIMARY"
+                            link="Primary"
+                            variant="button"/>
                         <linksecondary
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="linksecondary"
-                                componentModifiers="[swinburne:component-style-modifier/button/normal/secondary]"
-                                label="SECONDARY"
-                                link="Secondary"
-                                variant="button"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            componentId="linksecondary"
+                            componentModifiers="[swinburne:component-style-modifier/button/normal/secondary]"
+                            label="SECONDARY"
+                            link="Secondary"
+                            variant="button"/>
                     </par>
                 </contentblock4>
                 <contentblock5
-                        jcr:primaryType="nt:unstructured"
-                        title="Link: Default no Label"
-                        hideTitle="false"
-                        variant="advsection"
-                        sling:resourceType="swinburne/components/layout/contentblock">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    hideTitle="false"
+                    title="Link: Default no Label"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <link
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="link5"
-                                hitType="event"
-                                linkTarget="_blank"
-                                componentModifiers="[swinburne:component-style-modifier/button]"
-                                linkUrl="/content/swinburne-showcase/en/component/content/link"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            componentId="link5"
+                            componentModifiers="[swinburne:component-style-modifier/button]"
+                            hitType="event"
+                            linkTarget="_blank"
+                            linkUrl="/content/swinburne-showcase/en/component/content/link"/>
                     </par>
                 </contentblock5>
-
-
                 <contentblock6
-                        jcr:primaryType="nt:unstructured"
-                        title="Link: Default with Analytics"
-                        hideTitle="false"
-                        componentId="contentblock6"
-                        variant="advsection"
-                        sling:resourceType="swinburne/components/layout/contentblock">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock6"
+                    hideTitle="false"
+                    title="Link: Default with Analytics"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <link
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="link6"
-                                hitType="event"
-                                linkTarget="_blank"
-                                componentModifiers="[swinburne:component-style-modifier/button]"
-                                analyticsEventType="site interaction"
-                                analyticsLinkDescription="link description"
-                                analyticsLinkLocation="link page"
-                                analyticsLinkType="link"
-                                linkUrl="/content/swinburne-showcase/en/component/content/link"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            analyticsEventType="site interaction"
+                            analyticsLinkDescription="link description"
+                            analyticsLinkLocation="link page"
+                            analyticsLinkType="link"
+                            componentId="link6"
+                            componentModifiers="[swinburne:component-style-modifier/button]"
+                            hitType="event"
+                            linkTarget="_blank"
+                            linkUrl="/content/swinburne-showcase/en/component/content/link"/>
                     </par>
                 </contentblock6>
-
                 <contentblock7
-                        jcr:primaryType="nt:unstructured"
-                        title="Link: Button with Analytics"
-                        hideTitle="false"
-                        componentId="contentblock7"
-                        variant="advsection"
-                        sling:resourceType="swinburne/components/layout/contentblock">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock7"
+                    hideTitle="false"
+                    title="Link: Button with Analytics"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <link
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="link7"
-                                hitType="event"
-                                linkTarget="_blank"
-                                variant="button"
-                                componentModifiers="[swinburne:component-style-modifier/button]"
-                                analyticsEventType="site interaction"
-                                analyticsLinkDescription="link description"
-                                analyticsLinkLocation="link page"
-                                analyticsLinkType="button"
-                                linkUrl="/content/swinburne-showcase/en/component/content/link"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            analyticsEventType="site interaction"
+                            analyticsLinkDescription="link description"
+                            analyticsLinkLocation="link page"
+                            analyticsLinkType="button"
+                            componentId="link7"
+                            componentModifiers="[swinburne:component-style-modifier/button]"
+                            hitType="event"
+                            linkTarget="_blank"
+                            linkUrl="/content/swinburne-showcase/en/component/content/link"
+                            variant="button"/>
                     </par>
                 </contentblock7>
-
             </par>
         </article>
     </jcr:content>

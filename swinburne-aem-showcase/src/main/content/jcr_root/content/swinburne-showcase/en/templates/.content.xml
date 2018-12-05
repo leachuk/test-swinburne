@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
+    <base-page/>
+    <three/>
+    <three-column/>
+    <one-column/>
+    <two-column/>
     <jcr:content
         cq:designPath="/apps/settings/wcm/design/swinburne"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
@@ -8,6 +13,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Templates List"
+        jcr:uuid="221ab18e-90e6-464d-a91d-bbe35d30b052"
         sling:resourceType="swinburne/components/template/base">
         <image
             jcr:primaryType="nt:unstructured"
@@ -36,6 +42,7 @@
                 <page-details
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_3SGZFWWWH"
                     menuColor="red"/>
                 <text
                     jcr:primaryType="nt:unstructured"

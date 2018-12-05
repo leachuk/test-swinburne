@@ -16,16 +16,17 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
-                    description="Page without Page Image and with Licensed Secondary Image"
                     cardSize="large"
+                    componentId="page-details_LDLEUZF4F"
+                    description="Page without Page Image and with Licensed Secondary Image"
                     showBreadcrumb="false"
-                    showToolbar="false"
                     showParsys="false"
+                    showToolbar="false"
                     title="Page4">
                     <secondaryImage
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            fileReference="/content/dam/swinburne-showcase/en/components/media/image/city1.jpg"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/media/image"
+                        fileReference="/content/dam/swinburne-showcase/en/components/media/image/city1.jpg"/>
                 </page-details>
             </par>
         </article>

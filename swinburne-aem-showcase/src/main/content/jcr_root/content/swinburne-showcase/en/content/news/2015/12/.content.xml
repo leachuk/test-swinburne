@@ -26,12 +26,24 @@
                     sling:resourceType="swinburne/components/lists/list"
                     imageRotate="0"
                     listFrom="children"
+                    listItemShowLink="false"
                     listLinkTitle="More Items"
                     listType="list"
                     parentPage="/content/swinburne-showcase/en/content/news/2015/12"
-                    listItemShowLink="false"
                     tagsMatch="any"/>
             </par>
         </article>
     </jcr:content>
+    <article12/>
+    <article23/>
+    <article22/>
+    <article13/>
+    <article31/>
+    <article30/>
+    <article29/>
+    <article27/>
+    <article21/>
+    <article26/>
+    <article10/>
+    <article28/>
 </jcr:root>

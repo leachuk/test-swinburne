@@ -15,7 +15,8 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_5521EVFXW"/>
                 <contentblock1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -32,8 +33,7 @@
                             detailsBadge="default"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock1>
                 <contentblock2
@@ -52,11 +52,9 @@
                             detailsBadge="icon"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock2>
-
                 <contentblock3
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -73,11 +71,9 @@
                             detailsBadge="cardIcon"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock3>
-
                 <contentblock4
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -94,11 +90,9 @@
                             detailsBadge="cardIconTitleAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock4>
-
                 <contentblock5
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -115,11 +109,9 @@
                             detailsBadge="cardIconTitleCategoryDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock5>
-
                 <contentblock6
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -136,11 +128,9 @@
                             detailsBadge="cardIconTitleDate"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock6>
-
                 <contentblock7
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -157,11 +147,9 @@
                             detailsBadge="cardIconTitleDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock7>
-
                 <contentblock8
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -178,12 +166,9 @@
                             detailsBadge="cardIconTitleSubtitleDate"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock8>
-
-
                 <contentblock9
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -200,11 +185,9 @@
                             detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock9>
-
                 <contentblock10
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -221,12 +204,9 @@
                             detailsBadge="cardIconTitleSubtitleDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock10>
-
-
                 <contentblock11
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -243,12 +223,9 @@
                             detailsBadge="cardImageTitleAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock11>
-
-
                 <contentblock12
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -265,11 +242,9 @@
                             detailsBadge="cardImageTitleCategoryDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock12>
-
                 <contentblock13
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -286,12 +261,9 @@
                             detailsBadge="cardImageTitleDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock13>
-
-
                 <contentblock14
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -308,12 +280,9 @@
                             detailsBadge="cardImageTitleSubtitleDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock14>
-
-
                 <contentblock15
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -330,11 +299,9 @@
                             detailsBadge="cardTitleDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock15>
-
                 <contentblock16
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -351,11 +318,9 @@
                             detailsBadge="cardActionIconTitleCategoryDescription"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock16>
-
                 <contentblock17
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -372,13 +337,9 @@
                             detailsBadge="cardActionImageTitle"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock17>
-
-
-
                 <contentblock18
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -395,12 +356,9 @@
                             detailsBadge="cardActionImageTitleCategoryDescription"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock18>
-
-
                 <contentblock19
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -417,13 +375,9 @@
                             detailsBadge="cardHorizontalIconTitleCategoryDescriptionAction"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock19>
-
-
-
                 <contentblock20
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -437,16 +391,13 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
                             componentId="eventlist20"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/separator/emdash]"
                             detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
                             listFrom="children"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/separator/emdash]"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock20>
-
-
                 <contentblock21
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -459,64 +410,56 @@
                         <eventlist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
-                            componentId="eventlist21"
-                            detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
-                            listFrom="children"
                             badgeLinkStyle="[swinburne-showcase:component-style-modifier/button/icon/chevron]"
+                            componentId="eventlist21"
                             componentModifiers="[swinburne-showcase:component-style-modifier/grid/list/pagelist/columns/column-3]"
                             componentTheme="[swinburne-showcase:component-style-theme/lists/cardslist/cardsnav]"
+                            detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
+                            listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                            tagsMatch="any">
-                        </eventlist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock21>
-
                 <contentblock22
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock22"
-                        title="Badge: Card with Icon, Title, Subtitle and Date with Horizontal Style"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock22"
+                    title="Badge: Card with Icon, Title, Subtitle and Date with Horizontal Style"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <eventlist
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/lists/eventlist"
-                                componentId="eventlist22"
-                                detailsBadge="cardIconTitleSubtitleDate"
-                                componentModifiers="[swinburne:component-style-modifier/cards/direction/cards-horizontal,swinburne:component-style-modifier/grid/list/pagelist/columns/column-1]"
-                                listFrom="children"
-                                parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                                tagsMatch="any">
-                        </eventlist>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist22"
+                            componentModifiers="[swinburne:component-style-modifier/cards/direction/cards-horizontal,swinburne:component-style-modifier/grid/list/pagelist/columns/column-1]"
+                            detailsBadge="cardIconTitleSubtitleDate"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any"/>
                     </par>
                 </contentblock22>
-
-
                 <contentblock23
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock23"
-                        title="Badge: Card with Icon, Title, Subtitle, Date, Description and Action with Hidden Past Events"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock23"
+                    title="Badge: Card with Icon, Title, Subtitle, Date, Description and Action with Hidden Past Events"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <eventlist
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/lists/eventlist"
-                                componentId="eventlist23"
-                                detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
-                                listFrom="children"
-                                componentModifiers="[swinburne-showcase:component-style-modifier/grid/list/eventlist/visibility/hidden]"
-                                parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
-                                tagsMatch="any">
-                        </eventlist>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/eventlist"
+                            componentId="eventlist23"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/grid/list/eventlist/visibility/hidden]"
+                            detailsBadge="cardIconTitleSubtitleDateDescriptionAction"
+                            listFrom="children"
+                            parentPage="/content/swinburne-showcase/en/component/lists/event-list/events"
+                            tagsMatch="any"/>
                     </par>
                 </contentblock23>
-
-
             </par>
         </article>
     </jcr:content>

@@ -15,45 +15,48 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_QA0F4WWRR"/>
                 <contentblock1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        hideTitle="false"
-                        hideTitleSeparator="true"
-                        componentId="contentblock1"
-                        variant="advsection"
-                        title="Variant: Default">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock1"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Variant: Default"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <reference
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/reference"
-                                componentId="reference1"
-                                path="/content/swinburne-showcase/en/component/content/reference/page1/jcr:content/article"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/reference"
+                            componentId="reference1"
+                            path="/content/swinburne-showcase/en/component/content/reference/page1/jcr:content/article"/>
                     </par>
                 </contentblock1>
                 <contentblock2
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        hideTitle="false"
-                        hideTitleSeparator="true"
-                        componentId="contentblock2"
-                        variant="advsection"
-                        title="Variant: Render">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock2"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Variant: Render"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <reference
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/reference"
-                                componentId="reference2"
-                                variant="render"
-                                path="/content/swinburne-showcase/en/component/content/reference/page1/jcr:content/article"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/reference"
+                            componentId="reference2"
+                            path="/content/swinburne-showcase/en/component/content/reference/page1/jcr:content/article"
+                            variant="render"/>
                     </par>
                 </contentblock2>
             </par>
         </article>
     </jcr:content>
+    <page2/>
+    <page1/>
 </jcr:root>

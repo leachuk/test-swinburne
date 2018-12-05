@@ -25,9 +25,9 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
-                    componentId="page_details_1"
-                    cardIconShow="true"
                     cardIcon="[swinburne:component-style-icon/social/instagram]"
+                    cardIconShow="true"
+                    componentId="page_details_1"
                     textIsRich="true">
                     <secondaryImage
                         jcr:primaryType="nt:unstructured"

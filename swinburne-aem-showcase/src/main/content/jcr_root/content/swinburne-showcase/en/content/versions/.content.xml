@@ -8,6 +8,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Versions"
+        jcr:uuid="8daf1b6f-de54-49e7-915c-2699334a7462"
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
@@ -17,11 +18,11 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_O7X8LBVIE"/>
                 <image
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/media/image"
-                    />
+                    sling:resourceType="swinburne/components/media/image"/>
                 <text
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
@@ -34,8 +35,7 @@
                     textIsRich="true"/>
                 <image_1043060195
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/media/image"
-                    />
+                    sling:resourceType="swinburne/components/media/image"/>
             </par>
         </article>
     </jcr:content>

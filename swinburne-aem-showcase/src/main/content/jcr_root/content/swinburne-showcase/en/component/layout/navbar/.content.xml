@@ -7,14 +7,17 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Nav Bar"
         sling:resourceType="swinburne/components/template/base">
-        <article jcr:primaryType="nt:unstructured"
-                 sling:resourceType="swinburne/components/layout/article">
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_TBECT1IG9">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <contentblock1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock1_EYS3PQG62"
                     title="Variant: Default"
                     variant="advsection">
                     <par
@@ -31,6 +34,7 @@
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_9YB3LPZDK"
                                     text="&lt;p>Navbar Content&lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
@@ -40,6 +44,7 @@
                 <contentblock2
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock2_AHMSQCZCX"
                     title="Variant: Default with Background"
                     variant="advsection">
                     <par
@@ -56,19 +61,21 @@
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_TO4XMZDUE"
                                     text="&lt;p>Navbar Content with Background&lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
                             <bgimage
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/media/image"
-                                    fileReference="/content/dam/swinburne-showcase/en/common/aem-design.png"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/media/image"
+                                fileReference="/content/dam/swinburne-showcase/en/common/aem-design.png"/>
                         </navbar>
                     </par>
                 </contentblock2>
                 <contentblock3
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock3_IPNREZZKR"
                     title="Variant: Default with Content in a Parsys"
                     variant="advsection">
                     <par
@@ -86,6 +93,7 @@
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
+                                    componentId="text_DEF9LLFLQ"
                                     text="&lt;p>Navbar Content in a Parsys&lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>

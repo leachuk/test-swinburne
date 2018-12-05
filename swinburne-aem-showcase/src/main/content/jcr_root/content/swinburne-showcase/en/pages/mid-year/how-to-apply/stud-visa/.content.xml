@@ -7,6 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="ON A STUDENT VISA?"
+        jcr:uuid="e10f732b-7589-4d46-8300-90bbe3f8049f"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

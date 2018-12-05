@@ -3,7 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2018-09-01T21:21:25.859+10:00"
-        jcr:created="{Date}2018-09-01T21:21:25.859+10:00"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Event Details"
@@ -34,8 +33,7 @@
                             description="&lt;p>Event to showcase all events&lt;/p>"
                             eventEndDate="{Date}2018-10-02T17:00:00.000+10:00"
                             eventStartDate="{Date}2018-10-02T13:00:00.000+10:00"
-                            textIsRich="true">
-                        </event_details>
+                            textIsRich="true"/>
                     </par>
                 </contentblock1>
                 <contentblock2
@@ -54,8 +52,7 @@
                             componentId="eventdetails2"
                             description="&lt;p>Event to showcase all events&lt;/p>"
                             textIsRich="true"
-                            variant="hidden">
-                        </event_details>
+                            variant="hidden"/>
                     </par>
                 </contentblock2>
                 <contentblock3
@@ -73,8 +70,8 @@
                             sling:resourceType="swinburne/components/details/event-details"
                             author="Max Barrass"
                             componentId="eventdetails3"
-                            description="&lt;p>Event to showcase all events&lt;/p>"
                             componentModifiers="[swinburne-showcase:component-style-modifier/separator/emdash]"
+                            description="&lt;p>Event to showcase all events&lt;/p>"
                             eventDisplayDateFormat="swinburne-showcase:component-style-theme/details/event-details/format/displaydate/default"
                             eventDisplayTimeFormat="swinburne-showcase:component-style-theme/details/event-details/format/displaytime/schema-separator-lower"
                             eventEndDate="{Date}2018-10-05T09:20:00.000+10:00"
@@ -83,8 +80,7 @@
                             showTags="true"
                             textIsRich="true"
                             titleFormat="swinburne-showcase:component-style-theme/details/event-details/format/title/italic"
-                            titleType="h3">
-                        </event_details>
+                            titleType="h3"/>
                     </par>
                 </contentblock3>
             </par>

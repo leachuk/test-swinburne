@@ -7,7 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="competition"
-        jcr:uuid="d92538ca-643f-42fc-b34d-248bea335604"
+        jcr:uuid="8ee1b3b5-4f47-4556-90ec-f0adfcb8b6a4"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
@@ -78,7 +78,7 @@
                         <aemform
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="fd/af/components/aemform"
-                            formRef="/content/dam/formsanddocuments/swinburne-showcase/jie"
+                            formRef="/content/dam/formsanddocuments/swinburne-showcase/enter"
                             formType="adaptiveForm"
                             submitType="inline"
                             textIsRich="true"
@@ -101,8 +101,8 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_POHDQRGVZ"
-                    componentModifiers="[swinburne:component-style-modifier/text/transform/xsmall]"
-                    text="&lt;p style=&quot;text-align: center;&quot;>Competition closes Friday 21 December 2018. One runner-up will be drawn at the end of each month until the conclusion of the competition. The monthly winner will be published &lt;a href=&quot;https://www.swinburne.edu.au/register/competition-winners/&quot;>here&lt;/a>during the first week of the following month. The major prize pack winner will be published &lt;a href=&quot;https://www.swinburne.edu.au/register/competition-winners/&quot;>online&lt;/a> on Wednesday 2 January 2019. &lt;a href=&quot;https://www.swinburne.edu.au/register/study-pack/2018-terms-conditions.pdf&quot;>Terms and Conditions&lt;/a>&lt;/p>&#xd;&#xa;"
+                    componentModifiers="[swinburne:component-style-modifier/text/transform/xsmall,swinburne:component-style-modifier/grid/container]"
+                    text="&lt;p style=&quot;text-align: center;&quot;>Competition closes Friday 21 December 2018. One runner-up will be drawn at the end of each month until the conclusion of the competition. The monthly winner will be published&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/register/competition-winners/&quot;>&lt;span class=&quot;text-c7&quot;>here&lt;/span>&lt;/a>&amp;nbsp;during the first week of the following month.&lt;span style=&quot;background-color: transparent;&quot;>The major prize pack winner will be published&amp;nbsp;&lt;/span>&lt;a href=&quot;https://www.swinburne.edu.au/register/competition-winners/&quot;>&lt;span class=&quot;text-c7&quot;>online&lt;/span>&lt;/a>&lt;span style=&quot;background-color: transparent;&quot;>&amp;nbsp;on Wednesday 2 January 2019.&amp;nbsp;&lt;/span>&lt;a href=&quot;https://www.swinburne.edu.au/register/study-pack/2018-terms-conditions.pdf&quot;>&lt;span class=&quot;text-c7&quot;>Terms and Conditions&lt;/span>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
             </par>
             <bgimage

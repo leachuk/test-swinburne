@@ -17,6 +17,7 @@
                     cq:tags="[]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/contact-details"
+                    componentId="contact-details_PMRXXQRTT"
                     title="Dr the Honourable Allan ZEMAN, GSM, GBS, JP"/>
             </par>
         </article>

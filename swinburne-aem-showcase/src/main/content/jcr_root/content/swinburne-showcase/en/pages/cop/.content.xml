@@ -3,6 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:conf="/conf/swinburne"
+        cq:lastReplicationAction="Activate"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
@@ -255,7 +256,6 @@
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_641331958_H0ALRI9OA"
                     componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
-                    componentModules="[swinburne:component-style-modifier/background/bg-c10]"
                     componentTheme="[swinburne:component-style-theme/layout/contentblock/carousel]"
                     variant="container">
                     <bgimage
@@ -286,9 +286,10 @@
                             componentModules="[swinburne:component-style-module/lists/carousel]"
                             componentTheme="[swinburne:component-style-theme/lists/cardslist/images]"
                             detailsBadge="cardImageTitleDescriptionAction"
-                            listFrom="static"
+                            listFrom="children"
                             orderBy="jcr:created"
-                            pages="[/content/swinburne/en/campaign/2018/jie/find-the-right-uni-for-you,/content/swinburne/en/campaign/2018/jie/from-intern-to-employee,/content/swinburne/en/campaign/2018/jie/build-your-future,/content/swinburne/en/campaign/2018/jie/change-for-the-better]"
+                            pages="[/content/swinburne/au/en/campaign/2018/jie/find-the-right-uni-for-you,/content/swinburne/en/campaign/2018/jie/from-intern-to-employee,/content/swinburne/en/campaign/2018/jie/build-your-future,/content/swinburne/en/campaign/2018/jie/change-for-the-better]"
+                            parentPage="/content/swinburne-showcase/en/pages/card-list"
                             tagsMatch="any">
                             <badgeThumbnail
                                 jcr:primaryType="nt:unstructured"
@@ -299,9 +300,10 @@
                             sling:resourceType="swinburne/components/lists/pagelist"
                             componentId="pagelist_H1HQWMFP7"
                             componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
-                            detailsBadge="cardTitleDescriptionAction"
-                            listFrom="static"
+                            detailsBadge="cardIconTitleDescription"
+                            listFrom="children"
                             pages="[/content/swinburne-showcase/en/pages/cop.html,/content/swinburne/en/campaign/2018/jie/take-a-different-route,/content/swinburne/en/campaign/2018/jie/student-orgs,/content/swinburne/en/campaign/2018/jie/career-support-at-your-fingertips]"
+                            parentPage="/content/swinburne-showcase/en/pages/article-list"
                             tagsMatch="any">
                             <badgeThumbnail
                                 jcr:primaryType="nt:unstructured"
@@ -330,7 +332,7 @@
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_PHJV4XRPC"
                             componentModifiers="[swinburne:component-style-modifier/text/transform/uppercase]"
-                            text="&lt;h2>vce is done, what now?&lt;/h2>&#xd;&#xa;"
+                            text="&lt;h2>vce is done, what now?&lt;/h2>&#xa;"
                             textIsRich="true"/>
                         <link
                             jcr:primaryType="nt:unstructured"
@@ -351,7 +353,7 @@
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock100"
                     componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
-                    componentTheme="[swinburne:component-style-theme/layout/contentblock/fluid,swinburne:component-style-theme/layout/contentblock/accordion]">
+                    componentTheme="[swinburne:component-style-theme/layout/contentblock/fluid]">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
@@ -365,22 +367,16 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_ITFZYMAKV"
-                            text="&lt;h2 style=&quot;text-align: center;&quot;>TURN KNOWING INTO KNOW-HOW&lt;/h2>&#xd;&#xa;"
+                            text="&lt;h2>TURN KNOWING INTO KNOW-HOW&lt;/h2>&#xd;&#xa;"
                             textIsRich="true"/>
-                        <contentblock_copy
+                        <contentblock
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
-                            analyticsEventType="site interaction"
-                            analyticsLinkDescription="accordion"
-                            analyticsLinkLocation="link"
-                            analyticsLinkType="button"
-                            componentId="contentblock100a"
-                            dataParent="contentblock"
-                            dataToggle="collapse"
+                            componentId="contentblock_7ZGNBQDZH"
+                            componentTheme="[swinburne-showcase:component-style-theme/layout/contentblock/accordion]"
                             hideInMenu="true"
                             hideTopLink="true"
-                            title="Get advice?"
-                            variant="childsection">
+                            variant="advsection">
                             <bgimage
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/media/image"/>
@@ -390,126 +386,135 @@
                             <par
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/layout/container">
-                                <text
+                                <contentblock
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_YRGYPJSVY"
-                                    text="&lt;p>VTAC applications are&amp;nbsp;&lt;b>open from 9am on 6 August and close at 5pm on 27 September&lt;/b>. While it might seem like ages, it’s a good idea to get it sorted early. For one, it means one less thing to worry about. You can focus on getting ready for your VCE exams knowing your plans for next year are already firmly in place.&lt;/p>&#xd;&#xa;&lt;p>Another incentive to not leave it to the last minute? The later you leave it, the higher the fee you’ll have to pay. While preferences for some courses will be accepted by VTAC until early December, you’ll pay up to $100 more. (That’s a lot of coffees…)&lt;/p>&#xd;&#xa;&lt;p>You submit your preferences through the&amp;nbsp;&lt;a href=&quot;http://www.vtac.edu.au/applying.html&quot;>VTAC website&lt;/a>.&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                            </par>
-                        </contentblock_copy>
-                        <contentblock_copy_co
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            analyticsEventType="site interaction"
-                            analyticsLinkDescription="accordion"
-                            analyticsLinkLocation="link"
-                            analyticsLinkType="button"
-                            componentId="contentblock100b"
-                            dataParent="contentblock"
-                            dataToggle="collapse"
-                            hideInMenu="true"
-                            hideTopLink="true"
-                            title="Submit my preference through VTAC?"
-                            variant="childsection">
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <bgvideo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
-                                <text
+                                    sling:resourceType="swinburne/components/layout/contentblock"
+                                    componentId="contentblock_FOIJ3ULCB"
+                                    dataParent="contentblock_7ZGNBQDZHxx"
+                                    dataToggle="collapse"
+                                    hideInMenu="true"
+                                    hideTopLink="true"
+                                    title="Find out about special consideration?"
+                                    variant="childsection">
+                                    <par
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/layout/container">
+                                        <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="swinburne/components/content/text"
+                                            componentId="text_RHOUZVIPW"
+                                            text="&lt;p>You’ve got an important decision to make. It can seem daunting. We get it – and we want to make it not only easier for you, but exciting too. This is your future, after all.&lt;/p>&#xd;&#xa;&lt;p>If you’re looking at Postgrad study, come to our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/postgrad/&quot;>Postgrad Advice Night&lt;/a>&amp;nbsp;on 18 September between 5pm and 7pm. It’s your chance to find out more about study options, courses and how to apply. Keep an eye out for our upcoming Info Evenings in November or if you need to speak to someone sooner, you can&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/&quot;>contact us&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>If you’re a current Year 12 student or have questions about the rest of the year and what comes next, our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/year12-advice-month&quot;>Year 12 Advice Sessions&lt;/a>&amp;nbsp;is for you. Simply tell us your query and we’ll arrange a one-on-one session with our specialist staff to put your mind at ease.&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par>
+                                    <bgimage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                    <bgvideo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                </contentblock>
+                                <contentblock_341069196
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_YRGYPJSVY"
-                                    text="&lt;p>You’ve got an important decision to make. It can seem daunting. We get it – and we want to make it not only easier for you, but exciting too. This is your future, after all.&lt;/p>&#xd;&#xa;&lt;p>If you’re looking at Postgrad study, come to our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/postgrad/&quot;>Postgrad Advice Night&lt;/a>&amp;nbsp;on 18 September between 5pm and 7pm. It’s your chance to find out more about study options, courses and how to apply. Keep an eye out for our upcoming Info Evenings in November or if you need to speak to someone sooner, you can&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/&quot;>contact us&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>If you’re a current Year 12 student or have questions about the rest of the year and what comes next, our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/year12-advice-month&quot;>Year 12 Advice Sessions&lt;/a>&amp;nbsp;is for you. Simply tell us your query and we’ll arrange a one-on-one session with our specialist staff to put your mind at ease.&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                            </par>
-                        </contentblock_copy_co>
-                        <contentblock_copy_co_708613516
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock100c"
-                            dataParent="contentblock"
-                            dataToggle="collapse"
-                            hideInMenu="true"
-                            hideTopLink="true"
-                            title="Find out more about aviation?"
-                            variant="childsection">
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <bgvideo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
-                                <text
+                                    sling:resourceType="swinburne/components/layout/contentblock"
+                                    componentId="contentblock_341069196_PYLEBNPHJ"
+                                    dataParent="contentblock_7ZGNBQDZHxx"
+                                    dataToggle="collapse"
+                                    title="Preference a Swinburne scholarship?"
+                                    variant="childsection">
+                                    <par
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/layout/container">
+                                        <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="swinburne/components/content/text"
+                                            componentId="text_RTYOAUF8Z"
+                                            text="&lt;p>You’ve got an important decision to make. It can seem daunting. We get it – and we want to make it not only easier for you, but exciting too. This is your future, after all.&lt;/p>&#xd;&#xa;&lt;p>If you’re looking at Postgrad study, come to our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/postgrad/&quot;>Postgrad Advice Night&lt;/a>&amp;nbsp;on 18 September between 5pm and 7pm. It’s your chance to find out more about study options, courses and how to apply. Keep an eye out for our upcoming Info Evenings in November or if you need to speak to someone sooner, you can&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/&quot;>contact us&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>If you’re a current Year 12 student or have questions about the rest of the year and what comes next, our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/year12-advice-month&quot;>Year 12 Advice Sessions&lt;/a>&amp;nbsp;is for you. Simply tell us your query and we’ll arrange a one-on-one session with our specialist staff to put your mind at ease.&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par>
+                                    <bgimage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                    <bgvideo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                </contentblock_341069196>
+                                <contentblock_1032894972
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_YRGYPJSVY"
-                                    text="&lt;p>You’ve got an important decision to make. It can seem daunting. We get it – and we want to make it not only easier for you, but exciting too. This is your future, after all.&lt;/p>&#xd;&#xa;&lt;p>If you’re looking at Postgrad study, come to our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/postgrad/&quot;>Postgrad Advice Night&lt;/a>&amp;nbsp;on 18 September between 5pm and 7pm. It’s your chance to find out more about study options, courses and how to apply. Keep an eye out for our upcoming Info Evenings in November or if you need to speak to someone sooner, you can&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/&quot;>contact us&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>If you’re a current Year 12 student or have questions about the rest of the year and what comes next, our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/year12-advice-month&quot;>Year 12 Advice Sessions&lt;/a>&amp;nbsp;is for you. Simply tell us your query and we’ll arrange a one-on-one session with our specialist staff to put your mind at ease.&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                            </par>
-                        </contentblock_copy_co_708613516>
-                        <contentblock_copy_co_2037749737
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock100d"
-                            dataParent="contentblock"
-                            dataToggle="collapse"
-                            hideInMenu="true"
-                            hideTopLink="true"
-                            title="Preference a Swinburne scholarship?"
-                            variant="childsection">
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <bgvideo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
-                                <text
+                                    sling:resourceType="swinburne/components/layout/contentblock"
+                                    componentId="contentblock_1032894972_FDXJFNRK7"
+                                    dataParent="contentblock_7ZGNBQDZHxx"
+                                    dataToggle="collapse"
+                                    title="Find out more about aviation?"
+                                    variant="childsection">
+                                    <par
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/layout/container">
+                                        <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="swinburne/components/content/text"
+                                            componentId="text_COISJ8NG2"
+                                            text="&lt;p>You’ve got an important decision to make. It can seem daunting. We get it – and we want to make it not only easier for you, but exciting too. This is your future, after all.&lt;/p>&#xd;&#xa;&lt;p>If you’re looking at Postgrad study, come to our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/postgrad/&quot;>Postgrad Advice Night&lt;/a>&amp;nbsp;on 18 September between 5pm and 7pm. It’s your chance to find out more about study options, courses and how to apply. Keep an eye out for our upcoming Info Evenings in November or if you need to speak to someone sooner, you can&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/&quot;>contact us&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>If you’re a current Year 12 student or have questions about the rest of the year and what comes next, our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/year12-advice-month&quot;>Year 12 Advice Sessions&lt;/a>&amp;nbsp;is for you. Simply tell us your query and we’ll arrange a one-on-one session with our specialist staff to put your mind at ease.&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par>
+                                    <bgimage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                    <bgvideo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                </contentblock_1032894972>
+                                <contentblock_157062481
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_YRGYPJSVY"
-                                    text="&lt;p>You’ve got an important decision to make. It can seem daunting. We get it – and we want to make it not only easier for you, but exciting too. This is your future, after all.&lt;/p>&#xd;&#xa;&lt;p>If you’re looking at Postgrad study, come to our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/postgrad/&quot;>Postgrad Advice Night&lt;/a>&amp;nbsp;on 18 September between 5pm and 7pm. It’s your chance to find out more about study options, courses and how to apply. Keep an eye out for our upcoming Info Evenings in November or if you need to speak to someone sooner, you can&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/&quot;>contact us&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>If you’re a current Year 12 student or have questions about the rest of the year and what comes next, our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/year12-advice-month&quot;>Year 12 Advice Sessions&lt;/a>&amp;nbsp;is for you. Simply tell us your query and we’ll arrange a one-on-one session with our specialist staff to put your mind at ease.&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                            </par>
-                        </contentblock_copy_co_2037749737>
-                        <contentblock_copy_co_860478188
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock100e"
-                            dataParent="contentblock"
-                            dataToggle="collapse"
-                            hideInMenu="true"
-                            hideTopLink="true"
-                            title="Find out about special consideration?"
-                            variant="childsection">
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <bgvideo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
-                                <text
+                                    sling:resourceType="swinburne/components/layout/contentblock"
+                                    componentId="contentblock_157062481_DZORTAAU6"
+                                    dataParent="contentblock_7ZGNBQDZHxx"
+                                    dataToggle="collapse"
+                                    title="Submit my preference through VTAC?"
+                                    variant="childsection">
+                                    <par
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/layout/container">
+                                        <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="swinburne/components/content/text"
+                                            componentId="text_CA2VYXBMI"
+                                            text="&lt;p>You’ve got an important decision to make. It can seem daunting. We get it – and we want to make it not only easier for you, but exciting too. This is your future, after all.&lt;/p>&#xd;&#xa;&lt;p>If you’re looking at Postgrad study, come to our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/postgrad/&quot;>Postgrad Advice Night&lt;/a>&amp;nbsp;on 18 September between 5pm and 7pm. It’s your chance to find out more about study options, courses and how to apply. Keep an eye out for our upcoming Info Evenings in November or if you need to speak to someone sooner, you can&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/&quot;>contact us&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>If you’re a current Year 12 student or have questions about the rest of the year and what comes next, our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/year12-advice-month&quot;>Year 12 Advice Sessions&lt;/a>&amp;nbsp;is for you. Simply tell us your query and we’ll arrange a one-on-one session with our specialist staff to put your mind at ease.&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par>
+                                    <bgimage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                    <bgvideo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                </contentblock_157062481>
+                                <contentblock_1329051663
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_YRGYPJSVY"
-                                    text="&lt;p>You’ve got an important decision to make. It can seem daunting. We get it – and we want to make it not only easier for you, but exciting too. This is your future, after all.&lt;/p>&#xd;&#xa;&lt;p>If you’re looking at Postgrad study, come to our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/postgrad/&quot;>Postgrad Advice Night&lt;/a>&amp;nbsp;on 18 September between 5pm and 7pm. It’s your chance to find out more about study options, courses and how to apply. Keep an eye out for our upcoming Info Evenings in November or if you need to speak to someone sooner, you can&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/study/options/connect/&quot;>contact us&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>If you’re a current Year 12 student or have questions about the rest of the year and what comes next, our&amp;nbsp;&lt;a href=&quot;https://www.swinburne.edu.au/choose/events/year12-advice-month&quot;>Year 12 Advice Sessions&lt;/a>&amp;nbsp;is for you. Simply tell us your query and we’ll arrange a one-on-one session with our specialist staff to put your mind at ease.&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
+                                    sling:resourceType="swinburne/components/layout/contentblock"
+                                    componentId="contentblock_1329051663_STTW9XPML"
+                                    dataParent="contentblock_7ZGNBQDZHxx"
+                                    dataToggle="collapse"
+                                    title="Get advice?"
+                                    variant="childsection">
+                                    <par
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/layout/container">
+                                        <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="swinburne/components/content/text"
+                                            componentId="text_6VOLLREXC"
+                                            text="&lt;p>VTAC applications are&amp;nbsp;&lt;b>open from 9am on 6 August and close at 5pm on 27 September&lt;/b>. While it might seem like ages, it’s a good idea to get it sorted early. For one, it means one less thing to worry about. You can focus on getting ready for your VCE exams knowing your plans for next year are already firmly in place.&lt;/p>&#xd;&#xa;&lt;p>Another incentive to not leave it to the last minute? The later you leave it, the higher the fee you’ll have to pay. While preferences for some courses will be accepted by VTAC until early December, you’ll pay up to $100 more. (That’s a lot of coffees…)&lt;/p>&#xd;&#xa;&lt;p>You submit your preferences through the&amp;nbsp;&lt;a href=&quot;http://www.vtac.edu.au/applying.html&quot;>VTAC website&lt;/a>.&lt;/p>&#xd;&#xa;"
+                                            textIsRich="true"/>
+                                    </par>
+                                    <bgimage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                    <bgvideo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                </contentblock_1329051663>
                             </par>
-                        </contentblock_copy_co_860478188>
+                        </contentblock>
                     </par>
                 </contentblock_265140939>
                 <contentblock_2143183810

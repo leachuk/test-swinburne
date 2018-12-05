@@ -13,6 +13,23 @@
     <name>swinburne :: swinburne :: parent</name>
     <description>Maven Multimodule project for Swinburne AEM Parent Project.</description>
 
+    <scm>
+        <developerConnection>scm:git:https://bitbucket.org/SwinburneIT_AEM/swinburne-parent.git</developerConnection>
+        <tag>swinburne-0.1.0-RC01</tag>
+    </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>libs-snapshots</name>
+            <url>https://nexus.isobaraustralia.com/repository/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <name>libs-releases</name>
+            <url>https://nexus.isobaraustralia.com/repository/releases/</url>
+        </repository>
+    </distributionManagement>
+
     <developers>
         <developer>
             <email>max@aem.design</email>
@@ -349,13 +366,10 @@
                     <version>2.5.2</version>
                     <configuration>
                         <tagNameFormat>@{project.version}</tagNameFormat>
+                        <preparationGoals>clean deploy</preparationGoals>
                     </configuration>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.7</version>
-                </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>

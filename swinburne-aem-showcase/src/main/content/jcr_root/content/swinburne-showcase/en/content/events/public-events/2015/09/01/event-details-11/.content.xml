@@ -19,6 +19,7 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/event-details"
+                    cardSize="large"
                     componentId="event-details"
                     description="&lt;p>Redirect to Vanity URL : en&lt;/p>&#xa;"
                     eventDisplayDate="01.09.2015 to 09.09.2015"
@@ -30,10 +31,8 @@
                     eventRefLink2="http://www.taobao.com"
                     eventStartDate="{Date}2015-09-01T16:22:00.000+08:00"
                     metaDataSep=","
-                    cardSize="large"
                     subTitleFormat="swinburne:component-style-theme/details/event-details/format/subtitle/singledatetime"
-                    title="Event Title">
-                </event-details>
+                    title="Event Title"/>
             </par>
         </article>
         <image

@@ -9,6 +9,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="One Column Template"
+        jcr:uuid="a63b0dea-96c7-4f9a-904e-1c5d49775527"
         sling:resourceType="swinburne/components/template/base">
         <aside
             jcr:primaryType="nt:unstructured"

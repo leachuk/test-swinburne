@@ -9,6 +9,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Three Column Template"
+        jcr:uuid="ed6c594f-add0-4c28-a7d3-58d69cc58815"
         sling:resourceType="swinburne/components/template/base">
         <aside
             jcr:primaryType="nt:unstructured"
@@ -39,18 +40,18 @@
             </par>
         </article>
         <asideright
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/aside"
-                cancelInheritParent="true"
-                componentId="side">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside"
+            cancelInheritParent="true"
+            componentId="side">
             <par
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/container">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
                 <text
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/content/text"
-                        text="&lt;h1>Aside&lt;/h1>&#xa;"
-                        textIsRich="true"/>
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/content/text"
+                    text="&lt;h1>Aside&lt;/h1>&#xa;"
+                    textIsRich="true"/>
             </par>
         </asideright>
     </jcr:content>

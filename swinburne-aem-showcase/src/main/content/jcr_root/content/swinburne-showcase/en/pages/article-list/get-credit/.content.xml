@@ -7,6 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="GET CREDIT FOR PRIOR EXPERIENCE"
+        jcr:uuid="a1bdbe17-36a1-45d4-b33c-d1b68b9387c1"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
@@ -27,6 +28,7 @@
                     sling:resourceType="swinburne/components/details/page-details"
                     cardIcon="[swinburne:component-style-icon/general/fast-forward]"
                     cardIconShow="true"
+                    componentId="page_details_MB3EINTYF"
                     description="&lt;p>You don’t always need a bachelor degree to start postgraduate study. If you have substantial relevant work experience, you may be able to progress with a recognition of prior learning.&lt;/p>&#xd;&#xa;&lt;p>Academic credit is available on previous study, too. So it’s worth checking out your eligibility. You could achieve your qualifications sooner and get closer to your goals.&lt;/p>&#xd;&#xa;"
                     hideDescription="true"
                     hideTitle="false"

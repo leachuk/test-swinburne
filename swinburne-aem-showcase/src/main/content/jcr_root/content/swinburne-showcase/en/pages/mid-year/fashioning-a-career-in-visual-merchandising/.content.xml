@@ -7,6 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Fashioning a Career In Visual Merchandising"
+        jcr:uuid="8b505c01-8fb6-4c2b-a7ed-c447760db817"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"

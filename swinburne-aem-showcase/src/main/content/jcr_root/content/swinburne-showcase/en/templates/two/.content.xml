@@ -9,6 +9,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Two Column Template"
+        jcr:uuid="05fcc8f0-ae53-4f2b-aa3e-9ff9f035993f"
         sling:resourceType="swinburne/components/template/base">
         <aside
             jcr:primaryType="nt:unstructured"

@@ -8,6 +8,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Topic Filter - EventList"
+        jcr:uuid="e625718e-bbc7-46ac-bb52-de0105e75626"
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
@@ -17,7 +18,8 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_XJCJEB7MO"/>
                 <contentblock_589656622
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -30,13 +32,13 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/widgets/topic/filter"
                             componentId="topicFilterMapMarker"
-                            filterList="[swinburne-showcase:event]"
                             defaultFilters="[swinburne-showcase:event]"
+                            filterList="[swinburne-showcase:event]"
                             topicQueue="eventFilterSelected"/>
                     </par>
                 </contentblock_589656622>
                 <contentblock
-                   jcr:primaryType="nt:unstructured"
+                    jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     hideTitle="false"
                     hideTitleSeparator="true"
@@ -46,7 +48,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
                         <eventlist
-                           jcr:primaryType="nt:unstructured"
+                            jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
                             cssClassItem="col-3 left element-item"
                             cssClassList="isotope"

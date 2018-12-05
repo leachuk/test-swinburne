@@ -8,6 +8,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Tab Page Content 1"
+        jcr:uuid="7dd949b5-9f0a-4e08-8099-9ee05baaf426"
         sling:resourceType="swinburne/components/template/base">
         <article jcr:primaryType="nt:unstructured">
             <par
@@ -15,7 +16,8 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_OLLVTWPNP"/>
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"

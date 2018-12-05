@@ -1,99 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Page">
+    jcr:primaryType="cq:Page">
     <jcr:content
-            cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
-            jcr:primaryType="cq:PageContent"
-            jcr:title="Search List"
-            sling:resourceType="swinburne/components/template/base">
+        cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Search List"
+        sling:resourceType="swinburne/components/template/base">
         <article
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/article"
-                componentId="article_ESVBWKXTB">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_ESVBWKXTB">
             <par
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/container">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
                 <page-details
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/details/page-details"/>
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_3UZTGKMJZ"/>
                 <contentblockmenu1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblockmenu"
-                        componentId="contentblockmenu1"/>
-
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblockmenu"
+                    componentId="contentblockmenu1"/>
                 <contentblock1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        title="Search Widget"
-                        variant="advsection"
-                        componentId="contentblock1"
-                        hideTitle="false"
-                        hideTitleSeparator="true">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock1"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Search Widget"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/text"
-                                text="Simple search widget with Feeds specified to enable Quick Search"
-                                textIsRich="true"
-                                variant="simple"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            text="Simple search widget with Feeds specified to enable Quick Search"
+                            textIsRich="true"
+                            variant="simple"/>
                         <search
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/widgets/search"
-                                componentId="search1"
-                                variant="quick"
-                                formAction="/content/swinburne-showcase/en/component/lists/search-list.html"
-                                feedUrl="[/content/swinburne-showcase/en/component/lists/page-list/_jcr_content/article/par/contentblock9/par/pagelist.rss,/content/swinburne-showcase/en/component/lists/page-list/_jcr_content/article/par/contentblock10/par/pagelist.feed]"
-                                componentModules="[swinburne:component-style-module/widgets/search/quicksearch]"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/widgets/search"
+                            componentId="search1"
+                            componentModules="[swinburne:component-style-module/widgets/search/quicksearch]"
+                            feedUrl="[/content/swinburne-showcase/en/component/lists/page-list/_jcr_content/article/par/contentblock9/par/pagelist.rss,/content/swinburne-showcase/en/component/lists/page-list/_jcr_content/article/par/contentblock10/par/pagelist.feed]"
+                            formAction="/content/swinburne-showcase/en/component/lists/search-list.html"
+                            variant="quick"/>
                     </par>
                 </contentblock1>
                 <contentblock2
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        title="Search Results Default"
-                        variant="advsection"
-                        componentId="contentblock2"
-                        hideTitle="false"
-                        hideTitleSeparator="true">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock2"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Search Results Default"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/text"
-                                text="Variant: Default"
-                                textIsRich="true"
-                                variant="simple"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            text="Variant: Default"
+                            textIsRich="true"
+                            variant="simple"/>
                         <searchlist
-                                jcr:primaryType="nt:unstructured"
-                                componentId="searchlist1"
-                                sling:resourceType="swinburne/components/lists/searchlist"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/searchlist"
+                            componentId="searchlist1"/>
                     </par>
                 </contentblock2>
                 <contentblock3
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        title="Search Results Cards"
-                        variant="advsection"
-                        componentId="contentblock3"
-                        hideTitle="false"
-                        hideTitleSeparator="true">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock3"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Search Results Cards"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/text"
-                                text="Variant: Card"
-                                textIsRich="true"
-                                variant="simple"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            text="Variant: Card"
+                            textIsRich="true"
+                            variant="simple"/>
                         <searchlist
-                                jcr:primaryType="nt:unstructured"
-                                componentId="searchlist2"
-                                variant="cards"
-                                searchIn="/content"
-                                sling:resourceType="swinburne/components/lists/searchlist"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/searchlist"
+                            componentId="searchlist2"
+                            searchIn="/content"
+                            variant="cards"/>
                     </par>
                 </contentblock3>
             </par>

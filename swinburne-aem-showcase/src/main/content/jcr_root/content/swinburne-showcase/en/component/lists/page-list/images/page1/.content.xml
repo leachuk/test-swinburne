@@ -16,27 +16,26 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
-                    description="Page with Licensed Page Image, with non-Licensed Secondary Image and with Background non-Licensed Image"
                     cardSize="medium"
+                    description="Page with Licensed Page Image, with non-Licensed Secondary Image and with Background non-Licensed Image"
                     showBreadcrumb="false"
-                    showToolbar="false"
                     showParsys="false"
+                    showToolbar="false"
                     title="Page1">
                     <secondaryImage
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            fileReference="/content/dam/swinburne-showcase/en/components/media/image/city2.jpg"/>
-
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/media/image"
+                        fileReference="/content/dam/swinburne-showcase/en/components/media/image/city2.jpg"/>
                     <bgimage
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            fileReference="/content/dam/swinburne-showcase/en/components/media/image/city3.jpg"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/media/image"
+                        fileReference="/content/dam/swinburne-showcase/en/components/media/image/city3.jpg"/>
                 </page-details>
             </par>
         </article>
         <image
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/media/image"
-                fileReference="/content/dam/swinburne-showcase/en/components/media/image/city1.jpg"/>
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/media/image"
+            fileReference="/content/dam/swinburne-showcase/en/components/media/image/city1.jpg"/>
     </jcr:content>
 </jcr:root>

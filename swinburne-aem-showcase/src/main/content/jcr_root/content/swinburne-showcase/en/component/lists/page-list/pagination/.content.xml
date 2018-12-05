@@ -14,32 +14,33 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_EKEMQEE1V"/>
                 <contentblock1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        title="Search Widget"
-                        variant="advsection"
-                        componentId="contentblock1"
-                        hideTitle="false"
-                        hideTitleSeparator="true">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock1"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Search Widget"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/text"
-                                text="Simple page list with pagination"
-                                textIsRich="true"
-                                variant="simple"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            text="Simple page list with pagination"
+                            textIsRich="true"
+                            variant="simple"/>
                         <pagelist
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/lists/pagelist"
-                                componentId="pagelist1"
-                                listFrom="children"
-                                listType="list"
-                                pageMax="1"
-                                parentPage="/content/swinburne-showcase/en/component/lists/page-list/pagination"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/pagelist"
+                            componentId="pagelist1"
+                            listFrom="children"
+                            listType="list"
+                            pageMax="1"
+                            parentPage="/content/swinburne-showcase/en/component/lists/page-list/pagination"/>
                     </par>
                 </contentblock1>
             </par>

@@ -8,6 +8,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Redirect Target"
+        jcr:uuid="8f3c6997-e1c8-44f9-9904-ac142a7573a9"
         sling:resourceType="swinburne/components/template/base">
         <article jcr:primaryType="nt:unstructured">
             <par
@@ -15,7 +16,8 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_G5YMS73R8"/>
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"

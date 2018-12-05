@@ -107,8 +107,9 @@
   "name": "edition-node-webpack",
   "scripts": {
     "aem:generatetags": "node content-generator/generator.js --no-color",
+    "aem:frontend": "./deploy-front-end",
     "aem:build": "./node_modules/.bin/webpack --env.prod --env.aem -p",
-    "dev:aem:build": "webpack --env.prod --env.aem -p",
+    "aem:checkout": "tools/vault-cli/bin/vlt --credentials admin:admin checkout --force --filter .maven/content/META-INF/vault/filter.xml http://localhost:4502/crx ./sync",
     "dev:patternlab:build": "webpack --env.prod -p",
     "patternlab:build": "./node_modules/.bin/webpack --env.prod -p",
     "patternlab:help": "node patternlab.js help",
@@ -120,7 +121,8 @@
     "patternlab:version": "node patternlab.js version",
     "postinstall": "node scripts/postinstall.js",
     "start": "yarn patternlab:serve",
-    "webpack:version": "webpack --v"
+    "webpack:version": "webpack --v",
+    "dev": "webpack --watch --env.prod --env.aem -p"
   },
   "version": "2.0.0"
 }

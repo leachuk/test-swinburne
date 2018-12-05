@@ -137,7 +137,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments> --stack_size=8192</arguments>
+              <arguments> - -stack_size=8192</arguments>
               <arguments>run aem:generatetags</arguments>
             </configuration>
           </execution>

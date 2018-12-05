@@ -2,13 +2,13 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-          cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+        cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Juggling life at uni?"
-         sling:resourceType="swinburne/components/template/base">
-
+        jcr:uuid="89b71317-243f-4e4f-aaf8-3c4bdb0f12f7"
+        sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
@@ -17,7 +17,7 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page_details
-                      jcr:mixinTypes="[cq:Taggable]"
+                    jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
                     componentId="page_details_juggling"
@@ -31,17 +31,16 @@
                     titleIcon="[swinburne:component-style-icon/general/life-ring]"
                     titleIconShow="true">
                     <secondaryImage
-                          jcr:primaryType="nt:unstructured"
+                        jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                     <thumbnail
-                          jcr:primaryType="nt:unstructured"
+                        jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                     <bgimage
-                          jcr:primaryType="nt:unstructured"
+                        jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"/>
                 </page_details>
             </par>
         </article>
-
     </jcr:content>
 </jcr:root>

@@ -13,8 +13,9 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/details/page-details"/>
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_YBMDFMQQL"/>
                 <contentblockmenu1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblockmenu"
@@ -50,9 +51,9 @@
                         sling:resourceType="swinburne/components/layout/container">
                         <pagetitle
                             jcr:primaryType="nt:unstructured"
+                            jcr:title="Override of Page Title"
                             sling:resourceType="swinburne/components/content/pagetitle"
-                            componentId="pagetitle2"
-                            jcr:title="Override of Page Title"/>
+                            componentId="pagetitle2"/>
                     </par>
                 </contentblock2>
             </par>

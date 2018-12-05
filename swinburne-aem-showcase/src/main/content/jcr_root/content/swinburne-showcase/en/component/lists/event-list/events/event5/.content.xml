@@ -3,7 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2018-09-01T21:21:25.859+10:00"
-        jcr:created="{Date}2018-09-01T21:21:25.859+10:00"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Event5"
@@ -23,8 +22,7 @@
                     description="&lt;p>Event to showcase all events&lt;/p>"
                     eventEndDate="{Date}2030-08-03T09:24:00.000+10:00"
                     eventStartDate="{Date}2030-08-01T09:24:00.000+10:00"
-                    textIsRich="true">
-                </event_details>
+                    textIsRich="true"/>
             </par>
         </article>
     </jcr:content>

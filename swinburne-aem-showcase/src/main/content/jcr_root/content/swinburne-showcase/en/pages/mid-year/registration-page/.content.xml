@@ -7,6 +7,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="registration-page"
+        jcr:uuid="63dde832-b00c-4170-b9c5-d7fbfcc4d9c3"
         sling:resourceType="swinburne/components/template/base">
         <header
             jcr:primaryType="nt:unstructured"
@@ -73,10 +74,12 @@
                         <eventlist_2138026743
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/eventlist"
+                            cardIcon="[swinburne:component-style-icon/general/calendar-alt]"
+                            cardIconShow="true"
                             componentId="eventlist_2138026743_QTIMB9DON"
                             componentModifiers="[swinburne:component-style-modifier/cards/direction/cards-horizontal,swinburne:component-style-modifier/grid/list/pagelist/columns/column-1]"
                             componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
-                            detailsBadge="cardIconTitleDateTime"
+                            detailsBadge="cardIconTitleDate"
                             listFrom="static"
                             pages="/content/swinburne-showcase/en/pages/mid-year/events/hawthorn"
                             tagsMatch="any">
@@ -84,20 +87,6 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/media/image"/>
                         </eventlist_2138026743>
-                        <eventlist
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/eventlist"
-                            componentId="eventlist_HW2XBDTEF"
-                            componentModifiers="[swinburne:component-style-modifier/cards/direction/cards-horizontal,swinburne:component-style-modifier/grid/list/pagelist/columns/column-1]"
-                            componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
-                            detailsBadge="cardIconTitleDateTime"
-                            listFrom="static"
-                            pages="/content/swinburne-showcase/en/pages/event-list/hawthorn-advice-night"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </eventlist>
                         <col_break15337075723480
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/colctrl"

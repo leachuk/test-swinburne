@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-       cq:tags="[swinburne:content-type/page]"
+        cq:tags="[swinburne:content-type/page]"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="08"
@@ -20,7 +20,8 @@
             </par>
         </article>
         <image
-           jcr:primaryType="nt:unstructured"
+            jcr:primaryType="nt:unstructured"
             imageRotate="0"/>
     </jcr:content>
+    <_x0032_5/>
 </jcr:root>

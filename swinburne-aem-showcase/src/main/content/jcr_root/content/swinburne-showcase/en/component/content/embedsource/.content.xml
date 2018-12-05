@@ -15,23 +15,24 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_8SRAYIZTF"/>
                 <contentblock1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        hideTitle="false"
-                        hideTitleSeparator="true"
-                        componentId="contentblock1"
-                        variant="advsection"
-                        title="Default Style">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock1"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Default Style"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <embedsource
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/embedsource"
-                                componentId="embedsource1"
-                                html="&lt;style>&#xa;.embed.custom.style {&#xa;color: red;&#xa;}&#xa;.embed.custom.js {&#xa;color: green;&#xa;}&#xa;.embed.custom.js.hidden {&#xa;display: none;&#xa;}&#xa;&lt;/style>&#xa;&lt;script>&#xa;$(&quot;document&quot;).ready(function(){&#xa;$(&quot;.embed.custom.js.hidden&quot;).show();&#xa;});&#xa;&lt;/script>&#xa;&lt;div class=&quot;embed custom style&quot;>visible text changed with embeded css&lt;/div>&#xa;&lt;div class=&quot;embed custom js hidden&quot;>hidden text visible after embeded js is executed&lt;/div>"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/embedsource"
+                            componentId="embedsource1"
+                            html="&lt;style>&#xa;.embed.custom.style {&#xa;color: red;&#xa;}&#xa;.embed.custom.js {&#xa;color: green;&#xa;}&#xa;.embed.custom.js.hidden {&#xa;display: none;&#xa;}&#xa;&lt;/style>&#xa;&lt;script>&#xa;$(&quot;document&quot;).ready(function(){&#xa;$(&quot;.embed.custom.js.hidden&quot;).show();&#xa;});&#xa;&lt;/script>&#xa;&lt;div class=&quot;embed custom style&quot;>visible text changed with embeded css&lt;/div>&#xa;&lt;div class=&quot;embed custom js hidden&quot;>hidden text visible after embeded js is executed&lt;/div>"/>
                     </par>
                 </contentblock1>
             </par>

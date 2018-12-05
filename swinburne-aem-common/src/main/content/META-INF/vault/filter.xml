@@ -7,6 +7,8 @@
 
     <filter root="/apps/cq/analytics" />
 
+    <filter root="/apps/sling" />
+
     <filter root="/apps/swinburne">
         <!-- The type of the first pattern defines the default behavior, so that the filter is more natural to write.
         If the first pattern is include, then the default is exclude and vice versa.  -->

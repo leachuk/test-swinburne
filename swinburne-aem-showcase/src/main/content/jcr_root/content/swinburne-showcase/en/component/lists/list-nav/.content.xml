@@ -14,9 +14,9 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
-                    jcr:mixinTypes="[]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_ZUSJQQK1U"/>
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -80,5 +80,4 @@
             </par>
         </article>
     </jcr:content>
-    <test/>
 </jcr:root>

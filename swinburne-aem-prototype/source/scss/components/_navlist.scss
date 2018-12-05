@@ -121,3 +121,52 @@
     }
   }
 }
+
+html:not(.aem-AuthorLayer-Edit ) {
+  .theme--swu-sidebar {
+    width: 100%;
+    max-width: 350px;
+    min-height: calc( 100vh - 140px );
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 180px 15px;
+    z-index: 1;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+    & > .aem-Grid {
+      min-height: 100%;
+    }
+    .navlist[component] {
+      &,
+      & > li {
+        display: block;
+        top: 0;
+        height: auto;
+      }
+      & > li {
+        margin-left: 15px;
+        a {
+          &:hover {
+            text-decoration: none;
+            &:after {
+              content: " ";
+              width: 0;
+              overflow: hidden;
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+    & + div.article {
+      z-index: 2;
+      & > article {
+        padding-left: 350px;
+      }
+    }
+  }
+}

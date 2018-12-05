@@ -8,6 +8,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Icons"
+        jcr:uuid="b5feb3c2-c121-4eb1-adfc-d6d1d59e8dc8"
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
@@ -17,8 +18,8 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details">
-                </page-details>
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_LHSGUIW3G"/>
                 <text
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
@@ -46,4 +47,7 @@
             </par>
         </article>
     </jcr:content>
+    <twitter/>
+    <github/>
+    <facebook/>
 </jcr:root>

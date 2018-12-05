@@ -15,20 +15,24 @@
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"/>
-                <contentblock jcr:primaryType="nt:unstructured"
-                              componentId="langnavcontainer"
-                              sling:resourceType="swinburne/components/layout/contentblock">
-                    <par jcr:primaryType="nt:unstructured"
-                         sling:resourceType="swinburne/components/layout/container">
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_9A8Z8FDK0"/>
+                <contentblock
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="langnavcontainer">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <langnav
-                               jcr:primaryType="nt:unstructured"
-                               componentId="lang_nav"
-                               languageSet="[language:en,language:de-ch,language:ru]"
-                               sling:resourceType="swinburne/components/lists/langnav"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/langnav"
+                            componentId="lang_nav"
+                            languageSet="[language:en,language:de-ch,language:ru]"/>
                     </par>
                 </contentblock>
             </par>
         </article>
     </jcr:content>
+    <test-show-nearest-parent/>
 </jcr:root>

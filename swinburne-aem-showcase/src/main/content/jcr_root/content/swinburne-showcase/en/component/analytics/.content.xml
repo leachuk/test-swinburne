@@ -16,6 +16,7 @@
                 <page-details
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_UNUSULEVQ"
                     menuColor="gold"/>
                 <text
                     jcr:primaryType="nt:unstructured"
@@ -23,18 +24,19 @@
                     text="&lt;p>This section showcases analytics components.&lt;/p>&#xa;"
                     textIsRich="true"/>
                 <list
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/lists/list"
-                        imageRotate="0"
-                        listFrom="children"
-                        listLinkTitle="More Items"
-                        listType="list"
-                        parentPage="/content/swinburne-showcase/en/component/admin"
-                        listItemShowLink="false"
-                        showTitle="true"
-                        tagsMatch="any"
-                        title="List of Components"/>
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/lists/list"
+                    imageRotate="0"
+                    listFrom="children"
+                    listItemShowLink="false"
+                    listLinkTitle="More Items"
+                    listType="list"
+                    parentPage="/content/swinburne-showcase/en/component/admin"
+                    showTitle="true"
+                    tagsMatch="any"
+                    title="List of Components"/>
             </par>
         </article>
     </jcr:content>
+    <datalayer/>
 </jcr:root>

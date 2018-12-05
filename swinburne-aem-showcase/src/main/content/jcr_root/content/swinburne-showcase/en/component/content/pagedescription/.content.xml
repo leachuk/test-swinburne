@@ -3,9 +3,9 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
+        jcr:description="Page Properties Description"
         jcr:primaryType="cq:PageContent"
         jcr:title="Page Description"
-        jcr:description="Page Properties Description"
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
@@ -14,8 +14,9 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/details/page-details"/>
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details_JOWNWG0FK"/>
                 <contentblockmenu1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblockmenu"
@@ -50,10 +51,10 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
                         <pagedescription
+                            jcr:description="Override of Page Description"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/pagedescription"
-                            componentId="pagedescription2"
-                            jcr:description="Override of Page Description"/>
+                            componentId="pagedescription2"/>
                     </par>
                 </contentblock2>
             </par>

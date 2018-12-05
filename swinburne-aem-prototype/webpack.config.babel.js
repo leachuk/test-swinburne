@@ -6,8 +6,8 @@ const { getIfUtils, removeEmpty } = require('webpack-config-utils')
 const CopyWebpackPlugin           = require('copy-webpack-plugin')
 const EventHooksPlugin            = require('event-hooks-webpack-plugin')
 const plConfig                    = require('./patternlab-config.json')
-// const patternlab                  = require('patternlab-node')(plConfig)
-// const patternEngines              = require('patternlab-node/core/lib/pattern_engines')
+const patternlab                  = require('patternlab-node')(plConfig)
+const patternEngines              = require('patternlab-node/core/lib/pattern_engines')
 const merge                       = require('webpack-merge')
 const customization               = require(`${plConfig.paths.source.app}/webpack.app.js`);
 const exec = require('child_process').exec;
@@ -46,7 +46,7 @@ module.exports = env => {
           // Copy all images from source to public
           context : resolve(plConfig.paths.source.images),
           from    : './**/*.*',
-          to      : resolve('./sync/jcr_root/etc/clientlibs/' + env.clientLibsFolder + '/images'),
+          to      : resolve(plConfig.paths.public.images),
         },
         {
           // Copy favicon from source to public
@@ -101,10 +101,10 @@ module.exports = env => {
       new EventHooksPlugin({
         ['after-compile'](compilation, callback) {
           // watch supported templates
-          // const supportedTemplateExtensions = patternEngines.getSupportedFileExtensions()
-          // const templateFilePaths = supportedTemplateExtensions.map(dotExtension => {
-          //   return plConfig.paths.source.patterns + '/**/*' + dotExtension
-          // })
+          const supportedTemplateExtensions = patternEngines.getSupportedFileExtensions()
+          const templateFilePaths = supportedTemplateExtensions.map(dotExtension => {
+            return plConfig.paths.source.patterns + '/**/*' + dotExtension
+          })
           // additional watch files
           const watchFiles = [
             plConfig.paths.source.patterns + '/**/*.json',
@@ -117,7 +117,7 @@ module.exports = env => {
             plConfig.paths.source.annotations + '**/*',
           ]
 
-          const allWatchFiles = watchFiles;//.concat(templateFilePaths)
+          const allWatchFiles = watchFiles.concat(templateFilePaths)
 
           allWatchFiles.forEach((globPath) => {
             const patternFiles = globby.sync(globPath).map(filePath => resolve(filePath))

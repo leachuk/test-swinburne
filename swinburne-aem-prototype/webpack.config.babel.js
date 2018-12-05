@@ -105,6 +105,7 @@ module.exports = env => {
           const templateFilePaths = supportedTemplateExtensions.map(dotExtension => {
             return plConfig.paths.source.patterns + '/**/*' + dotExtension
           })
+
           // additional watch files
           const watchFiles = [
             plConfig.paths.source.patterns + '/**/*.json',

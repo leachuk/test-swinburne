@@ -2,7 +2,7 @@
 
 # Check if Sync directory exists
 if [ ! -d "sync/" ]; then
-  echo Directory sync/ not found, run \"npm run aem:checkout\"
+  echo Directory sync/ not found, run \"npm run aem:checkout\"vi a
   exit
 fi
 
@@ -10,10 +10,10 @@ fi
 CLIENT_LIBS_FOLDER="swinburne"
 
 echo Copying files from public to sync
-cp -r public/css/* sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/css/*
-cp -r public/js/* sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/js/*
-cp -r public/images/* sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/images/*
-cp -r public/fonts/* sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/fonts/*
+cp -r public/css/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/css/
+cp -fR public/js/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/js/
+cp -r public/images/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/images/
+cp -r public/fonts/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/fonts/
 
 echo Launching VLT
-cd sync && ../tools/vault-cli/bin/vlt --verbose --credentials admin:admin ci ./jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER} --force
+cd sync && ../tools/vault-cli/bin/vlt --verbose --credentials admin:admin ci --force  ./jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}

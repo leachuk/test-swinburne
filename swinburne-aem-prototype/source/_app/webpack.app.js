@@ -211,7 +211,7 @@ module.exports = env => {
           NODE_ENV: JSON.stringify('development'),
         },
       })),
-      ifDev(new webpack.NamedModulesPlugin()),
+      // ifDev(new webpack.NamedModulesPlugin()),
     ]),
   }
 }

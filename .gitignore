@@ -90,3 +90,4 @@ devops___*
 patternlab.json
 **/content-generator/content/
 **/content-generator/output/
+sync/

@@ -1,14 +1,24 @@
 [![Apache V2 License](http://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/Comcast/patternlab-edition-node-webpack/blob/master/LICENSE)
 
+First, install the dependencies:
 
-# Pattern Lab Node - Webpack Edition
+`npm install`
+
+## Develop 
+
+To Develop code and deploy directly into AEM
+
+
+1. Check that Java is Installed and $JAVA_HOME is set correctly by executing `java` into the terminal. If $JAVA_HOME is not set and you're using MAC OS, execute the following:
+`echo export "JAVA_HOME=\$(/usr/libexec/java_home)" >> ~/.bash_profile`
+2. Make sure AEM is running locally
+3. Execute `npm run aem:checkout` to checkout files from the local AEM server. This only needs to be run once.
+4. Execute `npm run dev` to watch for local changes and automatically push Front End Assets back into AEM
+
+## Pattern Lab Node - Webpack Edition
 The webpack wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node) providing tasks to interact with the core library and move supporting frontend assets.
 
-
-
-
-1. `npm install`
-2. `npm run patternlab:serve`
+`npm run patternlab:serve`
 
 
 

@@ -98,37 +98,37 @@ module.exports = env => {
           });
         }
       }),
-      new EventHooksPlugin({
-        ['after-compile'](compilation, callback) {
-          // watch supported templates
-          const supportedTemplateExtensions = patternEngines.getSupportedFileExtensions()
-          const templateFilePaths = supportedTemplateExtensions.map(dotExtension => {
-            return plConfig.paths.source.patterns + '/**/*' + dotExtension
-          })
-
-          // additional watch files
-          const watchFiles = [
-            plConfig.paths.source.patterns + '/**/*.json',
-            plConfig.paths.source.patterns + '**/*.md',
-            plConfig.paths.source.data + '**/*.json',
-            plConfig.paths.source.fonts + '**/*',
-            plConfig.paths.source.images + '**/*',
-            plConfig.paths.source.js + '**/*',
-            plConfig.paths.source.meta + '**/*',
-            plConfig.paths.source.annotations + '**/*',
-          ]
-
-          const allWatchFiles = watchFiles.concat(templateFilePaths)
-
-          allWatchFiles.forEach((globPath) => {
-            const patternFiles = globby.sync(globPath).map(filePath => resolve(filePath))
-            compilation.fileDependencies = compilation.fileDependencies.concat(patternFiles)
-          })
-
-          // signal done and continue with build
-          callback()
-        },
-      }),
+      // new EventHooksPlugin({
+      //   ['after-compile'](compilation, callback) {
+      //     // watch supported templates
+      //     const supportedTemplateExtensions = patternEngines.getSupportedFileExtensions()
+      //     const templateFilePaths = supportedTemplateExtensions.map(dotExtension => {
+      //       return plConfig.paths.source.patterns + '/**/*' + dotExtension
+      //     })
+      //
+      //     // additional watch files
+      //     const watchFiles = [
+      //       plConfig.paths.source.patterns + '/**/*.json',
+      //       plConfig.paths.source.patterns + '**/*.md',
+      //       plConfig.paths.source.data + '**/*.json',
+      //       plConfig.paths.source.fonts + '**/*',
+      //       plConfig.paths.source.images + '**/*',
+      //       plConfig.paths.source.js + '**/*',
+      //       plConfig.paths.source.meta + '**/*',
+      //       plConfig.paths.source.annotations + '**/*',
+      //     ]
+      //
+      //     const allWatchFiles = watchFiles.concat(templateFilePaths)
+      //
+      //     allWatchFiles.forEach((globPath) => {
+      //       const patternFiles = globby.sync(globPath).map(filePath => resolve(filePath))
+      //       compilation.fileDependencies = compilation.fileDependencies.concat(patternFiles)
+      //     })
+      //
+      //     // signal done and continue with build
+      //     callback()
+      //   },
+      // }),
     ]),
 
     devServer: {

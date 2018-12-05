@@ -134,6 +134,9 @@ html:not(.aem-AuthorLayer-Edit ) {
     left: 0;
     padding: 180px 15px;
     z-index: 1;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
     & > .aem-Grid {
       min-height: 100%;
     }
@@ -145,7 +148,7 @@ html:not(.aem-AuthorLayer-Edit ) {
         height: auto;
       }
       & > li {
-        margin-left: 1.875rem;
+        margin-left: 15px;
         a {
           &:hover {
             text-decoration: none;
@@ -161,9 +164,9 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
     & + div.article {
       z-index: 2;
-    }
-    & + div.article > article {
-      padding-left: 300px;
+      & > article {
+        padding-left: 350px;
+      }
     }
   }
 }

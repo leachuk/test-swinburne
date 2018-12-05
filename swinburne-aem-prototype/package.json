@@ -110,6 +110,7 @@
     "aem:frontend": "./deploy-front-end",
     "aem:build": "./node_modules/.bin/webpack --env.prod --env.aem -p",
     "aem:checkout": "tools/vault-cli/bin/vlt --credentials admin:admin checkout --force --filter .maven/content/META-INF/vault/filter.xml http://localhost:4502/crx ./sync",
+    "dev:aem:build": "webpack --env.prod --env.aem -p",
     "dev:patternlab:build": "webpack --env.prod -p",
     "patternlab:build": "./node_modules/.bin/webpack --env.prod -p",
     "patternlab:help": "node patternlab.js help",

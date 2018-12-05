@@ -1531,6 +1531,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     title: 'Brand Form'
 
   # Nav list
+  lists/navlist/sidebar:
+    flat: true
+    prefix: theme--swu-sidebar
+    title: 'Side bar'
+
   lists/navlist/navbar/nav:
     flat: true
     prefix: navbar-nav

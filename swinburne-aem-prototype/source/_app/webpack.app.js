@@ -5,8 +5,6 @@ const { resolve }                 = require('path')
 const { getIfUtils, removeEmpty } = require('webpack-config-utils')
 const webpack                     = require('webpack')
 
-const plConfig = require('../../patternlab-config.json')
-
 module.exports = env => {
   const { ifProd, ifDev } = getIfUtils(env)
 
@@ -66,8 +64,8 @@ module.exports = env => {
     },
 
     entry: {
-      'js/app'        : './js/app.js',
-      'js/styleguide' : './js/styleguide.js',
+      'js/app'        : `./${env.version}/js/app.js`,
+      'js/styleguide' : `./${env.version}/js/styleguide.js`,
 
       'js/vendor': [
         'es6-promise/auto',

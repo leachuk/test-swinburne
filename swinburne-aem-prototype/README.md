@@ -106,16 +106,6 @@ You can set the url and port number in the configuration for
         "port": 3000
     },
 
-In this edition, it's important to make the configuration for webpack something very easy to update, and very easy to modify. The current setting for webpack merge are described [here.](https://github.com/Comcast/patternlab-edition-node-webpack/blob/master/source/_app/readme.md)
-
-You can change how it merges by changing this object in `patternlab-config.json`:
-    
-    "webpackMerge": {
-        "entry":"replace"
-    },
-
-By default merge does a `append` if that option works for you only set which webpack configuration you want to change. The merge setting is: `smartStrategy` which is documented over on this [page.](https://www.npmjs.com/package/webpack-merge#mergesmartstrategy-key-prependappendreplaceconfiguration--configuration)
-
 * [babel-core](https://github.com/babel/babel/blob/master/LICENSE) - MIT
 * [babel-loader](https://github.com/babel/babel-loader/blob/master/LICENSE) -MIT,
 * [babel-preset-es2015](https://github.com/babel/babel/blob/master/LICENSE) - MIT

@@ -1,0 +1,28 @@
+<div class="container my-large">
+  <div class="row">
+    <h1>{{ colours_title }}</h1>
+  </div>
+  <h2>Background Class Colours</h2>
+  <div class="sg-colors">
+    {{# bg-colours }}
+    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+      <div>
+        <div class="sg-swatch {{ name }}"></div>
+        <div class="sg-label">{{ name }} - <strong>{{ value }}</strong></div>
+      </div>
+    </div>
+    {{/ bg-colours }}
+  </div>
+  <hr/>
+  <h2>Text Class Colours</h2>
+  <div class="sg-colors">
+    {{# text-colours }}
+    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+      <div>
+        <div class="sg-swatch" style="background-color: {{ value }};"></div>
+        <div class="sg-label">{{ name }} - <strong>{{ value }}</strong></div>
+      </div>
+    </div>
+    {{/ text-colours }}
+  </div>
+</div>

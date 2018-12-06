@@ -1,0 +1,218 @@
+{
+  "h1Modifiers": "",
+  "h2Modifiers": "",
+
+  "pageList": {
+    "componentProperties": {
+      "componentId": "pagelist1",
+      "componentTheme": "",
+      "componentModifier": "bg-c3 theme--page-list-content-list",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": ""
+    }
+  },
+  "pageList1": {
+    "componentId": "pagelist2",
+    "componentTheme": "navbar-nav",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": [
+      {
+        "name": "Home",
+        "href": "#register",
+        "icon": "fa fa-home",
+        "title": "",
+        "class": "first"
+      },
+      {
+        "name": "Juggling life and uni?",
+        "href": "http://wwww.google.fr",
+        "icon": "fa fa-life-saver",
+        "title": "",
+        "class": "item"
+      },
+      {
+        "name": "Find a course",
+        "href": "",
+        "icon": "fa fa-search",
+        "title": "",
+        "class": "item"
+      },
+      {
+        "name": "Apply now",
+        "href": "",
+        "icon": "fa fa-edit",
+        "title": "",
+        "class": "item"
+      },
+      {
+        "name": "Contact us",
+        "href": "",
+        "icon": "fa fa-comments",
+        "title": "",
+        "class": "last"
+      }
+    ]
+  },
+  "pageList2": {
+    "componentId": "pagelist3",
+    "componentTheme": "theme--list-social",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
+  "pageList3": {
+    "componentId": "pagelist4",
+    "componentTheme": "theme--list-card",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
+  "pageList4": {
+    "componentId": "pagelist5",
+    "componentTheme": "theme--list-images",
+    "componentModifier": "",
+    "componentModules": "carousel",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
+  "pageList10": {
+    "componentId": "pagelist10",
+    "componentTheme": "theme--list-media",
+    "componentModifier": "slide-1",
+    "componentModules": "carousel",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": "",
+    "links": []
+  },
+  "pageList5": {
+    "componentId": "pagelist5",
+    "componentTheme": "theme--list-card",
+    "componentModifier": "column-3",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": ""
+  },
+  "pageList7": {
+    "componentId": "pagelist7",
+    "componentTheme": "theme--list-tiles",
+    "componentModifier": "column-6",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "componentStyle": ""
+  },
+  "pageList6links": [
+    {
+      "icon": "fa-comments",
+      "title": "Arts and Humanities"
+    },
+    {
+      "icon": "fa-plane",
+      "title": "Aviation"
+    },
+    {
+      "icon": "fa-university",
+      "title": "Built Environment and Architecture"
+    },
+    {
+      "icon": "fa-bar-chart",
+      "title": "Business"
+    },
+    {
+      "icon": "fa-connectdevelop",
+      "title": "Design"
+    },
+    {
+      "icon": "fa-book",
+      "title": "Education"
+    },
+    {
+      "icon": "fa-cogs",
+      "title": "Engineering"
+    },
+    {
+      "icon": "fa-video",
+      "title": "Film and Television"
+    },
+    {
+      "icon": "fa-gamepad",
+      "title": "Games and Animation"
+    },
+    {
+      "icon": "fa-heartbeat",
+      "title": "Health"
+    },
+    {
+      "icon": "fa-code",
+      "title": "Information Technology"
+    },
+    {
+      "icon": "fa-gavel",
+      "title": "Law"
+    },
+    {
+      "icon": "fa-newspaper",
+      "title": "Media and Communication"
+    },
+    {
+      "icon": "fa-stethoscope",
+      "title": "Nursing"
+    },
+    {
+      "icon": "fa-users",
+      "title": "Psychology"
+    },
+    {
+      "icon": "fa-flask",
+      "title": "Science"
+    },
+    {
+      "icon": "fa-wrench",
+      "title": "Apprenticeships"
+    }
+  ],
+  "pageList5links": [
+    {
+      "icon": "fa fa-book",
+      "title": "Current Year 12 student",
+      "link": "<p><a href='' class='card-link btn btn-primary btn-arrow'>APPLY NOW</a></p>"
+    },
+    {
+      "icon": "fa fa-street-view",
+      "title": "AUSTRALIAN CITIZEN OR PERMANENT RESIDENT",
+      "link": "<p><a href='' class='card-link btn btn-primary btn-arrow'>APPLY NOW</a></p>"
+    },
+    {
+      "icon": "fa fa-globe",
+      "title": "ON A STUDENT VISA AND APPLYING DIRECTLY",
+      "link": "<p><a href='' class='card-link btn btn-primary btn-arrow'>APPLY NOW</a></p>"
+    }
+  ],
+  "pageListMedias": [
+    {
+      "image": "",
+      "video": "1_rot1i5vx",
+      "modifier": "video media-responsive video-kaltura"
+    },
+    {
+      "image": "",
+      "video": "a-M_5rGhPdg",
+      "modifier": "video media-responsive video-youtube"
+    }
+  ]
+}

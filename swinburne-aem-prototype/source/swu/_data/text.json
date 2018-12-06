@@ -1,0 +1,22 @@
+{
+  "text-componentProperties-text": "",
+  "text-componentProperties-componentId": "",
+  "text-componentProperties-componentTheme": "",
+  "text-componentProperties-componentModifier": "",
+  "text-componentProperties-componentModules": "",
+  "text-componentProperties-componentChevron": "",
+  "text-componentProperties-componentIcon": "",
+
+
+  "text": {
+    "sample1": "<h2>INFO EVENING</h2>",
+    "sample2": "<h2>real work as you study</h2>",
+    "copyright": "<ul><li>Hello world</li><li>Hello world !!!</li></ul>"
+  },
+  "text1" : {
+    "componentModifier" : "fw-700 text-uppercase"
+  },
+  "text2" : {
+
+  }
+}

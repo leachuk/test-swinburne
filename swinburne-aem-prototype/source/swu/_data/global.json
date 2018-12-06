@@ -1,0 +1,126 @@
+{
+  "title": "AEM.Design Pattern Library",
+
+  "breadcrumbs": [
+    {
+      "href": "#",
+      "label": "Home"
+    },
+    {
+      "href": "#",
+      "label": "Library"
+    },
+    {
+      "active": true,
+      "href": "#",
+      "label": "Data"
+    }
+  ],
+
+  "buttons": [
+    {
+      "label": "Primary",
+      "modifier": "primary"
+    },
+    {
+      "label": "Secondary",
+      "modifier": "secondary"
+    },
+    {
+      "label": "Primary (small)",
+      "modifier": "primary btn-sm"
+    },
+    {
+      "label": "Secondary (small)",
+      "modifier": "secondary btn-sm"
+    },
+    {
+      "label": "Link",
+      "modifier": "link pt-15 pb-15 pl-15"
+    }
+  ],
+
+  "card-title-size": "h3",
+  "colours_title": "Colours panel",
+  "bg-colours": [
+    {
+      "name": "bg-c1",
+      "value": "#85C441"
+    },
+    {
+      "name": "bg-c2",
+      "value": "#00AEEF"
+    },
+    {
+      "name": "bg-c3",
+      "value": "#00BED8"
+    },
+    {
+      "name": "bg-c4",
+      "value": "#FCB945"
+    },
+    {
+      "name": "bg-c5",
+      "value": "#883681"
+    },
+    {
+      "name": "bg-c6",
+      "value": "#808285"
+    },
+    {
+      "name": "bg-c7",
+      "value": "#DC2D27"
+    },
+    {
+      "name": "bg-c8",
+      "value": "#000000"
+    },
+    {
+      "name": "bg-c9",
+      "value": "#ffffff"
+    },
+    {
+      "name": "bg-c10",
+      "value": "bg image"
+    }
+  ],
+  "text-colours": [
+    {
+      "name": "text-red",
+      "value": "#DC2D27"
+    },
+    {
+      "name": "text-white",
+      "value": "#ffffff"
+    },
+    {
+      "name": "text-black",
+      "value": "#000000"
+    },
+    {
+      "name": "text-c10",
+      "value": "#292625"
+    },
+    {
+      "name": "text-c11",
+      "value": "#d9d5d1"
+    }
+  ],
+
+"grid_title": "Grid",
+  "typography_title": "Typography",
+  "logos_title": "Logos",
+  "fonts_title": "Fonts",
+  "images_title": "Images",
+  "date": "January 11th 2018",
+  "date-formatted": "2018-01-11",
+
+  "header": {
+    "clear": false
+  },
+
+  "page-details-background": "//via.placeholder.com/1920x300",
+  "page-details-breadcrumb": true,
+  "page-details-content-desc": "Page Description",
+  "page-details-date": true
+}

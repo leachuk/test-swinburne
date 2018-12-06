@@ -1,0 +1,23 @@
+{
+  "formsRadioButton": {
+    "componentId": "radio1545444",
+    "componentTheme": "",
+    "componentModifier": "",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "placeholderText": "",
+    "name": "defaultRadio",
+    "panelPath": "",
+    "label1": {
+      "id": "465456465",
+      "name": "Yes"
+    },
+    "label2": {
+      "id": "45656465",
+      "name": "No"
+    },
+    "label": "Are you an international students?*",
+    "type": "guideCheckBox"
+  }
+}

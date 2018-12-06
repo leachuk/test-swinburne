@@ -1,0 +1,40 @@
+<div {{> components-componentAttributes( componentName: "footer", componentId: "{{{ id }}}", componentTheme: "{{{ theme }}}", componentModifier: "{{{ modifier }}}", componentModules: "{{{ modules }}}", componentChevron: "{{{ chevron }}}", componentIcon: "{{{ icon }}}", componentStyle: "{{{ style }}}" ) }}>
+  <div class="aem-Grid">
+    <div component class="colctrl colctrl-2c">
+      <div class="parsys_column row ">
+        <div class="parsys_column col-sm col-lg-9 colctrl">
+          {{> components-text.default( text: "{{{ text }}}" ) }}
+          <div component class="pagelist" data-list-split-enabled="false" data-list-split-every="3" id="pagelist2">
+            <div class="content">
+              <ul>
+                <li class="first">
+                  <a href="" title="Page1">
+                    <span class="title">Copyright and Disclaimer</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="" title="Page2">
+                    <span class="title">Privacy</span>
+                  </a>
+                </li>
+                <li class="last">
+                  <a href="" title="Page3">
+                    <span class="title">Accessibility Information</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="parsys_column col-sm col-lg-3 colctrl">
+          {{> components-pagelist.defaultBadgedSocial( id: "{{{ pageList2.componentId }}}",
+                                                       theme: "{{{ pageList2.componentTheme }}}",
+                                                       modifier: "{{{ pageList2.componentModifier }}}",
+                                                       modules: "{{{ pageList2.componentModules }}}",
+                                                       chevron: "{{{pageList2.componentChevron }}}",
+                                                       icon: "{{{ pageList2.componentIcon }}}" )}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

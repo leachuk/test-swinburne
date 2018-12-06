@@ -1,0 +1,34 @@
+{
+  "onlinemedia1": {
+    "componentId": "onlinemedia1",
+    "componentTheme": "",
+    "componentModifier": "media-responsive",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "text": "",
+    "provider":"kaltura",
+    "partnerId":"_691292",
+    "playerId":"20499062",
+    "entryId":"1_lph7zzb1",
+    "title":"kaltura video",
+    "width": "300",
+    "height": "200"
+  },
+  "onlinemedia2": {
+    "componentId": "onlinemedia2",
+    "componentTheme": "",
+    "componentModifier": "media-responsive",
+    "componentModules": "",
+    "componentChevron": "",
+    "componentIcon": "",
+    "text": "",
+    "provider":"youtube",
+    "partnerId":"",
+    "playerId":"",
+    "entryId":"w01V5FI03MQ",
+    "title":"youtube video",
+    "width": "600",
+    "height": "400"
+  }
+}

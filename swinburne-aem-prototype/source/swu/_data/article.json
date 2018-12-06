@@ -1,0 +1,11 @@
+{
+  "article1": {
+      "componentId": "article1",
+      "componentTheme": "",
+      "componentModifier": "container",
+      "componentModules": "",
+      "componentChevron": "",
+      "componentIcon": "",
+      "text": "<h1>Article</h1>"
+  }
+}

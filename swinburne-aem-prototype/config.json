@@ -1,0 +1,56 @@
+{
+  "paths": {
+    "source": {
+      "microsites": {
+        "root": "./source/microsites",
+        "patterns": "./source/microsites/_patterns/",
+        "data": "./source/microsites/_data/",
+        "meta": "./source/microsites/_meta/",
+        "annotations": "./source/microsites/_annotations/",
+        "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
+        "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/",
+        "js": "./source/microsites/js/",
+        "images": "./source/microsites/images/",
+        "fonts": "./source/microsites/fonts/",
+        "css": "./source/microsites/css/"
+      },
+      "swu": {
+        "root": "./source/swu",
+        "patterns": "./source/swu/_patterns/",
+        "data": "./source/swu/_data/",
+        "meta": "./source/swu/_meta/",
+        "annotations": "./source/swu/_annotations/",
+        "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
+        "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/",
+        "js": "./source/swu/js/",
+        "images": "./source/swu/images/",
+        "fonts": "./source/swu/fonts/",
+        "css": "./source/swu/css/"
+      }
+    },
+    "public": {
+      "root": "./public/",
+      "patterns": "./public/patterns/",
+      "data": "./public/styleguide/data/",
+      "annotations": "./public/annotations/",
+      "styleguide": "./public/styleguide/",
+      "js": "./public/js/",
+      "images": "./public/images/",
+      "fonts": "./public/fonts/",
+      "css": "./public/css/"
+    }
+  },
+  "server": {
+    "url": "http://localhost",
+    "port": 3000
+  },
+  "webpackMerge": {
+    "entry":"replace"
+  },
+  "styleGuideExcludes": [
+    "pages"
+  ],
+  "ignored-extensions" : ["scss", "DS_Store", "less"],
+  "ignored-directories" : ["scss"],
+  "debug": false
+}

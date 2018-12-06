@@ -1,0 +1,16 @@
+{
+  "form1": {
+    "componentId": "",
+    "componentTheme": "theme--brand-form",
+    "componentModifier": "",
+    "componentStyle": "",
+    "text": ""
+  },
+  "form2": {
+    "componentId": "",
+    "componentTheme": "theme--brand-formSSI",
+    "componentModifier": "",
+    "componentStyle": "",
+    "text": ""
+  }
+}

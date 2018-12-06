@@ -1,0 +1,234 @@
+{
+  "contentblock1": {
+      "componentId": "home",
+      "componentTheme": "theme--contentblock-banner",
+      "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/juggling.jpg)\"",
+      "text": "<h2>Juggling life and uni?</h2>",
+      "linkHref": "http://google.com",
+      "linkText": "tell me how"
+  },
+  "contentblock2": {
+    "componentId": "contentblock2",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/work-experience.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "linkHref": "http://google.com",
+    "text": "<h2>tell me more</h2>",
+    "linkText": "REAL WORK AS YOU STUDY"
+  },
+  "contentblock3": {
+    "componentId": "contentblock3",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/infoevening/_assets/images/apply-now.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "linkHref": "http://google.com",
+    "text": "<h2>Ready to apply</h2>",
+    "linkText": "LET'S DO THIS!"
+  },
+  "contentblock5": {
+    "componentId": "contentblock5",
+    "componentStyle": "",
+    "componentTheme": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": "Content block default"
+  },
+  "contentblock6": {
+    "componentId": "contentblock6",
+    "componentStyle": "",
+    "componentTheme": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": "Content block container"
+  },
+  "contentblock7": {
+    "componentId": "contentblock7",
+    "componentStyle": "",
+    "componentTheme": "",
+    "componentModule": "parallaximage",
+    "linkHref": "https://www.google.com",
+    "linkText": "",
+    "text": ""
+  },
+  "contentblock8": {
+    "componentId": "contentblock8",
+    "componentModifier": "bg-c10",
+    "componentTheme": "",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": ""
+  },
+  "contentblock9": {
+    "componentId": "contentblock9",
+    "componentModifier": "bg-c10 theme--contentblock-carousel",
+    "componentTheme": "",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "text": "<h2>Go your own way</h2>"
+  },
+  "contentblock10": {
+    "componentId": "contentblock10",
+    "componentModifier": "bg-c10",
+    "componentTheme": "theme--contentblock-form",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "formTheme": "theme--brand-form",
+    "src": "../../images/form.png",
+    "alt": "Form",
+    "text": "<h1>SWINBURNE <span style=\"color:#eb1d25\">INFO EVENING</span></h1><p>Attend the Swinburne Info Evening to learn about the range of postgrad programs, master and bachelor degrees, and pathways that can take you where you want to go.</p><p>Chat with academics about the courses that are right for you and just where they can lead. You’ll leave feeling cool, calm and confident about your future.</p><p>To register, just drop your details in here.</p>"
+  },
+  "contentblock11": {
+    "componentId": "contentblock11",
+    "componentModifier": "bg-c10 theme--contentblock-article",
+    "componentTheme": "",
+    "componentModule": "",
+    "linkHref": "",
+    "linkText": "",
+    "text1": "<h1><span style=\"color: red\">(Career) change</span>  is as good as a holiday</h1><p>Picture this: You’re a few (or more!) years into your career, but it isn’t quite fulfilling you. Or maybe your passion for your current industry has faded and a new interest has sparked.</p>",
+    "src1": "https://www.swinburne.edu.au/choose/articles/career-change-is-as-good-as-a-holiday/change-as-good-holiday.jpg",
+    "text2": "<p>While some may find their ‘true calling’ straight after they finish high school, others can take years, even decades, to find a career path that’s right for them. The beauty of living in 2018 is it’s easier and more common than ever for people to make many career changes throughout their working lives.</p><p>The thought of changing it up can be daunting. Here are some tips for taking the leap into a new field.</p><p><em><a href=\"\">Register for an Advice Night</a> this September to take the first step to that new future.</em></p><h4>Network, network, network</h4>",
+    "src2": "https://www.swinburne.edu.au/choose/articles/career-change-is-as-good-as-a-holiday/network.jpg",
+    "text3": "<p>As they say it’s often not what you know, but who you know. When thinking about a new career, knowing how and where to connect with people in the field can be hard. <a href=\"/choose/#events\">Advice nights</a> and short courses are great places to meet like-minded people and find out more about the industry.</p><h4>Skill up</h4>",
+    "src3": "https://www.swinburne.edu.au/choose/articles/career-change-is-as-good-as-a-holiday/skill-up.jpg",
+    "text4": "<p><strong>READ:</strong> <a href=\"http://leadingontheedge.com/\">Leading On The Edge – Rachael Robinson</a><br><strong>LISTEN:</strong> <a href=\"http://grantbaldwin.com/podcast-archive/\">How Did You Get Into That – Grant Baldwin</a><br><strong>WATCH:</strong> <a href=\"https://www.ted.com/talks/scott_dinsmore_how_to_find_work_you_love#t-18280\">How To Find Work You Love – Scott Dismore</a></p>",
+    "text5": "<p><em>Written by Mia Burgess, Bachelor of Arts (Journalism). This article first appeared on Swinburne’s Knowing blog.</em></p>"
+  },
+  "contentblock12": {
+    "componentId": "contentblock12",
+    "componentModifier": "bg-c10",
+    "componentTheme": "theme--contentblock-text",
+    "componentModule": "",
+    "text": "<h1>Thank you!</h1><p>Great call! You’re registered and ready to go for our Advice Night. Check your inbox soon – we’ll be sending you a confirmation email with all the details you need. We'll see you then!</p>"
+  },
+  "contentblock13": {
+    "componentId": "contentblock13",
+    "componentModifier": "image-only",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/contact-us.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "text": ""
+  },
+  "contentblock14": {
+    "componentId": "contentblock14",
+    "componentModifier": "",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/apply.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "text": "<h1>HOW TO<br>APPLY</h1>"
+  },
+  "contentblock15": {
+    "componentId": "contentblock15",
+    "componentModifier": "bg-c10",
+    "componentStyle": "",
+    "componentTheme": "theme--contentblock-text",
+    "text": "<p>So you're ready to apply for 2019. Excellent - and great decision, by the way. (We knew you had good taste.)</p><p>For Year 12 students (or anyone applying for multiple courses listed in VTAC), you'll need to apply through VTAC. For anyone else - including postgrad, mature age, gap year or international students - you're welcome to apply directly to Swinburne. VTAC applications <strong>open from 9am on 6 August and close at 5pm on 27 September.</strong> Direct applications, for both Australian and international students, can be made at any time.<p>So, go on, what are you waiting for?! Simply pick the option below that matches your situation.</p></p>"
+  },
+  "contentblock16": {
+    "componentId": "contentblock16",
+    "componentModifier": "",
+    "componentStyle": "",
+    "componentTheme": "theme--contentblock-accordion",
+    "text": "<h2>TURN KNOWING INTO KNOW-HOW</h2>",
+    "src": "https://www.swinburne.edu.au/choose/__archive/2017-timely/_assets/images/knowing.png",
+    "imgModifier": "img-fluid"
+  },
+  "contentblock17": {
+    "componentId": "contentblock17",
+    "componentModifier": "bg-c10",
+    "componentStyle": "",
+    "componentTheme": "theme--contentblock-fluid"
+  },
+  "contentblock18": {
+    "componentId": "contentblock18",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/vtac-explained-banner.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "linkHref": "http://google.com",
+    "text": "<h2>I want insider</h2>",
+    "linkText": "See upcoming events"
+  },
+  "contentblock19": {
+    "componentId": "contentblock19",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/vce-exam-revision.jpg\")",
+    "componentTheme": "theme--contentblock-banner mb-30",
+    "linkHref": "http://google.com",
+    "text": "<h2>BLITZ YOUR EXAM PREP</h2>",
+    "linkText": "Tell me all the tips!"
+  },
+  "contentblock20": {
+    "componentId": "contentblock20",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/atar-calc.jpg\")",
+    "componentTheme": "theme--contentblock-banner mb-30",
+    "linkHref": "http://google.com",
+    "text": "<h2>See where your ATAR could take you</h2>",
+    "linkText": "Use the calculator"
+  },
+  "contentblock21": {
+    "componentId": "contentblock21",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/study-pack-banner.jpg\")",
+    "componentTheme": "theme--contentblock-banner mb-30",
+    "linkHref": "http://google.com",
+    "text": "<h2>Score loads of prizes</h2>",
+    "linkText": "Find out how"
+  },
+  "contentblock22": {
+    "componentId": "contentblock22",
+    "componentStyle": "style=\"background-image:url(https://www.swinburne.edu.au/choose/_assets/images/find-a-course-banner.jpg\")",
+    "componentTheme": "theme--contentblock-banner",
+    "linkHref": "http://google.com",
+    "text": "<h2>Find my ideal course</h2>",
+    "linkText": "Take me there"
+  },
+  "contentblock23": {
+    "componentId": "contentblock23",
+    "componentStyle": "",
+    "componentTheme": "theme--contentblock-media",
+    "text": "<h2>A SNEAK PEEK OF THE FESTIVITIES</h2>",
+  },
+  "accordionItems": [
+    {
+      "itemId": "a",
+      "title": "I've missed the cut-off date for timely VTAC applications! Can I still apply?",
+      "text": "<p>We understand just how daunting the end of Year 12 can be. Don’t stress! You've still got time to apply for the courses you want.</p><p>Late course applications are open until 3 November, although the cost has gone up to $103. If you miss that date, you'll need to make a very late application, which is going to sting you $134. Get onto it sooner rather than later. And, if you need more info, visit the <a href>VTAC website</a>.</p>"
+    },
+    {
+      "itemId": "b",
+      "title": "I've submitted my preferences, but I've changed my mind. What do I do?",
+      "text": "<p>Plenty. You can change your mind as often as you'd like during the Change of Preference period, and there's no cost, as long as you pay attention to the dates listed on the <a href>VTAC website</a>.</p><p>The order of your preferences still counts, so be realistic in your choices, and make sure you’ve checked for any additional requirements for the courses you're preferencing. If it all feels a bit confusing, just come in for a chat with us at the Swinburne <a href>Change of Preference Expo</a>.</p>"
+    },
+    {
+      "itemId": "c",
+      "title": "What if I don't get the ATAR I was after?",
+      "text": "<p>Stay calm, life doesn't have to be all about your study scores and first preferences. If you haven't nailed your exams the way you were planning, you've still got plenty of options.</p><p>There are other pathways you can take to study at Swinburne, including <a href>UniLink diplomas</a>. Complete one of these successfully, and you can progress directly into the second year of a related bachelor degree.</p>"
+    },
+    {
+      "itemId": "d",
+      "title": "I'm so used to high school. What if I miss my mates at uni?",
+      "text": "<p>We've been there. Making the switch from school to uni can be daunting, but – trust us – it's a huge, amazing adventure. Follow your instincts, and make the right decision for YOU and your future. You'll be making heaps of new friends and carving your own path in no time. At Swinburne, you'll be surrounded by plenty of other people doing the same.</p>"
+    }
+  ],
+  "accordionItems2": [
+    {
+      "itemId": "a",
+      "itemModifier": "acc-icon acc-icon-arrow-up",
+      "title": "Your ATAR is higher than you expected",
+      "text": "<p>We understand just how daunting the end of Year 12 can be. Don’t stress! You've still got time to apply for the courses you want.</p><p>Late course applications are open until 3 November, although the cost has gone up to $103. If you miss that date, you'll need to make a very late application, which is going to sting you $134. Get onto it sooner rather than later. And, if you need more info, visit the <a href>VTAC website</a>.</p>"
+    },
+    {
+      "itemId": "b",
+      "itemModifier": "acc-icon acc-icon-arrow-right",
+      "title": "Your ATAR is as your expected",
+      "text": "<p>Plenty. You can change your mind as often as you'd like during the Change of Preference period, and there's no cost, as long as you pay attention to the dates listed on the <a href>VTAC website</a>.</p><p>The order of your preferences still counts, so be realistic in your choices, and make sure you’ve checked for any additional requirements for the courses you're preferencing. If it all feels a bit confusing, just come in for a chat with us at the Swinburne <a href>Change of Preference Expo</a>.</p>"
+    },
+    {
+      "itemId": "c",
+      "itemModifier": "acc-icon acc-icon-arrow-down",
+      "title": "Your ATAR is lower than you expected",
+      "text": "<p>Stay calm, life doesn't have to be all about your study scores and first preferences. If you haven't nailed your exams the way you were planning, you've still got plenty of options.</p><p>There are other pathways you can take to study at Swinburne, including <a href>UniLink diplomas</a>. Complete one of these successfully, and you can progress directly into the second year of a related bachelor degree.</p>"
+    },
+    {
+      "itemId": "c",
+      "itemModifier": "acc-icon acc-icon-arrow-down",
+      "title": "Your ATAR is lower than you expected",
+      "text": "<p>Stay calm, life doesn't have to be all about your study scores and first preferences. If you haven't nailed your exams the way you were planning, you've still got plenty of options.</p><p>There are other pathways you can take to study at Swinburne, including <a href>UniLink diplomas</a>. Complete one of these successfully, and you can progress directly into the second year of a related bachelor degree.</p>"
+    }
+  ]
+}

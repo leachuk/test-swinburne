@@ -6,14 +6,23 @@ if [ ! -d "sync/" ]; then
   exit
 fi
 
+VERSION=$1;
+
+if [ ! $VERSION ]; then
+  echo No Version found. Run again and pass in version. Eg: \"./deploy-frontend microsites\"
+  exit
+fi
+
+echo Deploying version $VERSION
+
 # TODO: Remove this and extract folder name from POM file
 CLIENT_LIBS_FOLDER="swinburne"
 
 echo Copying files from public to sync
-cp -r public/css/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/css/
-cp -fR public/js/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/js/
-cp -r public/images/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/images/
-cp -r public/fonts/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/fonts/
+cp -r public/${VERSION}/css/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/css/
+cp -fR public/${VERSION}/js/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/js/
+cp -r public/${VERSION}/images/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/images/
+cp -r public/${VERSION}/fonts/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/fonts/
 
 echo Launching VLT
 cd sync && ../tools/vault-cli/bin/vlt --verbose --credentials admin:admin ci --force  ./jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}

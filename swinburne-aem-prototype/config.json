@@ -1,43 +1,58 @@
 {
   "paths": {
     "source": {
-      "microsites": {
-        "root": "./source/microsites",
-        "patterns": "./source/microsites/_patterns/",
-        "data": "./source/microsites/_data/",
-        "meta": "./source/microsites/_meta/",
-        "annotations": "./source/microsites/_annotations/",
+      "v1": {
+        "root": "./source/v1",
+        "patterns": "./source/v1/_patterns/",
+        "data": "./source/v1/_data/",
+        "meta": "./source/v1/_meta/",
+        "annotations": "./source/v1/_annotations/",
         "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
         "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/",
-        "js": "./source/microsites/js/",
-        "images": "./source/microsites/images/",
-        "fonts": "./source/microsites/fonts/",
-        "css": "./source/microsites/css/"
+        "js": "./source/v1/js/",
+        "images": "./source/v1/images/",
+        "fonts": "./source/v1/fonts/",
+        "css": "./source/v1/css/",
+        "index": "./source/v1/index.html"
       },
-      "swu": {
-        "root": "./source/swu",
-        "patterns": "./source/swu/_patterns/",
-        "data": "./source/swu/_data/",
-        "meta": "./source/swu/_meta/",
-        "annotations": "./source/swu/_annotations/",
+      "v2": {
+        "root": "./source/v2",
+        "patterns": "./source/v2/_patterns/",
+        "data": "./source/v2/_data/",
+        "meta": "./source/v2/_meta/",
+        "annotations": "./source/v2/_annotations/",
         "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
         "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/",
-        "js": "./source/swu/js/",
-        "images": "./source/swu/images/",
-        "fonts": "./source/swu/fonts/",
-        "css": "./source/swu/css/"
+        "js": "./source/v2/js/",
+        "images": "./source/v2/images/",
+        "fonts": "./source/v2/fonts/",
+        "css": "./source/v2/css/"
       }
     },
     "public": {
-      "root": "./public/",
-      "patterns": "./public/patterns/",
-      "data": "./public/styleguide/data/",
-      "annotations": "./public/annotations/",
-      "styleguide": "./public/styleguide/",
-      "js": "./public/js/",
-      "images": "./public/images/",
-      "fonts": "./public/fonts/",
-      "css": "./public/css/"
+      "v1": {
+        "root": "./public/v1/",
+        "patterns": "./public/v1/patterns/",
+        "data": "./public/v1/styleguide/data/",
+        "annotations": "./public/v1/annotations/",
+        "styleguide": "./public/v1/styleguide/",
+        "js": "./public/v1/js/",
+        "images": "./public/v1/images/",
+        "fonts": "./public/v1/fonts/",
+        "css": "./public/v1/css/",
+        "index": "./public/v1/index.html"
+      },
+      "v2": {
+        "root": "./public/v2/",
+        "patterns": "./public/v2/patterns/",
+        "data": "./public/v2/styleguide/data/",
+        "annotations": "./public/v2/annotations/",
+        "styleguide": "./public/v2/styleguide/",
+        "js": "./public/v2/js/",
+        "images": "./public/v2/images/",
+        "fonts": "./public/v2/fonts/",
+        "css": "./public/v2/css/"
+      }
     }
   },
   "server": {

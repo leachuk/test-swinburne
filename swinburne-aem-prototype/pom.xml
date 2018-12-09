@@ -123,12 +123,12 @@
             </configuration>
           </execution>
           <execution>
-            <id>exec-aem-build</id>
+            <id>exec-aem-build-v1</id>
             <goals>
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>run aem:build --env.clientLibsFolder=${package.clientLibsFolder}</arguments>
+              <arguments>run aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.version=v1</arguments>
             </configuration>
           </execution>
           <execution>
@@ -171,16 +171,16 @@
           </execution>
 
           <execution>
-            <id>copy-css-vault-resources</id>
+            <id>copy-css-vault-resources-v1</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/css</outputDirectory>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/css</outputDirectory>
               <resources>
                 <resource>
-                  <directory>public/css</directory>
+                  <directory>public/v1/css</directory>
                   <includes>
                     <include>app.css</include>
                   </includes>
@@ -190,16 +190,16 @@
           </execution>
 
           <execution>
-            <id>copy-css-vault-resources-forms</id>
+            <id>copy-css-vault-resources-forms-v1</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/forms/default/css</outputDirectory>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/forms/default/css</outputDirectory>
               <resources>
                 <resource>
-                  <directory>public/css</directory>
+                  <directory>public/v1/css</directory>
                   <includes>
                     <include>theme.css</include>
                   </includes>
@@ -209,48 +209,48 @@
           </execution>
 
           <execution>
-            <id>copy-image-vault-resources</id>
+            <id>copy-image-vault-resources-v1</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/images</outputDirectory>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/images</outputDirectory>
               <resources>
                 <resource>
-                  <directory>public/images/logos</directory>
+                  <directory>public/v1/images/logos</directory>
                 </resource>
               </resources>
             </configuration>
           </execution>
 
           <execution>
-            <id>copy-fonts-vault-resources</id>
+            <id>copy-fonts-vault-resources-v1</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/fonts</outputDirectory>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/fonts</outputDirectory>
               <resources>
                 <resource>
-                  <directory>public/fonts</directory>
+                  <directory>public/v1/fonts</directory>
                 </resource>
               </resources>
             </configuration>
           </execution>
 
           <execution>
-            <id>copy-js-vault-resources</id>
+            <id>copy-js-vault-resources-v1</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/js</outputDirectory>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/js</outputDirectory>
               <resources>
                 <resource>
-                  <directory>public/js</directory>
+                  <directory>public/v1/js</directory>
                   <excludes>
                     <exclude>styleguide.js</exclude>
                   </excludes>
@@ -276,6 +276,149 @@
           </execution>
         </executions>
       </plugin>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>exec-aem-build-v2</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>run aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.version=v2</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-resources-plugin</artifactId>
+      <!-- ensure that the empty directories are copied -->
+      <configuration>
+        <includeEmptyDirs>true</includeEmptyDirs>
+      </configuration>
+
+        <executions>
+          <execution>
+            <id>copy-css-vault-resources-v2</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/css</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/v2/css</directory>
+                  <includes>
+                    <include>app.css</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-css-vault-resources-forms-v2</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/forms/default/css</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/v2/css</directory>
+                  <includes>
+                    <include>theme.css</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-image-vault-resources-v2</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/images</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/v2/images/logos</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-fonts-vault-resources-v2</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/fonts</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/v2/fonts</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-js-vault-resources-v2</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/js</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/v2/js</directory>
+                  <excludes>
+                    <exclude>styleguide.js</exclude>
+                  </excludes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <plugin>
         <groupId>com.day.jcr.vault</groupId>

@@ -12,10 +12,5 @@ CLIENT_LIBS_FOLDER="swinburne"
 echo Copying files from public to sync
 cp -r public/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}
 
-#cp -r public/${VERSION}/css/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/${VERSION}/css/
-#cp -fR public/${VERSION}/js/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/${VERSION}/js/
-#cp -r public/${VERSION}/images/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/${VERSION}/images/
-#cp -r public/${VERSION}/fonts/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/${VERSION}/fonts/
-
 echo Launching VLT
 cd sync && ../tools/vault-cli/bin/vlt --verbose --credentials admin:admin ci --force  ./jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}

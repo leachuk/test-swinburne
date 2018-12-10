@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-12-10T12:33:54.638+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Visual decorators"
+        sling:resourceType="swinburne/components/template/styleguide"
+        navTitle="Visual decorators"
+        pageTitle="Visual decorators">
+        <aside
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside"
+            componentId="aside_XRPSK2C7Y">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </aside>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_QYUQEJLQS">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <text
+                    jcr:created="{Date}2018-12-10T12:33:37.272+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-12-10T12:33:54.636+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/content/text"
+                    componentId="text_XPVD0ZVKZ"
+                    text="&lt;h1>Visual decorators&lt;/h1>&#xd;&#xa;"
+                    textIsRich="true"/>
+            </par>
+        </article>
+    </jcr:content>
+</jcr:root>

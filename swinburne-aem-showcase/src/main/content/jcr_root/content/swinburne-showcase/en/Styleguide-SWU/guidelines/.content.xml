@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-12-10T11:58:15.174+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="guidelines"
+        sling:resourceType="swinburne/components/template/styleguide"
+        navTitle="guidelines"
+        pageTitle="guidelines">
+        <aside
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside"
+            componentId="aside_3LMTT6Q4Y">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </aside>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_MXALYTWWB">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </article>
+    </jcr:content>
+    <background/>
+    <colour/>
+    <breakpoints/>
+    <grid/>
+    <iconography/>
+    <imagery/>
+    <logo-and-usage/>
+    <motion/>
+    <spacing-units/>
+    <style-guide/>
+    <typography/>
+    <visual-decorators/>
+</jcr:root>

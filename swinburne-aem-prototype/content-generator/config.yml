@@ -136,6 +136,16 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - c8
       - c9
       - c10
+      - c11
+      - c12
+      - c13
+      - c14
+      - c15
+      - c16
+      - c17
+      - c18
+      - c19
+      - c20
     startWith: bg-
     title: 'Background Colour - %%prefix_normalised%%'
 
@@ -1025,6 +1035,13 @@ content/cq:tags/swinburne/component-style-module: &component-style-module
 
 # Themes
 content/cq:tags/swinburne/component-style-theme: &component-style-theme
+
+  #styleguide
+  styleguide/colors:
+    flat: true
+    prefix: 'theme--colour-panel'
+    title: 'Colour panel'
+
   # Cards
   common/cards:
     prefixes:

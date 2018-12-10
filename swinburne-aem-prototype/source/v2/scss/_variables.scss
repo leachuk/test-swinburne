@@ -5,35 +5,52 @@ $white: #fff;
 
 $brand-colours: (
   'core': (
-    c1: #85C441,
-    c2: #00AEEF,
-    c3: #00BED8,
-    c4: #FCB945,
-    c5: #883681,
-    c6: #808285,
-    c7: #ED1B2E,
+    c1: #DC2D27,
+    c2: #FFD200,
+    c3: #242323,
+    c4: #85C441,
+    c5: #00AEEF,
+    c6: #883681,
+    c7: #00BED8,
     c8: #21201E,
     c9: #ffffff,
     c10: #292625,
     c11: #d9d5d1
   ),
-
   'grey': (
-    g1: #414141,
-    g2: #5a5360,
-    g3: #635c69,
-    g4: #cad4de,
-    g5: #f2f2f2,
-    g6: #f7f6f7,
+    g1: #242323,
+    g2: #737578,
+    g3: #A5A5A5,
+    g4: #D1D1D1,
+    g5: #E2E2E2,
+    g6: #F6F6F6,
     g7: $white,
-  ),
-
-
+  )
 );
 
-$primary: map-deep-get($brand-colours, 'core', 'c7');
-$secondary: map-deep-get($brand-colours, 'core', 'c8');
-$tertiary: map-deep-get($brand-colours, 'core', 'c6');
+$primary: map-deep-get($brand-colours, 'core', 'c1');
+$secondary: map-deep-get($brand-colours, 'core', 'c2');
+$tertiary: map-deep-get($brand-colours, 'core', 'c3');
+$color-4: map-deep-get($brand-colours, 'core', 'c4');
+$color-5: map-deep-get($brand-colours, 'core', 'c5');
+$color-6: map-deep-get($brand-colours, 'core', 'c6');
+$color-7: map-deep-get($brand-colours, 'core', 'c7');
+
+// Lighten colours
+$primary-50: #ED9693;
+$secondary-50: #FFF589;
+$color-4-50: #C2E1A0;
+$color-5-50: #7FD6F7;
+$color-6-50: #C39AC0;
+$color-7-50: #7DFEEB;
+
+// Grey colours
+$grey-1: map-deep-get($brand-colours, 'grey', 'g1');
+$grey-2: map-deep-get($brand-colours, 'grey', 'g2');
+$grey-3: map-deep-get($brand-colours, 'grey', 'g3');
+$grey-4: map-deep-get($brand-colours, 'grey', 'g4');
+$grey-5: map-deep-get($brand-colours, 'grey', 'g5');
+$grey-6: map-deep-get($brand-colours, 'grey', 'g6');
 
 $theme-colors: (
   'primary'   : $primary,

@@ -144,8 +144,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - c16
       - c17
       - c18
-      - c19
-      - c20
     startWith: bg-
     title: 'Background Colour - %%prefix_normalised%%'
 

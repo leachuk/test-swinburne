@@ -1,6 +1,32 @@
-.bg-c10 {
-  background: url("https://www.swinburne.edu.au/media/swinburneeduau/style-assets/images/concrete_seamless.gif") repeat;
+
+
+$colors:
+  $primary, // 1
+  $secondary, // 2
+  $tertiary, // 3
+  $color-4, // 4
+  $color-5, // 5
+  $color-6, // 6
+  $color-7, // 7
+  $primary-50, // 8
+  $secondary-50, // 9
+  $color-4-50, // 10
+  $color-5-50, // 11
+  $color-6-50, // 12
+  $color-7-50, // 13
+  $grey-2, // 14
+  $grey-3, // 15
+  $grey-4, // 16
+  $grey-5, // 17
+  $grey-6; // 18
+
+@each $color in $colors {
+  $index: index($colors, $color);
+  .bg-c#{$index} {
+    background-color: #{$color} !important;
+  }
 }
+
 
 .bg-parallax {
   background-attachment: fixed;

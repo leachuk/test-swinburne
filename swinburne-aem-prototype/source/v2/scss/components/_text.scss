@@ -98,21 +98,6 @@
   }
 }
 
-//modifiers
-.bg-c8:not(.card) {
-  &,
-  * {
-    color: $white !important;
-  }
-}
-
-.bg-c9:not(.card)  {
-  &,
-  * {
-    color: $black !important;
-  }
-}
-
 .text-uppercase {
   &,
   * {

@@ -343,30 +343,29 @@ $paragraph-margin-bottom: rem-calc(16px);
 // Grid breakpoints
  $grid-breakpoints: (
    xs: 0,
-   sm: 640px,
-   md: 768px,
-   lg: 992px,
-   xl: 1400px,
+   sm: 320px,
+   md: 640px,
+   lg: 1024px,
+   xl: 1366px
  );
 
 // Grid containers
 $container-max-widths: (
-  sm: 640px,
-  md: 768px,
-  lg: 992px,
-  xl: 1400px,
+  sm: 320px,
+  md: 640px,
+  lg: 1024px,
+  xl: 1366px
 );
 
-$screen-sm: 768px;
-$screen-md: 992px;
-$screen-lg: 1400px;
+$screen-sm: 320px;
+$screen-md: 640px;
+$screen-lg: 1024px;
 
 //Max queries
-$screen-sm-max: 767px;
+$screen-sm-max: 639px;
 
 
 // Grid columns
-
 $grid-gutter-width: 30px;
 
 

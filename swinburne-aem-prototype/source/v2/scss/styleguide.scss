@@ -2,6 +2,7 @@ $styleguide-sidebar-width: 235px;
 
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
+<<<<<<< HEAD
     .article,
     aside,
     .aside {
@@ -9,15 +10,24 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
 
     .article,
+=======
+    padding: 80px 0;
+    div.article,
+>>>>>>> develop-v2
     aside {
       display: inline-block;
-      float: left;
+      vertical-align: top;
     }
+<<<<<<< HEAD
     .article {
       width: calc(100% - #{$styleguide-sidebar-width});
     }
     article {
       width: 100%;
+=======
+    div.article {
+      width: calc(100% - 310px);
+>>>>>>> develop-v2
     }
     aside {
       width: $styleguide-sidebar-width;
@@ -47,6 +57,7 @@ html:not(.aem-AuthorLayer-Edit ) {
         }
       }
     }
+
     .nav-link {
       color: #737578;
       font-size: 14px;
@@ -55,7 +66,7 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
   }
 
-  // todo: remove this after typography DLS ticket is done
+  // todo: remove this after typography DLS ticket SWU-398 is complete
   .text[component] h1 {
     padding: 50px 8.5%;
     font-size: 35px;
@@ -63,4 +74,21 @@ html:not(.aem-AuthorLayer-Edit ) {
     background-color: #FFEA12;
     text-transform: none;
   }
+}
+
+.theme--colour-panel {
+    .wrapper {
+      padding: 20px;
+      text-align: left;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      min-height: 120px;
+      margin-bottom: 30px;
+      span {
+        display: block;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+    }
 }

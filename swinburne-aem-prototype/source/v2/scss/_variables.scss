@@ -104,7 +104,7 @@ $font-size-base:              16px;
 
 $line-height-base:            24px;
 
-$h1-font-size:                54px;
+$h1-font-size:                60px;
 $h2-font-size:                40px;
 $h3-font-size:                30px;
 $h4-font-size:                26px;
@@ -169,16 +169,15 @@ $typography: (
     h1: (
       xs: (
         font-size: 40px,
-        font-weight: bold,
-        line-height: 46px,
+        line-height: 42px,
       ),
       md: (
-        font-size: 42px,
-        line-height: 50px,
+        font-size: 40px,
+        line-height: 42px,
       ),
       lg: (
         font-size: $h1-font-size,
-        line-height: 62px,
+        line-height: 63px,
       ),
     ),
 

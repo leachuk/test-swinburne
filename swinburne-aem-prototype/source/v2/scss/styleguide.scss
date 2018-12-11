@@ -1,21 +1,35 @@
+$styleguide-sidebar-width: 235px;
+
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
+    .article,
+    aside,
+    .aside {
+      height: 100%;
+    }
+
     .article,
     aside {
       display: inline-block;
       float: left;
     }
     .article {
-      width: calc(100% - 300px);
+      width: calc(100% - #{$styleguide-sidebar-width});
+    }
+    article {
+      width: 100%;
     }
     aside {
-      width: 300px;
+      width: $styleguide-sidebar-width;
+      border-right: 1px solid #F6F6F6;
       .navlist[component] {
         &,
         & > li {
           display: block;
           top: 0;
           height: auto;
+          margin-top: 5px;
+          margin-bottom: 0;
         }
         & > li {
           margin-left: 15px;
@@ -33,6 +47,20 @@ html:not(.aem-AuthorLayer-Edit ) {
         }
       }
     }
+    .nav-link {
+      color: #737578;
+      font-size: 14px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
 
+  // todo: remove this after typography DLS ticket is done
+  .text[component] h1 {
+    padding: 50px 8.5%;
+    font-size: 35px;
+    font-weight: 300;
+    background-color: #FFEA12;
+    text-transform: none;
   }
 }

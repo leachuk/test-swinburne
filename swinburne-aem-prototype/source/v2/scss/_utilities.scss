@@ -23,12 +23,6 @@
 'utilities/index'
 ;
 
-// Font Open Sans
-.grid,
-.container:not(.my-large, .my-5, .guideContainerNode) {
-  @include container();
-}
-
 //Overwrite nested container to prevent more sides padding.
 body:not(.styleguide) > .container:not(.my-large, .my-5, .header),
 .contentblock.container:not(.my-large, .my-5) {

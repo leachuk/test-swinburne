@@ -380,6 +380,18 @@ $spacers: (
   120 : rem-calc(120px),
 );
 
+//Spacing variables
+$spacing-2xs: rem-calc(8px);
+$spacing-xs: rem-calc(12px);
+$spacing-sm: rem-calc(16px);
+$spacing-md: rem-calc(24px);
+$spacing-lg: rem-calc(32px);
+$spacing-xl: rem-calc(36px);
+$spacing-2xl: rem-calc(48px);
+$spacing-3xl: rem-calc(64px);
+
+
+
 
 
 // UC Spacing conventions

@@ -89,6 +89,20 @@ html:not(.aem-AuthorLayer-Edit ) {
   }
 }
 
+.styleguide {
+  table {
+    tr {
+      border-bottom: 1px solid $grey-4;
+      &:last-child {
+        border: 0;
+      }
+    }
+    th, td {
+      padding: 15px 10px;
+    }
+  }
+}
+
 .theme--colour-panel {
     .wrapper {
       padding: 20px;

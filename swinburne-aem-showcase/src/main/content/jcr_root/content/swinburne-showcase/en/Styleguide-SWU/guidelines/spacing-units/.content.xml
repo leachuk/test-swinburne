@@ -29,6 +29,11 @@
                     componentId="text_YZIRJCIO4"
                     text="&lt;h1>Spacing unit&lt;/h1>&#xd;&#xa;"
                     textIsRich="true"/>
+                <embedsource
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/content/embedsource"
+                    componentId="embedsource_FUU8N2DRQ"
+                    html="&lt;table style=&quot;width: 350px;&quot;>&lt;tr>&lt;th>Token&lt;/th>&lt;th>rem&lt;/th>&lt;th>px&lt;/th>&lt;/tr>&lt;tr>&lt;td>$spacing-2xs&lt;/td>&lt;td>0.5&lt;/td>&lt;td>8px&lt;/td>&lt;/tr>&lt;tr>&lt;td>$spacing-xs&lt;/td>&lt;td>0.75&lt;/td>&lt;td>12px&lt;/td>&lt;/tr>&lt;tr>&lt;td>$spacing-sm&lt;/td>&lt;td>1&lt;/td>&lt;td>16px&lt;/td>&lt;/tr>&lt;tr>&lt;td>$spacing-md&lt;/td>&lt;td>1.5&lt;/td>&lt;td>24px&lt;/td>&lt;/tr>&lt;tr>&lt;td>$spacing-lg&lt;/td>&lt;td>2&lt;/td>&lt;td>32px&lt;/td>&lt;/tr>&lt;tr>&lt;td>$spacing-xl&lt;/td>&lt;td>2.25&lt;/td>&lt;td>36px&lt;/td>&lt;/tr>&lt;tr>&lt;td>$spacing-2xl&lt;/td>&lt;td>3&lt;/td>&lt;td>48px&lt;/td>&lt;/tr>&lt;tr>&lt;td>$spacing-3xl&lt;/td>&lt;td>4&lt;/td>&lt;td>64px&lt;/td>&lt;/tr>&lt;/table>"/>
             </par>
         </article>
     </jcr:content>

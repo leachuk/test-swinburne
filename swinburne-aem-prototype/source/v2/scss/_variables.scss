@@ -366,7 +366,7 @@ $screen-sm-max: 639px;
 
 
 // Grid columns
-$grid-gutter-width: 30px;
+$grid-gutter-width: #{$grid-gutter * 2}px;
 
 
 // Spacing

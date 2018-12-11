@@ -1,3 +1,5 @@
+@import "variables";
+
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
     padding: 80px 0;
@@ -45,7 +47,7 @@ html:not(.aem-AuthorLayer-Edit ) {
       font-size: 14px;
       font-weight: bold;
       min-height: 120px;
-      margin-bottom: 30px;
+      margin-bottom: #{$grid-gutter * 2}px;
       span {
         display: block;
         word-wrap: break-word;

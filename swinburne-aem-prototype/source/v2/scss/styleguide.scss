@@ -1,6 +1,6 @@
 @import "variables";
 
-$styleguide-sidebar-width: 190px;
+$styleguide-sidebar-width: 195px;
 
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
@@ -26,7 +26,7 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
     article {
       width: 100%;
-      padding: 0 5.5%;
+      padding: 0 3.5%;
       position: relative;
 
       // todo: remove after component for content block hero is added to DLS

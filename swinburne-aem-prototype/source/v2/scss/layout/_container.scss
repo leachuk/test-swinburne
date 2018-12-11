@@ -9,6 +9,7 @@
     &:not(.my-large):not(.my-5):not(.guideContainerNode) {
       height: 100%;
       max-width: 100%;
+      padding: 0;
     }
   }
 }

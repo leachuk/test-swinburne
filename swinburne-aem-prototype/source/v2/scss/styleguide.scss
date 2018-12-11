@@ -1,37 +1,49 @@
-$styleguide-sidebar-width: 235px;
+@import "variables";
+
+$styleguide-sidebar-width: 190px;
 
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
-<<<<<<< HEAD
     .article,
     aside,
     .aside {
       height: 100%;
     }
 
+    .aside {
+      display: flex;
+    }
+
     .article,
-=======
-    padding: 80px 0;
     div.article,
->>>>>>> develop-v2
     aside {
       display: inline-block;
       vertical-align: top;
     }
-<<<<<<< HEAD
-    .article {
+
+    div.article {
       width: calc(100% - #{$styleguide-sidebar-width});
     }
     article {
       width: 100%;
-=======
-    div.article {
-      width: calc(100% - 310px);
->>>>>>> develop-v2
+      padding: 0 5.5%;
+      position: relative;
+
+      // todo: remove after component for content block hero is added to DLS
+      &:before {
+        display: block;
+        position: absolute;
+        left:0; top:0; right: 0;
+        height: 142px;
+        background-color: $secondary;
+        content: "";
+      }
     }
     aside {
       width: $styleguide-sidebar-width;
-      border-right: 1px solid #F6F6F6;
+      border-right: 1px solid $grey-6;
+      padding: 10px;
+
       .navlist[component] {
         &,
         & > li {
@@ -68,11 +80,12 @@ html:not(.aem-AuthorLayer-Edit ) {
 
   // todo: remove this after typography DLS ticket SWU-398 is complete
   .text[component] h1 {
-    padding: 50px 8.5%;
+    padding: 50px 0;
     font-size: 35px;
     font-weight: 300;
-    background-color: #FFEA12;
     text-transform: none;
+    margin-bottom: 60px;
+    position: relative;
   }
 }
 

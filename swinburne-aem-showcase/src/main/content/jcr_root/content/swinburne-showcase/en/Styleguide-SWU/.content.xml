@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-12-11T14:51:32.845+11:00"
+        cq:lastModified="{Date}2018-12-13T11:25:09.982+11:00"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2018-12-11T16:10:19.979+11:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Styleguide SWU"
+        jcr:uuid="1b1fa632-7e30-46e5-ab99-08d7a70c4297"
         sling:resourceType="swinburne/components/template/styleguide"
         navTitle="Styleguide SWU"
         pageTitle="Styleguide SWU">
@@ -21,51 +27,60 @@
                 <text_2111069304_copy
                     jcr:created="{Date}2018-12-11T14:32:02.213+11:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-11T14:37:36.542+11:00"
+                    jcr:lastModified="{Date}2018-12-13T10:53:55.675+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_2111069304_WHITEZUDD"
                     text="&lt;p>&lt;span class=&quot;fs-16&quot;>&lt;b>Swinburne University&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
-                <text_2111069304
-                    jcr:created="{Date}2018-12-11T14:32:02.213+11:00"
+                <text_920109757
+                    jcr:created="{Date}2018-12-13T10:54:07.256+11:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-11T14:51:32.842+11:00"
+                    jcr:lastModified="{Date}2018-12-13T11:24:21.415+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
-                    componentId="text_2111069304_WHITEZUDD"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-45]"
-                    text="&lt;p>&lt;span class=&quot;fs-16&quot;>&lt;span class=&quot;fs-14&quot;>Design Language System&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    componentId="text_920109757_YWVJGZTI5"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-32]"
+                    text="&lt;p>&lt;span class=&quot;fs-14&quot;>Design Language System&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <text
-                    jcr:lastModified="{Date}2018-12-11T14:37:57.675+11:00"
+                    jcr:lastModified="{Date}2018-12-13T11:06:37.113+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_FTICSXEPQ"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mt-45]"
-                    text="&lt;p>&lt;span class=&quot;fs-16&quot;>&lt;b>Guidelines&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mt-30,swinburne-showcase:component-style-modifier/color/text-g2]"
+                    text="&lt;p>&lt;span class=&quot;fs-16&quot;>&lt;b>&lt;span class=&quot;fs-14&quot;>Guidelines&lt;/span>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <navlist
-                    jcr:lastModified="{Date}2018-12-11T14:39:06.187+11:00"
+                    jcr:lastModified="{Date}2018-12-13T11:25:09.978+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/lists/navlist"
                     cancelInheritParent="true"
                     componentId="navlist_N1R2X8KSR"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-30]"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-24]"
                     listFrom="static"
                     pages="[/content/swinburne-showcase/en/Styleguide-SWU/guidelines/breakpoints,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/colour,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/grid,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/iconography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/logo-and-usage,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/motion,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/spacing-units,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/style-guide,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/typography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visual-decorators]"/>
                 <text_1154750572
-                    jcr:lastModified="{Date}2018-12-11T14:04:57.553+11:00"
+                    jcr:lastModified="{Date}2018-12-13T11:05:42.159+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_1154750572_8EAB6NAAA"
-                    text="&lt;p>&lt;b>&lt;span class=&quot;fs-16&quot;>Components&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/color/text-g2]"
+                    text="&lt;p>&lt;b>&lt;span class=&quot;fs-16&quot;>&lt;span class=&quot;fs-14&quot;>Components&lt;/span>&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
+                <embedsource
+                    jcr:created="{Date}2018-12-11T15:01:36.467+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-12-11T15:07:31.638+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/content/embedsource"
+                    componentId="embedsource_VGMHLBBQL"/>
             </par>
             <bgimage
                 jcr:primaryType="nt:unstructured"

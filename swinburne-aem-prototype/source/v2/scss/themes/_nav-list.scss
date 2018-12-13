@@ -4,8 +4,8 @@
 
   border-bottom: 0px;
   border-top: 0px;
-  padding-bottom: get-spacer(15);
-  padding-top: get-spacer(15);
+  padding-bottom: $spacing-sm;
+  padding-top: $spacing-sm;
   align-content: flex-end;
   justify-content: flex-end !important;
 
@@ -24,7 +24,7 @@
     text-decoration: none;
     position: relative;
     height: 100%;
-    padding-bottom: get-spacer(15);
+    padding-bottom: $spacing-sm;
     transition: $transition-base;
 
     &::after {

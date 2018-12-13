@@ -294,7 +294,7 @@
 
       box-shadow: 0 0 5px 0 rgba($black, .5);
       left: $offset;
-      padding: rem-calc(20px) get-spacer(30);
+      padding: rem-calc(20px) $spacing-lg;
       top: calc(100% + #{rem-calc(2px)});
       width: calc(100% - #{$offset * 2});
     }

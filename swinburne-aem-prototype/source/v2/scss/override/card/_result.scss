@@ -7,7 +7,7 @@
 
   .card-file-type,
   .card-img-top {
-    margin-right: get-spacer(15);
+    margin-right: $spacing-sm;
 
     + .card-body {
       max-width: 580px;
@@ -54,7 +54,7 @@
     }
 
     @include media-breakpoint-up(md) {
-      margin-right: get-spacer(30);
+      margin-right: $spacing-lg;
     }
   }
 

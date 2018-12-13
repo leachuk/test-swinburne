@@ -76,7 +76,7 @@
   }
 
   & + & {
-    margin-top: get-spacer(15);
+    margin-top: $spacing-sm;
   }
 
   @include media-breakpoint-up(md) {

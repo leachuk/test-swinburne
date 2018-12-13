@@ -89,16 +89,32 @@ html:not(.aem-AuthorLayer-Edit ) {
   }
 }
 
-.styleguide {
-  table {
-    tr {
-      border-bottom: 1px solid $grey-4;
-      &:last-child {
-        border: 0;
-      }
+.styleguide-table {
+  font-size: 16px;
+
+  &__row {
+    border-bottom: 1px solid $grey-4;
+
+    &--header {
+      border-color: $primary;
     }
-    th, td {
-      padding: 15px 10px;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &__cell,
+  &__header {
+    padding: $spacing-xs 0;
+  }
+
+  &__cell {
+    width: 100px;
+
+    &--code {
+      width: 200px;
+      font-family: monospace;
     }
   }
 }

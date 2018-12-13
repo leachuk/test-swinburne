@@ -8,8 +8,8 @@
   background-position: center center;
   background-size: cover;
   min-height: 220px;
-  padding-bottom: get-spacer(15);
-  padding-top: get-spacer(15);
+  padding-bottom: $spacing-sm;
+  padding-top: $spacing-sm;
   position: relative;
   z-index: 1;
 

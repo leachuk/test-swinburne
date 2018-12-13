@@ -1,6 +1,7 @@
 let fs = require('fs');
 
-let table = `<table style="width: 350px;"><tr><th>Token</th><th>rem</th><th>px</th></tr>`;
+let table = `<table class="styleguide-table"><tr class="styleguide-table__row styleguide-table__row--header"><th class="styleguide-table__header styleguide-table__header--token">Token</th><th class="styleguide-table__header">rem</th><th>px</th></tr>`;
+
 let data = [
   { name: "$spacing-2xs", rem: "0.5", px: "8px" },
   { name: "$spacing-xs", rem: "0.75", px: "12px" },
@@ -13,9 +14,10 @@ let data = [
 ];
 
 data.map( (row) => {
-  table += `<tr>`;
-  Object.entries(row).map( (cell) => {
-    table += `<td>${cell[1]}</td>`;
+  table += `<tr class="styleguide-table__row">`;
+  Object.entries(row).forEach((cell, index) => {
+    const cellClass = index === 0 ? 'styleguide-table__cell--code' : '';
+    table += `<td class="styleguide-table__cell ${cellClass}">${cell[1]}</td>`;
   });
   table += `</tr>`;
 } );

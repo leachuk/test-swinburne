@@ -1,6 +1,6 @@
 @import "variables";
 
-$styleguide-sidebar-width: 195px;
+$styleguide-sidebar-width: 220px;
 
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
@@ -35,13 +35,14 @@ html:not(.aem-AuthorLayer-Edit ) {
         position: absolute;
         left:0; top:0; right: 0;
         height: 142px;
-        background-color: $secondary;
+        //background-color: $secondary;
+        background: url("https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png") bottom left repeat;
         content: "";
       }
     }
     aside {
       width: $styleguide-sidebar-width;
-      border-right: 1px solid $grey-6;
+      border-right: 1px solid $grey-5;
       padding: 10px;
 
       .navlist[component] {

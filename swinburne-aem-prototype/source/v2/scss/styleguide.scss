@@ -77,6 +77,11 @@ html:not(.aem-AuthorLayer-Edit ) {
       padding-bottom: 0;
       margin-bottom: 0;
     }
+
+    p {
+      max-width: 700px;
+      font-size: 16px;
+    }
   }
 
   // todo: remove this after typography DLS ticket SWU-398 is complete

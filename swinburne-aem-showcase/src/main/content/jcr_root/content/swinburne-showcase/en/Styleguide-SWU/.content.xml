@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-12-13T11:54:41.248+11:00"
+        cq:lastModified="{Date}2018-12-13T12:19:42.281+11:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2018-12-11T16:10:19.979+11:00"
         cq:lastReplicatedBy="admin"
@@ -27,7 +27,7 @@
                 <text_2111069304_copy
                     jcr:created="{Date}2018-12-11T14:32:02.213+11:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-13T11:54:25.336+11:00"
+                    jcr:lastModified="{Date}2018-12-13T12:19:42.279+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
@@ -37,12 +37,11 @@
                 <text_920109757
                     jcr:created="{Date}2018-12-13T10:54:07.256+11:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-13T11:54:41.243+11:00"
+                    jcr:lastModified="{Date}2018-12-13T12:13:51.769+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_920109757_YWVJGZTI5"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-32]"
                     text="&lt;p>&lt;span class=&quot;fs-14&quot;>&lt;span class=&quot;fs-16&quot;>Design Language System&lt;/span>&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <text
@@ -55,13 +54,13 @@
                     text="&lt;p>&lt;span class=&quot;fs-16&quot;>&lt;b>&lt;span class=&quot;fs-14&quot;>Guidelines&lt;/span>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <navlist
-                    jcr:lastModified="{Date}2018-12-13T11:25:09.978+11:00"
+                    jcr:lastModified="{Date}2018-12-13T12:19:27.850+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/lists/navlist"
                     cancelInheritParent="true"
                     componentId="navlist_N1R2X8KSR"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-24]"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-20]"
                     listFrom="static"
                     pages="[/content/swinburne-showcase/en/Styleguide-SWU/guidelines/breakpoints,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/colour,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/grid,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/iconography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/logo-and-usage,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/motion,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/spacing-units,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/style-guide,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/typography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visual-decorators,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/imagery]"/>
                 <text_1154750572

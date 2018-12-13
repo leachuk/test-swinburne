@@ -776,13 +776,14 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - my
     sizes:
       - 0
-      - 8
-      - 16
-      - 24
-      - 32
-      - 48
-      - 56
-      - 64
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
+      - 30
+      - 35
+      - 40
     title: '%%prefix_normalised%% - %%size%%px %%breakpoint%%'
 
   margin/mx-0:
@@ -814,13 +815,14 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - py
     sizes:
       - 0
-      - 8
-      - 16
-      - 24
-      - 32
-      - 48
-      - 56
-      - 64
+      - 5
+      - 10
+      - 15
+      - 20
+      - 25
+      - 30
+      - 35
+      - 40
     title: '%%prefix_normalised%% %%size%%px %%breakpoint%%'
 
   margin/px-0:

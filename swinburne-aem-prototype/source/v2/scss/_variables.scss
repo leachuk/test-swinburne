@@ -84,24 +84,25 @@ $body-color:                theme-color('g1');
 // spacers used for utility classes
 $spacers: (
   0   : 0,
-  8  : rem-calc(8px),
-  16  : rem-calc(16px),
-  24  : rem-calc(24px),
-  32  : rem-calc(32px),
-  48  : rem-calc(48px),
-  56  : rem-calc(60px),
-  64  : rem-calc(64px),
+  5  : rem-calc(5px),
+  10  : rem-calc(10px),
+  15  : rem-calc(15px),
+  20  : rem-calc(20px),
+  25  : rem-calc(25px),
+  30  : rem-calc(30px),
+  35  : rem-calc(35px),
+  40  : rem-calc(40px),
 );
 
 //Spacing variables
-$spacing-2xs: rem-calc(8px);
-$spacing-xs: rem-calc(12px);
-$spacing-sm: rem-calc(16px);
-$spacing-md: rem-calc(24px);
-$spacing-lg: rem-calc(32px);
-$spacing-2xl: rem-calc(48px);
-$spacing-3xl: rem-calc(56px);
-$spacing-4xl: rem-calc(64px);
+$spacing-2xs: rem-calc(5px);
+$spacing-xs: rem-calc(10px);
+$spacing-sm: rem-calc(15px);
+$spacing-md: rem-calc(20px);
+$spacing-lg: rem-calc(25px);
+$spacing-2xl: rem-calc(30px);
+$spacing-3xl: rem-calc(35px);
+$spacing-4xl: rem-calc(40px);
 
 $grid-gutter: 15;
 

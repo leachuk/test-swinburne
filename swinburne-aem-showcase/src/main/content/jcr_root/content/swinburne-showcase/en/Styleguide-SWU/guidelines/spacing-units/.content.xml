@@ -2,14 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-12-13T10:32:19.670+11:00"
+        cq:lastModified="{Date}2018-12-13T12:28:48.650+11:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
-        jcr:title="spacing units"
+        jcr:title="Spacing"
         sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="spacing units"
-        pageTitle="spacing units">
+        navTitle="Spacing"
+        pageTitle="Spacing">
         <aside
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"
@@ -26,12 +26,23 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <text
-                    jcr:lastModified="{Date}2018-12-11T15:08:33.211+11:00"
+                    jcr:lastModified="{Date}2018-12-13T12:03:06.974+11:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_YZIRJCIO4"
-                    text="&lt;h1>Spacing unit&lt;/h1>&#xd;&#xa;"
+                    text="&lt;h1>Spacing&lt;/h1>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_1081139847
+                    jcr:created="{Date}2018-12-13T12:03:20.192+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-12-13T12:28:48.647+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/content/text"
+                    componentId="text_1081139847_XCCNYWPKF"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-20]"
+                    text="&lt;h3>Spacing Units&lt;/h3>&#xd;&#xa;&lt;p>&lt;br>&#xd;&#xa;&lt;span style=&quot;font-weight: normal;&quot;>Use the Spacing Scale when building individual elements. It includes minute increments needed to create appropriate spacial relationships for detail-level designs. This scale is used both by developers (by using the variables in SASS files) and content authors (by applying AEM modifiers).&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <embedsource
                     jcr:created="{Date}2018-12-11T15:08:38.022+11:00"

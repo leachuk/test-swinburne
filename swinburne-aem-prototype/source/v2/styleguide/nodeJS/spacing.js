@@ -3,14 +3,14 @@ let fs = require('fs');
 let table = `<table class="styleguide-table"><tr class="styleguide-table__row styleguide-table__row--header"><th class="styleguide-table__header styleguide-table__header--token">Token</th><th class="styleguide-table__header">rem</th><th>px</th></tr>`;
 
 let data = [
-  { name: "$spacing-2xs", rem: "0.5", px: "8px" },
-  { name: "$spacing-xs", rem: "0.75", px: "12px" },
-  { name: "$spacing-sm", rem: "1", px: "16px" },
-  { name: "$spacing-md", rem: "1.5", px: "24px" },
-  { name: "$spacing-lg", rem: "2", px: "32px" },
-  { name: "$spacing-xl", rem: "2.25", px: "36px" },
-  { name: "$spacing-2xl", rem: "3", px: "48px" },
-  { name: "$spacing-3xl", rem: "4", px: "64px" }
+  { name: "$spacing-2xs", rem: "0.3125", px: "5px" },
+  { name: "$spacing-xs", rem: "0.625", px: "10px" },
+  { name: "$spacing-sm", rem: ".9375", px: "15px" },
+  { name: "$spacing-md", rem: "1.25", px: "20px" },
+  { name: "$spacing-lg", rem: "1.5625", px: "25px" },
+  { name: "$spacing-xl", rem: "1.875", px: "30px" },
+  { name: "$spacing-2xl", rem: "2.1875", px: "35px" },
+  { name: "$spacing-3xl", rem: "2.5", px: "40px" }
 ];
 
 data.map( (row) => {

@@ -59,7 +59,7 @@ input[type='text']:not(input[component]) {
   background-color: theme-color('g7');
   box-shadow: 0 2px 4px 0 rgba($black, .1);
   left: 0;
-  padding: get-spacer(30);
+  padding: $spacing-lg;
   position: absolute;
   top: 100%;
   width: 100%;
@@ -69,7 +69,7 @@ input[type='text']:not(input[component]) {
     @include list-unstyled;
 
     font-size: rem-calc(18px);
-    margin-bottom: get-spacer(30);
+    margin-bottom: $spacing-lg;
 
     li:not(:last-child) {
       margin-bottom: rem-calc(10px);

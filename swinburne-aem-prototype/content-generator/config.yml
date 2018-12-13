@@ -238,6 +238,12 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - c9
       - c10
       - c11
+      - g1
+      - g2
+      - g3
+      - g4
+      - g5
+      - g6
     startWith: text-
     title: 'Text Colour - %%prefix_normalised%%'
 
@@ -754,7 +760,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: align-center
     title: 'Align Center'
 
-
   # Margin
   margin:
     breakpoints:
@@ -771,18 +776,14 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - my
     sizes:
       - 0
-      - 1
-      - 2
-      - 3
-      - 4
       - 5
+      - 10
       - 15
+      - 20
+      - 25
       - 30
-      - 45
-      - 60
-      - 75
-      - 90
-      - 120
+      - 35
+      - 40
     title: '%%prefix_normalised%% - %%size%%px %%breakpoint%%'
 
   margin/mx-0:
@@ -814,18 +815,14 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - py
     sizes:
       - 0
-      - 1
-      - 2
-      - 3
-      - 4
       - 5
+      - 10
       - 15
+      - 20
+      - 25
       - 30
-      - 45
-      - 60
-      - 75
-      - 90
-      - 120
+      - 35
+      - 40
     title: '%%prefix_normalised%% %%size%%px %%breakpoint%%'
 
   margin/px-0:

@@ -75,26 +75,106 @@ $theme-colors: (
   'g6': map-deep-get($brand-colours, 'grey', 'g6'),
   'g7': map-deep-get($brand-colours, 'grey', 'g7'),
 );
-// Spacing
-
-$spacers: (
-  0   : 0,
-  15  : 15px,
-  30  : 30px,
-  45  : 45px,
-  60  : 60px,
-  75  : 75px,
-  90  : 90px,
-  120 : 120px,
-);
-
-$grid-gutter: 15;
-
 
 // Body
 
 $body-bg:                   theme-color('g7');
 $body-color:                theme-color('g1');
+
+// spacers used for utility classes
+$spacers: (
+  0   : 0,
+  5  : rem-calc(5px),
+  10  : rem-calc(10px),
+  15  : rem-calc(15px),
+  20  : rem-calc(20px),
+  25  : rem-calc(25px),
+  30  : rem-calc(30px),
+  35  : rem-calc(35px),
+  40  : rem-calc(40px),
+);
+
+//Spacing variables
+$spacing-2xs: rem-calc(5px);
+$spacing-xs: rem-calc(10px);
+$spacing-sm: rem-calc(15px);
+$spacing-md: rem-calc(20px);
+$spacing-lg: rem-calc(25px);
+$spacing-2xl: rem-calc(30px);
+$spacing-3xl: rem-calc(35px);
+$spacing-4xl: rem-calc(40px);
+
+$grid-gutter: 15;
+
+// UC Spacing conventions
+// Vertical Spacing \\
+// margin-bottom: map-deep-get($spacersVertical, 'lg', 'Y.5');
+$spacersVertical: (
+  'sm': (
+    'Y.5'  : rem-calc(12px),
+    'Y.75' : rem-calc(18px),
+    'Y1'   : rem-calc(24px),
+    'Y1.5' : rem-calc(36px),
+    'Y2'   : rem-calc(36px),
+    'Y2.5' : rem-calc(48px),
+    'Y3'   : rem-calc(54px),
+    'Y4'   : rem-calc(72px),
+  ),
+  'md': (
+    'Y.5'  : rem-calc(12px),
+    'Y.75' : rem-calc(18px),
+    'Y1'   : rem-calc(24px),
+    'Y1.5' : rem-calc(36px),
+    'Y2'   : rem-calc(48px),
+    'Y2.5' : rem-calc(54px),
+    'Y3'   : rem-calc(72px),
+    'Y4'   : rem-calc(96px),
+  ),
+  'lg': (
+    'Y.5'  : rem-calc(16px),
+    'Y.75' : rem-calc(24px),
+    'Y1'   : rem-calc(32px),
+    'Y1.5' : rem-calc(48px),
+    'Y2'   : rem-calc(64px),
+    'Y2.5' : rem-calc(72px),
+    'Y3'   : rem-calc(96px),
+    'Y4'   : rem-calc(128px),
+  )
+);
+// Horizontal Spacing \\
+// margin-bottom: map-deep-get($spacersHorizontal, 'lg', 'Y.5');
+$spacersHorizontal: (
+  'sm': (
+    'Y.5'  : rem-calc(8px),
+    'Y.75' : rem-calc(12px),
+    'Y1'   : rem-calc(16px),
+    'Y1.5' : rem-calc(24px),
+    'Y2'   : rem-calc(32px),
+    'Y2.5' : rem-calc(36px),
+    'Y3'   : rem-calc(48px),
+    'Y4'   : rem-calc(64px),
+  ),
+  'md': (
+    'Y.5'  : rem-calc(12px),
+    'Y.75' : rem-calc(18px),
+    'Y1'   : rem-calc(24px),
+    'Y1.5' : rem-calc(36px),
+    'Y2'   : rem-calc(48px),
+    'Y2.5' : rem-calc(54px),
+    'Y3'   : rem-calc(72px),
+    'Y4'   : rem-calc(96px),
+  ),
+  'lg': (
+    'Y.5'  : rem-calc(16px),
+    'Y.75' : rem-calc(24px),
+    'Y1'   : rem-calc(32px),
+    'Y1.5' : rem-calc(48px),
+    'Y2'   : rem-calc(64px),
+    'Y2.5' : rem-calc(72px),
+    'Y3'   : rem-calc(96px),
+    'Y4'   : rem-calc(128px),
+  )
+);
 
 
 // Components
@@ -123,14 +203,14 @@ $font-size-base:              16px;
 
 $line-height-base:            24px;
 
-$h1-font-size:                54px;
+$h1-font-size:                60px;
 $h2-font-size:                40px;
 $h3-font-size:                30px;
 $h4-font-size:                26px;
 $h5-font-size:                24px;
 $h6-font-size:                20px;
 
-$headings-margin-bottom:      get-spacer(15);
+$headings-margin-bottom:      $spacing-sm;
 $headings-font-weight:        normal;
 $headings-line-height:        1;
 $headings-color:              inherit;
@@ -162,25 +242,6 @@ $container-spacers: (
   lg : 64px
 );
 
-$spacers: (
-  0   : 0,
-  15  : rem-calc(15px),
-  16  : rem-calc(16px),
-  24  : rem-calc(24px),
-  30  : rem-calc(30px),
-  32  : rem-calc(32px),
-  45  : rem-calc(45px),
-  48  : rem-calc(48px),
-  60  : rem-calc(60px),
-  64  : rem-calc(64px),
-  72  : rem-calc(72px),
-  75  : rem-calc(75px),
-  90  : rem-calc(90px),
-  96  : rem-calc(96px),
-  120 : rem-calc(120px),
-  128 : rem-calc(128px),
-);
-
 // Custom typography map for responsive headings and text
 
 $typography: (
@@ -188,16 +249,15 @@ $typography: (
     h1: (
       xs: (
         font-size: 40px,
-        font-weight: bold,
-        line-height: 46px,
+        line-height: 42px,
       ),
       md: (
-        font-size: 42px,
-        line-height: 50px,
+        font-size: 40px,
+        line-height: 42px,
       ),
       lg: (
         font-size: $h1-font-size,
-        line-height: 62px,
+        line-height: 63px,
       ),
     ),
 
@@ -367,92 +427,6 @@ $screen-sm-max: 639px;
 
 // Grid columns
 $grid-gutter-width: #{$grid-gutter * 2}px;
-
-
-// Spacing
-
-$spacers: (
-  0   : 0,
-  15  : rem-calc(15px),
-  30  : rem-calc(30px),
-  45  : rem-calc(45px),
-  60  : rem-calc(60px),
-  75  : rem-calc(75px),
-  90  : rem-calc(90px),
-  120 : rem-calc(120px),
-);
-
-
-
-// UC Spacing conventions
-// Vertical Spacing \\
-// margin-bottom: map-deep-get($spacersVertical, 'lg', 'Y.5');
-$spacersVertical: (
-  'sm': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(36px),
-    'Y2.5' : rem-calc(48px),
-    'Y3'   : rem-calc(54px),
-    'Y4'   : rem-calc(72px),
-  ),
-  'md': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(48px),
-    'Y2.5' : rem-calc(54px),
-    'Y3'   : rem-calc(72px),
-    'Y4'   : rem-calc(96px),
-  ),
-  'lg': (
-    'Y.5'  : rem-calc(16px),
-    'Y.75' : rem-calc(24px),
-    'Y1'   : rem-calc(32px),
-    'Y1.5' : rem-calc(48px),
-    'Y2'   : rem-calc(64px),
-    'Y2.5' : rem-calc(72px),
-    'Y3'   : rem-calc(96px),
-    'Y4'   : rem-calc(128px),
-  )
-);
-// Horizontal Spacing \\
-// margin-bottom: map-deep-get($spacersHorizontal, 'lg', 'Y.5');
-$spacersHorizontal: (
-  'sm': (
-    'Y.5'  : rem-calc(8px),
-    'Y.75' : rem-calc(12px),
-    'Y1'   : rem-calc(16px),
-    'Y1.5' : rem-calc(24px),
-    'Y2'   : rem-calc(32px),
-    'Y2.5' : rem-calc(36px),
-    'Y3'   : rem-calc(48px),
-    'Y4'   : rem-calc(64px),
-  ),
-  'md': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(48px),
-    'Y2.5' : rem-calc(54px),
-    'Y3'   : rem-calc(72px),
-    'Y4'   : rem-calc(96px),
-  ),
-  'lg': (
-    'Y.5'  : rem-calc(16px),
-    'Y.75' : rem-calc(24px),
-    'Y1'   : rem-calc(32px),
-    'Y1.5' : rem-calc(48px),
-    'Y2'   : rem-calc(64px),
-    'Y2.5' : rem-calc(72px),
-    'Y3'   : rem-calc(96px),
-    'Y4'   : rem-calc(128px),
-  )
-);
 
 // Navs
 

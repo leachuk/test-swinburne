@@ -2,19 +2,29 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2018-12-13T11:58:42.556+11:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
-        jcr:title="iconography"
+        jcr:title="Iconography"
         sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="iconography"
-        pageTitle="iconography">
+        navTitle="Iconography"
+        pageTitle="Iconography">
         <aside
+            jcr:lastModified="{Date}2018-12-11T12:35:17.166+11:00"
+            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"
+            cancelInheritParent="false"
             componentId="aside_OXPX8QJQS">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
+            <bgimage
+                jcr:lastModified="{Date}2018-12-11T12:35:17.166+11:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdesign/components/media/image"/>
         </aside>
         <article
             jcr:primaryType="nt:unstructured"
@@ -24,9 +34,12 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <text
+                    jcr:lastModified="{Date}2018-12-11T12:27:19.985+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_7IUDARLLG"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-60]"
                     text="&lt;h1>Iconography&lt;/h1>&#xd;&#xa;"
                     textIsRich="true"/>
             </par>

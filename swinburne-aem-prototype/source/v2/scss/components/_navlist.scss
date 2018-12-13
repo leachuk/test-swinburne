@@ -4,8 +4,8 @@
 
   border-bottom: 0;
   border-top: 0;
-  padding-bottom: get-spacer(15);
-  padding-top: get-spacer(15);
+  padding-bottom: $spacing-sm;
+  padding-top: $spacing-sm;
 
   @include list-unstyled;
 

@@ -9,6 +9,18 @@
   padding-right: 15px;
 }
 
+//Custom grid gutter
+@mixin grid-gutter($gutter:  15) {
+  .row {
+    margin-left: -#{$gutter}px;
+    margin-right: -#{$gutter}px;
+    & > [class*=col-] {
+      padding-left: #{$gutter}px;
+      padding-right: #{$gutter}px;
+    }
+  }
+}
+
 // =============================================================================
 // String Replace
 // =============================================================================

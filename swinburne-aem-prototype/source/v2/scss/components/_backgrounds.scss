@@ -36,6 +36,13 @@ $colors:
   background-attachment: scroll !important;
 }
 
+.bg-dark {
+  background-color: $tertiary !important;
+  *:not(a){
+    color: $white;
+  }
+}
+
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-between($breakpoint, $breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);

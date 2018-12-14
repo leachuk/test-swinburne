@@ -1,6 +1,6 @@
 @import "variables";
 
-$styleguide-sidebar-width: 240px;
+$styleguide-sidebar-width: 260px;
 
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
@@ -34,9 +34,8 @@ html:not(.aem-AuthorLayer-Edit ) {
         display: block;
         position: absolute;
         left:0; top:0; right: 0;
-        height: 142px;
-        //background-color: $secondary;
-        background: url("https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png") bottom left repeat;
+        height: 236px;
+        background: url("https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png") bottom left repeat-x #feeb15;
         content: "";
       }
     }
@@ -51,11 +50,11 @@ html:not(.aem-AuthorLayer-Edit ) {
           display: block;
           top: 0;
           height: auto;
-          margin-top: 5px;
-          margin-bottom: 0;
+          margin-top: $spacing-2xs;
+          margin-bottom: $spacing-sm;
         }
         & > li {
-          margin-left: 15px;
+          margin-left: $spacing-sm;
           a {
             &:hover {
               text-decoration: none;
@@ -73,7 +72,7 @@ html:not(.aem-AuthorLayer-Edit ) {
 
     .nav-link {
       color: #737578;
-      font-size: 14px;
+      font-size: 16px;
       padding-bottom: 0;
       margin-bottom: 0;
     }
@@ -86,12 +85,14 @@ html:not(.aem-AuthorLayer-Edit ) {
 
   // todo: remove this after typography DLS ticket SWU-398 is complete
   .text[component] h1 {
-    padding: 50px 0;
-    font-size: 35px;
-    font-weight: 300;
-    text-transform: none;
-    margin-bottom: 60px;
+    padding: 0;
     position: relative;
+    margin-bottom: 109px;
+    line-height: 197px;
+
+    &:after {
+      display: none;
+    }
   }
 }
 

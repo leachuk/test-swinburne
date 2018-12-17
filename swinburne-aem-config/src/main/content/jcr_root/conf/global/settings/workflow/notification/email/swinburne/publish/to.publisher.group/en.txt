@@ -1,0 +1,16 @@
+From: no-reply@swin.edu.au
+Subject: Ready to Publish: ${payloadPath}
+
+====================================================================================================
+Workflow : ${wfModelTitle}
+Start Time : ${wfStartTime}
+Request Submitted By : ${wfinitiatorName}
+Request Reviewed By : ${wfPreviousStepUser}
+====================================================================================================
+
+The following website content has been approved and ready to be published: ${authorPath}${payloadOpenURL}
+
+Reviewer message:
+${wfPreviousStepComment}
+
+This is an automatically generated message. Please do not reply.

@@ -1,0 +1,15 @@
+From: no-reply@swin.edu.au
+To: ${wfinitiatorEmail}
+Subject: Page Approved - Publish: ${payloadPath}
+
+====================================================================================================
+Workflow : ${wfModelTitle}
+Request Approved By : ${wfPreviousStepUser}
+====================================================================================================
+
+The following website content has been approved for publish: ${authorPath}${payloadOpenURL}
+
+Approver message:
+${wfPreviousStepComment}
+
+This is an automatically generated message. Please do not reply.

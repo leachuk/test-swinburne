@@ -1,0 +1,17 @@
+From: no-reply@swin.edu.au
+To: ${wfinitiatorEmail}
+Subject: Rejected Content Review - Publish: ${payloadPath}
+
+====================================================================================================
+Workflow : ${wfModelTitle}
+Request Rejected By : ${wfPreviousStepUser}
+====================================================================================================
+
+The following website content review has not been approved to be published: ${authorPath}${payloadOpenURL}
+
+Reviewer message:
+${wfPreviousStepComment}
+
+Please edit content and resubmit for approval.
+
+This is an automatically generated message. Please do not reply.

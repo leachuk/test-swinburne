@@ -1,0 +1,9 @@
+Subject: Workflow-Mail
+To: ${createdByEmail}
+To: ${lastModifiedByEmail}
+
+Hello ${createdByName},
+
+This is default mail generated.
+
+Please contact your admin related to this mail.

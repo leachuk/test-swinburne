@@ -32,7 +32,7 @@
 
     <filter root="/etc/tenants/swinburne" mode="update"/>
 
-    <filter root="/conf/global/settings/workflow"/>
+    <filter root="/conf/global/settings/workflow" mode="update"/>
 
 
     <!--<filter root="/conf/swinburne/settings/cloudconfigs" mode="update"/>-->

@@ -985,22 +985,20 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
 
   visibility:
     prefixes:
-      - hidden
-      - hidden-lg-down
-      - hidden-lg-up
-      - hidden-md-down
-      - hidden-md-up
-      - hidden-sm-down
-      - hidden-sm-up
-      - hidden-xs-down
-      - hidden-xs-up
-      - hidden-xl-down
-      - hidden-xl-up
+      - invisible-lg-down
+      - invisible-lg-up
+      - invisible-md-down
+      - invisible-md-up
+      - invisible-sm-down
+      - invisible-sm-up
+      - invisible-xs-down
+      - invisible-xs-up
+      - invisible-xl-down
+      - invisible-xl-up
       - invisible
       - sr-only
       - sr-only-focusable
       - text-hide
-      - visible
     title: '%%prefix_normalised%%'
 
   schema/widgets/onlinemedia:

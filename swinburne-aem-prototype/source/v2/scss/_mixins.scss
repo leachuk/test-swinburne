@@ -10,7 +10,7 @@
 }
 
 //Custom grid gutter
-@mixin grid-gutter($gutter:  15) {
+@mixin grid-gutter($gutter) {
   .row {
     margin-left: -#{$gutter}px;
     margin-right: -#{$gutter}px;
@@ -19,6 +19,11 @@
       padding-right: #{$gutter}px;
     }
   }
+}
+
+// code snippet styling
+@mixin code-snippet() {
+  font-family: monospace;
 }
 
 // =============================================================================

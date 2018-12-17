@@ -1,29 +1,20 @@
-@import "variables";
-
-$styleguide-sidebar-width: 240px;
+$styleguide-sidebar-width: 260px;
 
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
     .article,
     aside,
     .aside {
-      height: 100%;
-    }
-
-    .aside {
-      display: flex;
-    }
-
-    .article,
-    div.article,
-    aside {
-      display: inline-block;
-      vertical-align: top;
+      min-height: 100%;
     }
 
     div.article {
+      margin-left: $styleguide-sidebar-width;
       width: calc(100% - #{$styleguide-sidebar-width});
+      overflow-y: scroll;
+      height: 100%;
     }
+
     article {
       width: 100%;
       padding: 0 3.5%;
@@ -34,13 +25,13 @@ html:not(.aem-AuthorLayer-Edit ) {
         display: block;
         position: absolute;
         left:0; top:0; right: 0;
-        height: 142px;
-        //background-color: $secondary;
-        background: url("https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png") bottom left repeat;
+        height: 236px;
+        background: url("https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png") bottom left repeat-x #feeb15;
         content: "";
       }
     }
     aside {
+      position: fixed;
       width: $styleguide-sidebar-width;
       border-right: 1px solid $grey-5;
       padding: 10px;
@@ -51,11 +42,11 @@ html:not(.aem-AuthorLayer-Edit ) {
           display: block;
           top: 0;
           height: auto;
-          margin-top: 5px;
-          margin-bottom: 0;
+          margin-top: $spacing-2xs;
+          margin-bottom: $spacing-sm;
         }
         & > li {
-          margin-left: 15px;
+          margin-left: $spacing-sm;
           a {
             &:hover {
               text-decoration: none;
@@ -73,25 +64,27 @@ html:not(.aem-AuthorLayer-Edit ) {
 
     .nav-link {
       color: #737578;
-      font-size: 14px;
+      font-size: 16px;
       padding-bottom: 0;
       margin-bottom: 0;
     }
 
     p {
-      max-width: 700px;
+      max-width: 750px;
       font-size: 16px;
     }
   }
 
   // todo: remove this after typography DLS ticket SWU-398 is complete
   .text[component] h1 {
-    padding: 50px 0;
-    font-size: 35px;
-    font-weight: 300;
-    text-transform: none;
-    margin-bottom: 60px;
+    padding: 0;
     position: relative;
+    margin-bottom: 109px;
+    line-height: 197px;
+
+    &:after {
+      display: none;
+    }
   }
 }
 
@@ -120,7 +113,7 @@ html:not(.aem-AuthorLayer-Edit ) {
 
     &--code {
       width: 200px;
-      font-family: monospace;
+      @include code-snippet();
     }
   }
 }

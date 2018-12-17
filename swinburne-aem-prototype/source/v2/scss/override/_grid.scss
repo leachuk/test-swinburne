@@ -10,13 +10,17 @@
   &-full {
     max-width: 100%;
   }
+
 }
 
-.row {
-  margin-left: -#{$grid-gutter}px;
-  margin-right: -#{$grid-gutter}px;
-  & > [class*=col-] {
-    padding-left: #{$grid-gutter}px;
-    padding-right: #{$grid-gutter}px;
-  }
+@include grid-gutter($grid-gutter);
+@include media-breakpoint-up(md) {
+  @include grid-gutter($grid-gutter-sm);
 }
+@include media-breakpoint-up(lg) {
+  @include grid-gutter($grid-gutter-lg);
+}
+@include media-breakpoint-up(xl) {
+  @include grid-gutter($grid-gutter-xl);
+}
+

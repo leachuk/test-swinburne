@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-12-17T13:13:02.603+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Visibility"
@@ -25,20 +23,12 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <text
-                    jcr:created="{Date}2018-12-17T09:10:35.226+11:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-17T09:10:55.317+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_XQWVI9T6S"
                     text="&lt;h1>Visibility&lt;/h1>&#xd;&#xa;"
                     textIsRich="true"/>
                 <text_307685071
-                    jcr:created="{Date}2018-12-17T11:36:45.962+11:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-17T11:43:38.114+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_307685071_2F7XDTE8E"
@@ -46,10 +36,6 @@
                     text="&lt;p>Components can be hidden from users by content authors or developers by using AEM modifiers or CSS utility classes.&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <text_143484197
-                    jcr:created="{Date}2018-12-17T11:27:20.022+11:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-17T11:43:03.492+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_143484197_RMWAULICL"
@@ -57,10 +43,6 @@
                     text="&lt;h4>AEM Modifier&lt;br />&#xd;&#xa;&lt;/h4>&#xd;&#xa;&lt;p>Use &lt;b>visibility → invisible&lt;/b> modifier hide a component from the user. It will apply CSS class '.invisible' to the root node of the component.&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <text_234419528
-                    jcr:created="{Date}2018-12-17T11:39:00.156+11:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-17T13:12:34.703+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_234419528_AK6XYI9O3"
@@ -68,10 +50,6 @@
                     text="&lt;h4>Responsive Utilities&lt;/h4>&#xd;&#xa;&lt;p>&lt;span style=&quot;font-weight: normal;&quot;>For faster mobile-friendly development, these modifiers or CSS classes can be used to hide elements by devices.&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <embedsource
-                    jcr:created="{Date}2018-12-17T09:11:30.367+11:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-17T13:13:02.601+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/embedsource"
                     componentId="embedsource_D50SPWPWC"

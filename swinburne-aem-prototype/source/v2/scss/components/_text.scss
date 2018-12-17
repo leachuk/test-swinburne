@@ -34,25 +34,25 @@
     line-height: 42pt;
     font-weight: 300;
     &:after {
-      margin: 30px 0;
+      margin: $spacing-2xl 0;
     }
     @include media-breakpoint-up(md) {
       font-size: 60pt;
       line-height: 63pt;
       &:after {
-        margin: 40px 0;
+        margin: $spacing-4xl 0;
       }
     }
   }
   h2, h3, h4 {
     &:after {
-      margin: 20px 0;
+      margin: $spacing-md 0;
     }
   }
   h2, h3 {
     @include media-breakpoint-up(md) {
       &:after {
-        margin: 30px 0;
+        margin: $spacing-2xl 0;
       }
     }
   }
@@ -82,7 +82,7 @@
       font-size: 22pt;
       line-height: 30pt;
       &:after {
-        margin: 25px 0;
+        margin: $spacing-lg 0;
         width: 60px;
       }
     }
@@ -104,35 +104,35 @@
       }
     }
     h1 {
-      padding-bottom: 30px;
+      padding-bottom: $spacing-2xl;
       @include media-breakpoint-up(md) {
-        padding-bottom: 40px;
+        padding-bottom: $spacing-4xl;
       }
     }
     h2, h3, h4 {
-      padding-bottom: 20px;
+      padding-bottom: $spacing-md;
     }
     h2, h3 {
       @include media-breakpoint-up(md) {
-        padding-bottom: 30px;
+        padding-bottom: $spacing-2xl;
       }
     }
     h4 {
       @include media-breakpoint-up(md) {
-        padding-bottom: 25px;
+        padding-bottom: $spacing-lg;
       }
     }
   }
   &.text-underlined {
     & > *:after {
-      margin: 20px 0;
+      margin: $spacing-md 0;
       @include media-breakpoint-up(md) {
-        margin: 30px 0;
+        margin: $spacing-2xl 0;
       }
     }
   }
   ol, ul {
-    padding-left: 20px;
+    padding-left: $spacing-md;
     padding-bottom: 0;
   }
   ul {

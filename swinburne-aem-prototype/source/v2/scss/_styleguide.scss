@@ -1,5 +1,3 @@
-@import "variables";
-
 $styleguide-sidebar-width: 260px;
 
 html:not(.aem-AuthorLayer-Edit ) {
@@ -7,23 +5,16 @@ html:not(.aem-AuthorLayer-Edit ) {
     .article,
     aside,
     .aside {
-      height: 100%;
-    }
-
-    .aside {
-      display: flex;
-    }
-
-    .article,
-    div.article,
-    aside {
-      display: inline-block;
-      vertical-align: top;
+      min-height: 100%;
     }
 
     div.article {
+      margin-left: $styleguide-sidebar-width;
       width: calc(100% - #{$styleguide-sidebar-width});
+      overflow-y: scroll;
+      height: 100%;
     }
+
     article {
       width: 100%;
       padding: 0 3.5%;
@@ -40,6 +31,7 @@ html:not(.aem-AuthorLayer-Edit ) {
       }
     }
     aside {
+      position: fixed;
       width: $styleguide-sidebar-width;
       border-right: 1px solid $grey-5;
       padding: 10px;
@@ -78,7 +70,7 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
 
     p {
-      max-width: 700px;
+      max-width: 750px;
       font-size: 16px;
     }
   }
@@ -121,7 +113,7 @@ html:not(.aem-AuthorLayer-Edit ) {
 
     &--code {
       width: 200px;
-      font-family: monospace;
+      @include code-snippet();
     }
   }
 }

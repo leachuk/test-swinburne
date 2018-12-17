@@ -1108,7 +1108,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
   # Content Link
   content/link/button-nav:
     flat: true
-    prefix: 'navbar-toggler navbar-toggler-right hidden-lg-up'
+    prefix: 'navbar-toggler navbar-toggler-right invisible-lg-up'
     title: 'Button Nav'
 
   content/link/navbar-brand:

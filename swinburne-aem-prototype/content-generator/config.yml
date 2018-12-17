@@ -642,7 +642,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
 
   text/style:
     prefixes:
-      - underlined
+      - -underlined
     prefixValue: text-
     title: 'Underlined'
 
@@ -2218,7 +2218,7 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - textStyleP4: { cssName: 'p4', text: "Text Style (P4)" }
       - fontFamillyOpenSans: { cssName : 'f-open-sans', text: 'Font Family (Open Sans)' }
       - fontFamillyBrushUp: { cssName : 'f-brush-up', text: 'Font Family (Brush Up)' }
-      - textCapUnderline: { cssName: 'text-cap-underline', text: 'Text Cap Underline' }
+      - textCapUnderline: { cssName: 'text--cap-underline', text: 'Text Cap Underline' }
 
   paraformat/formats: &global-dialog-text-rtePlugins-paraformat-formats
     template: 'text-rtePlugins-paraformat-formats'

@@ -14,8 +14,8 @@
       line-height: 30pt;
     }
   }
-  &.text-underlined > *,
-  .text-cap-underline,
+  &.text--underlined > *,
+  .text--cap-underline,
   h1, h2, h3, h4 {
     margin: 0;
     &:after {
@@ -124,8 +124,8 @@
       }
     }
   }
-  .text-cap-underline:after,
-  &.text-underlined > *:after {
+  .text--cap-underline:after,
+  &.text--underlined > *:after {
     margin: 20px 0;
     @include media-breakpoint-up(md) {
       margin: 30px 0;

@@ -476,13 +476,9 @@
  }
 }
 
-
-$containers: xl "1400", lg "992", md "768", sm "640";
-@each $container in $containers {
-  $key: nth($container, 1);
-  $value: nth($container, 2);
-
-  .container-#{$key} {
-    max-width: #{$value}px !important;
+@each $breakpoint in map-keys($container-max-widths) {
+  $infix: breakpoint-infix($breakpoint, $container-max-widths);
+  .container#{$infix} {
+    max-width: map-get($container-max-widths, $breakpoint) !important;
   }
 }

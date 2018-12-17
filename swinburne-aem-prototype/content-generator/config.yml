@@ -660,22 +660,22 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   grid/container-width/container-sm:
     flat: true
     prefix: container-sm
-    title: 'Container Small ( max 640px )'
+    title: 'Container Small ( max 320px )'
 
   grid/container-width/container-md:
     flat: true
     prefix: container-md
-    title: 'Container Medium ( max 768px )'
+    title: 'Container Medium ( max 640px )'
 
   grid/container-width/container-lg:
     flat: true
     prefix: container-lg
-    title: 'Container Large ( max 992px )'
+    title: 'Container Large ( max 1024px )'
 
   grid/container-width/container-xl:
     flat: true
     prefix: container-xl
-    title: 'Container X Large ( max 1400px )'
+    title: 'Container X Large ( max 1366px )'
 
   grid/list/pagelist/columns/column-1:
     flat: true

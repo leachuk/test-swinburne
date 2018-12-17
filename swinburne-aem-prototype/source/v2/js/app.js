@@ -1,5 +1,4 @@
 // Inject the Sass into the page
-import '../scss/styleguide.scss'
 import '../scss/app.scss'
 
 // Core modules...

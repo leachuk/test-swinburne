@@ -17,17 +17,15 @@ html:not(.aem-AuthorLayer-Edit ) {
 
     article {
       width: 100%;
-      padding: 0 3.5%;
+      //padding: 0 3.5%;
       position: relative;
 
-      // todo: remove after component for content block hero is added to DLS
-      &:before {
-        display: block;
-        position: absolute;
-        left:0; top:0; right: 0;
-        height: 236px;
-        background: url("https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png") bottom left repeat-x #feeb15;
-        content: "";
+      .contentblock {
+        padding: $spacing-3xl 3.5% $spacing-2xl;
+
+        &:first-child {
+          background: url(https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png) bottom left repeat-x #feeb15;
+        }
       }
     }
     aside {
@@ -75,17 +73,17 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
   }
 
-  // todo: remove this after typography DLS ticket SWU-398 is complete
-  .text[component] h1 {
-    padding: 0;
-    position: relative;
-    margin-bottom: 109px;
-    line-height: 197px;
-
-    &:after {
-      display: none;
-    }
-  }
+  //// todo: remove this after typography DLS ticket SWU-398 is complete
+  //.text[component] h1 {
+  //  padding: 0;
+  //  position: relative;
+  //  margin-bottom: 109px;
+  //  line-height: 197px;
+  //
+  //  &:after {
+  //    display: none;
+  //  }
+  //}
 }
 
 .styleguide-table {

@@ -17,7 +17,6 @@ html:not(.aem-AuthorLayer-Edit ) {
 
     article {
       width: 100%;
-      //padding: 0 3.5%;
       position: relative;
 
       .contentblock {
@@ -72,18 +71,6 @@ html:not(.aem-AuthorLayer-Edit ) {
       font-size: 16px;
     }
   }
-
-  //// todo: remove this after typography DLS ticket SWU-398 is complete
-  //.text[component] h1 {
-  //  padding: 0;
-  //  position: relative;
-  //  margin-bottom: 109px;
-  //  line-height: 197px;
-  //
-  //  &:after {
-  //    display: none;
-  //  }
-  //}
 }
 
 .styleguide-table {

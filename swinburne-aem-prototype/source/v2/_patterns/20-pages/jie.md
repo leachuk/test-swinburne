@@ -1,3 +1,0 @@
----
-title: January Info Evening
----

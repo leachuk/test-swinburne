@@ -8,19 +8,19 @@ let data = [
   { name: "$spacing-sm", rem: ".9375", px: "15px" },
   { name: "$spacing-md", rem: "1.25", px: "20px" },
   { name: "$spacing-lg", rem: "1.5625", px: "25px" },
-  { name: "$spacing-xl", rem: "1.875", px: "30px" },
-  { name: "$spacing-2xl", rem: "2.1875", px: "35px" },
-  { name: "$spacing-3xl", rem: "2.5", px: "40px" }
+  { name: "$spacing-2xl", rem: "1.875", px: "30px" },
+  { name: "$spacing-3xl", rem: "2.1875", px: "35px" },
+  { name: "$spacing-4xl", rem: "2.5", px: "40px" }
 ];
 
-data.map( (row) => {
+data.map((row) => {
   table += `<tr class="styleguide-table__row">`;
   Object.entries(row).forEach((cell, index) => {
     const cellClass = index === 0 ? 'styleguide-table__cell--code' : '';
     table += `<td class="styleguide-table__cell ${cellClass}">${cell[1]}</td>`;
   });
   table += `</tr>`;
-} );
+});
 
 table += `</table>`;
 

@@ -1,9 +1,0 @@
-{
-  "basetemplate1": {
-    "componentId": "basetemplate1",
-    "componentTheme": "",
-    "componentModifier": "",
-    "componentStyle": "",
-    "text": "<h1>Base Template</h1>"
-  }
-}

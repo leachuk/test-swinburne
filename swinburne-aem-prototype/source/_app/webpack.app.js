@@ -22,6 +22,7 @@ module.exports = env => {
       loader: 'css-loader',
 
       options: {
+        url: false,
         importLoaders : 1,
         minimize      : env.prod === true,
         sourceMap     : env.dev === true,

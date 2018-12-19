@@ -5,6 +5,7 @@ import org.openqa.selenium.Dimension
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.firefox.FirefoxOptions
 import org.openqa.selenium.firefox.FirefoxProfile
 import org.openqa.selenium.htmlunit.HtmlUnitDriver
 import org.openqa.selenium.logging.LogType
@@ -44,29 +45,47 @@ boolean is64bit = System.getProperty("sun.arch.data.model").contains("64")
 
 reportingListener = new ReportListener()
 
-String global_scheme = System.properties.getProperty("crx.scheme","http")
-String global_host = System.properties.getProperty("crx.host","192.168.27.2")
-String global_port = System.properties.getProperty("crx.port","4502")
-String global_username = System.properties.getProperty("crx.user","admin")
-String global_password = System.properties.getProperty("crx.password","admin")
-String global_url = "${global_scheme}://${global_host}:${global_port}"
-String global_authoruimode = System.properties.getProperty("crx.authoruimode","CLASSIC")
+String GLOBAL_ENV = System.getProperty("geb.env","local-chrome")
+String GLOBAL_SCHEME = System.properties.getProperty("crx.scheme","http")
+String GLOBAL_HOST = System.properties.getProperty("crx.host","192.168.27.2")
+String GLOBAL_PORT = System.properties.getProperty("crx.port","4502")
+String GLOBAL_USER = System.properties.getProperty("crx.user","admin")
+String GLOBAL_PASS = System.properties.getProperty("crx.password","admin")
+String GLOBAL_URL = "${GLOBAL_SCHEME}://${GLOBAL_HOST}:${GLOBAL_PORT}"
+String GLOBAL_SELENIUMHUB_URL = System.properties.getProperty("selenumhuburl","http://192.168.27.2:32768/wd/hub")
+String GLOBAL_BUILD_DIR = System.properties.getProperty("project.buildDirectory", GLOBAL_ENV)
 
-printDebug("SETTINGS",[ global_host,global_port,global_username,'*'.multiply(global_password.length())])
+//save params if have not been defined
+System.properties.setProperty("crx.scheme", GLOBAL_SCHEME)
+System.properties.setProperty("crx.host", GLOBAL_HOST)
+System.properties.setProperty("crx.port", GLOBAL_PORT)
+System.properties.setProperty("crx.password", GLOBAL_PASS)
+System.properties.setProperty("crx.user", GLOBAL_USER) //used in report
+System.properties.setProperty("geb.build.baseUrl", GLOBAL_URL)  //used in report
+System.properties.setProperty("selenumhuburl", GLOBAL_SELENIUMHUB_URL)  //used in report
+System.properties.setProperty("geb.env", GLOBAL_ENV)  //used in report
+System.properties.setProperty("project.buildDirectory", GLOBAL_BUILD_DIR)  //used in report
 
-System.properties.setProperty("geb.build.baseUrl", global_url)
-
-printDebug("SETTINGS URL", global_url)
-
-String gebEnv = System.getProperty("geb.env")
-printDebug("SETTINGS geb.env", gebEnv)
-
-if ( gebEnv == "" ) {
-    System.setProperty("geb.env","local-chrome")
+String GLOBAL_DRIVER_TYPE = findDriverExecutable("chromedriver").canonicalPath
+//remember which driver being used
+if (GLOBAL_ENV.startsWith("local-")) {
+    System.properties.setProperty("selenumhuburl", "local")
+} else {
+    GLOBAL_DRIVER_TYPE =  GLOBAL_BUILD_DIR
 }
+System.properties.setProperty("testingdriver", GLOBAL_DRIVER_TYPE)  //used in report
 
-
-printDebug("SETTINGS driver", findDriverExecutable("chromedriver").canonicalPath)
+printDebug("SETTINGS",[
+        GLOBAL_HOST,
+        GLOBAL_PORT,
+        GLOBAL_USER,
+        '*'.multiply(GLOBAL_PASS.length()),
+        GLOBAL_SELENIUMHUB_URL,
+        GLOBAL_BUILD_DIR,
+        GLOBAL_URL,
+        GLOBAL_ENV,
+        GLOBAL_DRIVER_TYPE
+])
 
 //specific driver
 environments {
@@ -96,6 +115,16 @@ environments {
                 printDebug("CANT FIND DRIVER", driverPath)
                 return
             }
+            def driverFile = new File(driverPath)
+
+            if (!driverFile.canExecute()) {
+                printDebug("UPDATING DRIVER PERMISSIONS", ["dirty"])
+                Runtime.getRuntime().exec("chmod +x $driverPath")
+                if (!driverFile.canExecute()) {
+                    printDebug("PLEASE FIX DRIVER PERMISSIONS MANUALLY", [$driverPath])
+                    System.exit(0)
+                }
+            }
 
             System.setProperty("webdriver.chrome.driver",driverPath)
 
@@ -122,15 +151,16 @@ environments {
                     "--homepage=about:blank",
                     "--no-first-run",
                     "--disable-infobars",
+                    "--hide-scrollbars",
                     "--disable-notifications",
                     "--disable-extensions",
                     "--profile-directory=Default",
-                    "--user-data-dir=target/chrome-user-data",
+                    "--user-data-dir=${GLOBAL_BUILD_DIR}/chrome-user-data",
                     "--use-fake-ui-for-media-stream=1",
                     "--disable-popup-blocking",
                     "--disable-gpu"
 
-                )
+            )
             );
 
             Map<String, Object> prefs = new HashMap<String, Object>();
@@ -149,7 +179,7 @@ environments {
             capabilities.setCapability(ChromeOptions.CAPABILITY, options)
             capabilities.setCapability(CapabilityType.LOGGING_PREFS, logPrefs)
 
-            return new ChromeDriver(capabilities)
+            return new ChromeDriver(options)
 
         }
     }
@@ -358,13 +388,70 @@ environments {
         }
     }
 
-    "remote-seleniumhub" {
+    "remote-seleniumhub-chrome" {
+        driver = {
+            printDebug("DRIVER", "remote-seleniumhub-chrome")
+
+            ChromeOptions options = new ChromeOptions()
+            options.addArguments(
+                    Arrays.asList(
+                            "--headless",
+                            "--enable-automation",
+                            "--disable-web-security",
+                            "--allow-file-access-from-files",
+                            "--allow-running-insecure-content",
+                            "--allow-cross-origin-auth-prompt",
+                            "--allow-file-access",
+                            "--no-sandbox",
+                            "--ignore-certificate-errors",
+                            "--homepage=about:blank",
+                            "--no-first-run",
+                            "--disable-infobars",
+                            "--hide-scrollbars",
+                            "--disable-notifications",
+                            "--disable-extensions",
+                            "--use-fake-ui-for-media-stream=1",
+                            "--disable-popup-blocking",
+                            "--disable-overlay-scrollbar",
+                            "--no-default-browser-check"
+                    )
+            )
+
+            URL url = new URL(GLOBAL_SELENIUMHUB_URL)
+            return new RemoteWebDriver(url, options)
+        }
+    }
+
+    "remote-seleniumhub-firefox" {
         driver = {
             printDebug("DRIVER", "local-seleniumhub")
-            DesiredCapabilities capabilities = DesiredCapabilities.phantomjs()
-            capabilities.setBrowserName("phantomjs")
-            URL url = new URL("http://127.0.0.1:4444/wd/hub")
-            return new RemoteWebDriver(url, capabilities);
+            FirefoxOptions options = new FirefoxOptions()
+            options.addArguments(
+                    Arrays.asList(
+                            "--headless",
+                            "--enable-automation",
+                            "--disable-web-security",
+                            "--allow-file-access-from-files",
+                            "--allow-running-insecure-content",
+                            "--allow-cross-origin-auth-prompt",
+                            "--allow-file-access",
+                            "--no-sandbox",
+                            "--ignore-certificate-errors",
+                            "--homepage=about:blank",
+                            "--no-first-run",
+                            "--disable-infobars",
+                            "--hide-scrollbars",
+                            "--disable-notifications",
+                            "--disable-extensions",
+                            "--use-fake-ui-for-media-stream=1",
+                            "--disable-popup-blocking",
+                            "--disable-overlay-scrollbar",
+                            "--no-default-browser-check"
+                    )
+            )
+
+            URL url = new URL(GLOBAL_SELENIUMHUB_URL)
+            return new RemoteWebDriver(url, options)
         }
     }
 

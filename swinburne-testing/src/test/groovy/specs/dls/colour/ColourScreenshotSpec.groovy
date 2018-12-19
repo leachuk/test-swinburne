@@ -1,27 +1,29 @@
-package specs.component.content.table
+package specs.dls.colour
 
+import spock.lang.IgnoreRest
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class TableScreenshotSpec extends ComponentSpec {
+class ColourScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "component/content/table"
+    String pathPage = "Styleguide-SWU/guidelines/colour"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
-    String componentPath = "jcr:content/article/par/contentblock1/par/table"
+    String componentPath = "jcr:content/article/par/embedsource"
+
 
     def setupSpec() {
         loginAsAdmin()
     }
 
-    @Unroll("Appearance of Component Variant: Default in #viewport.label")
-    def "Appearance of Component Variant: Default"() {
+    @Unroll("Appearance of Color #viewport.label")
+    def "Appearance of Color"() {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#table1"
+        def selector = "#embedsource_6KCRFO4FQ"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -30,13 +32,11 @@ class TableScreenshotSpec extends ComponentSpec {
         then: 'The component should appear on the page'
         def component = waitForComponent(selector)
 
-        then: 'It should match the small viewport reference image.'
+        then: 'It should match the viewport reference image.'
         designRef(selector)
 
         where:
         viewport << getViewPorts()
 
     }
-
-
 }

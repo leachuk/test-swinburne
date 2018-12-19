@@ -1,23 +1,31 @@
 #!/bin/bash
 
+
+EXEC_ENV="${1:-local-chrome}" #localremote - seleniumhub - local-phantomjs
+
+if [ "$EXEC_ENV" == "" ]; then
+    echo "Please specify driver name ex remote-seleniumhub-chrome"
+    exit 1
+fi
+
 #ensure latest drivers are installed
-mvn clean verify -DskipTests=true
+#mvn clean verify -DskipTests=true -Dproject.buildDirectory="$EXEC_ENV"
+
 
 #THIS WILL RUN ALL WORKING TESTS
-#EXEC_TEST="${1:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*}"
+#EXEC_TEST="${2:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*,DataLayer*,External*,PageAuthor*,EventDetails*,OnlineMedia*}"
 
 #THIS WILL RUN ONLY ONE TEST YOU CAN USE THIS IN DEV
-EXEC_TEST="${1:-PageDetailsPublishSpec}"
+EXEC_TEST="${2:-Colour*}"
 
-EXEC_ENV="${2:-local-chrome}" #localremote - seleniumhub - local-phantomjs
 EXEC_TEST_EXCLUDE="${3:-}"
-EXEC_HOST="${4:-192.168.27.2}"
+EXEC_HOST="${4:-0.0.0.0}"
 EXEC_PARAMS=" ${*:5}"
 
 echo "RUNNING ENV: $EXEC_ENV"
 echo "RUNNING TESTS: $EXEC_TEST"
 echo "EXCLUDING TESTS: $EXEC_TEST_EXCLUDE"
 echo "WITH PARAMETERS: $EXEC_PARAMS"
-echo mvn test -Dgeb.env="$EXEC_ENV" -Dcrx.host="$EXEC_HOST" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""$EXEC_PARAMS"
+echo mvn test -Dgeb.env="$EXEC_ENV" -Dproject.buildDirectory="$EXEC_ENV" -Dcrx.host="$EXEC_HOST" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""$EXEC_PARAMS"
 
-mvn test -e -Dgeb.env="$EXEC_ENV" -Dcrx.host="$EXEC_HOST" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""$EXEC_PARAMS"
+mvn clean test -Dgeb.env="$EXEC_ENV" -Dproject.buildDirectory="$EXEC_ENV" -Dcrx.host="$EXEC_HOST" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""$EXEC_PARAMS"

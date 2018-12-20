@@ -26,7 +26,7 @@
             <sendemailprocess
                     jcr:description="Read content from payload and send mail to Reviewers to review the content"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Send Templated Email - Swinburne - To Review"
+                    jcr:title="Notify Reviewers"
                     sling:resourceType="swinburne/components/workflow/sendemailprocess">
                 <metaData
                         jcr:primaryType="nt:unstructured"
@@ -42,7 +42,7 @@
                     sling:resourceType="cq/workflow/components/model/participant">
                 <metaData
                         jcr:primaryType="nt:unstructured"
-                        DO_NOTIFY="true"
+                        DO_NOTIFY="false"
                         PARTICIPANT="swin-reviewers"/>
             </participant>
             <or
@@ -65,10 +65,10 @@
                                 PROCESS_AUTO_ADVANCE="true"
                                 templatePath="/conf/global/settings/workflow/notification/email/swinburne/unpublish/to.initiator.approved/en.txt"/>
                     </sendemailprocess>
-                    <sendemailprocess
+                    <sendemailprocess_1
                             jcr:description="Read content from payload and send mail to Publishers to further go through the process"
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Send Templated Email - Swinburne - Approved by Reviewer"
+                            jcr:title="Notify Publishers"
                             sling:resourceType="swinburne/components/workflow/sendemailprocess">
                         <metaData
                                 jcr:primaryType="nt:unstructured"
@@ -76,7 +76,7 @@
                                 PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
                                 PROCESS_AUTO_ADVANCE="true"
                                 templatePath="/conf/global/settings/workflow/notification/email/swinburne/unpublish/to.publisher.group/en.txt"/>
-                    </sendemailprocess>
+                    </sendemailprocess_1>
                     <participant
                             jcr:description="Review and Unpublish"
                             jcr:primaryType="nt:unstructured"
@@ -84,9 +84,8 @@
                             sling:resourceType="cq/workflow/components/model/participant">
                         <metaData
                                 jcr:primaryType="nt:unstructured"
-                                DO_NOTIFY="true"
-                                PARTICIPANT="swin-publishers"
-                                timeoutMillis="0"/>
+                                DO_NOTIFY="false"
+                                PARTICIPANT="swin-publishers"/>
                     </participant>
                     <or
                             jcr:primaryType="nt:unstructured"
@@ -95,42 +94,28 @@
                             branches="2"
                             orSplit="true">
                         <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/flow/components/parsys">
+                            <unlockpayloadprocess
+                                jcr:description="A process to unlock the payload. - Unlock Payload Process"
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="cq/flow/components/parsys">
-                            <and
+                                jcr:title="Approve Unpublish"
+                                sling:resourceType="cq/workflow/components/workflow/unlockpayloadprocess">
+                                <metaData
                                     jcr:primaryType="nt:unstructured"
-                                    jcr:title="Unlock &amp; Deactivate"
-                                    sling:resourceType="cq/workflow/components/model/and"
-                                    branches="2">
-                                <_x0031_
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="cq/flow/components/parsys">
-                                    <unlockpayloadprocess
-                                            jcr:description="A process to unlock the payload."
-                                            jcr:primaryType="nt:unstructured"
-                                            jcr:title="Unlock Payload Process"
-                                            sling:resourceType="cq/workflow/components/workflow/unlockpayloadprocess">
-                                        <metaData
-                                                jcr:primaryType="nt:unstructured"
-                                                PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
-                                                PROCESS_AUTO_ADVANCE="true"/>
-                                    </unlockpayloadprocess>
-                                </_x0031_>
-                                <_x0032_
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="cq/flow/components/parsys">
-                                    <process
-                                            jcr:primaryType="nt:unstructured"
-                                            jcr:title="Deactivate Page/Asset"
-                                            sling:resourceType="cq/workflow/components/model/process">
-                                        <metaData
-                                                jcr:primaryType="nt:unstructured"
-                                                PROCESS="com.day.cq.wcm.workflow.process.DeactivatePageProcess"
-                                                PROCESS_AUTO_ADVANCE="true"
-                                                replicateAsParticipant="true"/>
-                                    </process>
-                                </_x0032_>
-                            </and>
+                                    PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
+                                    PROCESS_AUTO_ADVANCE="true"/>
+                            </unlockpayloadprocess>
+                            <process
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Deactivate Page/Asset"
+                                sling:resourceType="cq/workflow/components/model/process">
+                                <metaData
+                                    jcr:primaryType="nt:unstructured"
+                                    PROCESS="com.day.cq.wcm.workflow.process.DeactivatePageProcess"
+                                    PROCESS_AUTO_ADVANCE="true"
+                                    replicateAsParticipant="true"/>
+                            </process>
                             <sendemailprocess
                                     jcr:description="Read content from payload and send email to initiator about content being deactivated"
                                     jcr:primaryType="nt:unstructured"

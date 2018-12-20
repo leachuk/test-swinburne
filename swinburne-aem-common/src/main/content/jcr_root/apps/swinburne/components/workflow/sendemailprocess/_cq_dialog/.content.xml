@@ -88,7 +88,7 @@
                                         rootPath="/"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"/>
                                     <participant
-                                            fieldDescription="Select user or group to be notified with selected template"
+                                            fieldDescription="Select user or group to be notified with selected template.&#xa;[If this field is left empty, please make sure to provide 'To' address on the email-template.]"
                                             fieldLabel="To: User/Group"
                                             jcr:primaryType="nt:unstructured"
                                             name="./metaData/customParticipant"

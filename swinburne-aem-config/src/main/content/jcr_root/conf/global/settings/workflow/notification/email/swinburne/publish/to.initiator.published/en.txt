@@ -7,6 +7,6 @@ Workflow : ${wfModelTitle}
 Request Published By : ${wfPreviousStepUser}
 ====================================================================================================
 
-The following website content has been published: ${publishPath}${payloadOpenURL}
+The following website content has been published: ${publishPath}${payloadPath}
 
 This is an automatically generated message. Please do not reply.

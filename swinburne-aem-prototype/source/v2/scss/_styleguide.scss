@@ -17,17 +17,15 @@ html:not(.aem-AuthorLayer-Edit ) {
 
     article {
       width: 100%;
-      padding: 0 3.5%;
       position: relative;
 
-      // todo: remove after component for content block hero is added to DLS
-      &:before {
-        display: block;
-        position: absolute;
-        left:0; top:0; right: 0;
-        height: 236px;
-        background: url("https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png") bottom left repeat-x #feeb15;
-        content: "";
+      .contentblock {
+        padding: $spacing-3xl 3.5% $spacing-4xl;
+
+        &:first-child {
+          background: url(https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png) bottom left repeat-x #feeb15;
+          padding-bottom: $spacing-2xs;
+        }
       }
     }
     aside {
@@ -70,26 +68,14 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
 
     p {
-      max-width: 750px;
+      max-width: 720px;
       font-size: 16px;
-    }
-  }
-
-  // todo: remove this after typography DLS ticket SWU-398 is complete
-  .text[component] h1 {
-    padding: 0;
-    position: relative;
-    margin-bottom: 109px;
-    line-height: 197px;
-
-    &:after {
-      display: none;
     }
   }
 }
 
 .styleguide-table {
-  font-size: 16px;
+  font-size: 14px;
 
   &__row {
     border-bottom: 1px solid $grey-4;
@@ -105,14 +91,20 @@ html:not(.aem-AuthorLayer-Edit ) {
 
   &__cell,
   &__header {
-    padding: $spacing-xs 0;
+    padding: $spacing-xs $spacing-lg;
+
+    &:first-child{
+      padding-left: $spacing-xs;
+    }
+    &:last-child {
+      padding-rightt: $spacing-xs;
+    }
   }
 
   &__cell {
-    width: 100px;
+    //width: 150px;
 
     &--code {
-      width: 200px;
       @include code-snippet();
     }
   }
@@ -127,6 +119,7 @@ html:not(.aem-AuthorLayer-Edit ) {
       font-weight: bold;
       min-height: 120px;
       margin-bottom: #{$grid-gutter * 2}px;
+
       span {
         display: block;
         word-wrap: break-word;

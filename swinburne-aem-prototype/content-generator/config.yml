@@ -2178,15 +2178,18 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
   styles/styles: &global-dialog-text-rtePlugins-styles-styles
     template: 'text-rtePlugins-styles-styles'
     contents:
-      - textC1: { cssName: 'text-c1', text: "Colour C1 (Green)" }
-      - textC2: { cssName: 'text-c2', text: "Colour C2 (Blue)" }
-      - textC3: { cssName: 'text-c3', text: "Colour C3 (Turquoise)" }
-      - textC4: { cssName: 'text-c4', text: "Colour C4 (Gold)" }
-      - textC5: { cssName: 'text-c5', text: "Colour C5 (Purple)" }
-      - textC6: { cssName: 'text-c6', text: "Colour C6 (Grey)" }
-      - textC7: { cssName: 'text-c7', text: "Colour C7 (Swinburne Red)" }
-      - textC8: { cssName: 'text-c8', text: "Colour C8 (Black)" }
-      - textC9: { cssName: 'text-c9', text: "Colour C9 (White)" }
+      - textC1: { cssName: 'text-c1', text: "Colour Red" }
+      - textC2: { cssName: 'text-c2', text: "Colour Yellow" }
+      - textC3: { cssName: 'text-c3', text: "Colour Charcoal" }
+      - textC4: { cssName: 'text-c4', text: "Colour Green" }
+      - textC5: { cssName: 'text-c5', text: "Colour Blue" }
+      - textC6: { cssName: 'text-c6', text: "Colour Purple" }
+      - textC7: { cssName: 'text-c7', text: "Colour Turquoise" }
+      - textC1: { cssName: 'text-g1', text: "Colour Grey 1" }
+      - textC2: { cssName: 'text-g2', text: "Colour Grey 2" }
+      - textC3: { cssName: 'text-g3', text: "Colour Grey 3" }
+      - textC4: { cssName: 'text-g4', text: "Colour Grey 4" }
+      - textC5: { cssName: 'text-g5', text: "Colour Grey 5" }
       - textC10: { cssName: 'text-c10', text: "Colour C10 (Dark Grey)" }
       - textC11: { cssName: 'text-c11', text: "Colour C11 (Light Grey)" }
       - textRed: { cssName: 'text-red', text: "Text Colour Primary" }

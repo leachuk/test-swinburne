@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-12-18T11:28:28.820+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Grid"
@@ -26,10 +24,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <contentblock
-                    jcr:created="{Date}2018-12-18T11:28:11.726+11:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-18T11:28:11.726+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_RRXXFG2A0">
@@ -43,10 +37,6 @@
                     </par>
                 </contentblock>
                 <contentblock_1243620408
-                    jcr:created="{Date}2018-12-18T11:28:21.457+11:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-18T11:28:21.457+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_1243620408_WK0UXCTCP">

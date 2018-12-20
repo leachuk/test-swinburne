@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-12-20T11:53:55.694+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Visibility"
@@ -52,8 +50,6 @@
                             text="&lt;p>Components can be hidden from users by content authors or developers by using AEM modifiers or CSS utility classes.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_143484197
-                            jcr:lastModified="{Date}2018-12-20T11:53:55.690+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_143484197_RMWAULICL"
@@ -61,8 +57,6 @@
                             text="&lt;h4>Hiding a component&lt;br>&#xd;&#xa;&lt;/h4>&#xd;&#xa;&lt;p>Apply modifier&amp;nbsp;&lt;b>visibility / invisible&lt;/b>&amp;nbsp;to completely hide a component from the user all on all devices. This applied CSS class .invisible to the root node of the component.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;h4>Responsive Utilities&lt;/h4>&#xd;&#xa;&lt;p>The below modifiers are found under &lt;b>visibility&lt;/b>, and they can be used to hide components only on certain screen sizes.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <embedsource
-                            jcr:lastModified="{Date}2018-12-20T10:29:16.899+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/embedsource"
                             componentId="embedsource_D50SPWPWC"

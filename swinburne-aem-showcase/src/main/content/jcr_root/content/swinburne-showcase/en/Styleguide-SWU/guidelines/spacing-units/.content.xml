@@ -44,8 +44,6 @@
                     componentId="contentblock_721375841_NM6ERX9TU">
                     <par jcr:primaryType="nt:unstructured">
                         <text_1081139847
-                            jcr:lastModified="{Date}2018-12-20T11:47:04.549+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1081139847_XCCNYWPKF"
@@ -53,8 +51,6 @@
                             text="&lt;h3>Spacing Units&lt;/h3>&#xd;&#xa;&lt;p>&lt;span style=&quot;font-weight: normal;&quot;>Use the Spacing Scale as much as possible when building individual elements and spacing them apart. Every margin or padding within a component or between components should comply to this scale.&lt;/span>&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <embedsource
-                            jcr:lastModified="{Date}2018-12-20T11:27:00.410+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/embedsource"
                             componentId="embedsource_ACLEDF2QK"
@@ -62,19 +58,11 @@
                     </par>
                 </contentblock_721375841>
                 <contentblock_1984999505
-                    jcr:created="{Date}2018-12-20T11:46:45.765+11:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2018-12-20T11:46:45.765+11:00"
-                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_1984999505_F6JJ5TVQY">
                     <par jcr:primaryType="nt:unstructured">
                         <text
-                            jcr:created="{Date}2018-12-20T11:46:56.380+11:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2018-12-20T11:47:14.867+11:00"
-                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_SP0TKYANJ"

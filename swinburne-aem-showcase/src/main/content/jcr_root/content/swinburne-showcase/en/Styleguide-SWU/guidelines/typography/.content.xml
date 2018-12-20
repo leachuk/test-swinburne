@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2018-12-20T09:58:44.252+11:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Typography"
@@ -23,46 +25,91 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
-                <text
+                <contentblock
+                    jcr:created="{Date}2018-12-20T09:17:34.709+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-12-20T09:17:34.709+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_STOB2DUX8"
-                    text="&lt;h1>Typography&lt;/h1>&#xd;&#xa;"
-                    textIsRich="true"/>
-                <text_948915483
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_YEYQ9EZDG">
+                    <par jcr:primaryType="nt:unstructured">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_STOB2DUX8"
+                            text="&lt;h1>Typography&lt;/h1>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </par>
+                </contentblock>
+                <contentblock_1378969136
+                    jcr:created="{Date}2018-12-20T09:17:53.493+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-12-20T09:17:53.493+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_948915483_A9NQJGOO2"
-                    text="&lt;h1>Heading 1&lt;/h1>&#xd;&#xa;&lt;h2>Heading 2&lt;/h2>&#xd;&#xa;&lt;h3>Heading 3&lt;/h3>&#xd;&#xa;&lt;h4>Heading 4&lt;/h4>&#xd;&#xa;&lt;h5>Heading 5&lt;/h5>&#xd;&#xa;&lt;p>&lt;span class=&quot;text-cap-underline&quot;>body default with text cap underline:&amp;nbsp;We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>body bold :&amp;nbsp;We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>body small :&amp;nbsp;We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>&lt;span class=&quot;fw-600&quot;>body small bold :&amp;nbsp;We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/span>&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;http://www.google.fr&quot; target=&quot;_blank&quot;>This is a text link&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;i>This text has added emphasis&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>This text is deleted&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items&amp;nbsp;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
-                    textIsRich="true"/>
-                <text_948915483_copy
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_948915483_A9NQJGOO2"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-dark]"
-                    text="&lt;h1>Heading 1&lt;/h1>&#xd;&#xa;&lt;h2>Heading 2&lt;/h2>&#xd;&#xa;&lt;h3>Heading 3&lt;/h3>&#xd;&#xa;&lt;h4>Heading 4&lt;/h4>&#xd;&#xa;&lt;h5>Heading 5&lt;/h5>&#xd;&#xa;&lt;p>body default : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>body bold : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>body small : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>&lt;span class=&quot;fw-600&quot;>body small bold : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/span>&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;http://www.google.fr&quot; target=&quot;_blank&quot;>This is a text link&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;i>This text has added emphasis&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>This text is deleted&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items  &lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
-                    textIsRich="true"/>
-                <text_2096403043
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_2096403043_MC5EXBBDH"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/text/list/colors/list-dark]"
-                    text="&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li> Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
-                    textIsRich="true"/>
-                <text_1105824900
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_1105824900_TYFE7KQE2"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/text/style/underlined]"
-                    text="&lt;p>body default underlined : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/p>&#xd;&#xa;"
-                    textIsRich="true"/>
-                <text_1644544976
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_1644544976_PXS3QM5BJ"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/text/headings/style/heading-outlined]"
-                    text="&lt;h1>Heading 1 not underlined&lt;/h1>&#xd;&#xa;"
-                    textIsRich="true"/>
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_1378969136_NOY3YKSXF">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text_948915483
+                            jcr:lastModified="{Date}2018-12-20T09:32:08.510+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_948915483_A9NQJGOO2"
+                            text="&lt;h1>Heading 1&lt;/h1>&#xd;&#xa;&lt;h2>Heading 2&lt;/h2>&#xd;&#xa;&lt;h3>Heading 3&lt;/h3>&#xd;&#xa;&lt;h4>Heading 4&lt;/h4>&#xd;&#xa;&lt;h5>Heading 5&lt;/h5>&#xd;&#xa;&lt;p>&lt;span class=&quot;text-cap-underline&quot;>body default with text cap underline: We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>body bold : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>body small : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>&lt;span class=&quot;fw-600&quot;>body small bold : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/span>&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;http://www.google.fr&quot; target=&quot;_blank&quot;>Link: his is a text link&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;i>Italic: This text has added emphasis&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>This text is deleted&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items  &lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_948915483_copy
+                            jcr:lastModified="{Date}2018-12-20T09:58:44.248+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_948915483_A9NQJGOO2"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-dark,swinburne-showcase:component-style-modifier/margin/mb-40]"
+                            text="&lt;h1>Heading 1&lt;/h1>&#xd;&#xa;&lt;h2>Heading 2&lt;/h2>&#xd;&#xa;&lt;h3>Heading 3&lt;/h3>&#xd;&#xa;&lt;h4>Heading 4&lt;/h4>&#xd;&#xa;&lt;h5>Heading 5&lt;/h5>&#xd;&#xa;&lt;p>body default with text cap underline: We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/p>&#xd;&#xa;&lt;p>&lt;b>body bold : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>body small : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>&lt;b>body small bold : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne&lt;/b>.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;http://www.google.fr/&quot;>Link: his is a text link&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;i>Italic: This text has added emphasis&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>This text is deleted&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items  &lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text
+                            jcr:created="{Date}2018-12-20T09:49:47.379+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2018-12-20T09:50:00.426+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_RCWSG6FY6"
+                            text="&lt;p>Modifiers → Text / List / Colors / List Dark:&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_2096403043
+                            jcr:lastModified="{Date}2018-12-20T09:57:44.911+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_2096403043_MC5EXBBDH"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/text/list/colors/list-dark,swinburne-showcase:component-style-modifier/margin/mb-40]"
+                            text="&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li> Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_2134108520
+                            jcr:created="{Date}2018-12-20T09:50:35.055+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2018-12-20T09:50:39.150+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_2134108520_VS8GKNI4O"
+                            text="&lt;p>Modifiers →&amp;nbsp;Text / Headings / Style / Outlined:&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1644544976
+                            jcr:lastModified="{Date}2018-12-20T09:58:12.721+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1644544976_PXS3QM5BJ"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/text/headings/style/heading-outlined,swinburne-showcase:component-style-modifier/margin/mb-40]"
+                            text="&lt;h1>Heading 1 not underlined&lt;br />&#xd;&#xa;&lt;/h1>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </par>
+                </contentblock_1378969136>
             </par>
         </article>
     </jcr:content>

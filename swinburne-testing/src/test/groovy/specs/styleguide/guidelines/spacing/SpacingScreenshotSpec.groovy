@@ -32,11 +32,7 @@ class SpacingScreenshotSpec extends ComponentSpec {
         def component = waitForComponent(selector)
 
         then: 'It should match reference image.'
-//        js.executeScript("")
-//        js.executeScript("arguments[0].setAttribute('style', 'box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8);position: relative;z-index: 9999;')", element);
         designRef(selector)
 
     }
-
-
 }

@@ -3,15 +3,13 @@ $styleguide-sidebar-width: 260px;
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {
     .article,
-    aside,
-    .aside {
+    aside {
       min-height: 100%;
     }
 
     div.article {
       margin-left: $styleguide-sidebar-width;
       width: calc(100% - #{$styleguide-sidebar-width});
-      overflow-y: scroll;
       height: 100%;
     }
 
@@ -33,6 +31,8 @@ html:not(.aem-AuthorLayer-Edit ) {
       width: $styleguide-sidebar-width;
       border-right: 1px solid $grey-5;
       padding: 10px;
+      overflow-y: scroll;
+      height: 100%;
 
       .navlist[component] {
         &,

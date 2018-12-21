@@ -19,7 +19,7 @@ class GridScreenshotSpec extends ComponentSpec {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#embed-source-grid"
+        def selector = "#4-columns-grid"
 
         when: 'I am in the component showcase page'
         setWindowSize()

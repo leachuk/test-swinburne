@@ -73,6 +73,10 @@
         <package.uploadProtocol>http</package.uploadProtocol>
         <aem.verison>6.4</aem.verison>
         <buildNumber>0</buildNumber>
+        <seleniumhubhost.host>192.168.27.2</seleniumhubhost.host>
+        <seleniumhubhost.port>32768</seleniumhubhost.port>
+        <seleniumhubhost.scheme>http</seleniumhubhost.scheme>
+        <seleniumhubhost.service>/wd/hub</seleniumhubhost.service>
     </properties>
 
 

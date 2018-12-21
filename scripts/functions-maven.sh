@@ -2,6 +2,14 @@
 
 DEFAULT_POM_FILE="pom.xml"
 
+LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}')"
+
+GROOVY=$(which groovy)
+if [ -z "$GROOVY" ]; then
+    echo "ERROR: PLEASE INSTALL GROOVY"
+fi
+
+
 function getDefaultFromPom() {
     local PARAM_NAME=${1:-}
     local POM_FILE=${2:-$DEFAULT_POM_FILE}
@@ -33,20 +41,31 @@ function evalMaven() {
 
 }
 
+
+
 AEM_USER=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.password" "$POM_FILE")
 AEM_PASS=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.username" "$POM_FILE")
 AEM_HOST=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.host" "$POM_FILE")
 AEM_PORT=$(getParamOrDefault "$SCRIPT_PARAMS" "crx.port" "$POM_FILE")
 AEM_SCHEMA=$(getParamOrDefault "$SCRIPT_PARAMS" "package.uploadProtocol" "$POM_FILE")
+SELENIUMHUB_HOST=$(getParamOrDefault "$SCRIPT_PARAMS" "seleniumhubhost.host" "$POM_FILE")
+SELENIUMHUB_PORT=$(getParamOrDefault "$SCRIPT_PARAMS" "seleniumhubhost.port" "$POM_FILE")
+SELENIUMHUB_SCHEME=$(getParamOrDefault "$SCRIPT_PARAMS" "seleniumhubhost.scheme" "$POM_FILE")
+SELENIUMHUB_SERVICE=$(getParamOrDefault "$SCRIPT_PARAMS" "seleniumhubhost.service" "$POM_FILE")
 
-#if [[ "$SCRIPT_PARAMS" == *"localhost"* ]]; then
-#    AEM_HOST = "localhost"
-#fi
 
-echo "Params:     $SCRIPT_PARAMS"
-echo "AEM_USER:   $AEM_USER"
-echo "AEM_PASS:   $(sed "s/\w/*/g" <<< ${AEM_PASS})"
-echo "AEM_HOST:   $AEM_HOST"
-echo "AEM_PORT:   $AEM_PORT"
-echo "AEM_SCHEMA: $AEM_SCHEMA"
-echo "POM_FILE:   ${POM_FILE:-$DEFAULT_POM_FILE}"
+if [ -z "$SKIP_PRINT_CONFIG" ]; then
+    echo "Params:     $SCRIPT_PARAMS"
+    echo "POM_FILE:   ${POM_FILE:-$DEFAULT_POM_FILE}"
+    echo "AEM_USER:   $AEM_USER"
+    echo "AEM_PASS:   $(sed "s/\w/*/g" <<< ${AEM_PASS})"
+    echo "AEM_HOST:   $AEM_HOST"
+    echo "AEM_PORT:   $AEM_PORT"
+    echo "AEM_SCHEMA: $AEM_SCHEMA"
+    echo "SELENIUMHUB_HOST: $SELENIUMHUB_HOST"
+    echo "SELENIUMHUB_PORT: $SELENIUMHUB_PORT"
+    echo "SELENIUMHUB_SCHEME: $SELENIUMHUB_SCHEME"
+    echo "SELENIUMHUB_SERVICE: $SELENIUMHUB_SERVICE"
+
+    unset SKIP_PRINT_CONFIG
+fi

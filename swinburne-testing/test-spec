@@ -4,7 +4,7 @@
 mvn clean verify -DskipTests=true
 
 #THIS WILL RUN ALL WORKING TESTS
-#EXEC_TEST="${1:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*}"
+#EXEC_TEST="${1:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*, Colours*, Grid*, Spacing*, Typography*, Visibility*}"
 
 #THIS WILL RUN ONLY ONE TEST YOU CAN USE THIS IN DEV
 EXEC_TEST="${1:-PageDetailsPublishSpec}"

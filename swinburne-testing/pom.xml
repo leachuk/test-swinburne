@@ -30,52 +30,304 @@
     </developers>
 
     <properties>
-        <geb.version>2.0</geb.version>
-        <selenium.version>3.7.1</selenium.version>
-        <groovy.version>2.4.13</groovy.version>
+        <geb.version>2.2</geb.version>
+        <selenium.version>3.14.0</selenium.version>
+        <groovy.version>2.4.14</groovy.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <spock.version>1.1-groovy-2.4</spock.version>
-
         <surefire.plugin.version>2.20</surefire.plugin.version>
         <surefire.plugin.parallel>methods</surefire.plugin.parallel>
         <surefire.plugin.threadCount>4</surefire.plugin.threadCount>
         <surefire.plugin.forkCount>4</surefire.plugin.forkCount>
         <surefire.plugin.threadCountSuites>5</surefire.plugin.threadCountSuites>
         <surefire.plugin.reuseForks>true</surefire.plugin.reuseForks>
-
         <!-- Sets the environment set to use with the functional tests -->
         <geb.env>local</geb.env>
-        <geb.build.reportsDir>target/test-reports/geb</geb.build.reportsDir>
-
+        <project.buildDirectory>target</project.buildDirectory>
+        <geb.build.reportsDir>test-reports/geb</geb.build.reportsDir>
         <surefire.test.runOrder>alphabetical</surefire.test.runOrder>
-
-        <com.athaydes.spockframework.report.outputDir>target/spock-reports</com.athaydes.spockframework.report.outputDir>
-
         <maven.build.timestamp.format>yyyy-MM-dd HH</maven.build.timestamp.format>
     </properties>
 
+    <reporting>
+        <plugins>
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-surefire-report-plugin</artifactId>-->
+            <!--<version>2.18.1</version>-->
+            <!--<configuration>-->
+            <!--<outputDirectory>${project.buildDirectory}/spock-reports</outputDirectory>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+            <!-- Normally, we take off the dependency report, saves time. -->
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-project-info-reports-plugin</artifactId>-->
+            <!--<version>2.9</version>-->
+            <!--<configuration>-->
+            <!--<dependencyLocationsEnabled>false</dependencyLocationsEnabled>-->
+            <!--<outputDirectory>${project.buildDirectory}/spock-reports</outputDirectory>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+            <!-- Cobertura Code Coverage Plugin -->
+            <!--<plugin>-->
+            <!--<groupId>org.codehaus.mojo</groupId>-->
+            <!--<artifactId>cobertura-maven-plugin</artifactId>-->
+            <!--<version>2.7</version>-->
+            <!--<configuration>-->
+            <!--<check></check>-->
+            <!--<instrumentation>-->
+            <!--<ignoreTrivial>true</ignoreTrivial>-->
+            <!--</instrumentation>-->
+            <!--<formats>-->
+            <!--<format>html</format>-->
+            <!--<format>xml</format>-->
+            <!--</formats>-->
+            <!--<outputDirectory>${project.buildDirectory}</outputDirectory>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-javadoc-plugin</artifactId>-->
+            <!--<version>2.10.4</version>-->
+            <!--<configuration>-->
+            <!--<show>public</show>-->
+            <!--<outputDirectory>${project.buildDirectory}</outputDirectory>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+            <!--<version>2.17</version>-->
+            <!--<configuration>-->
+            <!--<configLocation>checkstyle.xml</configLocation>-->
+            <!--<outputDirectory>${project.buildDirectory}</outputDirectory>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+        </plugins>
+    </reporting>
 
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>sonatype-snapshot</id>-->
-            <!--<url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
-            <!--<layout>default</layout>-->
-        <!--</repository>-->
-        <!--<repository>-->
-            <!--<id>jcenter</id>-->
-            <!--<name>JCenter Repo</name>-->
-            <!--<url>http://jcenter.bintray.com</url>-->
-        <!--</repository>-->
-    <!--</repositories>-->
-    <!--<pluginRepositories>-->
-        <!--<pluginRepository>-->
-            <!--<id>sonatype-snapshot</id>-->
-            <!--<url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
-            <!--<layout>default</layout>-->
-        <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
+    <build>
+        <defaultGoal>test</defaultGoal>
+        <outputDirectory>${project.buildDirectory}</outputDirectory>
+        <testOutputDirectory>${project.buildDirectory}/test-classes</testOutputDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.6.1</version>
+                <executions>
+                    <execution>
+                        <id>auto-clean</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                        <configuration>
+                            <filesets>
+                                <fileset>
+                                    <directory>${project.buildDirectory}</directory>
+                                    <followSymlinks>false</followSymlinks>
+                                </fileset>
+                            </filesets>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.webdriverextensions</groupId>
+                <artifactId>webdriverextensions-maven-plugin</artifactId>
+                <version>3.1.3</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>install-drivers</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--<plugin>-->
+            <!--<artifactId>maven-release-plugin</artifactId>-->
+            <!--<version>2.5.3</version>-->
+            <!--<configuration>-->
+            <!--<arguments>-DskipTests</arguments>-->
+            <!--<tagNameFormat>aemdesign-@{project.version}</tagNameFormat>-->
+            <!--<releaseProfiles>release</releaseProfiles>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.plugin.version}</version>
+                <configuration>
+                    <testClassesDirectory>${project.buildDirectory}/test-classes</testClassesDirectory>
+                    <reportsDirectory>${project.buildDirectory}/surefire-reports</reportsDirectory>
+                    <classesDirectory>${project.buildDirectory}/test-classes</classesDirectory>
+                    <tempDir>${project.basedir}/${project.buildDirectory}/surefire</tempDir>
+                    <useFile>false</useFile>
+                    <includes>
+                        <include>**/*Spec.*</include>
+                    </includes>
+                    <systemPropertyVariables>
+                        <geb.env>${geb.env}</geb.env>
+                        <geb.build.reportsDir>${project.buildDirectory}/${geb.build.reportsDir}</geb.build.reportsDir>
+                        <com.athaydes.spockframework.report.outputDir>${project.buildDirectory}/spock-reports</com.athaydes.spockframework.report.outputDir>
+                        <com.athaydes.spockframework.report.aggregatedJsonReportDir>${project.buildDirectory}/spock-reports</com.athaydes.spockframework.report.aggregatedJsonReportDir>
+                    </systemPropertyVariables>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-failsafe-plugin</artifactId>-->
+            <!--<version>2.20.1</version>-->
+            <!--<configuration>-->
+            <!--<systemPropertyVariables>-->
+            <!--<com.athaydes.spockframework.report.outputDir>${project.buildDirectory}/spock-reports</com.athaydes.spockframework.report.outputDir>-->
+            <!--<buildDirectory>${project.buildDirectory}/spock-reports</buildDirectory>-->
+            <!--</systemPropertyVariables>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.groovy</groupId>
+                        <artifactId>groovy-all</artifactId>
+                        <version>${groovy.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>1.5.5</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-epub3</artifactId>
+                        <version>1.5.0-alpha.6</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj-pdf</artifactId>
+                        <version>1.5.0-alpha.15</version>
+                    </dependency>
+                    <!-- Comment this section to use the default jruby artifact provided by the plugin -->
+                    <dependency>
+                        <groupId>org.jruby</groupId>
+                        <artifactId>jruby-complete</artifactId>
+                        <version>1.7.26</version>
+                    </dependency>
+                    <!-- Comment this section to use the default AsciidoctorJ artifact provided by the plugin -->
+                    <dependency>
+                        <groupId>org.asciidoctor</groupId>
+                        <artifactId>asciidoctorj</artifactId>
+                        <version>1.5.5</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <sourceDirectory>${project.buildDirectory}/spock-reports</sourceDirectory>
+                    <outputDirectory>${project.buildDirectory}/docs</outputDirectory>
+                    <sourceHighlighter>coderay</sourceHighlighter>
+                    <imagesDir>../../</imagesDir>
+                    <attributes>
+                        <imagesdir>./</imagesdir>
+                    </attributes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>output-html</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>html5</backend>
+                            <attributes>
+                                <toc>left</toc>
+                                <icons>font</icons>
+                                <sectanchors>true</sectanchors>
+                                <!-- set the idprefix to blank -->
+                                <idprefix/>
+                                <idseparator>-</idseparator>
+                                <docinfo1>true</docinfo1>
+
+                                <revnumber>${project.version}</revnumber>
+                                <revdate>${maven.build.timestamp}</revdate>
+                                <organization>${project.organization.name}</organization>
+                            </attributes>
+                            <outputDirectory>${project.buildDirectory}/generated-docs</outputDirectory>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>output-docbook</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>docbook</backend>
+                            <doctype>book</doctype>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>output-epub</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>epub3</backend>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-pdf-doc</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>pdf</backend>
+                            <!-- Since 1.5.0-alpha.9 PDF back-end can use 'rouge' as well as 'coderay'
+                            for source highlighting -->
+                            <!-- Due to a known issue on windows, it is recommended to use 'coderay' until an new version of 'rouge' is released.
+                                    see discussions: https://github.com/asciidoctor/asciidoctor-maven-examples/pull/58
+                                                     https://github.com/asciidoctor/asciidoctorj-pdf/issues/3
+                                                     https://github.com/jneen/rouge/issues/661
+                            -->
+                            <attributes>
+                                <icons>font</icons>
+                                <pagenums/>
+                                <toc/>
+                                <idprefix/>
+                                <idseparator>-</idseparator>
+                                <sourcedir>./</sourcedir>
+
+                                <revnumber>${project.version}</revnumber>
+                                <revdate>${maven.build.timestamp}</revdate>
+                                <organization>${project.organization.name}</organization>
+                            </attributes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
 
     <profiles>
         <profile>
@@ -173,274 +425,39 @@
             </build>
         </profile>
 
+        <profile>
+            <id>local-open-report</id>
 
+            <activation>
+                <property>
+                    <name>project.buildDirectory</name>
+                    <value>local-chrome</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.gmaven</groupId>
+                        <artifactId>groovy-maven-plugin</artifactId>
+                        <version>2.0</version>
+                        <executions>
+                            <execution>
+                                <phase>test</phase>
+                                <goals>
+                                    <goal>execute</goal>
+                                </goals>
+                                <configuration>
+                                    <source>${project.basedir}/openReport.groovy</source>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
-    <reporting>
-        <plugins>
-
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.18.1</version>
-            </plugin>
-
-            <!-- Normally, we take off the dependency report, saves time. -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
-                <configuration>
-                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-                </configuration>
-            </plugin>
-
-            <!-- Cobertura Code Coverage Plugin -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.7</version>
-                <configuration>
-                    <check></check>
-                    <instrumentation>
-                        <ignoreTrivial>true</ignoreTrivial>
-                    </instrumentation>
-                    <formats>
-                        <format>html</format>
-                        <format>xml</format>
-                    </formats>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.4</version>
-                <configuration>
-                    <show>public</show>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
-                <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
-                </configuration>
-            </plugin>
-
-        </plugins>
-    </reporting>
-
-    <build>
-        <defaultGoal>test</defaultGoal>
-        <plugins>
-
-            <plugin>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>2.6.1</version>
-                <executions>
-                    <execution>
-                        <id>auto-clean</id>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>clean</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
-                <configuration>
-                    <arguments>-DskipTests</arguments>
-                    <tagNameFormat>swinburne-@{project.version}</tagNameFormat>
-                    <releaseProfiles>release</releaseProfiles>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${surefire.plugin.version}</version>
-                <configuration>
-                    <useFile>false</useFile>
-                    <includes>
-                        <include>**/*Spec.*</include>
-                    </includes>
-                    <systemPropertyVariables>
-                        <geb.env>${geb.env}</geb.env>
-                        <geb.build.reportsDir>${geb.build.reportsDir}</geb.build.reportsDir>
-                    </systemPropertyVariables>
-                    <testFailureIgnore>true</testFailureIgnore>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <version>1.5</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.codehaus.groovy</groupId>
-                        <artifactId>groovy-all</artifactId>
-                        <version>${groovy.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>com.github.webdriverextensions</groupId>
-                <artifactId>webdriverextensions-maven-plugin</artifactId>
-                <version>3.1.3</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>install-drivers</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.asciidoctor</groupId>
-                <artifactId>asciidoctor-maven-plugin</artifactId>
-                <version>1.5.5</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctorj-epub3</artifactId>
-                        <version>1.5.0-alpha.6</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctorj-pdf</artifactId>
-                        <version>1.5.0-alpha.15</version>
-                    </dependency>
-                    <!-- Comment this section to use the default jruby artifact provided by the plugin -->
-                    <dependency>
-                        <groupId>org.jruby</groupId>
-                        <artifactId>jruby-complete</artifactId>
-                        <version>1.7.26</version>
-                    </dependency>
-                    <!-- Comment this section to use the default AsciidoctorJ artifact provided by the plugin -->
-                    <dependency>
-                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctorj</artifactId>
-                        <version>1.5.5</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <sourceDirectory>target/spock-reports</sourceDirectory>
-                    <outputDirectory>target/docs</outputDirectory>
-                    <sourceHighlighter>coderay</sourceHighlighter>
-                    <imagesDir>../../</imagesDir>
-                    <attributes>
-                        <imagesdir>./</imagesdir>
-                    </attributes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>output-html</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>process-asciidoc</goal>
-                        </goals>
-                        <configuration>
-                            <backend>html5</backend>
-                            <attributes>
-                                <toc>left</toc>
-                                <icons>font</icons>
-                                <sectanchors>true</sectanchors>
-                                <!-- set the idprefix to blank -->
-                                <idprefix/>
-                                <idseparator>-</idseparator>
-                                <docinfo1>true</docinfo1>
-
-                                <revnumber>${project.version}</revnumber>
-                                <revdate>${maven.build.timestamp}</revdate>
-                                <organization>${project.organization.name}</organization>
-                            </attributes>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>output-docbook</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>process-asciidoc</goal>
-                        </goals>
-                        <configuration>
-                            <backend>docbook</backend>
-                            <doctype>book</doctype>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>output-epub</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>process-asciidoc</goal>
-                        </goals>
-                        <configuration>
-                            <backend>epub3</backend>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>generate-pdf-doc</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>process-asciidoc</goal>
-                        </goals>
-                        <configuration>
-                            <backend>pdf</backend>
-                            <!-- Since 1.5.0-alpha.9 PDF back-end can use 'rouge' as well as 'coderay'
-                            for source highlighting -->
-                            <!-- Due to a known issue on windows, it is recommended to use 'coderay' until an new version of 'rouge' is released.
-                                    see discussions: https://github.com/asciidoctor/asciidoctor-maven-examples/pull/58
-                                                     https://github.com/asciidoctor/asciidoctorj-pdf/issues/3
-                                                     https://github.com/jneen/rouge/issues/661
-                            -->
-                            <attributes>
-                                <icons>font</icons>
-                                <pagenums/>
-                                <toc/>
-                                <idprefix/>
-                                <idseparator>-</idseparator>
-                                <sourcedir>./</sourcedir>
-
-                                <revnumber>${project.version}</revnumber>
-                                <revdate>${maven.build.timestamp}</revdate>
-                                <organization>${project.organization.name}</organization>
-                            </attributes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>groovy-maven-plugin</artifactId>
-                <version>2.0</version>
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <source>${project.basedir}/openReport.groovy</source>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
     <dependencyManagement>
         <dependencies>
@@ -459,7 +476,6 @@
                 <artifactId>hamcrest-core</artifactId>
                 <version>1.3</version>
             </dependency>
-
             <dependency>
                 <groupId>com.opera</groupId>
                 <artifactId>operadriver</artifactId>
@@ -471,7 +487,6 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -489,7 +504,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
@@ -519,36 +533,30 @@
             <version>${geb.version}</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.5</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-firefox-driver</artifactId>
             <version>${selenium.version}</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-htmlunit-driver</artifactId>
             <version>2.52.0</version>
             <scope>test</scope>
         </dependency>
-
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
@@ -561,43 +569,29 @@
             <version>${selenium.version}</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
             <version>${selenium.version}</version>
             <scope>test</scope>
         </dependency>
-
-<!--
-        <dependency>
-            <groupId>com.github.detro.ghostdriver</groupId>
-            <artifactId>phantomjsdriver</artifactId>
-            <version>1.1.0</version>
-            <scope>test</scope>
-        </dependency>
--->
-
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
             <version>1.4.3</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>com.opera</groupId>
             <artifactId>operadriver</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
             <version>${selenium.version}</version>
             <scope>test</scope>
         </dependency>
-
         <!-- Optional dependencies for using Spock -->
         <dependency> <!-- enables mocking of classes (in addition to interfaces) -->
             <groupId>cglib</groupId>
@@ -615,18 +609,15 @@
             <artifactId>hamcrest-core</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.25</version>
         </dependency>
     </dependencies>
-
 </project>

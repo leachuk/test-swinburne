@@ -65,10 +65,24 @@ html:not(.aem-AuthorLayer-Edit ) {
       padding-bottom: 0;
       margin-bottom: 0;
     }
-
     p {
       max-width: 720px;
       font-size: 16px;
+    }
+    .icon {
+      margin-bottom: $spacing-3xl;
+      .fa {
+        font-size: 3em;
+        color: $grey-2;
+      }
+      span {
+        text-align: center;
+        display: block;
+        &:first-child {
+          margin-bottom: $spacing-lg;
+        }
+        &:last-child {}
+      }
     }
   }
 }

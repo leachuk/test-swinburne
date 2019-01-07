@@ -126,24 +126,24 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Backgrounds
   background:
     prefixes:
-      - c1
-      - c2
-      - c3
-      - c4
-      - c5
-      - c6
-      - c7
-      - c8
-      - c9
-      - c10
-      - c11
-      - c12
-      - c13
-      - c14
-      - c15
-      - c16
-      - c17
-      - c18
+      - red
+      - yellow
+      - tertiary
+      - green
+      - blue
+      - purple
+      - turquoise
+      - red-50
+      - yellow-50
+      - green-50
+      - blue-50
+      - purple-50
+      - turquoise-50
+      - charcoal
+      - grey-1
+      - grey-2
+      - grey-3
+      - grey-4
       - dark
     startWith: bg-
     title: 'Background Colour - %%prefix_normalised%%'
@@ -638,7 +638,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefixes:
       - heading-outlined
     prefixValue: text-
-    title: 'Outlined'
+    title: 'No Underlined'
 
   text/style:
     prefixes:
@@ -2185,13 +2185,13 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - textC5: { cssName: 'text-c5', text: "Colour Blue" }
       - textC6: { cssName: 'text-c6', text: "Colour Purple" }
       - textC7: { cssName: 'text-c7', text: "Colour Turquoise" }
-      - textC1: { cssName: 'text-g1', text: "Colour Grey 1" }
-      - textC2: { cssName: 'text-g2', text: "Colour Grey 2" }
-      - textC3: { cssName: 'text-g3', text: "Colour Grey 3" }
-      - textC4: { cssName: 'text-g4', text: "Colour Grey 4" }
-      - textC5: { cssName: 'text-g5', text: "Colour Grey 5" }
-      - textC10: { cssName: 'text-c10', text: "Colour C10 (Dark Grey)" }
-      - textC11: { cssName: 'text-c11', text: "Colour C11 (Light Grey)" }
+      - textC8: { cssName: 'text-g1', text: "Colour Grey 1" }
+      - textC9: { cssName: 'text-g2', text: "Colour Grey 2" }
+      - textC10: { cssName: 'text-g3', text: "Colour Grey 3" }
+      - textC11: { cssName: 'text-g4', text: "Colour Grey 4" }
+      - textC12: { cssName: 'text-g5', text: "Colour Grey 5" }
+      - textC13: { cssName: 'text-c10', text: "Colour C10 (Dark Grey)" }
+      - textC14: { cssName: 'text-c11', text: "Colour C11 (Light Grey)" }
       - textRed: { cssName: 'text-red', text: "Text Colour Primary" }
       - textBlack: { cssName: 'text-black', text: "Text Colour Secondary" }
       - textWhite: { cssName: 'text-white', text: "Text Colour White" }

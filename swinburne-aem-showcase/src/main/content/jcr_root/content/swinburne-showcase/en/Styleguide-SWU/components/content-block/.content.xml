@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Content Block"
+        sling:resourceType="swinburne/components/template/styleguide"
+        navTitle="content-block"
+        pageTitle="Content Block">
+        <aside
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside"
+            componentId="aside_L6OSEKTIP">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </aside>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_IDBFVEQUB">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <contentblock
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_HH63ZNOOE">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_LAXDHKRIB"
+                            text="&lt;h1>Content Block&lt;/h1>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </par>
+                </contentblock>
+                <contentblock_1045719959
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_1045719959_JI4BT0B9S">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <contentblock
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/contentblock"
+                            componentId="contentblock_advanced"
+                            hideTitle="false"
+                            hideTopLink="true"
+                            title="Advanced Section With Title"
+                            titleType="h4"
+                            variant="advsection">
+                            <bgimage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <bgvideo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                        </contentblock>
+                    </par>
+                </contentblock_1045719959>
+            </par>
+        </article>
+    </jcr:content>
+</jcr:root>

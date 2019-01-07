@@ -17,9 +17,8 @@ html:not(.aem-AuthorLayer-Edit ) {
       width: 100%;
       position: relative;
 
-      .contentblock {
+      & > .aem-Grid > .contentblock { // First page content block
         padding: $spacing-3xl 3.5% $spacing-4xl;
-
         &:first-child {
           background: url(https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png) bottom left repeat-x #feeb15;
           padding-bottom: $spacing-2xs;

@@ -638,7 +638,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefixes:
       - heading-outlined
     prefixValue: text-
-    title: 'No Underlined'
+    title: 'No Underline'
 
   text/style:
     prefixes:

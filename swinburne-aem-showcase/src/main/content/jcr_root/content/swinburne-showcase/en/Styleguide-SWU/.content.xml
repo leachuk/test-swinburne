@@ -53,6 +53,13 @@
                     componentModifiers="[swinburne-showcase:component-style-modifier/color/text-g2]"
                     text="&lt;p>&lt;b>&lt;span class=&quot;fs-16&quot;>&lt;span class=&quot;fs-14&quot;>Components&lt;/span>&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
+                <navlist_1812305280
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/lists/navlist"
+                    cancelInheritParent="true"
+                    componentId="navlist_1812305280_MFRRUS8CW"
+                    listFrom="static"
+                    pages="/content/swinburne-showcase/en/Styleguide-SWU/components/text"/>
             </par>
             <bgimage
                 jcr:primaryType="nt:unstructured"

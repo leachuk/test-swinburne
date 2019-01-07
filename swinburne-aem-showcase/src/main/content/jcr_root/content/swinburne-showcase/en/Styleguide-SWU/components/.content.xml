@@ -25,4 +25,5 @@
                 sling:resourceType="swinburne/components/layout/container"/>
         </article>
     </jcr:content>
+    <text/>
 </jcr:root>

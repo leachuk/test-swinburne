@@ -41,6 +41,11 @@ $colors:
   *:not(a){
     color: $white;
   }
+  table {
+    &, td, tr, th {
+      border-color: $white;
+    }
+  }
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {

@@ -86,6 +86,13 @@ devops___*
 .stats
 .stats/*
 
+#ignore testing remote driver exec files and restuls
+swinburne-testing/remote-*
+swinburne-testing/local-*
+
+#ignore bash things
+.bash_history
+
 #prototype project
 patternlab.json
 **/content-generator/content/

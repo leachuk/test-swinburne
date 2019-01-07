@@ -19,12 +19,12 @@ import java.security.MessageDigest
 abstract class FunctionalSpec extends GebReportingSpec {
 
     private static final String IMAGE_TYPE = "png"
+    private static final String DRIVER_TYPE = System.properties.getProperty("project.buildDirectory","unknown")
     private static final String SCREENSHOTS_REFERENCE_DIR = "src/test/screenshots"
-    private static final String SCREENSHOTS_CURRENT_DIR = "target/test-screenshots"
+    private static final String SCREENSHOTS_CURRENT_DIR = "test-screenshots"
     private static final double COMPARE_THRESHOLD = 0.01
     private static final double VERY_DIFFERENT = 1.0
     private static final boolean GENEREATE_FIRST_RENDTITION = true
-
     // Small phone
     // Big phone
     // Tablet
@@ -118,7 +118,11 @@ abstract class FunctionalSpec extends GebReportingSpec {
     }
 
     def setWindowsSize(int width, int height) {
+//        printDebug("setWindowsSize set", [width,height])
+
         driver.manage().window().setSize(new org.openqa.selenium.Dimension(width, height))
+
+//        printDebug("setWindowsSize after set", driver.manage().window().getSize())
     }
 
 
@@ -266,11 +270,16 @@ abstract class FunctionalSpec extends GebReportingSpec {
     }
 
     def designReference(WebElement element, String filePath) {
+
+//        printDebug("DESIGN REFERENCE1", [element.getSize(),filePath])
+
         def screenshotFilename
         def differenceFilename
         def returnVal = false
         def fixedFilePath = fixFilePath(filePath)
-        def referenceFilename = "${SCREENSHOTS_REFERENCE_DIR}/${getWebDriverName()}/${fixedFilePath}"
+        def referenceFilename = "${SCREENSHOTS_REFERENCE_DIR}/${DRIVER_TYPE}/${getWebDriverName()}/${fixedFilePath}"
+
+//        printDebug("DESIGN REFERENCE2", [fixedFilePath, referenceFilename])
 
 //        printDebug("REPORT WRITER",[
 //                FEATURE: specificationContext.currentFeature.name,
@@ -378,7 +387,7 @@ abstract class FunctionalSpec extends GebReportingSpec {
         WebElement documentBody = driver.findElement(By.xpath("//body"));
         act.moveToElement(documentBody).build().perform();
 
-        def screenshotFilename = "${SCREENSHOTS_CURRENT_DIR}/${getWebDriverName()}/${filePath}"
+        def screenshotFilename = "${DRIVER_TYPE}/${SCREENSHOTS_CURRENT_DIR}/${getWebDriverName()}/${filePath}"
 
 //        WebElement image = driver.findElement(By.xpath("xpath"));
 //        Point p = image.getLocation();
@@ -390,6 +399,9 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
             int scrollTopValue = 0;
             JavascriptExecutor js = (JavascriptExecutor) driver;
+
+            //remove scrollbars
+            js.executeScript("document.querySelector('html').style.overflow = 'hidden';")
 
             //element - scroll into view
             if (focus) {
@@ -430,11 +442,10 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
                 def elmentCoord = js.executeScript("return arguments[0].getBoundingClientRect();", element);
 
-                printDebug("ELEMENT POSITION: ", [elmentCoord["left"]])
+                printDebug("ELEMENT POSITION: ", elmentCoord)
 
-//                printDebug("SCREENSHOT: ", [filePath, scrollTopValue, left, top, right, bottom,
-//                                         bufferedImage.getWidth(),bufferedImage.getHeight()])
-//
+                printDebug("SCREENSHOT: ", [filePath, scrollTopValue, left, top, right, bottom,
+                                            bufferedImage.getWidth(), bufferedImage.getHeight()])
 
                 BufferedImage newImage = bufferedImage.getSubimage(
                         elmentCoord["left"] as int,
@@ -574,6 +585,8 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
         def viewPort = viewPorts.find { value -> value.width == driverWidth }
 
+//        printDebug("getWindowWidthName", [driverWidth,viewPorts,viewPort])
+
         if (!viewPort) {
             viewPort = viewPorts[3] //LG
         }
@@ -645,4 +658,3 @@ abstract class FunctionalSpec extends GebReportingSpec {
     }
 
 }
-

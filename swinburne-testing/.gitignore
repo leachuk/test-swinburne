@@ -1,0 +1,6 @@
+#ignore testing remote driver exec files and restuls
+/remote-*
+/local-*
+
+#ignore bash things
+.bash_history

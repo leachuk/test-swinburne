@@ -3,6 +3,6 @@
     cq:icon="columnTwoA"
     jcr:description="Swinburne Two Column template v2"
     jcr:primaryType="cq:Component"
-    jcr:title="Swinburne two column Page"
+    jcr:title="Swinburne two column Page v2"
     sling:resourceSuperType="swinburne/components/template/base/v1/base"
     componentGroup=".hidden"/>

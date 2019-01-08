@@ -77,8 +77,6 @@ icons.forEach( (icon, index) => {
   }
 });
 
-template += `</div>`;
-
 
 fs.writeFile ("../html/icons.html", template, function(err) {
     if (err) throw err;

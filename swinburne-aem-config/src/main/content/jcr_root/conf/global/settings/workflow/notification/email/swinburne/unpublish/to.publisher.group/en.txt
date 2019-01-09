@@ -1,4 +1,3 @@
-From: no-reply@swin.edu.au
 Subject: Ready to Unpublish: ${payloadPath}
 
 ====================================================================================================

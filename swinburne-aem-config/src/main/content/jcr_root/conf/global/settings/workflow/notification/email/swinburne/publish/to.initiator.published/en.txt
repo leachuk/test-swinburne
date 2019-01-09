@@ -1,4 +1,3 @@
-From: no-reply@swin.edu.au
 To: ${wfinitiatorEmail}
 Subject: Page Published: ${payloadPath}
 

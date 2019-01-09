@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-01-10T10:14:16.007+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Template"
+        sling:resourceType="swinburne/components/template/styleguide">
+        <aside
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside"
+            componentId="aside_I5D3YECFG">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </aside>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_VRHELJPP8">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <contentblock
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_HB0UEILT8">
+                    <par jcr:primaryType="nt:unstructured">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_HAQUGQW0L"
+                            text="&lt;h1>Templates&lt;/h1>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </par>
+                </contentblock>
+                <contentblock_1210338601
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_1210338601_RCJHUVKTM">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_GCRYCE022"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-10]"
+                            text="&lt;p>Use the&amp;nbsp;&lt;b>Single Column v2&lt;/b> layout&amp;nbsp;for all pages. It consists of the header and footer, with an content section between them.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/media/image"
+                            componentId="image_9QWDECTOQ"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/image/responsive,swinburne-showcase:component-style-modifier/margin/mb-15]"
+                            fileReference="/content/dam/swinburne-showcase/en/styleguide/Single Page Layout.png"/>
+                        <text_1505806541
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1505806541_UOBZVLJ4M"
+                            text="&lt;p>If you need to insert multiple columns within the content area, use the&amp;nbsp;&lt;b>Column Control&amp;nbsp;&lt;/b>component.&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </par>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/media/image"
+                        componentId="image_7ZLU3OH5A"/>
+                </contentblock_1210338601>
+            </par>
+        </article>
+    </jcr:content>
+</jcr:root>

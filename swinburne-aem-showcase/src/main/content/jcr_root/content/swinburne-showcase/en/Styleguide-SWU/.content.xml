@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2019-01-10T10:08:58.853+11:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
@@ -12,13 +14,24 @@
         navTitle="Styleguide SWU"
         pageTitle="Styleguide SWU">
         <aside
+            jcr:lastModified="{Date}2019-01-08T10:19:15.607+11:00"
+            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"
             cancelInheritParent="true"
-            componentId="aside_032FUJZ8C">
+            componentId="aside_032FUJZ8C"
+            componentTheme="[swinburne-showcase:component-style-theme/styleguide/sidebar]">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
+                <contentblock
+                    jcr:created="{Date}2019-01-08T10:48:56.256+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-01-08T10:48:56.256+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_OAVFSB4PH"/>
                 <text_2111069304_copy
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
@@ -39,13 +52,15 @@
                     text="&lt;p>&lt;span class=&quot;fs-16&quot;>&lt;b>&lt;span class=&quot;fs-14&quot;>Guidelines&lt;/span>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <navlist
+                    jcr:lastModified="{Date}2019-01-10T10:08:58.848+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/lists/navlist"
                     cancelInheritParent="true"
                     componentId="navlist_N1R2X8KSR"
                     componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-20]"
                     listFrom="static"
-                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/guidelines/breakpoints,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/colour,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/grid,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/iconography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/imagery,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/logo-and-usage,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/motion,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/spacing-units,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/style-guide,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/typography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visibility,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visual-decorators]"/>
+                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/guidelines/breakpoints,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/colour,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/grid,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/iconography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/imagery,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/logo-and-usage,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/motion,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/spacing-units,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/style-guide,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/template,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/typography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visibility,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visual-decorators]"/>
                 <text_1154750572
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
@@ -62,23 +77,43 @@
                     pages="/content/swinburne-showcase/en/Styleguide-SWU/components/text"/>
             </par>
             <bgimage
+                jcr:lastModified="{Date}2019-01-08T10:19:15.607+11:00"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="aemdesign/components/media/image"/>
         </aside>
         <article
+            jcr:lastModified="{Date}2019-01-08T11:32:23.456+11:00"
+            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
             componentId="article_VVP06VKA6"
-            componentModifiers="[swinburne-showcase:component-style-modifier/padding/pb-40]">
+            componentModifiers="[swinburne-showcase:component-style-modifier/padding/pb-40]"
+            componentTheme="[swinburne-showcase:component-style-theme/styleguide/body-section]">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <contentblock
+                    jcr:lastModified="{Date}2019-01-08T11:16:03.225+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_KSQ380XE5"/>
+                    componentId="contentblock_KSQ380XE5">
+                    <bgimage
+                        jcr:lastModified="{Date}2019-01-08T11:16:03.225+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:lastModified="{Date}2019-01-08T11:16:03.225+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                </contentblock>
             </par>
             <bgimage
+                jcr:lastModified="{Date}2019-01-08T11:32:23.456+11:00"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="aemdesign/components/media/image"/>
         </article>

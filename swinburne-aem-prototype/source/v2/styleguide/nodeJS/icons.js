@@ -1,6 +1,6 @@
 let fs = require('fs');
 
-let template = `<div class="row">`;
+let template = ``;
 let icons = [
   { name: "home", class: "Home" },
   { name: "chevron-right", class: "Chevron Right" },
@@ -66,12 +66,16 @@ let icons = [
   { name: "link", class: "Link" },
 ];
 
-
-icons.forEach( (icon) => {
+let row_index = 0;
+icons.forEach( (icon, index) => {
+  if(row_index === 0) template += `<div id="icon-section-${index}" class="row">`;
   template += `<div class="col-xl-3 col-lg-4 col-sm-6 icon"><span class="fa fa-${icon.name}"></span><span>${icon.class}</span></div>`;
+  row_index++;
+  if(row_index === 12 || !icons[index + 1]) {
+    template += `</div>`;
+    row_index = 0;
+  }
 });
-
-template += `</div>`;
 
 
 fs.writeFile ("../html/icons.html", template, function(err) {

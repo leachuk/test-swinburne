@@ -6,8 +6,6 @@
     <jcr:content
         dam:assetState="processed"
         dam:relativePath="swinburne-showcase/en/styleguide/Swinburne Global One Column.png"
-        jcr:lastModified="{Date}2019-01-10T11:58:07.834+11:00"
-        jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}32"

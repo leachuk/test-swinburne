@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    cq:icon="columnTwoA"
-    jcr:description="Swinburne Two Column template v2"
     jcr:primaryType="cq:Component"
-    jcr:title="Swinburne two column Page v2"
-    sling:resourceSuperType="swinburne/components/template/base/v1/base"
+    jcr:title="Swinburne Two Column Page"
+    jcr:description="Swinburne Two Column template"
+    cq:icon="columnTwoA"
+    sling:resourceSuperType="swinburne/components/template/column/two/v2"
     componentGroup=".hidden"/>
+

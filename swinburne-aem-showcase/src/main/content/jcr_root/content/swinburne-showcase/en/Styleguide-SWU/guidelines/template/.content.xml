@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-01-10T10:14:16.007+11:00"
+        cq:lastModified="{Date}2019-01-10T12:07:23.069+11:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
@@ -24,19 +24,31 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <contentblock
+                    jcr:created="{Date}2019-01-09T16:57:19.092+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-01-09T16:57:19.092+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_HB0UEILT8">
                     <par jcr:primaryType="nt:unstructured">
                         <text
+                            jcr:created="{Date}2019-01-09T16:57:08.471+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-10T12:05:08.322+11:00"
+                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_HAQUGQW0L"
-                            text="&lt;h1>Templates&lt;/h1>&#xd;&#xa;"
+                            text="&lt;h1>Template&lt;/h1>&#xd;&#xa;"
                             textIsRich="true"/>
                     </par>
                 </contentblock>
                 <contentblock_1210338601
+                    jcr:created="{Date}2019-01-09T17:04:39.092+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-01-09T17:04:39.092+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_1210338601_RCJHUVKTM">
@@ -44,19 +56,31 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
                         <text
+                            jcr:created="{Date}2019-01-09T17:04:55.073+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-10T12:07:23.064+11:00"
+                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_GCRYCE022"
                             componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-10]"
-                            text="&lt;p>Use the&amp;nbsp;&lt;b>Single Column v2&lt;/b> layout&amp;nbsp;for all pages. It consists of the header and footer, with an content section between them.&lt;/p>&#xd;&#xa;"
+                            text="&lt;p>Use the &lt;b>Swinburne Global Single Column&amp;nbsp;&lt;/b>template for all pages. The template will import all CSS and JS files needed for the rebranding of Swinburne's website. The template consists of the header and footer, with an content section between them.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <image
+                            jcr:created="{Date}2019-01-10T09:10:36.015+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-10T12:01:47.930+11:00"
+                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/media/image"
                             componentId="image_9QWDECTOQ"
                             componentModifiers="[swinburne-showcase:component-style-modifier/image/responsive,swinburne-showcase:component-style-modifier/margin/mb-15]"
-                            fileReference="/content/dam/swinburne-showcase/en/styleguide/Single Page Layout.png"/>
+                            fileReference="/content/dam/swinburne-showcase/en/styleguide/Swinburne Global One Column.png"/>
                         <text_1505806541
+                            jcr:created="{Date}2019-01-10T09:32:48.890+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-01-10T10:13:19.905+11:00"
+                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1505806541_UOBZVLJ4M"
@@ -64,6 +88,10 @@
                             textIsRich="true"/>
                     </par>
                     <image
+                        jcr:created="{Date}2019-01-10T09:10:27.784+11:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2019-01-10T09:10:27.784+11:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"
                         componentId="image_7ZLU3OH5A"/>

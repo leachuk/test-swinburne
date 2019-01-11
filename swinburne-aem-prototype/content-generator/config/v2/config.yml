@@ -1,0 +1,36 @@
+# Themes
+content/cq:tags/swinburne/component-style-theme: &component-style-theme
+
+  #styleguide
+  styleguide/rohan:
+    flat: true
+    prefix: 'theme--rohan-2'
+    title: 'Rohan Test panel'
+
+  #styleguide
+  styleguide/rohan-test-2:
+    flat: true
+    prefix: 'theme--rohan-test-2'
+    title: 'Rohan Test 222 '
+
+#content/cq:tags/swinburne-showcase/component-style-modifier: *component-style-modifier
+#content/cq:tags/swinburne-showcase/component-style-module: *component-style-module
+content/cq:tags/swinburne-showcase/component-style-theme: *component-style-theme
+#content/cq:tags/swinburne-showcase/component-style-icon: *component-style-icon
+#content/cq:tags/swinburne-showcase/component-style-chevron: *component-style-chevron
+#content/cq:tags/swinburne-showcase/component-analytics: *component-analytics
+#content/cq:tags/swinburne-showcase/component-aria: *component-aria
+#content/cq:tags/swinburne-showcase/component-dialog: *component-dialog
+#content/cq:tags/swinburne-showcase/content-type: *content-type
+#content/cq:tags/swinburne-showcase/component-topic: *component-topic
+
+#content/cq:tags/swinburne-training/component-style-modifier: *component-style-modifier
+#content/cq:tags/swinburne-training/component-style-module: *component-style-module
+content/cq:tags/swinburne-training/component-style-theme: *component-style-theme
+#content/cq:tags/swinburne-training/component-style-icon: *component-style-icon
+#content/cq:tags/swinburne-training/component-style-chevron: *component-style-chevron
+#content/cq:tags/swinburne-training/component-analytics: *component-analytics
+#content/cq:tags/swinburne-training/component-aria: *component-aria
+#content/cq:tags/swinburne-training/component-dialog: *component-dialog
+#content/cq:tags/swinburne-training/content-type: *content-type
+#content/cq:tags/swinburne-training/component-topic: *component-topic

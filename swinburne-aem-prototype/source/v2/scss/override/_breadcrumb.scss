@@ -6,17 +6,35 @@
 
 .breadcrumb {
   font-weight: 300;
+  font-size: 14px;
 
   &-item {
     a {
-      color: theme-color('g1');
+      color: $tertiary;
+    }
+
+    + .breadcrumb-item {
+      padding-left: $spacing-sm;
+
+      &:before {
+        font-size: 11px;
+        font-weight: 300;
+        font-family: 'Font Awesome\ 5 Free';
+        content: "\F054";
+        padding-right: $spacing-sm;
+      }
     }
 
     &.active {
-      font-weight: 600;
+      a {
+        color: $grey-3;
+        font-weight: 600;
+      }
 
-      &::before {
-        font-weight: 300;
+      .bg-dark & {
+        :not(a) {
+          color: $grey-3;
+        }
       }
     }
   }

@@ -139,11 +139,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - blue-50
       - purple-50
       - turquoise-50
-      - charcoal
       - grey-1
       - grey-2
       - grey-3
       - grey-4
+      - grey-5
       - dark
     startWith: bg-
     title: 'Background Colour - %%prefix_normalised%%'

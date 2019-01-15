@@ -64,7 +64,7 @@
                     cancelInheritParent="true"
                     componentId="navlist_1812305280_MFRRUS8CW"
                     listFrom="static"
-                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/components/text,/content/swinburne-showcase/en/Styleguide-SWU/components/content-block]"/>
+                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/components/breadcrumbs, /content/swinburne-showcase/en/Styleguide-SWU/components/content-block, /content/swinburne-showcase/en/Styleguide-SWU/components/text]"/>
             </par>
             <bgimage
                 jcr:primaryType="nt:unstructured"

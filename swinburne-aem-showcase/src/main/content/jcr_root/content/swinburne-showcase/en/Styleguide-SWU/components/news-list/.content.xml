@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="News List"
+        sling:resourceType="swinburne/components/template/styleguide">
+        <aside
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside"
+            componentId="aside_VFRBH6GKI">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </aside>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_GQIQVSUHS">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <contentblock
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_XV9LZ454S">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_Q0YJCJT1Y"
+                            text="&lt;h1>News List&lt;/h1>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </par>
+                </contentblock>
+                <contentblock_1872776108
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_1872776108_VZWQOCEOG">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <newslist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/newslist"
+                            componentId="newslist_PUIYOKLAI"
+                            detailsBadge="cardImageTitleCategoryDescriptionAction"
+                            listFrom="children"
+                            tagsMatch="any">
+                            <badgeThumbnail
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                        </newslist>
+                    </par>
+                </contentblock_1872776108>
+            </par>
+        </article>
+    </jcr:content>
+    <news-details-1/>
+</jcr:root>

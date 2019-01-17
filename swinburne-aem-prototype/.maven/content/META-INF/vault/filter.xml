@@ -14,44 +14,44 @@
     <filter root="/etc/clientlibs/swinburne/v2/js"/>
     <filter root="/etc/clientlibs/swinburne/v2/images"/>
 
-    <filter root="/content/cq:tags/swinburne/content-type"/>
-    <filter root="/content/cq:tags/swinburne/component-topic"/>
-    <filter root="/content/cq:tags/swinburne/component-style-theme"/>
-    <filter root="/content/cq:tags/swinburne/component-style-modifier"/>
-    <filter root="/content/cq:tags/swinburne/component-style-module"/>
-    <filter root="/content/cq:tags/swinburne/component-style-chevron"/>
-    <filter root="/content/cq:tags/swinburne/component-style-icon"/>
-    <filter root="/content/cq:tags/swinburne/component-dialog"/>
-    <filter root="/content/cq:tags/swinburne/component-aria"/>
-    <filter root="/content/cq:tags/swinburne/component-analytics"/>
+    <filter root="/content/cq:tags/swinburne/content-type" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-topic" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-theme" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-modifier" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-module" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-chevron" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-icon" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-dialog" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-aria" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-analytics" mode="update"/>
 
-    <filter root="/content/cq:tags/swinburne-showcase/content-type"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-topic"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-style-theme"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-style-modifier"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-style-module"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-style-chevron"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-style-icon"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-dialog"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-aria"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-analytics"/>
+    <filter root="/content/cq:tags/swinburne-showcase/content-type" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-topic" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-style-theme" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-style-modifier" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-style-module" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-style-chevron" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-style-icon" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-dialog" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-aria" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-analytics" mode="update"/>
 
-    <filter root="/content/cq:tags/swinburne-training/content-type"/>
-    <filter root="/content/cq:tags/swinburne-training/component-topic"/>
-    <filter root="/content/cq:tags/swinburne-training/component-style-theme"/>
-    <filter root="/content/cq:tags/swinburne-training/component-style-modifier"/>
-    <filter root="/content/cq:tags/swinburne-training/component-style-module"/>
-    <filter root="/content/cq:tags/swinburne-training/component-style-chevron"/>
-    <filter root="/content/cq:tags/swinburne-training/component-style-icon"/>
-    <filter root="/content/cq:tags/swinburne-training/component-dialog"/>
-    <filter root="/content/cq:tags/swinburne-training/component-aria"/>
-    <filter root="/content/cq:tags/swinburne-training/component-analytics"/>
+    <filter root="/content/cq:tags/swinburne-training/content-type" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-topic" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-style-theme" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-style-modifier" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-style-module" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-style-chevron" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-style-icon" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-dialog" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-aria" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-analytics" mode="update"/>
 
-    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/misctools/specialCharsConfig/chars"/>
-    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/styles/styles"/>
-    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/paraformat/formats"/>
+    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/misctools/specialCharsConfig/chars" mode="update"/>
+    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/styles/styles" mode="update"/>
+    <filter root="/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/paraformat/formats" mode="update"/>
 
-    <filter root="/content/dam/formsanddocuments-themes/swinburne"/>
-    <filter root="/etc/clientlibs/swinburne/forms"/>
+    <filter root="/content/dam/formsanddocuments-themes/swinburne" mode="update"/>
+    <filter root="/etc/clientlibs/swinburne/forms" mode="update"/>
 
 </workspaceFilter>

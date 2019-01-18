@@ -42,7 +42,7 @@ class ComponentPublishSpec extends ComponentSpec {
         and: "Has sample table content"
         assert $("${selector} table").isEmpty() == false
 
-        and: "Has sample links"
+        and: "Has sample link"
         assert $("${selector} a").isEmpty() == false
 
 
@@ -73,7 +73,7 @@ class ComponentPublishSpec extends ComponentSpec {
 //        and: "Has sample table content"
 //        assert $("${selector} table").isEmpty() == false
 //
-//        and: "Has sample links"
+//        and: "Has sample link"
 //        assert $("${selector} a").isEmpty() == false
 //
 //

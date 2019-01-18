@@ -85,10 +85,6 @@ var FIELDS = {
 
 };
 
-//Swinburne Workflow Groups:
-var WORKFLOW_SWINBURNE_PUBLISHER_GROUP = "swin-publishers";
-var WORKFLOW_SWINBURNE_REVIEWER_GROUP = "swin-reviewers";
-
 var workflowData = workItem.getWorkflowData();
 
 //var logger = Packages.org.slf4j.LoggerFactory.getLogger("sendemailprocess.ecma");

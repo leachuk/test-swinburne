@@ -34,6 +34,8 @@
 
     <filter root="/conf/global/settings/workflow" mode="update"/>
 
+    <filter root="/var/workflow/models/swinburne" mode="update"/>
+
 
     <!--<filter root="/conf/swinburne/settings/cloudconfigs" mode="update"/>-->
 

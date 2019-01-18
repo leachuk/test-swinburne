@@ -29,7 +29,7 @@
                 sling:resourceType="swinburne/components/workflow/sendemailprocess">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    customParticipant="swin-reviewers"
+                    customParticipant="swin-marketing-reviewer"
                     PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
                     PROCESS_AUTO_ADVANCE="true"
                     templatePath="/conf/global/settings/workflow/notification/email/swinburne/publish/to.reviewer.group/en.txt"/>
@@ -42,7 +42,7 @@
                 <metaData
                     jcr:primaryType="nt:unstructured"
                     DO_NOTIFY="false"
-                    PARTICIPANT="swin-reviewers"/>
+                    PARTICIPANT="swin-marketing-reviewer"/>
             </participant>
             <or
                 jcr:primaryType="nt:unstructured"
@@ -71,7 +71,7 @@
                         sling:resourceType="swinburne/components/workflow/sendemailprocess">
                         <metaData
                             jcr:primaryType="nt:unstructured"
-                            customParticipant="swin-publishers"
+                            customParticipant="swin-marketing-publisher"
                             PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
                             PROCESS_AUTO_ADVANCE="true"
                             templatePath="/conf/global/settings/workflow/notification/email/swinburne/publish/to.publisher.group/en.txt"/>
@@ -95,7 +95,7 @@
                         <metaData
                             jcr:primaryType="nt:unstructured"
                             DO_NOTIFY="false"
-                            PARTICIPANT="swin-publishers"/>
+                            PARTICIPANT="swin-marketing-publisher"/>
                     </participant>
                     <or
                         jcr:primaryType="nt:unstructured"

@@ -32,4 +32,23 @@ class LinksScreenshotSpec extends ComponentSpec {
         designRef(selector)
 
     }
+
+    def "Appearance of Link with default variant charcoal colour"() {
+
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#link-2"
+
+        when: 'I am in the component showcase page'
+        setWindowSize()
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        def component = waitForComponent(selector)
+
+        then: 'It should match reference image.'
+        designRef(selector)
+
+    }
+
 }

@@ -228,23 +228,24 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Colours
   color:
     prefixes:
-      - c1
-      - c2
-      - c3
-      - c4
-      - c5
-      - c6
-      - c7
-      - c8
-      - c9
-      - c10
-      - c11
-      - g1
-      - g2
-      - g3
-      - g4
-      - g5
-      - g6
+      - red
+      - yellow
+      - charcoal
+      - green
+      - blue
+      - purple
+      - turquoise
+      - red-50
+      - yellow-50
+      - green-50
+      - blue-50
+      - purple-50
+      - turquoise-50
+      - grey-1
+      - grey-2
+      - grey-3
+      - grey-4
+      - grey-5
     startWith: text-
     title: 'Text Colour - %%prefix_normalised%%'
 

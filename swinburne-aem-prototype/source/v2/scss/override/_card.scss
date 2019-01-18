@@ -7,19 +7,37 @@
 $card-top-bar-height: 18px;
 
 .card {
-  background-color: theme-color('c7');
-  box-shadow: 0 2px 4px rgba($black, .1);
-  padding-top: rem-calc($card-top-bar-height);
+  //background-color: theme-color('c7');
+  box-shadow: 0 2px 3px $grey-4;
+  margin-bottom: 0;
+  //padding-top: rem-calc($card-top-bar-height);
+
+  &-title {
+    margin-bottom: $spacing-md;
+  }
 
   &-img-top,
   &-icon {
-    max-height: rem-calc(140px);
+    //max-height: rem-calc(140px);
   }
 
   &-img-top,
   &-icon,
   &-body {
     background-color: $white;
+  }
+
+  &-footer {
+    background-color: transparent;
+    margin-bottom: 0;
+    padding: 0 $spacing-md $spacing-md;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $spacer;
+      padding-right: $spacing-2xl;
+      padding-left: $spacing-2xl;
+      padding-bottom: $spacing-lg;
+    }
   }
 
   &-img-top {
@@ -63,6 +81,12 @@ $card-top-bar-height: 18px;
   &-body {
     display: flex;
     flex-direction: column;
+    padding: $spacing-md $spacing-md;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: $spacing-2xl;
+    }
 
     // A small 'hack' (if you will) that ensures buttons remain aligned to the bottom of the
     // card as sibling cards will be the same height as oneanother.
@@ -118,10 +142,6 @@ $card-top-bar-height: 18px;
     &.icon--#{$name} .card-img-top > img {
       height: $size;
     }
-  }
-
-  @include media-breakpoint-down(lg) {
-    margin-bottom: $spacer;
   }
 
   @include media-breakpoint-up(md) {

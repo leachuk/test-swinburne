@@ -1,0 +1,12 @@
+// List of hashtags, displayed in a row
+
+.tag-list {
+  list-style-type: none;
+  padding-left: 0;
+
+  &__item {
+    color: $grey-2;
+    font-size: 16px;
+    display: inline-block;
+  }
+}

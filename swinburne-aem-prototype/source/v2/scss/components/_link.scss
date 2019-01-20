@@ -43,7 +43,18 @@
 
 a[component] {
   &.link {
-    font-size: 20px;
+    font-size: 12pt;
+    line-height: 23pt;
+    font-weight: 600;
+    color: $primary;
+    &,
+    &:hover {
+      text-decoration: none;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 14pt;
+      line-height: 30pt;
+    }
   }
 }
 

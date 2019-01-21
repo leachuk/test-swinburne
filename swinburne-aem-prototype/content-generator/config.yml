@@ -1051,8 +1051,13 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
   #styleguide
   styleguide/colors:
     flat: true
-    prefix: 'theme--colour-panel'
+    prefix: 'theme--styleguide-colour-panel'
     title: 'Colour panel'
+
+  styleguide/page-details:
+    flat: true
+    prefix: 'theme--styleguide-page-details'
+    title: 'Page Details'
 
   # Cards
   common/cards:

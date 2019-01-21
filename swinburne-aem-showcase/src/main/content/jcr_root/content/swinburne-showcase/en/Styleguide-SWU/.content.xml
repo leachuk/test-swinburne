@@ -49,8 +49,9 @@
                     cancelInheritParent="true"
                     componentId="navlist_N1R2X8KSR"
                     componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-20]"
-                    listFrom="static"
-                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/guidelines/breakpoints,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/colour,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/grid,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/iconography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/imagery,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/logo-and-usage,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/motion,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/spacing-units,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/style-guide,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/template,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/typography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visibility,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visual-decorators]"/>
+                    listFrom="children"
+                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/guidelines/breakpoints,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/colour,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/grid,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/iconography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/imagery,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/logo-and-usage,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/motion,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/spacing-units,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/style-guide,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/template,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/typography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visibility,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visual-decorators]"
+                    parentPage="/content/swinburne-showcase/en/Styleguide-SWU/guidelines"/>
                 <text_1154750572
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
@@ -63,8 +64,9 @@
                     sling:resourceType="swinburne/components/lists/navlist"
                     cancelInheritParent="true"
                     componentId="navlist_1812305280_MFRRUS8CW"
-                    listFrom="static"
-                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/components/breadcrumbs, /content/swinburne-showcase/en/Styleguide-SWU/components/content-block, /content/swinburne-showcase/en/Styleguide-SWU/components/text]"/>
+                    listFrom="children"
+                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/components/breadcrumbs, /content/swinburne-showcase/en/Styleguide-SWU/components/content-block, /content/swinburne-showcase/en/Styleguide-SWU/components/text]"
+                    parentPage="/content/swinburne-showcase/en/Styleguide-SWU/components"/>
             </par>
             <bgimage
                 jcr:primaryType="nt:unstructured"
@@ -79,6 +81,31 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details_NBYDBYEWA"
+                    componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
+                    showBreadcrumb="false"
+                    showPageDate="false"
+                    showParsys="false"
+                    showToolbar="false"
+                    textIsRich="true"
+                    titleType="[,]">
+                    <secondaryImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <thumbnail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <ogImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                </page_details>
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"

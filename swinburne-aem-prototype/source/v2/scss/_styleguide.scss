@@ -18,14 +18,6 @@ html:not(.aem-AuthorLayer-Edit ) {
     article {
       width: 100%;
       position: relative;
-
-      & > .aem-Grid > .contentblock { // First page content block
-        padding: $spacing-3xl 3.5% $spacing-4xl;
-        &:first-child {
-          background: url(https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png) bottom left repeat-x #feeb15;
-          padding-bottom: $spacing-2xs;
-        }
-      }
     }
 
     .nav-link {
@@ -132,22 +124,4 @@ html:not(.aem-AuthorLayer-Edit ) {
       @include code-snippet();
     }
   }
-}
-
-.theme--colour-panel {
-    .wrapper {
-      padding: 20px;
-      text-align: left;
-      color: #fff;
-      font-size: 14px;
-      font-weight: bold;
-      min-height: 120px;
-      margin-bottom: #{$grid-gutter * 2}px;
-
-      span {
-        display: block;
-        word-wrap: break-word;
-        hyphens: auto;
-      }
-    }
 }

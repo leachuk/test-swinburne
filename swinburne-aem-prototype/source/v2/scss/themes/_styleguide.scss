@@ -1,52 +1,26 @@
-//$styleguide-sidebar-width: 260px;
-//
-//&--styleguide-sidebar {
-//  position: fixed;
-//  width: $styleguide-sidebar-width;
-//  border-right: 1px solid $grey-5;
-//  padding: 10px;
-//  overflow-y: scroll;
-//  height: 100%;
-//
-//  .navlist[component] {
-//    &,
-//    & > li {
-//      display: block;
-//      top: 0;
-//      height: auto;
-//      margin-top: $spacing-2xs;
-//      margin-bottom: $spacing-sm;
-//    }
-//    & > li {
-//      margin-left: $spacing-sm;
-//      a {
-//        &:hover {
-//          text-decoration: none;
-//          &:after {
-//            content: " ";
-//            width: 0;
-//            overflow: hidden;
-//            opacity: 0;
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//&--styleguide-body {
-//  margin-left: $styleguide-sidebar-width;
-//  width: calc(100% - #{$styleguide-sidebar-width});
-//  height: 100%;
-//  width: 100%;
-//  position: relative;
-//
-//  .contentblock {
-//    padding: $spacing-3xl 3.5% $spacing-4xl;
-//
-//    &:first-child {
-//      background: url(https://dl.dropboxusercontent.com/s/ijc1359yzhfcp1o/yellow.png) bottom left repeat-x #feeb15;
-//      padding-bottom: $spacing-2xs;
-//    }
-//  }
-//}
+// themes for use only in the Styleguide
+
+&--styleguide {
+  &-page-details {
+    padding: $spacing-6xl 3.5% $spacing-4xl;
+    background: url('../images/patterns/yellow.png')  0 100% repeat-x;
+  }
+
+  &-colour-panel {
+    .wrapper {
+      padding: 20px;
+      text-align: left;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      min-height: 120px;
+      margin-bottom: #{$grid-gutter * 2}px;
+
+      span {
+        display: block;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+    }
+  }
+}

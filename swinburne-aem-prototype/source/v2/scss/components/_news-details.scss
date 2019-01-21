@@ -39,7 +39,7 @@
         height: 400px;
       }
     }
-    *:not(.breadcrumb) {
+    h1, .published, .tag {
       color: $white;
     }
     h1 {
@@ -75,10 +75,16 @@
         display: inline-block;
         background-color: $white;
         width: 1px;
-        height: 24px;
-        margin-left: $spacing-xs;
-        margin-right: $spacing-2xs;
-        transform: translateY(6px);
+        height: 17px;
+        margin-left: $spacing-2xs;
+        margin-right: 3px;
+        transform: translateY(4px);
+        @include media-breakpoint-up(lg) {
+          margin-left: $spacing-xs;
+          margin-right: $spacing-2xs;
+          transform: translateY(6px);
+          height: 24px;
+        }
       }
       .tag {
         display: inline-block;
@@ -91,6 +97,15 @@
             font-size: 12pt;
           }
         }
+      }
+    }
+    .breadcrumb {
+      margin-top: $spacing-md;
+      @include media-breakpoint-up(md) {
+        margin-top: $spacing-2xl;
+      }
+      @include media-breakpoint-up(lg) {
+        margin-top: $spacing-3xl ;
       }
     }
     .card-img-top {

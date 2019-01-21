@@ -1,36 +1,16 @@
-<div ${componentProperties.componentAttributes}>
-    <c:if test="${not empty componentProperties.title}">
-        <h1>${componentProperties.title}</h1>
-    </c:if>
-    <c:if test="${not empty componentProperties.author}">
-        <div class="author">${componentProperties.author}</div>
-    </c:if>
-<%-- <c:if test="${not empty componentProperties.tags}">
-    <div class="tags">
-        <c:forEach items="${componentProperties.tags}" var="tag">
-               <span class="tag badge badge-default" data-value="${tag.value.value}">${tag.value.title}</span>
-        </c:forEach>
-    </div>
-</c:if> --%>
-<c:if test="${not empty componentProperties.newsDateStatusText}">
-    <div class="published">${componentProperties.newsDateStatusText}</div>
+<c:if test="${not empty componentProperties.pageBackgroundImage}">
+    <c:set var="extraAttr" value="${extraAttr} style=\"background-image: url(${componentProperties.pageBackgroundImage})\""/>
 </c:if>
-<c:if test="${not empty componentProperties.description}">
-    <div class="description">${componentProperties.description}</div>
-</c:if>
-
-<div class="card-img-top">
-    <img src="${componentProperties.pageBackgroundImage}" alt="${componentProperties.title}">
-</div>
-
-<c:if test="${not componentProperties.showBreadcrumb and not componentProperties.showToolbar}">
-    <div class="tools">
-        <c:if test="${componentProperties.showBreadcrumb }">
-            <cq:include path="breadcrumb" resourceType="aemdesign/components/layout/breadcrumb"/>
+<div ${componentProperties.componentAttributes}${extraAttr}>
+    <div class="container">
+        <%@include file="news-details.header.jsp" %>
+        <header>
+            <c:if test="${not componentProperties.hideTitle}">
+            <${componentProperties.titleType}>${componentProperties.title}</${componentProperties.titleType}>
         </c:if>
-        <c:if test="${componentProperties.showToolbar }">
-            <cq:include path="toolbar" resourceType="aemdesign/components/layout/navbar"/>
-        </c:if>
+        <img src="${componentProperties.pageThumbnailImage}" ${badgeImageAttr} alt="${componentProperties.title}" class="card-img-top"/>
+        </header>
+        <%@include file="news-details.body.jsp" %>
+        <%@include file="news-details.footer.jsp" %>
     </div>
-</c:if>
 </div>

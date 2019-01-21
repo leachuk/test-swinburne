@@ -7,7 +7,6 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Styleguide SWU"
-        jcr:uuid="1b1fa632-7e30-46e5-ab99-08d7a70c4297"
         sling:resourceType="swinburne/components/template/styleguide"
         navTitle="Styleguide SWU"
         pageTitle="Styleguide SWU">

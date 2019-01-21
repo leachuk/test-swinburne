@@ -1,51 +1,96 @@
 .news-details[component] {
   &.theme--news-details {
     position: relative;
-    padding: $spacing-lg 0;
+    padding: $spacing-md 0;
+    & > .container {
+      max-width: 575px;
+    }
     @include media-breakpoint-up(md) {
-      padding: $spacing-3xl 0;
+      padding: $spacing-2xl 0;
     }
     @include media-breakpoint-up(lg) {
-     padding: $spacing-4xl 0;
+      & > .container {
+        max-width: 690px;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      padding: $spacing-3xl 0;
+      & > .container {
+        max-width: 915px;
+      }
     }
     &:before {
       content: " ";
       width: 100%;
-      height: 100%;
-      max-height: 300px;
       background-color: $tertiary;
       z-index: -1;
       position: absolute;
       display: block;
       top: 0;
       left: 0;
+      height: 260px;
+      @include media-breakpoint-up(md) {
+        height: 290px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 350px;
+      }
+      @include media-breakpoint-up(xl) {
+        height: 400px;
+      }
     }
-    * {
+    *:not(.breadcrumb) {
       color: $white;
     }
     h1 {
       font-size: 22pt;
       line-height: 29pt;
       font-weight: 600;
-      @include media-breakpoint-up(md) {
-        font-size: 30pt;
-        line-height: 36pt;
-      }
-    }
-    .published {
-      display: inline-block;
-      font-size: 10pt;
-      @include media-breakpoint-up(lg) {
-        font-size: 12pt;
-      }
-    }
-    .published , h1 {
       margin: 0 0 $spacing-lg 0;
       @include media-breakpoint-up(md) {
         margin: 0 0 $spacing-3xl 0;
+        font-size: 30pt;
+        line-height: 36pt;
       }
       @include media-breakpoint-up(lg) {
         margin: 0 0 $spacing-4xl 0;
+      }
+    }
+    .tags,
+    .published {
+      display: inline-block;
+      font-size: 10pt;
+      margin: 0 0 $spacing-sm 0;
+      @include media-breakpoint-up(md) {
+        margin: 0 0 $spacing-lg 0;
+      }
+      @include media-breakpoint-up(lg) {
+        margin: 0 0 $spacing-2xl 0;
+        font-size: 12pt;
+      }
+    }
+    .tags {
+      &:before {
+        content: " ";
+        display: inline-block;
+        background-color: $white;
+        width: 1px;
+        height: 24px;
+        margin-left: $spacing-xs;
+        margin-right: $spacing-2xs;
+        transform: translateY(6px);
+      }
+      .tag {
+        display: inline-block;
+        margin-left: $spacing-2xs;
+        &:before {
+          content: "#";
+          font-size: 10pt;
+          color: $white;
+          @include media-breakpoint-up(lg) {
+            font-size: 12pt;
+          }
+        }
       }
     }
     .card-img-top {

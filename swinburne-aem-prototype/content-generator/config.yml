@@ -1345,6 +1345,10 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--pagedetail-brand
     title: 'Page Details - theme--pagedetail-brand'
 
+  layout/news-details:
+    prefix: theme--news-details
+    title: 'News Details - Default'
+
   # Content Block
   layout/contentblock:
     prefixes:

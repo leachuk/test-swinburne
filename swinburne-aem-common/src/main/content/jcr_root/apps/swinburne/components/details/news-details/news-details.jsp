@@ -10,12 +10,21 @@
 <%
 
     final Boolean DEFAULT_SHOW_BREADCRUMB = true;
-    final Boolean DEFAULT_SHOW_TOOLBAR = false;
     final String DEFAULT_I18N_CATEGORY = "news-detail";
     final String DEFAULT_I18N_LABEL = "variantHiddenLabel";
+    final String DEFAULT_TITLE_TAG_TYPE = "h1";
+    final String DEFAULT_TITLE = getPageTitle(_currentPage);
+    final String DEFAULT_DESCRIPTION = _currentPage.getDescription();
+    final String DEFAULT_SUBTITLE = _currentPage.getProperties().get(FIELD_PAGE_TITLE_SUBTITLE,"");
+    final Boolean DEFAULT_HIDE_TITLE = false;
+    final Boolean DEFAULT_HIDE_DESCRIPTION = false;
+    final Boolean DEFAULT_SHOW_TOOLBAR = true;
+    final Boolean DEFAULT_SHOW_PAGE_DATE = true;
+    final Boolean DEFAULT_SHOW_PARSYS = true;
 
     Object[][] componentFields = {
-            {"title", _pageProperties.get(JcrConstants.JCR_TITLE, StringUtils.EMPTY)},
+
+            {"titleFormat",""},
             {"description", _pageProperties.get(JcrConstants.JCR_DESCRIPTION, StringUtils.EMPTY)},
             {"showBreadcrumb", DEFAULT_SHOW_BREADCRUMB},
             {"showToolbar", DEFAULT_SHOW_TOOLBAR},
@@ -25,6 +34,22 @@
             {"variantHiddenLabel", getDefaultLabelIfEmpty("",DEFAULT_I18N_CATEGORY,DEFAULT_I18N_LABEL,DEFAULT_I18N_CATEGORY,_i18n)},
             {DETAILS_LINK_TEXT, getPageNavTitle(_currentPage)},
             {DETAILS_LINK_TITLE, getPageTitle(_currentPage)},
+            {FIELD_PAGE_URL, getPageUrl(_currentPage)},
+            {FIELD_TITLE_TAG_TYPE, DEFAULT_TITLE_TAG_TYPE},
+            {FIELD_PAGE_TITLE_NAV, getPageNavTitle(_currentPage)},
+            {"showBreadcrumb", DEFAULT_SHOW_BREADCRUMB},
+            {"showToolbar", DEFAULT_SHOW_TOOLBAR},
+            {"showParsys", DEFAULT_SHOW_PARSYS},
+            {"title", DEFAULT_TITLE},
+            {"titleFormat",""}, //tag path, will be resolved to value in processComponentFields
+            {"description", DEFAULT_DESCRIPTION},
+            {"hideDescription", DEFAULT_HIDE_DESCRIPTION},
+            {"hideTitle", DEFAULT_HIDE_TITLE},
+            {"showBreadcrumb", DEFAULT_SHOW_BREADCRUMB},
+            {"showToolbar", DEFAULT_SHOW_TOOLBAR},
+            {"showPageDate", DEFAULT_SHOW_PAGE_DATE},
+            {"showParsys", DEFAULT_SHOW_PARSYS},
+            {"linkTarget", StringUtils.EMPTY, "target"},
     };
 
     ComponentProperties componentProperties = getComponentProperties(
@@ -147,8 +172,12 @@
         <%@ include file="badge.icon.jsp" %>
     </c:when>
 
-    <c:when test="${COMPONENT_BADGE eq 'badge.image'}">
-        <%@ include file="badge.image.jsp" %>
+    <c:when test="${COMPONENT_BADGE eq 'badge.icon'}">
+        <%@ include file="badge.icon.jsp" %>
+    </c:when>
+
+    <c:when test="${COMPONENT_BADGE eq 'badge.cardImageTitleCategoryActionDate'}">
+        <%@ include file="badge.cardImageTitleCategoryActionDate.jsp" %>
     </c:when>
 
     <c:when test="${COMPONENT_BADGE eq 'badge' or COMPONENT_BADGE eq 'badge.default'}">

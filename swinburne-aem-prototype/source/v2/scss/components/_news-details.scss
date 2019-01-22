@@ -99,7 +99,7 @@
         }
       }
     }
-    .breadcrumb {
+    nav.breadcrumb > ol.breadcrumb {
       margin-top: $spacing-md;
       @include media-breakpoint-up(md) {
         margin-top: $spacing-2xl;

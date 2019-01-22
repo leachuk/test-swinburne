@@ -1,15 +1,17 @@
-<div class="card ${componentProperties.cardSize} ${badgeClassAttr}">
+<div class="card card--taglist-share ${badgeClassAttr}">
     <img class="card-img-top" src="${componentProperties.pageThumbnail}" ${badgeImageAttr} alt="${componentProperties.title}">
     <div class="card-body">
-        <${componentProperties.badgeTitleType} class="card-title">${componentProperties.title}</${componentProperties.badgeTitleType}>
+        <${componentProperties.badgeTitleType} class="card-title h5">${componentProperties.title}</${componentProperties.badgeTitleType}>
         <c:if test="${not empty componentProperties.tags}">
-            <ul class="taglist text-bold mb-15">
-                <c:forEach items="${componentProperties.tags}" var="tag" varStatus="entryStatus">
-                    <li class="taglist__item" data-value="${tag.value.value}">#${tag.value.title}</li>
-                </c:forEach>
-            </ul>
+            <div class="card-taglist">
+                <ul class="taglist text-bold">
+                    <c:forEach items="${componentProperties.tags}" var="tag" varStatus="entryStatus">
+                        <li class="taglist__item badge badge-default" data-value="${tag.value.value}">#${tag.value.title}</li>
+                    </c:forEach>
+                </ul>
+            </div>
         </c:if>
-        <a class="card-link text-primary text-xsmall text-bold mb-20"
+        <a class="card-link text-primary text-xsmall text-bold"
            href="${componentProperties.pageUrl}"
            target="${componentProperties.badgeLinkTarget}"
            title="${componentProperties.badgeLinkTitle}"
@@ -23,4 +25,3 @@
         </div>
     </div>
 </div>
-

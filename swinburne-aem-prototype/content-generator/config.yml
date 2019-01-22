@@ -1345,6 +1345,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--pagedetail-brand
     title: 'Page Details - theme--pagedetail-brand'
 
+
   # Content Block
   layout/contentblock:
     prefixes:
@@ -1358,8 +1359,6 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
       - media
     prefixValue: theme--contentblock-
     title: 'Content Block - %%prefix_normalised%%'
-
-
 
   layout/contentblock/constraints:
     breakpoints:

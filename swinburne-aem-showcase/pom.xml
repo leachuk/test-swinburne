@@ -51,6 +51,7 @@
                     <exclude>**/.DS_Store</exclude>
                     <exclude>**/target/**</exclude>
                     <exclude>**/pom.xml</exclude>
+                    <exclude>${showcase.exclude.content}</exclude>
                 </excludes>
             </resource>
         </resources>
@@ -106,7 +107,6 @@
                         <createdBy>${package.createdBy}</createdBy>
                         <acHandling>merge_preserve</acHandling>
                     </properties>
-
                     <!-- embedded dependencies in the content package -->
                     <embeddeds></embeddeds>
 
@@ -155,6 +155,16 @@
     <!-- P R O F I L E S                                                        -->
     <!-- ====================================================================== -->
     <profiles>
+        <profile>
+            <id>exclude-showcase-dam</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <showcase.exclude.content>**/content/dam/**</showcase.exclude.content>
+            </properties>
+        </profile>
+
         <profile>
             <id>autoInstallPackage</id>
             <activation>

@@ -1,4 +1,4 @@
-<div ${componentProperties.componentAttributes}>
+<div>
     <img src="${componentProperties.pageThumbnailImage}" ${badgeImageAttr} alt="${componentProperties.title}" class="card-img-top"/>
    <%-- <c:if test="${not empty componentProperties.author}">
         <div class="author">${componentProperties.author}</div>

@@ -1,29 +1,26 @@
-
 <div class="card ${componentProperties.cardSize} ${badgeClassAttr}">
-    <div class="card-img-top">
-        <img src="${componentProperties.pageThumbnail}" ${badgeImageAttr} alt="${componentProperties.title}">
-    </div>
+    <img class="card-img-top" src="${componentProperties.pageThumbnail}" ${badgeImageAttr} alt="${componentProperties.title}">
     <div class="card-body">
         <${componentProperties.badgeTitleType} class="card-title">${componentProperties.title}</${componentProperties.badgeTitleType}>
-    <c:if test="${not empty componentProperties.tags}">
-        <div class="card-category">
-            <ul class="tags">
+        <c:if test="${not empty componentProperties.tags}">
+            <ul class="tag-list">
                 <c:forEach items="${componentProperties.tags}" var="tag" varStatus="entryStatus">
-                    <li class="tag badge badge-default" data-value="${tag.value.value}">${tag.value.title}</li>
+                    <li class="tag-list__item badge badge-default" data-value="${tag.value.value}">${tag.value.title}</li>
                 </c:forEach>
             </ul>
-        </div>
-    </c:if>
-    <div class="card-action">
-        <a class="card-link ${fn:join(componentProperties.badgeLinkStyle, ' ')}"
+        </c:if>
+        <p><a class="card-link text-primary text-xsmall text-bold"
            href="${componentProperties.pageUrl}"
            target="${componentProperties.badgeLinkTarget}"
            title="${componentProperties.badgeLinkTitle}"
-        ${badgeLinkAttr}><span>${componentProperties.badgeLinkText}</span></a>
+        ${badgeLinkAttr}>${componentProperties.badgeLinkText}</a></p>
+        <div class="row">
+            <div class="col-6">
+                <c:if test="${not componentProperties.newsDateStatusText}">
+                    <p class="text-xsmall text-g2">${componentProperties.newsDateStatusText}</p>
+                </c:if>
+            </div>
+        </div>
     </div>
-    <c:if test="${not componentProperties.newsDateStatusText}">
-        <div class="card-date">${componentProperties.newsDateStatusText}</div>
-    </c:if>
-</div>
 </div>
 

@@ -7,37 +7,11 @@
 $card-top-bar-height: 18px;
 
 .card {
-  //background-color: theme-color('c7');
   box-shadow: 0 2px 3px $grey-4;
   margin-bottom: 0;
-  //padding-top: rem-calc($card-top-bar-height);
 
   &-title {
     margin-bottom: $spacing-md;
-  }
-
-  &-img-top,
-  &-icon {
-    //max-height: rem-calc(140px);
-  }
-
-  &-img-top,
-  &-icon,
-  &-body {
-    background-color: $white;
-  }
-
-  &-footer {
-    background-color: transparent;
-    margin-bottom: 0;
-    padding: 0 $spacing-md $spacing-md;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: $spacer;
-      padding-right: $spacing-2xl;
-      padding-left: $spacing-2xl;
-      padding-bottom: $spacing-lg;
-    }
   }
 
   &-img-top {
@@ -73,7 +47,7 @@ $card-top-bar-height: 18px;
   &-date,
   &-title,
   &-subtitle,
-  &-tags,
+  &-taglist,
   &-text:not(:last-child) {
     margin-bottom: $paragraph-margin-bottom;
   }
@@ -100,10 +74,6 @@ $card-top-bar-height: 18px;
     font-weight: 300;
   }
 
-  &-subtitle {
-    font-weight: bold;
-  }
-
   &-icon {
     // These selectors take into account that Font Awesome 5 replaces the original icon
     // along with the `.fa` classes been superseded by new category specific classes.
@@ -114,34 +84,11 @@ $card-top-bar-height: 18px;
   }
 
   // Variations and style changes
-  @import 'card/flat',
-  'card/padded',
-  'card/author',
-  'card/coloured',
-  'card/medium',
-  'card/large',
-  'card/promoted',
-  'card/outline',
-  'card/result',
-  'card/no-bar',
-  'card/no-shadow'
-  ;
+  @import 'card/taglist-share';
 
   // Nested within a carousel
   .owl-item & {
     margin-bottom: 4px;
-  }
-
-  // Icon sizes
-  @each $name, $size in $icon-sizes {
-    &.icon--#{$name} .card-img-top > img,
-    &.icon--#{$name} .card-icon {
-      font-size: $size;
-    }
-
-    &.icon--#{$name} .card-img-top > img {
-      height: $size;
-    }
   }
 
   @include media-breakpoint-up(md) {
@@ -152,26 +99,4 @@ $card-top-bar-height: 18px;
       margin-left: rem-calc($grid-gutter-width);
     }
   }
-}
-
-%card-image-rounded {
-  .card-img-top {
-    img {
-      border-radius: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      min-width: initial;
-      position: static;
-      top: auto;
-      transform: none;
-    }
-
-    &::before {
-      display: none;
-    }
-  }
-}
-
-%card-no-bar {
-  background-color: transparent;
 }

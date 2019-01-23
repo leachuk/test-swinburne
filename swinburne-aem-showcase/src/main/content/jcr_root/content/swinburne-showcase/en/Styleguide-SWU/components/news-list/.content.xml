@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2019-01-23T11:30:58.682+11:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="News List"
@@ -22,17 +24,17 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page_details
-                        jcr:mixinTypes="[cq:Taggable]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/details/page-details"
-                        editable="{Boolean}false"
-                        componentId="page_details"
-                        componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
-                        showBreadcrumb="false"
-                        showPageDate="false"
-                        showParsys="false"
-                        showToolbar="false"
-                        textIsRich="true" />
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details"
+                    componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
+                    editable="{Boolean}false"
+                    showBreadcrumb="false"
+                    showPageDate="false"
+                    showParsys="false"
+                    showToolbar="false"
+                    textIsRich="true"/>
                 <contentblock_1872776108
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -41,13 +43,17 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
                         <newslist
+                            jcr:lastModified="{Date}2019-01-23T11:30:58.677+11:00"
+                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/newslist"
                             componentId="newslist_PUIYOKLAI"
-                            detailsBadge="cardImageTitleCategoryDescriptionAction"
+                            detailsBadge="cardImageTitleCategoryActionDate"
                             listFrom="children"
                             tagsMatch="any">
                             <badgeThumbnail
+                                jcr:lastModified="{Date}2019-01-23T11:30:58.677+11:00"
+                                jcr:lastModifiedBy="admin"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/media/image"/>
                         </newslist>

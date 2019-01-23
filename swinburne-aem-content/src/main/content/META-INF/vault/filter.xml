@@ -16,15 +16,6 @@
 
     <filter root="/conf/swinburne" mode="update"/>
 
-    <filter root="/etc/clientlibs/swinburne">
-        <!-- do not allow deploy into css js and fonts folders -->
-        <include pattern="/etc/clientlibs/swinburne/.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/css.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/js.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/fonts.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/images.*"/>
-    </filter>
-
     <!--Filter root is commented below to use for content sync in future -->
     <!--<filter root="/content/dam/formsanddocuments-themes/swinburne"/>-->
     <filter root="/etc/clientlibs/swinburne/forms"/>

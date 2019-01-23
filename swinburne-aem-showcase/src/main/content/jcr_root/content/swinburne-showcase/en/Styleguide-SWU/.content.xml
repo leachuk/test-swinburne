@@ -93,15 +93,14 @@
                         showToolbar="false"
                         textIsRich="true" />
                 <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_KSQ380XE5">
-                    <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock"
+                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                    </par>
                 </contentblock>
             </par>
             <bgimage

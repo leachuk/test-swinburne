@@ -21,6 +21,7 @@
     final Boolean DEFAULT_SHOW_TOOLBAR = true;
     final Boolean DEFAULT_SHOW_PAGE_DATE = true;
     final Boolean DEFAULT_SHOW_PARSYS = true;
+    final String DEFAULT_DATE_DISPLAY_FORMAT = "EEEE DD MMMM YYYY";
 
     Object[][] componentFields = {
 
@@ -65,7 +66,8 @@
 
     //get format strings from dictionary
     String dateFormatString = _i18n.get("publishDateFormat",DEFAULT_I18N_CATEGORY);
-    String dateDisplayFormatString = _i18n.get("publishDateDisplayFormat",DEFAULT_I18N_CATEGORY);
+    //String dateDisplayFormatString = _i18n.get("publishDateDisplayFormat",DEFAULT_I18N_CATEGORY);
+    String dateDisplayFormatString = DEFAULT_DATE_DISPLAY_FORMAT;
 
     //format date into formatted date
     SimpleDateFormat dateFormat = new SimpleDateFormat(dateFormatString);

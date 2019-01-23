@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-01-07T09:40:31.483+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Typography"
@@ -59,16 +57,12 @@
                                         text="&lt;h1>Heading 1&lt;/h1>&#xd;&#xa;&lt;h2>Heading 2&lt;/h2>&#xd;&#xa;&lt;h3>Heading 3&lt;/h3>&#xd;&#xa;&lt;h4>Heading 4&lt;/h4>&#xd;&#xa;&lt;h5>Heading 5&lt;/h5>&#xd;&#xa;"
                                         textIsRich="true"/>
                                 <text_948915483
-                                        jcr:lastModified="{Date}2019-01-07T09:39:03.474+11:00"
-                                        jcr:lastModifiedBy="admin"
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="swinburne/components/content/text"
                                         componentId="body-bg-light"
                                         text="&lt;p>&lt;span class=&quot;text-cap-underline&quot;>&lt;span class=&quot;text--cap-underline&quot;>body default with text cap underline: We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/span>&lt;/span>&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>body bold : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>body small : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>&lt;span class=&quot;fw-600&quot;>body small bold : We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/span>&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;http://www.google.fr&quot; target=&quot;_blank&quot;>Link: his is a text link&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;i>Italic: This text has added emphasis&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>This text is deleted&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items  &lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
                                         textIsRich="true"/>
                                 <text_948915483_copy_
-                                        jcr:lastModified="{Date}2019-01-07T09:39:55.829+11:00"
-                                        jcr:lastModifiedBy="admin"
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="swinburne/components/content/text"
                                         componentId="heading-bg-dark"
@@ -76,8 +70,6 @@
                                         text="&lt;h1>Heading 1&lt;/h1>&#xd;&#xa;&lt;h2>Heading 2&lt;/h2>&#xd;&#xa;&lt;h3>Heading 3&lt;/h3>&#xd;&#xa;&lt;h4>Heading 4&lt;/h4>&#xd;&#xa;&lt;h5>Heading 5&lt;/h5>&#xd;&#xa;"
                                         textIsRich="true"/>
                                 <text_948915483_copy
-                                        jcr:lastModified="{Date}2019-01-07T09:40:31.479+11:00"
-                                        jcr:lastModifiedBy="admin"
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="swinburne/components/content/text"
                                         componentId="body-bg-dark"

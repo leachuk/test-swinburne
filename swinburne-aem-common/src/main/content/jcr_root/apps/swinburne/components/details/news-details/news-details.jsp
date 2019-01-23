@@ -67,7 +67,7 @@
     //get format strings from dictionary
     String dateFormatString = _i18n.get("publishDateFormat",DEFAULT_I18N_CATEGORY);
     //String dateDisplayFormatString = _i18n.get("publishDateDisplayFormat",DEFAULT_I18N_CATEGORY);
-    String dateDisplayFormatString = DEFAULT_DATE_DISPLAY_FORMAT;
+    String dateDisplayFormatString = _properties.get("publishDateDisplayFormat",DEFAULT_DATE_DISPLAY_FORMAT);
 
     //format date into formatted date
     SimpleDateFormat dateFormat = new SimpleDateFormat(dateFormatString);

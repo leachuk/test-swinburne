@@ -35,12 +35,22 @@
                         showParsys="false"
                         showToolbar="false"
                         textIsRich="true" />
-                <text
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_XPVD0ZVKZ"
-                    text="&lt;h1>Visual decorators&lt;/h1>&#xd;&#xa;"
-                    textIsRich="true"/>
+                <contentblock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock"
+                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                        <text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text_XPVD0ZVKZ"
+                                text="&lt;h1>Visual decorators&lt;/h1>&#xd;&#xa;"
+                                textIsRich="true"/>
+                    </par>
+                </contentblock>
             </par>
         </article>
     </jcr:content>

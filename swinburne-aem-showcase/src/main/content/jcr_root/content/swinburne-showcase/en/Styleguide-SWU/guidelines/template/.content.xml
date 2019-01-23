@@ -34,56 +34,66 @@
                         showToolbar="false"
                         textIsRich="true" />
                 <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_HB0UEILT8">
-                    <par jcr:primaryType="nt:unstructured">
-                        <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock"
+                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    <par
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_HAQUGQW0L"
-                            text="&lt;h1>Template&lt;/h1>&#xd;&#xa;"
-                            textIsRich="true"/>
+                            sling:resourceType="swinburne/components/layout/container">
+                        <contentblock_HB0UEILT8
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/contentblock"
+                                componentId="contentblock_HB0UEILT8">
+                            <par jcr:primaryType="nt:unstructured">
+                                <text
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/text"
+                                        componentId="text_HAQUGQW0L"
+                                        text="&lt;h1>Template&lt;/h1>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                            </par>
+                        </contentblock_HB0UEILT8>
+                        <contentblock_1210338601
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/contentblock"
+                                componentId="contentblock1">
+                            <par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/layout/container">
+                                <text
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/text"
+                                        componentId="description-1"
+                                        componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-10]"
+                                        text="&lt;p>Use the &lt;b>Swinburne Global Single Column &lt;/b>template for all pages. The template consists of the header and footer, with an content section between them.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                                <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/media/image"
+                                        componentId="template-image"
+                                        componentModifiers="[swinburne-showcase:component-style-modifier/image/responsive,swinburne-showcase:component-style-modifier/margin/mb-15]"
+                                        fileReference="/content/dam/swinburne-showcase/en/styleguide/Swinburne Global One Column.png"/>
+                                <text_1505806541
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/text"
+                                        componentId="description-2"
+                                        text="&lt;p>If you need to insert multiple columns within the content area, use the &lt;b>Column Control &lt;/b>component.&lt;/p>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                            </par>
+                            <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/media/image"
+                                    componentId="image_7ZLU3OH5A"/>
+                            <bgimage
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/media/image"/>
+                            <bgvideo
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/media/image"/>
+                        </contentblock_1210338601>
                     </par>
                 </contentblock>
-                <contentblock_1210338601
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock1">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="description-1"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-10]"
-                            text="&lt;p>Use the &lt;b>Swinburne Global Single Column &lt;/b>template for all pages. The template consists of the header and footer, with an content section between them.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <image
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/media/image"
-                            componentId="template-image"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/image/responsive,swinburne-showcase:component-style-modifier/margin/mb-15]"
-                            fileReference="/content/dam/swinburne-showcase/en/styleguide/Swinburne Global One Column.png"/>
-                        <text_1505806541
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="description-2"
-                            text="&lt;p>If you need to insert multiple columns within the content area, use the &lt;b>Column Control &lt;/b>component.&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                    </par>
-                    <image
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/media/image"
-                        componentId="image_7ZLU3OH5A"/>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                </contentblock_1210338601>
             </par>
         </article>
     </jcr:content>

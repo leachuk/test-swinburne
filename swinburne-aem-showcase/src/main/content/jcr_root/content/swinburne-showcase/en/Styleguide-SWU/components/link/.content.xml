@@ -36,35 +36,45 @@
                         showToolbar="false"
                         textIsRich="true" />
                 <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_JCPL1WR0Q">
-                    <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <text
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock"
+                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    <par
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_F1KA7YIVQ"
-                            text="&lt;h1>Link&lt;/h1>&#xd;&#xa;"
-                            textIsRich="true"/>
+                            sling:resourceType="swinburne/components/layout/container">
+                        <contentblock_JCPL1WR0Q
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/contentblock"
+                                componentId="contentblock_JCPL1WR0Q">
+                            <par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/layout/container">
+                                <text
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/text"
+                                        componentId="text_F1KA7YIVQ"
+                                        text="&lt;h1>Link&lt;/h1>&#xd;&#xa;"
+                                        textIsRich="true"/>
+                            </par>
+                        </contentblock_JCPL1WR0Q>
+                        <contentblock_148734255
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/contentblock"
+                                componentId="contentblock_148734255_T5ZUT5HJR">
+                            <par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/layout/container">
+                                <link
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/content/link"
+                                        componentId="link_RI5KAMKJG"
+                                        label="Link default variant"
+                                        linkUrl="https://www.google.com.au"/>
+                            </par>
+                        </contentblock_148734255>
                     </par>
                 </contentblock>
-                <contentblock_148734255
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_148734255_T5ZUT5HJR">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <link
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/link"
-                            componentId="link_RI5KAMKJG"
-                            label="Link default variant"
-                            linkUrl="https://www.google.com.au"/>
-                    </par>
-                </contentblock_148734255>
             </par>
         </article>
     </jcr:content>

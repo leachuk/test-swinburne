@@ -45,14 +45,6 @@
                     <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/container">
-                        <text
-                                jcr:lastModified="{Date}2018-12-13T12:20:52.605+11:00"
-                                jcr:lastModifiedBy="admin"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/text"
-                                componentId="text_Q3WXEIJOO"
-                                text="&lt;h1>Style guide&lt;/h1>&#xd;&#xa;"
-                                textIsRich="true"/>
                     </par>
                 </contentblock>
             </par>

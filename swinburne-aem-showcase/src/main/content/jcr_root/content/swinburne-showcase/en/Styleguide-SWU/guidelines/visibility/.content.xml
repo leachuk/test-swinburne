@@ -42,21 +42,6 @@
                     <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/container">
-                        <contentblock_TSRVKLIHN
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/contentblock"
-                                componentId="contentblock_TSRVKLIHN">
-                            <par
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/layout/container">
-                                <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="swinburne/components/content/text"
-                                        componentId="text_XQWVI9T6S"
-                                        text="&lt;h1>Visibility&lt;/h1>&#xd;&#xa;"
-                                        textIsRich="true"/>
-                            </par>
-                        </contentblock_TSRVKLIHN>
                         <contentblock_2094525290
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/layout/contentblock"

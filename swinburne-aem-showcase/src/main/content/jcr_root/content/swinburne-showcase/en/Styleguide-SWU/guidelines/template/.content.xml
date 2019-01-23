@@ -41,19 +41,6 @@
                     <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/container">
-                        <contentblock_HB0UEILT8
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/contentblock"
-                                componentId="contentblock_HB0UEILT8">
-                            <par jcr:primaryType="nt:unstructured">
-                                <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="swinburne/components/content/text"
-                                        componentId="text_HAQUGQW0L"
-                                        text="&lt;h1>Template&lt;/h1>&#xd;&#xa;"
-                                        textIsRich="true"/>
-                            </par>
-                        </contentblock_HB0UEILT8>
                         <contentblock_1210338601
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/layout/contentblock"

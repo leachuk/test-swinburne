@@ -6,7 +6,7 @@
             <div class="card-taglist">
                 <ul class="taglist text-bold">
                     <c:forEach items="${componentProperties.tags}" var="tag" varStatus="entryStatus">
-                        <li class="taglist__item badge badge-default" data-value="${tag.value.value}">#${tag.value.title}</li>
+                        <li class="taglist__item" data-value="${tag.value.value}">#${tag.value.title}</li>
                     </c:forEach>
                 </ul>
             </div>
@@ -15,7 +15,7 @@
            href="${componentProperties.pageUrl}"
            target="${componentProperties.badgeLinkTarget}"
            title="${componentProperties.badgeLinkTitle}"
-        ${badgeLinkAttr}>${componentProperties.badgeLinkText}</a>
+        ${badgeLinkAttr}>Read full post</a>
         <div class="row">
             <div class="col-6">
                 <c:if test="${not componentProperties.newsDateStatusText}">

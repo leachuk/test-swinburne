@@ -45,12 +45,6 @@
                     <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/container">
-                        <text
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/text"
-                                componentId="text_JEIVXCZWO"
-                                text="&lt;h1>Motion&lt;/h1>&#xd;&#xa;"
-                                textIsRich="true"/>
                     </par>
                 </contentblock>
             </par>

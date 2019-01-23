@@ -42,19 +42,7 @@
                         componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
                     <par
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container"><contentblock_O54NYGDO3
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock_O54NYGDO3">
-                        <par jcr:primaryType="nt:unstructured">
-                            <text
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_YZIRJCIO4"
-                                    text="&lt;h1>Spacing&lt;/h1>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                        </par>
-                    </contentblock_O54NYGDO3>
+                            sling:resourceType="swinburne/components/layout/container">
                         <contentblock_721375841
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/layout/contentblock"

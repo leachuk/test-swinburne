@@ -36,7 +36,7 @@
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock"
+                    componentId="contentblock-1"
                     componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -51,7 +51,7 @@
                                 <newslist
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/lists/newslist"
-                                    componentId="newslist_PUIYOKLAI"
+                                    componentId="newslist-1"
                                     detailsBadge="cardImageTitleCategoryActionDate"
                                     listFrom="static"
                                     pages="[/content/swinburne-showcase/en/component/details/news-details,/content/swinburne-showcase/en/component/details/news-details,/content/swinburne-showcase/en/component/details/news-details]"
@@ -63,6 +63,12 @@
                             </par>
                         </contentblock_1872776108>
                     </par>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock>
             </par>
         </article>

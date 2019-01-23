@@ -16,12 +16,8 @@
            target="${componentProperties.badgeLinkTarget}"
            title="${componentProperties.badgeLinkTitle}"
         ${badgeLinkAttr}>Read full post</a>
-        <div class="row">
-            <div class="col-6">
-                <c:if test="${not componentProperties.newsDateStatusText}">
-                    <p class="text-xsmall text-g2">${componentProperties.newsDateStatusText}</p>
-                </c:if>
-            </div>
-        </div>
+        <c:if test="${not componentProperties.newsDateStatusText}">
+            <p class="text-xsmall text-g2">${componentProperties.newsDateStatusText}</p>
+        </c:if>
     </div>
 </div>

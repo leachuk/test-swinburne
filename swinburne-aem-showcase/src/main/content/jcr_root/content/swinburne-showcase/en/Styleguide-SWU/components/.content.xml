@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
+    <breadcrumbs/>
+    <content-block/>
+    <link/>
+    <news-list/>
     <jcr:content
-        cq:lastModified="{Date}2019-01-21T13:56:51.069+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="components"
@@ -26,21 +28,19 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page_details
-                        jcr:mixinTypes="[cq:Taggable]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/details/page-details"
-                        editable="{Boolean}false"
-                        componentId="page_details"
-                        componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
-                        showBreadcrumb="false"
-                        showPageDate="false"
-                        showParsys="false"
-                        showToolbar="false"
-                        textIsRich="true" />
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details"
+                    componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
+                    editable="{Boolean}false"
+                    showBreadcrumb="false"
+                    showPageDate="false"
+                    showParsys="false"
+                    showToolbar="false"
+                    textIsRich="true"/>
             </par>
         </article>
     </jcr:content>
-    <breadcrumbs/>
-    <content-block/>
     <text/>
 </jcr:root>

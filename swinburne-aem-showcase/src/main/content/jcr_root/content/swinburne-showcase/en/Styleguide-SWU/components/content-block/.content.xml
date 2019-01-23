@@ -35,21 +35,6 @@
                         showParsys="false"
                         showToolbar="false"
                         textIsRich="true" />
-                <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_HH63ZNOOE">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_LAXDHKRIB"
-                            text="&lt;h1>Content Block&lt;/h1>&#xd;&#xa;"
-                            textIsRich="true"/>
-                    </par>
-                </contentblock>
                 <contentblock_1045719959
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"

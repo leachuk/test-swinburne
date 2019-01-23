@@ -37,12 +37,6 @@
                         showParsys="false"
                         showToolbar="false"
                         textIsRich="true" />
-                <text
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_WIDUQ1QYP"
-                    text="&lt;h1>Breakpoints&lt;/h1>&#xd;&#xa;"
-                    textIsRich="true"/>
             </par>
         </article>
     </jcr:content>

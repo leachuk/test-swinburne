@@ -37,12 +37,6 @@
                         showParsys="false"
                         showToolbar="false"
                         textIsRich="true" />
-                <text
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_91VY8KF4E"
-                    text="&lt;h1>Logo and usage&lt;/h1>&#xd;&#xa;"
-                    textIsRich="true"/>
             </par>
         </article>
     </jcr:content>

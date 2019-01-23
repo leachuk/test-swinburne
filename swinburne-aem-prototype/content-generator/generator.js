@@ -1,4 +1,5 @@
 /* eslint-disable */
+const args   = require('yargs').argv
 const colors = require('colors')
 const fs     = require('fs')
 const mkdirp = require('mkdirp')
@@ -10,7 +11,7 @@ const {
   isArray,
 } = require('lodash')
 
-const rootPath = 'content'
+const rootPath       = 'content'
 const pathPrefixTags = 'content/cq:tags'
 const pathPrefixApps = 'apps/'
 
@@ -25,13 +26,12 @@ const {
 console.clear()
 
 try {
-  const configFilePath = currentPath('config.yml')
+  const configFilePath = currentPath(`config/${args.config}`)
   const config         = yaml.safeLoad(fs.readFileSync(configFilePath, 'utf8'))
 
-  rimraf(currentPath(rootPath), () => {
-    mkdirp.sync(currentPath(rootPath))
-
+  function generator() {
     const categories = {}
+
     for (const category of Object.keys(config)) {
       const children = config[category]
 
@@ -246,7 +246,17 @@ try {
     })
 
     console.log(colors.blue('Total number of files generated:'), totalNumberOfTags)
-  })
+  }
+
+  // If the clean flag is set and its value is `false`, we retain the current content folder
+  if (args.clean === 'false') {
+    generator()
+  } else {
+    rimraf(currentPath(rootPath), () => {
+      mkdirp.sync(currentPath(rootPath))
+      generator()
+    })
+  }
 } catch (e) {
   console.log(e)
 }

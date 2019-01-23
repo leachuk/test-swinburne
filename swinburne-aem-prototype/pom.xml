@@ -27,7 +27,9 @@
   <properties>
     <sonar.sources>source,pom.xml</sonar.sources>
     <!--<sonar.skip>true</sonar.skip>-->
-    <frontend-maven-plugin.version>0.0.26</frontend-maven-plugin.version>
+    <nodeVersion>v8.15.0</nodeVersion>
+    <npmVersion>6.4.1</npmVersion>
+    <yarnVersion>v1.13.0</yarnVersion>
   </properties>
 
   <developers>
@@ -42,7 +44,7 @@
       <dependency>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.6</version>
+        <version>LATEST_VERSION</version>
         <scope>provided</scope>
       </dependency>
     </dependencies>
@@ -98,19 +100,20 @@
         <artifactId>frontend-maven-plugin</artifactId>
         <version>1.6</version>
         <configuration>
-          <nodeVersion>v8.9.0</nodeVersion>
-          <npmVersion>5.5.1</npmVersion>
-          <yarnVersion>v1.7.0</yarnVersion>
+          <nodeVersion>${nodeVersion}</nodeVersion>
+          <npmVersion>${npmVersion}</npmVersion>
+          <yarnVersion>${yarnVersion}</yarnVersion>
         </configuration>
         <executions>
+          <!-- Microsites -->
           <execution>
             <id>install node and yarn</id>
             <goals>
               <goal>install-node-and-yarn</goal>
             </goals>
             <configuration>
-              <nodeVersion>v8.11.1</nodeVersion>
-              <yarnVersion>v1.6.0</yarnVersion>
+              <nodeVersion>${nodeVersion}</nodeVersion>
+              <yarnVersion>${yarnVersion}</yarnVersion>
             </configuration>
           </execution>
           <execution>
@@ -128,17 +131,38 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>run aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.version=v1</arguments>
+              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.version=v1</arguments>
             </configuration>
           </execution>
           <execution>
-            <id>exec-aem-generate-tags</id>
+            <id>exec-aem-generate-tags-v1</id>
             <goals>
               <goal>yarn</goal>
             </goals>
             <configuration>
               <arguments> - -stack_size=8192</arguments>
-              <arguments>run aem:generatetags</arguments>
+              <arguments>run aem:generatetags --config=microsites.yml</arguments>
+            </configuration>
+          </execution>
+
+          <!-- Study With Us (SWU) -->
+          <execution>
+            <id>exec-aem-build-v2</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.version=v2 --env.clean=false</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>exec-aem-generate-tags-v2</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments> - -stack_size=8192</arguments>
+              <arguments>run aem:generatetags --clean=false --config=swu.yml</arguments>
             </configuration>
           </execution>
         </executions>
@@ -260,61 +284,6 @@
           </execution>
 
           <execution>
-            <id>copy-content-generator-content-resources</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>content-generator/content</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <plugin>
-        <groupId>com.github.eirslett</groupId>
-        <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.6</version>
-        <executions>
-          <execution>
-            <id>exec-aem-build-v2</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>run aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.version=v2</arguments>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-resources-plugin</artifactId>
-      <!-- ensure that the empty directories are copied -->
-      <configuration>
-        <includeEmptyDirs>true</includeEmptyDirs>
-      </configuration>
-
-        <executions>
-          <execution>
             <id>copy-css-vault-resources-v2</id>
             <phase>generate-resources</phase>
             <goals>
@@ -402,23 +371,24 @@
               </resources>
             </configuration>
           </execution>
+
+          <execution>
+            <id>copy-content-generator-content-resources</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>content-generator/content</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <plugin>
         <groupId>com.day.jcr.vault</groupId>

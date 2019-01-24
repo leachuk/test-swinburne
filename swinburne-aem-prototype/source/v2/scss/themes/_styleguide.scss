@@ -1,0 +1,8 @@
+// themes for use only in the Styleguide
+
+&--styleguide {
+  &-page-details {
+    padding: $spacing-6xl $spacing-4xl $spacing-4xl;
+    background: url('../images/patterns/yellow.png')  0 100% repeat-x;
+  }
+}

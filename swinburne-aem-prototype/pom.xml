@@ -165,6 +165,18 @@
               <arguments>run aem:generatetags --no-clean --config=swu.yml</arguments>
             </configuration>
           </execution>
+
+          <!-- AEM Design (internal)  -->
+          <execution>
+            <id>exec-aem-generate-tags-aemdesign</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments> - -stack_size=8192</arguments>
+              <arguments>run aem:generatetags --no-clean --config=aemdesign.yml</arguments>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
 

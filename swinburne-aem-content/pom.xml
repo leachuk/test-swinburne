@@ -52,6 +52,7 @@
                     <exclude>**/.DS_Store</exclude>
                     <exclude>**/target/**</exclude>
                     <exclude>**/pom.xml</exclude>
+                    <exclude>${showcase.exclude.content}</exclude>
                 </excludes>
             </resource>
         </resources>
@@ -188,6 +189,16 @@
     <!-- P R O F I L E S                                                        -->
     <!-- ====================================================================== -->
     <profiles>
+        <profile>
+            <id>exclude-dam-content</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <exclude.content>**/content/dam/**</exclude.content>
+            </properties>
+        </profile>
+
         <profile>
             <id>autoInstallPackage</id>
             <activation>

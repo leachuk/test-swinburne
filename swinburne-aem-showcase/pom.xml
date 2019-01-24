@@ -51,7 +51,7 @@
                     <exclude>**/.DS_Store</exclude>
                     <exclude>**/target/**</exclude>
                     <exclude>**/pom.xml</exclude>
-                    <exclude>${showcase.exclude.content}</exclude>
+                    <exclude>${exclude.content}</exclude>
                 </excludes>
             </resource>
         </resources>
@@ -156,12 +156,12 @@
     <!-- ====================================================================== -->
     <profiles>
         <profile>
-            <id>exclude-showcase-dam</id>
+            <id>exclude-dam-content</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <showcase.exclude.content>**/content/dam/**</showcase.exclude.content>
+                <exclude.content>**/content/dam/**</exclude.content>
             </properties>
         </profile>
 

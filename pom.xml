@@ -77,7 +77,7 @@
         <seleniumhubhost.port>32768</seleniumhubhost.port>
         <seleniumhubhost.scheme>http</seleniumhubhost.scheme>
         <seleniumhubhost.service>/wd/hub</seleniumhubhost.service>
-        <showcase.exclude.content></showcase.exclude.content>
+        <exclude.content></exclude.content>
     </properties>
 
 

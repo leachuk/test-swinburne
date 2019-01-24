@@ -4,7 +4,7 @@
         <div class="author">${componentProperties.author}</div>
     </c:if>--%>
     <c:if test="${componentProperties.showBreadcrumb}">
-        <cq:include path="breadcrumb" resourceType="aemdesign/components/layout/breadcrumb"/>
+        <cq:include path="breadcrumb" resourceType="swinburne/components/layout/breadcrumb"/>
     </c:if>
     <c:if test="${not componentProperties.hideDescription}">
         <div class="description">${componentProperties.description}</div>

@@ -90,6 +90,24 @@ html:not(.aem-AuthorLayer-Edit ) {
   }
 }
 
+.styleguide-colour-panel {
+  .wrapper {
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 120px;
+    margin-bottom: #{$grid-gutter * 2}px;
+
+    span {
+      display: block;
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+  }
+}
+
 .styleguide-table {
   font-size: 14px;
 

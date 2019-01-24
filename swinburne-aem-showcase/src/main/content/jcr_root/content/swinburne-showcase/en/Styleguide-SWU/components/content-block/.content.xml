@@ -23,46 +23,53 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
-                <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_HH63ZNOOE">
-                    <par
+                <page_details
+                        jcr:mixinTypes="[cq:Taggable]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <text
+                        sling:resourceType="swinburne/components/details/page-details"
+                        editable="{Boolean}false"
+                        componentId="page_details"
+                        componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
+                        showBreadcrumb="false"
+                        showPageDate="false"
+                        showParsys="false"
+                        showToolbar="false"
+                        textIsRich="true" />
+                <contentblock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock"
+                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    <par
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_LAXDHKRIB"
-                            text="&lt;h1>Content Block&lt;/h1>&#xd;&#xa;"
-                            textIsRich="true"/>
+                            sling:resourceType="swinburne/components/layout/container">
+                        <contentblock_1045719959
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/layout/contentblock"
+                                componentId="contentblock_1045719959_JI4BT0B9S">
+                            <par
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/layout/container">
+                                <contentblock
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="swinburne/components/layout/contentblock"
+                                        componentId="contentblock_advanced"
+                                        hideTitle="false"
+                                        hideTopLink="true"
+                                        title="Advanced Section With Title"
+                                        titleType="h4"
+                                        variant="advsection">
+                                    <bgimage
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="aemdesign/components/media/image"/>
+                                    <bgvideo
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="aemdesign/components/media/image"/>
+                                </contentblock>
+                            </par>
+                        </contentblock_1045719959>
                     </par>
                 </contentblock>
-                <contentblock_1045719959
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_1045719959_JI4BT0B9S">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <contentblock
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock_advanced"
-                            hideTitle="false"
-                            hideTopLink="true"
-                            title="Advanced Section With Title"
-                            titleType="h4"
-                            variant="advsection">
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <bgvideo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </contentblock>
-                    </par>
-                </contentblock_1045719959>
             </par>
         </article>
     </jcr:content>

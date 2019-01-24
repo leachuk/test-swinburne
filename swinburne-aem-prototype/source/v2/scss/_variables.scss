@@ -103,6 +103,9 @@ $spacing-lg: rem-calc(25px);
 $spacing-2xl: rem-calc(30px);
 $spacing-3xl: rem-calc(35px);
 $spacing-4xl: rem-calc(40px);
+$spacing-5xl: rem-calc(45px);
+$spacing-6xl: rem-calc(50px);
+$spacing-7xl: rem-calc(55px);
 
 $grid-gutter: 5.5;
 $grid-gutter-sm: 9;
@@ -268,6 +271,7 @@ $typography: (
       xs: (
         font-size: 35px,
         line-height: 41px,
+        font-weight: 600,
       ),
       md: (
         font-size: 38px,
@@ -282,8 +286,8 @@ $typography: (
     h3: (
       xs: (
         font-size: 26px,
-        font-weight: 300,
         line-height: 32px,
+        font-weight: 600,
       ),
       md: (
         font-size: 28px,
@@ -299,6 +303,7 @@ $typography: (
       xs: (
         font-size: 24px,
         line-height: 30px,
+        font-weight: 600,
       ),
       md: (
         font-size: 26px,
@@ -314,6 +319,7 @@ $typography: (
       xs: (
         font-size: 20px,
         line-height: 26px,
+        font-weight: 600,
       ),
       md: (
         font-size: 22px,
@@ -329,6 +335,7 @@ $typography: (
       xs: (
         font-size: 18px,
         line-height: 24px,
+        font-weight: 600,
       ),
       md: (
         font-size: 20px,

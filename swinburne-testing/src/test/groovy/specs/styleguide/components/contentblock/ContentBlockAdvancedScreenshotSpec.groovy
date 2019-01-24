@@ -1,11 +1,11 @@
 package specs.styleguide.components.contentblock
 
 import spock.lang.Stepwise
+import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
 class ContentBlockAdvancedScreenshotSpec extends ComponentSpec {
-
     String pathPage = "Styleguide-SWU/components/content-block"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
@@ -15,21 +15,23 @@ class ContentBlockAdvancedScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
+    @Unroll("Appearance of Title in #viewport.label")
     def "Appearance of Title"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_advanced"
 
         when: 'I am in the component showcase page'
-        setWindowSize()
+        setWindowSize(viewport)
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
 
+        where:
+        viewport << getViewPorts()
     }
 }

@@ -5,6 +5,7 @@ const fs     = require('fs')
 const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
 const yaml   = require('js-yaml')
+const yimp   = require('yaml-import')
 
 const {
   each,
@@ -12,6 +13,7 @@ const {
 } = require('lodash')
 
 const rootPath       = 'content'
+const tmpPath        = 'tmp'
 const pathPrefixTags = 'content/cq:tags'
 const pathPrefixApps = 'apps/'
 
@@ -26,8 +28,17 @@ const {
 console.clear()
 
 try {
-  const configFilePath = currentPath(`config/${args.config}`)
-  const config         = yaml.safeLoad(fs.readFileSync(configFilePath, 'utf8'))
+  const baseConfigFilePath = currentPath(`config/${args.config}`)
+  const configFilePath     = currentPath(`tmp/config.${(Date.now() / 1000 | 0)}.yml`)
+
+  if (!fs.existsSync(currentPath(tmpPath))) {
+    mkdirp.sync(currentPath(tmpPath))
+  }
+
+  // Merge the YAML configurations together into a single readable file
+  yimp.write(baseConfigFilePath, configFilePath)
+
+  const config = yaml.safeLoad(fs.readFileSync(configFilePath, 'utf8'))
 
   function generator() {
     const categories = {}
@@ -249,7 +260,7 @@ try {
   }
 
   // If the clean flag is set and its value is `false`, we retain the current content folder
-  if (args.clean === 'false') {
+  if (args.clean === false) {
     generator()
   } else {
     rimraf(currentPath(rootPath), () => {
@@ -257,6 +268,9 @@ try {
       generator()
     })
   }
+
+  // Remove the temporary YAML merge file
+  fs.unlinkSync(configFilePath)
 } catch (e) {
   console.log(e)
 }

@@ -40,7 +40,7 @@ module.exports = (env) => {
     },
 
     plugins: removeEmpty([
-      env.clean !== 'false' ? new CleanWebpackPlugin([patternLabConfig.paths.public.root]) : undefined,
+      env.clean === true ? new CleanWebpackPlugin([patternLabConfig.paths.public.root]) : undefined,
       new webpack.optimize.CommonsChunkPlugin({
         // Combines any node module libraries used into their own file
         name      : 'js/pl-vendor-libraries',

@@ -1,0 +1,40 @@
+content/cq:tags/swinburne-microsites/content-type: &content-type
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  asset:
+    prefixes:
+      - audio
+      - document
+      - image
+      - video
+    title: '%%prefix_normalised%%'
+
+  page:
+    prefixes:
+      - article
+      - book
+      - contact: {title: "Contact Page"}
+      - event
+      - location: {title: "Location Page"}
+      - news: {title: "News Page"}
+      - profile
+    title: '%%prefix_normalised%%'
+
+  # Online Media
+  widgets/onlinemedia/provider/default:
+    flat: true
+    prefix: default
+    title: 'Default'
+
+  widgets/onlinemedia/provider/kaltura:
+    flat: true
+    prefix: kaltura
+    title: 'Kaltura'
+
+  widgets/onlinemedia/provider/youtube:
+    flat: true
+    prefix: youtube
+    title: 'Youtube'
+
+# Extends to
+content/cq:tags/swinburne-microsites-showcase/content-type: *content-type
+content/cq:tags/swinburne-microsites-training/content-type: *content-type

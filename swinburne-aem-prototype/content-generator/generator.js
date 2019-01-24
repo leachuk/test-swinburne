@@ -1,11 +1,22 @@
 /* eslint-disable */
-const args   = require('yargs').argv
 const colors = require('colors')
 const fs     = require('fs')
 const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
 const yaml   = require('js-yaml')
-const yimp   = require('yaml-import')
+const yimp = require('yaml-import')
+
+// CLI arguments
+const args = require('yargs')
+  .option('clean', {
+    alias   : 'c',
+    default : false,
+  })
+  .example('node generator.js --config=<filename>.yml')
+  .example('node generator.js --config=<filename>.yml --no-clean', 'run without tree cleaning')
+  .epilog(`Copyright © 2018-${(new Date).getFullYear()} Isobar Australia.`)
+  .version(false)
+  .argv
 
 const {
   each,

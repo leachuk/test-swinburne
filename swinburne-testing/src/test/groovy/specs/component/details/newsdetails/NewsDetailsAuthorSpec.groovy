@@ -10,7 +10,7 @@ class NewsDetailsAuthorSpec extends ComponentSpec {
     String pathPage = "component/details/news-details"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
-    String componentPath = "jcr:content/article/par/news-details"
+    String componentPath = "jcr:content/article/par/news_details"
 
     def setupSpec() {
         loginAsAdmin()

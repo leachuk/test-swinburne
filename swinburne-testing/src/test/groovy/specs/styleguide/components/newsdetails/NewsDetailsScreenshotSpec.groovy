@@ -4,7 +4,7 @@ import spock.lang.Stepwise
 import support.ComponentSpec
 
 @Stepwise
-class NewsDetailsScreenshotSpec extends ComponentSpec {
+class NewsDetailScreenshotSpec extends ComponentSpec {
 
     String pathPage = "Styleguide-SWU/components/news-list/news-details-1"
     String pathSite = "content/swinburne-showcase"

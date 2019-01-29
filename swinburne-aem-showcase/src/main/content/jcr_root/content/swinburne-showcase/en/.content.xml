@@ -9,7 +9,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="English"
-        jcr:uuid="3d67e18b-a8dc-4f78-839c-a57225c92aff"
+        jcr:uuid="eaea9e32-eeb7-4231-b4c5-a434b438e8b0"
         sling:resourceType="swinburne/components/template/base"
         hideInNav="true"
         redirectTarget="/content/swinburne-showcase/en/component">
@@ -112,4 +112,5 @@
     <component/>
     <content/>
     <Styleguide-SWU/>
+    <swu/>
 </jcr:root>

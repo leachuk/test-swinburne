@@ -6,10 +6,10 @@ import support.ComponentSpec
 @Stepwise
 class NewsDetailScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "Styleguide-SWU/components/news-list/news-details-1"
+    String pathPage = "/Styleguide-SWU/components/news-details"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
-    String componentPath = "jcr:content/swinburne-showcase/en/Styleguide-SWU/components/news-list/news-details-1/jcr:content/article/par/news_details"
+    String componentPath = "jcr:content/swinburne-showcase/en/Styleguide-SWU/components/news-details/jcr:content/article/par/news_details"
 
     def setupSpec() {
         loginAsAdmin()

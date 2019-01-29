@@ -7,19 +7,11 @@
 $card-top-bar-height: 18px;
 
 .card {
-  background-color: theme-color('c7');
-  box-shadow: 0 2px 4px rgba($black, .1);
-  padding-top: rem-calc($card-top-bar-height);
+  box-shadow: 0 2px 3px $grey-4;
+  margin-bottom: 0;
 
-  &-img-top,
-  &-icon {
-    max-height: rem-calc(140px);
-  }
-
-  &-img-top,
-  &-icon,
-  &-body {
-    background-color: $white;
+  &-title {
+    margin-bottom: $spacing-md;
   }
 
   &-img-top {
@@ -55,7 +47,7 @@ $card-top-bar-height: 18px;
   &-date,
   &-title,
   &-subtitle,
-  &-tags,
+  &-taglist,
   &-text:not(:last-child) {
     margin-bottom: $paragraph-margin-bottom;
   }
@@ -63,6 +55,12 @@ $card-top-bar-height: 18px;
   &-body {
     display: flex;
     flex-direction: column;
+    padding: $spacing-md $spacing-md;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: $spacing-2xl;
+    }
 
     // A small 'hack' (if you will) that ensures buttons remain aligned to the bottom of the
     // card as sibling cards will be the same height as oneanother.
@@ -76,10 +74,6 @@ $card-top-bar-height: 18px;
     font-weight: 300;
   }
 
-  &-subtitle {
-    font-weight: bold;
-  }
-
   &-icon {
     // These selectors take into account that Font Awesome 5 replaces the original icon
     // along with the `.fa` classes been superseded by new category specific classes.
@@ -90,38 +84,11 @@ $card-top-bar-height: 18px;
   }
 
   // Variations and style changes
-  @import 'card/flat',
-  'card/padded',
-  'card/author',
-  'card/coloured',
-  'card/medium',
-  'card/large',
-  'card/promoted',
-  'card/outline',
-  'card/result',
-  'card/no-bar',
-  'card/no-shadow'
-  ;
+  @import 'card/taglist-share';
 
   // Nested within a carousel
   .owl-item & {
     margin-bottom: 4px;
-  }
-
-  // Icon sizes
-  @each $name, $size in $icon-sizes {
-    &.icon--#{$name} .card-img-top > img,
-    &.icon--#{$name} .card-icon {
-      font-size: $size;
-    }
-
-    &.icon--#{$name} .card-img-top > img {
-      height: $size;
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    margin-bottom: $spacer;
   }
 
   @include media-breakpoint-up(md) {
@@ -132,26 +99,4 @@ $card-top-bar-height: 18px;
       margin-left: rem-calc($grid-gutter-width);
     }
   }
-}
-
-%card-image-rounded {
-  .card-img-top {
-    img {
-      border-radius: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      min-width: initial;
-      position: static;
-      top: auto;
-      transform: none;
-    }
-
-    &::before {
-      display: none;
-    }
-  }
-}
-
-%card-no-bar {
-  background-color: transparent;
 }

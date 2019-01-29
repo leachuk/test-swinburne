@@ -23,12 +23,28 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
-                <text
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/content/text"
-                    componentId="text_XPVD0ZVKZ"
-                    text="&lt;h1>Visual decorators&lt;/h1>&#xd;&#xa;"
-                    textIsRich="true"/>
+                <page_details
+                        jcr:mixinTypes="[cq:Taggable]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/details/page-details"
+                        editable="{Boolean}false"
+                        componentId="page_details"
+                        componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
+                        showBreadcrumb="false"
+                        showPageDate="false"
+                        showParsys="false"
+                        showToolbar="false"
+                        textIsRich="true" />
+                <contentblock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock"
+                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                    </par>
+                </contentblock>
             </par>
         </article>
     </jcr:content>

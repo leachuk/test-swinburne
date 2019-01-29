@@ -362,7 +362,7 @@
               <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/images</outputDirectory>
               <resources>
                 <resource>
-                  <directory>public/v2/images/logos</directory>
+                  <directory>public/v2/images</directory>
                 </resource>
               </resources>
             </configuration>

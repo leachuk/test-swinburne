@@ -2,8 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-12-13T11:57:31.335+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Background"
@@ -24,7 +22,30 @@
             componentId="article_YQ75EQKZR">
             <par
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
+                sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                        jcr:mixinTypes="[cq:Taggable]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/details/page-details"
+                        editable="{Boolean}false"
+                        componentId="page_details"
+                        componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
+                        showBreadcrumb="false"
+                        showPageDate="false"
+                        showParsys="false"
+                        showToolbar="false"
+                        textIsRich="true" />
+                <contentblock
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock"
+                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                    </par>
+                </contentblock>
+            </par>
         </article>
     </jcr:content>
 </jcr:root>

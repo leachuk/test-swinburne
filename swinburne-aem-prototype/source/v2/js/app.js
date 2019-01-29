@@ -6,7 +6,6 @@ import Carousels from './modules/carousel'
 import HashLinks from './modules/hash-links'
 import ParallaxImage from './modules/parallaximage'
 import LoadMore from './modules/load-more'
-import Renderers from './modules/renderers'
 import Subscribers from './modules/subscribers'
 import NavToggler from './modules/navtoggler'
 import FancyBox from './modules/fancybox'
@@ -42,9 +41,6 @@ $(() => {
   // Carousel functionality for anything, this dynamically loads slick carousel
   // to reduce the weight of the page.
   Carousels()
-
-  // Renders any React components
-  Renderers()
 
   // Bind the pub/sub event subscribers
   Subscribers()

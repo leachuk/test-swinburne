@@ -87,7 +87,7 @@
                         componentId="newslist_GT8GXKMHO"
                         detailsBadge="cardImageTitleCategoryActionDate"
                         listFrom="static"
-                        pages="[/content/swinburne-showcase/en/Styleguide-SWU/components/news-details,/content/swinburne-showcase/en/Styleguide-SWU/components/news-details,/content/swinburne-showcase/en/Styleguide-SWU/components/news-details]"
+                        pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
                         tagsMatch="any">
                         <badgeThumbnail
                             jcr:primaryType="nt:unstructured"
@@ -102,7 +102,7 @@
                             componentId="newslist_5UIB9RHOT"
                             detailsBadge="cardImageTitleCategoryActionDate"
                             listFrom="static"
-                            pages="[/content/swinburne-showcase/en/Styleguide-SWU/components/news-details,/content/swinburne-showcase/en/Styleguide-SWU/components/news-details,/content/swinburne-showcase/en/Styleguide-SWU/components/news-details]"
+                            pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
                             tagsMatch="any">
                             <badgeThumbnail
                                 jcr:primaryType="nt:unstructured"

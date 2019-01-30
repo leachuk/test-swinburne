@@ -54,7 +54,7 @@
                                     componentId="newslist-1"
                                     detailsBadge="cardImageTitleCategoryActionDate"
                                     listFrom="static"
-                                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/components/news-details,/content/swinburne-showcase/en/Styleguide-SWU/components/news-details,/content/swinburne-showcase/en/Styleguide-SWU/components/news-details]"
+                                    pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
                                     tagsMatch="any">
                                     <badgeThumbnail
                                         jcr:primaryType="nt:unstructured"

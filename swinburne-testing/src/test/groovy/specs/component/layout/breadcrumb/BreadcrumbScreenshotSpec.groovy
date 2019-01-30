@@ -16,8 +16,8 @@ class BreadcrumbScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    @Unroll("Appearance of Component in #viewport.label")
-    def "Appearance of Component"() {
+    @Unroll("Appearance of breadcrumb in #viewport.label")
+    def "Appearance of breadcrumb"() {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
@@ -39,9 +39,8 @@ class BreadcrumbScreenshotSpec extends ComponentSpec {
 
     }
 
-
-    @Unroll("Appearance of Component with Changed Start Level in #viewport.label")
-    def "Appearance of Component with Changed Start Level"() {
+    @Unroll("Appearance of breadcrumb with Changed Start Level in #viewport.label")
+    def "Appearance of breadcrumb with Changed Start Level"() {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
@@ -63,8 +62,8 @@ class BreadcrumbScreenshotSpec extends ComponentSpec {
 
     }
 
-    @Unroll("Appearance of Component with Changed Start Level and End Level in #viewport.label")
-    def "Appearance of Component with Changed Start Level and End Level"() {
+    @Unroll("Appearance of breadcrumb with Changed Start Level and End Level in #viewport.label")
+    def "Appearance of breadcrumb with Changed Start Level and End Level"() {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
@@ -86,8 +85,8 @@ class BreadcrumbScreenshotSpec extends ComponentSpec {
 
     }
 
-    @Unroll("Appearance of Component with light styling in #viewport.label")
-    def "Appearance of Component with light styling"() {
+    @Unroll("Appearance of breadcrumb with light styling in #viewport.label")
+    def "Appearance of breadcrumb with light styling"() {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
@@ -109,8 +108,8 @@ class BreadcrumbScreenshotSpec extends ComponentSpec {
 
     }
 
-    @Unroll("Appearance of Component with dark styling in #viewport.label")
-    def "Appearance of Component with dark styling "() {
+    @Unroll("Appearance of breadcrumb with dark styling in #viewport.label")
+    def "Appearance of breadcrumb with dark styling "() {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'

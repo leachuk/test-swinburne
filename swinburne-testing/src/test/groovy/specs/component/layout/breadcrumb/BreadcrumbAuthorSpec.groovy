@@ -50,4 +50,6 @@ class BreadcrumbAuthorSpec extends ComponentSpec {
         report("I should be able to close component author dialog")
     }
 
+
+
 }

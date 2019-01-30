@@ -127,4 +127,58 @@ class BreadcrumbPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+    @Unroll("Functionality of Breadcrumb with light style in #viewport.label")
+    def "Functionality of Breadcrumb with light style"() {
+
+        given: '>the page hierarchy is created as "Components" > "Layout" > "Breadcrumb"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#breadcrumb4"
+        def selectorContainer = "#contentblock4"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: 'First link should be English'
+        assert $("$selector li:nth-child(1)").text().trim() == "English"
+
+        and: 'Last link should be Layout'
+        assert $("$selector li:nth-child(2)").text().trim() == "Components"
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Functionality of Breadcrumb with dark style in #viewport.label")
+    def "Functionality of Breadcrumb with dark style"() {
+
+        given: '>the page hierarchy is created as "Components" > "Layout" > "Breadcrumb"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#breadcrumb5"
+        def selectorContainer = "#contentblock5"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: 'First link should be English'
+        assert $("$selector li:nth-child(1)").text().trim() == "English"
+
+        and: 'Last link should be Layout'
+        assert $("$selector li:nth-child(2)").text().trim() == "Components"
+
+        where:
+        viewport << getViewPorts()
+    }
+
 }

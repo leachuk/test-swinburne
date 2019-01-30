@@ -8,7 +8,7 @@ import support.ComponentSpec
 @Stepwise
 class SpacingScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "Styleguide-SWU/guidelines/spacing-units"
+    String pathPage = "styleguide/guidelines/spacing-units"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
     String componentPath = "jcr:content/article/par/contentblock1/par/embedsource"

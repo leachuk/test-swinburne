@@ -6,7 +6,7 @@ import support.ComponentSpec
 @Stepwise
 class GridScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "Styleguide-SWU/guidelines/grid"
+    String pathPage = "styleguide/guidelines/grid"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
     String componentPath = "jcr:content/article/par/contentblock1/par/embed-source-grid"

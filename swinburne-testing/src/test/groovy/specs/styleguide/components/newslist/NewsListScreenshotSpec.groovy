@@ -6,7 +6,7 @@ import support.ComponentSpec
 @Stepwise
 class NewsListScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "Styleguide-SWU/components/news-list"
+    String pathPage = "styleguide/components/news-list"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
     String componentPath = "jcr:content/article/par/contentblock1/"

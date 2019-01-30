@@ -6,7 +6,7 @@ import support.ComponentSpec
 @Stepwise
 class TypographyScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "Styleguide-SWU/guidelines/typography"
+    String pathPage = "styleguide/guidelines/typography"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
     String componentPath = "jcr:content/article/par/contentblock1/par/heading-bg-light"

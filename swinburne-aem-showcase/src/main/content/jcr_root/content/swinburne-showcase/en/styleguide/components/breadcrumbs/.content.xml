@@ -67,24 +67,16 @@
                                     componentId="colctrl_IB08WVL5M"
                                     controlType="start"
                                     layout="1;colctrl-1c"/>
-                                <reference_892142570
-                                    jcr:created="{Date}2019-01-30T09:51:19.052+11:00"
-                                    jcr:createdBy="admin"
-                                    jcr:lastModified="{Date}2019-01-30T09:53:31.933+11:00"
-                                    jcr:lastModifiedBy="admin"
+                                <reference1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/reference"
-                                    componentId="reference_892142570_IXR5VIQKB"
+                                    componentId="reference1"
                                     path="/content/swinburne-showcase/en/component/layout/breadcrumb/jcr:content/article/par/contentblock4"/>
-                                <reference
-                                    jcr:created="{Date}2019-01-30T09:47:20.200+11:00"
-                                    jcr:createdBy="admin"
-                                    jcr:lastModified="{Date}2019-01-30T09:51:05.896+11:00"
-                                    jcr:lastModifiedBy="admin"
+                                <reference2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/reference"
-                                    componentId="reference_D21DXC3G2"
-                                    path="/content/swinburne-showcase/en/component/layout/breadcrumb/jcr:content/article/par/contentblock6"/>
+                                    componentId="reference2"
+                                    path="/content/swinburne-showcase/en/component/layout/breadcrumb/jcr:content/article/par/contentblock5"/>
                                 <col_end15475044610680
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/layout/colctrl"

@@ -4,14 +4,14 @@
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
-        jcr:title="components"
+        jcr:title="Facebook"
         sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="components"
-        pageTitle="components">
+        navTitle="facebook"
+        pageTitle="facebook">
         <aside
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"
-            componentId="aside_UWGLXC9ZY">
+            componentId="aside_FU4SO2MNS">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -19,7 +19,7 @@
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
-            componentId="article_ZHQUKI232">
+            componentId="article_P5VY7NQOZ">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
@@ -27,31 +27,25 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
-                    componentId="page_details"
-                    componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
-                    editable="{Boolean}false"
-                    showBreadcrumb="false"
-                    showPageDate="false"
-                    showParsys="false"
-                    showToolbar="false"
-                    textIsRich="true"/>
-                <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
-                    <par
+                    cardIcon="[swinburne-showcase:component-style-icon/social/facebook]"
+                    cardIconShow="true"
+                    componentId="page_details_T4R2JCKJC"
+                    textIsRich="true"
+                    titleType="[,]">
+                    <secondaryImage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/container"/>
-                </contentblock>
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <thumbnail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <ogImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                </page_details>
             </par>
         </article>
     </jcr:content>
-    <breadcrumbs/>
-    <content-block/>
-    <link/>
-    <news-details/>
-    <news-list/>
-    <text/>
-    <page-list/>
 </jcr:root>

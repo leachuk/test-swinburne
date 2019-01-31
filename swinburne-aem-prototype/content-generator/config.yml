@@ -1800,10 +1800,14 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
     prefixes:
       - youtube
       - facebook-f
+      - facebook
       - pinterest-p
       - twitter
       - instagram
       - linkedin-in
+      - linkedin
+      - tumblr-square
+      - tumblr
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 

@@ -230,11 +230,15 @@
 .icn {
   // Social Icons
   &-facebook-f,
+  &-facebook,
   &-instagram,
   &-twitter,
   &-pinterest-p,
   &-linkedin-in,
   &-connectdevelop,
+  &-tumblr-square,
+  &-tumblr,
+  &-linkedin,
   &-youtube {
     &:before {
       font-family: 'Font Awesome Brands' !important;
@@ -242,6 +246,9 @@
   }
   &-facebook-f:before {
     content:"\f39e" !important;
+  }
+  &-facebook:before {
+    content:"\f082" !important;
   }
   &-instagram:before {
     content:"\f16d" !important;
@@ -255,10 +262,19 @@
   &-linkedin-in:before {
     content: "\F0E1" !important;
   }
+  &-linkedin:before {
+    content: "\f08c" !important;
+  }
   &-youtube:before {
     content: "\F167" !important;
   }
   &-connectdevelop:before {
     content: "\f20e" !important;
+  }
+  &-tumblr-square:before {
+    content: "\f174" !important;
+  }
+  &-tumblr:before {
+    content: "\f173" !important;
   }
 }

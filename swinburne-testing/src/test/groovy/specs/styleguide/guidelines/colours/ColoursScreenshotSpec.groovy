@@ -6,7 +6,7 @@ import support.ComponentSpec
 @Stepwise
 class ColoursScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "Styleguide-SWU/guidelines/colour"
+    String pathPage = "styleguide/guidelines/colour"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
     String componentPath = "jcr:content/article/par/contentblock1/par/embedsource_colours"

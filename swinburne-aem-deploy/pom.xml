@@ -51,24 +51,24 @@
             <type>zip</type>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>swinburne-aem-content</artifactId>
             <type>zip</type>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>swinburne-aem-showcase</artifactId>
             <type>zip</type>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>swinburne-aem-training</artifactId>
             <type>zip</type>
             <version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>swinburne-aem-prototype</artifactId>

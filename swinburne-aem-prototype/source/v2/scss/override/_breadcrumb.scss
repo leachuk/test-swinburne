@@ -5,12 +5,12 @@
 // generates for us automatically.
 
 .breadcrumb {
-  font-weight: 300;
   font-size: 14px;
 
   &-item {
     a {
       color: $tertiary;
+      font-weight: 600;
     }
 
     + .breadcrumb-item {

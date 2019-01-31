@@ -1,6 +1,5 @@
 package specs.component.layout.contentblock
 
-import spock.lang.IgnoreRest
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
@@ -230,7 +229,6 @@ class ContentBlockPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @IgnoreRest
     @Unroll("Functionality of Component Variant: Section with Background Video in #viewport.label")
     def "Functionality of Component Variant: Section with Background Video"() {
 
@@ -240,8 +238,7 @@ class ContentBlockPublishSpec extends ComponentSpec {
         def selector = "#contentblock10"
 
         when: "I am on the component showcase page"
-//        setWindowSize(viewport)
-        setWindowSize()
+        setWindowSize(viewport)
         waitForAuthorPreviewPage()
         takeScreenshot($(selector).firstElement(), "I am on the component showcase page")
 
@@ -257,8 +254,8 @@ class ContentBlockPublishSpec extends ComponentSpec {
         and: 'Section should have video tag with video rendition'
         assert $("${selector} source").firstElement().getAttribute("src").contains("/content/dam/swinburne-showcase/en/multimedia/video/Clouds.mov/jcr:content/renditions/cq5dam.video.flv.320.240.flv")
 
-//        where:
-//        viewport << getViewPorts()
+        where:
+        viewport << getViewPorts()
     }
 
     @Unroll("Functionality of Component Variant: Parsys in #viewport.label")

@@ -6,7 +6,7 @@ import support.ComponentSpec
 @Stepwise
 class BreadcrumbsScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "Styleguide-SWU/components/content-block"
+    String pathPage = "styleguide/components/content-block"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
     String componentPath = "jcr:content/article/par/contentblock_light/"

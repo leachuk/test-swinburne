@@ -49,8 +49,8 @@
                     componentId="navlist_N1R2X8KSR"
                     componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-20]"
                     listFrom="children"
-                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/guidelines/breakpoints,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/colour,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/grid,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/iconography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/imagery,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/logo-and-usage,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/motion,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/spacing-units,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/style-guide,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/template,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/typography,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visibility,/content/swinburne-showcase/en/Styleguide-SWU/guidelines/visual-decorators]"
-                    parentPage="/content/swinburne-showcase/en/Styleguide-SWU/guidelines"/>
+                    pages="[/content/swinburne-showcase/en/styleguide/guidelines/breakpoints,/content/swinburne-showcase/en/styleguide/guidelines/colour,/content/swinburne-showcase/en/styleguide/guidelines/grid,/content/swinburne-showcase/en/styleguide/guidelines/iconography,/content/swinburne-showcase/en/styleguide/guidelines/imagery,/content/swinburne-showcase/en/styleguide/guidelines/logo-and-usage,/content/swinburne-showcase/en/styleguide/guidelines/motion,/content/swinburne-showcase/en/styleguide/guidelines/spacing-units,/content/swinburne-showcase/en/styleguide/guidelines/style-guide,/content/swinburne-showcase/en/styleguide/guidelines/template,/content/swinburne-showcase/en/styleguide/guidelines/typography,/content/swinburne-showcase/en/styleguide/guidelines/visibility,/content/swinburne-showcase/en/styleguide/guidelines/visual-decorators]"
+                    parentPage="/content/swinburne-showcase/en/styleguide/guidelines"/>
                 <text_1154750572
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
@@ -64,8 +64,8 @@
                     cancelInheritParent="true"
                     componentId="navlist_1812305280_MFRRUS8CW"
                     listFrom="children"
-                    pages="[/content/swinburne-showcase/en/Styleguide-SWU/components/breadcrumbs, /content/swinburne-showcase/en/Styleguide-SWU/components/content-block, /content/swinburne-showcase/en/Styleguide-SWU/components/text]"
-                    parentPage="/content/swinburne-showcase/en/Styleguide-SWU/components"/>
+                    pages="[/content/swinburne-showcase/en/styleguide/components/breadcrumbs, /content/swinburne-showcase/en/styleguide/components/content-block, /content/swinburne-showcase/en/styleguide/components/text]"
+                    parentPage="/content/swinburne-showcase/en/styleguide/components"/>
             </par>
             <bgimage
                 jcr:primaryType="nt:unstructured"

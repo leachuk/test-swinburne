@@ -1,16 +1,16 @@
-package specs.component.layout.breadcrumb
+package specs.component.lists.newslist
 
-import support.page.ui.touch.TouchUIEditor
 import spock.lang.Stepwise
 import support.ComponentSpec
+import support.page.ui.touch.TouchUIEditor
 
 @Stepwise
-class BreadcrumbAuthorSpec extends ComponentSpec {
+class NewsListAuthorSpec extends ComponentSpec {
 
-    String pathPage = "component/layout/breadcrumb"
+    String pathPage = "component/lists/news-list"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
-    String componentPath = "jcr:content/article/par/contentblock1/par/breadcrumb"
+    String componentPath = "jcr:content/article/par/contentblock/par/newslist"
 
     def setupSpec() {
         loginAsAdmin()
@@ -20,10 +20,10 @@ class BreadcrumbAuthorSpec extends ComponentSpec {
         analyzeLog()
     }
 
-    def "Authoring of Component"() {
+    def "Authoring of News Details Component default"() {
 
         given: "Component has already been inserted"
-        def selector = "#breadcrumb1"
+        def selector = "#newslist_RGZ6WGQKB"
 
         when: "I am on the Component showcase page"
         TouchUIEditor page = waitForTouchUIPage(language)
@@ -49,7 +49,5 @@ class BreadcrumbAuthorSpec extends ComponentSpec {
         page.Editor.isDialogOpen(compileComponentPath()) == false
         report("I should be able to close component author dialog")
     }
-
-
 
 }

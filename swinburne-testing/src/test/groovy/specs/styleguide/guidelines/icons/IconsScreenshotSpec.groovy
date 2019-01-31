@@ -6,7 +6,7 @@ import support.ComponentSpec
 @Stepwise
 class IconsScreenshotSpec extends ComponentSpec {
 
-    String pathPage = "Styleguide-SWU/guidelines/iconography"
+    String pathPage = "styleguide/guidelines/iconography"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
     String componentPath = "jcr:content/article/par/contentblock_1460944026/par/embedsource"

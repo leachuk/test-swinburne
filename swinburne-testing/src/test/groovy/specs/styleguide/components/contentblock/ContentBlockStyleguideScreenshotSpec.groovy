@@ -5,7 +5,7 @@ import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class ContentBlockAdvancedScreenshotSpec extends ComponentSpec {
+class ContentBlockStyleguideScreenshotSpec extends ComponentSpec {
     String pathPage = "Styleguide-SWU/components/content-block"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
@@ -15,11 +15,11 @@ class ContentBlockAdvancedScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    @Unroll("Appearance of Title in #viewport.label")
-    def "Appearance of Title"() {
+    @Unroll("Appearance of Advanced Content Block with Title in #viewport.label")
+    def "Appearance of Advanced Content Block with Title"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_advanced"
+        def selector = "#reference_contentblock_advanced_with_title"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

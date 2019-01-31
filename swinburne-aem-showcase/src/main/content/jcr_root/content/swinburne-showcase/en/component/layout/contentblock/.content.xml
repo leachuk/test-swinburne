@@ -136,9 +136,24 @@
                     </par>
                 </contentblock6>
                 <contentblock7
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock7"
+                        hideInMenu="false"
+                        hideTitle="false"
+                        hideTitleSeparator="false"
+                        hideTopLink="true"
+                        title="Variant: Advanced Plain Section with Title"
+                        titleType="h6"
+                        variant="advsection">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container" />
+                </contentblock7>
+                <contentblock8
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock7"
+                    componentId="contentblock8"
                     hideInMenu="false"
                     hideTitle="false"
                     hideTitleSeparator="false"
@@ -158,11 +173,11 @@
                             text="&lt;p>&lt;b>Variant&lt;/b>: Advanced Section with Links&lt;/p>&#xa;"
                             textIsRich="true"/>
                     </par>
-                </contentblock7>
-                <contentblock8
+                </contentblock8>
+                <contentblock9
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock8"
+                    componentId="contentblock9"
                     componentTheme="[]"
                     hideTitle="false"
                     hideTitleSeparator="true"
@@ -181,11 +196,11 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"
                         fileReference="/content/dam/swinburne-showcase/en/common/aem-design.png"/>
-                </contentblock8>
-                <contentblock9
+                </contentblock9>
+                <contentblock10
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock9"
+                    componentId="contentblock10"
                     componentTheme="[]"
                     hideTitle="false"
                     hideTitleSeparator="true"
@@ -208,11 +223,11 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"
                         fileReference="/content/dam/swinburne-showcase/en/multimedia/video/Clouds.mov"/>
-                </contentblock9>
-                <contentblock10
+                </contentblock10>
+                <contentblock11
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock10"
+                    componentId="contentblock11"
                     componentTheme="[]"
                     hideTitle="false"
                     hideTitleSeparator="true"
@@ -227,8 +242,8 @@
                             text="&lt;p>&lt;b>Variant&lt;/b>: Parsys&lt;/p>&#xa;"
                             textIsRich="true"/>
                     </par>
-                </contentblock10>
-                <contentblock11
+                </contentblock11>
+                <contentblock12
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock11"
@@ -245,12 +260,12 @@
                             sling:resourceType="swinburne/components/content/text"
                             text="&lt;p>&lt;b>Variant&lt;/b>: Child Section used for collapsible sections &lt;/p>&#xa;"
                             textIsRich="true"/>
-                        <contentblock11a
+                        <contentblock12a
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock11a"
+                            componentId="contentblock12a"
                             componentTheme="[]"
-                            dataParent="contentblock11"
+                            dataParent="contentblock12"
                             dataToggle="collapse"
                             hideTitle="false"
                             hideTitleSeparator="true"
@@ -265,13 +280,13 @@
                                     text="&lt;p>&lt;b>Variant&lt;/b>: Child Section used for collapsible sections &lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
-                        </contentblock11a>
-                        <contentblock11b
+                        </contentblock12a>
+                        <contentblock12b
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock11b"
+                            componentId="contentblock12b"
                             componentTheme="[]"
-                            dataParent="contentblock11"
+                            dataParent="contentblock12"
                             dataToggle="collapse"
                             hideTitle="false"
                             hideTitleSeparator="true"
@@ -286,13 +301,13 @@
                                     text="&lt;p>&lt;b>Variant&lt;/b>: Child Section used for collapsible sections &lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
-                        </contentblock11b>
-                        <contentblock11c
+                        </contentblock12b>
+                        <contentblock12c
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock11c"
+                            componentId="contentblock12c"
                             componentTheme="[]"
-                            dataParent="contentblock11"
+                            dataParent="contentblock12"
                             dataToggle="collapse"
                             hideTitle="false"
                             hideTitleSeparator="true"
@@ -307,9 +322,9 @@
                                     text="&lt;p>&lt;b>Variant&lt;/b>: Child Section used for collapsible sections &lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
-                        </contentblock11c>
+                        </contentblock12c>
                     </par>
-                </contentblock11>
+                </contentblock12>
             </par>
         </article>
     </jcr:content>

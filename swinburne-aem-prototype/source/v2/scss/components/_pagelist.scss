@@ -547,7 +547,23 @@ $border-color: #1d1f20;
       }
     }
   }
-  &.theme--list-social-links {}
+  &.theme--list-social-links {
+    background-color: $tertiary;
+    padding: 20px;
+    ul > li {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+    .card {
+      box-shadow: none;
+      cursor: pointer;
+      .icon {
+        font-size: 32px;
+        color: map-deep-get($brand-colours, 'core', 'c9');
+      }
+    }
+  }
   &.theme--list-card {
     &.eventlist,
     &.pagelist {

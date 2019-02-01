@@ -50,15 +50,23 @@
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_WTA02RYRN">
+                    componentId="social-links"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15]">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_WDGXSZRZK"
+                            text="&lt;p>Socials links, variant : Card with Icon&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
                             componentId="pagelist_AOVJ72WOP"
-                            detailsBadge="cardIcon"
+                            componentTheme="[swinburne-showcase:component-style-theme/lists/navlist/socialnav/social-links]"
+                            detailsBadge="cardActionIconTitleDescription"
                             listFrom="children"
                             tagsMatch="any">
                             <badgeThumbnail
@@ -66,6 +74,12 @@
                                 sling:resourceType="aemdesign/components/media/image"/>
                         </pagelist>
                     </par>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock>
             </par>
         </article>

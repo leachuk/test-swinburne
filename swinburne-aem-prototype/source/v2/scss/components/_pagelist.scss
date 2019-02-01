@@ -475,6 +475,7 @@ $border-color: #1d1f20;
       }
     }
   }
+  &.theme--list-social-links,
   &.theme--list-social {
     min-width: 100%;
     &,
@@ -546,6 +547,7 @@ $border-color: #1d1f20;
       }
     }
   }
+  &.theme--list-social-links {}
   &.theme--list-card {
     &.eventlist,
     &.pagelist {

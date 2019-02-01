@@ -44,7 +44,7 @@ class ContentBlockScreenshotSpec extends ComponentSpec {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock8"
+        def selector = "#contentblock9"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -67,7 +67,7 @@ class ContentBlockScreenshotSpec extends ComponentSpec {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock9"
+        def selector = "#contentblock10"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

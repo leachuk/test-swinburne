@@ -39,7 +39,6 @@ class ContentBlockPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-
     @Unroll("Functionality of Component Variant: Default Container in #viewport.label")
     def "Functionality of Component Variant: Default Container"() {
 
@@ -135,7 +134,6 @@ class ContentBlockPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-
     @Unroll("Functionality of Component Variant: Advanced Plain Section in #viewport.label")
     def "Functionality of Component Variant: Advanced Plain Section"() {
 
@@ -159,6 +157,28 @@ class ContentBlockPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+    @Unroll("Functionality of Component Variant: Advanced Section with Title in #viewport.label")
+    def "Functionality of Component Variant: Advanced Section with Title"() {
+
+        given: '>the page hierarchy is created as "Components" > "Layout" > "ContentBlock"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#contentblock7"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+        report("I am on the component showcase page")
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+
+        and: 'Should have sample heading'
+        assert $(selector + " h6").text().trim() == "Variant: Advanced Plain Section with Title"
+
+        where:
+        viewport << getViewPorts()
+    }
 
     @Unroll("Functionality of Component Variant: Advanced Section with Links in #viewport.label")
     def "Functionality of Component Variant: Advanced Section with Links"() {
@@ -166,7 +186,7 @@ class ContentBlockPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Layout" > "ContentBlock"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock7"
+        def selector = "#contentblock8"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -189,7 +209,7 @@ class ContentBlockPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Layout" > "ContentBlock"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock8"
+        def selector = "#contentblock9"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -203,7 +223,7 @@ class ContentBlockPublishSpec extends ComponentSpec {
         assert $(selector + " .text[component]").text().trim() == "Variant: Section with Background"
 
         and: 'Section should have a background image'
-        assert $(selector).css("background-image").indexOf("/content/swinburne-showcase/en/component/layout/contentblock/_jcr_content/article/par/contentblock8/bgimage.img.png/0.png") > 0
+        assert $(selector).css("background-image").indexOf("/content/swinburne-showcase/en/component/layout/contentblock/_jcr_content/article/par/contentblock9/bgimage.img.png/0.png") > 0
 
         where:
         viewport << getViewPorts()
@@ -215,7 +235,7 @@ class ContentBlockPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Layout" > "ContentBlock"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock9"
+        def selector = "#contentblock10"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -223,13 +243,13 @@ class ContentBlockPublishSpec extends ComponentSpec {
         takeScreenshot($(selector).firstElement(), "I am on the component showcase page")
 
         then: "The component should be on the page"
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         and: 'Should have sample rich text'
-        assert $(selector + " .text[component]").text().trim() == "Variant: Section with Background Video"
+        assert $("${selector} .text[component]").text().trim() == "Variant: Section with Background Video"
 
         and: 'Section should have a background image'
-        assert $(selector).css("background-image").indexOf("/content/swinburne-showcase/en/component/layout/contentblock/_jcr_content/article/par/contentblock9/bgimage.img.png/0.png") == -1
+        assert $(selector).css("background-image").indexOf("/content/swinburne-showcase/en/component/layout/contentblock/_jcr_content/article/par/contentblock10/bgimage.img.png/0.png") == -1
 
         and: 'Section should have video tag with video rendition'
         assert $("${selector} source").firstElement().getAttribute("src").contains("/content/dam/swinburne-showcase/en/multimedia/video/Clouds.mov/jcr:content/renditions/cq5dam.video.flv.320.240.flv")
@@ -238,14 +258,13 @@ class ContentBlockPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-
     @Unroll("Functionality of Component Variant: Parsys in #viewport.label")
     def "Functionality of Component Variant: Parsys"() {
 
         given: '>the page hierarchy is created as "Components" > "Layout" > "ContentBlock"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock10"
+        def selector = "#contentblock11"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -261,5 +280,4 @@ class ContentBlockPublishSpec extends ComponentSpec {
         where:
         viewport << getViewPorts()
     }
-
 }

@@ -4,14 +4,14 @@
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Page List"
+        jcr:title="Tumblr"
         sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="page-list"
-        pageTitle="Page List">
+        navTitle="Tumblr"
+        pageTitle="Tumblr">
         <aside
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"
-            componentId="aside_XBE3A54JC">
+            componentId="aside_M2P4TG2RA">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -19,7 +19,7 @@
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
-            componentId="article_GT6UUFZ0G">
+            componentId="article_FALQUBQKU">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
@@ -27,11 +27,10 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
-                    componentId="page_details_GQNSQQNBV"
+                    cardIcon="[swinburne-showcase:component-style-icon/social/tumblr-square]"
+                    cardIconShow="true"
+                    componentId="page_details_BRZELA5V9"
                     componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
-                    showBreadcrumb="false"
-                    showPageDate="false"
-                    showToolbar="false"
                     textIsRich="true"
                     titleType="[,]">
                     <secondaryImage
@@ -47,33 +46,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                 </page_details>
-                <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_WTA02RYRN">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <pagelist
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/pagelist"
-                            componentId="pagelist_AOVJ72WOP"
-                            detailsBadge="cardIcon"
-                            listFrom="children"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </pagelist>
-                    </par>
-                </contentblock>
             </par>
         </article>
     </jcr:content>
-    <Facebook/>
-    <Twitter/>
-    <Youtube/>
-    <Instagram/>
-    <Linkedin/>
-    <Tumblr/>
 </jcr:root>

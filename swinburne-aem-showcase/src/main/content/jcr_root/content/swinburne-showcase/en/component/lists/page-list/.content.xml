@@ -151,7 +151,6 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_DJ76MJHWN"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -1008,8 +1007,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_social"
-                    title="Page List : Clickable Card with Icon, title and description"
-                    variant="advsection">
+                    title="Page List : Clickable Card with Icon, title and description">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
@@ -1034,36 +1032,6 @@
                         </pagelist>
                     </par>
                 </contentblock>
-                <contentblock_copy
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_social"
-                    title="Page List : Default"
-                    variant="advsection">
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <pagelist
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/pagelist"
-                            componentId="social-links"
-                            componentTheme="[swinburne-showcase:component-style-theme/lists/navlist/links]"
-                            detailsBadge="default"
-                            listFrom="static"
-                            pages="/content/swinburne-showcase/en/styleguide/components/page-list/child-details/nav-link-1"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </pagelist>
-                    </par>
-                </contentblock_copy>
             </par>
         </article>
     </jcr:content>

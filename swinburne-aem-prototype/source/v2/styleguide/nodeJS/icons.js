@@ -64,6 +64,17 @@ let icons = [
   { name: "wrench", class: "Wrench" },
   { name: "heartbeat", class: "Heartbeat" },
   { name: "link", class: "Link" },
+  { name: "connectdevelop", class: "Connectdevelop" },
+  { name: "facebook-f", class: "Facebook F" },
+  { name: "facebook", class: "Facebook" },
+  { name: "instagram", class: "Instagram" },
+  { name: "twitter", class: "Twitter" },
+  { name: "pinterest-p", class: "Pinterest P" },
+  { name: "linkedin-in", class: "Linkedin In" },
+  { name: "linkedin", class: "Linkedin" },
+  { name: "youtube", class: "Youtube" },
+  { name: "tumblr-square", class: "Tumblr Square" },
+  { name: "tumblr", class: "Tumblr" }
 ];
 
 let row_index = 0;

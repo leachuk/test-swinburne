@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2019-02-04T15:17:32.657+11:00"
+        cq:lastModifiedBy="admin"
         cq:tags="[swinburne:content-type/page]"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:isCheckedOut="{Boolean}true"
@@ -12,7 +14,8 @@
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article">
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_TQURMYHEF">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
@@ -40,7 +43,8 @@
                 </contentblock1>
                 <contentblock2
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock">
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock2_7TLZR64LV">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
@@ -70,6 +74,163 @@
                             textIsRich="true"/>
                     </par>
                 </contentblock3>
+                <contentblock
+                    jcr:created="{Date}2019-02-04T14:59:28.801+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-02-04T15:00:39.616+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_N6YNER6OF"
+                    title="Rich Text : Visibility"
+                    titleType="h2"
+                    variant="advsection">
+                    <bgimage
+                        jcr:lastModified="{Date}2019-02-04T15:00:39.616+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:lastModified="{Date}2019-02-04T15:00:39.616+11:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:created="{Date}2019-02-04T15:00:46.346+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:01:12.517+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_ZFSPUIAB5"
+                            text="&lt;p>Normal Visibility&lt;/p>&#xa;"
+                            textIsRich="true"/>
+                        <text_2024348315
+                            jcr:created="{Date}2019-02-04T15:01:19.428+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:10:04.271+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_2024348315_ZV7KBJ10M"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible]"
+                            text="&lt;p>Visibility - Invisible&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1234007482
+                            jcr:created="{Date}2019-02-04T15:02:15.249+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:10:39.394+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1234007482_T7OXLJUXT"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-xs-down]"
+                            text="&lt;p>Visibility - Visibility / Xs down&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1258104717
+                            jcr:created="{Date}2019-02-04T15:03:11.997+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:14:57.895+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1258104717_FLJPIRGS6"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-sm-down]"
+                            text="&lt;p>Visibility - Visibility / Sm down&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_240127259
+                            jcr:created="{Date}2019-02-04T15:03:50.039+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:15:21.559+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_240127259_5MGBGFXJQ"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-md-down]"
+                            text="&lt;p>Visibility - Visibility / Md down&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1128533466
+                            jcr:created="{Date}2019-02-04T15:04:31.740+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:15:38.291+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1128533466_NLE985MBZ"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-lg-down]"
+                            text="&lt;p>Visibility - Visibility / Lg down&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1454555955
+                            jcr:created="{Date}2019-02-04T15:07:00.504+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:15:59.734+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1454555955_AP7GQHTVI"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-xl-down]"
+                            text="&lt;p>Visibility - Visibility / Xl down&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1933564755
+                            jcr:created="{Date}2019-02-04T15:07:24.584+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:16:25.390+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1933564755_B056LWXEZ"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-xs-up]"
+                            text="&lt;p>Visibility : Visibility / Xs up&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1519611596
+                            jcr:created="{Date}2019-02-04T15:07:46.289+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:16:40.795+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1519611596_XM7NN80B4"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-sm-up]"
+                            text="&lt;p>Visibility - Visibility / Sm up&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1465670839
+                            jcr:created="{Date}2019-02-04T15:08:13.927+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:16:53.814+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1465670839_4G05NC960"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-md-up]"
+                            text="&lt;p>Visibility - Visibility / Md up&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1007097376
+                            jcr:created="{Date}2019-02-04T15:08:38.197+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:17:13.355+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1007097376_FZYJASS43"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-lg-up]"
+                            text="&lt;p>Visibility - Visibility / Lg up&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <text_1462394320
+                            jcr:created="{Date}2019-02-04T15:09:01.228+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-04T15:17:32.653+11:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1462394320_6UY7LGFW5"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-xl-up]"
+                            text="&lt;p>Visibility - Visibility / XL up&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </par>
+                </contentblock>
             </par>
         </article>
     </jcr:content>

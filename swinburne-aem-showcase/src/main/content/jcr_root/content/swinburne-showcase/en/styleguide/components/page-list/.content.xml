@@ -66,6 +66,16 @@
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_OXHNBWJJE"
                             path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock"/>
+                        <text_317636655
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_CQQ5A9WPY"
+                            textIsRich="true"/>
+                        <reference_798019852
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/reference"
+                            componentId="pagelist_links"
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock_1766752365"/>
                     </par>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
@@ -83,4 +93,5 @@
     <Instagram/>
     <Linkedin/>
     <Tumblr/>
+    <child-details/>
 </jcr:root>

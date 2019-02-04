@@ -1573,6 +1573,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefixValue: ' '
     title: '%%prefix_normalised%%'
 
+  lists/navlist/links:
+    flat: true
+    prefix: theme--list-links
+    title: 'Links'
+
   # Navbar
   lists/navbar/headernav:
     flat: true

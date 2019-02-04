@@ -16,9 +16,28 @@
 
     <filter root="/conf/swinburne" mode="update"/>
 
+    <filter root="/etc/clientlibs/swinburne/core"/>
+
+    <filter root="/etc/clientlibs/swinburne/v1">
+        <!-- do not allow deploy into css js and fonts folders -->
+        <include pattern="/etc/clientlibs/swinburne/v1/.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v1/css.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v1/js.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v1/fonts.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v1/images.*"/>
+    </filter>
+
+    <filter root="/etc/clientlibs/swinburne/v2">
+        <!-- do not allow deploy into css js and fonts folders -->
+        <include pattern="/etc/clientlibs/swinburne/v2/.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v2/css.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v2/js.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v2/fonts.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v2/images.*"/>
+    </filter>
+
     <!--Filter root is commented below to use for content sync in future -->
     <!--<filter root="/content/dam/formsanddocuments-themes/swinburne"/>-->
-    <filter root="/etc/clientlibs/swinburne/forms"/>
 
     <!--TODO: Used to backport analytics tags from Prod-->
     <!--<filter root="/content/cq:tags/swinburne/component-analytics" mode="merge"/>-->

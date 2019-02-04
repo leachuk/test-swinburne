@@ -1004,18 +1004,14 @@
                             tagsMatch="any"/>
                     </par>
                 </contentblock33>
-                <contentblock
+                <contentblock34
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_social"
-                    title="Page List : Icon : Socials links"
+                    componentId="contentblock34"
+                    hideTitle="false"
+                    hideTitleSeparator="true"
+                    title="Page List: Default variant using Icon badge"
                     variant="advsection">
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -1023,47 +1019,13 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
                             componentId="social-links"
-                            componentTheme="[swinburne-showcase:component-style-theme/lists/navlist/socialnav/social-links]"
+                            componentTheme="[swinburne-showcase:component-style-theme/lists/page-list/social-links]"
                             detailsBadge="icon"
                             listFrom="static"
                             pages="[/content/swinburne-showcase/en/styleguide/components/page-list/Facebook,/content/swinburne-showcase/en/styleguide/components/page-list/Twitter,/content/swinburne-showcase/en/styleguide/components/page-list/Youtube,/content/swinburne-showcase/en/styleguide/components/page-list/Instagram,/content/swinburne-showcase/en/styleguide/components/page-list/Linkedin,/content/swinburne-showcase/en/styleguide/components/page-list/Tumblr]"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </pagelist>
+                            tagsMatch="any"/>
                     </par>
-                </contentblock>
-                <contentblock_1766752365
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_pagelist_links"
-                    title="Page List : Default : Links"
-                    variant="advsection">
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <pagelist
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/pagelist"
-                            componentId="pagelist_PAKMD1WHS"
-                            componentTheme="[swinburne-showcase:component-style-theme/lists/navlist/links]"
-                            detailsBadge="default"
-                            listFrom="static"
-                            pages="/content/swinburne-showcase/en/styleguide/components/page-list/child-details/nav-link-1"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </pagelist>
-                    </par>
-                </contentblock_1766752365>
+                </contentblock34>
             </par>
         </article>
     </jcr:content>

@@ -1565,6 +1565,12 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: navbar-nav
     title: 'Navbar Nav'
 
+  # Page list
+  lists/page-list/social-links:
+    flat: true
+    prefix: theme--lists-social-links
+    title: 'Social Links'
+
   # WARNING: Reference to these path is hardcoded into component dialogs
   # Badge - menuColor
   lists/navlist/color:
@@ -1578,14 +1584,6 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     flat: true
     prefix: navbar-expand-lg navbar-light bg-white
     title: 'Header Nav'
-
-
-  lists/navlist/socialnav:
-     prefixes:
-       - social
-       - social-links
-     prefixValue: theme--list-
-     title: 'Social Nav - %%prefix_normalised%%'
 
   lists/cardslist/cardsnav:
      flat: true

@@ -9,7 +9,8 @@
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article">
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_GTTRZ4NVL">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
@@ -35,6 +36,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_RCSNN5YMM"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -62,6 +64,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_PWD1NNR0F"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -90,6 +93,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_HGYLKOVCX"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -118,6 +122,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_ABDEKIHO9"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -146,6 +151,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_DJ76MJHWN"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -174,6 +180,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_GIZ3VSJH8"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -197,6 +204,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_BHLKLQTP3"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -226,6 +234,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_LEZSZBHMW"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -276,6 +285,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_W1TBMUMHZ"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -304,6 +314,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_Q6DYF3BLX"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -330,6 +341,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_6TLZEG2YD"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -354,6 +366,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_OKCJNZ9GW"
                             text="Basic list with links (inline)"
                             textIsRich="true"
                             variant="simple"/>
@@ -379,6 +392,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_IWXIDKCHR"
                             text="Page list as a Carousel"
                             textIsRich="true"
                             variant="simple"/>
@@ -405,6 +419,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_HWZB6DM9O"
                             text="Medium Cards"
                             textIsRich="true"
                             variant="simple"/>
@@ -432,6 +447,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_TH52KBFJU"
                             text="Medium Cards Tall"
                             textIsRich="true"
                             variant="simple"/>
@@ -459,6 +475,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_WEDILZGTF"
                             text="Medium Cards (flush side-by-side)"
                             textIsRich="true"
                             variant="simple"/>
@@ -486,6 +503,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_HPPF8SIZY"
                             text="Large Card"
                             textIsRich="true"
                             variant="simple"/>
@@ -513,6 +531,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_OGDPCED7G"
                             text="Promoted Cards with override on Badge CTA"
                             textIsRich="true"
                             variant="simple"/>
@@ -542,6 +561,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_L7TL9Z1HR"
                             text="Colored Cards with override on Badge CTA"
                             textIsRich="true"
                             variant="simple"/>
@@ -571,6 +591,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_TDCJILXDZ"
                             text="Related Cards with override on Badge CTA"
                             textIsRich="true"
                             variant="simple"/>
@@ -600,6 +621,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_1NGN6M7DV"
                             text="Outline Cards with override on Badge CTA"
                             textIsRich="true"
                             variant="simple"/>
@@ -630,6 +652,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_DLUNLDCBO"
                             text="Outline Cards"
                             textIsRich="true"
                             variant="simple"/>
@@ -657,6 +680,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_U3TOM5SEY"
                             text="Promoted Cards without override on Badge CTA"
                             textIsRich="true"
                             variant="simple"/>
@@ -684,6 +708,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_VKSD1OBT3"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -711,6 +736,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_DQGPYVEHG"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -738,6 +764,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_GN9VAA8NW"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -765,6 +792,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_0LCCI9EKB"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -792,6 +820,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_6DNVYOFNB"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -819,6 +848,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_O4I40FXCO"
                             text="&lt;p>Related Cards with override on Badge CTA config&lt;/p>&#xa;"
                             textIsRich="true"
                             variant="simple"/>
@@ -852,6 +882,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_JRBUZUECQ"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -882,6 +913,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_OHBYPVTOP"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -899,8 +931,6 @@
                             pages="[/content/swinburne-showcase/en/component/lists/page-list/cards/page1,/content/swinburne-showcase/en/component/lists/page-list/cards/page6,/content/swinburne-showcase/en/component/lists/page-list/cards/page5]"
                             tagsMatch="any">
                             <badgeThumbnail
-                                jcr:lastModified="{Date}2018-07-14T16:38:10.422+10:00"
-                                jcr:lastModifiedBy="admin"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/media/image"
                                 fileReference="/content/dam/swinburne-showcase/en/common/images/cablecar.jpg"/>
@@ -921,6 +951,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_QXH8T6V7S"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -953,6 +984,7 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
+                            componentId="text_UQHFHITPJ"
                             text=""
                             textIsRich="true"
                             variant="simple"/>
@@ -972,6 +1004,35 @@
                             tagsMatch="any"/>
                     </par>
                 </contentblock33>
+                <contentblock
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_social"
+                    title="Page List : Clickable Card with Icon, title and description">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <pagelist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/pagelist"
+                            componentId="social-links"
+                            componentTheme="[swinburne-showcase:component-style-theme/lists/navlist/socialnav/social-links]"
+                            detailsBadge="cardActionIconTitleDescription"
+                            listFrom="static"
+                            pages="[/content/swinburne-showcase/en/styleguide/components/page-list/Facebook,/content/swinburne-showcase/en/styleguide/components/page-list/Twitter,/content/swinburne-showcase/en/styleguide/components/page-list/Youtube,/content/swinburne-showcase/en/styleguide/components/page-list/Instagram,/content/swinburne-showcase/en/styleguide/components/page-list/Linkedin,/content/swinburne-showcase/en/styleguide/components/page-list/Tumblr]"
+                            tagsMatch="any">
+                            <badgeThumbnail
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                        </pagelist>
+                    </par>
+                </contentblock>
             </par>
         </article>
     </jcr:content>

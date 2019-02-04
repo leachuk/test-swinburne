@@ -1581,9 +1581,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
 
 
   lists/navlist/socialnav:
-     flat: true
-     prefix: theme--list-social
-     title: 'Social Nav'
+     prefixes:
+       - social
+       - social-links
+     prefixValue: theme--list-
+     title: 'Social Nav - %%prefix_normalised%%'
 
   lists/cardslist/cardsnav:
      flat: true
@@ -1800,10 +1802,14 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
     prefixes:
       - youtube
       - facebook-f
+      - facebook
       - pinterest-p
       - twitter
       - instagram
       - linkedin-in
+      - linkedin
+      - tumblr-square
+      - tumblr
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
 

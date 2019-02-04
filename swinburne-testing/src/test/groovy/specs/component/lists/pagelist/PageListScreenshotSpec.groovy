@@ -525,4 +525,27 @@ class PageListScreenshotSpec extends ComponentSpec {
 
     }
 
+    @Unroll("Badge: Card with clickable title in #viewport.label")
+    def "Badge: Card with clickable title"() {
+
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist_clickable_title"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        def component = waitForComponent(selector)
+
+        then: 'It should match the small viewport reference image.'
+        designRef(selector)
+
+        where:
+        viewport << getViewPorts()
+
+
+    }
+
 }

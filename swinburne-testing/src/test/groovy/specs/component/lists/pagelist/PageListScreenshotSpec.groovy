@@ -17,23 +17,6 @@ class PageListScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    def "Appearance of Page List with variant 'Clickable Card with icon, title and description'"() {
-
-        given: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#social-links"
-
-        when: 'I am in the component showcase page'
-        setWindowSize()
-        waitForAuthorPreviewPage()
-
-        then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
-
-        then: 'It should match reference image.'
-        designRef(selector)
-
-    }
 
 
     @Unroll("Appearance of Component with Default variant and Default Badge in #viewport.label")

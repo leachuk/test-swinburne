@@ -20,7 +20,7 @@
     <filter root="/content/cq:tags/swinburne/component-style-modifier" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-style-module" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-style-chevron" mode="update"/>
-    <filter root="/content/cq:tags/swinburne/component-style-icon" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-icon"/>
     <filter root="/content/cq:tags/swinburne/component-dialog" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-aria" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-analytics" mode="update"/>
@@ -31,7 +31,7 @@
     <filter root="/content/cq:tags/swinburne-showcase/component-style-modifier" mode="update"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-style-module" mode="update"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-style-chevron" mode="update"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-style-icon" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-style-icon"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-dialog" mode="update"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-aria" mode="update"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-analytics" mode="update"/>
@@ -42,7 +42,7 @@
     <filter root="/content/cq:tags/swinburne-training/component-style-modifier" mode="update"/>
     <filter root="/content/cq:tags/swinburne-training/component-style-module" mode="update"/>
     <filter root="/content/cq:tags/swinburne-training/component-style-chevron" mode="update"/>
-    <filter root="/content/cq:tags/swinburne-training/component-style-icon" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-style-icon"/>
     <filter root="/content/cq:tags/swinburne-training/component-dialog" mode="update"/>
     <filter root="/content/cq:tags/swinburne-training/component-aria" mode="update"/>
     <filter root="/content/cq:tags/swinburne-training/component-analytics" mode="update"/>

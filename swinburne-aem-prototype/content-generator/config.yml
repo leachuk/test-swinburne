@@ -1813,14 +1813,12 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - linkedin
       - tumblr-square
       - tumblr
-    valueFormat: fa fa-%%prefix%%
+    valueFormat: fa fab-%%prefix%%
     title: '%%prefix_normalised%%'
 
   spinner:
     prefixes:
       - cog
-      - gear
-      - refresh
       - spinner
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
@@ -1889,7 +1887,7 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - wrench
       - heartbeat
       - link
-    valueFormat: fa fa-%%prefix%%
+    valueFormat: fa fal-%%prefix%%
     title: '%%prefix_normalised%%'
 
 # Chevron

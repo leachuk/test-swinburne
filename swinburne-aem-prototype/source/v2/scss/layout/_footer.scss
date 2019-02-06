@@ -97,10 +97,6 @@
       order: 0;
       text-align: left;
     }
-
-    @include media-breakpoint-up(lg) {
-      margin-left: 0;
-    }
   }
 
   &__admin {

@@ -7,53 +7,52 @@
 
     > .contentblock {
       width: 100%;
-
-      &:first-child {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        > div[component] {
-          width: 50%;
-
-          &:not(.embedsource) {
-            width: 100%;
-          }
-
-          &:not(:last-child) {
-            margin-bottom: 30px;
-          }
-
-          @include media-breakpoint-up(md) {
-            &,
-            &:not(.embedsource) {
-              width: auto;
-            }
-          }
-        }
-
-        @include media-breakpoint-up(md) {
-          justify-content: flex-start;
-          margin-bottom: 10px;
-        }
-
-        @include media-breakpoint-up(lg) {
-          display: block;
-          margin-bottom: 0;
-          max-width: 258px;
-          min-width: 258px;
-        }
-
-        @include media-breakpoint-up(xl) {
-          flex-direction: column;
-          max-width: 398px;
-          min-width: 398px;
-        }
-      }
     }
 
     @include media-breakpoint-up(lg) {
       display: flex;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > div[component] {
+      width: 50%;
+
+      &:not(.embedsource) {
+        width: 100%;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      @include media-breakpoint-up(md) {
+        &,
+        &:not(.embedsource) {
+          width: auto;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+      margin-bottom: 0;
+      max-width: 258px;
+      min-width: 258px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      flex-direction: column;
+      max-width: 398px;
+      min-width: 398px;
     }
   }
 

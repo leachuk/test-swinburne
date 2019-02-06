@@ -189,7 +189,8 @@
         transform: translateY(-20%);
         z-index: 2;
         color: $primary;
-        font-family: $font-family-awesome-solid;
+        font-family: $font-family-awesome;
+        font-weight: 900;
       }
     }
     button.btn--primary,
@@ -334,7 +335,8 @@
           margin-top: -6px;
           z-index: 2;
           color: $primary;
-          font-family: $font-family-awesome-solid;
+          font-family: $font-family-awesome;
+          font-weight: 900;
         }
       }
       &:nth-child(4) > p:first-of-type:before {
@@ -453,7 +455,8 @@
             margin-bottom: 36px;
             z-index: 2;
             color:rgba(0,0,0,.87);
-            font-family: $font-family-awesome-solid;
+            font-family: $font-family-awesome;
+            font-weight: 900;
           }
         }
       }
@@ -496,7 +499,8 @@
         padding: 14px .78571429em .78571429em .78571429em;
         &:before {
           color:rgba(0,0,0,.87);
-          font-family: $font-family-awesome-solid;
+          font-family: $font-family-awesome;
+          font-weight: 900;
           font-size: 18px;
         }
       }

@@ -1,32 +1,125 @@
-// TODO: Add tag for `.brand-footer`
-footer[component] {
+.brand-footer {
   overflow: hidden;
-  padding-top: 40px;
 
-  // TODO: Add tag for `.brand-footer__global`
-  > .aem-Grid > .contentblock:first-child > .container > .aem-Grid {
-    display: flex;
+  &__global {
+    padding-bottom: 40px;
+    padding-top: 40px;
 
     > .contentblock {
       width: 100%;
 
       &:first-child {
-        min-width: 398px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        > div[component] {
+          width: 50%;
+
+          &:not(.embedsource) {
+            width: 100%;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+
+          @include media-breakpoint-up(md) {
+            &,
+            &:not(.embedsource) {
+              width: auto;
+            }
+          }
+        }
+
+        @include media-breakpoint-up(md) {
+          justify-content: flex-start;
+          margin-bottom: 10px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          display: block;
+          margin-bottom: 0;
+          max-width: 258px;
+          min-width: 258px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          flex-direction: column;
+          max-width: 398px;
+          min-width: 398px;
+        }
       }
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
     }
   }
 
-  // TODO: Add tag for `.brand-footer__admin`
-  > .aem-Grid > .contentblock:last-child {
+  &__logo {
+    order: -1;
+
+    img {
+      height: 58px;
+      width: 114px;
+
+      @include media-breakpoint-up(lg) {
+        height: 78px;
+        width: 154px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        height: 89px;
+        width: 176px;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-right: 90px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-right: 0;
+    }
+  }
+
+  &__knowing {
+    order: -1;
+    text-align: right;
+
+    img {
+      height: 58px;
+      width: 58px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-left: auto;
+      order: 0;
+      text-align: left;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__admin {
+    padding-bottom: 24px;
     position: relative;
 
-    &::before {
-      background-color: theme-color('g2');
-      content: '';
-      display: block;
-      height: 1px;
-      transform: translateX(-50%);
-      width: calc(100vw + 100%);
+    @include media-breakpoint-up(md) {
+      padding-bottom: 12px;
+
+      &::before {
+        background-color: theme-color('g2');
+        content: '';
+        display: block;
+        height: 1px;
+        margin-bottom: 12px;
+        transform: translateX(-50%);
+        width: calc(100vw + 100%);
+      }
     }
   }
 }

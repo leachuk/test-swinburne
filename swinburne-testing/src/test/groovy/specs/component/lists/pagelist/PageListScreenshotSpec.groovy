@@ -513,7 +513,7 @@ class PageListScreenshotSpec extends ComponentSpec {
 
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#pagelist_clickable_title"
+        def selector = "#pagelist_default_links"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

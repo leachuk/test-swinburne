@@ -74,10 +74,10 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock>
-                <contentblock_432917308
+                <contentblock2
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_432917308_4IGRHFAI1"
+                    componentId="contentblock2"
                     componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
                     <par
                         jcr:primaryType="nt:unstructured"
@@ -92,7 +92,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_AIQY5ZRKO"
-                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock/par/pagelist"/>
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock35/par/pagelist"/>
                     </par>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
@@ -100,7 +100,7 @@
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
-                </contentblock_432917308>
+                </contentblock2>
             </par>
         </article>
     </jcr:content>

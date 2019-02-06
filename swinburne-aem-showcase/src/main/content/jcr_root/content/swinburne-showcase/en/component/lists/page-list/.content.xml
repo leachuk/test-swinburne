@@ -1031,10 +1031,10 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock34>
-                <contentblock
+                <contentblock35
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_Z8NRDXI2O"
+                    componentId="contentblock_35"
                     title="Page List : Default : Links"
                     variant="advsection">
                     <bgimage
@@ -1060,7 +1060,7 @@
                                 sling:resourceType="aemdesign/components/media/image"/>
                         </pagelist>
                     </par>
-                </contentblock>
+                </contentblock35>
             </par>
         </article>
     </jcr:content>

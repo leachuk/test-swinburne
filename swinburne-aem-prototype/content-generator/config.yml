@@ -1499,8 +1499,38 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
   # Footer
   layout/brand-footer:
     flat: true
-    prefix: theme--footer-brand
+    prefix: brand-footer
     title: 'Brand Footer'
+
+  layout/brand-footer/brand-footer-admin:
+    flat: true
+    prefix: brand-footer__admin
+    title: 'Brand Footer Admin'
+
+  layout/brand-footer/brand-footer-aside:
+    flat: true
+    prefix: brand-footer__aside
+    title: 'Brand Footer Aside (Logo, Contact, etc...)'
+
+  layout/brand-footer/brand-footer-global:
+    flat: true
+    prefix: brand-footer__global
+    title: 'Brand Footer Global'
+
+  layout/brand-footer/brand-footer-knowing:
+    flat: true
+    prefix: brand-footer__knowing
+    title: 'Brand Footer Knowing Logo'
+
+  layout/brand-footer/brand-footer-logo:
+    flat: true
+    prefix: brand-footer__logo
+    title: 'Brand Footer Logo'
+
+  layout/brand-footer/brand-footer-sitemap:
+    flat: true
+    prefix: brand-footer__sitemap
+    title: 'Brand Footer Sitemap (IA)'
 
   # Header
   layout/header/fixed-top:

@@ -1,59 +1,59 @@
-@charset 'utf-8';
+@charset 'UTF-8';
 
 @import
-  // Bootstrap internals
-'../../../node_modules/bootstrap/scss/functions',
-'../../../node_modules/bootstrap/scss/variables',
+    // Bootstrap internals
+  '~bootstrap/scss/functions',
+  '~bootstrap/scss/variables',
 
-  // internals
-'functions',
-'variables',
-'mixins',
+    // internals
+  'functions',
+  'variables',
+  'mixins',
 
-  // Bootstrap reset and base typography
-'../../../node_modules/bootstrap/scss/mixins',
-'../../../node_modules/bootstrap/scss/reboot',
-'../../../node_modules/bootstrap/scss/type',
+    // Bootstrap reset and base typography
+  '~bootstrap/scss/mixins',
+  '~bootstrap/scss/reboot',
+  '~bootstrap/scss/type',
 
-  // Vendors
-'vendor/index',
+    // Vendors
+  'vendor/index',
 
-  // Core
-'core/index',
+    // Core
+  'core/index',
 
-  // Bootstrap components
-'../../../node_modules/bootstrap/scss/buttons',
-'../../../node_modules/bootstrap/scss/breadcrumb',
-'../../../node_modules/bootstrap/scss/card',
-'../../../node_modules/bootstrap/scss/dropdown',
-'../../../node_modules/bootstrap/scss/grid',
-'../../../node_modules/bootstrap/scss/images',
-'../../../node_modules/bootstrap/scss/modal',
-'../../../node_modules/bootstrap/scss/nav',
-'../../../node_modules/bootstrap/scss/navbar',
-'../../../node_modules/bootstrap/scss/transitions',
+    // Bootstrap components
+  '~bootstrap/scss/buttons',
+  '~bootstrap/scss/breadcrumb',
+  '~bootstrap/scss/card',
+  '~bootstrap/scss/dropdown',
+  '~bootstrap/scss/grid',
+  '~bootstrap/scss/images',
+  '~bootstrap/scss/modal',
+  '~bootstrap/scss/nav',
+  '~bootstrap/scss/navbar',
+  '~bootstrap/scss/transitions',
 
-  // Layout
-'layout/index',
+    // Layout
+  'layout/index',
 
-  // Bootstrap overrides
-'override/index',
+    // Bootstrap overrides
+  'override/index',
 
-  // Global utility classes
-'utilities',
+    // Global utility classes
+  'utilities',
 
-  // Components
-'components/index',
+    // Components
+  'components/index',
 
-  // AEM specific changes
-'aem/index',
+    // AEM specific changes
+  'aem/index',
 
-  // Themes
-'themes/index',
+    // Themes
+  'themes/index',
 
-  // Icon classes
-'icons',
+    // Icon classes
+  'icons',
 
- // Style Guide
-'styleguide'
+  // Style Guide
+  'styleguide'
 ;

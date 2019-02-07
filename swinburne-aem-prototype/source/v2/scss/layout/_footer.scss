@@ -28,6 +28,10 @@
     > div[component] {
       width: 50%;
 
+      .text[component] {
+        margin-bottom: 10px;
+      }
+
       &:not(.embedsource) {
         width: 100%;
       }

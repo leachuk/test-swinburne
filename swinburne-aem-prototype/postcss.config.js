@@ -20,7 +20,9 @@ module.exports = ({ env }) => ({
       replace: true
     },
     'postcss-sorting': {},
-    autoprefixer: true,
+    autoprefixer: {
+      grid: 'autoplace',
+    },
     cssnano: env === 'production' ? true : false
   }
 });

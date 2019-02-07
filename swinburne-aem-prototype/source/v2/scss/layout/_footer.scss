@@ -1,11 +1,17 @@
 .brand-footer {
   overflow: hidden;
 
+  &,
+  .text[component] p {
+    font-size: 10px;
+    line-height: 22px;
+  }
+
   &__global {
     padding-bottom: 40px;
     padding-top: 40px;
 
-    > .contentblock {
+    > div[component] {
       width: 100%;
     }
 
@@ -105,6 +111,16 @@
 
     @include media-breakpoint-up(md) {
       padding-bottom: 12px;
+
+      // Force the `.text` components into a horizontal alignment
+      .col-sm:last-child {
+        display: flex;
+        justify-content: flex-end;
+
+        .text[component]:not(:first-child) {
+          margin-left: 30px;
+        }
+      }
 
       &::before {
         background-color: theme-color('g2');

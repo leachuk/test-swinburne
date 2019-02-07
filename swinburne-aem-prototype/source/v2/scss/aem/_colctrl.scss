@@ -14,7 +14,7 @@ div[class*='colctrl']:not([class*='col-']) {
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
   div[class*="col-"] {
     &.col-sm {
       width: 100%;

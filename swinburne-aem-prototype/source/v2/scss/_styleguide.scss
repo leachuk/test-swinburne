@@ -46,12 +46,7 @@ html:not(.aem-AuthorLayer-Edit ) {
       }
     }
 
-    @include media-breakpoint-up(lg) {
-      div.article {
-        margin-left: $styleguide-sidebar-width;
-        width: calc(100% - #{$styleguide-sidebar-width});
-      }
-
+    @include media-breakpoint-up(xl) {
       aside {
         display: block;
         position: fixed;
@@ -85,6 +80,11 @@ html:not(.aem-AuthorLayer-Edit ) {
             }
           }
         }
+      }
+
+      div.article {
+        margin-left: $styleguide-sidebar-width;
+        width: calc(100% - #{$styleguide-sidebar-width});
       }
     }
   }

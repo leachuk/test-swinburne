@@ -9,27 +9,30 @@
   }
 
   &__global {
-    padding: 40px 5px;
-
-    > div[component] {
-      width: 100%;
-    }
+    padding: 20px 5px;
 
     @include media-breakpoint-up(md) {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding: 30px 40px;
     }
 
     @include media-breakpoint-up(lg) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 258px 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 'Aside Sitemap' 'Acknowlodgement Acknowlodgement';
       padding-left: 25px;
       padding-right: 25px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: 398px 1fr;
     }
   }
 
   &__aside {
     display: flex;
     flex-wrap: wrap;
+    grid-area: Aside;
     justify-content: space-between;
 
     > div[component] {
@@ -62,14 +65,10 @@
     @include media-breakpoint-up(lg) {
       display: block;
       margin-bottom: 0;
-      max-width: 258px;
-      min-width: 258px;
     }
 
     @include media-breakpoint-up(xl) {
       flex-direction: column;
-      max-width: 398px;
-      min-width: 398px;
     }
   }
 
@@ -121,6 +120,7 @@
   }
 
   &__sitemap {
+    grid-area: Sitemap;
     margin-bottom: 30px;
     margin-right: -20px;
 
@@ -159,6 +159,62 @@
 
     @include media-breakpoint-up(lg) {
       grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 0;
+    }
+  }
+
+  &__acknowlodgement {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: Acknowlodgement;
+
+    > div[component] {
+      &:first-child {
+        grid-area: Heading;
+        margin-bottom: 10px;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+          width: auto;
+        }
+      }
+
+      &.embedsource {
+        grid-area: Image;
+        margin-right: 10px;
+
+        @include media-breakpoint-up(md) {
+          margin-bottom: 10px;
+          order: -1;
+        }
+
+        @include media-breakpoint-up(lg) {
+          order: initial;
+        }
+      }
+
+      &.text {
+        grid-area: Text;
+      }
+    }
+
+    > .text[component],
+    > a.link[component] {
+      font-weight: 300;
+    }
+
+    > a.link[component] {
+      text-decoration: underline;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: 258px 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 'Heading Text' 'Image Text';
+      // 258px lg
+      // 398px xl
     }
   }
 

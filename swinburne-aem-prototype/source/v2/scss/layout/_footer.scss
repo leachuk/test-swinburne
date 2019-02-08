@@ -136,6 +136,11 @@
         @include hover-focus {
           text-decoration: underline;
         }
+
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+          margin-bottom: 2px;
+        }
       }
 
       @include media-breakpoint-up(md) {

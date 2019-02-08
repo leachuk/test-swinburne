@@ -1502,6 +1502,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: brand-footer
     title: 'Brand Footer'
 
+  layout/brand-footer/brand-footer-acknowlodgement:
+    flat: true
+    prefix: brand-footer__acknowlodgement
+    title: 'Brand Footer Acknowlodgement'
+
   layout/brand-footer/brand-footer-admin:
     flat: true
     prefix: brand-footer__admin

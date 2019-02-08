@@ -132,6 +132,10 @@
 
       > a.link[component] {
         font-weight: 700;
+
+        @include hover-focus {
+          text-decoration: underline;
+        }
       }
 
       @include media-breakpoint-up(md) {
@@ -151,11 +155,24 @@
       }
     }
 
+    .list[component] {
+      ul {
+        @include list-unstyled;
+
+        margin-bottom: 0;
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
     @include media-breakpoint-up(md) {
       display: grid;
       grid-column-gap: 10px;
       grid-row-gap: 20px;
       grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: min-content min-content;
       margin-right: 0;
     }
 

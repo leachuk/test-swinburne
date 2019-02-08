@@ -137,11 +137,28 @@
         border-bottom-width: 0;
         padding-bottom: 0;
         padding-top: 0;
+
+        &:last-child {
+          grid-column-end: span 3;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        &:last-child {
+          grid-column-end: span 2;
+        }
       }
     }
 
     @include media-breakpoint-up(md) {
+      display: grid;
+      grid-row-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
       margin-right: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 

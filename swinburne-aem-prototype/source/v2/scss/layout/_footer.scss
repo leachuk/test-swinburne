@@ -152,11 +152,12 @@
         padding-top: 0;
         width: calc(100% / 3 - 10px);
 
-        &:nth-child(2n+1):not(:first-child) {
+        &:nth-child(3n+3) {
           margin-right: 0;
         }
 
         &:last-child {
+          margin-right: 0;
           width: 100%;
         }
       }
@@ -165,16 +166,16 @@
         min-width: calc(25% - 10px);
         width: calc(25% - 10px);
 
-        &:nth-child(2n+1):not(:first-child) {
+        &:nth-child(3n+3) {
           margin-right: 10px;
         }
 
-        &:nth-child(3n+1):not(:first-child) {
+        &:nth-child(4n+4) {
           margin-right: 0;
         }
 
         &:last-child {
-          width: 50%;
+          width: calc(50% - 10px);
         }
       }
     }

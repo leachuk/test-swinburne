@@ -18,7 +18,7 @@
     @include media-breakpoint-up(lg) {
       display: grid;
       grid-template-columns: 258px 1fr;
-      grid-template-areas: 'Aside Sitemap' 'Acknowlodgement Acknowlodgement';
+      grid-template-rows: auto auto; // IE11 compatibility
       padding: 40px 15px;
     }
 
@@ -32,7 +32,7 @@
   &__aside {
     display: flex;
     flex-wrap: wrap;
-    grid-area: Aside;
+    grid-column-start: 1;
     justify-content: space-between;
 
     > div[component] {
@@ -121,7 +121,7 @@
   }
 
   &__sitemap {
-    grid-area: Sitemap;
+    grid-column-start: 2;
     margin-bottom: 30px;
     margin-right: -20px;
 
@@ -145,17 +145,36 @@
 
       @include media-breakpoint-up(md) {
         border-bottom-width: 0;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        min-width: calc(100% / 3 - 10px);
         padding-bottom: 0;
         padding-top: 0;
+        width: calc(100% / 3 - 10px);
+
+        &:nth-child(2n+1):not(:first-child) {
+          margin-right: 0;
+        }
 
         &:last-child {
-          grid-column-end: span 3;
+          width: 100%;
         }
       }
 
       @include media-breakpoint-up(lg) {
+        min-width: calc(25% - 10px);
+        width: calc(25% - 10px);
+
+        &:nth-child(2n+1):not(:first-child) {
+          margin-right: 10px;
+        }
+
+        &:nth-child(3n+1):not(:first-child) {
+          margin-right: 0;
+        }
+
         &:last-child {
-          grid-column-end: span 2;
+          width: 50%;
         }
       }
     }
@@ -173,16 +192,11 @@
     }
 
     @include media-breakpoint-up(md) {
-      display: grid;
-      grid-column-gap: 10px;
-      grid-row-gap: 20px;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: min-content min-content;
+      display: flex;
+      flex-wrap: wrap;
+      height: min-content;
+      margin-bottom: 10px;
       margin-right: 0;
-    }
-
-    @include media-breakpoint-up(lg) {
-      grid-template-columns: repeat(4, 1fr);
     }
   }
 
@@ -190,7 +204,8 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    grid-area: Acknowlodgement;
+    grid-column-start: 1;
+    grid-column-end: 3;
     margin-bottom: 20px;
 
     > div[component] {
@@ -243,6 +258,7 @@
 
     @include media-breakpoint-up(lg) {
       display: grid;
+      grid-row-start: 2;
       grid-template-columns: 258px 1fr;
       grid-template-areas: 'Heading Text' 'Image Text';
 

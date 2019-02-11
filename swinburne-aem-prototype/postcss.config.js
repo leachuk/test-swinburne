@@ -14,7 +14,7 @@ module.exports = ({ env }) => ({
         'padding*',
         'right',
         'top',
-        'width',
+        '*width',
       ],
       selectorBlackList: ['html'],
       replace: true

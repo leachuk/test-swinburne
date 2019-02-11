@@ -11,7 +11,7 @@
   &-item {
     a {
       color: $tertiary;
-      font-weight: 600;
+      font-weight: 400;
     }
 
     + .breadcrumb-item {
@@ -29,7 +29,7 @@
     &.active {
       a {
         color: $grey-3;
-        font-weight: 600;
+        font-weight: 300;
       }
 
       .bg-dark & {

@@ -81,6 +81,25 @@ class TextScreenshotSpec extends ComponentSpec {
 
     }
 
+    @Unroll("Appearance of Component with visibility modifiers in #viewport.label")
+    def "Appearance of Component with visibility modifiers"() {
 
+        given: '>I am in the component showcase page'
+        def selector = "#contentblock_N6YNER6OF"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        def component = waitForComponent(selector)
+
+        then: 'It should match the small viewport reference image.'
+        designRef(selector)
+
+        where:
+        viewport << getViewPorts()
+
+    }
 
 }

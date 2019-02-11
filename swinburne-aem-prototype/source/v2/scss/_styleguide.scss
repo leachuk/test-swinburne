@@ -32,7 +32,7 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
     .icon[class*='col-sm'] {
       margin-bottom: $spacing-4xl;
-      .fa {
+      [class*="fa"] {
         font-size: 3em;
         color: $grey-2;
       }

@@ -1008,7 +1008,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock34"
-                    hideTitle="false"
                     hideTitleSeparator="true"
                     title="Page List: Default variant using Icon badge"
                     variant="advsection">
@@ -1025,7 +1024,43 @@
                             pages="[/content/swinburne-showcase/en/styleguide/components/page-list/Facebook,/content/swinburne-showcase/en/styleguide/components/page-list/Twitter,/content/swinburne-showcase/en/styleguide/components/page-list/Youtube,/content/swinburne-showcase/en/styleguide/components/page-list/Instagram,/content/swinburne-showcase/en/styleguide/components/page-list/Linkedin,/content/swinburne-showcase/en/styleguide/components/page-list/Tumblr]"
                             tagsMatch="any"/>
                     </par>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock34>
+                <contentblock35
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_35"
+                    title="Page List : Default : Links"
+                    variant="advsection">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <pagelist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/pagelist"
+                            componentId="pagelist_default_links"
+                            componentTheme="[swinburne-showcase:component-style-theme/lists/navlist/links]"
+                            detailsBadge="default"
+                            listFrom="static"
+                            pages="/content/swinburne-showcase/en/styleguide/components/page-list/child-details/nav-link-1"
+                            tagsMatch="any">
+                            <badgeThumbnail
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                        </pagelist>
+                    </par>
+                </contentblock35>
             </par>
         </article>
     </jcr:content>

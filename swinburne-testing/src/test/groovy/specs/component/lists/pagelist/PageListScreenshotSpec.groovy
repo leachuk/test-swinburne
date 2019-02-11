@@ -17,23 +17,6 @@ class PageListScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    def "Appearance of Page List with variant 'Icon'"() {
-
-        given: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#social-links"
-
-        when: 'I am in the component showcase page'
-        setWindowSize()
-        waitForAuthorPreviewPage()
-
-        then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
-
-        then: 'It should match reference image.'
-        designRef(selector)
-
-    }
 
 
     @Unroll("Appearance of Component with Default variant and Default Badge in #viewport.label")
@@ -508,6 +491,29 @@ class PageListScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#pagelist27"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        def component = waitForComponent(selector)
+
+        then: 'It should match the small viewport reference image.'
+        designRef(selector)
+
+        where:
+        viewport << getViewPorts()
+
+
+    }
+
+    @Unroll("Badge: Card with clickable title in #viewport.label")
+    def "Badge: Card with clickable title"() {
+
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist_default_links"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

@@ -159,6 +159,24 @@
         &:last-child {
           margin-right: 0;
           width: 100%;
+
+          .list[component] ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            li {
+              width: calc(100% / 3 - 20px);
+
+              + li {
+                margin-left: 20px;
+              }
+
+              &:nth-child(3n+1) {
+                margin-left: 0;
+              }
+            }
+          }
         }
       }
 
@@ -176,6 +194,18 @@
 
         &:last-child {
           width: calc(50% - 10px);
+
+          .list[component] ul li {
+            width: calc(50% - 20px);
+
+            &:nth-child(3n+1) {
+              margin-left: 20px;
+            }
+
+            &:nth-child(2n+1) {
+              margin-left: 0;
+            }
+          }
         }
       }
     }
@@ -185,6 +215,10 @@
         @include list-unstyled;
 
         margin-bottom: 0;
+      }
+
+      li {
+        width: 100%;
       }
 
       @include media-breakpoint-down(sm) {

@@ -30,7 +30,7 @@ html:not(.aem-AuthorLayer-Edit ) {
       max-width: 720px;
       font-size: 16px;
     }
-    .icon {
+    .icon[class*='col-sm'] {
       margin-bottom: $spacing-4xl;
       .fa {
         font-size: 3em;

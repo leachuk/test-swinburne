@@ -199,6 +199,7 @@
     }
 
     @include media-breakpoint-up(lg) {
+      height: 0%;
       width: calc(100% - 258px);
     }
 

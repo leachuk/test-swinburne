@@ -37,11 +37,9 @@ $animation-speed : 300ms;
 a.link,
 button {
   &.btn {
-    font-size: 14px;
     display: inline-block;
     border-width: 0;
     border-color: transparent;
-    padding: $spacing-sm $spacing-5xl $spacing-sm $spacing-md;
     transition: background-color $animation-speed ease-in-out, border-color $animation-speed ease-in-out;
     font-weight: bold;
     white-space: normal;
@@ -52,6 +50,12 @@ button {
     text-transform: capitalize;
     position: relative;
     line-height: 20px;
+    padding: $spacing-xs $spacing-5xl $spacing-xs $spacing-md;
+    font-size: 12px;
+    @include media-breakpoint-up(md) {
+      padding: $spacing-sm $spacing-5xl $spacing-sm $spacing-md;
+      font-size: 14px;
+    }
     &:hover {
       text-decoration: none;
     }
@@ -60,13 +64,16 @@ button {
     }
     &:after {
       content: "\f178";
-      font-size: 20px;
       position: absolute;
       right: $spacing-md;
       top: 50%;
       transform: translateY(-50%);
       font-weight: 300;
       font-family: $font-family-awesome;
+      font-size: 18px;
+      @include media-breakpoint-up(md) {
+        font-size: 20px;
+      }
     }
     &:before {
       transition: height $animation-speed ease-in-out, background-color $animation-speed ease-in-out;

@@ -94,7 +94,7 @@ html:not(.aem-AuthorLayer-Edit ) {
       &:last-child {}
     }
   }
-  section.contentblock {
+  section.contentblock:not(:last-of-type) {
     margin-bottom: 30px;
   }
 }

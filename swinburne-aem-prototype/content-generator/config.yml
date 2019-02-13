@@ -355,6 +355,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - secondary
       - secondary-charcoal
       - secondary-outline
+      - secondary-white
       - success
       - warning
       - icon

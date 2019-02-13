@@ -1916,7 +1916,7 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - graduation-cap
       - video
       - university
-      - bar-chart
+      - chart-bar
       - newspaper
       - cogs
       - gamepad
@@ -1927,7 +1927,7 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - wrench
       - heartbeat
       - link
-    valueFormat: fab fa-%%prefix%%
+    valueFormat: fal fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
 # Chevron

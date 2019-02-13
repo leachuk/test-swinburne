@@ -123,7 +123,7 @@ button {
     &,
     &:active {
       background-color: $tertiary;
-      border-bottom-width: 0;
+      @include inner-border(3px, transparent, 50%);
     }
     &,
     &:hover,

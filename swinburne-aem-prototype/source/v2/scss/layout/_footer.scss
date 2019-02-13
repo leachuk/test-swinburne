@@ -361,8 +361,6 @@
       grid-row-start: 2;
       grid-template-columns: 258px 1fr;
       grid-template-rows: auto auto; // IE11 compatibility
-      margin-left: 258px;
-      width: calc(100% - 258px);
 
       > * {
         align-self: start;

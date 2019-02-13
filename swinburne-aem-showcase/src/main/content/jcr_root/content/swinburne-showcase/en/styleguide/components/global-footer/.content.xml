@@ -47,7 +47,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/content/reference"
                                 componentId="reference"
-                                path="/content/swinburne-showcase/en/component/layout/footer/jcr:content/footer" />
+                                path="/content/swinburne-showcase/en/component/layout/footer/jcr:content/article/par/contentblock4/par/footer" />
                     </par>
                 </contentblock>
             </par>

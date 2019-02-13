@@ -350,7 +350,11 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - info
       - light
       - primary
+      - primary-red
+      - primary-yellow
       - secondary
+      - secondary-charcoal
+      - secondary-outline
       - success
       - warning
       - icon

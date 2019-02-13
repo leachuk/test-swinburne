@@ -52,7 +52,7 @@
 
   // Set the text to uppercase for all but the small and filter buttons
   &:not(&-sm):not(&-filter) {
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 
   // Override the link button styles

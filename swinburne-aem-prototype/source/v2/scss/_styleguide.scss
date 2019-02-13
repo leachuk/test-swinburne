@@ -30,21 +30,6 @@ html:not(.aem-AuthorLayer-Edit ) {
       max-width: 720px;
       font-size: 16px;
     }
-    .icon {
-      margin-bottom: $spacing-4xl;
-      [class*="fa"] {
-        font-size: 3em;
-        color: $grey-2;
-      }
-      span {
-        text-align: center;
-        display: block;
-        &:first-child {
-          margin-bottom: $spacing-lg;
-        }
-        &:last-child {}
-      }
-    }
 
     @include media-breakpoint-up(lg) {
       div.article {
@@ -87,6 +72,30 @@ html:not(.aem-AuthorLayer-Edit ) {
         }
       }
     }
+  }
+}
+
+.styleguide {
+  .btn {
+    max-width: 175px;
+  }
+  .icon {
+    margin-bottom: $spacing-4xl;
+    [class*="fa"] {
+      font-size: 3em;
+      color: $grey-2;
+    }
+    span {
+      text-align: center;
+      display: block;
+      &:first-child {
+        margin-bottom: $spacing-lg;
+      }
+      &:last-child {}
+    }
+  }
+  section.contentblock {
+    margin-bottom: 30px;
   }
 }
 

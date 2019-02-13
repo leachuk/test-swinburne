@@ -51,7 +51,7 @@ let icons = [
   { name: "fal fa-school", class: "School" },
   { name: "fal fa-paper-plane", class: "Paper Plane" },
   { name: "fal fa-newspaper", class: "Newspaper" },
-  { name: "fal fa-bar-chart", class: "Bar-Chart" },
+  { name: "fal fa-chart-bar", class: "Chart Bar" },
   { name: "fal fa-university", class: "University" },
   { name: "fal fa-video", class: "Video" },
   { name: "fal fa-graduation-cap", class: "Graduation Cap" },

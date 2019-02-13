@@ -1517,6 +1517,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: brand-footer__aside
     title: 'Brand Footer Aside (Logo, Contact, etc...)'
 
+  layout/brand-footer/brand-footer-contact:
+    flat: true
+    prefix: brand-footer__contact
+    title: 'Brand Footer Contact Us'
+
   layout/brand-footer/brand-footer-global:
     flat: true
     prefix: brand-footer__global

@@ -129,6 +129,33 @@
     }
   }
 
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    > .text[component] {
+      width: 100%;
+    }
+
+    > a.link[component] {
+      width: auto;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 0;
+          margin-right: 30px;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      flex-direction: row;
+    }
+  }
+
   &__knowing {
     order: -1;
     text-align: right;

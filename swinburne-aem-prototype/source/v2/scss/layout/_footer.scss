@@ -139,6 +139,7 @@
     }
 
     > a.link[component] {
+      transition: opacity 250ms ease-in-out;
       width: auto;
 
       &:not(:last-child) {
@@ -148,6 +149,10 @@
           margin-bottom: 0;
           margin-right: 30px;
         }
+      }
+
+      @include hover-focus {
+        opacity: .7;
       }
     }
 

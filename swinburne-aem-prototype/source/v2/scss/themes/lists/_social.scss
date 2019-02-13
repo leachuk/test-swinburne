@@ -39,34 +39,13 @@
         display: inline-flex;
         height: 30px;
         justify-content: center;
-        transition: border-radius 300ms ease-in-out;
+        transition: opacity 250ms ease-in-out;
         text-decoration: none;
         width: 16px;
 
-        &:hover {
-          border-radius: 100%;
+        @include hover-focus {
+          opacity: .7;
         }
-
-        // Social network colours (TBC)
-        // &[href*='facebook.com'] {
-        //   background-color: #5c71ba;
-        // }
-
-        // &[href*='twitter.com'] {
-        //   background-color: #6d8bc7;
-        // }
-
-        // &[href*='youtube.com'] {
-        //   background-color: #b34727;
-        // }
-
-        // &[href*='instagram.com'] {
-        //   background-color: #b97536;
-        // }
-
-        // &[href*='linkedin.com'] {
-        //   background-color: #4577b8;
-        // }
       }
     }
   }

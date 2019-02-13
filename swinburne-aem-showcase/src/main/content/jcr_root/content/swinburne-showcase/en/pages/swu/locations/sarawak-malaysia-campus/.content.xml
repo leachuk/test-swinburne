@@ -21,8 +21,14 @@
             sling:resourceType="swinburne/components/layout/article"
             componentId="article_I4JOVUKYG">
             <par
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                        jcr:mixinTypes="[cq:Taggable]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/details/page-details"
+                        componentId="page_details_apply_now"/>
+            </par>
         </article>
         <footer
             jcr:primaryType="nt:unstructured"

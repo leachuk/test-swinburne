@@ -47,6 +47,16 @@ abstract class ComponentSpec extends FunctionalSpec {
         return compileComponentScreenshotFileNamePath("", width, height, ext)
     }
 
+    def compileComponentScreenshotFileNamePath2(String componentInstance, Integer width, Integer height, String ext) {
+//        if (ext.isEmpty()) {
+//            ext = ".png"
+//        }
+        if (componentInstance.isEmpty()) {
+            componentInstance = "default"
+        }
+        return (String[])["${pathSite}/${language}/${pathPage}","${componentPath}-${componentInstance}${ext}"]
+    }
+
     def compileComponentScreenshotFileNamePath(String componentInstance, Integer width, Integer height, String ext) {
         if (ext.isEmpty()) {
             ext = ".png"
@@ -164,8 +174,15 @@ abstract class ComponentSpec extends FunctionalSpec {
         return designRef(selector, "")
     }
 
+    def designRefFull(selector,prefix) {
+        def size = getWindowViewPort()
+        return designReferenceFull(compileComponentScreenshotFileNamePath2(prefix + selector + size + "-" + "0", size.width, size.height, ""))
+    }
+
+
+
     def designRef(String selector, String prefix) {
-        def size = getWindowWidthName();
+        def size = getWindowWidthName()
         size = size.length() == 0 ? "" : "-" + size
         def resultCompare = true
 

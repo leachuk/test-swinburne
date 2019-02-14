@@ -216,7 +216,7 @@
           margin-right: 0;
           width: 100%;
 
-          .list[component] ul {
+          .pagelist[component] ul {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -251,7 +251,7 @@
         &:last-child {
           width: calc(50% - 10px);
 
-          .list[component] ul li {
+          .pagelist[component] ul li {
             width: calc(50% - 20px);
 
             &:nth-child(3n+1) {
@@ -266,7 +266,7 @@
       }
     }
 
-    .list[component] {
+    .pagelist[component] {
       ul {
         @include list-unstyled;
 

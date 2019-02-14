@@ -226,7 +226,7 @@
                                                                         linkUrl="#"/>
                                                                 <list
                                                                         jcr:primaryType="nt:unstructured"
-                                                                        sling:resourceType="swinburne/components/lists/list"
+                                                                        sling:resourceType="swinburne/components/lists/pagelist"
                                                                         componentId="list_MXXMJTNON"
                                                                         detailsBadge="default"
                                                                         listFrom="children"
@@ -251,7 +251,7 @@
                                                                         linkUrl="#"/>
                                                                 <list
                                                                         jcr:primaryType="nt:unstructured"
-                                                                        sling:resourceType="swinburne/components/lists/list"
+                                                                        sling:resourceType="swinburne/components/lists/pagelist"
                                                                         componentId="list_SG6GHVVZV"
                                                                         detailsBadge="default"
                                                                         listFrom="children"
@@ -280,7 +280,7 @@
                                                                         linkUrl="#"/>
                                                                 <list
                                                                         jcr:primaryType="nt:unstructured"
-                                                                        sling:resourceType="swinburne/components/lists/list"
+                                                                        sling:resourceType="swinburne/components/lists/pagelist"
                                                                         componentId="list_EKNIVQTKY"
                                                                         detailsBadge="default"
                                                                         listFrom="children"
@@ -305,7 +305,7 @@
                                                                         linkUrl="#"/>
                                                                 <list
                                                                         jcr:primaryType="nt:unstructured"
-                                                                        sling:resourceType="swinburne/components/lists/list"
+                                                                        sling:resourceType="swinburne/components/lists/pagelist"
                                                                         componentId="list_6YQN8WR67"
                                                                         detailsBadge="default"
                                                                         listFrom="children"
@@ -330,7 +330,7 @@
                                                                         linkUrl="#"/>
                                                                 <list
                                                                         jcr:primaryType="nt:unstructured"
-                                                                        sling:resourceType="swinburne/components/lists/list"
+                                                                        sling:resourceType="swinburne/components/lists/pagelist"
                                                                         componentId="list_DPYZLHYGU"
                                                                         detailsBadge="default"
                                                                         listFrom="children"
@@ -355,7 +355,7 @@
                                                                         linkUrl="#"/>
                                                                 <list
                                                                         jcr:primaryType="nt:unstructured"
-                                                                        sling:resourceType="swinburne/components/lists/list"
+                                                                        sling:resourceType="swinburne/components/lists/pagelist"
                                                                         componentId="list_MA9FLDHBH"
                                                                         detailsBadge="default"
                                                                         listFrom="children"
@@ -381,7 +381,7 @@
                                                                         textIsRich="true"/>
                                                                 <list
                                                                         jcr:primaryType="nt:unstructured"
-                                                                        sling:resourceType="swinburne/components/lists/list"
+                                                                        sling:resourceType="swinburne/components/lists/pagelist"
                                                                         componentId="list_MMJSSTNON"
                                                                         detailsBadge="default"
                                                                         listFrom="children"

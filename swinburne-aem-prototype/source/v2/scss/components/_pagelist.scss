@@ -30,13 +30,9 @@
   // @include make-container;
   // @include make-container-max-widths;
   > .content {
-    &,
     > ul {
-      justify-content: center;
-    }
+      @include list-unstyled;
 
-    > ul {
-      list-style: none;
       margin-bottom: 0;
       width: 100%;
 
@@ -63,21 +59,21 @@
   //
   // Doing it this way makes updates slightly more difficult but it's the easiest way
   // of managing the experience for authors when creating pages.
-  @include pagelist-variant {
-    @include make-col-ready;
+  // @include pagelist-variant {
+  //   @include make-col-ready;
 
-    flex: 0 1 100%;
+  //   flex: 0 1 100%;
 
-    @include media-breakpoint-up(md) {
-      flex-basis: percentage(4 / $grid-columns);
-      max-width: percentage(4 / $grid-columns);
-    }
+  //   @include media-breakpoint-up(md) {
+  //     flex-basis: percentage(4 / $grid-columns);
+  //     max-width: percentage(4 / $grid-columns);
+  //   }
 
-    @include media-breakpoint-up(lg) {
-      flex-basis: percentage(3 / $grid-columns);
-      max-width: percentage(3 / $grid-columns);
-    }
-  }
+  //   @include media-breakpoint-up(lg) {
+  //     flex-basis: percentage(3 / $grid-columns);
+  //     max-width: percentage(3 / $grid-columns);
+  //   }
+  // }
 
   // Additional variants
   @include pagelist-variant('.theme--lists-large') {

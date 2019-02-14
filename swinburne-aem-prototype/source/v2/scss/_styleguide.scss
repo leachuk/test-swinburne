@@ -30,21 +30,6 @@ html:not(.aem-AuthorLayer-Edit ) {
       max-width: 720px;
       font-size: 16px;
     }
-    .icon[class*='col-sm'] {
-      margin-bottom: $spacing-4xl;
-      [class*="fa"] {
-        font-size: 3em;
-        color: $grey-2;
-      }
-      span {
-        text-align: center;
-        display: block;
-        &:first-child {
-          margin-bottom: $spacing-lg;
-        }
-        &:last-child {}
-      }
-    }
 
     @include media-breakpoint-up(xl) {
       aside {
@@ -87,6 +72,27 @@ html:not(.aem-AuthorLayer-Edit ) {
         width: calc(100% - #{$styleguide-sidebar-width});
       }
     }
+  }
+}
+
+.styleguide {
+  .icon[class*='col-sm'] {
+    margin-bottom: $spacing-4xl;
+    [class*="fa"] {
+      font-size: 3em;
+      color: $grey-2;
+    }
+    span {
+      text-align: center;
+      display: block;
+      &:first-child {
+        margin-bottom: $spacing-lg;
+      }
+      &:last-child {}
+    }
+  }
+  section.contentblock:not(:last-of-type) {
+    margin-bottom: 30px;
   }
 }
 

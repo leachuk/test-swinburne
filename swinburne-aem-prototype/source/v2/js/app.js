@@ -82,7 +82,6 @@ $(() => {
     console.log('Parallax disabled')
   }
 
-
 })
 
 // HMR (Hot Module Replacement)

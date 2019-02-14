@@ -20,20 +20,6 @@
   }
 }
 
-@mixin inner-border($width, $color, $radius: 0) {
-  &:before {
-    content: " ";
-    height: $width;
-    width: 100%;
-    position: absolute;
-    background-color: $color;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    border-radius: $radius;
-  }
-}
-
 // code snippet styling
 @mixin code-snippet() {
   font-family: monospace;

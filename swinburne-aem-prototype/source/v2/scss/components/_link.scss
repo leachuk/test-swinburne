@@ -1,7 +1,7 @@
 a[component] {
   &.link {
-    font-size: 12pt;
-    line-height: 23pt;
+    font-size: 12px;
+    line-height: 23px;
     font-weight: 600;
     color: $primary;
     &,
@@ -9,8 +9,8 @@ a[component] {
       text-decoration: none;
     }
     @include media-breakpoint-up(md) {
-      font-size: 14pt;
-      line-height: 30pt;
+      font-size: 14px;
+      line-height: 30px;
     }
   }
 }

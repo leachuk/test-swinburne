@@ -1,5 +1,8 @@
 package support
 
+import com.assertthat.selenium_shutterbug.core.Shutterbug
+import com.assertthat.selenium_shutterbug.utils.web.ScrollStrategy
+import geb.Browser
 import geb.spock.GebReportingSpec
 import groovy.json.JsonOutput
 import org.apache.commons.io.FileUtils
@@ -269,6 +272,91 @@ abstract class FunctionalSpec extends GebReportingSpec {
         return designReference(element, "${browser.reportGroup.toString()}/${specificationContext.currentIteration.name}.png")
     }
 
+    def scrollIntoView(element) {
+        Actions actions = new Actions(driver)
+        actions.moveToElement(element)
+        actions.perform()
+    }
+
+
+    def designReferenceFull(String[] filePath) {
+
+        def fixedFilePath = "${DRIVER_TYPE}/${SCREENSHOTS_CURRENT_DIR}/${getWebDriverName()}/".concat(fixFilePath(filePath[0]))
+        def fixedFileName = fixFilePath(filePath[1])
+        def referenceFilePath = "${SCREENSHOTS_REFERENCE_DIR}/${DRIVER_TYPE}/${getWebDriverName()}/${fixedFilePath}"
+        def referenceFilename = "${referenceFilePath}/${fixedFileName}"
+        def referenceDiffFilePath = "${browser.reportGroup.toString()}/${specificationContext.currentIteration.name}"
+
+
+        //printDebug("DRFULL-REF", [referenceFilename])
+        //take current screen shot
+        def screenshotFilename = screenshotFull(fixedFilePath,fixedFileName)
+        //printDebug("DRFULL-SCR", [screenshotFilename])
+
+        def referenceDiffFilename = "${fixedFilePath}/".concat(fixedFileName.concat(".diff"))
+        //printDebug("DRFULL-DIFF", [referenceDiffFilename])
+
+        //check if reference does not exist if not create the reference image
+        File referenceFile = new File(referenceFilename.concat(".png"))
+        if (!referenceFile.exists()) {
+
+            new File(referenceFile.parent).mkdirs()
+
+            FileUtils.copyFile(new File(screenshotFilename.concat(".png")), referenceFile)
+
+            //screenshotFilename = screenshotFull(referenceFilePath, fixedFileName)
+
+            //printDebug("DRFULL-NREF", [referenceFile])
+
+            //referenceFile = new File(screenshotFilename.concat(".png"))
+
+            ReportListener tempRL = new ReportListener()
+            tempRL.writeReportResource(
+                    browser.config.reportsDir.path.toString(),
+                    browser.reportGroup.toString(),
+                    browser.driver.currentUrl.toString(),
+                    browser.page.toString(),
+                    createReportLabel("compareToDesign"),
+                    [referenceFile]
+            )
+
+            return true //nothing to compare
+        }
+
+        //check if reference does not exist if exist compare
+//        def isTestPass = compareFull(referenceFilename,referenceDiffFilename)
+
+        def isTestPass = false;
+        def result = VERY_DIFFERENT
+        for (def i = 0; i < 1; i++) {
+//            screenshotFilename = screenshot(element, fixedFilePath)
+//            referenceDiffFilename = screenshotFilename.replaceFirst(/^(.*)\.png$/, "\$1.diff.png")
+            result = compare(screenshotFilename.concat(".png"), referenceFilename.concat(".png"), referenceDiffFilename.concat(".png"))
+
+//            printDebug("COMPARE RESULT",result <= COMPARE_THRESHOLD)
+
+            isTestPass = (result <= COMPARE_THRESHOLD)
+        }
+
+        //printDebug("DRFULL-3", [isTestPass])
+
+        File screenshotFile = new File(screenshotFilename.concat(".png"))
+        File differenceFile = new File(referenceDiffFilename.concat(".png"))
+
+        ReportListener tempRL = new ReportListener()
+        tempRL.writeReportResource(
+                browser.config.reportsDir.path.toString(),
+                browser.reportGroup.toString(),
+                browser.driver.currentUrl.toString(),
+                browser.page.toString(),
+                createReportLabel("compareToDesign"),
+                [referenceFile, screenshotFile, differenceFile]
+        )
+
+        return isTestPass
+
+    }
+
     def designReference(WebElement element, String filePath) {
 
 //        printDebug("DESIGN REFERENCE1", [element.getSize(),filePath])
@@ -377,7 +465,18 @@ abstract class FunctionalSpec extends GebReportingSpec {
         return screenshot(element, filePath, true, true, false)
     }
 
+
+    private def screenshotFull(String filePath, String fileName) {
+
+        def screenshotFilename = "${filePath}/${fileName}"
+        Shutterbug.shootPage(driver, ScrollStrategy.VERTICALLY, 500,true).withName(fileName).save(filePath)
+        return screenshotFilename
+    }
+
+
     private def screenshot(WebElement element, String filePath, Boolean focus, Boolean highlight, Boolean crop) {
+
+        scrollIntoView(element)
 
         if (element == null || filePath.isEmpty()) {
             return ""
@@ -473,11 +572,26 @@ abstract class FunctionalSpec extends GebReportingSpec {
         return screenshotFilename
     }
 
+    private def compareFull(String referenceFilename, String differenceFilename) {
+
+        //printDebug("compareFull-1", [referenceFilename,differenceFilename])
+
+        File referenceFile = new File(referenceFilename.concat(".png"))
+        BufferedImage referenceImage = ImageIO.read(referenceFile)
+
+        //printDebug("compareFull-2", [referenceFile])
+
+        Shutterbug.shootPage(driver).equalsWithDiff(referenceImage,differenceFilename,0.1)
+    }
+
+
     private def compare(String screenshotFilename, String referenceFilename, String differenceFilename) {
+        //printDebug("compare", [screenshotFilename,referenceFilename,differenceFilename])
+
         // run command and wait for process to complete
         def compareCmd = "compare -verbose -metric mae -fuzz 10% \"${screenshotFilename}\" \"${referenceFilename}\" \"${differenceFilename}\" 2>&1 || convert \"${screenshotFilename}\" \"${referenceFilename}\" -compose difference -composite +level-colors black,red \"${differenceFilename}\" 2>&1 | echo \"all: 1.0 (1.0)\""
 
-        //println("{\"COMMAND\": \"${compareCmd}\"}");
+        //printDebug("compareCmd", [compareCmd])
         //printDebug("COMPARE",["compare -verbose -metric mae -fuzz 10%", screenshotFilename,  referenceFilename, differenceFilename])
 
         ProcessBuilder processBuilder = new ProcessBuilder("/bin/bash", "-c", compareCmd);
@@ -592,6 +706,21 @@ abstract class FunctionalSpec extends GebReportingSpec {
         }
 
         return viewPort.label
+    }
+
+    def getWindowViewPort() {
+        def driverWidth = driver.manage().window().size.width
+        def viewPorts = getViewPorts()
+
+        def viewPort = viewPorts.find { value -> value.width == driverWidth }
+
+//        printDebug("getWindowWidthName", [driverWidth,viewPorts,viewPort])
+
+        if (!viewPort) {
+            viewPort = viewPorts[3] //LG
+        }
+
+        return viewPort
     }
 
     void ExtractJSLogs() {

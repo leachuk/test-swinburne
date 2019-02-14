@@ -1,25 +1,25 @@
-package specs.styleguide.components.contentblock
+package specs.styleguide.components.globalfooter
 
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class ContentBlockStyleguideScreenshotSpec extends ComponentSpec {
-    String pathPage = "Styleguide-SWU/components/content-block"
+class GlobalFooterScreenshotSpec extends ComponentSpec {
+    String pathPage = "styleguide/components/global-footer"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
-    String componentPath = "jcr:content/article/par/contentblock_1045719959/par/contentblock"
+    String componentPath = "jcr:content/article/par/contentblock/par/reference"
 
     def setupSpec() {
         loginAsAdmin()
     }
 
-    @Unroll("Appearance of Advanced Content Block with Title in #viewport.label")
-    def "Appearance of Advanced Content Block with Title"() {
+    @Unroll("Appearance of Swinburne Global Footer in #viewport.label")
+    def "Appearance of Swinburne Global Footer"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_contentblock_advanced_with_title"
+        def selector = "#footer_swinburne_global"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

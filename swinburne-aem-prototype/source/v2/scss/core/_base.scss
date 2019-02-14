@@ -1,14 +1,5 @@
-html, body {
-  min-height: 100%;
-}
-
 body {
-    font-size: 16px;
-    @include media-breakpoint-up(md) {
-      font-size: 20px;
-    }
-    font-family: $font-family-open-sans;
-    color: $black;
+  color: $black;
 
   &.no-scroll {
     min-height: 100%;
@@ -16,10 +7,6 @@ body {
     position: fixed;
     width: 100%;
   }
-}
-
-img {
-  max-width: 100%;
 }
 
 // Global video player

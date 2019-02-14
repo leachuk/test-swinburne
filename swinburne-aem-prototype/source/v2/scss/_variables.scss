@@ -5,18 +5,19 @@ $white: #fff;
 
 $brand-colours: (
   'core': (
-    c1: #DC2D27,
-    c2: #FFD200,
-    c3: #242323,
-    c4: #85C441,
-    c5: #00AEEF,
-    c6: #883681,
-    c7: #00BED8,
-    c8: #21201E,
-    c9: #ffffff,
-    c10: #292625,
-    c11: #d9d5d1
+    c1  : #DC2D27,
+    c2  : #FFD200,
+    c3  : #242323,
+    c4  : #85C441,
+    c5  : #00AEEF,
+    c6  : #883681,
+    c7  : #00BED8,
+    c8  : #21201E,
+    c9  : #ffffff,
+    c10 : #292625,
+    c11 : #d9d5d1,
   ),
+
   'grey': (
     g1: #242323,
     g2: #737578,
@@ -25,24 +26,24 @@ $brand-colours: (
     g5: #E2E2E2,
     g6: #F6F6F6,
     g7: $white,
-  )
+  ),
 );
 
-$primary: map-deep-get($brand-colours, 'core', 'c1');
-$secondary: map-deep-get($brand-colours, 'core', 'c2');
-$tertiary: map-deep-get($brand-colours, 'core', 'c3');
-$color-4: map-deep-get($brand-colours, 'core', 'c4');
-$color-5: map-deep-get($brand-colours, 'core', 'c5');
-$color-6: map-deep-get($brand-colours, 'core', 'c6');
-$color-7: map-deep-get($brand-colours, 'core', 'c7');
+$primary   : map-deep-get($brand-colours, 'core', 'c1');
+$secondary : map-deep-get($brand-colours, 'core', 'c2');
+$tertiary  : map-deep-get($brand-colours, 'core', 'c3');
+$color-4   : map-deep-get($brand-colours, 'core', 'c4');
+$color-5   : map-deep-get($brand-colours, 'core', 'c5');
+$color-6   : map-deep-get($brand-colours, 'core', 'c6');
+$color-7   : map-deep-get($brand-colours, 'core', 'c7');
 
 // Lighten colours
-$primary-50: #ED9693;
-$secondary-50: #FFF589;
-$color-4-50: #C2E1A0;
-$color-5-50: #7FD6F7;
-$color-6-50: #C39AC0;
-$color-7-50: #7DFEEB;
+$primary-50   : #ED9693;
+$secondary-50 : #FFF589;
+$color-4-50   : #C2E1A0;
+$color-5-50   : #7FD6F7;
+$color-6-50   : #C39AC0;
+$color-7-50   : #7DFEEB;
 
 // Grey colours
 $grey-1: map-deep-get($brand-colours, 'grey', 'g1');
@@ -55,7 +56,7 @@ $grey-6: map-deep-get($brand-colours, 'grey', 'g6');
 $theme-colors: (
   'primary'   : $primary,
   'secondary' : $secondary,
-  'tertiary' : $tertiary,
+  'tertiary'  : $tertiary,
 
   'c1': map-deep-get($brand-colours, 'core', 'c1'),
   'c2': map-deep-get($brand-colours, 'core', 'c2'),
@@ -95,17 +96,17 @@ $spacers: (
 );
 
 //Spacing variables
-$spacing-2xs: rem-calc(5px);
-$spacing-xs: rem-calc(10px);
-$spacing-sm: rem-calc(15px);
-$spacing-md: rem-calc(20px);
-$spacing-lg: rem-calc(25px);
-$spacing-2xl: rem-calc(30px);
-$spacing-3xl: rem-calc(35px);
-$spacing-4xl: rem-calc(40px);
-$spacing-5xl: rem-calc(45px);
-$spacing-6xl: rem-calc(50px);
-$spacing-7xl: rem-calc(55px);
+$spacing-2xs : rem-calc(5px);
+$spacing-xs  : rem-calc(10px);
+$spacing-sm  : rem-calc(15px);
+$spacing-md  : rem-calc(20px);
+$spacing-lg  : rem-calc(25px);
+$spacing-2xl : rem-calc(30px);
+$spacing-3xl : rem-calc(35px);
+$spacing-4xl : rem-calc(40px);
+$spacing-5xl : rem-calc(45px);
+$spacing-6xl : rem-calc(50px);
+$spacing-7xl : rem-calc(55px);
 
 $grid-gutter: 5.5;
 $grid-gutter-sm: 9;
@@ -197,7 +198,7 @@ $border-radius-sm:            0;
 
 // Fonts
 
-$font-family-base:            'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-base:            'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 $font-family-open-sans:       'Open Sans', sans-serif;
 $font-family-brush-up:        'BrushUp', sans-serif;
 $font-family-awesome:         'Font Awesome 5 Pro';
@@ -431,9 +432,6 @@ $paragraph-margin-bottom: rem-calc(16px);
 
 // Grid containers
 $container-max-widths: (
-  sm: 320px,
-  md: 640px,
-  lg: 1024px,
   xl: 1366px
 );
 

@@ -1,7 +1,6 @@
 &-social-links {
   background-color: $tertiary;
   min-width: 100%;
-  padding: 20px;
 
   > .content {
     margin: 0;
@@ -12,8 +11,8 @@
       justify-content: flex-start;
 
       > li {
-        flex: 0 0 40px !important;
-        max-width: 40px !important;
+        flex: 0 0 16px !important;
+        max-width: 16px !important;
         padding: 0;
         width: auto;
       }
@@ -23,50 +22,36 @@
   ul {
     > li {
       + li {
-        margin-left: 10px;
+        margin-left: 15px;
+
+        @include media-breakpoint-up(lg) {
+          margin-left: 20px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          margin-left: 30px;
+        }
       }
 
       a {
         align-items: center;
         color: $white;
         display: inline-flex;
-        height: 40px;
+        height: 30px;
         justify-content: center;
-        transition: border-radius 300ms ease-in-out;
+        transition: opacity 250ms ease-in-out;
         text-decoration: none;
-        width: 40px;
+        width: 16px;
 
-        &:hover {
-          border-radius: 50px;
+        @include hover-focus {
+          opacity: .7;
         }
-
-        // Social network colours (TBC)
-        // &[href*='facebook.com'] {
-        //   background-color: #5c71ba;
-        // }
-
-        // &[href*='twitter.com'] {
-        //   background-color: #6d8bc7;
-        // }
-
-        // &[href*='youtube.com'] {
-        //   background-color: #b34727;
-        // }
-
-        // &[href*='instagram.com'] {
-        //   background-color: #b97536;
-        // }
-
-        // &[href*='linkedin.com'] {
-        //   background-color: #4577b8;
-        // }
       }
     }
   }
 
   .icon {
     color: map-deep-get($brand-colours, 'core', 'c9');
-    font-size: 18px;
-    margin-bottom: 0 !important;
+    font-size: 16px;
   }
 }

@@ -26,12 +26,6 @@ a[component] {
   box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
-$btn-secondary-yellow-color: #ffeb16;
-$btn-secondary-yellow-border-color: #fbb946;
-$btn-secondary-charcoal-hover-color: #58595b;
-$btn-secondary-primary-border-color: #ad1914;
-
-$animation-speed : 300ms;
 
 //Modifiers
 a.link,
@@ -47,8 +41,7 @@ button {
     font-weight: bold;
     white-space: normal;
     text-align: left;
-    border-radius: 4px;
-    font-family: $font-family-open-sans;
+    border-radius: $btn-border-radius;
     text-transform: capitalize;
     position: relative;
     line-height: 20px;

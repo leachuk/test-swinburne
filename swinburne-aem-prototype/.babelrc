@@ -4,20 +4,15 @@
   "retainLines": true,
 
   "presets": [
-    ["@babel/preset-es2015"],
     ["@babel/preset-react"],
     ["@babel/preset-env", {
-      "modules": false,
+      "modules": "umd",
       "useBuiltIns": "usage"
-    }],
-    ["@babel/preset-stage-0", {
-      "decoratorsLegacy": true,
-      "loose": true,
-      "useBuiltIns": true
     }]
   ],
 
   "plugins": [
-    "react-hot-loader/babel"
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties"
   ]
 }

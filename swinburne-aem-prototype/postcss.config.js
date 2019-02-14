@@ -3,12 +3,26 @@ module.exports = ({ env }) => ({
     'postcss-pxtorem': {
       rootValue: 16,
       unitPrecision: 5,
-      propList: ['*'],
+      propList: [
+        'bottom',
+        'font',
+        'font-size',
+        'height',
+        'left',
+        'line-height',
+        'margin*',
+        'padding*',
+        'right',
+        'top',
+        '*width',
+      ],
       selectorBlackList: ['html'],
-      replace: false
+      replace: true
     },
     'postcss-sorting': {},
-    autoprefixer: true,
+    autoprefixer: {
+      grid: 'autoplace',
+    },
     cssnano: env === 'production' ? true : false
   }
 });

@@ -10,13 +10,13 @@
   letter-spacing: 1px;
 
   // Icon
-  &-icon {
+  .icon {
     &:first-child {
-      margin-right: rem-calc(10px);
+      margin-right: 10px;
     }
 
     &:last-child {
-      margin-left: rem-calc(10px);
+      margin-left: 10px;
     }
   }
 

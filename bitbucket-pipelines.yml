@@ -33,7 +33,7 @@ pipelines:
             - node
             - git-modules
           script:
-            - git checkout develop
+            - git checkout develop-v2
             - git reset --hard "origin/develop-v2"
             - git submodule sync
             - git submodule update --remote --init && echo "OK - git submodule update --remote --init"

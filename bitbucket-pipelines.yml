@@ -61,6 +61,7 @@ pipelines:
         - swinburne-testing/target/**
 
 
+    #SWU main branch
     develop-v2:
       - step:
           name: package

@@ -147,4 +147,66 @@ class LinkPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+
+    @Unroll("Functionality of Component Variant: Button with icon on left in #viewport.label")
+    def "Functionality of Component Variant: Button with icon on left"() {
+
+        given: 'The page hierarchy is created as "Components" > "Content" > "Link"'
+        def selector = "#link8"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+
+        and: "Should have sample component text"
+        assert $(selector).text().trim() == "Link"
+        report("Should have sample component text")
+
+        and: "Should have class: link button"
+        assert $(selector).attr("class") == "link button"
+
+        and: "Should have icon: fa fa-cog"
+        assert $(selector + " .icon").attr("class").endsWith("fa fa-cog")
+
+        and: "The icon should be the first element"
+        assert $(selector + " :first-child").attr("class").startsWith("icon")
+
+        where:
+        viewport << getViewPorts()
+    }
+
+
+    @Unroll("Functionality of Component Variant: Button with icon on right in #viewport.label")
+    def "Functionality of Component Variant: Button with icon on right"() {
+
+        given: 'The page hierarchy is created as "Components" > "Content" > "Link"'
+        def selector = "#link9"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+
+        and: "Should have sample component text"
+        assert $(selector).text().trim() == "Link"
+        report("Should have sample component text")
+
+        and: "Should have class: link button"
+        assert $(selector).attr("class") == "link button"
+
+        and: "Should have icon: fa fa-cog"
+        assert $(selector + " .icon").attr("class").endsWith("fa fa-cog")
+
+        and: "The icon should be the last element"
+        assert $(selector + " :last-child").attr("class").startsWith("icon")
+
+        where:
+        viewport << getViewPorts()
+    }
+
 }

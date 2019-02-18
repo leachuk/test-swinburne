@@ -1,29 +1,41 @@
-a[component] {
-  &.link {
-    font-size: 12px;
-    line-height: 23px;
-    font-weight: 600;
-    color: $primary;
-    &,
-    &:hover {
-      text-decoration: none;
+a.link[component] {
+  color: $primary;
+  font-size: 12px;
+  line-height: 23px;
+  font-weight: 600;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+
+  // Icon
+  .icon {
+    &:first-child {
+      margin-right: 10px;
     }
-    @include media-breakpoint-up(md) {
-      font-size: 14px;
-      line-height: 30px;
+
+    &:last-child {
+      margin-left: 10px;
     }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    line-height: 30px;
   }
 }
 
 .advsection .childsection .btn-link {
   color: $secondary;
+
   &:hover {
     color: $secondary;
   }
 }
 
 .btn-shadow {
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 10px rgba($black, .5);
 }
 
 

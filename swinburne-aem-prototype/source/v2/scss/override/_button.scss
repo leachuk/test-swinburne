@@ -9,17 +9,6 @@
   display: inline-flex;
   letter-spacing: 1px;
 
-  // Icon
-  .icon {
-    &:first-child {
-      margin-right: 10px;
-    }
-
-    &:last-child {
-      margin-left: 10px;
-    }
-  }
-
   // Override the primary hover colour
   &-primary:hover {
     background-color: theme-color('c1');

@@ -7,12 +7,8 @@
 $card-top-bar-height: 18px;
 
 .card {
-  box-shadow: 0 2px 3px $grey-4;
+  box-shadow: 0 2px 3px theme-color('g4');
   margin-bottom: 0;
-
-  &-title {
-    margin-bottom: $spacing-md;
-  }
 
   &-img-top {
     display: block;
@@ -27,10 +23,25 @@ $card-top-bar-height: 18px;
 
       // AEM will always supply us with images in the JPEG format so we can easily enforce
       // the minimum width of the image when it is.
-      &[src*='.jpeg'],
-      &[src*='.jpg'] {
+      &[src$='jpeg'],
+      &[src$='jpg'] {
         min-height: 100%;
         min-width: 100%;
+      }
+
+      // Handle SVG images slightly different so they don't stretch when they shouldn't
+      &[src$='svg'] {
+        object-fit: contain;
+      }
+
+      &[data-ofi-src] {
+        max-height: 100%;
+      }
+
+      // In browsers that don't support object-fit we use a polyfill, for icons that are SVG we need to
+      // ensure they scale to the parent container rather than covering the whole element.
+      &[data-ofi-src$='svg'] {
+        background-size: auto !important;
       }
     }
 
@@ -44,34 +55,62 @@ $card-top-bar-height: 18px;
     }
   }
 
-  &-date,
-  &-title,
   &-subtitle,
+  &-date,
   &-taglist,
-  &-text:not(:last-child) {
-    margin-bottom: $paragraph-margin-bottom;
+  &-text {
+    margin-bottom: $card-spacer-y;
   }
 
   &-body {
     display: flex;
     flex-direction: column;
-    padding: $spacing-md $spacing-md;
-    margin-bottom: 0;
-
-    @include media-breakpoint-up(lg) {
-      padding: $spacing-2xl;
-    }
 
     // A small 'hack' (if you will) that ensures buttons remain aligned to the bottom of the
     // card as sibling cards will be the same height as oneanother.
     & :last-child:not(.card-title):not(.card-text) {
       margin-top: auto;
     }
+
+    // Remove the bottom margin if it's the only child in the body
+    & :only-child {
+      margin-bottom: 0;
+    }
   }
 
   &-date,
   &-text {
     font-weight: 300;
+  }
+
+  &-tags {
+    font-size: 12px;
+
+    &--basic {
+      color: theme-color('g2');
+    }
+  }
+
+  &-link {
+    // This is a bit messy but is required to inherit the base styles for links when nothing
+    // has yet being applied via the badge config.
+    //
+    // TODO: Merge this style into the link component
+    &[class$=' '] {
+      @extend a[component].link;
+
+      align-items: center;
+      display: inline-flex;
+
+      &::after {
+        @extend .fal;
+        @extend .fa-long-arrow-right:before;
+
+        display: block;
+        font-size: 17px;
+        margin-left: 10px;
+      }
+    }
   }
 
   &-icon {
@@ -84,7 +123,9 @@ $card-top-bar-height: 18px;
   }
 
   // Variations and style changes
-  @import 'card/taglist-share';
+  @import
+    'card/taglist-share'
+  ;
 
   // Nested within a carousel
   .owl-item & {
@@ -93,10 +134,5 @@ $card-top-bar-height: 18px;
 
   @include media-breakpoint-up(md) {
     height: 100%;
-
-    // If cards are sitting directly next to one another, space them apart
-    & + & {
-      margin-left: rem-calc($grid-gutter-width);
-    }
   }
 }

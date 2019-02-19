@@ -30,28 +30,8 @@ html:not(.aem-AuthorLayer-Edit ) {
       max-width: 720px;
       font-size: 16px;
     }
-    .icon {
-      margin-bottom: $spacing-4xl;
-      [class*="fa"] {
-        font-size: 3em;
-        color: $grey-2;
-      }
-      span {
-        text-align: center;
-        display: block;
-        &:first-child {
-          margin-bottom: $spacing-lg;
-        }
-        &:last-child {}
-      }
-    }
 
-    @include media-breakpoint-up(lg) {
-      div.article {
-        margin-left: $styleguide-sidebar-width;
-        width: calc(100% - #{$styleguide-sidebar-width});
-      }
-
+    @include media-breakpoint-up(xl) {
       aside {
         display: block;
         position: fixed;
@@ -86,7 +66,33 @@ html:not(.aem-AuthorLayer-Edit ) {
           }
         }
       }
+
+      div.article {
+        margin-left: $styleguide-sidebar-width;
+        width: calc(100% - #{$styleguide-sidebar-width});
+      }
     }
+  }
+}
+
+.styleguide {
+  .icon[class*='col-sm'] {
+    margin-bottom: $spacing-4xl;
+    [class*="fa"] {
+      font-size: 3em;
+      color: $grey-2;
+    }
+    span {
+      text-align: center;
+      display: block;
+      &:first-child {
+        margin-bottom: $spacing-lg;
+      }
+      &:last-child {}
+    }
+  }
+  section.contentblock:not(:last-of-type) {
+    margin-bottom: 30px;
   }
 }
 

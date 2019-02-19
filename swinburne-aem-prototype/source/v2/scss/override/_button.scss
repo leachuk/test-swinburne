@@ -9,17 +9,6 @@
   display: inline-flex;
   letter-spacing: 1px;
 
-  // Icon
-  &-icon {
-    &:first-child {
-      margin-right: rem-calc(10px);
-    }
-
-    &:last-child {
-      margin-left: rem-calc(10px);
-    }
-  }
-
   // Override the primary hover colour
   &-primary:hover {
     background-color: theme-color('c1');
@@ -52,7 +41,7 @@
 
   // Set the text to uppercase for all but the small and filter buttons
   &:not(&-sm):not(&-filter) {
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 
   // Override the link button styles

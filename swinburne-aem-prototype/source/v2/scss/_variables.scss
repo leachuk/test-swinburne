@@ -5,18 +5,19 @@ $white: #fff;
 
 $brand-colours: (
   'core': (
-    c1: #DC2D27,
-    c2: #FFD200,
-    c3: #242323,
-    c4: #85C441,
-    c5: #00AEEF,
-    c6: #883681,
-    c7: #00BED8,
-    c8: #21201E,
-    c9: #ffffff,
-    c10: #292625,
-    c11: #d9d5d1
+    c1  : #DC2D27,
+    c2  : #FFD200,
+    c3  : #242323,
+    c4  : #85C441,
+    c5  : #00AEEF,
+    c6  : #883681,
+    c7  : #00BED8,
+    c8  : #21201E,
+    c9  : #ffffff,
+    c10 : #292625,
+    c11 : #d9d5d1,
   ),
+
   'grey': (
     g1: #242323,
     g2: #737578,
@@ -25,24 +26,24 @@ $brand-colours: (
     g5: #E2E2E2,
     g6: #F6F6F6,
     g7: $white,
-  )
+  ),
 );
 
-$primary: map-deep-get($brand-colours, 'core', 'c1');
-$secondary: map-deep-get($brand-colours, 'core', 'c2');
-$tertiary: map-deep-get($brand-colours, 'core', 'c3');
-$color-4: map-deep-get($brand-colours, 'core', 'c4');
-$color-5: map-deep-get($brand-colours, 'core', 'c5');
-$color-6: map-deep-get($brand-colours, 'core', 'c6');
-$color-7: map-deep-get($brand-colours, 'core', 'c7');
+$primary   : map-deep-get($brand-colours, 'core', 'c1');
+$secondary : map-deep-get($brand-colours, 'core', 'c2');
+$tertiary  : map-deep-get($brand-colours, 'core', 'c3');
+$color-4   : map-deep-get($brand-colours, 'core', 'c4');
+$color-5   : map-deep-get($brand-colours, 'core', 'c5');
+$color-6   : map-deep-get($brand-colours, 'core', 'c6');
+$color-7   : map-deep-get($brand-colours, 'core', 'c7');
 
 // Lighten colours
-$primary-50: #ED9693;
-$secondary-50: #FFF589;
-$color-4-50: #C2E1A0;
-$color-5-50: #7FD6F7;
-$color-6-50: #C39AC0;
-$color-7-50: #7DFEEB;
+$primary-50   : #ED9693;
+$secondary-50 : #FFF589;
+$color-4-50   : #C2E1A0;
+$color-5-50   : #7FD6F7;
+$color-6-50   : #C39AC0;
+$color-7-50   : #7DFEEB;
 
 // Grey colours
 $grey-1: map-deep-get($brand-colours, 'grey', 'g1');
@@ -55,7 +56,7 @@ $grey-6: map-deep-get($brand-colours, 'grey', 'g6');
 $theme-colors: (
   'primary'   : $primary,
   'secondary' : $secondary,
-  'tertiary' : $tertiary,
+  'tertiary'  : $tertiary,
 
   'c1': map-deep-get($brand-colours, 'core', 'c1'),
   'c2': map-deep-get($brand-colours, 'core', 'c2'),
@@ -81,36 +82,41 @@ $theme-colors: (
 $body-bg:                   theme-color('g7');
 $body-color:                theme-color('g1');
 
-// spacers used for utility classes
+
+// Spacers used for utility classes
+
 $spacers: (
-  0   : 0,
-  5  : rem-calc(5px),
-  10  : rem-calc(10px),
-  15  : rem-calc(15px),
-  20  : rem-calc(20px),
-  25  : rem-calc(25px),
-  30  : rem-calc(30px),
-  35  : rem-calc(35px),
-  40  : rem-calc(40px),
+  0  : 0,
+  5  : 5px,
+  10 : 10px,
+  15 : 15px,
+  20 : 20px,
+  25 : 25px,
+  30 : 30px,
+  35 : 35px,
+  40 : 40px,
 );
 
-//Spacing variables
-$spacing-2xs: rem-calc(5px);
-$spacing-xs: rem-calc(10px);
-$spacing-sm: rem-calc(15px);
-$spacing-md: rem-calc(20px);
-$spacing-lg: rem-calc(25px);
-$spacing-2xl: rem-calc(30px);
-$spacing-3xl: rem-calc(35px);
-$spacing-4xl: rem-calc(40px);
-$spacing-5xl: rem-calc(45px);
-$spacing-6xl: rem-calc(50px);
-$spacing-7xl: rem-calc(55px);
 
-$grid-gutter: 5.5;
-$grid-gutter-sm: 9;
-$grid-gutter-lg: 13;
-$grid-gutter-xl: 12;
+// Spacing variables
+
+$spacing-2xs : 5px;
+$spacing-xs  : 10px;
+$spacing-sm  : 15px;
+$spacing-md  : 20px;
+$spacing-lg  : 25px;
+$spacing-2xl : 30px;
+$spacing-3xl : 35px;
+$spacing-4xl : 40px;
+$spacing-5xl : 45px;
+$spacing-6xl : 50px;
+$spacing-7xl : 55px;
+
+$grid-gutter    : 5.5;
+$grid-gutter-sm : 9;
+$grid-gutter-lg : 13;
+$grid-gutter-xl : 12;
+
 
 // UC Spacing conventions
 // Vertical Spacing \\
@@ -197,11 +203,10 @@ $border-radius-sm:            0;
 
 // Fonts
 
-$font-family-base:            'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-base:            'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 $font-family-open-sans:       'Open Sans', sans-serif;
 $font-family-brush-up:        'BrushUp', sans-serif;
-$font-family-awesome:         'Font Awesome 5 Free';
-$font-family-awesome-solid:   'Font Awesome 5 Free Solid';
+$font-family-awesome:         'Font Awesome 5 Pro';
 
 $font-size-base:              16px;
 // $font-size-lg:                ($font-size-base * 1.25);
@@ -226,8 +231,19 @@ $lead-font-weight:            normal;
 
 
 // Options
-
 $enable-rounded:            false;
+
+// Buttons
+$btn-border-radius: 4px;
+$btn-secondary-yellow-color: #ffeb16;
+$btn-secondary-yellow-border-color: #fbb946;
+$btn-secondary-charcoal-hover-color: #58595b;
+$btn-secondary-primary-border-color: #ad1914;
+
+
+// Animation
+$animation-speed : 300ms;
+
 
 
 // Icons
@@ -407,7 +423,7 @@ $aem-breakpoints: (
 //
 // Style p element.
 
-$paragraph-margin-bottom: rem-calc(16px);
+$paragraph-margin-bottom: 16px;
 
 
 // Grid breakpoints
@@ -421,9 +437,6 @@ $paragraph-margin-bottom: rem-calc(16px);
 
 // Grid containers
 $container-max-widths: (
-  sm: 320px,
-  md: 640px,
-  lg: 1024px,
   xl: 1366px
 );
 
@@ -436,7 +449,7 @@ $screen-sm-max: 639px;
 
 
 // Grid columns
-$grid-gutter-width: #{$grid-gutter * 2}px;
+$grid-gutter-width: 26px;
 
 // Navs
 
@@ -486,6 +499,8 @@ $breadcrumb-divider:                '›';
 
 // Cards
 
+$card-spacer-y:                     16px;
+$card-spacer-x:                     25px;
 $card-border-width:                 0;
 $card-bg:                           transparent;
 

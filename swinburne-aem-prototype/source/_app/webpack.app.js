@@ -1,7 +1,7 @@
 const ExtractTextPlugin           = require('extract-text-webpack-plugin')
 const ImageminPlugin              = require('imagemin-webpack-plugin').default
 const LodashPlugin                = require('lodash-webpack-plugin')
-const { resolve }                 = require('path')
+const { resolve, relative }       = require('path')
 const { getIfUtils, removeEmpty } = require('webpack-config-utils')
 const webpack                     = require('webpack')
 
@@ -22,9 +22,7 @@ module.exports = env => {
       loader: 'css-loader',
 
       options: {
-        url: false,
         importLoaders : 1,
-        minimize      : env.prod === true,
         sourceMap     : env.dev === true,
       },
     },
@@ -48,8 +46,9 @@ module.exports = env => {
       loader: 'sass-loader',
 
       options: {
-        outputStyle : 'expanded',
-        sourceMap   : env.dev === true,
+        outputStyle       : env.dev === true ? 'expanded' : 'compressed',
+        sourceMap         : env.dev === true,
+        sourceMapContents : env.dev === true,
       },
     },
   ]
@@ -81,28 +80,18 @@ module.exports = env => {
         'bootstrap/js/dist/tab',
       ],
 
-      'js/vendorlib/jquery': 'jquery',
-      'js/vendorlib/fancybox': '@fancyapps/fancybox',
-      'js/vendorlib/owl.carousel': 'owl.carousel'
+      'js/vendorlib/jquery'       : 'jquery',
+      'js/vendorlib/fancybox'     : '@fancyapps/fancybox',
+      'js/vendorlib/owl.carousel' : 'owl.carousel',
     },
 
     output: {
       chunkFilename : '[name].[chunkhash].js',
-      publicPath    : env.aem === true ? '/etc/clientlibs/'+env.clientLibsFolder+'/js/' : '/',
+      publicPath    : env.aem === true ? `/etc/clientlibs/${env.clientLibsFolder}/js/` : '/',
     },
 
     module: {
       rules: [
-        {
-          test   : /\.(eot|svg|ttf|woff|woff2)$/,
-          loader : 'file-loader',
-
-          options: {
-            name       : '[path][name].[ext]',
-            emitFile   : env.dev === true,
-            publicPath : env.prod === true ? '../' : '/',
-          },
-        },
         {
           test: /\.(css|sass|scss)$/,
 
@@ -141,6 +130,24 @@ module.exports = env => {
               loader  : 'expose-loader',
               options : '$',
             }
+          ],
+        },
+        {
+          test: /\.(png|jpg|gif|eot|ttf|svg|woff|woff2)$/,
+
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                context    : `source/${env.version}`,
+                emitFile   : env.dev === true,
+                name       : '[path][name].[ext]',
+
+                publicPath: (_, resourcePath, context) => {
+                  return env.aem === true ? `../${relative(context, resourcePath)}` : __webpack_public_path__ // eslint-disable-line
+                },
+              },
+            },
           ],
         },
       ],

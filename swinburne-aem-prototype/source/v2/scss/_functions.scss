@@ -68,35 +68,17 @@
   @return map-get($spacers, $key);
 }
 
-/// Retrieves a unicode icon value for the name given
-/// @param {String} $name - The name of the icon
-/// @return {String} - The unicode icon value
-@function get-icon($name) {
-  @if map-has-key($icons, $name) {
-    @return unicode(map-get($icons, $name));
-  }
-
-  @warn "An icon for '#{$name}' couldn't be found! Valid values are: #{map-keys($icons)}";
-}
-
-/// Returns an icon size for the given size name
-/// @param {String} $for - The name for the icon size
-/// @return {Number} - The REM value for the size
-@function icon-size($for) {
-  $for: unquote($for);
-
-  @if not map-has-key($icon-sizes, $for) {
-    @error 'The icon size "#{$for}" does not appear to exist, please check the name is correct!';
-    @return false;
-  }
-  @else {
-    @return map-get($icon-sizes, $for);
-  }
-}
-
 /// Converts the input string to a unicode safe character
 /// @param {String} $str - The input string to convert
 /// @return {String} - The converted string
 @function unicode($str) {
   @return unquote("\"") + $str + unquote("\"");
+}
+
+/// Appends the `$addition` selector with the `$base` selector
+/// @param {String} $base - The initial selector
+/// @param {String} $addition - String to append to `$base`
+/// @return {String} - The joined selector
+@function create-selector($base, $addition) {
+  @return "#{selector-append($base, $addition)}";
 }

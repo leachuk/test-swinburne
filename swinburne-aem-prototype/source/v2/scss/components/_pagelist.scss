@@ -15,34 +15,53 @@
 
 // $border-color: #1d1f20;
 
-@mixin pagelist-variant($selector: false) {
-  $selector: if($selector != false, unquote($selector), $selector);
+@mixin pagelist-variant($selector: false, $selector-only: true) {
+  $selector : if($selector != false, unquote($selector), $selector);
 
-  &#{if($selector != false, unquote($selector), '')}:not([class*='-inline']) > .content {
-    > ul > li,
-    > div {
-      @content;
+  @if $selector-only == true {
+    #{if($selector != false, unquote($selector), '')} > .content {
+      > ul > li,
+      > div {
+        @content;
+      }
+    }
+  }
+  @else {
+    &#{if($selector != false, unquote($selector), '')} > .content {
+      > ul > li,
+      > div {
+        @content;
+      }
     }
   }
 }
 
 .pagelist {
-  // @include make-container;
-  // @include make-container-max-widths;
   > .content {
+    &,
+    > ul {
+      justify-content: flex-start;
+    }
+
     > ul {
       @include list-unstyled;
 
       margin-bottom: 0;
       width: 100%;
 
-      // li {
-      //   margin-bottom: 40px;
+      li:not(:last-child) {
+        margin-bottom: 40px;
+      }
 
-      //   @include media-breakpoint-up(md) {
-      //     margin-bottom: 60px;
-      //   }
-      // }
+      @include media-breakpoint-up(md) {
+        li:not(:last-child) {
+          margin-bottom: 0;
+        }
+
+        &:not(:last-child) li {
+          margin-bottom: 60px;
+        }
+      }
     }
   }
 
@@ -51,59 +70,15 @@
     display: none;
   }
 
-  // This may seem excessive but it serves a very useful purpse!
-  //
-  // To prevent themes behaving incorrectly we need to ignore the below behaviour if
-  // specific ones are applied which ensures the theme has 100% control of the page
-  // list.
-  //
-  // Doing it this way makes updates slightly more difficult but it's the easiest way
-  // of managing the experience for authors when creating pages.
-  // @include pagelist-variant {
-  //   @include make-col-ready;
+  // Create the default page list child variant sizes
+  @include pagelist-variant($selector-only: false) {
+    @include make-col-ready;
 
-  //   flex: 0 1 100%;
+    flex: 0 1 100%;
 
-  //   @include media-breakpoint-up(md) {
-  //     flex-basis: percentage(4 / $grid-columns);
-  //     max-width: percentage(4 / $grid-columns);
-  //   }
-
-  //   @include media-breakpoint-up(lg) {
-  //     flex-basis: percentage(3 / $grid-columns);
-  //     max-width: percentage(3 / $grid-columns);
-  //   }
-  // }
-
-  // Additional variants
-  @include pagelist-variant('.theme--lists-large') {
     @include media-breakpoint-up(md) {
-      flex-basis: percentage(4 / $grid-columns);
-      max-width: percentage(4 / $grid-columns);
-    }
-  }
-
-  @include pagelist-variant('.theme--lists-fill') {
-    flex-basis: percentage(12 / $grid-columns);
-    max-width: percentage(12 / $grid-columns);
-  }
-
-  @include pagelist-variant('.theme--lists-equal') {
-    @include media-breakpoint-up(md) {
-      flex-basis: percentage(6 / $grid-columns);
-      max-width: percentage(6 / $grid-columns);
-    }
-  }
-
-  @include pagelist-variant('.theme--lists-fifth') {
-    @include media-breakpoint-up(md) {
-      flex-basis: 33.3333%;
-      max-width: 33.3333%;
-    }
-
-    @include media-breakpoint-up(lg) {
-      flex-basis: 20%;
-      max-width: 20%;
+      flex-basis: percentage(3 / $grid-columns);
+      max-width: percentage(3 / $grid-columns);
     }
   }
 
@@ -137,6 +112,8 @@
     }
   }
 
+  // If the page list component isn't currently been used as a carousel we can introduce
+  // standard grid container rules.
   &:not([data-modules*='carousel']) {
     @include make-container;
     @include make-container-max-widths;
@@ -150,10 +127,20 @@
       > ul {
         display: flex;
         flex-wrap: wrap;
-        padding-left: 0;
       }
     }
   }
+
+
+
+
+
+
+
+
+
+
+
 
   // &.theme--list-media,
   // &.theme--list-images {

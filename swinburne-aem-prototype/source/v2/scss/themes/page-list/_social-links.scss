@@ -11,8 +11,11 @@
       justify-content: flex-start;
 
       > li {
-        flex: 0 0 16px !important;
-        max-width: 16px !important;
+        flex: 0 0 16px;
+        max-width: 16px;
+        // The bottom margin isn't required here so we need to use !important to ensure it is
+        // removed correctly for all breakpoints.
+        margin-bottom: 0 !important;
         padding: 0;
         width: auto;
       }

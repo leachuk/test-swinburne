@@ -74,3 +74,11 @@
 @function unicode($str) {
   @return unquote("\"") + $str + unquote("\"");
 }
+
+/// Appends the `$addition` selector with the `$base` selector
+/// @param {String} $base - The initial selector
+/// @param {String} $addition - String to append to `$base`
+/// @return {String} - The joined selector
+@function create-selector($base, $addition) {
+  @return "#{selector-append($base, $addition)}";
+}

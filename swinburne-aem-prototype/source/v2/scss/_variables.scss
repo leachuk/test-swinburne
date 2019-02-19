@@ -449,7 +449,7 @@ $screen-sm-max: 639px;
 
 
 // Grid columns
-$grid-gutter-width: #{$grid-gutter * 2}px;
+$grid-gutter-width: 26px;
 
 // Navs
 
@@ -499,6 +499,8 @@ $breadcrumb-divider:                '›';
 
 // Cards
 
+$card-spacer-y:                     16px;
+$card-spacer-x:                     25px;
 $card-border-width:                 0;
 $card-bg:                           transparent;
 

@@ -1613,7 +1613,7 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
   # Page list
   lists/page-list/social-links:
     flat: true
-    prefix: theme--lists-social-links
+    prefix: theme--page-list-social-links
     title: 'Social Links'
 
   # WARNING: Reference to these path is hardcoded into component dialogs

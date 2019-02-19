@@ -85,12 +85,10 @@
                                     </attributes>
                                 </items>
                             </basic>
-
                         </items>
                     </column>
                 </items>
             </metadataTab>
         </items>
     </content>
-
 </jcr:root>

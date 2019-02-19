@@ -82,36 +82,41 @@ $theme-colors: (
 $body-bg:                   theme-color('g7');
 $body-color:                theme-color('g1');
 
-// spacers used for utility classes
+
+// Spacers used for utility classes
+
 $spacers: (
-  0   : 0,
-  5  : rem-calc(5px),
-  10  : rem-calc(10px),
-  15  : rem-calc(15px),
-  20  : rem-calc(20px),
-  25  : rem-calc(25px),
-  30  : rem-calc(30px),
-  35  : rem-calc(35px),
-  40  : rem-calc(40px),
+  0  : 0,
+  5  : 5px,
+  10 : 10px,
+  15 : 15px,
+  20 : 20px,
+  25 : 25px,
+  30 : 30px,
+  35 : 35px,
+  40 : 40px,
 );
 
-//Spacing variables
-$spacing-2xs : rem-calc(5px);
-$spacing-xs  : rem-calc(10px);
-$spacing-sm  : rem-calc(15px);
-$spacing-md  : rem-calc(20px);
-$spacing-lg  : rem-calc(25px);
-$spacing-2xl : rem-calc(30px);
-$spacing-3xl : rem-calc(35px);
-$spacing-4xl : rem-calc(40px);
-$spacing-5xl : rem-calc(45px);
-$spacing-6xl : rem-calc(50px);
-$spacing-7xl : rem-calc(55px);
 
-$grid-gutter: 5.5;
-$grid-gutter-sm: 9;
-$grid-gutter-lg: 13;
-$grid-gutter-xl: 12;
+// Spacing variables
+
+$spacing-2xs : 5px;
+$spacing-xs  : 10px;
+$spacing-sm  : 15px;
+$spacing-md  : 20px;
+$spacing-lg  : 25px;
+$spacing-2xl : 30px;
+$spacing-3xl : 35px;
+$spacing-4xl : 40px;
+$spacing-5xl : 45px;
+$spacing-6xl : 50px;
+$spacing-7xl : 55px;
+
+$grid-gutter    : 5.5;
+$grid-gutter-sm : 9;
+$grid-gutter-lg : 13;
+$grid-gutter-xl : 12;
+
 
 // UC Spacing conventions
 // Vertical Spacing \\
@@ -418,7 +423,7 @@ $aem-breakpoints: (
 //
 // Style p element.
 
-$paragraph-margin-bottom: rem-calc(16px);
+$paragraph-margin-bottom: 16px;
 
 
 // Grid breakpoints
@@ -444,7 +449,7 @@ $screen-sm-max: 639px;
 
 
 // Grid columns
-$grid-gutter-width: #{$grid-gutter * 2}px;
+$grid-gutter-width: 26px;
 
 // Navs
 
@@ -494,6 +499,8 @@ $breadcrumb-divider:                '›';
 
 // Cards
 
+$card-spacer-y:                     16px;
+$card-spacer-x:                     25px;
 $card-border-width:                 0;
 $card-bg:                           transparent;
 

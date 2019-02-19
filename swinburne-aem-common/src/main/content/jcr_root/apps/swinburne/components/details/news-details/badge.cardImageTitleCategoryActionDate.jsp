@@ -1,5 +1,8 @@
 <div class="card card--taglist-share ${badgeClassAttr}">
-    <img class="card-img-top" src="${componentProperties.pageThumbnail}" ${badgeImageAttr} alt="${componentProperties.title}">
+    <div class="card-img-top">
+        <img src="${componentProperties.pageThumbnail}" ${badgeImageAttr} alt="${componentProperties.title}">
+    </div>
+
     <div class="card-body">
         <${componentProperties.badgeTitleType} class="card-title h5">${componentProperties.title}</${componentProperties.badgeTitleType}>
         <c:if test="${not empty componentProperties.tags}">

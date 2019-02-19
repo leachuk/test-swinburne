@@ -76,13 +76,13 @@ We encourage a combination of BEM and OOCS for these reasons:
 ### ID selectors
 
 Using ID selectors in CSS is discouraged as it introduces an unnecessarily high level of [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) to your rule declarations, and they are not reusable.
-  
+
 
 ### JavaScript hooks
 
 Avoid binding to the same class in both your CSS and JavaScript to maintain a separation of concerns.
 
-We recommend creating JavaScript-specific classes to bind to, prefixed with `.js-`:  
+We recommend creating JavaScript-specific classes to bind to, prefixed with `.js-`:
 
 ```html
 <button class="btn btn-primary js-request-to-book">Request to Book</button>
@@ -90,7 +90,7 @@ We recommend creating JavaScript-specific classes to bind to, prefixed with `.js
 
 ### JavaScript State Classes
 
-JavaScript classes that represent state such as `is-active` or `is-disabled` may be assigned to elements. They do not need to follow the BEM modifier convention and can be re-used between components.  
+JavaScript classes that represent state such as `is-active` or `is-disabled` may be assigned to elements. They do not need to follow the BEM modifier convention and can be re-used between components.
 
 ### Border
 

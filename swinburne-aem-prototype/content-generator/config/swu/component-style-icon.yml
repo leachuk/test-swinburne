@@ -16,14 +16,15 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - twitter
       - instagram
       - linkedin-in
-    valueFormat: fa fa-%%prefix%%
+      - linkedin
+      - tumblr-square
+      - tumblr
+    valueFormat: fab fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
   spinner:
     prefixes:
       - cog
-      - gear
-      - refresh
       - spinner
     valueFormat: fa fa-%%prefix%%
     title: '%%prefix_normalised%%'
@@ -81,7 +82,7 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - graduation-cap
       - video
       - university
-      - bar-chart
+      - chart-bar
       - newspaper
       - cogs
       - gamepad
@@ -92,7 +93,7 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
       - wrench
       - heartbeat
       - link
-    valueFormat: fa fa-%%prefix%%
+    valueFormat: fal fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
 # Extends to

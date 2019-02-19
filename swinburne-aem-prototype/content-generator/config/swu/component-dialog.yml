@@ -95,6 +95,14 @@ content/cq:tags/swinburne/component-dialog: &component-dialog
     valueFormat: '%%prefix%%'
     title: '%%prefix_normalised%%'
 
+  # WARNING: Reference to these path is hardcoded into component dialogs
+  html/direction:
+    prefixes:
+      - left
+      - right
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
 # WARNING: Reference to these path is hardcoded into component dialogs
   html/heading:
     prefixes:

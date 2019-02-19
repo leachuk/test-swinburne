@@ -411,6 +411,13 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     valueFormat: 'theme--lists%%infix%%-%%prefix%%'
     title: '%%prefix_normalised%% %%breakpoint%%'
 
+  # Page list
+  lists/page-list/social-links:
+    flat: true
+    prefix: theme--lists-social-links
+    prefix: theme--page-list-social-links
+    title: 'Social Links'
+
   # Image
   media/image:
     prefixes:
@@ -446,11 +453,51 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--video-background
     title: 'Background Video'
 
-  # Footer
-  layout/brand-footer:
-    flat: true
-    prefix: theme--footer-brand
-    title: 'Brand Footer'
+    # Footer
+    layout/brand-footer:
+      flat: true
+      prefix: brand-footer
+      title: 'Brand Footer'
+
+    layout/brand-footer/brand-footer-acknowlodgement:
+      flat: true
+      prefix: brand-footer__acknowlodgement
+      title: 'Brand Footer Acknowlodgement'
+
+    layout/brand-footer/brand-footer-admin:
+      flat: true
+      prefix: brand-footer__admin
+      title: 'Brand Footer Admin'
+
+    layout/brand-footer/brand-footer-aside:
+      flat: true
+      prefix: brand-footer__aside
+      title: 'Brand Footer Aside (Logo, Contact, etc...)'
+
+    layout/brand-footer/brand-footer-contact:
+      flat: true
+      prefix: brand-footer__contact
+      title: 'Brand Footer Contact Us'
+
+    layout/brand-footer/brand-footer-global:
+      flat: true
+      prefix: brand-footer__global
+      title: 'Brand Footer Global'
+
+    layout/brand-footer/brand-footer-knowing:
+      flat: true
+      prefix: brand-footer__knowing
+      title: 'Brand Footer Knowing Logo'
+
+    layout/brand-footer/brand-footer-logo:
+      flat: true
+      prefix: brand-footer__logo
+      title: 'Brand Footer Logo'
+
+    layout/brand-footer/brand-footer-sitemap:
+      flat: true
+      prefix: brand-footer__sitemap
+      title: 'Brand Footer Sitemap (IA)'
 
   # Header
   layout/header/fixed-top:
@@ -529,11 +576,10 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: navbar-expand-lg navbar-light bg-white
     title: 'Header Nav'
 
-
-  lists/navlist/socialnav:
-     flat: true
-     prefix: theme--list-social
-     title: 'Social Nav'
+  lists/navlist/links:
+    flat: true
+    prefix: theme--list-links
+    title: 'Links'
 
   lists/cardslist/cardsnav:
      flat: true

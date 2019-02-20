@@ -222,7 +222,8 @@
             flex-wrap: wrap;
 
             li {
-              width: calc(100% / 3 - 20px);
+              flex-basis: calc(100% / 3 - 20px);
+              max-width: calc(100% / 3 - 20px);
 
               + li {
                 margin-left: 20px;
@@ -238,7 +239,11 @@
 
       @include media-breakpoint-up(lg) {
         min-width: calc(25% - 10px);
-        width: calc(25% - 10px);
+
+        &,
+        &:last-child {
+          width: calc(25% - 10px);
+        }
 
         &:nth-child(3n+3) {
           margin-right: 10px;
@@ -248,25 +253,29 @@
           margin-right: 0;
         }
 
-        &:last-child {
-          width: calc(50% - 10px);
+        &:last-child .pagelist[component] ul li {
+          flex-basis: 100%;
+          max-width: 100%;
 
-          .pagelist[component] ul li {
-            width: calc(50% - 20px);
-
-            &:nth-child(3n+1) {
-              margin-left: 20px;
-            }
-
-            &:nth-child(2n+1) {
-              margin-left: 0;
-            }
+          + li {
+            margin-left: 0;
           }
         }
       }
     }
 
     .pagelist[component] {
+      &,
+      li {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      > .content {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
       ul {
         @include list-unstyled;
 
@@ -274,7 +283,8 @@
       }
 
       li {
-        width: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
       }
 
       @include media-breakpoint-down(sm) {

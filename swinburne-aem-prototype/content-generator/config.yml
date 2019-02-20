@@ -1616,6 +1616,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--page-list-social-links
     title: 'Social Links'
 
+  lists/direction/horizontal:
+    flat: true
+    prefix: theme--list-horizontal
+    title: 'Horizontal'
+
   # WARNING: Reference to these path is hardcoded into component dialogs
   # Badge - menuColor
   lists/navlist/color:

@@ -16,7 +16,7 @@
 
     <filter root="/content/cq:tags/swinburne/content-type" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-topic" mode="update"/>
-    <filter root="/content/cq:tags/swinburne/component-style-theme" mode="update"/>
+    <filter root="/content/cq:tags/swinburne/component-style-theme"/>
     <filter root="/content/cq:tags/swinburne/component-style-modifier" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-style-module" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-style-chevron" mode="update"/>
@@ -27,7 +27,7 @@
 
     <filter root="/content/cq:tags/swinburne-showcase/content-type" mode="update"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-topic" mode="update"/>
-    <filter root="/content/cq:tags/swinburne-showcase/component-style-theme" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-showcase/component-style-theme"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-style-modifier" mode="update"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-style-module" mode="update"/>
     <filter root="/content/cq:tags/swinburne-showcase/component-style-chevron" mode="update"/>
@@ -38,7 +38,7 @@
 
     <filter root="/content/cq:tags/swinburne-training/content-type" mode="update"/>
     <filter root="/content/cq:tags/swinburne-training/component-topic" mode="update"/>
-    <filter root="/content/cq:tags/swinburne-training/component-style-theme" mode="update"/>
+    <filter root="/content/cq:tags/swinburne-training/component-style-theme"/>
     <filter root="/content/cq:tags/swinburne-training/component-style-modifier" mode="update"/>
     <filter root="/content/cq:tags/swinburne-training/component-style-module" mode="update"/>
     <filter root="/content/cq:tags/swinburne-training/component-style-chevron" mode="update"/>

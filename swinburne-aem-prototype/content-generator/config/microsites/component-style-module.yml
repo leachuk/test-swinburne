@@ -1,0 +1,41 @@
+content/cq:tags/swinburne-microsites/component-style-module: &component-style-module
+  media/video/background:
+    flat: true
+    prefix: play-video
+    title: 'Play Background Video'
+
+  media/video/popup:
+    flat: true
+    prefix: play-video
+    title: 'Play Popup Video'
+
+  layout/contentblock/parallaximage:
+    flat: true
+    prefix: parallaximage
+    title: 'Parallax Image'
+
+  layout/button/navtoggler:
+    flat: true
+    prefix: navtoggler
+    title: 'Nav Toggler (button)'
+
+  # Search widget
+  widgets/search/global-search:
+    flat: true
+    prefix: global-search
+    title: 'Global Search'
+
+  widgets/search/quicksearch:
+    flat: true
+    prefix: search
+    title: 'Quick Search'
+
+  # Carousel
+  lists/carousel:
+    flat: true
+    prefix: carousel
+    title: 'Carousel'
+
+# Extends to
+content/cq:tags/swinburne-microsites-showcase/component-style-module: *component-style-module
+content/cq:tags/swinburne-microsites-training/component-style-module: *component-style-module

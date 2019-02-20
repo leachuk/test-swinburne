@@ -5,7 +5,8 @@
     <!--<filter root="/content/dam/swinburne"/>-->
     <filter root="/content/dam/formsanddocuments-themes"/>
     <!--Filter root is commented below to use for content sync in future -->
-    <!--<filter root="/content/swinburne"/>-->
+    <filter root="/content/swinburne"/>
+    <filter root="/content/swinburne-microsites" />
 
     <filter root="/content/api/swinburne" mode="update"/>
     <!--Filter root is commented below to use for content sync in future -->
@@ -14,7 +15,9 @@
     <filter root="/etc/blueprints/swinburne" mode="update"/>
     <filter root="/etc/designs/swinburne" mode="update"/>
 
+    <!-- tenant update for microsites into swu root" -->
     <filter root="/conf/swinburne" mode="update"/>
+    <filter root="/conf/swinburne-microsites" mode="update"/>
 
     <filter root="/etc/clientlibs/swinburne/core"/>
 

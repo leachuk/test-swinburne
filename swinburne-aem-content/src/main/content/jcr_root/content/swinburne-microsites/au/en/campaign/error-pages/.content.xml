@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-11-21T15:45:06.718+11:00"
+        cq:lastModifiedBy="ssheshagiri"
+        cq:lastReplicated="{Date}2018-11-21T15:45:33.797+11:00"
+        cq:lastReplicatedBy="ssheshagiri"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/swinburne-microsites/settings/wcm/templates/onecolumn"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Error Pages"
+        jcr:uuid="cac64678-336f-4f06-bb3a-3eb060dfba55"
+        sling:resourceType="swinburne/components/template/base">
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/header"
+            componentId="header_C4ET5RZEU">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </header>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_PVKEBQOPM">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </article>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/footer"
+            componentId="footer_PJPCUJNNA">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </footer>
+    </jcr:content>
+    <_x0034_04/>
+</jcr:root>

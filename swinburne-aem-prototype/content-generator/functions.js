@@ -7,9 +7,6 @@ const mkdirp = require('mkdirp')
 const { readFileSync, existsSync, lstatSync, readdirSync, writeFile } = require('fs')
 const { join, resolve } = require('path')
 
-const isDirectory    = source => lstatSync(source).isDirectory()
-const getDirectories = source => readdirSync(source).map(name => join(source, name)).filter(isDirectory)
-
 const {
   each,
   escape,
@@ -79,6 +76,14 @@ const prefixes = {
   'nowrap'         : 'No Wrap',
   'playsinline'    : 'Plays Inline',
   'v-centered-nav' : 'Verticial Aligned Nav Arrows',
+}
+
+function isDirectory(source) {
+  return lstatSync(source).isDirectory();
+}
+
+function getDirectories (source) {
+  return readdirSync(source).map(name => join(source, name)).filter(isDirectory);
 }
 
 function currentPath(path) {
@@ -336,4 +341,6 @@ module.exports = {
   mapBreakpointToName,
   normalisePrefix,
   parseTitle,
+  getDirectories,
+  isDirectory
 }

@@ -6,32 +6,32 @@
         jcr:primaryType="cq:PageContent"
         sling:resourceType="swinburne/components/template/base">
         <header
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/header">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/header">
             <par
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/container"/>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
         </header>
         <aside
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/aside">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside">
             <par
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/container"/>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
         </aside>
         <article
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/article">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article">
             <par
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/container"/>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
         </article>
         <footer
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/footer">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/footer">
             <par
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/container"/>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
         </footer>
     </jcr:content>
 </jcr:root>

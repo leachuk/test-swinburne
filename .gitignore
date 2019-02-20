@@ -97,4 +97,5 @@ swinburne-testing/local-*
 patternlab.json
 **/content-generator/content/
 **/content-generator/output/
+**/content-generator/tmp/
 sync/

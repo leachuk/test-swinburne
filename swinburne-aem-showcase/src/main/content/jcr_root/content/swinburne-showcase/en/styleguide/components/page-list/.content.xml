@@ -33,8 +33,7 @@
                     showPageDate="false"
                     showToolbar="false"
                     textIsRich="true"
-                    titleType="[,]">
-                </page_details>
+                    titleType="[,]"/>
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -78,26 +77,53 @@
                     </par>
                 </contentblock2>
                 <contentblock3
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock3"
-                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15]">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock3"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15]">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
                         <text
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/text"
-                                componentId="text_GG1BDE2EY"
-                                text="&lt;p>Badge: Card with Image, Tag, Title and Action&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_GG1BDE2EY"
+                            text="&lt;p>Badge: Card with Image, Tag, Title and Action&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
                         <reference
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/reference"
-                                componentId="reference_OXHFFXJJE"
-                                path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/reference"
+                            componentId="reference_OXHFFXJJE"
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist"/>
                     </par>
                 </contentblock3>
+                <contentblock_316914013
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_316914013_DXURYEN0J"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15]">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text_HSPNSMMHY"
+                            text="&lt;p>Badge: Default : Horizontal links&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <reference
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/reference"
+                            componentId="reference_COQK8HAL9"
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock/par/pagelist"/>
+                    </par>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                </contentblock_316914013>
             </par>
         </article>
     </jcr:content>

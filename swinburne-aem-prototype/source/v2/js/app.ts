@@ -1,14 +1,14 @@
 import '../scss/app.scss'
 
 // Core modules...
-import Carousels from './modules/carousel'
-import Subscribers from './modules/subscribers'
+import Carousels from '@global/modules/carousel'
+import Subscribers from '@global/modules/subscribers'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
-} from './utilities/constants'
+} from '@global/utilities/constants'
 
-import { isAuthorEditMode } from './utilities/aem'
+import { isAuthorEditMode } from '@global/utilities/aem'
 
 // Begin the app...
 $(() => {
@@ -22,12 +22,12 @@ $(() => {
     const $target      = $(e.target)
 
     if ($suggestions.length && !$target.is('.suggestions') && !$target.parents('.suggestions').length) {
-      PubSub.publish(TOPIC_HIDE_SUGGESTIONS)
+      PubSub.publish(TOPIC_HIDE_SUGGESTIONS, null)
     }
   })
 
-  // Carousel functionality for anything, this dynamically loads slick carousel
-  // to reduce the weight of the page.
+  // Carousel functionality for anything, this dynamically loads slick carousel to reduce
+  // the weight of the page.
   Carousels()
 
   // Bind the pub/sub event subscribers
@@ -37,7 +37,8 @@ $(() => {
   //HashLinks()
 
   // 'object-fit' polyfill for unsupported browsers
-  objectFitImages()
+  // tslint:disable-next-line
+  ObjectFitImages()
 
   // Open all the 'collapse' elements on the page when in author
   if (isAuthorEditMode()) {

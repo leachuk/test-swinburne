@@ -1,9 +1,9 @@
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import ImageminPlugin from 'imagemin-webpack-plugin';
-import LodashPlugin from 'lodash-webpack-plugin';
-import { resolve, relative } from 'path';
-import { getIfUtils, removeEmpty } from 'webpack-config-utils';
-import { optimize, ProvidePlugin, LoaderOptionsPlugin, DefinePlugin } from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import ImageminPlugin from 'imagemin-webpack-plugin'
+import LodashPlugin from 'lodash-webpack-plugin'
+import { resolve, relative } from 'path'
+import { getIfUtils, removeEmpty } from 'webpack-config-utils'
+import { optimize, ProvidePlugin, LoaderOptionsPlugin, DefinePlugin } from 'webpack'
 
 export default env => {
   const { ifProd, ifDev } = getIfUtils(env)
@@ -64,13 +64,10 @@ export default env => {
     },
 
     entry: {
-      'js/app'        : `./${env.version}/js/app.js`,
-      'js/styleguide' : `./${env.version}/js/styleguide.js`,
+      'js/app': `./${env.version}/js/app.js`,
 
       'js/vendor': [
         'es6-promise/auto',
-        'react',
-        'react-dom',
         'object-fit-images',
         'picturefill',
         'bootstrap/js/dist/util',
@@ -81,7 +78,6 @@ export default env => {
       ],
 
       'js/vendorlib/jquery'       : 'jquery',
-      'js/vendorlib/fancybox'     : '@fancyapps/fancybox',
       'js/vendorlib/owl.carousel' : 'owl.carousel',
     },
 
@@ -168,11 +164,8 @@ export default env => {
       }),
       new ProvidePlugin({
         FastClick       : 'fastclick',
-        Handsontable    : 'handsontable',
+        ObjectFitImages : 'object-fit-images',
         PubSub          : 'pubsub-js',
-        React           : 'react',
-        objectFitImages : 'object-fit-images',
-        urlParser       : 'js-video-url-parser/dist/jsVideoUrlParser',
 
         // Expose the Bootstrap modules to the global namespace
         // https://github.com/shakacode/bootstrap-loader#bootstrap-4-internal-dependency-solution

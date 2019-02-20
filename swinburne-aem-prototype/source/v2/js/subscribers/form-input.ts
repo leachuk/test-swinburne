@@ -7,13 +7,13 @@ import {
 /**
  * Handles the behaviour of the input field when a user is typing.
  *
- * @param  {jQuery}  $target The target element object
- * @param  {jQuery}  $input  The input element object
- * @param  {Object}  event   The event object
- * @return {Boolean}
+ * @param  {JQuery} $target The target element object
+ * @param  {JQuery} $input The input element object
+ * @param  {JQuery.TriggeredEvent} event The event object
+ * @return {boolean}
  */
-function handleInputFieldUserInput($target, $input, event) {
-  const value = $input.val()
+function handleInputFieldUserInput($target: JQuery, $input: JQuery, event: JQuery.TriggeredEvent): boolean {
+  const value = $input.val() as string
 
   // Handle the submission of the input when the enter key is pressed
   if (event.keyCode === 13) {
@@ -22,7 +22,11 @@ function handleInputFieldUserInput($target, $input, event) {
   }
 
   // Toggle the clear button depending on whether the input has a value
-  $input.next()[`${value.length ? 'add' : 'remove'}Class`]('active')
+  if (value.length) {
+    $input.next().addClass('active')
+  } else {
+    $input.next().removeClass('active')
+  }
 
   return false
 }
@@ -30,12 +34,12 @@ function handleInputFieldUserInput($target, $input, event) {
 /**
  * Handles the behaviour of when the clear button is clicked.
  *
- * @param  {jQuery}  $target The target element object
- * @param  {jQuery}  $input  The input element object
- * @param  {Object}  event   The event object
- * @return {Boolean}
+ * @param  {JQuery} $target The target element object
+ * @param  {JQuery} $input The input element object
+ * @param  {JQuery.TriggeredEvent} event The event object
+ * @return {boolean}
  */
-function handleClearInputButton($target, $input, event) {
+function handleClearInputButton($target: JQuery, $input: JQuery, event: JQuery.TriggeredEvent): boolean {
   // Clear the input field
   $input.val('')
 
@@ -48,7 +52,7 @@ function handleClearInputButton($target, $input, event) {
   return true
 }
 
-export default (event, originalEvent, type) => {
+export default (event: JQuery.Event, originalEvent: JQuery.TriggeredEvent, type: string) => {
   const $target = $(originalEvent.target)
 
   let $input           = $target

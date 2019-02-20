@@ -1,11 +1,11 @@
-const ExtractTextPlugin           = require('extract-text-webpack-plugin')
-const ImageminPlugin              = require('imagemin-webpack-plugin').default
-const LodashPlugin                = require('lodash-webpack-plugin')
-const { resolve, relative }       = require('path')
-const { getIfUtils, removeEmpty } = require('webpack-config-utils')
-const webpack                     = require('webpack')
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import ImageminPlugin from 'imagemin-webpack-plugin';
+import LodashPlugin from 'lodash-webpack-plugin';
+import { resolve, relative } from 'path';
+import { getIfUtils, removeEmpty } from 'webpack-config-utils';
+import { optimize, ProvidePlugin, LoaderOptionsPlugin, DefinePlugin } from 'webpack';
 
-module.exports = env => {
+export default env => {
   const { ifProd, ifDev } = getIfUtils(env)
 
   const extractSass = new ExtractTextPlugin({
@@ -102,7 +102,7 @@ module.exports = env => {
         },
         {
           exclude : [ resolve('node_modules') ],
-          test    : /\.jsx?$/,
+          test    : /\.(j|t)sx?$/,
 
           use: [
             {
@@ -158,7 +158,7 @@ module.exports = env => {
       new ImageminPlugin({
         test: /\.(jpe?g|png|gif|svg)$/i,
       }),
-      new webpack.optimize.CommonsChunkPlugin({
+      new optimize.CommonsChunkPlugin({
         filename : 'js/[name].js',
         name     : 'common',
       }),
@@ -166,7 +166,7 @@ module.exports = env => {
         collections : true,
         shorthands  : true,
       }),
-      new webpack.ProvidePlugin({
+      new ProvidePlugin({
         FastClick       : 'fastclick',
         Handsontable    : 'handsontable',
         PubSub          : 'pubsub-js',
@@ -189,30 +189,30 @@ module.exports = env => {
         Tooltip         : 'exports-loader?Tooltip!bootstrap/js/dist/tooltip',
         Util            : 'exports-loader?Util!bootstrap/js/dist/util',
       }),
-      ifProd(new webpack.optimize.UglifyJsPlugin({
-        ecma     : 6,
-        mangle   : false,
-        warnings : false,
+      ifProd(new optimize.UglifyJsPlugin({
+        'ecma'     : 6,
+        'mangle'   : false,
+        'warnings' : false,
 
-        compress: {
-          drop_console : true,
-          warnings     : false,
+        'compress': {
+          'drop_console' : true,
+          'warnings'     : false,
         },
 
-        output: {
-          beautify: false,
-          comments: false,
+        'output': {
+          'beautify': false,
+          'comments': false,
         },
       })),
-      ifProd(new webpack.LoaderOptionsPlugin({
+      ifProd(new LoaderOptionsPlugin({
         minimize: true,
       })),
-      ifProd(new webpack.DefinePlugin({
+      ifProd(new DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify('production'),
         },
       })),
-      ifDev(new webpack.DefinePlugin({
+      ifDev(new DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify('development'),
         },

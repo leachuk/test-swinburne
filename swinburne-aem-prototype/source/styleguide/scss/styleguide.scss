@@ -149,3 +149,21 @@ html:not(.aem-AuthorLayer-Edit ) {
     }
   }
 }
+
+//Overwrite nested container to prevent more sides padding.
+body:not(.styleguide) > .container:not(.my-large, .my-5, .header),
+.contentblock.container:not(.my-large, .my-5) {
+    max-width: 100% !important;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+body {
+  &.collapsed > .container {
+    @include media-breakpoint-down(md) {
+      overflow: hidden;
+      position: fixed !important;
+    }
+  }
+}

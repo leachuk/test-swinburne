@@ -1,6 +1,5 @@
 /**
  * Brand keys
- * @type {String}
  */
 export const BRAND_VIMEO   = 'vimeo'
 export const BRAND_YOUTUBE = 'youtube'
@@ -28,4 +27,4 @@ export const TOPIC_VIDEO_GLOBAL     = 'Video.Global'
 /**
  * Generic keys
  */
-export const LOAD_MORE_CLASS = 'pagelist__load-more'
+

@@ -1,7 +1,6 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+    "eslint:recommended"
   ],
 
   "parser": "babel-eslint",
@@ -19,8 +18,9 @@
     "jQuery": true,
     "JSONPath": true,
     "PubSub": true,
-    "React": true,
-    "urlParser": true
+    "urlParser": true,
+    "FastClick": true,
+    "objectFitImages": true
   },
 
   "parserOptions": {
@@ -34,7 +34,6 @@
 
   "plugins": [
     "babel",
-    "react",
     "import"
   ],
 
@@ -101,8 +100,6 @@
     "no-useless-concat": 2,
     "no-with": 2,
     "quotes": [0, "single"],
-    "react/prop-types": 0,
-    "react/no-find-dom-node": 0,
     "radix": 2,
     "semi": [0, "never"],
     "strict": 0,

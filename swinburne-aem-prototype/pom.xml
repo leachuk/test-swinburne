@@ -105,7 +105,6 @@
           <yarnVersion>${yarnVersion}</yarnVersion>
         </configuration>
         <executions>
-          <!-- Microsites -->
           <execution>
             <id>install node and yarn</id>
             <goals>
@@ -125,6 +124,8 @@
               <arguments>install</arguments>
             </configuration>
           </execution>
+
+          <!-- Microsites -->
           <execution>
             <id>exec-aem-build-v1</id>
             <goals>

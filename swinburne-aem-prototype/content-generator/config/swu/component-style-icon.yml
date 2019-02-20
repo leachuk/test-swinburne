@@ -11,6 +11,7 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
   social:
     prefixes:
       - youtube
+      - facebook
       - facebook-f
       - pinterest-p
       - twitter

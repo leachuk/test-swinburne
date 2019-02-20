@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-11-14T14:47:10.715+11:00"
+        cq:lastModifiedBy="hmphan"
+        cq:lastReplicated="{Date}2018-11-26T11:55:40.866+11:00"
+        cq:lastReplicatedBy="hmphan@swin.edu.au"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/swinburne-microsites/settings/wcm/templates/onecolumn"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer section"
+        jcr:uuid="d5321093-9b49-43d0-ab3b-2562026d088c"
+        sling:resourceType="swinburne/components/template/base">
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/header"
+            componentId="header_DTVCMRPQI">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </header>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_4J3Y6T83F">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </article>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/footer"
+            componentId="footer_OECKRNMAB">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </footer>
+    </jcr:content>
+    <social-footer/>
+    <footer/>
+</jcr:root>

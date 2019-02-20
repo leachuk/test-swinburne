@@ -4,13 +4,27 @@ const fs     = require('fs')
 const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
 const yaml   = require('js-yaml')
+const yimp = require('yaml-import')
+
+// CLI arguments
+const args = require('yargs')
+  .option('clean', {
+    alias   : 'c',
+    default : false,
+  })
+  .example('node generator.js --config=<filename>.yml')
+  .example('node generator.js --config=<filename>.yml --no-clean', 'run without tree cleaning')
+  .epilog(`Copyright © 2018-${(new Date).getFullYear()} Isobar Australia.`)
+  .version(false)
+  .argv
 
 const {
   each,
   isArray,
 } = require('lodash')
 
-const rootPath = 'content'
+const rootPath       = 'content'
+const tmpPath        = 'tmp'
 const pathPrefixTags = 'content/cq:tags'
 const pathPrefixApps = 'apps/'
 
@@ -20,18 +34,28 @@ const {
   getBreakpointInfix,
   loadTemplateForCategory,
   parseTitle,
+  getDirectories,
+  isDirectory
 } = require('./functions')
 
 console.clear()
 
 try {
-  const configFilePath = currentPath('config.yml')
-  const config         = yaml.safeLoad(fs.readFileSync(configFilePath, 'utf8'))
+  const baseConfigFilePath = currentPath(`config/${args.config}`)
+  const configFilePath     = currentPath(`tmp/config.${(Date.now() / 1000 | 0)}.yml`)
 
-  rimraf(currentPath(rootPath), () => {
-    mkdirp.sync(currentPath(rootPath))
+  if (!fs.existsSync(currentPath(tmpPath))) {
+    mkdirp.sync(currentPath(tmpPath))
+  }
 
+  // Merge the YAML configurations together into a single readable file
+  yimp.write(baseConfigFilePath, configFilePath)
+
+  const config = yaml.safeLoad(fs.readFileSync(configFilePath, 'utf8'))
+
+  function generator() {
     const categories = {}
+
     for (const category of Object.keys(config)) {
       const children = config[category]
 
@@ -246,7 +270,20 @@ try {
     })
 
     console.log(colors.blue('Total number of files generated:'), totalNumberOfTags)
-  })
+  }
+
+  // If the clean flag is set and its value is `false`, we retain the current content folder
+  if (args.clean === false) {
+    generator()
+  } else {
+    rimraf(currentPath(rootPath), () => {
+      mkdirp.sync(currentPath(rootPath))
+      generator()
+    })
+  }
+
+  // Remove the temporary YAML merge file
+  fs.unlinkSync(configFilePath)
 } catch (e) {
   console.log(e)
 }

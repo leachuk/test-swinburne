@@ -393,6 +393,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--lists-light
     title: 'Lighter Colour Links'
 
+  lists/direction/horizontal:
+    flat: true
+    prefix: theme--lists-horizontal
+    title: 'Horizontal'    
+
   lists/justify:
     breakpoints:
       - sm
@@ -416,11 +421,6 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     flat: true
     prefix: theme--page-list-social-links
     title: 'Social Links'
-
-  lists/direction/horizontal:
-    flat: true
-    prefix: theme--list-horizontal
-    title: 'Horizontal'
 
   # Image
   media/image:

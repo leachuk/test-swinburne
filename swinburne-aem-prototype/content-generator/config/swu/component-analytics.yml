@@ -1,0 +1,42 @@
+content/cq:tags/swinburne/component-analytics: &component-analytics
+  hittype:
+    prefixes:
+      - event
+      - exception
+      - item
+      - pageview
+      - screenview
+      - social
+      - timing
+      - transaction
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  pagetype:
+    prefixes:
+    - common
+    - marketing
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  eventtype:
+    prefixes:
+    - site-interaction
+    valueFormat: 'site interaction'
+    title: '%%prefix_normalised%%'
+
+  linktype:
+    prefixes:
+    - button
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+  linklocation:
+    prefixes:
+    - link
+    valueFormat: '%%prefix%%'
+    title: '%%prefix_normalised%%'
+
+# Extends to
+content/cq:tags/swinburne-showcase/component-analytics: *component-analytics
+content/cq:tags/swinburne-training/component-analytics: *component-analytics

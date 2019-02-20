@@ -1,0 +1,18 @@
+content/cq:tags/swinburne/component-topic: &component-topic
+  #used for comms between components
+  group:
+    prefixes:
+      - group1
+      - group2
+    title: '%%prefix_normalised%%'
+
+  #used for comms between components
+  topic:
+    prefixes:
+      - eventFilterSelected         #when a selection in tag list is made
+      - mapMarkerFilterSelected     #when map marker is filtered
+    title: '%%prefix_normalised%%'
+
+# Extends to
+content/cq:tags/swinburne-showcase/component-topic: *component-topic
+content/cq:tags/swinburne-training/component-topic: *component-topic

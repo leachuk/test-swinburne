@@ -4,8 +4,8 @@
     ranking="{Long}120">
     <jcr:content
         cq:templateType="/conf/swinburne/settings/wcm/template-types/onecolumn"
-        jcr:primaryType="cq:PageContent"
         jcr:description="Swinburne One Column"
+        jcr:primaryType="cq:PageContent"
         jcr:title="Swinburne One Column"
         status="enabled"/>
 </jcr:root>

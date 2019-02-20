@@ -1,4 +1,6 @@
 {
+  "root": true,
+
   "extends": [
     "plugin:@typescript-eslint/recommended"
   ],
@@ -13,18 +15,6 @@
     "node": true,
     "builtin": true,
     "es6": true
-  },
-
-  "globals": {
-    "document": true,
-    "window": true,
-    "$": true,
-    "jQuery": true,
-    "JSONPath": true,
-    "PubSub": true,
-    "urlParser": true,
-    "FastClick": true,
-    "objectFitImages": true
   },
 
   "parserOptions": {

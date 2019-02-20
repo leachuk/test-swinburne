@@ -1,16 +1,20 @@
-import throttle from 'lodash/throttle'
+import _throttle from 'lodash/throttle'
 
 // Internal use only.
-let hasScrolled
-let header
-let headerDummy
-let height
-let previousOffset
+let hasScrolled: boolean
+let header: HTMLElement | null
+let headerDummy: HTMLElement
+let height: number
+let previousOffset: number
 
 /**
  * Determines if the header needs to become sticky or not.
  */
 function scrollCallback() {
+  if (!header) {
+    return
+  }
+
   const offset = window.scrollY || document.documentElement.scrollTop
 
   // Sticky mode
@@ -49,10 +53,14 @@ function setDummyElementHeight() {
 /**
  * Gets the currently computed height for the header.
  *
- * @return {Number}
+ * @return {number}
  */
-function navigationHeight() {
-  return parseFloat(window.getComputedStyle(header).height, 10)
+function navigationHeight(): number {
+  if (!header) {
+    return 0
+  }
+
+  return parseFloat(window.getComputedStyle(header).getPropertyValue('height'))
 }
 
 export default () => {
@@ -68,13 +76,15 @@ export default () => {
 
   // Create a dummy element that will fill in the gap that the header leaves when it
   // becomes fixed to the top of the page.
-  headerDummy = document.querySelector('.brand-header__dummy')
+  const dummyHeader = document.querySelector('.brand-header__dummy')
 
-  if (!headerDummy) {
+  if (!dummyHeader) {
     headerDummy = document.createElement('div')
     headerDummy.setAttribute('class', 'brand-header__dummy')
 
-    header.parentNode.insertBefore(headerDummy, header)
+    if (header.parentNode) {
+      header.parentNode.insertBefore(headerDummy, header)
+    }
   }
 
   // Adjust the height of the dummy element so it matches the header
@@ -83,10 +93,10 @@ export default () => {
   // Listen for when the user scrolls the page
   $(window)
     .off('scroll.brand.header')
-    .on('scroll.brand.header', throttle(scrollCallback, 100))
+    .on('scroll.brand.header', _throttle(scrollCallback, 100))
 
   // Listen for when the page is resized
-  $(window).off('resize.brand.header').on('resize.brand.header', throttle(() => {
+  $(window).off('resize.brand.header').on('resize.brand.header', _throttle(() => {
     height = navigationHeight()
 
     // Adjust the height of the dummy element so it matches the header

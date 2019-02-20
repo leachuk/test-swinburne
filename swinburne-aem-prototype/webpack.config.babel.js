@@ -1,26 +1,24 @@
-const { getIfUtils, removeEmpty } = require('webpack-config-utils')
-const { resolve }                 = require('path')
-const config                      = require('./config.json')
-const CleanWebpackPlugin          = require('clean-webpack-plugin')
-const CopyWebpackPlugin           = require('copy-webpack-plugin')
-const customization               = require('./source/_app/webpack.app.js')
-const EventHooksPlugin            = require('event-hooks-webpack-plugin')
-const exec                        = require('child_process').exec;
-const globby                      = require('globby')
-const merge                       = require('webpack-merge')
-const webpack                     = require('webpack')
+import { getIfUtils, removeEmpty } from 'webpack-config-utils'
+import { resolve } from 'path'
+import { paths, server } from './config.json'
+import CleanWebpackPlugin from 'clean-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import customization from './source/_app/webpack.app.js'
+import EventHooksPlugin from 'event-hooks-webpack-plugin'
+import { exec } from 'child_process'
+import { sync } from 'globby'
+import { smartStrategy } from 'webpack-merge'
+import { optimize } from 'webpack'
 
-const patternLabConfig = require('./patternlab-config.json')
-
-module.exports = (env) => {
+export default (env) => {
   const { ifDev } = getIfUtils(env)
 
   if (!env.version) {
-    console.log('Specify a version when running webpack eg --env.version="microsites"');
-    return;
+    console.log('Specify a version when running webpack eg --env.version="microsites"')
+    return
   }
 
-  const webpackConfig = merge.smartStrategy({ entry: 'replace' })({
+  const webpackConfig = smartStrategy({ entry: 'replace' })({
     devtool: ifDev('source-map'),
     context: resolve(__dirname, 'source'),
 
@@ -31,17 +29,17 @@ module.exports = (env) => {
     entry: {
       // Gathers any Source JS files and creates a bundle
       //NOTE: This name can be changed, if so, make sure to update _meta/01-foot.mustache
-      'js/pl-source': globby.sync([resolve(config.paths.source[env.version].js + '**/*.js')]).map(filePath => filePath)
+      'js/pl-source': sync([resolve(paths.source[env.version].js + '**/*.js')]).map(filePath => filePath)
     },
 
     output: {
       filename : '[name].js',
-      path     : resolve(config.paths.public[env.version].root)
+      path     : resolve(paths.public[env.version].root)
     },
 
     plugins: removeEmpty([
-      env.clean === true ? new CleanWebpackPlugin([patternLabConfig.paths.public.root]) : undefined,
-      new webpack.optimize.CommonsChunkPlugin({
+      env.clean === true ? new CleanWebpackPlugin(['./public/']) : undefined,
+      new optimize.CommonsChunkPlugin({
         // Combines any node module libraries used into their own file
         name      : 'js/pl-vendor-libraries',
         chunks    : ['js/pl-source'],
@@ -50,40 +48,40 @@ module.exports = (env) => {
       new CopyWebpackPlugin([
         {
           // Copy all images from source to public
-          context : resolve(config.paths.source[env.version].images),
+          context : resolve(paths.source[env.version].images),
           from    : './**/*.*',
-          to      : resolve(config.paths.public[env.version].images),
+          to      : resolve(paths.public[env.version].images),
         },
         {
           // Copy favicon from source to public
-          context : resolve(config.paths.source[env.version].root),
+          context : resolve(paths.source[env.version].root),
           from    : './*.ico',
-          to      : resolve(config.paths.public[env.version].root),
+          to      : resolve(paths.public[env.version].root),
         },
         {
           // Copy all web fonts from source to public
-          context : resolve(config.paths.source[env.version].fonts),
+          context : resolve(paths.source[env.version].fonts),
           from    : './**/*.*',
-          to      : resolve(config.paths.public[env.version].fonts),
+          to      : resolve(paths.public[env.version].fonts),
         },
         {
           // Copy all css from source to public
-          context : resolve(config.paths.source[env.version].css),
+          context : resolve(paths.source[env.version].css),
           from    : './*.css',
-          to      : resolve(config.paths.public[env.version].css),
+          to      : resolve(paths.public[env.version].css),
         },
         {
           // Styleguide Copy everything but css
-          context : resolve(config.paths.source[env.version].styleguide),
+          context : resolve(paths.source[env.version].styleguide),
           from    : './**/*',
-          to      : resolve(config.paths.public[env.version].root),
+          to      : resolve(paths.public[env.version].root),
           ignore  : ['*.css'],
         },
         {
           // Styleguide Copy and flatten css
-          context : resolve(config.paths.source[env.version].styleguide),
+          context : resolve(paths.source[env.version].styleguide),
           from    : './**/*.css',
-          to      : resolve(config.paths.public[env.version].styleguide, 'css'),
+          to      : resolve(paths.public[env.version].styleguide, 'css'),
           flatten : true,
         },
       ]),
@@ -102,8 +100,8 @@ module.exports = (env) => {
     devServer: {
       host             : '0.0.0.0',
       useLocalIp       : true,
-      contentBase      : resolve(config.paths.source[env.version].root),
-      port             : config.server.port,
+      contentBase      : resolve(paths.source[env.version].root),
+      port             : server.port,
       open             : true,
       watchContentBase : false,
 

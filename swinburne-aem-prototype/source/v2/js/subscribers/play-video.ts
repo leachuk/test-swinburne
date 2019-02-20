@@ -3,11 +3,11 @@ import {
   TOPIC_VIDEO_GLOBAL,
 } from '../utilities/constants'
 
-export default (event, originalEvent, type) => {
+export default (event: JQuery.Event, originalEvent: JQuery.TriggeredEvent, type: string) => {
   const $target = $(originalEvent.target)
 
   // Try and work out the context of how the event was triggered
-  let $video
+  let $video: JQuery | null = null
 
   // Trigger a global video popup that automatically plays the video if it is supported
   // by the <VideoPlayer /> component.
@@ -37,9 +37,9 @@ export default (event, originalEvent, type) => {
   }
 
   // If a video element was found, play the video instantly!
-  if ($video && $video.length) {
+  if ($video !== null) {
     const $videoPlayer = $video.find('video')
-    const promise      = $videoPlayer.get(0).play()
+    const promise      = (<HTMLVideoElement>$videoPlayer.get(0)).play()
 
     if (promise instanceof Promise) {
       promise.then(() => {

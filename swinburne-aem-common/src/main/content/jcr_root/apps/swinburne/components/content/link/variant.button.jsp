@@ -4,7 +4,7 @@
             <c:if test="${componentProperties.linkIconDirection eq 'left'}">
                 <i class="icon ${fn:join(componentProperties.linkIcon, ' ')}"></i>
             </c:if>
-                ${componentProperties.label}
+            <span class="link-text">${componentProperties.label}</span>
             <c:if test="${componentProperties.linkIconDirection eq 'right'}">
                 <i class="icon ${fn:join(componentProperties.linkIcon, ' ')}"></i>
             </c:if>

@@ -52,7 +52,7 @@ module.exports = env => {
     module: {
       rules: [
         {
-          test: /\.(css|sass|scss)$/,
+          test: /\.s(a|c)ss$/,
 
           use: [
             env.dev === true ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -84,7 +84,7 @@ module.exports = env => {
               loader: 'sass-loader',
 
               options: {
-                // implementation : require('sass'),
+                implementation : require('sass'),
                 outputStyle    : env.dev === true ? 'expanded' : 'compressed',
                 precision      : 8,
                 sourceMap      : env.dev === true,
@@ -187,7 +187,7 @@ module.exports = env => {
           common: {
             chunks             : 'async',
             enforce            : true,
-            minChunks          : 2,
+            minChunks          : 1,
             name               : 'common',
             priority           : 10,
             reuseExistingChunk : true,
@@ -267,10 +267,10 @@ module.exports = env => {
       new EventHooksPlugin({
         done() {
           if (env.deploy) {
-            const child = exec(`./deploy-front-end ${env.project}`)
+            // const child = exec(`./deploy-front-end ${env.project}`)
 
-            child.stdout.on('data', data => process.stdout.write(data))
-            child.stderr.on('data', data => process.stderr.write(data))
+            // child.stdout.on('data', data => process.stdout.write(data))
+            // child.stderr.on('data', data => process.stderr.write(data))
           }
         },
       }),

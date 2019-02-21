@@ -1,4 +1,22 @@
+@charset 'UTF-8';
+
 $styleguide-sidebar-width: 260px;
+
+@import
+  // Bootstrap internals
+  '~bootstrap/scss/functions',
+  '~bootstrap/scss/variables',
+
+  // Internals
+  '../../v2/scss/functions',
+  '../../v2/scss/variables',
+  '../../v2/scss/mixins',
+
+  // Bootstrap reset and base typography
+  '~bootstrap/scss/mixins',
+  '~bootstrap/scss/reboot',
+  '~bootstrap/scss/type'
+;
 
 html:not(.aem-AuthorLayer-Edit ) {
   .styleguide {

@@ -61,6 +61,7 @@
     "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.14.1",
+    "eslint-loader": "^2.1.2",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -118,14 +119,13 @@
     "aem:build": "./node_modules/.bin/webpack --env.prod --env.aem -p",
     "aem:generatetags": "node content-generator/generator.js --no-color",
     "aem:checkout": "rm -rf sync/* && tools/vault-cli/bin/vlt --credentials admin:admin checkout --force --filter .maven/content/META-INF/vault/filter.xml http://localhost:4502/crx ./sync",
-    "build": "./node_modules/.bin/webpack --env.clean --env.prod --env.deploy",
     "dev": "webpack --watch --env.clean --env.prod -p --env.aem --env.deploy",
-    "build:microsites": "./node_modules/.bin/webpack --env.clean --env.prod --env.deploy --env.project=v1",
-    "dev:microsites": "webpack --watch --env.clean --env.prod -p --env.aem --env.deploy --env.project=v1",
-    "build:swu": "./node_modules/.bin/webpack --env.clean --env.prod --env.deploy --env.project=v2",
-    "dev:swu": "webpack --watch --env.clean --env.prod -p --env.aem --env.deploy --env.project=v2",
-    "build:sg": "./node_modules/.bin/webpack --env.clean --env.prod --env.deploy --env.project=styleguide",
-    "dev:sg": "webpack --watch --env.clean --env.prod -p --env.aem --env.deploy --env.project=styleguide"
+    "build:microsites": "./node_modules/.bin/webpack --env.clean --env.dev --env.deploy --env.project=v1",
+    "dev:microsites": "webpack --watch --env.clean --env.dev --env.aem --env.deploy --env.project=v1",
+    "build:swu": "./node_modules/.bin/webpack --env.clean --env.dev --env.deploy --env.project=v2",
+    "dev:swu": "webpack --watch --env.clean --env.dev --env.aem --env.deploy --env.project=v2",
+    "build:sg": "./node_modules/.bin/webpack --env.clean --env.dev --env.deploy --env.project=styleguide",
+    "dev:sg": "webpack --watch --env.clean --env.dev --env.aem --env.deploy --env.project=styleguide"
   },
   "version": "0.0.1"
 }

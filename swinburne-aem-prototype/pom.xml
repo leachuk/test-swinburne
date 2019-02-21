@@ -127,7 +127,7 @@
 
           <!-- Microsites -->
           <execution>
-            <id>exec-aem-build-v1</id>
+            <id>exec-aem-build-microsites</id>
             <goals>
               <goal>yarn</goal>
             </goals>
@@ -136,7 +136,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>exec-aem-generate-tags-v1</id>
+            <id>exec-aem-generate-tags-microsites</id>
             <goals>
               <goal>yarn</goal>
             </goals>
@@ -146,9 +146,9 @@
             </configuration>
           </execution>
 
-          <!-- Study With Us (SWU) -->
+          <!-- Swinburne Global (Study With Us) -->
           <execution>
-            <id>exec-aem-build-v2</id>
+            <id>exec-aem-build-swinburne-global</id>
             <goals>
               <goal>yarn</goal>
             </goals>
@@ -157,7 +157,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>exec-aem-generate-tags-v2</id>
+            <id>exec-aem-generate-tags-swinburne-global</id>
             <goals>
               <goal>yarn</goal>
             </goals>

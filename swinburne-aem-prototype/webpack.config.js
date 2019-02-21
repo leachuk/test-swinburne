@@ -105,6 +105,12 @@ module.exports = env => {
         },
         {
           enforce : 'pre',
+          exclude : /node_modules/,
+          test    : /\.js$/,
+          use     : ['eslint-loader'],
+        },
+        {
+          enforce : 'pre',
           test    : /\.js$/,
           use     : ['source-map-loader'],
         },

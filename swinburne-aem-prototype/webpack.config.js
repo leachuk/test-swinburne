@@ -104,7 +104,7 @@ module.exports = env => {
         },
         {
           exclude : [resolve('node_modules')],
-          test    : /\.tsx?$/,
+          test    : /\.(j|t)sx?$/,
 
           use: [
             {
@@ -152,10 +152,7 @@ module.exports = env => {
                 context    : `source/${env.project}`,
                 emitFile   : env.dev === true,
                 name       : '[path][name].[ext]',
-
-                publicPath: (_, resourcePath, context) => {
-                  return env.aem === true ? `../${relative(context, resourcePath)}` : './public' // eslint-disable-line
-                },
+                publicPath : (_, resourcePath, context) => `../${relative(context, resourcePath)}`,
               },
             },
           ],

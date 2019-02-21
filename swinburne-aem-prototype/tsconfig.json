@@ -9,6 +9,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": false,
+    "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
@@ -43,6 +44,8 @@
   ],
 
   "exclude": [
-    "node_modules"
+    "public",
+    "node_modules",
+    "cypress"
   ]
 }

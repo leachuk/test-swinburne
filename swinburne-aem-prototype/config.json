@@ -2,6 +2,7 @@
   "v1": {
     "entryFile": "app.js",
     "outputName": "app",
+    "withTSLoader": false,
 
     "additionalEntries": {
       "vendors": [
@@ -24,6 +25,7 @@
   "v2": {
     "entryFile": "app.ts",
     "outputName": "app",
+    "withTSLoader": true,
 
     "additionalEntries": {
       "vendors": [
@@ -45,6 +47,7 @@
   "styleguide": {
     "entryFile": "styleguide.js",
     "outputName": "styleguide",
+    "withTSLoader": false,
 
     "additionalEntries": {}
   }

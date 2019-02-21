@@ -1,2 +1,0 @@
-../js/common.js
-../js/vendor/jquery.js

@@ -13,9 +13,7 @@ $styleguide-sidebar-width: 260px;
   '../../v2/scss/mixins',
 
   // Bootstrap reset and base typography
-  '~bootstrap/scss/mixins',
-  '~bootstrap/scss/reboot',
-  '~bootstrap/scss/type'
+  '~bootstrap/scss/mixins'
 ;
 
 html:not(.aem-AuthorLayer-Edit ) {
@@ -96,21 +94,29 @@ html:not(.aem-AuthorLayer-Edit ) {
 .styleguide {
   .icon[class*='col-sm'] {
     margin-bottom: $spacing-4xl;
+
     [class*="fa"] {
       font-size: 3em;
       color: $grey-2;
     }
+
     span {
-      text-align: center;
       display: block;
+      text-align: center;
+
       &:first-child {
         margin-bottom: $spacing-lg;
       }
-      &:last-child {}
     }
   }
+
   section.contentblock:not(:last-of-type) {
     margin-bottom: 30px;
+  }
+
+  article > div > .page-details {
+    background: url('../images/patterns/yellow.png')  0 100% repeat-x;
+    padding: $spacing-6xl $spacing-4xl $spacing-4xl;
   }
 }
 

@@ -84,7 +84,7 @@ module.exports = env => {
               loader: 'sass-loader',
 
               options: {
-                implementation : require('sass'),
+                // implementation : require('sass'),
                 outputStyle    : env.dev === true ? 'expanded' : 'compressed',
                 precision      : 8,
                 sourceMap      : env.dev === true,
@@ -96,14 +96,12 @@ module.exports = env => {
           exclude : [resolve('node_modules')],
           test    : /\.(j|t)sx?$/,
 
-          use: [
+          use: removeEmpty([
             {
               loader: 'babel-loader',
             },
-            {
-              loader: 'ts-loader',
-            },
-          ],
+            project.withTSLoader === true ? { loader: 'ts-loader' } : undefined,
+          ]),
         },
         {
           enforce : 'pre',
@@ -267,10 +265,10 @@ module.exports = env => {
       new EventHooksPlugin({
         done() {
           if (env.deploy) {
-            // const child = exec(`./deploy-front-end ${env.project}`)
+            const child = exec(`./deploy-front-end ${env.project}`)
 
-            // child.stdout.on('data', data => process.stdout.write(data))
-            // child.stderr.on('data', data => process.stderr.write(data))
+            child.stdout.on('data', data => process.stdout.write(data))
+            child.stderr.on('data', data => process.stderr.write(data))
           }
         },
       }),

@@ -15,6 +15,8 @@ const UglifyJsPlugin                                       = require('uglifyjs-w
 
 const { core, paths } = require('./config.json')
 
+const PUBLIC_PATH = resolve(__dirname, './public/')
+
 module.exports = env => {
   const { ifDev, ifProd } = getIfUtils(env)
 
@@ -33,9 +35,9 @@ module.exports = env => {
     },
 
     entry: {
-      'js/app': `./${env.project}/js/${core[env.project].entryFile}`,
+      'app': `./${env.project}/js/${core[env.project].entryFile}`,
 
-      'js/vendor': [
+      'vendor': [
         'es6-promise/auto',
         'object-fit-images',
         'picturefill',
@@ -46,12 +48,14 @@ module.exports = env => {
         'bootstrap/js/dist/tab',
       ],
 
-      'js/vendorlib/jquery'       : 'jquery',
-      'js/vendorlib/owl.carousel' : 'owl.carousel',
+      'vendorlib/jquery'       : 'jquery',
+      'vendorlib/owl.carousel' : 'owl.carousel',
     },
 
     output: {
-      chunkFilename : '[name].js',
+      filename      : 'js/[name].js',
+      chunkFilename : 'js/[name].js',
+      path          : resolve(PUBLIC_PATH, env.project),
       publicPath    : env.aem === true ? `/etc/clientlibs/${env.clientLibsFolder}/js/` : '/',
     },
 
@@ -109,14 +113,14 @@ module.exports = env => {
             {
               loader: 'ts-loader',
             },
-            {
-              loader: 'string-replace-loader',
+            // {
+            //   loader: 'string-replace-loader',
 
-              options: {
-                replace : '/vendorlib',
-                search  : '/js/vendorlib',
-              },
-            },
+            //   options: {
+            //     replace : '/vendorlib',
+            //     search  : '/js/vendorlib',
+            //   },
+            // },
           ],
         },
         {
@@ -166,19 +170,21 @@ module.exports = env => {
           parallel  : true,
           sourceMap : env.dev === true,
 
-          // ecma     : 6,
-          // mangle   : false,
-          // warnings : false,
+          uglifyOptions: {
+            ecma     : 6,
+            mangle   : false,
+            warnings : false,
 
-          // compress: {
-          //   drop_console : true,
-          //   warnings     : false,
-          // },
+            compress: {
+              drop_console : true,
+              warnings     : false,
+            },
 
-          // output: {
-          //   beautify: false,
-          //   comments: false,
-          // },
+            output: {
+              beautify: false,
+              comments: false,
+            },
+          },
         }),
         new OptimizeCSSAssetsPlugin({
           canPrint     : true,
@@ -207,19 +213,12 @@ module.exports = env => {
             priority           : 10,
             reuseExistingChunk : true,
           },
-
-          vendor: {
-            chunks   : 'all',
-            name     : 'vendor',
-            priority : 20,
-            test     : /node_modules/,
-          },
         },
       },
     },
 
     plugins: removeEmpty([
-      env.clean === true ? new CleanWebpackPlugin(['./public/']) : undefined,
+      env.clean === true ? new CleanWebpackPlugin([PUBLIC_PATH]) : undefined,
       new MiniCssExtractPlugin({
         filename      : 'css/[name].css',
         chunkFilename : 'css/[id].css',
@@ -306,12 +305,12 @@ module.exports = env => {
       })),
       new EventHooksPlugin({
         done() {
-          // if (env.deploy) {
-          //   const child = exec(`./deploy-front-end ${env.project}`)
+          if (env.deploy) {
+            const child = exec(`./deploy-front-end ${env.project}`)
 
-          //   child.stdout.on('data', data => process.stdout.write(data))
-          //   child.stderr.on('data', data => process.stderr.write(data))
-          // }
+            child.stdout.on('data', data => process.stdout.write(data))
+            child.stderr.on('data', data => process.stderr.write(data))
+          }
         },
       }),
     ]),

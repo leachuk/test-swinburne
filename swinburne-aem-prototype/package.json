@@ -45,6 +45,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.0.0",
     "@types/bootstrap": "^4.2.2",
+    "@types/cssnano": "^4.0.0",
     "@types/fastclick": "^1.0.28",
     "@types/jquery": "^3.3.29",
     "@types/lodash": "^4.14.121",

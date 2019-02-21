@@ -18,8 +18,8 @@ const { core, paths } = require('./config.json')
 module.exports = env => {
   const { ifDev, ifProd } = getIfUtils(env)
 
-  if (!env.version) {
-    console.log('Specify a version when running webpack eg --env.version="microsites"')
+  if (!env.project) {
+    console.log('Specify a project when running webpack eg --env.project="microsites"')
     return
   }
 
@@ -33,7 +33,7 @@ module.exports = env => {
     },
 
     entry: {
-      'js/app': `./${env.version}/js/${core[env.version].entryFile}`,
+      'js/app': `./${env.project}/js/${core[env.project].entryFile}`,
 
       'js/vendor': [
         'es6-promise/auto',
@@ -104,10 +104,10 @@ module.exports = env => {
 
           use: [
             {
-              loader: 'ts-loader',
+              loader: 'babel-loader',
             },
             {
-              loader: 'babel-loader',
+              loader: 'ts-loader',
             },
             {
               loader: 'string-replace-loader',
@@ -145,7 +145,7 @@ module.exports = env => {
             {
               loader: 'file-loader',
               options: {
-                context    : `source/${env.version}`,
+                context    : `source/${env.project}`,
                 emitFile   : env.dev === true,
                 name       : '[path][name].[ext]',
 
@@ -227,40 +227,40 @@ module.exports = env => {
       new CopyWebpackPlugin([
         {
           // Copy all images from source to public
-          context: resolve(paths.source[env.version].images),
+          context: resolve(paths.source[env.project].images),
           from: './**/*.*',
-          to: resolve(paths.public[env.version].images),
+          to: resolve(paths.public[env.project].images),
         },
         {
           // Copy favicon from source to public
-          context: resolve(paths.source[env.version].root),
+          context: resolve(paths.source[env.project].root),
           from: './*.ico',
-          to: resolve(paths.public[env.version].root),
+          to: resolve(paths.public[env.project].root),
         },
         {
           // Copy all web fonts from source to public
-          context: resolve(paths.source[env.version].fonts),
+          context: resolve(paths.source[env.project].fonts),
           from: './**/*.*',
-          to: resolve(paths.public[env.version].fonts),
+          to: resolve(paths.public[env.project].fonts),
         },
         {
           // Copy all css from source to public
-          context: resolve(paths.source[env.version].css),
+          context: resolve(paths.source[env.project].css),
           from: './*.css',
-          to: resolve(paths.public[env.version].css),
+          to: resolve(paths.public[env.project].css),
         },
         {
           // Styleguide Copy everything but css
-          context: resolve(paths.source[env.version].styleguide),
+          context: resolve(paths.source[env.project].styleguide),
           from: './**/*',
-          to: resolve(paths.public[env.version].root),
+          to: resolve(paths.public[env.project].root),
           ignore: ['*.css'],
         },
         {
           // Styleguide Copy and flatten css
-          context: resolve(paths.source[env.version].styleguide),
+          context: resolve(paths.source[env.project].styleguide),
           from: './**/*.css',
-          to: resolve(paths.public[env.version].styleguide, 'css'),
+          to: resolve(paths.public[env.project].styleguide, 'css'),
           flatten: true,
         },
       ]),
@@ -307,7 +307,7 @@ module.exports = env => {
       new EventHooksPlugin({
         done() {
           // if (env.deploy) {
-          //   const child = exec(`./deploy-front-end ${env.version}`)
+          //   const child = exec(`./deploy-front-end ${env.project}`)
 
           //   child.stdout.on('data', data => process.stdout.write(data))
           //   child.stderr.on('data', data => process.stderr.write(data))

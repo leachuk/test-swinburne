@@ -15,9 +15,7 @@ export default () => {
   console.info('[Subscribers] Loading...')
 
   subscribers.forEach((subscriber) => {
-    const subscriberTree: {
-      default: (event: JQuery.Event, originalEvent: JQuery.TriggeredEvent, type: string) => {},
-    } = require(`../subscribers/${subscriber}`)
+    const subscriberTree: SubscriberTree = require(`../subscribers/${subscriber}`)
 
     if (typeof subscriberTree === 'object') {
       console.info(`[Subscribers] Getting '${subscriber}' ready...`)
@@ -33,7 +31,7 @@ export default () => {
             const originalEvent = event as JQuery.TriggeredEvent
 
             subscriberTree.default(event, originalEvent, (originalEvent && originalEvent.type) || '')
-          }
+          },
         )
 
       console.info(`[Subscribers] '${subscriber}' is now subscribed!`)

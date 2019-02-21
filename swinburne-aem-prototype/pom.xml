@@ -167,6 +167,17 @@
             </configuration>
           </execution>
 
+          <!-- Design Language System (DLS) -->
+          <execution>
+            <id>exec-aem-build-styleguide</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide</arguments>
+            </configuration>
+          </execution>
+
           <!-- AEM Design (internal)  -->
           <execution>
             <id>exec-aem-generate-tags-aemdesign</id>

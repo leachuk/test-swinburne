@@ -13,9 +13,10 @@ const OptimizeCSSAssetsPlugin                              = require('optimize-c
 const TsconfigPathsPlugin                                  = require('tsconfig-paths-webpack-plugin')
 const UglifyJsPlugin                                       = require('uglifyjs-webpack-plugin')
 
-const { core, paths } = require('./config.json')
+const config = require('./config.json')
 
-const PUBLIC_PATH = resolve(__dirname, './public/')
+const PUBLIC_PATH = resolve(__dirname, 'public')
+const SOURCE_PATH = resolve(__dirname, 'source')
 
 module.exports = env => {
   const { ifDev, ifProd } = getIfUtils(env)
@@ -25,9 +26,11 @@ module.exports = env => {
     return
   }
 
+  const project = config[env.project]
+
   return {
+    context : SOURCE_PATH,
     devtool : ifDev('source-map'),
-    context : resolve(__dirname, 'source'),
     mode    : env.dev === true ? 'development' : 'production',
 
     node: {
@@ -35,21 +38,8 @@ module.exports = env => {
     },
 
     entry: {
-      'app': `./${env.project}/js/${core[env.project].entryFile}`,
-
-      'vendor': [
-        'es6-promise/auto',
-        'object-fit-images',
-        'picturefill',
-        'bootstrap/js/dist/util',
-        'bootstrap/js/dist/collapse',
-        'bootstrap/js/dist/dropdown',
-        'bootstrap/js/dist/modal',
-        'bootstrap/js/dist/tab',
-      ],
-
-      'vendorlib/jquery'       : 'jquery',
-      'vendorlib/owl.carousel' : 'owl.carousel',
+      [project.outputName]: `./${env.project}/js/${project.entryFile}`,
+      ...project.additionalEntries,
     },
 
     output: {
@@ -113,14 +103,6 @@ module.exports = env => {
             {
               loader: 'ts-loader',
             },
-            // {
-            //   loader: 'string-replace-loader',
-
-            //   options: {
-            //     replace : '/vendorlib',
-            //     search  : '/js/vendorlib',
-            //   },
-            // },
           ],
         },
         {
@@ -222,42 +204,24 @@ module.exports = env => {
       }),
       new CopyWebpackPlugin([
         {
-          // Copy all images from source to public
-          context: resolve(paths.source[env.project].images),
-          from: './**/*.*',
-          to: resolve(paths.public[env.project].images),
+          context : resolve(SOURCE_PATH, env.project),
+          from    : './*.ico',
+          to      : resolve(PUBLIC_PATH, env.project),
         },
         {
-          // Copy favicon from source to public
-          context: resolve(paths.source[env.project].root),
-          from: './*.ico',
-          to: resolve(paths.public[env.project].root),
+          context : resolve(SOURCE_PATH, env.project, 'images'),
+          from    : './**/*.*',
+          to      : resolve(PUBLIC_PATH, env.project, 'images'),
         },
         {
-          // Copy all web fonts from source to public
-          context: resolve(paths.source[env.project].fonts),
-          from: './**/*.*',
-          to: resolve(paths.public[env.project].fonts),
+          context : resolve(SOURCE_PATH, env.project, 'fonts'),
+          from    : './**/*.*',
+          to      : resolve(PUBLIC_PATH, env.project, 'fonts'),
         },
         {
-          // Copy all css from source to public
-          context: resolve(paths.source[env.project].css),
-          from: './*.css',
-          to: resolve(paths.public[env.project].css),
-        },
-        {
-          // Styleguide Copy everything but css
-          context: resolve(paths.source[env.project].styleguide),
-          from: './**/*',
-          to: resolve(paths.public[env.project].root),
-          ignore: ['*.css'],
-        },
-        {
-          // Styleguide Copy and flatten css
-          context: resolve(paths.source[env.project].styleguide),
-          from: './**/*.css',
-          to: resolve(paths.public[env.project].styleguide, 'css'),
-          flatten: true,
+          context : resolve(SOURCE_PATH, env.project, 'css'),
+          from    : './*.css',
+          to      : resolve(PUBLIC_PATH, env.project, 'css'),
         },
       ]),
       new ImageminPlugin({

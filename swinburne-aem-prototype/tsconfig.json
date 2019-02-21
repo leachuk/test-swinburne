@@ -1,16 +1,31 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
     "baseUrl": ".",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext",
+
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+
+    "paths": {
+      "@global/*": [
+        "source/v2/js/*"
+      ]
+    },
+
     "types": [
       "webpack-env",
       "bootstrap",
@@ -18,24 +33,15 @@
       "jquery",
       "lodash",
       "pubsub-js"
-    ],
-    "paths": {
-      "@global/*": [
-        "source/v2/js/*"
-      ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
     ]
   },
+
   "include": [
     "source/**/*.ts",
     "source/**/*.tsx",
     "source/**/*.vue"
   ],
+
   "exclude": [
     "node_modules"
   ]

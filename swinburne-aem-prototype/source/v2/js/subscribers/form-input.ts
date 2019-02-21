@@ -4,6 +4,8 @@ import {
   EVENT_TYPE_KEYUP,
 } from '../utilities/constants'
 
+type InputCallback = (($target: JQuery, $input: JQuery, event: JQuery.TriggeredEvent) => boolean) | null;
+
 /**
  * Handles the behaviour of the input field when a user is typing.
  *
@@ -53,11 +55,12 @@ function handleClearInputButton($target: JQuery, $input: JQuery, event: JQuery.T
 }
 
 export default (event: JQuery.Event, originalEvent: JQuery.TriggeredEvent, type: string) => {
-  const $target = $(originalEvent.target)
+  const $target: JQuery = $(originalEvent.target)
 
-  let $input           = $target
-  let callbackFunction = null
-  let preventDefault   = false
+  let $input         = $target
+  let preventDefault = false
+
+  let callbackFunction: InputCallback = null
 
   // Is the target an input field? If so detect key events and toggle the clear button
   if ($input.is(':text') && (type === EVENT_TYPE_KEYDOWN || type === EVENT_TYPE_KEYUP)) {

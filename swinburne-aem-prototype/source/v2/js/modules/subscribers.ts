@@ -14,12 +14,15 @@ const subscribers = [
 export default () => {
   console.info('[Subscribers] Loading...')
 
-  subscribers.forEach(subscriber => {
-    const subscriberTree = require(`@global/subscribers/${subscriber}`)
+  subscribers.forEach((subscriber) => {
+    const subscriberTree: {
+      default: (event: JQuery.Event, originalEvent: JQuery.TriggeredEvent, type: string) => {},
+    } = require(`../subscribers/${subscriber}`)
 
     if (typeof subscriberTree === 'object') {
       console.info(`[Subscribers] Getting '${subscriber}' ready...`)
-      let localEvents = events.map(event => `${event}.${subscriber}`).join(' ')
+
+      const localEvents = events.map((event) => `${event}.${subscriber}`).join(' ')
 
       // Applies `event`, `originalEvent` to the callback function
       $(document.body)

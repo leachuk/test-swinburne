@@ -17,7 +17,7 @@ $(() => {
   FastClick.attach(document.body)
 
   // Listen for clicks on the body
-  $(document.body).on('click', e => {
+  $(document.body).on('click', (e) => {
     const $suggestions = $('.suggestions')
     const $target      = $(e.target)
 
@@ -37,7 +37,6 @@ $(() => {
   //HashLinks()
 
   // 'object-fit' polyfill for unsupported browsers
-  // tslint:disable-next-line
   ObjectFitImages()
 
   // Open all the 'collapse' elements on the page when in author

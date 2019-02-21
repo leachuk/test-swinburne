@@ -181,15 +181,6 @@ module.exports = env => {
         cacheGroups: {
           default: false,
           vendors: false,
-
-          common: {
-            chunks             : 'async',
-            enforce            : true,
-            minChunks          : 1,
-            name               : 'common',
-            priority           : 10,
-            reuseExistingChunk : true,
-          },
         },
       },
     },

@@ -1,2 +1,1 @@
-../js/common.js
-../js/vendor/jquery.js
+../js/vendorlib/jquery.js

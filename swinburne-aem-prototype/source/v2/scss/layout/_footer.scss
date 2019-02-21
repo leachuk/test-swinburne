@@ -8,30 +8,6 @@
     line-height: 22px;
   }
 
-  a.link[component] {
-    align-items: center;
-    display: inline-flex;
-
-    // With an icon
-    // NOTE: This should be replaced with a proper icon using the link component itself once SWU-415 has been completed!
-    &[href^='mailto:']::before,
-    &[href^='tel:']::before {
-      @extend .fal;
-
-      display: block;
-      font-size: 16px;
-      margin-right: 10px;
-    }
-
-    &[href^='mailto:']::before {
-      @extend .fa-envelope:before;
-    }
-
-    &[href^='tel:']::before {
-      @extend .fa-phone:before;
-    }
-  }
-
   &__global {
     padding: 20px 5px;
 

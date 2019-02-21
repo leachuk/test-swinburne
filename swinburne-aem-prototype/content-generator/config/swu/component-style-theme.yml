@@ -393,6 +393,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--lists-light
     title: 'Lighter Colour Links'
 
+  lists/direction/horizontal:
+    flat: true
+    prefix: theme--lists-horizontal
+    title: 'Horizontal'    
+
   lists/justify:
     breakpoints:
       - sm

@@ -1,17 +1,18 @@
 /* eslint-disable */
-const exec                                                 = require('child_process').exec
 const { getIfUtils, removeEmpty }                          = require('webpack-config-utils')
-const { ProvidePlugin, LoaderOptionsPlugin, DefinePlugin } = require('webpack')
-const { relative, resolve }                                = require('path')
-const CleanWebpackPlugin                                   = require('clean-webpack-plugin')
-const CopyWebpackPlugin                                    = require('copy-webpack-plugin')
-const EventHooksPlugin                                     = require('event-hooks-webpack-plugin')
-const ImageminPlugin                                       = require('imagemin-webpack-plugin').default
-const LodashPlugin                                         = require('lodash-webpack-plugin')
-const MiniCssExtractPlugin                                 = require('mini-css-extract-plugin')
-const OptimizeCSSAssetsPlugin                              = require('optimize-css-assets-webpack-plugin')
-const TsconfigPathsPlugin                                  = require('tsconfig-paths-webpack-plugin')
-const UglifyJsPlugin                                       = require('uglifyjs-webpack-plugin')
+const { DefinePlugin, LoaderOptionsPlugin, ProvidePlugin } = require('webpack')
+
+const exec                    = require('child_process').exec
+const { relative, resolve }   = require('path')
+const CleanWebpackPlugin      = require('clean-webpack-plugin')
+const CopyWebpackPlugin       = require('copy-webpack-plugin')
+const EventHooksPlugin        = require('event-hooks-webpack-plugin')
+const ImageminPlugin          = require('imagemin-webpack-plugin').default
+const LodashPlugin            = require('lodash-webpack-plugin')
+const MiniCssExtractPlugin    = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const TsconfigPathsPlugin     = require('tsconfig-paths-webpack-plugin')
+const UglifyJsPlugin          = require('uglifyjs-webpack-plugin')
 
 const config = require('./config.json')
 
@@ -26,11 +27,13 @@ module.exports = env => {
     return
   }
 
+  const PUBLIC_PATH_AEM = `/etc/clientlibs/${env.clientLibsFolder || 'swinburne'}/js/`
+
   const project = config[env.project]
 
   return {
     context : SOURCE_PATH,
-    devtool : ifDev('source-map'),
+    devtool : ifDev('inline-source-map'),
     mode    : env.dev === true ? 'development' : 'production',
 
     node: {
@@ -46,7 +49,7 @@ module.exports = env => {
       filename      : 'js/[name].js',
       chunkFilename : 'js/[name].js',
       path          : resolve(PUBLIC_PATH, env.project),
-      publicPath    : env.aem === true ? `/etc/clientlibs/${env.clientLibsFolder}/js/` : '/',
+      publicPath    : PUBLIC_PATH_AEM,
     },
 
     module: {
@@ -55,7 +58,7 @@ module.exports = env => {
           test: /\.s(a|c)ss$/,
 
           use: [
-            env.dev === true ? 'style-loader' : MiniCssExtractPlugin.loader,
+            MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
 
@@ -105,7 +108,7 @@ module.exports = env => {
         },
         {
           enforce : 'pre',
-          exclude : /node_modules/,
+          exclude : [resolve('node_modules'), resolve('source/v1')],
           test    : /\.js$/,
           use     : ['eslint-loader'],
         },

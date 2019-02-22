@@ -14,6 +14,11 @@
     <filter root="/etc/clientlibs/swinburne/v2/js"/>
     <filter root="/etc/clientlibs/swinburne/v2/images"/>
 
+    <filter root="/etc/clientlibs/swinburne/styleguide/css"/>
+    <filter root="/etc/clientlibs/swinburne/styleguide/fonts"/>
+    <filter root="/etc/clientlibs/swinburne/styleguide/js"/>
+    <filter root="/etc/clientlibs/swinburne/styleguide/images"/>
+
     <filter root="/content/cq:tags/swinburne/content-type" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-topic" mode="update"/>
     <filter root="/content/cq:tags/swinburne/component-style-theme" mode="update"/>

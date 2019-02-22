@@ -4,15 +4,15 @@
   "retainLines": true,
 
   "presets": [
-    ["@babel/preset-react"],
     ["@babel/preset-env", {
-      "modules": "umd",
+      "modules": false,
       "useBuiltIns": "usage"
-    }]
+    }],
+    "@babel/preset-typescript"
   ],
 
   "plugins": [
-    "react-hot-loader/babel",
-    "@babel/plugin-proposal-class-properties"
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
   ]
 }

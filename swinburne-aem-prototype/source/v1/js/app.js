@@ -4,10 +4,8 @@ import '../scss/app.scss'
 
 // Core modules...
 import Carousels from './modules/carousel'
-import HashLinks from './modules/hash-links'
 import ParallaxImage from './modules/parallaximage'
 import LoadMore from './modules/load-more'
-import Renderers from './modules/renderers'
 import Subscribers from './modules/subscribers'
 import NavToggler from './modules/navtoggler'
 import FancyBox from './modules/fancybox'
@@ -44,17 +42,11 @@ $(() => {
   // to reduce the weight of the page.
   Carousels()
 
-  // Renders any React components
-  Renderers()
-
   // Bind the pub/sub event subscribers
   Subscribers()
 
   // Brand header
   ParallaxImage()
-
-  // Take over any hash links on the page so they correctly jump to the content
-  //HashLinks()
 
   NavToggler();
 

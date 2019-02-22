@@ -127,16 +127,16 @@
 
           <!-- Microsites -->
           <execution>
-            <id>exec-aem-build-v1</id>
+            <id>exec-aem-build-microsites</id>
             <goals>
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.version=v1 --env.clean</arguments>
+              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v1 --env.clean</arguments>
             </configuration>
           </execution>
           <execution>
-            <id>exec-aem-generate-tags-v1</id>
+            <id>exec-aem-generate-tags-microsites</id>
             <goals>
               <goal>yarn</goal>
             </goals>
@@ -146,24 +146,35 @@
             </configuration>
           </execution>
 
-          <!-- Study With Us (SWU) -->
+          <!-- Swinburne Global (Study With Us) -->
           <execution>
-            <id>exec-aem-build-v2</id>
+            <id>exec-aem-build-swinburne-global</id>
             <goals>
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.version=v2</arguments>
+              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v2</arguments>
             </configuration>
           </execution>
           <execution>
-            <id>exec-aem-generate-tags-v2</id>
+            <id>exec-aem-generate-tags-swinburne-global</id>
             <goals>
               <goal>yarn</goal>
             </goals>
             <configuration>
               <arguments> - -stack_size=8192</arguments>
               <arguments>run aem:generatetags --no-clean --config=swu.yml</arguments>
+            </configuration>
+          </execution>
+
+          <!-- Design Language System (DLS) -->
+          <execution>
+            <id>exec-aem-build-styleguide</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide</arguments>
             </configuration>
           </execution>
 
@@ -316,25 +327,6 @@
           </execution>
 
           <execution>
-            <id>copy-css-vault-resources-forms-v2</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/forms/default/css</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v2/css</directory>
-                  <includes>
-                    <include>theme.css</include>
-                  </includes>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
             <id>copy-image-vault-resources-v2</id>
             <phase>generate-resources</phase>
             <goals>
@@ -377,9 +369,73 @@
               <resources>
                 <resource>
                   <directory>public/v2/js</directory>
-                  <excludes>
-                    <exclude>styleguide.js</exclude>
-                  </excludes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-css-vault-resources-styleguide</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/css</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/styleguide/css</directory>
+                  <includes>
+                    <include>styleguide.css</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-image-vault-resources-styleguide</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/images</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/styleguide/images</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-fonts-vault-resources-styleguide</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/fonts</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/styleguide/fonts</directory>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>copy-js-vault-resources-styleguide</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/js</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>public/styleguide/js</directory>
                 </resource>
               </resources>
             </configuration>

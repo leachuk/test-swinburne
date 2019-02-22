@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <!-- ====================================================================== -->
-    <!-- P A R E N T    P R O J E C T    D E S C R I P T I O N                  -->
-    <!-- ====================================================================== -->
-    <parent>
-        <groupId>edu.au.swinburne.aem</groupId>
-        <artifactId>swinburne-parent</artifactId>
-        <version>0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+  <!-- ====================================================================== -->
+  <!-- P A R E N T    P R O J E C T    D E S C R I P T I O N                  -->
+  <!-- ====================================================================== -->
+  <parent>
+      <groupId>edu.au.swinburne.aem</groupId>
+      <artifactId>swinburne-parent</artifactId>
+      <version>0.1-SNAPSHOT</version>
+      <relativePath>../pom.xml</relativePath>
+  </parent>
 
-    <!-- ====================================================================== -->
-    <!-- P R O J E C T    D E S C R I P T I O N                                 -->
-    <!-- ====================================================================== -->
+  <!-- ====================================================================== -->
+  <!-- P R O J E C T    D E S C R I P T I O N                                 -->
+  <!-- ====================================================================== -->
 
-    <groupId>edu.au.swinburne.aem</groupId>
-    <artifactId>swinburne-aem-prototype</artifactId>
-    <packaging>content-package</packaging>
-    <name>swinburne :: swinburne :: parent :: aem-prototype</name>
-    <description>Style Guide for Swinburne project</description>
-    <version>0.1-SNAPSHOT</version>
+  <groupId>edu.au.swinburne.aem</groupId>
+  <artifactId>swinburne-aem-prototype</artifactId>
+  <packaging>content-package</packaging>
+  <name>swinburne :: swinburne :: parent :: aem-prototype</name>
+  <description>Style Guide for Swinburne project</description>
+  <version>0.1-SNAPSHOT</version>
 
   <properties>
     <sonar.sources>source,pom.xml</sonar.sources>
@@ -132,7 +132,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v1 --env.clean</arguments>
+              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v1 --env.clean</arguments>
             </configuration>
           </execution>
           <execution>
@@ -153,7 +153,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v2</arguments>
+              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v2</arguments>
             </configuration>
           </execution>
           <execution>
@@ -174,7 +174,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>aem:build --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide</arguments>
+              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide</arguments>
             </configuration>
           </execution>
 
@@ -229,9 +229,6 @@
               <resources>
                 <resource>
                   <directory>public/v1/css</directory>
-                  <includes>
-                    <include>app.css</include>
-                  </includes>
                 </resource>
               </resources>
             </configuration>
@@ -301,6 +298,7 @@
                   <directory>public/v1/js</directory>
                   <excludes>
                     <exclude>styleguide.js</exclude>
+                    <exclude>styleguide.js.map</exclude>
                   </excludes>
                 </resource>
               </resources>
@@ -318,9 +316,6 @@
               <resources>
                 <resource>
                   <directory>public/v2/css</directory>
-                  <includes>
-                    <include>app.css</include>
-                  </includes>
                 </resource>
               </resources>
             </configuration>
@@ -385,9 +380,6 @@
               <resources>
                 <resource>
                   <directory>public/styleguide/css</directory>
-                  <includes>
-                    <include>styleguide.css</include>
-                  </includes>
                 </resource>
               </resources>
             </configuration>

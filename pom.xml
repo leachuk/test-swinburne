@@ -69,6 +69,7 @@
         <package.contentFolder>swinburne</package.contentFolder>
         <package.confFolder>swinburne</package.confFolder>
         <package.clientLibsFolder>swinburne</package.clientLibsFolder>
+        <package.npmCommand>aem:build</package.npmCommand>
         <package.classNamespace>edu.au.swinburne</package.classNamespace>
         <package.uploadProtocol>http</package.uploadProtocol>
         <aem.verison>6.4</aem.verison>

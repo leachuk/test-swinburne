@@ -6,11 +6,10 @@ if [ ! -d "sync/" ]; then
   exit
 fi
 
-# TODO: Remove this and extract folder name from POM file
-CLIENT_LIBS_FOLDER="swinburne"
+CLIENT_LIBS_FOLDER=$(cat pom.xml | sed -n 's:.*<package\.clientLibsFolder>\(.*\)</package\.clientLibsFolder>.*:\1:p')
 
 echo Copying files from public to sync
 cp -r public/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}
 
 echo Launching VLT
-cd sync && ../tools/vault-cli/bin/vlt --verbose --credentials admin:admin ci --force  ./jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}
+cd sync && ../tools/vault-cli/bin/vlt --verbose --credentials admin:admin commit --force ./jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}

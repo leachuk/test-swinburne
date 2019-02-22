@@ -1,8 +1,12 @@
 {
   "v1": {
-    "entryFile": "app.js",
     "outputName": "app",
     "withTSLoader": false,
+
+    "entryFile": {
+      "js": "app.js",
+      "sass": "app.scss"
+    },
 
     "additionalEntries": {
       "vendors": [
@@ -23,9 +27,13 @@
   },
 
   "v2": {
-    "entryFile": "app.ts",
     "outputName": "app",
     "withTSLoader": true,
+
+    "entryFile": {
+      "js": "app.ts",
+      "sass": "app.scss"
+    },
 
     "additionalEntries": {
       "vendors": [
@@ -45,9 +53,13 @@
   },
 
   "styleguide": {
-    "entryFile": "styleguide.js",
     "outputName": "styleguide",
-    "withTSLoader": false,
+    "withTSLoader": true,
+
+    "entryFile": {
+      "js": "styleguide.ts",
+      "sass": "styleguide.scss"
+    },
 
     "additionalEntries": {}
   }

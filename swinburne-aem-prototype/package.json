@@ -1,9 +1,5 @@
 {
   "author": "Chris Shaw <chris.shaw@isobar.com>",
-  "browserslist": [
-    "> 1%",
-    "ie > 10"
-  ],
   "contributors": [
     {
       "name": "Chris Shaw",

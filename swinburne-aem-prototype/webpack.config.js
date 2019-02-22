@@ -111,7 +111,9 @@ module.exports = env => {
             {
               loader: 'babel-loader',
             },
-            project.withTSLoader === true ? { loader: 'ts-loader' } : undefined,
+            {
+              loader: 'ts-loader',
+            },
           ]),
         },
         {

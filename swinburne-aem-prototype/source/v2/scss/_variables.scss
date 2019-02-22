@@ -2,45 +2,45 @@
 
 $brand-colours: (
   'core': (
-    c1  : #DC2D27,
-    c2  : #FFD200,
-    c3  : #242323,
-    c4  : #85C441,
-    c5  : #00AEEF,
-    c6  : #883681,
-    c7  : #00BED8,
-    c8  : #21201E,
-    c9  : #ffffff,
-    c10 : #292625,
-    c11 : #d9d5d1,
+    c1:  #dc2d27,
+    c2:  #ffd200,
+    c3:  #242323,
+    c4:  #85c441,
+    c5:  #00aeef,
+    c6:  #883681,
+    c7:  #00bed8,
+    c8:  #21201e,
+    c9:  #fff,
+    c10: #292625,
+    c11: #d9d5d1,
   ),
 
   'grey': (
     g1: #242323,
     g2: #737578,
-    g3: #A5A5A5,
-    g4: #D1D1D1,
-    g5: #E2E2E2,
-    g6: #F6F6F6,
+    g3: #a5a5a5,
+    g4: #d1d1d1,
+    g5: #e2e2e2,
+    g6: #f6f6f6,
     g7: $white,
   ),
 );
 
-$primary   : map-deep-get($brand-colours, 'core', 'c1');
-$secondary : map-deep-get($brand-colours, 'core', 'c2');
-$tertiary  : map-deep-get($brand-colours, 'core', 'c3');
-$color-4   : map-deep-get($brand-colours, 'core', 'c4');
-$color-5   : map-deep-get($brand-colours, 'core', 'c5');
-$color-6   : map-deep-get($brand-colours, 'core', 'c6');
-$color-7   : map-deep-get($brand-colours, 'core', 'c7');
+$primary:    map-deep-get($brand-colours, 'core', 'c1');
+$secondary:  map-deep-get($brand-colours, 'core', 'c2');
+$tertiary:   map-deep-get($brand-colours, 'core', 'c3');
+$color-4:    map-deep-get($brand-colours, 'core', 'c4');
+$color-5:    map-deep-get($brand-colours, 'core', 'c5');
+$color-6:    map-deep-get($brand-colours, 'core', 'c6');
+$color-7:    map-deep-get($brand-colours, 'core', 'c7');
 
 // Lighten colours
-$primary-50   : #ED9693;
-$secondary-50 : #FFF589;
-$color-4-50   : #C2E1A0;
-$color-5-50   : #7FD6F7;
-$color-6-50   : #C39AC0;
-$color-7-50   : #7DFEEB;
+$primary-50:   #ed9693;
+$secondary-50: #fff589;
+$color-4-50:   #c2e1a0;
+$color-5-50:   #7fd6f7;
+$color-6-50:   #c39ac0;
+$color-7-50:   #7dfeeb;
 
 // Grey colours
 $grey-1: map-deep-get($brand-colours, 'grey', 'g1');
@@ -51,9 +51,9 @@ $grey-5: map-deep-get($brand-colours, 'grey', 'g5');
 $grey-6: map-deep-get($brand-colours, 'grey', 'g6');
 
 $theme-colors: (
-  'primary'   : $primary,
-  'secondary' : $secondary,
-  'tertiary'  : $tertiary,
+  'primary':   $primary,
+  'secondary': $secondary,
+  'tertiary':  $tertiary,
 
   'c1': map-deep-get($brand-colours, 'core', 'c1'),
   'c2': map-deep-get($brand-colours, 'core', 'c2'),
@@ -98,17 +98,17 @@ $spacers: (
 
 // Spacing variables
 
-$spacing-2xs : 5px;
-$spacing-xs  : 10px;
-$spacing-sm  : 15px;
-$spacing-md  : 20px;
-$spacing-lg  : 25px;
-$spacing-2xl : 30px;
-$spacing-3xl : 35px;
-$spacing-4xl : 40px;
-$spacing-5xl : 45px;
-$spacing-6xl : 50px;
-$spacing-7xl : 55px;
+$spacing-2xs: 5px;
+$spacing-xs:  10px;
+$spacing-sm:  15px;
+$spacing-md:  20px;
+$spacing-lg:  25px;
+$spacing-2xl: 30px;
+$spacing-3xl: 35px;
+$spacing-4xl: 40px;
+$spacing-5xl: 45px;
+$spacing-6xl: 50px;
+$spacing-7xl: 55px;
 
 
 // Components
@@ -333,13 +333,13 @@ $paragraph-margin-bottom: 16px;
 
 // Grid breakpoints
 
- $grid-breakpoints: (
-   xs: 0,
-   sm: 320px,
-   md: 640px,
-   lg: 1024px,
-   xl: 1366px,
- );
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 640px,
+  lg: 1024px,
+  xl: 1366px,
+);
 
 
 // Grid containers

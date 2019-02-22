@@ -4,7 +4,20 @@
     "stylelint-config-twbs-bootstrap/scss"
   ],
   "rules": {
+    "function-max-empty-lines": null,
+    "indentation": [2, {
+      "message": "Please use 2 spaces for indentation!",
+      "severity": "error"
+    }],
+    "max-nesting-depth": [3, {
+      "ignore": ["pseudo-classes"],
+      "ignoreAtRules": ["at-root"]
+    }],
+    "string-quotes": ["single", {
+      "message": "Single quotes provide a more consistent experience, please use them 😉",
+      "severity": "error"
+    }],
+    "value-list-max-empty-lines": null,
     "scss/dollar-variable-default": null,
-    "string-quotes": "single"
   }
 }

@@ -35,7 +35,8 @@ module.exports = ({ env }) => ({
     cssnano: env === 'production' ? true : false,
 
     'postcss-reporter': {
-      clearReportedMessages: true,
+      clearReportedMessages : true,
+      throwError            : true,
     },
   },
 });

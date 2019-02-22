@@ -271,10 +271,10 @@ module.exports = env => {
       new EventHooksPlugin({
         done() {
           if (env.deploy) {
-            // const child = exec(`./deploy-front-end ${env.project}`)
+            const child = exec(`./deploy-front-end ${env.project}`)
 
-            // child.stdout.on('data', data => process.stdout.write(data))
-            // child.stderr.on('data', data => process.stderr.write(data))
+            child.stdout.on('data', data => process.stdout.write(data))
+            child.stderr.on('data', data => process.stderr.write(data))
           }
         },
       }),

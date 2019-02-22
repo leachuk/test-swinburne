@@ -13,15 +13,3 @@ div[class*='colctrl']:not([class*='col-']) {
     padding-right: 0;
   }
 }
-
-@include media-breakpoint-down(sm) {
-  div[class*="col-"] {
-    &.col-sm {
-      width: 100%;
-      display: block;
-      max-width: 100%;
-      flex-basis: inherit;
-      flex-grow: inherit;
-    }
-  }
-}

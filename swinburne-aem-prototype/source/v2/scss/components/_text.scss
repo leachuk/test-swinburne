@@ -3,18 +3,31 @@
 // These styles directly affect AEM components, they should not introduce any new
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
+
+.text {
+  @include clearfix;
+
+  color: $tertiary;
+
+  p,
+  a,
+  ul,
+  li {
+    font-size: 12px;
+    line-height: 23px;
+    font-weight: 400;
+
+    @include media-breakpoint-up(md) {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+}
+
 .title,
 .text[component] {
   color: $tertiary;
-  p, a, ul, li {
-    font-size: 12pt;
-    line-height: 23pt;
-    font-weight: 400;
-    @include media-breakpoint-up(md) {
-      font-size: 14pt;
-      line-height: 30pt;
-    }
-  }
+
   &.text--underlined > *,
   .text--cap-underline,
   h1, h2, h3, h4 {

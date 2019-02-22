@@ -1,13 +1,12 @@
 .navlist {
+  @include list-unstyled;
   @include make-container;
-  background-color: $white;
 
+  background-color: $white;
   border-bottom: 0;
   border-top: 0;
   padding-bottom: $spacing-sm;
   padding-top: $spacing-sm;
-
-  @include list-unstyled;
 
   li {
     line-height: rem-calc(20px);

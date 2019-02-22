@@ -77,6 +77,7 @@ $theme-colors: (
   'g7': map-deep-get($brand-colours, 'grey', 'g7'),
 );
 
+
 // Body
 
 $body-bg:                   theme-color('g7');
@@ -116,77 +117,6 @@ $grid-gutter    : 5.5;
 $grid-gutter-sm : 9;
 $grid-gutter-lg : 13;
 $grid-gutter-xl : 12;
-
-
-// UC Spacing conventions
-// Vertical Spacing \\
-// margin-bottom: map-deep-get($spacersVertical, 'lg', 'Y.5');
-$spacersVertical: (
-  'sm': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(36px),
-    'Y2.5' : rem-calc(48px),
-    'Y3'   : rem-calc(54px),
-    'Y4'   : rem-calc(72px),
-  ),
-  'md': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(48px),
-    'Y2.5' : rem-calc(54px),
-    'Y3'   : rem-calc(72px),
-    'Y4'   : rem-calc(96px),
-  ),
-  'lg': (
-    'Y.5'  : rem-calc(16px),
-    'Y.75' : rem-calc(24px),
-    'Y1'   : rem-calc(32px),
-    'Y1.5' : rem-calc(48px),
-    'Y2'   : rem-calc(64px),
-    'Y2.5' : rem-calc(72px),
-    'Y3'   : rem-calc(96px),
-    'Y4'   : rem-calc(128px),
-  )
-);
-// Horizontal Spacing \\
-// margin-bottom: map-deep-get($spacersHorizontal, 'lg', 'Y.5');
-$spacersHorizontal: (
-  'sm': (
-    'Y.5'  : rem-calc(8px),
-    'Y.75' : rem-calc(12px),
-    'Y1'   : rem-calc(16px),
-    'Y1.5' : rem-calc(24px),
-    'Y2'   : rem-calc(32px),
-    'Y2.5' : rem-calc(36px),
-    'Y3'   : rem-calc(48px),
-    'Y4'   : rem-calc(64px),
-  ),
-  'md': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(48px),
-    'Y2.5' : rem-calc(54px),
-    'Y3'   : rem-calc(72px),
-    'Y4'   : rem-calc(96px),
-  ),
-  'lg': (
-    'Y.5'  : rem-calc(16px),
-    'Y.75' : rem-calc(24px),
-    'Y1'   : rem-calc(32px),
-    'Y1.5' : rem-calc(48px),
-    'Y2'   : rem-calc(64px),
-    'Y2.5' : rem-calc(72px),
-    'Y3'   : rem-calc(96px),
-    'Y4'   : rem-calc(128px),
-  )
-);
 
 
 // Components

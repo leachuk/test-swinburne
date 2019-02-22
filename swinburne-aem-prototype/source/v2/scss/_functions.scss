@@ -18,6 +18,8 @@
 /// @param {Boolean} $unitless - Should the unit be stripped away?
 /// @return {Number} - A REM number
 @function rem-calc($size: 16px, $unitless: false) {
+  @warn '`rem-calc()` is deprecated, please migrate to `px` units!';
+
   // This is a tiny hack that ensures 'null' and 'rem' values get returned straight away
   @if type-of($size) != number or str-index('#{$size}', rem) != null {
     @return $size;
@@ -29,8 +31,6 @@
   @if $unitless {
     @return strip-unit($size);
   }
-
-
 
   @return $size * 1rem;
 }

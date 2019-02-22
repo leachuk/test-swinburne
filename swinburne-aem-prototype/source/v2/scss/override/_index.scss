@@ -4,12 +4,12 @@
 // care when making changes as we shouldn't be duplicating styles that Bootstrap
 // generates for us automatically.
 
-@import 'align',
-'breadcrumb',
-'button',
-'card',
-'grid',
-'nav',
-'navbar',
-'image'
+@import
+  'breadcrumb',
+  'button',
+  'card',
+  'grid',
+  'image',
+  'nav',
+  'navbar'
 ;

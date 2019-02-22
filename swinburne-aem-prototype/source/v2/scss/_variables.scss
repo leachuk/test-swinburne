@@ -1,8 +1,5 @@
 // Colours
 
-$black: #000;
-$white: #fff;
-
 $brand-colours: (
   'core': (
     c1  : #DC2D27,
@@ -113,11 +110,6 @@ $spacing-5xl : 45px;
 $spacing-6xl : 50px;
 $spacing-7xl : 55px;
 
-$grid-gutter    : 5.5;
-$grid-gutter-sm : 9;
-$grid-gutter-lg : 13;
-$grid-gutter-xl : 12;
-
 
 // Components
 //
@@ -133,10 +125,9 @@ $border-radius-sm:            0;
 
 // Fonts
 
-$font-family-base:            'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-$font-family-open-sans:       'Open Sans', sans-serif;
-$font-family-brush-up:        'BrushUp', sans-serif;
 $font-family-awesome:         'Font Awesome 5 Pro';
+$font-family-open-sans:       'Open Sans', sans-serif;
+$font-family-base:            $font-family-open-sans;
 
 $font-size-base:              16px;
 // $font-size-lg:                ($font-size-base * 1.25);
@@ -161,19 +152,13 @@ $lead-font-weight:            normal;
 
 
 // Options
-$enable-rounded:            false;
 
-// Buttons
-$btn-border-radius: 4px;
-$btn-secondary-yellow-color: #ffeb16;
-$btn-secondary-yellow-border-color: #fbb946;
-$btn-secondary-charcoal-hover-color: #58595b;
-$btn-secondary-primary-border-color: #ad1914;
+$enable-rounded:            false;
 
 
 // Animation
-$animation-speed : 300ms;
 
+$animation-speed:           300ms;
 
 
 // Icons
@@ -186,13 +171,6 @@ $icon-sizes: (
   xl: 96px,
 );
 
-// Spacing
-
-$container-spacers: (
-  sm : 16px,
-  md : 36px,
-  lg : 64px
-);
 
 // Custom typography map for responsive headings and text
 
@@ -337,7 +315,7 @@ $typography: (
 
 // Grid generic
 
-$aem-prefix: 'aem-Grid';
+$aem-prefix:     'aem-Grid';
 $aem-prefix-col: 'aem-GridColumn';
 
 $aem-breakpoints: (
@@ -348,38 +326,33 @@ $aem-breakpoints: (
 );
 
 
-
 // Paragraphs
-//
-// Style p element.
 
 $paragraph-margin-bottom: 16px;
 
 
 // Grid breakpoints
+
  $grid-breakpoints: (
    xs: 0,
    sm: 320px,
    md: 640px,
    lg: 1024px,
-   xl: 1366px
+   xl: 1366px,
  );
 
+
 // Grid containers
+
 $container-max-widths: (
   xl: 1366px
 );
 
-$screen-sm: 320px;
-$screen-md: 640px;
-$screen-lg: 1024px;
-
-//Max queries
-$screen-sm-max: 639px;
-
 
 // Grid columns
+
 $grid-gutter-width: 26px;
+
 
 // Navs
 
@@ -450,3 +423,10 @@ $btn-padding-x-lg:            $btn-padding-x;
 $btn-line-height-lg:          $btn-line-height;
 
 $btn-border-width:            0;
+
+$btn-border-radius:           4px;
+
+$btn-secondary-charcoal-hover-color:    #58595b;
+$btn-secondary-primary-border-color:    #ad1914;
+$btn-secondary-yellow-border-color:     #fbb946;
+$btn-secondary-yellow-color:            #ffeb16;

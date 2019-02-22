@@ -4,9 +4,9 @@
 // care when making changes as we shouldn't be duplicating styles that Bootstrap
 // generates for us automatically.
 
-.breadcrumb {
-  font-weight: 300;
+.breadcrumb[component] {
   font-size: 14px;
+  font-weight: 300;
 
   &-item {
     a {
@@ -18,10 +18,10 @@
       padding-left: $spacing-sm;
 
       &:before {
+        content: '\F054';
+        font-family: $font-family-awesome;
         font-size: 11px;
         font-weight: 300;
-        font-family: $font-family-awesome;
-        content: "\F054";
         padding-right: $spacing-sm;
       }
     }
@@ -32,16 +32,9 @@
         font-weight: 300;
       }
 
-      .bg-dark & {
-        :not(a) {
-          color: $grey-3;
-        }
+      .bg-dark & :not(a) {
+        color: $grey-3;
       }
     }
-  }
-
-  // Nested '.breadcrumb' fix
-  > .breadcrumb {
-    margin-bottom: 0;
   }
 }

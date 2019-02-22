@@ -1,44 +1,3 @@
-// Container
-@mixin container() {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-//Custom grid gutter
-@mixin grid-gutter($gutter) {
-  .row {
-    margin-left: -#{$gutter}px;
-    margin-right: -#{$gutter}px;
-    & > [class*=col-] {
-      padding-left: #{$gutter}px;
-      padding-right: #{$gutter}px;
-    }
-  }
-}
-
-// code snippet styling
-@mixin code-snippet() {
-  font-family: monospace;
-}
-
-// =============================================================================
-// String Replace
-// =============================================================================
-
-@function str-replace($string, $search, $replace: "") {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
-}
-
 // =============================================================================
 // Font Face
 // =============================================================================
@@ -105,6 +64,11 @@
   // Change the `$selector` so it reflects the default if one is set
   @if not $no-default {
     $selector: unquote(map-get($config, default-selector));
+  }
+
+  // Should the selector be extended?
+  @if map-has-key($config, extend-to) {
+    $selector: unquote('#{$selector}, #{map-get($config, extend-to)}');
   }
 
   // Loop through each breakpoint and set the styles
@@ -279,6 +243,18 @@
       > div {
         @content;
       }
+    }
+  }
+}
+
+/// Custom grid gutter
+@mixin grid-gutter($gutter) {
+  .row {
+    margin-left: -#{$gutter}px;
+    margin-right: -#{$gutter}px;
+    & > [class*=col-] {
+      padding-left: #{$gutter}px;
+      padding-right: #{$gutter}px;
     }
   }
 }

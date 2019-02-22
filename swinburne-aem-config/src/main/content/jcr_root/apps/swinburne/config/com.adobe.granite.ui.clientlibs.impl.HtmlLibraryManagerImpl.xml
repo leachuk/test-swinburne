@@ -12,7 +12,7 @@
     htmllibmanager.debug="{Boolean}false"
     htmllibmanager.forceCQUrlInfo="{Boolean}false"
     htmllibmanager.processor.css="[min:gcc]"
-    htmllibmanager.minify="{Boolean}true"
+    htmllibmanager.minify="{Boolean}false"
     htmllibmanager.debug.init.js="window.CQ_initial_log_level\='INFO';"
     htmllibmanager.excluded.path.list="[/etc/commerce/classifications,/etc/commerce/collections,/etc/commerce/payment-methods,/etc/commerce/products,/etc/commerce/shipping-methods,/etc/reports/auditreport,/etc/reports/compreport,/etc/segmentation,/etc/taskmanagement,/etc/workflow/instances]"
     htmllibmanager.defaultthemename="default"

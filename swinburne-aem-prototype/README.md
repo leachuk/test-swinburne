@@ -35,8 +35,8 @@ When you have VLT synced locally you can now run the command needed for the proj
 - Watch for changes and sync into AEM: `yarn dev:swu`
 
 #### DLS (Styleguide)
-- Build directly into AEM: `yarn build:styleguide`
-- Watch for changes and sync into AEM: `yarn dev:styleguide`
+- Build directly into AEM: `yarn build:sg`
+- Watch for changes and sync into AEM: `yarn dev:sg`
 
 The styleguide is its own project to remove any duplicate/irrelevant code from the final website builds. This allows us to have specific deployments for DLS while maintaining a clean codebase for other projects.
 

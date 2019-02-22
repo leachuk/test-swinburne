@@ -57,8 +57,8 @@ $(() => {
   EmbedMedia();
 
   // 'object-fit' polyfill for unsupported browsers
-  /* global objectFitImages */
-  objectFitImages()
+  /* global ObjectFitImages */
+  ObjectFitImages()
 
   // Open all the 'collapse' elements on the page when in author
   if (isAuthorEditMode()) {

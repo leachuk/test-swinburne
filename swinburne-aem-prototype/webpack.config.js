@@ -1,17 +1,17 @@
 /* eslint-disable */
-const exec                                                 = require('child_process').exec
 const { getIfUtils, removeEmpty }                          = require('webpack-config-utils')
-const { ProvidePlugin, LoaderOptionsPlugin, DefinePlugin } = require('webpack')
-const { relative, resolve }                                = require('path')
-const CleanWebpackPlugin                                   = require('clean-webpack-plugin')
-const CopyWebpackPlugin                                    = require('copy-webpack-plugin')
-const EventHooksPlugin                                     = require('event-hooks-webpack-plugin')
-const ImageminPlugin                                       = require('imagemin-webpack-plugin').default
-const LodashPlugin                                         = require('lodash-webpack-plugin')
-const MiniCssExtractPlugin                                 = require('mini-css-extract-plugin')
-const OptimizeCSSAssetsPlugin                              = require('optimize-css-assets-webpack-plugin')
-const TsconfigPathsPlugin                                  = require('tsconfig-paths-webpack-plugin')
-const UglifyJsPlugin                                       = require('uglifyjs-webpack-plugin')
+const { DefinePlugin, LoaderOptionsPlugin, ProvidePlugin } = require('webpack')
+
+const CleanWebpackPlugin      = require('clean-webpack-plugin')
+const CopyWebpackPlugin       = require('copy-webpack-plugin')
+const EventHooksPlugin        = require('event-hooks-webpack-plugin')
+const ImageminPlugin          = require('imagemin-webpack-plugin').default
+const LodashPlugin            = require('lodash-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const TsconfigPathsPlugin     = require('tsconfig-paths-webpack-plugin')
+const UglifyJsPlugin          = require('uglifyjs-webpack-plugin')
+const exec                    = require('child_process').exec
+const { relative, resolve }   = require('path')
 
 const config = require('./config.json')
 
@@ -26,27 +26,29 @@ module.exports = env => {
     return
   }
 
+  const PUBLIC_PATH_AEM = `/etc/clientlibs/${env.clientLibsFolder || 'swinburne'}/`
+
   const project = config[env.project]
 
   return {
     context : SOURCE_PATH,
-    devtool : ifDev('source-map'),
+    devtool : ifDev('inline-source-map'),
     mode    : env.dev === true ? 'development' : 'production',
 
-    node: {
-      fs: 'empty',
-    },
-
     entry: {
-      [project.outputName]: `./${env.project}/js/${project.entryFile}`,
+      [project.outputName]: [
+        `./${env.project}/js/${project.entryFile.js}`,
+        `./${env.project}/scss/${project.entryFile.sass}`,
+      ],
+
       ...project.additionalEntries,
     },
 
     output: {
       filename      : 'js/[name].js',
-      chunkFilename : 'js/[name].js',
+      chunkFilename : 'js/[name].[chunkhash].js',
       path          : resolve(PUBLIC_PATH, env.project),
-      publicPath    : env.aem === true ? `/etc/clientlibs/${env.clientLibsFolder}/js/` : '/',
+      publicPath    : PUBLIC_PATH_AEM,
     },
 
     module: {
@@ -55,7 +57,16 @@ module.exports = env => {
           test: /\.s(a|c)ss$/,
 
           use: [
-            env.dev === true ? 'style-loader' : MiniCssExtractPlugin.loader,
+            {
+              loader: 'file-loader',
+
+              options: {
+                name: 'css/[name].css',
+              },
+            },
+            {
+              loader: 'extract-loader',
+            },
             {
               loader: 'css-loader',
 
@@ -100,12 +111,14 @@ module.exports = env => {
             {
               loader: 'babel-loader',
             },
-            project.withTSLoader === true ? { loader: 'ts-loader' } : undefined,
+            {
+              loader: 'ts-loader',
+            },
           ]),
         },
         {
           enforce : 'pre',
-          exclude : /node_modules/,
+          exclude : [resolve('node_modules'), resolve('source/v1')],
           test    : /\.js$/,
           use     : ['eslint-loader'],
         },
@@ -193,10 +206,6 @@ module.exports = env => {
 
     plugins: removeEmpty([
       env.clean === true ? new CleanWebpackPlugin([PUBLIC_PATH]) : undefined,
-      new MiniCssExtractPlugin({
-        filename      : 'css/[name].css',
-        chunkFilename : 'css/[id].css',
-      }),
       new CopyWebpackPlugin([
         {
           context : resolve(SOURCE_PATH, env.project),

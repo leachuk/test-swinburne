@@ -13,11 +13,20 @@
       "ignore": ["pseudo-classes"],
       "ignoreAtRules": ["at-root"]
     }],
+    "selector-no-qualifying-type": [true, {
+      "ignore": ["class"]
+    }],
+    "selector-pseudo-element-colon-notation": ["double", {
+      "message": "2️::colons are better than one!",
+      "severity": "error"
+    }],
     "string-quotes": ["single", {
       "message": "Single quotes provide a more consistent experience, please use them 😉",
       "severity": "error"
     }],
     "value-list-max-empty-lines": null,
+    "order/properties-alphabetical-order": true,
+    "order/properties-order": null,
     "scss/dollar-variable-default": null,
   }
 }

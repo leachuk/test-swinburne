@@ -17,7 +17,7 @@
     + .breadcrumb-item {
       padding-left: $spacing-sm;
 
-      &:before {
+      &::before {
         content: '\F054';
         font-family: $font-family-awesome;
         font-size: 11px;

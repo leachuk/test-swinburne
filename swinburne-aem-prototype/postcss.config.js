@@ -1,6 +1,7 @@
+/* eslint-disable */
 module.exports = ({ env }) => ({
   plugins: {
-    'stylelint': {},
+    'stylelint': true,
 
     'postcss-pxtorem': {
       replace       : true,
@@ -35,8 +36,7 @@ module.exports = ({ env }) => ({
     cssnano: env === 'production' ? true : false,
 
     'postcss-reporter': {
-      clearReportedMessages : true,
-      throwError            : true,
+      clearReportedMessages: true,
     },
   },
 });

@@ -41,6 +41,7 @@ $card-top-bar-height: 18px;
       // In browsers that don't support object-fit we use a polyfill, for icons that are SVG we need to
       // ensure they scale to the parent container rather than covering the whole element.
       &[data-ofi-src$='svg'] {
+        // stylelint-disable-next-line
         background-size: auto !important;
       }
     }
@@ -104,7 +105,7 @@ $card-top-bar-height: 18px;
 
       &::after {
         @extend .fal;
-        @extend .fa-long-arrow-right:before;
+        @extend .fa-long-arrow-right::before;
 
         display: block;
         font-size: 17px;
@@ -123,9 +124,7 @@ $card-top-bar-height: 18px;
   }
 
   // Variations and style changes
-  @import
-    'card/taglist-share'
-  ;
+  @import 'card/taglist-share';
 
   // Nested within a carousel
   .owl-item & {

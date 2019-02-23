@@ -1,4 +1,4 @@
-// stylelint-disable declaration-no-important
+/* stylelint-disable declaration-no-important */
 
 // Font weights
 @each $weight in 300 400 600 700 {
@@ -26,3 +26,5 @@
     }
   }
 }
+
+/* stylelint-enable declaration-no-important */

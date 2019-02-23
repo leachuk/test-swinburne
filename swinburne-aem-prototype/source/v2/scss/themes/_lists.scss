@@ -1,4 +1,4 @@
-// stylelint-disable declaration-no-important
+/* stylelint-disable declaration-no-important */
 
 &--lists {
   @import 'lists/list-horizontal';
@@ -51,3 +51,5 @@
     }
   }
 }
+
+/* stylelint-enable declaration-no-important */

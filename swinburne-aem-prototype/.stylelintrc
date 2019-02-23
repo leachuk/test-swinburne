@@ -14,7 +14,10 @@
       "ignore": ["pseudo-classes"],
       "ignoreAtRules": ["at-root", "each", "include"]
     }],
+    "number-leading-zero": "never",
     "selector-class-pattern": null,
+    "selector-list-comma-newline-after": "always-multi-line",
+    "selector-max-id": 1,
     "selector-max-type": [2, {
       "ignore": "child"
     }],

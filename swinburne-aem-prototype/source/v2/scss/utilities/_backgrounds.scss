@@ -1,4 +1,4 @@
-// stylelint-disable declaration-no-important
+/* stylelint-disable declaration-no-important */
 
 $colors: (
   red          : $primary,      // 1
@@ -45,3 +45,5 @@ $colors: (
     }
   }
 }
+
+/* stylelint-enable declaration-no-important */

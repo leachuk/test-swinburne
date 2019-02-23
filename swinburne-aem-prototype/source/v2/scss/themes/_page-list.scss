@@ -1,6 +1,4 @@
 &--page-list {
-  @import
-    'page-list/layout',
-    'page-list/social-links'
-  ;
+  @import 'page-list/layout';
+  @import 'page-list/social-links';
 }

@@ -1,7 +1,7 @@
+// stylelint-disable declaration-no-important
+
 &--lists {
-  @import
-    'lists/list-horizontal'
-  ;
+  @import 'lists/list-horizontal';
 
   // Alignments & justifications
   $alignments: (

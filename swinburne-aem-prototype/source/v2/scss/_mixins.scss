@@ -6,19 +6,19 @@
   $src: null;
 
   $extmods: (
-    eot: "?",
-    svg: "#" + str-replace($name, " ", "_")
+    eot: '?',
+    svg: '#' + str-replace($name, ' ', '_')
   );
 
   $formats: (
-    otf: "opentype",
-    ttf: "truetype"
+    otf: 'opentype',
+    ttf: 'truetype'
   );
 
   @each $ext in $exts {
     $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
   }
 
   @font-face {
@@ -34,16 +34,13 @@
 /// @param {String} $fit - How should the image scale to its parent?
 /// @param {String} $position - The offset for the image
 @mixin object-fit($fit: fill, $position: null) {
-  -o-object-fit: $fit;
-     object-fit: $fit;
+  object-fit: $fit;
 
   @if $position {
-	  -o-object-position: $position;
-	     object-position: $position;
-
     font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+    object-position: $position;
   } @else {
-  	font-family: 'object-fit: #{$fit}';
+    font-family: 'object-fit: #{$fit}';
   }
 }
 
@@ -125,7 +122,7 @@
 
 ///
 @mixin iphone-x($gutter: $grid-gutter-width / 2) {
-  @supports(padding: #{'max(0px)'}) {
+  @supports (padding: #{'max(0px)'}) {
     & {
       @include iphone-x-prop('padding-left', $gutter);
       @include iphone-x-prop('padding-right', $gutter);
@@ -168,9 +165,9 @@
 ) {
   position: relative;
 
-  &:before {
-    display: block;
+  &::before {
     content: '';
+    display: block;
     padding-top: aspect-ratio($width, $height);
     width: 100%;
   }
@@ -215,8 +212,8 @@
 @mixin truncate() {
   display: table;
   table-layout: fixed;
-  width: 100%;
   white-space: nowrap;
+  width: 100%;
 
   > * {
     display: table-cell;
@@ -227,7 +224,7 @@
 
 /// Page List variant generator
 @mixin pagelist-variant($selector: false, $selector-only: true) {
-  $selector : if($selector != false, unquote($selector), $selector);
+  $selector: if($selector != false, unquote($selector), $selector);
 
   @if $selector-only == true {
     #{if($selector != false, unquote($selector), '')} > .content {
@@ -252,7 +249,8 @@
   .row {
     margin-left: -#{$gutter}px;
     margin-right: -#{$gutter}px;
-    & > [class*=col-] {
+
+    & > [class*='col-'] {
       padding-left: #{$gutter}px;
       padding-right: #{$gutter}px;
     }

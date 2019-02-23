@@ -1,7 +1,5 @@
 .theme {
-  @import
-    'lists',
-    'page-list',
-    'video'
-  ;
+  @import 'lists';
+  @import 'page-list';
+  @import 'video';
 }

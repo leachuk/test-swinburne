@@ -450,11 +450,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: fw-700
     title: 'Font Weight (Bolder)'
 
-  font/font-open-sans:
-    flat: true
-    prefix: f-open-sans
-    title: 'Font Family (Open sans)'
-
   # text/list/colors:
   #   prefixes:
   #     - list-dark

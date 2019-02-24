@@ -42,6 +42,6 @@
     "value-list-max-empty-lines": null,
     "order/properties-alphabetical-order": true,
     "order/properties-order": null,
-    "scss/dollar-variable-default": null,
+    "scss/dollar-variable-default": null
   }
 }

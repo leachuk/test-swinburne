@@ -46,13 +46,15 @@
       @include hover {
         $border-hover-colour: if($border-hover-colour != null, $border-hover-colour, $hover-colour);
 
-        background-color: $hover-colour;
-        border-color: if($border-hover-colour != null, $border-hover-colour, $hover-colour);
-        color: $text-colour;
+        &:not(:active) {
+          background-color: $hover-colour;
+          border-color: if($border-hover-colour != null, $border-hover-colour, $hover-colour);
+          color: $text-colour;
 
-        @if $is-secondary-outline == true {
-          .bg-dark &::before {
-            border-bottom-color: $white;
+          @if $is-secondary-outline == true {
+            .bg-dark &::before {
+              border-bottom-color: $white;
+            }
           }
         }
       }
@@ -69,7 +71,7 @@
 
   @include hover {
     // Hover padding offset to account for the box shadow that appears
-    &:not(.btn-link) {
+    &:not(.btn-link):not(:active) {
       .link-text,
       &::after {
         transform: translateY(-2px);
@@ -167,7 +169,7 @@
     }
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     // When the button isn't `.btn-lg` or `.btn-sm`, set the button styles correctly for mobile
     // devices which inherit the `.btn-sm` styles.
     &:not(&-sm):not(&-lg) {

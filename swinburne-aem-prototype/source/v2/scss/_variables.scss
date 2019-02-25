@@ -423,9 +423,10 @@ $btn-line-height-lg:          $line-height-base;
 
 $btn-font-weight:             600;
 $btn-box-shadow:              none;
-$btn-focus-width:             false;
-$btn-focus-box-shadow:        false;
+$btn-focus-width:             null;
+$btn-focus-box-shadow:        null;
 $btn-disabled-opacity:        1;
+$btn-active-box-shadow:       null;
 
 $btn-border-radius:           3px;
 $btn-border-radius-lg:        $btn-border-radius;

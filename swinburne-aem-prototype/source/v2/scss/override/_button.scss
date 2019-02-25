@@ -43,20 +43,29 @@
         border-bottom-color: $shadow-colour;
       }
 
-      @include hover {
+      &:not(:active) {
         $border-hover-colour: if($border-hover-colour != null, $border-hover-colour, $hover-colour);
 
-        &:not(:active) {
+        @include hover {
           background-color: $hover-colour;
           border-color: if($border-hover-colour != null, $border-hover-colour, $hover-colour);
           color: $text-colour;
 
           @if $is-secondary-outline == true {
-            .bg-dark &::before {
-              border-bottom-color: $white;
+            .bg-dark & {
+              border-color: currentColor;
+              color: $white;
+
+              &::before {
+                border-bottom-color: $white;
+              }
             }
           }
         }
+      }
+
+      &:active {
+        color: $text-colour;
       }
 
       @if $is-secondary-outline == true {

@@ -485,16 +485,10 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     valueFormat: card-outline-%%prefix%%
     title: 'Outline - %%prefix_normalised%%'
 
-  card/promoted:
-    prefixes:
-      - dark
-      - yellow
-    valueFormat: card--promoted-%%prefix%%
-    title: '%%prefix_normalised%%'
-
   cards/direction:
     prefix: cards-horizontal
     title: 'Horizontal'
+
 
   # Embed
   embed/default:

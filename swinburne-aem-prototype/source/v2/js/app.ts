@@ -3,7 +3,6 @@ import '../scss/app.scss'
 // Core modules...
 import Carousels from '@global/modules/carousel'
 import Subscribers from '@global/modules/subscribers'
-import PromotedCard from '@global/modules/promoted-card'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -36,8 +35,6 @@ $(() => {
 
   // Take over any hash links on the page so they correctly jump to the content
   //HashLinks()
-
-  PromotedCard();
 
   // 'object-fit' polyfill for unsupported browsers
   ObjectFitImages()

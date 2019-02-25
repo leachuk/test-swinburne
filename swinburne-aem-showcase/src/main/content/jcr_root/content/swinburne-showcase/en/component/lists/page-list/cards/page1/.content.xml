@@ -14,17 +14,20 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page-details
-                        cq:tags="[swinburne-showcase:content-type/page/article]"
-                        jcr:mixinTypes="[cq:Taggable]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/details/page-details"
-                        badgeLinkText="Overridden text"
-                        description="Page with Licensed Page Image, with non-Licensed Secondary Image and with Background non-Licensed Image"
-                        showBreadcrumb="false"
-                        showParsys="false"
-                        showToolbar="false"
-                        textIsRich="true"
-                        title="Page1">
+                    cq:tags="[swinburne-showcase:content-type/page/article]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    badgeLinkText="Overridden text"
+                    cardStyle="[swinburne-showcase:component-style-modifier/card/promoted/yellow]"
+                    componentId="page-details_KTNZO2AK6"
+                    description="Page with Licensed Page Image, with non-Licensed Secondary Image and with Background non-Licensed Image"
+                    showBreadcrumb="false"
+                    showParsys="false"
+                    showToolbar="false"
+                    textIsRich="true"
+                    title="Page1"
+                    titleType="[,]">
                     <secondaryImage
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"
@@ -33,6 +36,12 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/media/image"
                         fileReference="/content/dam/swinburne-showcase/en/components/media/image/city3.jpg"/>
+                    <thumbnail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <ogImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
                 </page-details>
             </par>
         </article>

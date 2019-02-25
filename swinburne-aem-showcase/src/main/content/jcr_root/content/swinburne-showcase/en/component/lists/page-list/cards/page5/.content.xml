@@ -34,6 +34,7 @@
                     sling:resourceType="swinburne/components/details/page-details"
                     badgeLinkStyle="[swinburne:component-style-modifier/button/normal/link]"
                     badgeLinkText="[READ MORE ON PAGE 5]"
+                    componentId="page-details_YMAXQQVWS"
                     description="Page 5 Page Details and Page with Page Image, Contact and Event Details"
                     showBreadcrumb="false"
                     showParsys="false"

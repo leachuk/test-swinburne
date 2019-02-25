@@ -115,7 +115,6 @@ $spacing-7xl: 55px;
 //
 // Define common padding and border radius sizes and more.
 
-$border-width:                1px;
 $border-color:                theme-color('c6');
 
 $border-radius:               0;
@@ -126,14 +125,11 @@ $border-radius-sm:            0;
 // Fonts
 
 $font-family-awesome:         'Font Awesome 5 Pro';
-$font-family-open-sans:       'Open Sans', sans-serif;
-$font-family-base:            $font-family-open-sans;
+$font-family-base:            'Open Sans', sans-serif;
 
 $font-size-base:              16px;
-// $font-size-lg:                ($font-size-base * 1.25);
-// $font-size-sm:                ($font-size-base * .875);
 
-$line-height-base:            24px;
+$line-height-base:            22px;
 
 $h1-font-size:                60px;
 $h2-font-size:                40px;
@@ -153,12 +149,12 @@ $lead-font-weight:            normal;
 
 // Options
 
-$enable-rounded:            false;
+$enable-rounded:            true;
 
 
 // Animation
 
-$animation-speed:           300ms;
+$animation-speed:           150ms;
 
 
 // Icons
@@ -410,21 +406,32 @@ $card-bg:                           transparent;
 
 // Buttons
 
-$btn-padding-y:               15px;
-$btn-padding-x:               30px;
-$btn-line-height:             rem-calc(20px);
+$btn-padding-y:               0;
+$btn-padding-x:               20px;
+$btn-font-size:               12px;
+$btn-line-height:             $line-height-base;
 
-$btn-padding-y-sm:            8px;
-$btn-padding-x-sm:            15px;
-$btn-line-height-sm:          rem-calc(16px);
+$btn-padding-y-sm:            0;
+$btn-padding-x-sm:            20px;
+$btn-font-size-sm:            10px;
+$btn-line-height-sm:          14px;
 
-$btn-padding-y-lg:            $btn-padding-y;
-$btn-padding-x-lg:            $btn-padding-x;
-$btn-line-height-lg:          $btn-line-height;
+$btn-padding-y-lg:            0;
+$btn-padding-x-lg:            20px;
+$btn-font-size-lg:            14px;
+$btn-line-height-lg:          $line-height-base;
 
-$btn-border-width:            0;
+$btn-font-weight:             600;
+$btn-box-shadow:              none;
+$btn-focus-width:             false;
+$btn-focus-box-shadow:        false;
+$btn-disabled-opacity:        1;
 
-$btn-border-radius:           4px;
+$btn-border-radius:           3px;
+$btn-border-radius-lg:        $btn-border-radius;
+$btn-border-radius-sm:        $btn-border-radius;
+
+
 
 $btn-secondary-charcoal-hover-color:    #58595b;
 $btn-secondary-primary-border-color:    #ad1914;

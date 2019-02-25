@@ -32,7 +32,7 @@ $colors: (
 .bg-dark {
   background-color: $tertiary !important;
 
-  *:not(a) {
+  *:not(.link):not(.link-text) {
     color: $white;
   }
 

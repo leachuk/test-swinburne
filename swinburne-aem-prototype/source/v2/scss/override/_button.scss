@@ -7,41 +7,86 @@
 .btn {
   align-items: center;
   display: inline-flex;
-  letter-spacing: 1px;
+  height: 50px;
+  letter-spacing: -.5px;
+  min-width: 175px;
+  position: relative;
 
-  // Override the primary hover colour
-  &-primary:hover {
-    background-color: theme-color('c1');
+  // Colour variants
+  //
+  // Pattern:
+  // <variant name>: ( <base colour>, <text colour>, <hover colour>, <shadow colour (on hover)>, <border colour (optional)>, <border colour (on hover, optional)> )
+  $button-colours: (
+    primary-red:        (theme-color('c1'), $white, null, #ad1914, null, null),
+    primary-yellow:     (#ffeb14, $black, #ffd200, #fcb945, null, null), // C2 here??
+    secondary-charcoal: (theme-color('c3'), $white, #58595b, $black, null, null),
+    secondary-white:    ($white, $black, null, theme-color('g3'), null, null),
+    secondary-outline:  (transparent, $black, null, theme-color('c3'), theme-color('g4'), theme-color('c3')),
+  );
+
+  @each $variant, $options in $button-colours {
+    $base-colour: nth($options, 1);
+    $border-colour: nth($options, 5);
+    $border-hover-colour: nth($options, 6);
+    $hover-colour: nth($options, 3);
+    $is-secondary-outline: $variant == 'secondary-outline';
+    $shadow-colour: nth($options, 4);
+    $text-colour: nth($options, 2);
+
+    &-#{$variant} {
+      background-color: $base-colour;
+      // If no border colour is given we use the base colour to avoid hover state issues
+      border-color: if($border-colour != null, $border-colour, $base-colour);
+      color: $text-colour;
+
+      &::before {
+        border-bottom-color: $shadow-colour;
+      }
+
+      @include hover {
+        $border-hover-colour: if($border-hover-colour != null, $border-hover-colour, $hover-colour);
+
+        background-color: $hover-colour;
+        border-color: if($border-hover-colour != null, $border-hover-colour, $hover-colour);
+        color: $text-colour;
+
+        @if $is-secondary-outline == true {
+          .bg-dark &::before {
+            border-bottom-color: $white;
+          }
+        }
+      }
+
+      @if $is-secondary-outline == true {
+        .bg-dark & {
+          background-color: transparent;
+          border-color: currentColor;
+          color: $white;
+        }
+      }
+    }
   }
 
-  // Override the secondary button
-  &-secondary {
-    $secondary-padding-y: $btn-padding-y - 2;
-    $secondary-padding-y-sm: $btn-padding-y-sm - 2;
+  @include hover {
+    // Hover padding offset to account for the box shadow that appears
+    &:not(.btn-link) {
+      .link-text,
+      &::after {
+        transform: translateY(-2px);
+      }
 
-    background-color: transparent;
-    border: 2px solid theme-color('c6');
-    color: theme-color('c6');
-
-    // Reduce the Y padding by 2px so the border doesn't push the button size out
-    padding-bottom: $secondary-padding-y;
-    padding-top: $secondary-padding-y;
-
-    &.btn-sm {
-      padding-bottom: $secondary-padding-y-sm;
-      padding-top: $secondary-padding-y-sm;
-    }
-
-    &:hover {
-      background-color: theme-color('c6');
-      border-color: theme-color('c6');
-      color: theme-color('g7');
+      &::before {
+        opacity: 1;
+      }
     }
   }
 
-  // Set the text to uppercase for all but the small and filter buttons
-  &:not(&-sm):not(&-filter) {
-    text-transform: capitalize;
+  &-sm {
+    height: 40px;
+  }
+
+  &-lg {
+    height: 60px;
   }
 
   // Override the link button styles
@@ -50,28 +95,85 @@
     padding: 0;
     position: relative;
 
-    &:not(.no-icon)::after {
-      @include pseudo-icon('plus');
-    }
+    // &:not(.no-icon)::after {
+    //   @include pseudo-icon('plus');
+    // }
 
     @include hover-focus {
       color: theme-color('c1');
       text-decoration: none;
 
-      &::after {
-        transform: rotate(180deg);
+      // &::after {
+      //   transform: rotate(180deg);
+      // }
+    }
+  }
+
+  // Disabled state
+  &.disabled:not(.btn-link),
+  &:disabled {
+    background-color: theme-color('g4');
+    border-color: theme-color('g4');
+    color: #808285;
+
+    &.btn-secondary-outline {
+      background-color: transparent;
+      border-color: rgba(#adadad, .5);
+      color: rgba(#808285, .5);
+
+      .bg-dark & {
+        border-color: rgba($white, .5);
+        color: rgba($white, .5);
       }
     }
   }
 
-  & + & {
-    margin-top: $spacing-sm;
+  &::before {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-radius: $btn-border-radius;
+    bottom: -1px;
+    content: '';
+    display: block;
+    height: calc(100% + 1px);
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .15s ease-in-out;
+    width: 100%;
   }
 
-  @include media-breakpoint-up(md) {
-    & + & {
-      margin-left: rem-calc(30px);
+  &::after {
+    @extend .fal;
+    @extend .fa-long-arrow-right::before;
+
+    display: block;
+    font-size: 18px;
+    margin-left: auto;
+  }
+
+  .link-text,
+  &::after {
+    transition: transform .15s ease-in-out;
+  }
+
+  & + & {
+    margin-top: $spacing-sm;
+
+    @include media-breakpoint-up(md) {
+      margin-left: 30px;
       margin-top: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    // When the button isn't `.btn-lg` or `.btn-sm`, set the button styles correctly for mobile
+    // devices which inherit the `.btn-sm` styles.
+    &:not(&-sm):not(&-lg) {
+      font-size: $btn-font-size-sm;
+      height: 40px;
+      line-height: $btn-line-height-sm;
     }
   }
 }

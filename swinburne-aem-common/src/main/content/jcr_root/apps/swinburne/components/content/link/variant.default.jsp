@@ -12,7 +12,7 @@
     </c:when>
     <c:otherwise>
         <a ${componentProperties.componentAttributes}>
-                ${componentProperties.label}
+            <span class="link-text">${componentProperties.label}</span>
         </a>
     </c:otherwise>
 </c:choose>

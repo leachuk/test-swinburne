@@ -145,11 +145,11 @@ $font-size-base:              16px;
 $line-height-base:            22px;
 
 $h1-font-size:                60px;
-$h2-font-size:                40px;
+$h2-font-size:                48px;
 $h3-font-size:                30px;
-$h4-font-size:                26px;
-$h5-font-size:                24px;
-$h6-font-size:                20px;
+$h4-font-size:                22px;
+$h5-font-size:                18px;
+$h6-font-size:                16px;
 
 $headings-margin-bottom:      $spacing-sm;
 $headings-font-weight:        normal;
@@ -188,95 +188,76 @@ $typography: (
     h1: (
       xs: (
         font-size: 40px,
+        font-weight: 300,
         line-height: 42px,
-      ),
-      md: (
-        font-size: 40px,
-        line-height: 42px,
+        margin-bottom: 30px,
       ),
       lg: (
         font-size: $h1-font-size,
         line-height: 63px,
+        margin-bottom: 40px,
       ),
     ),
 
     h2: (
       xs: (
-        font-size: 35px,
-        line-height: 41px,
+        font-size: 26px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 38px,
-        line-height: 42px,
+        line-height: 32px,
       ),
       lg: (
         font-size: $h2-font-size,
+        font-weight: 400,
         line-height: 48px,
       ),
     ),
 
     h3: (
       xs: (
-        font-size: 26px,
-        line-height: 32px,
+        font-size: 22px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 28px,
-        line-height: 34px,
+        line-height: 29px,
       ),
       lg: (
         font-size: $h3-font-size,
-        line-height: 38px,
+        line-height: 36px,
       ),
     ),
 
     h4: (
       xs: (
-        font-size: 24px,
-        line-height: 30px,
+        font-size: 18px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 26px,
-        line-height: 34px,
+        line-height: 26px,
       ),
       lg: (
         font-size: $h4-font-size,
-        line-height: 34px,
+        line-height: 30px,
+        margin-bottom: 25px,
       ),
     ),
 
     h5: (
       xs: (
-        font-size: 20px,
-        line-height: 26px,
+        font-size: 14px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 22px,
-        line-height: 30px,
+        line-height: 24px,
       ),
       lg: (
         font-size: $h5-font-size,
-        line-height: 32px,
+        line-height: 24px,
       ),
     ),
 
     h6: (
       xs: (
-        font-size: 18px,
-        line-height: 24px,
+        font-size: 10px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 20px,
-        line-height: 28px,
+        line-height: 18px,
       ),
       lg: (
         font-size: $h6-font-size,
-        line-height: 28px,
+        line-height: 22px,
       ),
     ),
   ),

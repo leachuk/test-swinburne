@@ -396,7 +396,12 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
   lists/direction/horizontal:
     flat: true
     prefix: theme--lists-horizontal
-    title: 'Horizontal'    
+    title: 'Horizontal'
+
+  lists/cards/charcoal:
+    flat: true
+    prefix: theme--lists-cards-charcoal
+    title: 'Charcoal'
 
   lists/justify:
     breakpoints:

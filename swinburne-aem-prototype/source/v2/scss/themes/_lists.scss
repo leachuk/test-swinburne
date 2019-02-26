@@ -1,5 +1,7 @@
 &--lists {
+  @import 'lists/cards';
   @import 'lists/list-horizontal';
+
   // Strip the padding from the child LI and DIV elements
   &-flush > .content {
     margin-left: 0;

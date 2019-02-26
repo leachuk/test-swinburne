@@ -6,11 +6,6 @@ a.link[component]:not(.btn) {
   font-weight: 600;
   line-height: 23px;
 
-  &,
-  &:hover {
-    text-decoration: none;
-  }
-
   // Icon
   .icon {
     font-size: 16px;
@@ -22,6 +17,10 @@ a.link[component]:not(.btn) {
     &:last-child {
       margin-left: 10px;
     }
+  }
+
+  @include hover {
+    text-decoration: none;
   }
 
   @include media-breakpoint-up(md) {

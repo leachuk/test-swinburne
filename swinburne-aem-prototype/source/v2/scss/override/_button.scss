@@ -144,7 +144,7 @@
   @include media-breakpoint-down(sm) {
     // When the button isn't `.btn-lg` or `.btn-sm`, set the button styles correctly for mobile
     // devices which inherit the `.btn-sm` styles.
-    &:not(&-sm):not(&-lg) {
+    &:not(&-sm):not(&-lg):not(&-link) {
       font-size: $btn-font-size-sm;
       height: 40px;
       line-height: $btn-line-height-sm;

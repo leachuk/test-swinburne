@@ -29,3 +29,9 @@ a.link[component]:not(.btn) {
     line-height: 30px;
   }
 }
+
+a.link[component] .link-text {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}

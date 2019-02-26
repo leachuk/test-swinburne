@@ -119,20 +119,32 @@ html:not(.aem-AuthorLayer-Edit) {
   }
 }
 
-.styleguide-colour-panel {
-  .wrapper {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: #{5.5 * 2}px;
-    min-height: 120px;
-    padding: 20px;
-    text-align: left;
+.colour-panel {
+  section:not(:last-child) {
+    margin-bottom: 20px;
+  }
 
-    span {
-      display: block;
-      hyphens: auto;
-      word-wrap: break-word;
+  &__item {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  &__details {
+    background-color: $white;
+    border: 1px solid theme-color('g5');
+    border-left-width: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin-left: 80px;
+    padding: 0 15px;
+    width: calc(100% - 80px);
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
     }
   }
 }

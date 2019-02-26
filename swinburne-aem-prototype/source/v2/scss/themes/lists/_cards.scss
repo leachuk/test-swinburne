@@ -1,17 +1,19 @@
-&-charcoal {
-  .card {
-    &:not(.card--promoted) .card-body {
-      @extend %charcoal-card-body;
-    }
-    .bg-yellow & {
+&-cards {
+  &-charcoal {
+    .card {
+      &:not(.card--promoted) .card-body {
+        @extend %charcoal-card-body;
+      }
+      .bg-yellow & {
+        &.card--promoted > .card-body {
+          @extend %yellow-card-body;
+          @extend %yellow-foil;
+        }
+      }
       &.card--promoted > .card-body {
         @extend %yellow-card-body;
         @extend %yellow-foil;
       }
-    }
-    &.card--promoted > .card-body {
-      @extend %yellow-card-body;
-      @extend %yellow-foil;
     }
   }
 }

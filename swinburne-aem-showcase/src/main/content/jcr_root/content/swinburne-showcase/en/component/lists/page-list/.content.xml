@@ -1078,7 +1078,7 @@
                             sling:resourceType="swinburne/components/lists/pagelist"
                             badgeTitleType="h5"
                             componentId="pagelistxxx"
-                            componentTheme="[swinburne-showcase:component-style-theme/lists/background/charcoal]"
+                            componentTheme="[swinburne-showcase:component-style-theme/lists/cards/charcoal]"
                             detailsBadge="cardImageTagTitleAction"
                             limit="4"
                             listFrom="children"

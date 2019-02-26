@@ -196,18 +196,6 @@
   }
 }
 
-///
-@mixin pseudo-icon($name, $size: null, $direction: left, $needs-margin: true) {
-  @warn '`pseudo-icon()` is deprecated and will soon be removed!';
-
-  content: get-icon($name);
-  font-size: $size;
-
-  @if $needs-margin == true {
-    margin-#{$direction}: rem-calc(6px);
-  }
-}
-
 // Truncate text element with ellipsis
 @mixin truncate() {
   display: table;

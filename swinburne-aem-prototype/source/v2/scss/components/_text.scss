@@ -74,7 +74,7 @@
   // TODO: Migrate this into 'utilities/_text.scss'??
   @each $name, $color in $colors {
     $index: index($colors, $color);
-    &-#{$name} {
+    &-#{'' + $name} {
       color: #{$color} !important;
     }
   }

@@ -12,29 +12,6 @@
   @return $map;
 }
 
-/// Pixel to REM cacluator
-/// @see https://gist.github.com/garystorey/5920051
-/// @param {Number} $size - The pixel size to convert
-/// @param {Boolean} $unitless - Should the unit be stripped away?
-/// @return {Number} - A REM number
-@function rem-calc($size: 16px, $unitless: false) {
-  @warn '`rem-calc()` is deprecated, please migrate to `px` units!';
-
-  // This is a tiny hack that ensures 'null' and 'rem' values get returned straight away
-  @if type-of($size) != number or str-index('#{$size}', rem) != null {
-    @return $size;
-  }
-
-  // Divide the size by the base page font size
-  $size: $size / 16px;
-
-  @if $unitless {
-    @return strip-unit($size);
-  }
-
-  @return $size * 1rem;
-}
-
 /// Remove the unit of a length
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
@@ -58,7 +35,7 @@
 /// @param {Number} $size - The pixel size to generate from
 /// @return {Number} - A REM number
 @function create-spacer($size: 16px) {
-  @return ($spacer * rem-calc($size, true));
+  @return ($spacer * strip-unit($size));
 }
 
 /// Retrieves the spacer value for the given key

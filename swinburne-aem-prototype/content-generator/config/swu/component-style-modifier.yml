@@ -168,55 +168,31 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   ## Button Normal
   button/normal:
     prefixes:
-      - danger
-      - info
-      - light
-      - primary
+      - link
       - primary-red
       - primary-yellow
-      - secondary
       - secondary-charcoal
       - secondary-outline
       - secondary-white
-      - success
-      - warning
-      - icon
     valueFormat: btn btn-%%prefix%%
     title: '%%prefix_normalised%%'
 
   ## Button Outline
   button/outline:
     prefixes:
-      - danger
-      - info
-      - light
-      - primary
       - primary-red
       - primary-yellow
-      - secondary
       - secondary-charcoal
       - secondary-outline
       - secondary-white
-      - success
-      - warning
     valueFormat: btn btn-outline-%%prefix%%
     title: '%%prefix_normalised%%'
-
-  button/icon/chevron:
-    flat: true
-    prefix: btn-arrow
-    title: 'Chevron right'
-
-  button/transform/shadow:
-    flat: true
-    prefix: btn-shadow
-    title: 'Shadow'
 
   ## Button Size
   button/size/block:
     flat: true
     prefix: btn btn-block
-    title: 'Block'
+    title: 'Block (Full Width)'
 
   button/size/large:
     flat: true
@@ -228,11 +204,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: btn btn-sm
     title: 'Small'
 
-  button/size/variable:
-    flat: true
-    prefix: btn btn-variable
-    title: 'Variable'
-
   ## Button State
   button/state/active:
     flat: true
@@ -243,27 +214,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     flat: true
     prefix: disabled
     title: 'Disabled'
-
-  ## Modal size
-  modal/size/small:
-    flat: true
-    prefix: fancybox-sm
-    title: 'Small'
-
-  modal/size/medium:
-    flat: true
-    prefix: fancybox-md
-    title: 'Medium'
-
-  modal/size/large:
-    flat: true
-    prefix: fancybox-lg
-    title: 'Large'
-
-  contentblock/banner/image:
-    flat: true
-    prefix: image-only
-    title: 'Image Only'
 
   # Cards
   card:
@@ -313,6 +263,12 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   cards/direction:
     prefix: cards-horizontal
     title: 'Horizontal'
+
+  # Content Block
+  contentblock/banner/image:
+    flat: true
+    prefix: image-only
+    title: 'Image Only'
 
   # Embed
   embed/default:
@@ -450,24 +406,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: fw-700
     title: 'Font Weight (Bolder)'
 
-  text/list/colors:
-    prefixes:
-      - list-dark
-    prefixValue: text-
-    title: ' %%prefix_normalised%%'
-
-  text/headings/style:
-    prefixes:
-      - heading-outlined
-    prefixValue: text-
-    title: 'No Underline'
-
-  text/style:
-    prefixes:
-      - -underlined
-    prefixValue: text-
-    title: 'Underlined'
-
   # Grid
   grid/container:
     flat: true
@@ -550,7 +488,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - sm
       - md
       - lg
-      - xl
     prefixValue: icon--
     title: 'Icon Size (%%prefix_normalised%%)'
 
@@ -648,6 +585,25 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - 35
       - 40
     title: '%%prefix_normalised%% %%size%%px %%breakpoint%%'
+
+  # Text (Misc)
+  text/list/colors:
+    prefixes:
+      - list-dark
+    prefixValue: text-
+    title: ' %%prefix_normalised%%'
+
+  text/headings/style:
+    prefixes:
+      - heading-outlined
+    prefixValue: text-
+    title: 'No Underline'
+
+  text/style:
+    prefixes:
+      - -underlined
+    prefixValue: text-
+    title: 'Underlined'
 
   # Text Alignments
   text/alignment:

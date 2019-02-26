@@ -335,7 +335,7 @@ $navbar-padding-x:                  0;
 
 $navbar-nav-link-padding-x:         0;
 
-$navbar-brand-font-size:            rem-calc(32px);
+$navbar-brand-font-size:            32px;
 $navbar-brand-padding-y:            0;
 
 $navbar-toggler-padding-y:          0;
@@ -390,7 +390,7 @@ $btn-font-weight:             600;
 $btn-box-shadow:              none;
 $btn-focus-width:             null;
 $btn-focus-box-shadow:        null;
-$btn-disabled-opacity:        1;
+$btn-disabled-opacity:        null;
 $btn-active-box-shadow:       null;
 
 $btn-border-radius:           3px;

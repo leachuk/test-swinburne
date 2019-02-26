@@ -9,6 +9,7 @@ $card-top-bar-height: 18px;
 .card {
   box-shadow: 0 2px 3px theme-color('g4');
   margin-bottom: 0;
+  width: 100%;
 
   &-img-top {
     display: block;
@@ -93,34 +94,7 @@ $card-top-bar-height: 18px;
   }
 
   &-link {
-    // This is a bit messy but is required to inherit the base styles for links when nothing
-    // has yet being applied via the badge config.
-    //
-    // TODO: Merge this style into the link component
-    &[class$=' '] {
-      @extend a[component].link;
-
-      align-items: center;
-      display: inline-flex;
-
-      &::after {
-        @extend .fal;
-        @extend .fa-long-arrow-right::before;
-
-        display: block;
-        font-size: 17px;
-        margin-left: 10px;
-      }
-    }
-  }
-
-  &-icon {
-    // These selectors take into account that Font Awesome 5 replaces the original icon
-    // along with the `.fa` classes been superseded by new category specific classes.
-    > svg.svg-inline--fa {
-      display: block;
-      margin: 0 auto;
-    }
+    @extend .link;
   }
 
   // Variations and style changes

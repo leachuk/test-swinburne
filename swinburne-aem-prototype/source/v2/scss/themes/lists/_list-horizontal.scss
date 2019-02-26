@@ -2,20 +2,23 @@
   margin: 0;
 
   > ul {
-    @include list-unstyled;
-
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-bottom: -$spacing-lg;
 
     > li {
       flex-basis: auto;
       max-width: inherit;
-      padding: 0;
       width: auto;
 
+      &,
       &:not(:last-child) {
-        margin: 0 $spacing-2xl $spacing-lg 0;
+        margin-bottom: $spacing-lg;
+      }
+
+      &:not(:last-child) {
+        margin-right: $spacing-2xl;
       }
     }
 

@@ -443,16 +443,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Cards
   card:
     prefixes:
-      - author
-      - coloured
-      - inverse
-      - large
-      - medium
-      - medium-tall
-      - no-bar
-      - no-shadow
-      - outline
-      - padded
       - promoted
     valueFormat: card--%%prefix%%
     title: 'Card - %%prefix_normalised%%'
@@ -484,13 +474,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - warning
     valueFormat: card-outline-%%prefix%%
     title: 'Outline - %%prefix_normalised%%'
-
-  card/promoted:
-    prefixes:
-      - dark
-      - yellow
-    valueFormat: card--promoted-%%prefix%%
-    title: '%%prefix_normalised%%'
 
   cards/direction:
     prefix: cards-horizontal

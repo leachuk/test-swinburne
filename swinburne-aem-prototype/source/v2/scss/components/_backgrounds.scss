@@ -2,7 +2,6 @@
 
 $colors: (
   red: $primary, // 1
-  yellow: $secondary, // 2
   tertiary: $tertiary, // 3
   green: $color-4, // 4
   blue: $color-5, // 5
@@ -28,9 +27,12 @@ $colors: (
   }
 }
 
-
 .bg-parallax {
   background-attachment: fixed;
+}
+
+.bg-yellow {
+  @extend %yellow-foil;
 }
 
 .bg-scroll {

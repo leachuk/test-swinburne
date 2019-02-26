@@ -719,30 +719,6 @@
   //   }
   // }
 
-  .card {
-    &--promoted {
-      &-yellow {
-        &.yellow-style > .card-body {
-          background: url('../images/patterns/yellow.png')  0 100% repeat-x;
-          *:not(.btn) {
-            color: $tertiary;
-          }
-        }
-      }
-      &-dark {
-        &.dark-style > .card-body {
-          background-color: $tertiary;
-          *:not(.card-tags) {
-            color: $white;
-          }
-          .card-tags {
-            color: darken($secondary, 20%);
-          }
-        }
-      }
-    }
-  }
-
 }
 
 html.aem-AuthorLayer-Edit {

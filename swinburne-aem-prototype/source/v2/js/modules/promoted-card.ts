@@ -1,9 +1,12 @@
 export default () => {
-  const promotedCards : Array<any> = [...document.querySelectorAll('[class*="card--promoted-"]')];
+  const lists = [...document.querySelectorAll('[class*="list"][component]')];
 
-  if (promotedCards.length) {
-    let promotedCard : any = promotedCards[0];
-    let style : string = promotedCard.classList.value.split(" ").pop().split("-").pop();
-    promotedCard.classList.add(`${style}-style`);
+  if(lists.length) {
+    lists.forEach(list => {
+      const promotedCards = [...list.querySelectorAll('[class*="card--promoted-"]')];
+      if (promotedCards.length) {
+        promotedCards[0].classList.add("card--promoted-set");
+      }
+    });
   }
 }

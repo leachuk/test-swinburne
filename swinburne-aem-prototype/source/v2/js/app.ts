@@ -37,7 +37,8 @@ $(() => {
   // Take over any hash links on the page so they correctly jump to the content
   //HashLinks()
 
-  PromotedCard();
+  //Only promote the first card of the list
+  //PromotedCard();
 
   // 'object-fit' polyfill for unsupported browsers
   ObjectFitImages()

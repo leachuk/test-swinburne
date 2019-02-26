@@ -63,6 +63,7 @@ $card-top-bar-height: 18px;
   }
 
   &-body {
+    background-color: $white;
     display: flex;
     flex-direction: column;
 
@@ -124,7 +125,8 @@ $card-top-bar-height: 18px;
 
   // Variations and style changes
   @import
-    'card/taglist-share'
+    'card/taglist-share',
+    'card/promoted'
   ;
 
   // Nested within a carousel

@@ -1,0 +1,17 @@
+%yellow-foil {
+  background: url('../images/patterns/yellow.png')  0 70% repeat-x;
+}
+%yellow-card-body {
+  *:not(.btn) {
+    color: $tertiary;
+  }
+}
+%charcoal-card-body {
+  background: $tertiary;
+  *:not(.card-tags) {
+    color: $white;
+  }
+  .card-tags {
+    color: darken($secondary, 20%);
+  }
+}

@@ -25,6 +25,10 @@
   font-family: monospace;
 }
 
+@mixin yellow-background() {
+  background: url('../images/patterns/yellow.png')  0 70% repeat-x;
+}
+
 // =============================================================================
 // String Replace
 // =============================================================================

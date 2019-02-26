@@ -2,17 +2,17 @@
 
 $brand-colours: (
   'core': (
-    c1:  #dc2d27,
-    c2:  #ffeb14,
-    c3:  #242323,
-    c4:  #85c441,
-    c5:  #00aeef,
-    c6:  #883681,
-    c7:  #00bed8,
-    c8:  #21201e,
-    c9:  #fff,
-    c10: #292625,
-    c11: #d9d5d1,
+    c1  : #dc2d27,
+    c2  : #ffeb14,
+    c3  : #242323,
+    c4  : #85c441,
+    c5  : #00aeef,
+    c6  : #883681,
+    c7  : #00bed8,
+    c8  : #21201e,
+    c9  : #fff,
+    c10 : #292625,
+    c11 : #d9d5d1,
   ),
 
   'grey': (
@@ -50,10 +50,31 @@ $grey-4: map-deep-get($brand-colours, 'grey', 'g4');
 $grey-5: map-deep-get($brand-colours, 'grey', 'g5');
 $grey-6: map-deep-get($brand-colours, 'grey', 'g6');
 
+$colors: (
+  red          : $primary,      // 1
+  yellow       : $secondary,    // 2
+  charcoal     : $tertiary,     // 3
+  green        : $color-4,      // 4
+  blue         : $color-5,      // 5
+  purple       : $color-6,      // 6
+  turquoise    : $color-7,      // 7
+  red-50       : $primary-50,   // 8
+  yellow-50    : $secondary-50, // 9
+  green-50     : $color-4-50,   // 10
+  blue-50      : $color-5-50,   // 11
+  purple-50    : $color-6-50,   // 12
+  turquoise-50 : $color-7-50,   // 13
+  grey-1       : $grey-2,       // 14
+  grey-2       : $grey-3,       // 15
+  grey-3       : $grey-4,       // 16
+  grey-4       : $grey-5,       // 17
+  grey-5       : $grey-6        // 18
+);
+
 $theme-colors: (
-  'primary':   $primary,
-  'secondary': $secondary,
-  'tertiary':  $tertiary,
+  'primary'   : $primary,
+  'secondary' : $secondary,
+  'tertiary'  : $tertiary,
 
   'c1': map-deep-get($brand-colours, 'core', 'c1'),
   'c2': map-deep-get($brand-colours, 'core', 'c2'),
@@ -85,7 +106,7 @@ $body-color:                theme-color('g1');
 
 $link-color:                              theme-color('c1');
 $link-decoration:                         none;
-$link-hover-color:                        darken($link-color, 15%);
+$link-hover-color:                        darken($link-color, 20%);
 
 
 // Paragraphs
@@ -139,9 +160,9 @@ $border-radius-sm:            0;
 $font-family-awesome:         'Font Awesome 5 Pro';
 $font-family-base:            'Open Sans', sans-serif;
 
-$font-size-base:              16px;
+$font-size-base:              14px;
 
-$line-height-base:            22px;
+$line-height-base:            30px;
 
 $h1-font-size:                60px;
 $h2-font-size:                48px;
@@ -164,19 +185,13 @@ $lead-font-weight:            normal;
 $enable-rounded:            true;
 
 
-// Animation
-
-$animation-speed:           150ms;
-
-
 // Icons
 
 $icon-sizes: (
-  xs: 16px,
-  sm: 24px,
-  md: 48px,
-  lg: 72px,
-  xl: 96px,
+  xs: 10px,
+  sm: 13px,
+  md: 16px,
+  lg: 23px,
 );
 
 
@@ -257,45 +272,6 @@ $typography: (
       lg: (
         font-size: $h6-font-size,
         line-height: 22px,
-      ),
-    ),
-  ),
-
-  paragraphs: (
-    p1: (
-      default-selector : '.lead',
-      no-tag           : true,
-
-      xs: (
-        only        : true,
-        line-height : 24px,
-      ),
-    ),
-
-    p2: (
-      default-selector: 'p',
-
-      xs: (
-        only        : true,
-        line-height : 22px,
-      ),
-    ),
-
-    p3: (
-      no-tag: true,
-
-      xs: (
-        font-size: 14px,
-        line-height: 24px,
-      ),
-    ),
-
-    p4: (
-      no-tag: true,
-
-      xs: (
-        font-size: 12px,
-        line-height: 20px,
       ),
     ),
   ),
@@ -389,6 +365,7 @@ $breadcrumb-divider:                '›';
 $card-spacer-y:                     16px;
 $card-spacer-x:                     25px;
 $card-border-width:                 0;
+$card-border-radius:                0;
 $card-bg:                           transparent;
 
 
@@ -397,7 +374,7 @@ $card-bg:                           transparent;
 $btn-padding-y:               13.5px;
 $btn-padding-x:               20px;
 $btn-font-size:               12px;
-$btn-line-height:             $line-height-base;
+$btn-line-height:             22px;
 
 $btn-padding-y-sm:            12.5px;
 $btn-padding-x-sm:            20px;
@@ -407,7 +384,7 @@ $btn-line-height-sm:          14px;
 $btn-padding-y-lg:            15.5;
 $btn-padding-x-lg:            20px;
 $btn-font-size-lg:            14px;
-$btn-line-height-lg:          $line-height-base;
+$btn-line-height-lg:          $btn-line-height;
 
 $btn-font-weight:             600;
 $btn-box-shadow:              none;

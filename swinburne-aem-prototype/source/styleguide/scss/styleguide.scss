@@ -1,8 +1,8 @@
+@charset 'UTF-8';
+
 /* stylelint-disable declaration-no-important */
 /* stylelint-disable selector-max-compound-selectors */
 /* stylelint-disable selector-max-combinators */
-
-@charset 'UTF-8';
 
 $styleguide-sidebar-width: 260px;
 
@@ -48,13 +48,8 @@ html:not(.aem-AuthorLayer-Edit) {
 
     .nav-link {
       color: #737578;
-      font-size: 16px;
       margin-bottom: 0;
       padding-bottom: 0;
-    }
-    p {
-      font-size: 16px;
-      max-width: 720px;
     }
 
     @include media-breakpoint-up(xl) {
@@ -68,27 +63,20 @@ html:not(.aem-AuthorLayer-Edit) {
         width: $styleguide-sidebar-width;
 
         .navlist[component] {
-          &,
-          & > li {
-            display: block;
-            height: auto;
-            margin-bottom: $spacing-sm;
-            margin-top: $spacing-2xs;
-            top: 0;
-          }
+          margin-bottom: 15px;
+          padding-left: 15px;
 
           > li {
-            margin-left: $spacing-sm;
+            &:not(:last-child) {
+              margin-bottom: 8px;
+            }
+
+            a::after {
+              display: none;
+            }
 
             a:hover {
               text-decoration: none;
-
-              &::after {
-                content: ' ';
-                opacity: 0;
-                overflow: hidden;
-                width: 0;
-              }
             }
           }
         }

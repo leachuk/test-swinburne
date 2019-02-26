@@ -669,8 +669,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - lowercase
       - none
       - uppercase
-      - xsmall
-      - shadow
+      - small
     prefixValue: text-
     title: 'Text Transform (%%prefix_normalised%%)'
 

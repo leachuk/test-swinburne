@@ -48,3 +48,14 @@ p {
 b, strong {
   font-weight: 700;
 }
+
+// Small text
+
+small {
+  font-size: 10px;
+  line-height: 23px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 12px;
+  }
+}

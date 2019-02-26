@@ -55,140 +55,28 @@
       }
     }
   }
-}
 
-.title,
-.text[component] {
-  // ol, ul {
-  //   padding-bottom: 0;
-  //   padding-left: $spacing-md;
-  // }
+  // Smaller text
+  &-small {
+    @extend small;
+  }
 
-  // ul {
-  //   list-style: none;
-  //   li {
-  //     position: relative;
-  //     font-size: 14pt;
-  //     &:before {
-  //       content: "•";
-  //       display: block;
-  //       position: absolute;
-  //       color: $primary;
-  //       top: 0;
-  //       left: 0;
-  //       margin: 0 0 0 -20px;
-  //       font-size: 24px;
-  //     }
-  //   }
-  // }
-  // ol {
-  //   counter-reset: item;
-  //   list-style: none;
-  //   padding-left: 0;
-  //   li {
-  //     &:before {
-  //       content: counter(item) ". ";
-  //       counter-increment: item;
-  //       color: $primary;
-  //     }
-  //   }
-  // }
-
-  &.text-list-dark {
-    ul, ol {
-      li::before {
-        color: $grey-3;
-      }
+  // Darker list
+  &-list-dark {
+    ul li::before,
+    ol li::before {
+      color: theme-color('c1');
     }
   }
 
-  // .row li {
-  //   line-height: 1.2;
-  //   padding-bottom: .5em;
-  // }
-}
-
-.text-shadow {
-  &.text[component] > *,
-  & {
-    text-shadow: 5px 5px 10px rgba($black, .5);
-  }
-}
-
-.text-uppercase {
-  &,
-  * {
-    text-transform: uppercase !important;
-  }
-}
-
-small,
-.text-xsmall {
-  &,
-  * {
-    font-size: 10pt !important;
-    font-weight: 400;
-    line-height: 23pt;
-
-    @include media-breakpoint-up(md) {
-      font-size: 12pt !important;
+  // Colour variations
+  //
+  // TODO: Migrate this into 'utilities/_text.scss'??
+  @each $name, $color in $colors {
+    $index: index($colors, $color);
+    &-#{$name} {
+      color: #{$color} !important;
     }
-  }
-}
-
-.text-bold {
-  &,
-  * {
-    font-weight: 700;
-  }
-}
-
-.text-red {
-  &,
-  * {
-    color: $primary !important;
-  }
-}
-
-.text-black {
-  &,
-  * {
-    color: $tertiary !important;
-  }
-}
-
-.text-white {
-  &,
-  * {
-    color: $white !important;
-  }
-}
-
-$colors: (
-  red          : $primary,      // 1
-  yellow       : $secondary,    // 2
-  charcoal     : $tertiary,     // 3
-  green        : $color-4,      // 4
-  blue         : $color-5,      // 5
-  purple       : $color-6,      // 6
-  turquoise    : $color-7,      // 7
-  red-50       : $primary-50,   // 8
-  yellow-50    : $secondary-50, // 9
-  green-50     : $color-4-50,   // 10
-  blue-50      : $color-5-50,   // 11
-  purple-50    : $color-6-50,   // 12
-  turquoise-50 : $color-7-50,   // 13
-  grey-1       : $grey-2,       // 14
-  grey-2       : $grey-3,       // 15
-  grey-3       : $grey-4,       // 16
-  grey-4       : $grey-5,       // 17
-  grey-5       : $grey-6        // 18
-);
-
-@each $name, $color in $colors {
-  $index: index($colors, $color);
-  .text-#{$name} {
-    color: #{$color} !important;
   }
 }
 

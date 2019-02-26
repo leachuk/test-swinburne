@@ -19,7 +19,7 @@
   // <variant name>: ( <base colour>, <text colour>, <hover colour>, <shadow colour (on hover)>, <border colour (optional)>, <border colour (on hover, optional)> )
   $button-colours: (
     primary-red:        (theme-color('c1'), $white, null, #ad1914, null, null),
-    primary-yellow:     (#ffeb14, $black, #ffd200, #fcb945, null, null), // C2 here??
+    primary-yellow:     (theme-color('c2'), $black, #ffd200, #fcb945, null, null),
     secondary-charcoal: (theme-color('c3'), $white, #58595b, $black, null, null),
     secondary-white:    ($white, $black, null, theme-color('g3'), null, null),
     secondary-outline:  (transparent, $black, null, theme-color('c3'), theme-color('g4'), theme-color('c3')),

@@ -1,4 +1,6 @@
 /* stylelint-disable declaration-no-important */
+/* stylelint-disable selector-max-compound-selectors */
+/* stylelint-disable selector-max-combinators */
 
 @charset 'UTF-8';
 
@@ -75,8 +77,9 @@ html:not(.aem-AuthorLayer-Edit) {
             top: 0;
           }
 
-          & > li {
+          > li {
             margin-left: $spacing-sm;
+
             a:hover {
               text-decoration: none;
 
@@ -123,8 +126,8 @@ html:not(.aem-AuthorLayer-Edit) {
   }
 
   article > div > .page-details {
-    background: url(../images/patterns/yellow.png)  0 100% repeat-x;
-    padding: $spacing-6xl $spacing-4xl $spacing-4xl;
+    background: theme-color('c2') url(../../v2/images/patterns/foil-yellow.png)  0 100% repeat-x;
+    background-size: 13px 140px;
   }
 }
 
@@ -198,4 +201,6 @@ body {
   }
 }
 
+/* stylelint-enable selector-max-combinators */
+/* stylelint-enable selector-max-compound-selectors */
 /* stylelint-enable declaration-no-important */

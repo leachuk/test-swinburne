@@ -7,9 +7,8 @@
 .page-details {
   background-position: center center;
   background-size: cover;
-  min-height: 220px;
-  padding-bottom: $spacing-sm;
-  padding-top: $spacing-sm;
+  padding-bottom: 30px;
+  padding-top: 30px;
   position: relative;
   z-index: 1;
 
@@ -102,18 +101,20 @@
     }
   }
 
-  &::before {
-    background-color: rgba($white, .7);
-    bottom: 0;
-    content: '';
-    left: 0;
-    right: 0;
-    top: 0;
-    position: absolute;
-    z-index: -1;
-  }
+  // &::before {
+  //   background-color: rgba($white, .7);
+  //   bottom: 0;
+  //   content: '';
+  //   left: 0;
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  //   z-index: -1;
+  // }
 
   @include media-breakpoint-up(md) {
-    min-height: 200px;
+    min-height: 140px;
+    padding-bottom: 70px;
+    padding-top: 70px;
   }
 }

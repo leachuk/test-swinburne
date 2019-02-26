@@ -479,6 +479,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: cards-horizontal
     title: 'Horizontal'
 
+
   # Embed
   embed/default:
     flat: true

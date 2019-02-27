@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-27T17:03:19.487+11:00"
+        cq:lastModified="{Date}2019-02-28T08:55:34.156+11:00"
         cq:lastModifiedBy="admin"
         cq:tags="[swinburne:content-type/page]"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
@@ -132,12 +132,12 @@
                                         <embedsource
                                             jcr:created="{Date}2019-02-27T15:27:25.952+11:00"
                                             jcr:createdBy="admin"
-                                            jcr:lastModified="{Date}2019-02-27T17:03:19.483+11:00"
+                                            jcr:lastModified="{Date}2019-02-28T08:55:34.152+11:00"
                                             jcr:lastModifiedBy="admin"
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="swinburne/components/content/embedsource"
                                             componentId="embedsource_MDEJAWPV4"
-                                            html="&lt;img class=&quot;hidden-xs-down&quot; src=&quot;&quot; alt=&quot;Swinburne University of technology&quot;/>&#xd;&#xa;&lt;img class=&quot;hidden-sm-up&quot; src=&quot;&quot; alt=&quot;Swinburne University of technology&quot;/>"/>
+                                            html="&lt;img class=&quot;invisible-sm-down&quot; src=&quot;&quot; alt=&quot;Swinburne University of technology&quot;/>&#xd;&#xa;&lt;img class=&quot;invisible-sm-up&quot; src=&quot;&quot; alt=&quot;Swinburne University of technology&quot;/>"/>
                                         <contentblock
                                             jcr:created="{Date}2019-02-27T15:27:39.363+11:00"
                                             jcr:createdBy="admin"
@@ -152,7 +152,7 @@
                                                 <navlist
                                                     jcr:created="{Date}2019-02-27T15:28:46.720+11:00"
                                                     jcr:createdBy="admin"
-                                                    jcr:lastModified="{Date}2019-02-27T16:40:45.351+11:00"
+                                                    jcr:lastModified="{Date}2019-02-28T08:48:06.463+11:00"
                                                     jcr:lastModifiedBy="admin"
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="swinburne/components/lists/navlist"
@@ -163,7 +163,7 @@
                                                 <navlist_862816500
                                                     jcr:created="{Date}2019-02-27T15:29:03.684+11:00"
                                                     jcr:createdBy="admin"
-                                                    jcr:lastModified="{Date}2019-02-27T16:40:37.276+11:00"
+                                                    jcr:lastModified="{Date}2019-02-28T08:47:56.933+11:00"
                                                     jcr:lastModifiedBy="admin"
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="swinburne/components/lists/navlist"
@@ -197,12 +197,12 @@
                                                         <link_1175662764
                                                             jcr:created="{Date}2019-02-27T15:29:55.358+11:00"
                                                             jcr:createdBy="admin"
-                                                            jcr:lastModified="{Date}2019-02-27T16:42:41.241+11:00"
+                                                            jcr:lastModified="{Date}2019-02-28T08:43:58.176+11:00"
                                                             jcr:lastModifiedBy="admin"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="swinburne/components/content/link"
                                                             componentId="link_1175662764_KP0ZF1JAD"
-                                                            componentModifiers="[swinburne-showcase:component-style-modifier/button/normal/primary]"
+                                                            componentModifiers="[swinburne-showcase:component-style-modifier/button/normal/primary-red]"
                                                             label="Apply now"/>
                                                     </par>
                                                 </contentblock>

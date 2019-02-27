@@ -1,0 +1,10 @@
+&--promoted {
+  & > .card-body {
+    @extend %yellow-foil;
+    @extend %yellow-card-body;
+    .bg-grey-5 &,
+    .bg-yellow & {
+      @extend %charcoal-card-body;
+    }
+  }
+}

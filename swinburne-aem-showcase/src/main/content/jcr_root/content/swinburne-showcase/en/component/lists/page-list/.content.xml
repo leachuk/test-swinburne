@@ -1061,14 +1061,34 @@
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
-                            badgeLinkStyle="[]"
                             badgeTitleType="h5"
                             componentId="pagelist36"
                             detailsBadge="cardImageTagTitleAction"
                             limit="4"
                             listFrom="children"
                             listType="list"
-                            parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"/>
+                            parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"
+                            tagsMatch="any">
+                            <badgeThumbnail
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                        </pagelist>
+                        <pagelist_copy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/lists/pagelist"
+                            badgeTitleType="h5"
+                            componentId="pagelistxxx"
+                            componentTheme="[swinburne-showcase:component-style-theme/lists/cards/charcoal]"
+                            detailsBadge="cardImageTagTitleAction"
+                            limit="4"
+                            listFrom="children"
+                            listType="list"
+                            parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"
+                            tagsMatch="any">
+                            <badgeThumbnail
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                        </pagelist_copy>
                     </par>
                 </contentblock36>
                 <contentblock

@@ -1,7 +1,8 @@
 /* stylelint-disable declaration-no-important */
 
 &--lists {
-  @import 'lists/list-horizontal';
+  @import 'lists/cards';
+  @import 'lists/horizontal';
 
   // Alignments & justifications
   $alignments: (

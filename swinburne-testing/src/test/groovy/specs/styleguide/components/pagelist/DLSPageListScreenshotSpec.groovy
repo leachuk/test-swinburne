@@ -54,4 +54,24 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
         where:
         viewport << getViewPorts()
     }
+
+    @Unroll("Appearance of Page List with horizontal list in #viewport.label")
+    def "Appearance of Page List with horizontal list"() {
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist_F56DNYW78"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        waitForComponent(selector)
+
+        then: 'It should match reference image.'
+        designRef(selector)
+
+        where:
+        viewport << getViewPorts()
+    }
 }

@@ -218,16 +218,6 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Cards
   card:
     prefixes:
-      - author
-      - coloured
-      - inverse
-      - large
-      - medium
-      - medium-tall
-      - no-bar
-      - no-shadow
-      - outline
-      - padded
       - promoted
     valueFormat: card--%%prefix%%
     title: 'Card - %%prefix_normalised%%'

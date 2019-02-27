@@ -7,6 +7,10 @@
   }
 }
 
+.bg-yellow {
+  @extend %yellow-foil;
+}
+
 .bg-dark {
   background-color: $tertiary !important;
 

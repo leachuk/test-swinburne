@@ -91,24 +91,6 @@ html:not(.aem-AuthorLayer-Edit) {
 }
 
 .styleguide {
-  .icon[class*='col-sm'] {
-    margin-bottom: $spacing-4xl;
-
-    [class*='fa'] {
-      color: $grey-2;
-      font-size: 3em;
-    }
-
-    span {
-      display: block;
-      text-align: center;
-
-      &:first-child {
-        margin-bottom: $spacing-lg;
-      }
-    }
-  }
-
   section.contentblock:not(:last-of-type) {
     margin-bottom: 30px;
   }
@@ -146,6 +128,21 @@ html:not(.aem-AuthorLayer-Edit) {
       justify-content: space-between;
       margin-bottom: 0;
     }
+  }
+}
+
+.icon-panel {
+  text-align: center;
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    color: $grey-2;
+    display: block;
+    font-size: 3em;
+    margin-bottom: 10px;
   }
 }
 

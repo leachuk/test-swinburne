@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-02-27T15:46:43.680+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Livings costs, banking and money"
+        jcr:uuid="236578fb-495b-4d2a-a2bf-5c1c8d1509b5"
+        sling:resourceType="swinburne/components/template/base">
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/header"
+            componentId="header_JRUNLXRKF">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </header>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_OU6CQO4HQ">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </article>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/footer"
+            componentId="footer_1E4MLHUJ1">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </footer>
+    </jcr:content>
+</jcr:root>

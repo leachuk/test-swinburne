@@ -1,9 +1,12 @@
+/* stylelint-disable selector-max-compound-selectors */
+
 .brand-footer {
   overflow: hidden;
 
   &,
   a.link[component],
   .text[component] * {
+    color: inherit;
     font-size: 10px;
     line-height: 22px;
   }
@@ -397,3 +400,5 @@
     }
   }
 }
+
+/* stylelint-enable selector-max-compound-selectors */

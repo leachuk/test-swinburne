@@ -1,0 +1,31 @@
+/* stylelint-disable declaration-no-important */
+@each $name, $color in $colors {
+  $index: index($colors, $color);
+
+  .bg-#{'' + $name} {
+    background-color: #{$color} !important;
+  }
+}
+
+.bg-yellow {
+  @extend %yellow-foil;
+}
+
+.bg-dark {
+  background-color: $tertiary !important;
+
+  *:not(.link):not(.link-text) {
+    color: $white;
+  }
+
+  table {
+    &,
+    td,
+    tr,
+    th {
+      border-color: $white;
+    }
+  }
+}
+
+/* stylelint-enable declaration-no-important */

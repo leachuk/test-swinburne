@@ -109,7 +109,7 @@
                                 sling:resourceType="swinburne/components/layout/footer"
                                 cancelInheritParent="true"
                                 componentId="footer_swinburne_global"
-                                componentModifiers="[swinburne:component-style-modifier/color/standard/white,swinburne-showcase:component-style-modifier/background/bg-tertiary]"
+                                componentModifiers="[swinburne:component-style-modifier/color/standard/white,swinburne-showcase:component-style-modifier/background/bg-dark]"
                                 componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer]">
                             <par
                                     jcr:primaryType="nt:unstructured"

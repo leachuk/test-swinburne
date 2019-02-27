@@ -20,9 +20,9 @@
   }
 
   li {
-    line-height: rem-calc(20px);
-    margin-bottom: rem-calc(2.5px);
-    margin-top: rem-calc(2.5px);
+    line-height: 20px;
+    margin-bottom: 2.5px;
+    margin-top: 2.5px;
   }
 
   a {
@@ -32,9 +32,9 @@
     text-decoration: none;
 
     &::after {
-      @include pseudo-icon('arrow-right', rem-calc(15px), $needs-margin: false);
+      // @include pseudo-icon('arrow-right', 15px, $needs-margin: false);
 
-      margin-left: rem-calc(10px);
+      margin-left: 10px;
     }
 
     &:hover {

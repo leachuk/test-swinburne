@@ -1,43 +1,8 @@
+/* stylelint-disable declaration-no-important */
+
 &--lists {
   @import 'lists/cards';
-  @import 'lists/list-horizontal';
-
-  // Strip the padding from the child LI and DIV elements
-  &-flush > .content {
-    margin-left: 0;
-    margin-right: 0;
-
-    > ul > li,
-    > div {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-  }
-
-  // Simple inline list
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint) {
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-      &#{$infix}-inline {
-        > .content {
-          margin-left: 0;
-          margin-right: 0;
-        }
-
-        ul li:not(:last-child) {
-          margin-right: rem-calc(40px);
-        }
-      }
-    }
-  }
-
-  // Light list, this includes lists that sit on darker backgrounds
-  &-light {
-    a {
-      color: $white;
-    }
-  }
+  @import 'lists/horizontal';
 
   // Alignments & justifications
   $alignments: (
@@ -87,3 +52,5 @@
     }
   }
 }
+
+/* stylelint-enable declaration-no-important */

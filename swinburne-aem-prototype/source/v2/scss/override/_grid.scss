@@ -9,18 +9,30 @@
 
   &-full {
     max-width: 100%;
+    width: 100%;
   }
-
 }
 
-@include grid-gutter($grid-gutter);
-@include media-breakpoint-up(md) {
-  @include grid-gutter($grid-gutter-sm);
-}
-@include media-breakpoint-up(lg) {
-  @include grid-gutter($grid-gutter-lg);
-}
-@include media-breakpoint-up(xl) {
-  @include grid-gutter($grid-gutter-xl);
-}
 
+
+
+
+// $grid-gutter    : 5.5;
+// $grid-gutter-sm : 9;
+// $grid-gutter-lg : 13;
+// $grid-gutter-xl : 12;
+
+
+// @include grid-gutter($grid-gutter);
+
+// @include media-breakpoint-up(md) {
+//   @include grid-gutter($grid-gutter-sm);
+// }
+
+// @include media-breakpoint-up(lg) {
+//   @include grid-gutter($grid-gutter-lg);
+// }
+
+// @include media-breakpoint-up(xl) {
+//   @include grid-gutter($grid-gutter-xl);
+// }

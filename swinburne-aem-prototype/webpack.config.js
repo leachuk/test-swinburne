@@ -95,9 +95,9 @@ module.exports = env => {
               loader: 'sass-loader',
 
               options: {
-                // implementation : require('sass'),
+                implementation : require(project.sassModule || 'sass'),
                 outputStyle    : env.dev === true ? 'expanded' : 'compressed',
-                precision      : 8,
+                precision      : 5,
                 sourceMap      : env.dev === true,
               },
             },

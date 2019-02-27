@@ -1,19 +1,16 @@
 // Colours
 
-$black: #000;
-$white: #fff;
-
 $brand-colours: (
   'core': (
-    c1  : #DC2D27,
-    c2  : #FFD200,
+    c1  : #dc2d27,
+    c2  : #ffeb14,
     c3  : #242323,
-    c4  : #85C441,
-    c5  : #00AEEF,
+    c4  : #85c441,
+    c5  : #00aeef,
     c6  : #883681,
-    c7  : #00BED8,
-    c8  : #21201E,
-    c9  : #ffffff,
+    c7  : #00bed8,
+    c8  : #21201e,
+    c9  : #fff,
     c10 : #292625,
     c11 : #d9d5d1,
   ),
@@ -21,29 +18,29 @@ $brand-colours: (
   'grey': (
     g1: #242323,
     g2: #737578,
-    g3: #A5A5A5,
-    g4: #D1D1D1,
-    g5: #E2E2E2,
-    g6: #F6F6F6,
+    g3: #a5a5a5,
+    g4: #d1d1d1,
+    g5: #e2e2e2,
+    g6: #f6f6f6,
     g7: $white,
   ),
 );
 
-$primary   : map-deep-get($brand-colours, 'core', 'c1');
-$secondary : map-deep-get($brand-colours, 'core', 'c2');
-$tertiary  : map-deep-get($brand-colours, 'core', 'c3');
-$color-4   : map-deep-get($brand-colours, 'core', 'c4');
-$color-5   : map-deep-get($brand-colours, 'core', 'c5');
-$color-6   : map-deep-get($brand-colours, 'core', 'c6');
-$color-7   : map-deep-get($brand-colours, 'core', 'c7');
+$primary:    map-deep-get($brand-colours, 'core', 'c1');
+$secondary:  map-deep-get($brand-colours, 'core', 'c2');
+$tertiary:   map-deep-get($brand-colours, 'core', 'c3');
+$color-4:    map-deep-get($brand-colours, 'core', 'c4');
+$color-5:    map-deep-get($brand-colours, 'core', 'c5');
+$color-6:    map-deep-get($brand-colours, 'core', 'c6');
+$color-7:    map-deep-get($brand-colours, 'core', 'c7');
 
 // Lighten colours
-$primary-50   : #ED9693;
-$secondary-50 : #FFF589;
-$color-4-50   : #C2E1A0;
-$color-5-50   : #7FD6F7;
-$color-6-50   : #C39AC0;
-$color-7-50   : #7DFEEB;
+$primary-50:   #ed9693;
+$secondary-50: #fff589;
+$color-4-50:   #c2e1a0;
+$color-5-50:   #7fd6f7;
+$color-6-50:   #c39ac0;
+$color-7-50:   #7dfeeb;
 
 // Grey colours
 $grey-1: map-deep-get($brand-colours, 'grey', 'g1');
@@ -52,6 +49,27 @@ $grey-3: map-deep-get($brand-colours, 'grey', 'g3');
 $grey-4: map-deep-get($brand-colours, 'grey', 'g4');
 $grey-5: map-deep-get($brand-colours, 'grey', 'g5');
 $grey-6: map-deep-get($brand-colours, 'grey', 'g6');
+
+$colors: (
+  red          : $primary,      // 1
+  yellow       : $secondary,    // 2
+  charcoal     : $tertiary,     // 3
+  green        : $color-4,      // 4
+  blue         : $color-5,      // 5
+  purple       : $color-6,      // 6
+  turquoise    : $color-7,      // 7
+  red-50       : $primary-50,   // 8
+  yellow-50    : $secondary-50, // 9
+  green-50     : $color-4-50,   // 10
+  blue-50      : $color-5-50,   // 11
+  purple-50    : $color-6-50,   // 12
+  turquoise-50 : $color-7-50,   // 13
+  grey-1       : $grey-2,       // 14
+  grey-2       : $grey-3,       // 15
+  grey-3       : $grey-4,       // 16
+  grey-4       : $grey-5,       // 17
+  grey-5       : $grey-6        // 18
+);
 
 $theme-colors: (
   'primary'   : $primary,
@@ -77,10 +95,23 @@ $theme-colors: (
   'g7': map-deep-get($brand-colours, 'grey', 'g7'),
 );
 
+
 // Body
 
 $body-bg:                   theme-color('g7');
 $body-color:                theme-color('g1');
+
+
+// Links
+
+$link-color:                              theme-color('c1');
+$link-decoration:                         none;
+$link-hover-color:                        darken($link-color, 20%);
+
+
+// Paragraphs
+
+$paragraph-margin-bottom: 16px;
 
 
 // Spacers used for utility classes
@@ -100,100 +131,23 @@ $spacers: (
 
 // Spacing variables
 
-$spacing-2xs : 5px;
-$spacing-xs  : 10px;
-$spacing-sm  : 15px;
-$spacing-md  : 20px;
-$spacing-lg  : 25px;
-$spacing-2xl : 30px;
-$spacing-3xl : 35px;
-$spacing-4xl : 40px;
-$spacing-5xl : 45px;
-$spacing-6xl : 50px;
-$spacing-7xl : 55px;
-
-$grid-gutter    : 5.5;
-$grid-gutter-sm : 9;
-$grid-gutter-lg : 13;
-$grid-gutter-xl : 12;
-
-
-// UC Spacing conventions
-// Vertical Spacing \\
-// margin-bottom: map-deep-get($spacersVertical, 'lg', 'Y.5');
-$spacersVertical: (
-  'sm': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(36px),
-    'Y2.5' : rem-calc(48px),
-    'Y3'   : rem-calc(54px),
-    'Y4'   : rem-calc(72px),
-  ),
-  'md': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(48px),
-    'Y2.5' : rem-calc(54px),
-    'Y3'   : rem-calc(72px),
-    'Y4'   : rem-calc(96px),
-  ),
-  'lg': (
-    'Y.5'  : rem-calc(16px),
-    'Y.75' : rem-calc(24px),
-    'Y1'   : rem-calc(32px),
-    'Y1.5' : rem-calc(48px),
-    'Y2'   : rem-calc(64px),
-    'Y2.5' : rem-calc(72px),
-    'Y3'   : rem-calc(96px),
-    'Y4'   : rem-calc(128px),
-  )
-);
-// Horizontal Spacing \\
-// margin-bottom: map-deep-get($spacersHorizontal, 'lg', 'Y.5');
-$spacersHorizontal: (
-  'sm': (
-    'Y.5'  : rem-calc(8px),
-    'Y.75' : rem-calc(12px),
-    'Y1'   : rem-calc(16px),
-    'Y1.5' : rem-calc(24px),
-    'Y2'   : rem-calc(32px),
-    'Y2.5' : rem-calc(36px),
-    'Y3'   : rem-calc(48px),
-    'Y4'   : rem-calc(64px),
-  ),
-  'md': (
-    'Y.5'  : rem-calc(12px),
-    'Y.75' : rem-calc(18px),
-    'Y1'   : rem-calc(24px),
-    'Y1.5' : rem-calc(36px),
-    'Y2'   : rem-calc(48px),
-    'Y2.5' : rem-calc(54px),
-    'Y3'   : rem-calc(72px),
-    'Y4'   : rem-calc(96px),
-  ),
-  'lg': (
-    'Y.5'  : rem-calc(16px),
-    'Y.75' : rem-calc(24px),
-    'Y1'   : rem-calc(32px),
-    'Y1.5' : rem-calc(48px),
-    'Y2'   : rem-calc(64px),
-    'Y2.5' : rem-calc(72px),
-    'Y3'   : rem-calc(96px),
-    'Y4'   : rem-calc(128px),
-  )
-);
+$spacing-2xs: 5px;
+$spacing-xs:  10px;
+$spacing-sm:  15px;
+$spacing-md:  20px;
+$spacing-lg:  25px;
+$spacing-2xl: 30px;
+$spacing-3xl: 35px;
+$spacing-4xl: 40px;
+$spacing-5xl: 45px;
+$spacing-6xl: 50px;
+$spacing-7xl: 55px;
 
 
 // Components
 //
 // Define common padding and border radius sizes and more.
 
-$border-width:                1px;
 $border-color:                theme-color('c6');
 
 $border-radius:               0;
@@ -203,23 +157,19 @@ $border-radius-sm:            0;
 
 // Fonts
 
-$font-family-base:            'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-$font-family-open-sans:       'Open Sans', sans-serif;
-$font-family-brush-up:        'BrushUp', sans-serif;
 $font-family-awesome:         'Font Awesome 5 Pro';
+$font-family-base:            'Open Sans', sans-serif;
 
-$font-size-base:              16px;
-// $font-size-lg:                ($font-size-base * 1.25);
-// $font-size-sm:                ($font-size-base * .875);
+$font-size-base:              14px;
 
-$line-height-base:            24px;
+$line-height-base:            30px;
 
 $h1-font-size:                60px;
-$h2-font-size:                40px;
+$h2-font-size:                48px;
 $h3-font-size:                30px;
-$h4-font-size:                26px;
-$h5-font-size:                24px;
-$h6-font-size:                20px;
+$h4-font-size:                22px;
+$h5-font-size:                18px;
+$h6-font-size:                16px;
 
 $headings-margin-bottom:      $spacing-sm;
 $headings-font-weight:        normal;
@@ -231,38 +181,19 @@ $lead-font-weight:            normal;
 
 
 // Options
-$enable-rounded:            false;
 
-// Buttons
-$btn-border-radius: 4px;
-$btn-secondary-yellow-color: #ffeb16;
-$btn-secondary-yellow-border-color: #fbb946;
-$btn-secondary-charcoal-hover-color: #58595b;
-$btn-secondary-primary-border-color: #ad1914;
-
-
-// Animation
-$animation-speed : 300ms;
-
+$enable-rounded:            true;
 
 
 // Icons
 
 $icon-sizes: (
-  xs: 16px,
-  sm: 24px,
-  md: 48px,
-  lg: 72px,
-  xl: 96px,
+  xs: 10px,
+  sm: 13px,
+  md: 16px,
+  lg: 23px,
 );
 
-// Spacing
-
-$container-spacers: (
-  sm : 16px,
-  md : 36px,
-  lg : 64px
-);
 
 // Custom typography map for responsive headings and text
 
@@ -271,134 +202,76 @@ $typography: (
     h1: (
       xs: (
         font-size: 40px,
+        font-weight: 300,
         line-height: 42px,
-      ),
-      md: (
-        font-size: 40px,
-        line-height: 42px,
+        margin-bottom: 30px,
       ),
       lg: (
         font-size: $h1-font-size,
         line-height: 63px,
+        margin-bottom: 40px,
       ),
     ),
 
     h2: (
       xs: (
-        font-size: 35px,
-        line-height: 41px,
+        font-size: 26px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 38px,
-        line-height: 42px,
+        line-height: 32px,
       ),
       lg: (
         font-size: $h2-font-size,
+        font-weight: 400,
         line-height: 48px,
       ),
     ),
 
     h3: (
       xs: (
-        font-size: 26px,
-        line-height: 32px,
+        font-size: 22px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 28px,
-        line-height: 34px,
+        line-height: 29px,
       ),
       lg: (
         font-size: $h3-font-size,
-        line-height: 38px,
+        line-height: 36px,
       ),
     ),
 
     h4: (
       xs: (
-        font-size: 24px,
-        line-height: 30px,
+        font-size: 18px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 26px,
-        line-height: 34px,
+        line-height: 26px,
       ),
       lg: (
         font-size: $h4-font-size,
-        line-height: 34px,
+        line-height: 30px,
+        margin-bottom: 25px,
       ),
     ),
 
     h5: (
       xs: (
-        font-size: 20px,
-        line-height: 26px,
+        font-size: 14px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 22px,
-        line-height: 30px,
+        line-height: 24px,
       ),
       lg: (
         font-size: $h5-font-size,
-        line-height: 32px,
+        line-height: 24px,
       ),
     ),
 
     h6: (
       xs: (
-        font-size: 18px,
-        line-height: 24px,
+        font-size: 10px,
         font-weight: 600,
-      ),
-      md: (
-        font-size: 20px,
-        line-height: 28px,
+        line-height: 18px,
       ),
       lg: (
         font-size: $h6-font-size,
-        line-height: 28px,
-      ),
-    ),
-  ),
-
-  paragraphs: (
-    p1: (
-      default-selector : '.lead',
-      no-tag           : true,
-
-      xs: (
-        only        : true,
-        line-height : 24px,
-      ),
-    ),
-
-    p2: (
-      default-selector: 'p',
-
-      xs: (
-        only        : true,
-        line-height : 22px,
-      ),
-    ),
-
-    p3: (
-      no-tag: true,
-
-      xs: (
-        font-size: 14px,
-        line-height: 24px,
-      ),
-    ),
-
-    p4: (
-      no-tag: true,
-
-      xs: (
-        font-size: 12px,
-        line-height: 20px,
+        line-height: 22px,
       ),
     ),
   ),
@@ -407,7 +280,7 @@ $typography: (
 
 // Grid generic
 
-$aem-prefix: 'aem-Grid';
+$aem-prefix:     'aem-Grid';
 $aem-prefix-col: 'aem-GridColumn';
 
 $aem-breakpoints: (
@@ -418,38 +291,28 @@ $aem-breakpoints: (
 );
 
 
-
-// Paragraphs
-//
-// Style p element.
-
-$paragraph-margin-bottom: 16px;
-
-
 // Grid breakpoints
- $grid-breakpoints: (
-   xs: 0,
-   sm: 320px,
-   md: 640px,
-   lg: 1024px,
-   xl: 1366px
- );
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 640px,
+  lg: 1024px,
+  xl: 1366px,
+);
+
 
 // Grid containers
+
 $container-max-widths: (
   xl: 1366px
 );
 
-$screen-sm: 320px;
-$screen-md: 640px;
-$screen-lg: 1024px;
-
-//Max queries
-$screen-sm-max: 639px;
-
 
 // Grid columns
-$grid-gutter-width: 26px;
+
+$grid-gutter-width: 30px;
+
 
 // Navs
 
@@ -472,7 +335,7 @@ $navbar-padding-x:                  0;
 
 $navbar-nav-link-padding-x:         0;
 
-$navbar-brand-font-size:            rem-calc(32px);
+$navbar-brand-font-size:            32px;
 $navbar-brand-padding-y:            0;
 
 $navbar-toggler-padding-y:          0;
@@ -502,21 +365,35 @@ $breadcrumb-divider:                '›';
 $card-spacer-y:                     16px;
 $card-spacer-x:                     25px;
 $card-border-width:                 0;
+$card-border-radius:                null;
+$card-inner-border-radius:          null;
 $card-bg:                           transparent;
 
 
 // Buttons
 
-$btn-padding-y:               15px;
-$btn-padding-x:               30px;
-$btn-line-height:             rem-calc(20px);
+$btn-padding-y:               13.5px;
+$btn-padding-x:               20px;
+$btn-font-size:               12px;
+$btn-line-height:             22px;
 
-$btn-padding-y-sm:            8px;
-$btn-padding-x-sm:            15px;
-$btn-line-height-sm:          rem-calc(16px);
+$btn-padding-y-sm:            12.5px;
+$btn-padding-x-sm:            20px;
+$btn-font-size-sm:            10px;
+$btn-line-height-sm:          14px;
 
-$btn-padding-y-lg:            $btn-padding-y;
-$btn-padding-x-lg:            $btn-padding-x;
+$btn-padding-y-lg:            15.5;
+$btn-padding-x-lg:            20px;
+$btn-font-size-lg:            14px;
 $btn-line-height-lg:          $btn-line-height;
 
-$btn-border-width:            0;
+$btn-font-weight:             600;
+$btn-box-shadow:              none;
+$btn-focus-width:             null;
+$btn-focus-box-shadow:        null;
+$btn-disabled-opacity:        null;
+$btn-active-box-shadow:       null;
+
+$btn-border-radius:           3px;
+$btn-border-radius-lg:        $btn-border-radius;
+$btn-border-radius-sm:        $btn-border-radius;

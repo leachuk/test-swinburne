@@ -1,44 +1,3 @@
-// Container
-@mixin container() {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-//Custom grid gutter
-@mixin grid-gutter($gutter) {
-  .row {
-    margin-left: -#{$gutter}px;
-    margin-right: -#{$gutter}px;
-    & > [class*=col-] {
-      padding-left: #{$gutter}px;
-      padding-right: #{$gutter}px;
-    }
-  }
-}
-
-// code snippet styling
-@mixin code-snippet() {
-  font-family: monospace;
-}
-
-// =============================================================================
-// String Replace
-// =============================================================================
-
-@function str-replace($string, $search, $replace: "") {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
-}
-
 // =============================================================================
 // Font Face
 // =============================================================================
@@ -47,19 +6,19 @@
   $src: null;
 
   $extmods: (
-    eot: "?",
-    svg: "#" + str-replace($name, " ", "_")
+    eot: '?',
+    svg: '#' + str-replace($name, ' ', '_')
   );
 
   $formats: (
-    otf: "opentype",
-    ttf: "truetype"
+    otf: 'opentype',
+    ttf: 'truetype'
   );
 
   @each $ext in $exts {
     $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
     $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
   }
 
   @font-face {
@@ -75,16 +34,13 @@
 /// @param {String} $fit - How should the image scale to its parent?
 /// @param {String} $position - The offset for the image
 @mixin object-fit($fit: fill, $position: null) {
-  -o-object-fit: $fit;
-     object-fit: $fit;
+  object-fit: $fit;
 
   @if $position {
-	  -o-object-position: $position;
-	     object-position: $position;
-
     font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+    object-position: $position;
   } @else {
-  	font-family: 'object-fit: #{$fit}';
+    font-family: 'object-fit: #{$fit}';
   }
 }
 
@@ -105,6 +61,11 @@
   // Change the `$selector` so it reflects the default if one is set
   @if not $no-default {
     $selector: unquote(map-get($config, default-selector));
+  }
+
+  // Should the selector be extended?
+  @if map-has-key($config, extend-to) {
+    $selector: unquote('#{$selector}, #{map-get($config, extend-to)}');
   }
 
   // Loop through each breakpoint and set the styles
@@ -161,7 +122,7 @@
 
 ///
 @mixin iphone-x($gutter: $grid-gutter-width / 2) {
-  @supports(padding: #{'max(0px)'}) {
+  @supports (padding: #{'max(0px)'}) {
     & {
       @include iphone-x-prop('padding-left', $gutter);
       @include iphone-x-prop('padding-right', $gutter);
@@ -204,9 +165,9 @@
 ) {
   position: relative;
 
-  &:before {
-    display: block;
+  &::before {
     content: '';
+    display: block;
     padding-top: aspect-ratio($width, $height);
     width: 100%;
   }
@@ -229,13 +190,9 @@
   }
 }
 
-///
-@mixin pseudo-icon($name, $size: null, $direction: left, $needs-margin: true) {
-  content: get-icon($name);
-  font-size: $size;
-
-  @if $needs-margin == true {
-    margin-#{$direction}: rem-calc(6px);
+@mixin aem-author-edit() {
+  html.aem-AuthorLayer-Edit & {
+    @content;
   }
 }
 
@@ -243,8 +200,8 @@
 @mixin truncate() {
   display: table;
   table-layout: fixed;
-  width: 100%;
   white-space: nowrap;
+  width: 100%;
 
   > * {
     display: table-cell;
@@ -253,47 +210,37 @@
   }
 }
 
-// global spacing mixing
-@mixin spacingCompile($paddingType: Y1, $spacingType: horizontal) {
-  // horizontal (left / right)
-  @if $spacingType == 'horizontal' {
-    padding-left: map-deep-get($spacersHorizontal, 'sm', '#{$paddingType}');
-    padding-right: map-deep-get($spacersHorizontal, 'sm', '#{$paddingType}');
+/// Page List variant generator
+@mixin pagelist-variant($selector: false, $selector-only: true) {
+  $selector: if($selector != false, unquote($selector), $selector);
 
-    @include media-breakpoint-up(md) {
-      padding-left: map-deep-get($spacersHorizontal, 'md', '#{$paddingType}');
-      padding-right: map-deep-get($spacersHorizontal, 'md', '#{$paddingType}');
+  @if $selector-only == true {
+    #{if($selector != false, unquote($selector), '')} > .content {
+      > ul > li,
+      > div {
+        @content;
+      }
     }
-
-    @include media-breakpoint-up(lg) {
-      padding-left: map-deep-get($spacersHorizontal, 'lg', '#{$paddingType}');
-      padding-right: map-deep-get($spacersHorizontal, 'lg', '#{$paddingType}');
-    }
-  } @else {
-  // vertical (top / bottom)
-    padding-top: map-deep-get($spacersVertical, 'sm', '#{$paddingType}');
-    padding-bottom: map-deep-get($spacersVertical, 'sm', '#{$paddingType}');
-
-    @include media-breakpoint-up(md) {
-      padding-top: map-deep-get($spacersVertical, 'md', '#{$paddingType}');
-      padding-bottom: map-deep-get($spacersVertical, 'md', '#{$paddingType}');
-    }
-
-    @include media-breakpoint-up(lg) {
-      padding-top: map-deep-get($spacersVertical, 'lg', '#{$paddingType}');
-      padding-bottom: map-deep-get($spacersVertical, 'lg', '#{$paddingType}');
+  }
+  @else {
+    &#{if($selector != false, unquote($selector), '')} > .content {
+      > ul > li,
+      > div {
+        @content;
+      }
     }
   }
 }
 
-@mixin spacingCompileSingle($paddingOne: top, $paddingType: Y1) {
-  padding-#{$paddingOne}: map-deep-get($spacersVertical, 'sm', '#{$paddingType}');
+/// Custom grid gutter
+@mixin grid-gutter($gutter) {
+  .row {
+    margin-left: -#{$gutter}px;
+    margin-right: -#{$gutter}px;
 
-  @include media-breakpoint-up(md) {
-    padding-#{$paddingOne}: map-deep-get($spacersVertical, 'md', '#{$paddingType}');
-  }
-
-  @include media-breakpoint-up(lg) {
-    padding-#{$paddingOne}: map-deep-get($spacersVertical, 'lg', '#{$paddingType}');
+    & > [class*='col-'] {
+      padding-left: #{$gutter}px;
+      padding-right: #{$gutter}px;
+    }
   }
 }

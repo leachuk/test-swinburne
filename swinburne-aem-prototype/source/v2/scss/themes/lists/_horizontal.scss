@@ -1,0 +1,29 @@
+&-horizontal > .content {
+  margin: 0;
+
+  > ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: -$spacing-lg;
+
+    > li {
+      flex-basis: auto;
+      max-width: inherit;
+      width: auto;
+
+      &,
+      &:not(:last-child) {
+        margin-bottom: $spacing-lg;
+      }
+
+      &:not(:last-child) {
+        margin-right: $spacing-2xl;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+  }
+}

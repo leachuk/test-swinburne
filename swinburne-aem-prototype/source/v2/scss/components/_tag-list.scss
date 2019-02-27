@@ -4,6 +4,13 @@
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
 
-.text {
-  @include clearfix;
+.taglist {
+  list-style-type: none;
+  padding-left: 0;
+
+  &__item {
+    color: $grey-2;
+    display: inline-block;
+    margin-right: $spacing-xs;
+  }
 }

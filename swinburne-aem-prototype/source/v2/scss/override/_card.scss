@@ -4,8 +4,6 @@
 // care when making changes as we shouldn't be duplicating styles that Bootstrap
 // generates for us automatically.
 
-$card-top-bar-height: 18px;
-
 .card {
   box-shadow: 0 2px 3px theme-color('g4');
   margin-bottom: 0;
@@ -20,7 +18,7 @@ $card-top-bar-height: 18px;
       @include object-fit(cover, center);
 
       display: block;
-      max-width: 100%;
+      width: 100%;
 
       // AEM will always supply us with images in the JPEG format so we can easily enforce
       // the minimum width of the image when it is.
@@ -86,11 +84,15 @@ $card-top-bar-height: 18px;
     font-weight: 300;
   }
 
-  &-tags {
-    font-size: 12px;
+  &-taglist {
+    .taglist li::before {
+      display: none;
+    }
 
     &--basic {
       color: theme-color('g2');
+      font-size: 12px;
+      margin-bottom: 0;
     }
   }
 

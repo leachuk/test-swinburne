@@ -33,8 +33,6 @@
                 sling:resourceType="swinburne/components/layout/container"/>
         </footer>
     </jcr:content>
-    <compare/>
-    <your-favorites/>
     <current-students/>
     <collaboration/>
     <about/>

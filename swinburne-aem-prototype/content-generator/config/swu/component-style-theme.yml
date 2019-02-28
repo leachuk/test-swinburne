@@ -514,6 +514,31 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--header-swinburne
     title: 'Brand Header Default'
 
+  layout/brand-header:
+    flat: true
+    prefix: brand-header
+    title: 'Brand Header'
+
+  layout/brand-header/logo:
+    flat: true
+    prefix: brand-header__logo
+    title: 'Logo'
+
+  layout/brand-header/admin:
+    flat: true
+    prefix: brand-header__admin
+    title: 'Admin'
+
+  layout/brand-header/nav:
+    flat: true
+    prefix: brand-header__nav
+    title: 'Nav'
+
+  layout/brand-header/actions:
+    flat: true
+    prefix: brand-header__actions
+    title: 'Actions'
+
   # Content Block
   layout/contentblock/header/brand-top:
     flat: true

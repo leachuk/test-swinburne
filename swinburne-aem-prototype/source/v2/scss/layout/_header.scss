@@ -1,1 +1,140 @@
-.brand-header {}
+.brand-header {
+  font-size: 12px;
+  height: $header-height;
+  &__actions,
+  &__actions,
+  &__nav,
+  &__admin,
+  & > .aem-Grid > .contentblock {
+    display: flex;
+    flex-direction: row;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  &__logo {
+    & + .contentblock { // Navigation container
+      width: calc(100% - 176px);
+      height: $header-height;
+      flex-wrap: wrap;
+    }
+  }
+  &__admin {
+    background-color: $tertiary;
+    height: $header-height / 3;
+    padding: 0 $spacing-md;
+    justify-content: flex-start;
+    a {
+      color: $white;
+      font-weight: 400;
+    }
+    & > .contentblock {
+      flex: 1;
+      a {
+        margin-right: $spacing-sm;
+        font-weight: 400;
+        & > span {
+          font-family: $font-family-base;
+        }
+        &:first-of-type {
+          &:before {
+            content: '\f24e';
+          }
+        }
+        &:last-of-type {
+          &:before {
+            content: '\f005';
+          }
+        }
+        &:first-of-type,
+        &:last-of-type {
+          &:before {
+            margin-right: $spacing-xs;
+            font-family: $font-family-awesome;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .pagelist:not([data-modules*=carousel]) {
+      width: auto;
+      padding-left: 0;
+      padding-right: 0;
+      & > .content {
+        margin-right: 0;
+        & > ul > {
+          li {
+            padding: 0 $spacing-xs;
+            margin-right: 0;
+            &.last {}
+          }
+        }
+      }
+      &,
+      & > .content {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+  &__nav {
+    padding: 0 $spacing-md;
+    max-width: calc( 100% - 210px );
+    overflow: auto;
+    transform: translateY(-3px);
+    .nav-link {
+      font-weight: 700;
+      color: $tertiary;
+      line-height: 16px;
+      &:after {
+        display: none;
+      }
+    }
+    li {
+      flex-wrap: nowrap;
+      &:before {
+        display: none;
+      }
+      margin-right: $spacing-md;
+    }
+  }
+  &__actions {
+    max-width: 200px;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+      &.btn {
+        height: 45px;
+        font-weight: 400;
+        min-width: 140px;
+        &,
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    button.link {
+      border: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      .icon:first-of-type {
+        color: $tertiary;
+        font-size: 14px;
+        font-weight: 300;
+        margin-right: 0;
+        padding-left: 5px;
+      }
+    }
+  }
+  &__actions,
+  &__nav {
+    margin: 0;
+    display: inline-flex;
+    width: 100%;
+    height: ( $header-height / 3 ) * 2;
+  }
+}

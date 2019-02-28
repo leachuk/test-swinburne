@@ -5,7 +5,7 @@
 
     <div class="card-body">
         <c:if test="${not empty componentProperties['cq:tags']}">
-            <div class="card-tags card-tags--basic">
+            <div class="card-taglist card-taglist--basic">
                 ${fn:join(componentProperties['cq:tags'], ', ')}
             </div>
         </c:if>

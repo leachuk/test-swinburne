@@ -3,54 +3,6 @@
 &--lists {
   @import 'lists/cards';
   @import 'lists/horizontal';
-
-  // Alignments & justifications
-  $alignments: (
-    jc: center,
-    je: flex-end,
-    js: flex-start,
-    aic: center,
-    aie: flex-end,
-    ais: flex-start,
-    acc: center,
-    ace: flex-end,
-    acs: flex-start,
-  );
-
-  @each $align, $value in $alignments {
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      @include media-breakpoint-up($breakpoint) {
-        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-        &#{$infix}-#{$align} ul,
-        &#{$infix}-#{$align} ol {
-          @if $align == jc or $align == je or $align == js {
-            justify-content: $value !important;
-          }
-          @else if $align == aic or $align == aie or $align == ais {
-            align-items: $value !important;
-          }
-          @else if $align == acc or $align == ace or $align == acs {
-            align-content: $value !important;
-          }
-        }
-      }
-    }
-  }
-
-  // Direction
-  @each $direction in column column-reverse row row-reverse {
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      @include media-breakpoint-up($breakpoint) {
-        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-        &#{$infix}-#{$direction} ul,
-        &#{$infix}-#{$direction} ol {
-          flex-direction: $direction !important;
-        }
-      }
-    }
-  }
 }
 
 /* stylelint-enable declaration-no-important */

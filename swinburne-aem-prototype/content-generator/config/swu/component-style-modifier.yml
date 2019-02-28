@@ -1,172 +1,41 @@
 content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Backgrounds
-  background:
+  background/primary:
     prefixes:
-      - blue
-      - blue-50
       - dark
-      - green
-      - green-50
-      - grey-1
-      - grey-2
-      - grey-3
-      - grey-4
-      - grey-5
-      - purple
-      - purple-50
       - red
       - red-50
-      - tertiary
-      - turquoise
-      - turquoise-50
       - yellow
       - yellow-50
     startWith: bg-
-    title: 'Background Colour - %%prefix_normalised%%'
-
-  background/standard:
-    prefixes:
-      - danger
-      - dark
-      - faded
-      - info
-      - inverse
-      - light
-      - primary
-      - success
-      - warning
-    valueFormat: bg-%%prefix%%
     title: '%%prefix_normalised%%'
 
-  border:
-    sizes:
-      - '0'
-      - '1'
-    prefixes:
-      - border
-      - border-bottom
-      - border-top
-      - border-left
-      - border-right
-      - rounded
-      - rounded-bottom
-      - rounded-top
-      - rounded-left
-      - rounded-right
-    title: '%%prefix_normalised%% %%size%%px'
-
-  border/rounded-circle:
-    flat: true
-    prefix: rounded-circle
-    title: 'Rounded Circle'
-
-  # Content Inverted
-  content/inverted:
-    flat: true
-    prefix: inverted
-    title: 'Inverted'
-
-  # Colours
-  color:
+  background/secondary:
     prefixes:
       - blue
       - blue-50
-      - charcoal
       - green
       - green-50
+      - purple
+      - purple-50
+      - turquoise
+      - turquoise-50
+    startWith: bg-
+    title: '%%prefix_normalised%%'
+
+  background/greys:
+    prefixes:
+      - dark
       - grey-1
       - grey-2
       - grey-3
       - grey-4
       - grey-5
-      - purple
-      - purple-50
-      - red
-      - red-50
-      - turquoise
-      - turquoise-50
-      - yellow
-      - yellow-50
-    startWith: text-
-    title: 'Text Colour - %%prefix_normalised%%'
-
-  # Colors Standard
-  color/standard:
-    prefixes:
-      - black
-      - danger
-      - info
-      - muted
-      - primary
-      - red
-      - success
-      - warning
-      - white
-    valueFormat: text-%%prefix%%
+    startWith: bg-
     title: '%%prefix_normalised%%'
 
-  # Columns
-  column/standard:
-    prefixes:
-      - xs
-      - sm
-      - md
-      - lg
-      - xl
-    sizes:
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      - 10
-      - 11
-      - 12
-    valueFormat: col-%%prefix%%-%%size%%
-    title: 'Col %%prefix_normalised%% %%size%%'
-
-  column/prefix-only:
-    prefixes:
-      - xs
-      - sm
-      - md
-      - lg
-      - xl
-    valueFormat: col-%%prefix%%
-    title: 'Col %%prefix_normalised%%'
-
-  column/col:
-    flat: true
-    prefix: col
-    title: 'Col'
-
   # Button
-  button/group/group/vertical:
-    flat: true
-    prefix: btn btn-group-vertical
-    title: 'Vertical'
-
-  button/group/size/large:
-    flat: true
-    prefix: btn btn-group-lg
-    title: 'Large'
-
-  button/group/size/small:
-    flat: true
-    prefix: btn btn-group-sm
-    title: 'Small'
-
-  button/group/toolbar:
-    flat: true
-    prefix: btn btn-toolbar
-    title: 'Toolbar'
-
-  ## Button Normal
-  button/normal:
+  button:
     prefixes:
       - link
       - primary-red
@@ -177,34 +46,13 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     valueFormat: btn btn-%%prefix%%
     title: '%%prefix_normalised%%'
 
-  ## Button Outline
-  button/outline:
-    prefixes:
-      - primary-red
-      - primary-yellow
-      - secondary-charcoal
-      - secondary-outline
-      - secondary-white
-    valueFormat: btn btn-outline-%%prefix%%
-    title: '%%prefix_normalised%%'
-
-  ## Button Size
+  # Button Size
   button/size/block:
     flat: true
     prefix: btn btn-block
     title: 'Block (Full Width)'
 
-  button/size/large:
-    flat: true
-    prefix: btn btn-lg
-    title: 'Large'
-
-  button/size/small:
-    flat: true
-    prefix: btn btn-sm
-    title: 'Small'
-
-  ## Button State
+  # Button State
   button/state/active:
     flat: true
     prefix: active
@@ -215,50 +63,47 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: disabled
     title: 'Disabled'
 
+  # Colours
+  color/primary:
+    prefixes:
+      - dark
+      - red
+      - red-50
+      - yellow
+      - yellow-50
+    startWith: text-
+    title: '%%prefix_normalised%%'
+
+  color/secondary:
+    prefixes:
+      - blue
+      - blue-50
+      - green
+      - green-50
+      - purple
+      - purple-50
+      - turquoise
+      - turquoise-50
+    startWith: text-
+    title: '%%prefix_normalised%%'
+
+  color/greys:
+    prefixes:
+      - dark
+      - grey-1
+      - grey-2
+      - grey-3
+      - grey-4
+      - grey-5
+    startWith: text-
+    title: '%%prefix_normalised%%'
+
   # Cards
   card:
     prefixes:
       - promoted
     valueFormat: card--%%prefix%%
-    title: 'Card - %%prefix_normalised%%'
-
-  card/container:
-    prefixes:
-      - columns
-      - deck
-      - group
-    valueFormat: card-%%prefix%%
-    title: 'Card - %%prefix_normalised%%'
-
-  card/background:
-    prefixes:
-      - danger
-      - info
-      - primary
-      - success
-      - warning
-    valueFormat: card-%%prefix%%
-    title: 'Background - %%prefix_normalised%%'
-
-  card/outline:
-    prefixes:
-      - danger
-      - info
-      - primary
-      - success
-      - warning
-    valueFormat: card-outline-%%prefix%%
-    title: 'Outline - %%prefix_normalised%%'
-
-  cards/direction:
-    prefix: cards-horizontal
-    title: 'Horizontal'
-
-  # Content Block
-  contentblock/banner/image:
-    flat: true
-    prefix: image-only
-    title: 'Image Only'
+    title: '%%prefix_normalised%%'
 
   # Embed
   embed/default:
@@ -376,25 +221,14 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     title: '%%prefix_normalised%% %%breakpoint%%'
 
   # Font
-  font/font-weight-light:
-    flat: true
-    prefix: fw-300
-    title: 'Font Weight (Light)'
-
-  font/font-weight-normal:
-    flat: true
-    prefix: fw-400
-    title: 'Font Weight (Normal)'
-
-  font/font-weight-bold:
-    flat: true
-    prefix: fw-600
-    title: 'Font Weight (Bold)'
-
-  font/font-weight-bolder:
-    flat: true
-    prefix: fw-700
-    title: 'Font Weight (Bolder)'
+  font/weight:
+    prefixes:
+      - 300
+      - 400
+      - 600
+      - 700
+    valueFormat: 'fw-%%prefix%%'
+    title: '%%prefix_normalised%%'
 
   # Grid
   grid/container:
@@ -407,174 +241,21 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     prefix: container-flush
     title: 'Container Flush'
 
-  grid/container-width/container-sm:
-    flat: true
-    prefix: container-sm
-    title: 'Container Small ( max 320px )'
-
-  grid/container-width/container-md:
-    flat: true
-    prefix: container-md
-    title: 'Container Medium ( max 640px )'
-
-  grid/container-width/container-lg:
-    flat: true
-    prefix: container-lg
-    title: 'Container Large ( max 1024px )'
-
-  grid/container-width/container-xl:
-    flat: true
-    prefix: container-xl
-    title: 'Container X Large ( max 1366px )'
-
-  grid/list/pagelist/columns/column-1:
-    flat: true
-    prefix: column-1
-    title: 'Column 1'
-
-  grid/list/pagelist/columns/column-2:
-    flat: true
-    prefix: column-2
-    title: 'Column 2'
-
-  grid/list/pagelist/columns/column-3:
-    flat: true
-    prefix: column-3
-    title: 'Column 3'
-
-  grid/list/pagelist/columns/column-6:
-    flat: true
-    prefix: column-6
-    title: 'Column 6'
-
-  grid/list/pagelist/slides/slide-1:
-    flat: true
-    prefix: slide-1
-    title: 'Slide 1'
-
-  grid/list/eventlist/visibility/hidden:
-    flat: true
-    prefix: hidden
-    title: 'hidden'
-
   # Icons
-  icon/animation:
-    prefixes:
-      - pulse
-      - spin
-    prefixValue: fa-
-    title: '%%prefix_normalised%%'
-
-  icon/flip:
-    prefixes:
-      - horizontal
-      - vertical
-    prefixValue: fa-flip-
-    title: '%%prefix_normalised%%'
-
   icon/size:
     prefixes:
-      - xs
-      - sm
-      - md
-      - lg
+      - smaller
+      - small
+      - regular
+      - large
     prefixValue: icon--
-    title: 'Icon Size (%%prefix_normalised%%)'
-
-  icon/position:
-    prefixes:
-      - pull-left
-      - pull-right
-    prefixValue: fa-
     title: '%%prefix_normalised%%'
 
-  icon/rotate:
-    prefixes:
-      - rotate-90
-      - rotate-180
-      - rotate-270
-    prefixValue: fa-
-    title: '%%prefix_normalised%%'
-
-  # Images
-  image/responsive:
-    flat: true
-    prefix: img-fluid
-    title: 'Img Fluid'
-
-  image/alignment:
-    flat: true
-    prefix: img-center
-    title: 'Img Center'
-
-  image/metadata:
-    flat: true
-    prefix: img-data-visible
-    title: 'Img Data Visible'
-
-  image/spacing:
-    prefixes:
-      - no-margin
-      - no-padding
-    valueFormat: img-%%prefix%%
-    title: '%%prefix_normalised%%'
-
-  # Margin
-  margin:
-    breakpoints:
-      - sm
-      - md
-    emptyTitle: true
-    prefixes:
-      - m
-      - mb
-      - mt
-      - ml
-      - mr
-      - mx
-      - my
-    sizes:
-      - 0
-      - 5
-      - 10
-      - 15
-      - 20
-      - 25
-      - 30
-      - 35
-      - 40
-    title: '%%prefix_normalised%% - %%size%%px %%breakpoint%%'
-
+  # Margin center
   margin/mx-auto:
     flat: true
     prefix: mx-auto
     title: 'Center Horizontally'
-
-  # Padding
-  padding:
-    breakpoints:
-      - sm
-      - md
-    emptyTitle: true
-    prefixes:
-      - p
-      - pb
-      - pt
-      - pl
-      - pr
-      - px
-      - py
-    sizes:
-      - 0
-      - 5
-      - 10
-      - 15
-      - 20
-      - 25
-      - 30
-      - 35
-      - 40
-    title: '%%prefix_normalised%% %%size%%px %%breakpoint%%'
 
   # Text (Misc)
   text/list/colors:
@@ -606,7 +287,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - left
       - right
     prefixValue: text-
-    title: 'Text Alignment (%%prefix_normalised%%) %%breakpoint%%'
+    title: '%%prefix_normalised%% %%breakpoint%%'
 
   # Text transforms
   text/transform:
@@ -617,7 +298,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - uppercase
       - small
     prefixValue: text-
-    title: 'Text Transform (%%prefix_normalised%%)'
+    title: '%%prefix_normalised%%'
 
   video:
     prefixes:
@@ -629,7 +310,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - webkitallowfullscreen
     title: '%%prefix_normalised%%'
 
-  visibility:
+  visibility/hide:
     prefixes:
       - invisible
       - invisible-lg-down
@@ -642,9 +323,12 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - invisible-xl-up
       - invisible-xs-down
       - invisible-xs-up
+    title: '%%prefix_normalised%%'
+
+  visibility/screen-reader:
+    prefixes:
       - sr-only
       - sr-only-focusable
-      - text-hide
     title: '%%prefix_normalised%%'
 
 # Extends to

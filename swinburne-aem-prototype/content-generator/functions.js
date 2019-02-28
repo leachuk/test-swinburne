@@ -1,10 +1,16 @@
-/* eslint-disable no-loop-func */
-/* eslint-disable no-param-reassign */
+/* eslint-disable */
+
 const colors = require('colors')
-const fs     = require('fs')
 const mkdirp = require('mkdirp')
 
-const { readFileSync, existsSync, lstatSync, readdirSync, writeFile } = require('fs')
+const {
+  readFileSync,
+  existsSync,
+  lstatSync,
+  readdirSync,
+  writeFile,
+} = require('fs')
+
 const { join, resolve } = require('path')
 
 const {
@@ -17,73 +23,60 @@ const rootPath = 'content'
 
 const breakpoints = {
   sm: null,
-  md: 'Medium',
-  lg: 'Large',
-  xl: 'Extra Large',
+  md: 'Tablet',
+  lg: 'Desktop',
+  xl: 'Desktop (Large)',
 }
 
 const prefixes = {
-  acc: 'Align Content Center',
-  ace: 'Align Content End',
-  acs: 'Align Content Start',
+  // Font weights
+  '300': 'Light',
+  '400': 'Normal',
+  '600': 'SemiBold',
+  '700': 'Bold',
 
-  aic: 'Align Items Center',
-  aie: 'Align Items End',
-  ais: 'Align Items Start',
+  // Screen Reader
+  'sr-only'           : 'Only (visually hidden)',
+  'sr-only-focusable' : 'Show when focused',
 
-  jc: 'Justify Content Center',
-  je: 'Justify Content End',
-  js: 'Justify Content Start',
+  // Hidden components (invisiblility)
+  'invisible'         : 'Always',
+  'invisible-lg-down' : 'Desktop - Down',
+  'invisible-lg-up'   : 'Desktop - Up',
+  'invisible-md-down' : 'Tablet - Down',
+  'invisible-md-up'   : 'Tablet - Up',
+  'invisible-sm-down' : 'Mobile (landscape) - Down',
+  'invisible-sm-up'   : 'Mobile (landscape) - Up',
+  'invisible-xl-down' : 'Desktop (large) - Down',
+  'invisible-xl-up'   : 'Desktop (large) - Up',
+  'invisible-xs-down' : 'Mobile - Down',
+  'invisible-xs-up'   : 'Mobile - Up',
 
-  m  : '',
-  mt : 'Top',
-  mb : 'Bottom',
-  ml : 'Left',
-  mr : 'Right',
-  mx : '(X-Axis)',
-  my : '(Y-Axis)',
+  // Some colours are vauge, define specifc labels here
+  'dark'         : 'Charcoal',
+  'blue-50'      : 'Blue (Opacity 50%)',
+  'green-50'     : 'Green (Opacity 50%)',
+  'purple-50'    : 'Purple (Opacity 50%)',
+  'turquoise-50' : 'Turquoise (Opacity 50%)',
+  'yellow-50'    : 'Yellow (Opacity 50%)',
 
-  p  : '',
-  pt : 'Top',
-  pb : 'Bottom',
-  pl : 'Left',
-  pr : 'Right',
-  px : '(X-Axis)',
-  py : '(Y-Axis)',
+  // Add the word 'Square' to these icon
+  'facebook': 'Facebook - Square',
+  'linkedin': 'LinkedIn - Square',
 
-  c1: 'C1',
-  c2: 'C2',
-  c3: 'C3',
-  c4: 'C4',
-  c5: 'C5',
-  c6: 'C6',
-  c7: 'C7',
-  c8: 'C8',
-  c9: 'C9',
-  c10: 'C10',
-  c11: 'C11',
-  c12: 'C12',
-  c13: 'C13',
-  c14: 'C14',
-  c15: 'C15',
-  c16: 'C16',
-  c17: 'C17',
-  c18: 'C18',
-
-  // Specific styles
-  'col'            : 'Columns',
-  'quote-suffix'   : 'Quote Suffix',
-  'nowrap'         : 'No Wrap',
-  'playsinline'    : 'Plays Inline',
-  'v-centered-nav' : 'Verticial Aligned Nav Arrows',
+  // Misc styles
+  'col'    : 'Columns',
+  'nowrap' : 'No Wrap',
 }
 
+let templateCache = {}
+
 function isDirectory(source) {
-  return lstatSync(source).isDirectory();
+  return lstatSync(source).isDirectory()
 }
 
 function getDirectories (source) {
-  return readdirSync(source).map(name => join(source, name)).filter(isDirectory);
+  return readdirSync(source).map(name => join(source, name)).filter(isDirectory)
 }
 
 function currentPath(path) {
@@ -98,7 +91,6 @@ function mapBreakpointToName(breakpoint) {
   return breakpoints[breakpoint]
 }
 
-let templateCache = {}
 function loadTemplateForCategory(category = null) {
   if (!category) {
     throw new Error('Invalid category name supplied!')
@@ -116,10 +108,10 @@ function normalisePrefix(prefix, emptyTitle = false) {
   const newPrefix = prefixes[prefix]
 
   if (!newPrefix) {
-    return !emptyTitle ? titleCase(fixTitle(prefix)) : '';
+    return !emptyTitle ? titleCase(fixTitle(prefix)) : ''
   }
 
-  return titleCase(fixTitle(newPrefix));
+  return titleCase(fixTitle(newPrefix))
 }
 
 function fixTitle(title) {
@@ -143,7 +135,7 @@ function titleCase(str) {
       word.replace(word[0], word[0].toUpperCase())
     )).join(' ')
   } catch (ex) {
-    console.log(colors.red(`Error: ${str};`), ex)
+    console.log(colors.red(`Error: ${str}`), ex)
   }
 
   return str
@@ -344,3 +336,5 @@ module.exports = {
   getDirectories,
   isDirectory
 }
+
+/* eslint-enable */

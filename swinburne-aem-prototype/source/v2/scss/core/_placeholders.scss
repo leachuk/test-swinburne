@@ -1,5 +1,8 @@
 %yellow-foil {
-  background: theme-color('c2') url(../images/patterns/foil-yellow.png)  0 100% repeat-x;
+  background-color: theme-color('c2');
+  background-image: url(../images/patterns/foil-yellow.png);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
   background-size: 13px 140px;
 }
 

@@ -4,26 +4,11 @@ content/cq:tags/swinburne/component-style-module: &component-style-module
     prefix: play-video
     title: 'Play Background Video'
 
-  media/video/popup:
-    flat: true
-    prefix: play-video
-    title: 'Play Popup Video'
-
-  layout/contentblock/parallaximage:
-    flat: true
-    prefix: parallaximage
-    title: 'Parallax Image'
-
-  layout/button/navtoggler:
-    flat: true
-    prefix: navtoggler
-    title: 'Nav Toggler (button)'
-
   # Search widget
   widgets/search/global-search:
     flat: true
     prefix: global-search
-    title: 'Global Search'
+    title: 'Global Search (Header)'
 
   widgets/search/quicksearch:
     flat: true

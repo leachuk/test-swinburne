@@ -2,7 +2,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Backgrounds
   background/primary:
     prefixes:
-      - dark
+      - charcoal
       - red
       - red-50
       - yellow
@@ -25,7 +25,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
 
   background/greys:
     prefixes:
-      - dark
+      - charcoal
       - grey-1
       - grey-2
       - grey-3
@@ -73,7 +73,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
   # Colours
   colour/primary:
     prefixes:
-      - dark
+      - charcoal
       - red
       - red-50
       - yellow
@@ -96,7 +96,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
 
   colour/greys:
     prefixes:
-      - dark
+      - charcoal
       - grey-1
       - grey-2
       - grey-3

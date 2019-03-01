@@ -34,6 +34,13 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     startWith: bg-
     title: '%%prefix_normalised%%'
 
+  background/standard:
+    prefixes:
+      - black
+      - white
+    startWith: bg-
+    title: '%%prefix_normalised%%'
+
   # Button
   button:
     prefixes:
@@ -64,7 +71,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     title: 'Disabled'
 
   # Colours
-  color/primary:
+  colour/primary:
     prefixes:
       - dark
       - red
@@ -74,7 +81,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     startWith: text-
     title: '%%prefix_normalised%%'
 
-  color/secondary:
+  colour/secondary:
     prefixes:
       - blue
       - blue-50
@@ -87,7 +94,7 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     startWith: text-
     title: '%%prefix_normalised%%'
 
-  color/greys:
+  colour/greys:
     prefixes:
       - dark
       - grey-1
@@ -95,6 +102,13 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
       - grey-3
       - grey-4
       - grey-5
+    startWith: text-
+    title: '%%prefix_normalised%%'
+
+  colour/standard:
+    prefixes:
+      - black
+      - white
     startWith: text-
     title: '%%prefix_normalised%%'
 

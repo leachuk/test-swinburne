@@ -1,5 +1,5 @@
 %yellow-foil {
-  background-color: theme-color('c2');
+  background-color: color('yellow');
   background-image: url(../images/patterns/foil-yellow.png);
   background-position: 0 100%;
   background-repeat: repeat-x;
@@ -8,12 +8,12 @@
 
 %yellow-card-body {
   *:not(.btn) {
-    color: $tertiary;
+    color: color('charcoal');
   }
 }
 
 %charcoal-card-body {
-  background: $tertiary;
+  background: color('charcoal');
 
   *:not(.card-tags) {
     color: $white;

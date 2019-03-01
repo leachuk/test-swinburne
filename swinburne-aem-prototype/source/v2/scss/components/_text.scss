@@ -65,17 +65,7 @@
   &-list-dark {
     ul li::before,
     ol li::before {
-      color: theme-color('c1');
-    }
-  }
-
-  // Colour variations
-  //
-  // TODO: Migrate this into 'utilities/_text.scss'??
-  @each $name, $color in $colors {
-    $index: index($colors, $color);
-    &-#{'' + $name} {
-      color: #{$color} !important;
+      color: color('red');
     }
   }
 }

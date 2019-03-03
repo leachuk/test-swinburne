@@ -7,6 +7,7 @@ const CopyWebpackPlugin       = require('copy-webpack-plugin')
 const EventHooksPlugin        = require('event-hooks-webpack-plugin')
 const ImageminPlugin          = require('imagemin-webpack-plugin').default
 const LodashPlugin            = require('lodash-webpack-plugin')
+const MiniCssExtractPlugin    = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TsconfigPathsPlugin     = require('tsconfig-paths-webpack-plugin')
 const UglifyJsPlugin          = require('uglifyjs-webpack-plugin')
@@ -54,18 +55,11 @@ module.exports = env => {
     module: {
       rules: [
         {
-          test: /\.s(a|c)ss$/,
+          test: /\.s[ac]ss$/,
 
           use: [
             {
-              loader: 'file-loader',
-
-              options: {
-                name: 'css/[name].css',
-              },
-            },
-            {
-              loader: 'extract-loader',
+              loader: MiniCssExtractPlugin.loader,
             },
             {
               loader: 'css-loader',
@@ -105,7 +99,7 @@ module.exports = env => {
         },
         {
           exclude : [resolve('node_modules')],
-          test    : /\.(j|t)sx?$/,
+          test    : /\.[jt]sx?$/,
 
           use: removeEmpty([
             {
@@ -228,6 +222,10 @@ module.exports = env => {
           to      : resolve(PUBLIC_PATH, env.project, 'css'),
         },
       ]),
+      new MiniCssExtractPlugin({
+        filename      : 'css/[name].css',
+        chunkFilename : 'css/[id].css',
+      }),
       new ImageminPlugin({
         test: /\.(jpe?g|png|gif|svg)$/i,
       }),

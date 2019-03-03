@@ -9,6 +9,7 @@ const ImageminPlugin          = require('imagemin-webpack-plugin').default
 const LodashPlugin            = require('lodash-webpack-plugin')
 const MiniCssExtractPlugin    = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const StyleLintPlugin         = require('stylelint-webpack-plugin')
 const TsconfigPathsPlugin     = require('tsconfig-paths-webpack-plugin')
 const UglifyJsPlugin          = require('uglifyjs-webpack-plugin')
 const exec                    = require('child_process').exec
@@ -30,6 +31,8 @@ module.exports = env => {
   const PUBLIC_PATH_AEM = `/etc/clientlibs/${env.clientLibsFolder || 'swinburne'}/`
 
   const project = config[env.project]
+
+  const PROJECT_PATH = resolve(SOURCE_PATH, env.project)
 
   return {
     context : SOURCE_PATH,
@@ -55,7 +58,7 @@ module.exports = env => {
     module: {
       rules: [
         {
-          test: /\.s[ac]ss$/,
+          test: /\.scss$/,
 
           use: [
             {
@@ -77,7 +80,7 @@ module.exports = env => {
                 sourceMap : env.dev === true,
 
                 config: {
-                  path: resolve('postcss.config.js'),
+                  path: resolve(__dirname, 'postcss.config.js'),
 
                   ctx: {
                     prod: env.prod === true,
@@ -202,22 +205,22 @@ module.exports = env => {
       env.clean === true ? new CleanWebpackPlugin([PUBLIC_PATH]) : undefined,
       new CopyWebpackPlugin([
         {
-          context : resolve(SOURCE_PATH, env.project),
+          context : PROJECT_PATH,
           from    : './*.ico',
           to      : resolve(PUBLIC_PATH, env.project),
         },
         {
-          context : resolve(SOURCE_PATH, env.project, 'images'),
+          context : resolve(PROJECT_PATH, 'images'),
           from    : './**/*.*',
           to      : resolve(PUBLIC_PATH, env.project, 'images'),
         },
         {
-          context : resolve(SOURCE_PATH, env.project, 'fonts'),
+          context : resolve(PROJECT_PATH, 'fonts'),
           from    : './**/*.*',
           to      : resolve(PUBLIC_PATH, env.project, 'fonts'),
         },
         {
-          context : resolve(SOURCE_PATH, env.project, 'css'),
+          context : resolve(PROJECT_PATH, 'css'),
           from    : './*.css',
           to      : resolve(PUBLIC_PATH, env.project, 'css'),
         },
@@ -226,6 +229,12 @@ module.exports = env => {
         filename      : 'css/[name].css',
         chunkFilename : 'css/[id].css',
       }),
+      env.maven !== true ? new StyleLintPlugin({
+        context     : resolve(PROJECT_PATH, 'scss'),
+        failOnError : false,
+        files       : '**/*.scss',
+        quiet       : false,
+      }) : undefined,
       new ImageminPlugin({
         test: /\.(jpe?g|png|gif|svg)$/i,
       }),

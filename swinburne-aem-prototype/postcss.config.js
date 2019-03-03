@@ -1,8 +1,6 @@
 /* eslint-disable */
 module.exports = ({ env }) => ({
   plugins: {
-    'stylelint': true,
-
     'postcss-pxtorem': {
       replace       : true,
       rootValue     : 16,
@@ -33,7 +31,7 @@ module.exports = ({ env }) => ({
       grid: 'autoplace',
     },
 
-    cssnano: env === 'production' ? true : false,
+    cssnano: env === 'production',
 
     'postcss-reporter': {
       clearReportedMessages: true,

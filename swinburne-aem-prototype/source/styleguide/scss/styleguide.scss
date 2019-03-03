@@ -98,6 +98,21 @@ html:not(.aem-AuthorLayer-Edit) {
   article > div > .page-details {
     background: color('yellow') url(../../v2/images/patterns/foil-yellow.png)  0 100% repeat-x;
     background-size: 13px 140px;
+
+    + .contentblock {
+      padding-bottom: 15px;
+      padding-top: 15px;
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 30px;
+        padding-top: 30px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
   }
 }
 

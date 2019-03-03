@@ -11,6 +11,14 @@
     line-height: 22px;
   }
 
+  .text[component] a {
+    text-decoration: underline;
+
+    @include hover {
+      text-decoration: none;
+    }
+  }
+
   &__global {
     padding: 20px 5px;
 

@@ -37,7 +37,7 @@ class DLSPageListPublishSpec extends ComponentSpec {
         assert $("${selector} > div > ul > li").size() == 4
 
         and: "First card has yellow background colour when default background"
-        assert $("${selector} > div > ul > li:nth-child(1) > div > div.card-body").css("background-color") == "#ffeb14"
+        assert $("${selector} > div > ul > li.first > div > div.card-body").css("background-color") == "#ffeb14"
 
         where:
         viewport << getViewPorts()

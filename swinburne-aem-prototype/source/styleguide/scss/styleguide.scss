@@ -26,6 +26,10 @@ $styleguide-sidebar-width: 260px;
 }
 
 
+#page_details_GWXYLMKFB {
+  display: none;
+}
+
 html:not(.aem-AuthorLayer-Edit) {
   .styleguide {
     .article,
@@ -47,7 +51,6 @@ html:not(.aem-AuthorLayer-Edit) {
     }
 
     .nav-link {
-      color: $tertiary;
       margin-bottom: 0;
       padding-bottom: 0;
     }

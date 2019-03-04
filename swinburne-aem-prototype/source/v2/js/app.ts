@@ -4,6 +4,7 @@ import '../scss/app.scss'
 import Carousels from '@global/modules/carousel'
 import Subscribers from '@global/modules/subscribers'
 import PromotedCard from '@global/modules/promoted-card'
+import 'bootstrap';
 
 import {
   TOPIC_HIDE_SUGGESTIONS,

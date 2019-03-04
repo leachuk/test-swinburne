@@ -1,35 +1,91 @@
 .brand-header {
   font-size: 12px;
-  height: $header-height;
-  &__actions,
-  &__actions,
-  &__nav,
-  &__admin,
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include media-breakpoint-up(lg) {
+    position: inherit;
+  }
+  &,
+  &__logo {
+    height: $header-height-sm;
+    @include media-breakpoint-up(lg) {
+      height: $header-height - 1px;
+    }
+  }
   & > .aem-Grid > .contentblock {
     display: flex;
     flex-direction: row;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+  &__actions,
+  &__nav {
+    margin: 0;
+    display: inline-flex;
+    vertical-align: top;
+    width: 100%;
+    height: ( $header-height / 3 ) * 2;
+  }
+  &__nav,
+  &__admin {
+    @include media-breakpoint-down(md) {
+      width: 100vw;
+    }
   }
   a:hover {
     text-decoration: none;
   }
-  &__logo {
+  &__logo { // Todo add this to logo wrapper
+    @include media-breakpoint-down(md) {
+      img {
+        display: inline-flex;
+        height: auto;
+        max-height: 100%;
+      }
+    }
     & + .contentblock { // Navigation container
-      width: calc(100% - 176px);
-      height: $header-height;
-      flex-wrap: wrap;
+      width: 100%;
+      height: calc(100vh - 47px);
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      position: fixed;
+      top: 0;
+      margin-top: 47px;
+      left: 0;
+      @include media-breakpoint-up(lg) {
+        width: calc(100% - 176px);
+        display: block;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: $header-height;
+        position: static;
+        margin-top: 0;
+      }
+      @include media-breakpoint-down(md) {
+        background-color: $tertiary;
+      }
     }
   }
   &__admin {
     background-color: $tertiary;
     height: $header-height / 3;
     padding: 0 $spacing-md;
-    justify-content: flex-start;
     a {
       color: $white;
       font-weight: 400;
     }
     & > .contentblock {
       flex: 1;
+      @include media-breakpoint-down(md) {
+        display: flex;
+        flex-direction: column;
+      }
       a {
         margin-right: $spacing-sm;
         font-weight: 400;
@@ -76,37 +132,136 @@
         margin-left: 0;
       }
     }
+    flex-direction: row;
+    justify-content: flex-start;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      height: auto;
+    }
   }
   &__nav {
     padding: 0 $spacing-md;
     max-width: calc( 100% - 210px );
-    overflow: auto;
-    transform: translateY(-3px);
+    font-weight: 700;
     .nav-link {
-      font-weight: 700;
       color: $tertiary;
-      line-height: 16px;
+      height: (($header-height / 3) * 2) - 2px;
+      padding-top: 22px;
       &:after {
         display: none;
       }
+      margin-right: $spacing-md;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease-in-out;
+      &[aria-expanded="true"],
+      &:hover {
+        border-bottom: 2px solid $primary;
+      }
+      @include media-breakpoint-down(md) {
+        width: 100vw;
+        margin-right: 0;
+        &,
+        &[aria-expanded="true"],
+        &:hover {
+          border-bottom: 1px solid $grey-2;
+        }
+      }
     }
-    li {
+    [class*="l-"] {
+      line-height: 16px;
+      font-size: 12px;
+    }
+    .nav-item {
       flex-wrap: nowrap;
       &:before {
         display: none;
       }
-      margin-right: $spacing-md;
+      &.dropdown { // Level 1
+        position: inherit;
+      }
+      .dropdown-menu { // Level 2
+        background-color: $grey-5;
+        border-radius: 0;
+        border: 0;
+        width:100%;
+        left:  5px;
+        padding: 0 $spacing-md;
+        overflow: auto;
+        height: $header-level2-height;
+        a {
+          &.l-2 {
+            color: $grey-2;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+            height: $header-level2-height;
+            margin-right: $spacing-md;
+            display: inline-flex;
+            vertical-align: top;
+            padding-top: 16px;
+            &[aria-expanded="true"],
+            &:hover {
+              border-bottom: 2px solid $tertiary;
+              color: $tertiary;
+            }
+          }
+        }
+      }
+    }
+    flex-direction: row;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      .nav-link {
+        color: $white;
+        position: relative;
+        &:before {
+          content: '\f178';
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          font-size: 18px;
+          line-height: 18px;
+          margin-right: $spacing-lg;
+          font-family: $font-family-awesome;
+          font-weight: 200;
+        }
+      }
+      .nav-item {
+        &:focus {
+          &,
+          & > a {
+            outline: none;
+          }
+        }
+      }
+      order: -1;
+      display: flex;
+      height: auto;
+      max-width: inherit;
+      padding-right: 0;
     }
   }
   &__actions {
     max-width: 200px;
     justify-content: flex-end;
     align-items: center;
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: auto;
+      margin-top: -43px;
+    }
     a {
       &.btn {
         height: 45px;
         font-weight: 400;
         min-width: 140px;
+        @include media-breakpoint-down(md) {
+          min-width: 101px;
+          margin-right: 7px;
+        }
         &,
         &:hover {
           color: $white;
@@ -121,6 +276,7 @@
       justify-content: center;
       align-items: center;
       padding: 0;
+      background-color: transparent;
       .icon:first-of-type {
         color: $tertiary;
         font-size: 14px;
@@ -129,12 +285,5 @@
         padding-left: 5px;
       }
     }
-  }
-  &__actions,
-  &__nav {
-    margin: 0;
-    display: inline-flex;
-    width: 100%;
-    height: ( $header-height / 3 ) * 2;
   }
 }

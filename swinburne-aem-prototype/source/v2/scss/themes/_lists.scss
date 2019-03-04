@@ -1,8 +1,5 @@
-/* stylelint-disable declaration-no-important */
-
 &--lists {
   @import 'lists/cards';
   @import 'lists/horizontal';
+  @import 'lists/layout';
 }
-
-/* stylelint-enable declaration-no-important */

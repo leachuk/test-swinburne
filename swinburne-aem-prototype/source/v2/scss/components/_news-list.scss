@@ -5,28 +5,5 @@
 // and other component level changes.
 
 .newslist {
-  > .content > ul {
-    @include make-row;
-
-    padding-left: 0;
-
-    > li {
-      @include make-col-ready;
-      @include make-col(12);
-
-      margin-bottom: $spacing-sm;
-
-      &::before {
-        display: none;
-      }
-
-      @include media-breakpoint-up(md) {
-        @include make-col(6);
-      }
-
-      @include media-breakpoint-up(xl) {
-        @include make-col(4);
-      }
-    }
-  }
+  @extend %component-list;
 }

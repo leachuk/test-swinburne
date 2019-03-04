@@ -215,11 +215,6 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--lists-equal
     title: 'Equal (50%-50%) Width Items'
 
-  lists/widths/flat:
-    flat: true
-    prefix: theme--lists-flat
-    title: 'Flat (unstyled) Items'
-
   lists/widths/large:
     flat: true
     prefix: theme--lists-large

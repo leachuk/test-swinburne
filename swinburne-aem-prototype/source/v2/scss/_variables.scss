@@ -106,7 +106,7 @@ $spacing-7xl: 55px;
 //
 // Define common padding and border radius sizes and more.
 
-$border-color:                color(grey-4);
+$border-color:                color('grey-4');
 
 $border-radius:               0;
 $border-radius-lg:            0;
@@ -277,11 +277,11 @@ $grid-gutter-width: 30px;
 $nav-link-padding-y:                0;
 $nav-link-padding-x:                0;
 
-$nav-tabs-border-color:             color(grey-4);
+$nav-tabs-border-color:             color('grey-4');
 $nav-tabs-border-width:             2px;
 $nav-tabs-border-radius:            $border-radius;
 $nav-tabs-link-hover-border-color:  $nav-tabs-border-color;
-$nav-tabs-link-active-color:        color(grey-4);
+$nav-tabs-link-active-color:        color('grey-4');
 $nav-tabs-link-active-bg:           transparent;
 $nav-tabs-link-active-border-color: $nav-tabs-border-color;
 
@@ -299,10 +299,10 @@ $navbar-brand-padding-y:            0;
 $navbar-toggler-padding-y:          0;
 $navbar-toggler-padding-x:          0;
 
-$navbar-light-color:                color(grey-4);
+$navbar-light-color:                color('grey-4');
 $navbar-light-hover-color:          color('charcoal');
 $navbar-light-active-color:         color('charcoal');
-$navbar-light-disabled-color:       color(grey-5);
+$navbar-light-disabled-color:       color('grey-5');
 $navbar-light-toggler-icon-bg:      null;
 $navbar-light-toggler-border-color: null;
 

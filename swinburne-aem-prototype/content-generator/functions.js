@@ -54,11 +54,12 @@ const prefixes = {
 
   // Some colours are vauge, define specifc labels here
   'dark'         : 'Charcoal',
-  'blue-50'      : 'Blue (Opacity 50%)',
-  'green-50'     : 'Green (Opacity 50%)',
-  'purple-50'    : 'Purple (Opacity 50%)',
-  'turquoise-50' : 'Turquoise (Opacity 50%)',
-  'yellow-50'    : 'Yellow (Opacity 50%)',
+  'blue-50'      : 'Blue (50% opacity)',
+  'green-50'     : 'Green (50% opacity)',
+  'purple-50'    : 'Purple (50% opacity)',
+  'red-50'       : 'Red (50% opacity)',
+  'turquoise-50' : 'Turquoise (50% opacity)',
+  'yellow-50'    : 'Yellow (50% opacity)',
 
   // Add the word 'Square' to these icon
   'facebook': 'Facebook - Square',

@@ -57,7 +57,6 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
                                     componentId="text_5SAG7S8CD"
-                                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-40]"
                                     text="&lt;p>Breadcrumb enable users to quickly see their location within a path of navigation and navigate to a parent page if required.&lt;/p>&#xd;&#xa;&lt;p>Content is automatically generated using the site heirarchy in AEM.&lt;/p>&#xd;&#xa;"
                                     textIsRich="true"/>
                                 <colctrl

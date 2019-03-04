@@ -77,7 +77,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock4"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-20]"
                     title="SWU - light"
                     variant="advsection">
                     <par
@@ -99,7 +98,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock5"
-                    componentModifiers="[swinburne:component-style-modifier/background/bg-dark,swinburne-showcase:component-style-modifier/padding/p-20]"
+                    componentModifiers="[swinburne:component-style-modifier/background/primary/bg-charcoal]"
                     title="SWU - dark"
                     variant="advsection">
                     <par jcr:primaryType="nt:unstructured">

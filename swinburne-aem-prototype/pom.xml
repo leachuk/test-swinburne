@@ -132,7 +132,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v1 --env.clean</arguments>
+              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v1 --env.maven --env.clean</arguments>
             </configuration>
           </execution>
           <execution>
@@ -153,7 +153,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v2</arguments>
+              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v2 --env.maven</arguments>
             </configuration>
           </execution>
           <execution>
@@ -174,7 +174,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide</arguments>
+              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide --env.maven</arguments>
             </configuration>
           </execution>
 

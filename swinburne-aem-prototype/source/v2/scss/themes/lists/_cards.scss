@@ -1,16 +1,12 @@
-&-cards {
-  &-charcoal {
-    .card {
-      &:not(.card--promoted) .card-body {
-        @extend %charcoal-card-body;
-      }
+&-cards-charcoal {
+  .card {
+    &:not(.card--promoted) .card-body {
+      @extend %charcoal-card-body;
+    }
+
+    &.card--promoted > .card-body {
+      &,
       .bg-yellow & {
-        &.card--promoted > .card-body {
-          @extend %yellow-card-body;
-          @extend %yellow-foil;
-        }
-      }
-      &.card--promoted > .card-body {
         @extend %yellow-card-body;
         @extend %yellow-foil;
       }

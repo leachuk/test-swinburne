@@ -37,8 +37,7 @@
                 <contentblock
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock"
-                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                        componentId="contentblock">
                     <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/container">
@@ -51,14 +50,12 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="swinburne/components/content/text"
                                         componentId="text_307685071_2F7XDTE8E"
-                                        componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-40]"
                                         text="&lt;p>Components can be hidden from users by content authors or developers by using AEM modifiers or CSS utility classes.&lt;/p>&#xd;&#xa;"
                                         textIsRich="true"/>
                                 <text_143484197
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="swinburne/components/content/text"
                                         componentId="text_143484197_RMWAULICL"
-                                        componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-40]"
                                         text="&lt;h4>Hiding a component&lt;br>&#xd;&#xa;&lt;/h4>&#xd;&#xa;&lt;p>Apply modifier&amp;nbsp;&lt;b>visibility / invisible&lt;/b>&amp;nbsp;to completely hide a component from the user all on all devices. This applied CSS class .invisible to the root node of the component.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;h4>Responsive Utilities&lt;/h4>&#xd;&#xa;&lt;p>The following modifiers hide components only on certain screen sizes.&lt;/p>&#xd;&#xa;"
                                         textIsRich="true"/>
                                 <embedsource

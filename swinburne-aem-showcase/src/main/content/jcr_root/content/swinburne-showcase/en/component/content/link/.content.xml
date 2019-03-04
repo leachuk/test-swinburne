@@ -88,7 +88,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/link"
                             componentId="linkprimary"
-                            componentModifiers="[swinburne:component-style-modifier/button/normal/primary]"
+                            componentModifiers="[swinburne:component-style-modifier/button/primary]"
                             label="PRIMARY"
                             link="Primary"
                             variant="button"/>
@@ -96,7 +96,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/link"
                             componentId="linksecondary"
-                            componentModifiers="[swinburne:component-style-modifier/button/normal/secondary]"
+                            componentModifiers="[swinburne:component-style-modifier/button/secondary]"
                             label="SECONDARY"
                             link="Secondary"
                             variant="button"/>

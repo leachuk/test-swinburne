@@ -24,7 +24,7 @@
   }
 
   &::before {
-    background-color: $tertiary;
+    background-color: color('charcoal');
     content: ' ';
     display: block;
     height: 260px;

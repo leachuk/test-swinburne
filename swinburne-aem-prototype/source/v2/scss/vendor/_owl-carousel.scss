@@ -21,11 +21,11 @@ $dot-height:              8px;
 $dot-rounded:             100%;
 $dot-margin:              0 10px;
 $dot-background:          transparent;
-$dot-background-active:   theme-color('g1');
+$dot-background-active:   color('grey-1');
 
 @import '~owl.carousel/src/scss/core';
 @import '~owl.carousel/src/scss/theme';
 
 .owl-dot span {
-  border: 1px solid theme-color('g1');
+  border: 1px solid color('grey-1');
 }

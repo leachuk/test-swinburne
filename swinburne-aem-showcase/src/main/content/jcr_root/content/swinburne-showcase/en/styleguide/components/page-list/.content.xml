@@ -37,8 +37,7 @@
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15]">
+                    componentId="contentblock">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -46,7 +45,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_XG1BDEB5Y"
-                            text="&lt;p>Badge: Icon&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4>Badge: Icon&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <reference
                             jcr:primaryType="nt:unstructured"
@@ -58,8 +57,7 @@
                 <contentblock2
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock2"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    componentId="contentblock2">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -67,7 +65,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_75PQYB38E"
-                            text="&lt;p>Badge: Default&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4>Badge: Default&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <reference
                             jcr:primaryType="nt:unstructured"
@@ -79,8 +77,7 @@
                 <contentblock3
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock3"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15]">
+                    componentId="contentblock3">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -88,7 +85,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_GG1BDE2EY"
-                            text="&lt;p>Badge: Card with Image, Tag, Title and Action : Promoted : Default parent background : Default cards background&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4>Badge: Card with Image, Tag, Title and Action - Promoted (default background)&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <reference
                             jcr:primaryType="nt:unstructured"
@@ -100,8 +97,7 @@
                 <contentblock3_copy_894108834
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock3"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15]">
+                    componentId="contentblock3">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -109,7 +105,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_GG1BDE2EY"
-                            text="&lt;p>Badge: Card with Image, Tag, Title and Action : Promoted : Default parent background : Charcoal cards background&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4>Badge: Card with Image, Tag, Title and Action - Promoted (default background with charcoal theme)&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <reference
                             jcr:primaryType="nt:unstructured"
@@ -118,38 +114,11 @@
                             path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_copy"/>
                     </par>
                 </contentblock3_copy_894108834>
-                <contentblock3_copy_8
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock3"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/background/bg-yellow]">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text_GG1BDE2EY"
-                            text="&lt;p>Badge: Card with Image, Tag, Title and Action : Promoted : Yellow parent background : Charcoal cards background&amp;nbsp;&lt;/p>&#xd;&#xa;"
-                            textIsRich="true"/>
-                        <reference
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/reference"
-                            componentId="reference_OXHFFXJJE"
-                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_copy"/>
-                    </par>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                </contentblock3_copy_8>
                 <contentblock3_copy_c
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock3"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/background/bg-grey-5]">
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-grey-5]">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -157,7 +126,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_GG1BDE2EY"
-                            text="&lt;p>Badge: Card with Image, Tag, Title and Action : Promoted :&amp;nbsp; grey parent background : default cards background&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4>Badge: Card with Image, Tag, Title and Action - Promoted (grey background)&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <reference
                             jcr:primaryType="nt:unstructured"
@@ -176,7 +145,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock3"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/background/bg-yellow]">
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-yellow]">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -184,7 +153,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_GG1BDE2EY"
-                            text="&lt;p>Badge: Card with Image, Tag, Title and Action : Promoted : yellow parent background : default card background&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4>Badge: Card with Image, Tag, Title and Action - Promoted (yellow background)&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <reference
                             jcr:primaryType="nt:unstructured"
@@ -203,7 +172,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock3"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/background/bg-grey-5]">
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-grey-5]">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -211,7 +180,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_GG1BDE2EY"
-                            text="&lt;p>Badge: Card with Image, Tag, Title and Action : Promoted : grey parent background : Charcoal cards background&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4>Badge: Card with Image, Tag, Title and Action - Promoted (grey background with charcoal theme)&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <reference
                             jcr:primaryType="nt:unstructured"
@@ -229,8 +198,7 @@
                 <contentblock_316914013
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_316914013_DXURYEN0J"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-md-30,swinburne-showcase:component-style-modifier/padding/p-15]">
+                    componentId="contentblock_316914013_DXURYEN0J">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -238,7 +206,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_HSPNSMMHY"
-                            text="&lt;p>Badge: Default : Horizontal links&lt;/p>&#xd;&#xa;"
+                            text="&lt;h4>Badge: Default : Horizontal links&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>
                         <reference
                             jcr:primaryType="nt:unstructured"

@@ -9,7 +9,7 @@
   padding-left: 0;
 
   &__item {
-    color: $grey-2;
+    color: color('grey-2');
     display: inline-block;
     margin-right: $spacing-xs;
   }

@@ -10,13 +10,13 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
   styles/styles: &global-dialog-text-rtePlugins-styles-styles
     template: 'text-rtePlugins-styles-styles'
     contents:
-      - textC1: { cssName: 'text-c1', text: "Colour C1 (SWU: Red / MS: Green)" }
-      - textC2: { cssName: 'text-c2', text: "Colour C2 (SWU: Yellow / MS: Blue)" }
-      - textC3: { cssName: 'text-c3', text: "Colour C3 (SWU: Charcoal / MS: Turquoise)" }
-      - textC4: { cssName: 'text-c4', text: "Colour C4 (SWU: Green / MS: Gold)" }
-      - textC5: { cssName: 'text-c5', text: "Colour C5 (SWU: Blue / MS: Purple)" }
-      - textC6: { cssName: 'text-c6', text: "Colour C6 (SWU: Purple / MS: Grey)" }
-      - textC7: { cssName: 'text-c7', text: "Colour C7 (SWU: Turquoise / MS: Swinburne Red)" }
+      - textC1: { cssName: 'text-c1', text: "Colour C1 (SUT: Red / MS: Green)" }
+      - textC2: { cssName: 'text-c2', text: "Colour C2 (SUT: Yellow / MS: Blue)" }
+      - textC3: { cssName: 'text-c3', text: "Colour C3 (SUT: Charcoal / MS: Turquoise)" }
+      - textC4: { cssName: 'text-c4', text: "Colour C4 (SUT: Green / MS: Gold)" }
+      - textC5: { cssName: 'text-c5', text: "Colour C5 (SUT: Blue / MS: Purple)" }
+      - textC6: { cssName: 'text-c6', text: "Colour C6 (SUT: Purple / MS: Grey)" }
+      - textC7: { cssName: 'text-c7', text: "Colour C7 (SUT: Turquoise / MS: Swinburne Red)" }
       - textC8: { cssName: 'text-c8', text: "Colour C8 (Black)" }
       - textC9: { cssName: 'text-c9', text: "Colour C9 (White)" }
       - textC13: { cssName: 'text-c10', text: "Colour C10 (Dark Grey)" }
@@ -52,7 +52,7 @@ apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items
       - textStyleP3: { cssName: 'p3', text: "Text Style (P3)" }
       - textStyleP4: { cssName: 'p4', text: "Text Style (P4)" }
       - fontFamillyOpenSans: { cssName : 'f-open-sans', text: 'Font Family (Open Sans)' }
-      - fontFamillyBrushUp: { cssName : 'f-brush-up', text: 'Font Family (Brush Up)' }
+      - fontFamillyBrushUp: { cssName : 'f-brush-up', text: 'Font Family (Brush Up) - MS Only' }
 
   paraformat/formats: &global-dialog-text-rtePlugins-paraformat-formats
     template: 'text-rtePlugins-paraformat-formats'

@@ -12,93 +12,10 @@
             <par
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/container">
-                <contentblock1
+                <swinburne_global_footer
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock1"
-                        title="Variant: Default"
-                        variant="advsection">
-                    <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
-                        <footer
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/footer"
-                                cancelInheritParent="true"
-                                componentId="footer1">
-                            <par
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/layout/container">
-                                <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="swinburne/components/content/text"
-                                        text="&lt;p>Footer Content&lt;/p>&#xa;"
-                                        textIsRich="true"/>
-                            </par>
-                        </footer>
-                    </par>
-                </contentblock1>
-                <contentblock2
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock2"
-                        title="Variant: Default with Background"
-                        variant="advsection">
-                    <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
-                        <footer
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/footer"
-                                cancelInheritParent="true"
-                                componentId="footer2">
-                            <par
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/layout/container">
-                                <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="swinburne/components/content/text"
-                                        text="&lt;p>Footer Content with Background&lt;/p>&#xa;"
-                                        textIsRich="true"/>
-                            </par>
-                            <bgimage
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/media/image"
-                                    fileReference="/content/dam/swinburne-showcase/en/common/aem-design.png"/>
-                        </footer>
-                    </par>
-                </contentblock2>
-                <contentblock3
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock3"
-                        title="Variant: Default with Styles"
-                        variant="advsection">
-                    <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
-                        <footer
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/footer"
-                                cancelInheritParent="true"
-                                componentId="footer3"
-                                componentModifiers="[swinburne:component-style-modifier/background/bg-c8,swinburne:component-style-modifier/color/standard/white]">
-                            <par
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/layout/container">
-                                <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="swinburne/components/content/text"
-                                        text="&lt;p>Footer Content with Style&lt;/p>&#xa;"
-                                        textIsRich="true"/>
-                            </par>
-                        </footer>
-                    </par>
-                </contentblock3>
-                <contentblock4
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock4"
+                        componentId="swinburne_global_footer"
                         title="Variant: Swinburne Global"
                         variant="advsection">
                     <par
@@ -109,8 +26,8 @@
                                 sling:resourceType="swinburne/components/layout/footer"
                                 cancelInheritParent="true"
                                 componentId="footer_swinburne_global"
-                                componentModifiers="[swinburne:component-style-modifier/color/standard/white,swinburne-showcase:component-style-modifier/background/bg-dark]"
-                                componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer]">
+                                componentModifiers="[swinburne:component-style-modifier/color/standard/white,swinburne:component-style-modifier/background/primary/bg-charcoal]"
+                                componentTheme="[swinburne:component-style-theme/layout/brand-footer]">
                             <par
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/layout/container">
@@ -126,14 +43,14 @@
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="swinburne/components/layout/contentblock"
                                                 componentId="contentblock_270068205_LBJRXFEVJ"
-                                                componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer/brand-footer-global]"
+                                                componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-global]"
                                                 variant="parsys">
                                             <par jcr:primaryType="nt:unstructured">
                                                 <contentblock
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="swinburne/components/layout/contentblock"
                                                         componentId="contentblock_EOOTWQVMO"
-                                                        componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer/brand-footer-aside]"
+                                                        componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-aside]"
                                                         variant="parsys">
                                                     <par
                                                             jcr:primaryType="nt:unstructured"
@@ -142,8 +59,8 @@
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/embedsource"
                                                                 componentId="embedsource_AP3MMJNLO"
-                                                                componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer/brand-footer-logo]"
-                                                                html="&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/swinburne-logo.svg&quot;>"/>
+                                                                componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-logo]"
+                                                                html="&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/logo-long-full-keyline.svg&quot;>"/>
                                                         <contentblock
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/layout/contentblock"
@@ -167,8 +84,8 @@
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/layout/contentblock"
                                                                 componentId="contentblock_2083979030_Y0OSV6LSB"
-                                                                componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-md-down]"
-                                                                componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer/brand-footer-contact]"
+                                                                componentModifiers="[swinburne:component-style-modifier/visibility/hide/invisible-md-down]"
+                                                                componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-contact]"
                                                                 variant="parsys">
                                                             <par
                                                                     jcr:primaryType="nt:unstructured"
@@ -184,14 +101,14 @@
                                                                         sling:resourceType="swinburne/components/content/link"
                                                                         componentId="link_R7OBCXHZ9"
                                                                         label="Email Swinburne"
-                                                                        linkIcon="[swinburne-showcase:component-style-icon/general/envelope]"
+                                                                        linkIcon="[swinburne:component-style-icon/general/envelope]"
                                                                         linkUrl="mailto:test@swinburne.edu.au"/>
                                                                 <link_637980916
                                                                         jcr:primaryType="nt:unstructured"
                                                                         sling:resourceType="swinburne/components/content/link"
                                                                         componentId="link_637980916_D351AJDN7"
                                                                         label="Drop us line"
-                                                                        linkIcon="[swinburne-showcase:component-style-icon/general/phone]"
+                                                                        linkIcon="[swinburne:component-style-icon/general/phone]"
                                                                         linkUrl="tel:1300794628"/>
                                                             </par>
                                                         </contentblock_2083979030>
@@ -199,7 +116,7 @@
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/embedsource"
                                                                 componentId="embedsource_AMM3MJNLO_B5MITSHGS"
-                                                                componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer/brand-footer-knowing]"
+                                                                componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-knowing]"
                                                                 html="&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/swinburne-knowing.svg&quot;>"/>
                                                     </par>
                                                 </contentblock>
@@ -207,7 +124,7 @@
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="swinburne/components/layout/contentblock"
                                                         componentId="contentblock_KCII43SFC"
-                                                        componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer/brand-footer-sitemap]"
+                                                        componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-sitemap]"
                                                         variant="parsys">
                                                     <par
                                                             jcr:primaryType="nt:unstructured"
@@ -370,7 +287,7 @@
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/layout/contentblock"
                                                                 componentId="contentblock_1353730355_6YDOH5FII"
-                                                                componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-sm-down]"
+                                                                componentModifiers="[swinburne:component-style-modifier/visibility/hide/invisible-sm-down]"
                                                                 variant="parsys">
                                                             <par
                                                                     jcr:primaryType="nt:unstructured"
@@ -398,7 +315,7 @@
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="swinburne/components/layout/contentblock"
                                                         componentId="contentblock_440331212_DE8U1KL8Y"
-                                                        componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer/brand-footer-acknowlodgement]"
+                                                        componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-acknowlodgement]"
                                                         variant="parsys">
                                                     <par
                                                             jcr:primaryType="nt:unstructured"
@@ -418,14 +335,14 @@
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/text"
                                                                 componentId="text_141377034_V9CLEVSZU"
-                                                                componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-sm-down]"
+                                                                componentModifiers="[swinburne:component-style-modifier/visibility/hide/invisible-sm-down]"
                                                                 text="&lt;p>We respectfully acknowledge the Wurundjeri People, and their Elders past and present, who are the Traditional Owners of the land on which Swinburne's Australian campuses are located in Melbourne's east and outer-east. &lt;a href=&quot;#&quot;>Full Indigenous Matters Policy&lt;/a>&lt;/p>"
                                                                 textIsRich="true"/>
                                                         <link
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/link"
                                                                 componentId="link_D9T3P4RSF"
-                                                                componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-md-up]"
+                                                                componentModifiers="[swinburne:component-style-modifier/visibility/hide/invisible-md-up]"
                                                                 label="Full Indigenous Matters Policy"
                                                                 linkUrl="#"/>
                                                     </par>
@@ -438,7 +355,7 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="swinburne/components/layout/contentblock"
                                         componentId="contentblock_1732123100_JC98NXNNL"
-                                        componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer/brand-footer-admin]"
+                                        componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-admin]"
                                         variant="container">
                                     <par
                                             jcr:primaryType="nt:unstructured"
@@ -449,7 +366,8 @@
                                                 componentId="colctrl_LXLVSOLA3"
                                                 controlType="start"
                                                 layout="2;colctrl-2c"
-                                                layoutColumnClassMedium="[swinburne-showcase:component-style-theme/layout/colctrl/column/medium/md-6]"/>
+                                                layoutColumnClassMedium="[swinburne:component-style-theme/layout/colctrl/column/medium/md-6]"
+                                                layoutColumnClassSmall="[swinburne:component-style-theme/layout/colctrl/column/small/sm-12]"/>
                                         <text
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="swinburne/components/content/text"
@@ -481,7 +399,7 @@
                             </par>
                         </footer>
                     </par>
-                </contentblock4>
+                </swinburne_global_footer>
             </par>
         </article>
         <footer

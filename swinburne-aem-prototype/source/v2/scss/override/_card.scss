@@ -5,7 +5,7 @@
 // generates for us automatically.
 
 .card {
-  box-shadow: 0 2px 3px theme-color('g4');
+  box-shadow: 0 2px 3px color('grey-4');
   margin-bottom: 0;
   width: 100%;
 
@@ -90,7 +90,7 @@
     }
 
     &--basic {
-      color: theme-color('g2');
+      color: color('grey-2');
       font-size: 12px;
       margin-bottom: 0;
     }
@@ -103,6 +103,11 @@
   // Variations and style changes
   @import 'card/promoted';
   @import 'card/taglist-share';
+
+  // Background variations
+  .bg-yellow & {
+    box-shadow: 0 2px 3px #f3c26d;
+  }
 
   // Nested within a carousel
   .owl-item & {

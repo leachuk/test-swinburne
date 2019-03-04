@@ -49,14 +49,15 @@
 
     input[type='text'] {
       @include placeholder {
-        color: theme-color('g1');
+        color: color('grey-1');
         transition: $transition-base;
       }
 
       background-color: transparent;
       border-width: 0;
+      // stylelint-disable-next-line
       border-bottom: 2px solid currentColor;
-      color: theme-color('g1');
+      color: color('grey-1');
       font-size: 26px;
       line-height: 26px;
       margin-bottom: 58px;
@@ -81,7 +82,7 @@
     }
 
     .clear-search {
-      color: theme-color('c6');
+      color: color('purple');
       font-size: 14px;
       margin-left: -14px;
 

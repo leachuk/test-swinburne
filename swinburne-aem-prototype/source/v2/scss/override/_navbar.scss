@@ -73,7 +73,7 @@
     }
 
     @include media-breakpoint-down(md) {
-      background-color: rgba(theme-color('g2'), .5);
+      background-color: rgba(color('grey-1'), .5);
       height: 100vh;
       left: 0;
       position: fixed;
@@ -106,7 +106,7 @@
     }
 
     .nav-item {
-      border-bottom: 1px solid rgba(theme-color('c1'), .3);
+      border-bottom: 1px solid rgba(color('red'), .3);
 
       @include media-breakpoint-up(lg) {
         align-items: center;
@@ -129,7 +129,7 @@
 
     .nav-link {
       align-items: flex-end;
-      background-color: theme-color('c2');
+      background-color: color('yellow');
       display: inline-flex;
       font-weight: 600;
       padding: 20px 30px;
@@ -230,7 +230,7 @@
     width: $search-icon-size;
 
     form {
-      border: 2px solid theme-color('c6');
+      border: 2px solid color('purple');
       border-radius: 24px;
       height: 46px;
       opacity: 0;
@@ -255,7 +255,7 @@
       }
 
       .clear-search {
-        color: theme-color('c6');
+        color: color('purple');
         font-size: 14px;
         position: absolute;
         right: 20px;

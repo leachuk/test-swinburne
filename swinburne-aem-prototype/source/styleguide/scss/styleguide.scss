@@ -64,11 +64,10 @@ html:not(.aem-AuthorLayer-Edit) {
 
         .navlist[component] {
           margin-bottom: 15px;
-          padding-left: 15px;
 
           > li {
             &:not(:last-child) {
-              margin-bottom: 8px;
+              margin-bottom: 2px;
             }
 
             a::after {
@@ -78,7 +77,15 @@ html:not(.aem-AuthorLayer-Edit) {
             a:hover {
               text-decoration: none;
             }
+
+            &::before {
+              display: none;
+            }
           }
+        }
+
+        > div > :nth-child(2) {
+          margin-bottom: 20px;
         }
       }
 

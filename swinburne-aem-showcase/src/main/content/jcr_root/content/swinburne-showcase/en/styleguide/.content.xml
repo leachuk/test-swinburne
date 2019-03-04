@@ -19,10 +19,6 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
-                <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_OAVFSB4PH"/>
                 <text_2111069304_copy
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"

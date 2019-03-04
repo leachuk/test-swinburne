@@ -36,5 +36,9 @@
         color: color('grey-3');
       }
     }
+
+    &::before {
+      display: none;
+    }
   }
 }

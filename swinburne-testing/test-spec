@@ -19,7 +19,7 @@ fi
 #EXEC_TEST="${4:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*,DataLayer*,External*,PageAuthor*,EventDetails*,OnlineMedia*}"
 
 #THIS WILL RUN ONLY ONE TEST YOU CAN USE THIS IN DEV
-EXEC_TEST="${4:-PageListScreenshotSpe*}"
+EXEC_TEST="${4:-DLSPageListPublishSpec}"
 
 EXEC_TEST_EXCLUDE="${5:-}"
 EXEC_PARAMS=" ${*:6}"

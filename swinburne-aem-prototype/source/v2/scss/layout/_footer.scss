@@ -402,6 +402,13 @@
       }
     }
 
+    @include media-breakpoint-down(sm) {
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
     @include media-breakpoint-up(lg) {
       padding-left: 25px;
       padding-right: 25px;

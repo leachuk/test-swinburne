@@ -231,6 +231,7 @@ module.exports = env => {
       }),
       env.maven !== true ? new StyleLintPlugin({
         context     : resolve(PROJECT_PATH, 'scss'),
+        emitErrors  : false,
         failOnError : false,
         files       : '**/*.scss',
         quiet       : false,

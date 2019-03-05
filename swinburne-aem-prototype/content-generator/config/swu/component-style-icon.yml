@@ -1,4 +1,4 @@
-content/cq:tags/swinburne/component-style-icon: &component-style-icon
+content/_cq_tags/swinburne/component-style-icon: &component-style-icon
   feed/atom:
     flat: true
     prefix: 'fa fa-rss'
@@ -99,5 +99,5 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-showcase/component-style-icon: *component-style-icon
-content/cq:tags/swinburne-training/component-style-icon: *component-style-icon
+content/_cq_tags/swinburne-showcase/component-style-icon: *component-style-icon
+content/_cq_tags/swinburne-training/component-style-icon: *component-style-icon

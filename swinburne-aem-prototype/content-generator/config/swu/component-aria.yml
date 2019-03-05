@@ -1,4 +1,4 @@
-content/cq:tags/swinburne/component-aria: &component-aria
+content/_cq_tags/swinburne/component-aria: &component-aria
   live:
     prefixes:
       - assertive
@@ -20,5 +20,5 @@ content/cq:tags/swinburne/component-aria: &component-aria
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-showcase/component-aria: *component-aria
-content/cq:tags/swinburne-training/component-aria: *component-aria
+content/_cq_tags/swinburne-showcase/component-aria: *component-aria
+content/_cq_tags/swinburne-training/component-aria: *component-aria

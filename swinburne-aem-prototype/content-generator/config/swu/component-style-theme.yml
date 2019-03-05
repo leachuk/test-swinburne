@@ -1,4 +1,4 @@
-content/cq:tags/swinburne/component-style-theme: &component-style-theme
+content/_cq_tags/swinburne/component-style-theme: &component-style-theme
   #logo
   common/logo:
     flat: true
@@ -531,5 +531,5 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     title: '1 Column (Medium - 8 + offset 2, Large - 10 + offset 1, XLarge - 6 + offset 3)'
 
 # Extends to
-content/cq:tags/swinburne-showcase/component-style-theme: *component-style-theme
-content/cq:tags/swinburne-training/component-style-theme: *component-style-theme
+content/_cq_tags/swinburne-showcase/component-style-theme: *component-style-theme
+content/_cq_tags/swinburne-training/component-style-theme: *component-style-theme

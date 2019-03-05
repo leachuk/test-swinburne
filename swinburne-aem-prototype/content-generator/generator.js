@@ -13,11 +13,17 @@ const args = require('yargs')
     default : false,
     type    : 'boolean',
   })
+  .option('console', {
+    alias   : 'cs',
+    default : true,
+    type    : 'boolean',
+  })
   .option('config', {
     description : 'YAML configuration file',
   })
   .example('node generator.js --config=<filename>.yml')
   .example('node generator.js --config=<filename>.yml --no-clean', 'run without tree cleaning')
+  .example('node generator.js --config=<filename>.yml --no-console', 'run without realtime logging')
   .demandOption(['config'], 'Please provide a config file to run')
   .version(false)
   .wrap(130)
@@ -30,7 +36,7 @@ const {
 
 const rootPath       = 'content'
 const tmpPath        = 'output'
-const pathPrefixTags = 'content/cq:tags'
+const pathPrefixTags = 'content/_cq_tags'
 const pathPrefixApps = 'apps/'
 
 const {

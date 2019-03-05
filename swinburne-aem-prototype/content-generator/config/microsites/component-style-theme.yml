@@ -1,4 +1,4 @@
-content/cq:tags/swinburne-microsites/component-style-theme: &component-style-theme
+content/_cq_tags/swinburne-microsites/component-style-theme: &component-style-theme
   # Cards
   common/cards:
     prefixes:
@@ -736,5 +736,5 @@ content/cq:tags/swinburne-microsites/component-style-theme: &component-style-the
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-microsites-showcase/component-style-theme: *component-style-theme
-content/cq:tags/swinburne-microsites-training/component-style-theme: *component-style-theme
+content/_cq_tags/swinburne-microsites-showcase/component-style-theme: *component-style-theme
+content/_cq_tags/swinburne-microsites-training/component-style-theme: *component-style-theme

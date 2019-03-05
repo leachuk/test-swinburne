@@ -6,4 +6,4 @@
     jcr:title="Page Details"
     cq:icon="viewDetail"
     componentGroup="Swinburne - Details"
-    sling:resourceSuperType="aemdesign/components/details/page-details"/>
+    sling:resourceSuperType="aemdesign/components/details/page-details/v2/page-details"/>

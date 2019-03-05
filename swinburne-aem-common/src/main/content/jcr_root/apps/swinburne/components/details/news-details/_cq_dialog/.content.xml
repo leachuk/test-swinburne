@@ -92,7 +92,7 @@
             <layoutTab
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Layout"
-                    path="/apps/aemdesign/components/details/page-details/cq:dialog/content/items/layoutTab"
+                    path="/apps/aemdesign/components/details/page-details/v2/page-details/cq:dialog/content/items/layoutTab"
                     resourceType="granite/ui/components/foundation/section"
                     sling:resourceType="granite/ui/components/coral/foundation/include"/>
 

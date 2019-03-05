@@ -538,7 +538,7 @@
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
-                            badgeLinkStyle="[swinburne:component-style-modifier/button/normal/link]"
+                            badgeLinkStyle="[swinburne:component-style-modifier/button/link]"
                             badgeLinkText="[READ MORE]"
                             cardStyle="[swinburne:component-style-modifier/card/promoted,swinburne:component-style-modifier/background/bg-c3]"
                             componentId="pagelist18"
@@ -568,7 +568,7 @@
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
-                            badgeLinkStyle="[swinburne:component-style-modifier/button/normal/link]"
+                            badgeLinkStyle="[swinburne:component-style-modifier/button/link]"
                             badgeLinkText="[READ MORE]"
                             componentId="pagelist19"
                             componentModifiers="[swinburne:component-style-modifier/flexbox/justify/justify-content-center]"
@@ -598,7 +598,7 @@
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
-                            badgeLinkStyle="[swinburne:component-style-modifier/button/normal/link]"
+                            badgeLinkStyle="[swinburne:component-style-modifier/button/link]"
                             badgeLinkText="[READ MORE]"
                             componentId="pagelist20"
                             componentTheme="[swinburne:component-style-theme/lists/column/flat]"
@@ -628,7 +628,7 @@
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
-                            badgeLinkStyle="[swinburne:component-style-modifier/button/normal/link]"
+                            badgeLinkStyle="[swinburne:component-style-modifier/button/link]"
                             badgeLinkText="[READ MORE]"
                             cardStyle="[swinburne:component-style-modifier/card/outline]"
                             componentId="pagelist21"
@@ -855,7 +855,7 @@
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
-                            badgeLinkStyle="[swinburne:component-style-modifier/button/normal/primary]"
+                            badgeLinkStyle="[swinburne:component-style-modifier/button/primary]"
                             badgeLinkText="Button Text"
                             componentId="pagelist29"
                             componentTheme="[swinburne:component-style-theme/lists/column/flat]"

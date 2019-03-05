@@ -1,8 +1,6 @@
-<div>
-    <img src="${componentProperties.pageThumbnailImage}" ${badgeImageAttr} alt="${componentProperties.title}" class="card-img-top"/>
-   <%-- <c:if test="${not empty componentProperties.author}">
-        <div class="author">${componentProperties.author}</div>
-    </c:if>--%>
+<div class="body">
+    <img src="${componentProperties.pageThumbnailImage}" ${badgeImageAttr} alt="${componentProperties.title}">
+
     <c:if test="${componentProperties.showBreadcrumb}">
         <cq:include path="breadcrumb" resourceType="swinburne/components/layout/breadcrumb"/>
     </c:if>
@@ -10,4 +8,3 @@
         <div class="description">${componentProperties.description}</div>
     </c:if>
 </div>
-

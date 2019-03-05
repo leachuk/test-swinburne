@@ -4,18 +4,23 @@ const fs     = require('fs')
 const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
 const yaml   = require('js-yaml')
-const yimp = require('yaml-import')
+const yimp   = require('yaml-import')
 
 // CLI arguments
 const args = require('yargs')
   .option('clean', {
     alias   : 'c',
     default : false,
+    type    : 'boolean',
+  })
+  .option('config', {
+    description : 'YAML configuration file',
   })
   .example('node generator.js --config=<filename>.yml')
   .example('node generator.js --config=<filename>.yml --no-clean', 'run without tree cleaning')
-  .epilog(`Copyright © 2018-${(new Date).getFullYear()} Isobar Australia.`)
+  .demandOption(['config'], 'Please provide a config file to run')
   .version(false)
+  .wrap(130)
   .argv
 
 const {
@@ -24,7 +29,7 @@ const {
 } = require('lodash')
 
 const rootPath       = 'content'
-const tmpPath        = 'tmp'
+const tmpPath        = 'output'
 const pathPrefixTags = 'content/cq:tags'
 const pathPrefixApps = 'apps/'
 
@@ -34,15 +39,13 @@ const {
   getBreakpointInfix,
   loadTemplateForCategory,
   parseTitle,
-  getDirectories,
-  isDirectory
 } = require('./functions')
 
 console.clear()
 
 try {
   const baseConfigFilePath = currentPath(`config/${args.config}`)
-  const configFilePath     = currentPath(`tmp/config.${(Date.now() / 1000 | 0)}.yml`)
+  const configFilePath     = currentPath(`${tmpPath}/config.${(Date.now() / 1000 | 0)}.yml`)
 
   if (!fs.existsSync(currentPath(tmpPath))) {
     mkdirp.sync(currentPath(tmpPath))

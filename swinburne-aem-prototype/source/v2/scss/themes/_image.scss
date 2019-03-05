@@ -1,0 +1,25 @@
+&--logo {
+  img {
+    display: inline-flex;
+    max-height: 47px;
+    max-width: 100%;
+    @include media-breakpoint-up(md) {
+      max-height: 60px;
+    }
+    @include media-breakpoint-up(lg) {
+      max-height: 89px;
+    }
+    &:first-child {
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+    &:last-child {
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: inline-flex;
+      }
+    }
+    vertical-align: top;
+  }
+}

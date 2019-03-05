@@ -1,6 +1,3 @@
-import '../scss/app.scss'
-
-// Core modules...
 import Carousels from '@global/modules/carousel'
 import Subscribers from '@global/modules/subscribers'
 import PromotedCard from '@global/modules/promoted-card'

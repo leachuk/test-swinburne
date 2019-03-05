@@ -1,0 +1,101 @@
+%component-list {
+  > .content {
+    &,
+    > ul {
+      justify-content: flex-start;
+    }
+
+    > ul {
+      margin-bottom: 0;
+      width: 100%;
+
+      li {
+        // stylelint-disable-next-line
+        &::before {
+          display: none;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        li:not(:last-child) {
+          margin-bottom: 0;
+        }
+
+        &:not(:last-child) li {
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+
+  // Hide the default AEM pagination
+  .pagination {
+    display: none;
+  }
+
+  // Create the default page list child variant sizes
+  @include pagelist-variant($selector-only: false) {
+    @include make-col-ready;
+
+    flex: 0 1 100%;
+
+    @include media-breakpoint-up(md) {
+      flex-basis: percentage(3 / $grid-columns);
+      max-width: percentage(3 / $grid-columns);
+    }
+  }
+
+  // Normalize the list when the 'carousel' module is applied
+  &[data-modules*='carousel'] {
+    ul.owl-carousel {
+      display: block;
+      visibility: hidden;
+
+      .owl-item:last-child {
+        /* stylelint-disable-next-line */
+        margin-right: 0 !important;
+      }
+
+      &.owl-loaded {
+        visibility: visible;
+      }
+    }
+
+    &[data-list-split-enabled='true'] ul {
+      @include media-breakpoint-down(sm) {
+        &:not(.mobile-carousel) {
+          display: none;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        &.mobile-carousel {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // If the page list component isn't currently been used as a carousel we can introduce
+  // standard grid container rules.
+  &:not([data-modules*='carousel']) {
+    @include make-container;
+    @include make-container-max-widths;
+
+    // iPhone X support
+    @include iphone-x;
+
+    > .content {
+      @include make-row;
+
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

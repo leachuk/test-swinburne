@@ -7,10 +7,6 @@
 .contentblock {
   @include clearfix;
 
-  // Ensure background images stretch correctly
-  background-repeat: no-repeat;
-  background-size: cover;
-
   // Strip away the padding when a nested `.container` exists in a content block container
   &.container > .container {
     padding-left: 0;
@@ -19,11 +15,5 @@
 
   .video:not(.playing) {
     display: none;
-  }
-
-  // AEM Edit mode, remove large spacing
-  @include aem-author-edit {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
   }
 }

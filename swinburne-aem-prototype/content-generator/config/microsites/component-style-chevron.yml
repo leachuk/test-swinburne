@@ -1,4 +1,4 @@
-content/cq:tags/swinburne-microsites/component-style-chevron: &component-style-chevron
+content/_cq_tags/swinburne-microsites/component-style-chevron: &component-style-chevron
   chevron:
     prefixes:
       - circle-down
@@ -13,5 +13,5 @@ content/cq:tags/swinburne-microsites/component-style-chevron: &component-style-c
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-microsites-showcase/component-style-chevron: *component-style-chevron
-content/cq:tags/swinburne-microsites-training/component-style-chevron: *component-style-chevron
+content/_cq_tags/swinburne-microsites-showcase/component-style-chevron: *component-style-chevron
+content/_cq_tags/swinburne-microsites-training/component-style-chevron: *component-style-chevron

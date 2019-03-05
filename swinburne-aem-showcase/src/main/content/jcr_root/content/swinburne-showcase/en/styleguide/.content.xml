@@ -19,10 +19,6 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
-                <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_OAVFSB4PH"/>
                 <text_2111069304_copy
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
@@ -39,7 +35,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/content/text"
                     componentId="text_FTICSXEPQ"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mt-30,swinburne-showcase:component-style-modifier/color/text-g2]"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/color/greys/grey-1]"
                     text="&lt;p>&lt;span class=&quot;fs-16&quot;>&lt;b>&lt;span class=&quot;fs-14&quot;>Guidelines&lt;/span>&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;"
                     textIsRich="true"/>
                 <navlist
@@ -47,7 +43,6 @@
                     sling:resourceType="swinburne/components/lists/navlist"
                     cancelInheritParent="true"
                     componentId="navlist_N1R2X8KSR"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-20]"
                     listFrom="children"
                     pages="[/content/swinburne-showcase/en/styleguide/guidelines/breakpoints,/content/swinburne-showcase/en/styleguide/guidelines/colour,/content/swinburne-showcase/en/styleguide/guidelines/grid,/content/swinburne-showcase/en/styleguide/guidelines/iconography,/content/swinburne-showcase/en/styleguide/guidelines/imagery,/content/swinburne-showcase/en/styleguide/guidelines/logo-and-usage,/content/swinburne-showcase/en/styleguide/guidelines/motion,/content/swinburne-showcase/en/styleguide/guidelines/spacing-units,/content/swinburne-showcase/en/styleguide/guidelines/style-guide,/content/swinburne-showcase/en/styleguide/guidelines/template,/content/swinburne-showcase/en/styleguide/guidelines/typography,/content/swinburne-showcase/en/styleguide/guidelines/visibility,/content/swinburne-showcase/en/styleguide/guidelines/visual-decorators]"
                     parentPage="/content/swinburne-showcase/en/styleguide/guidelines"/>
@@ -75,7 +70,6 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
             componentId="article_VVP06VKA6"
-            componentModifiers="[swinburne-showcase:component-style-modifier/padding/pb-40]"
             componentTheme="[swinburne-showcase:component-style-theme/styleguide/body-section]">
             <par
                 jcr:primaryType="nt:unstructured"
@@ -95,8 +89,7 @@
                 <contentblock
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock"
-                        componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                        componentId="contentblock">
                     <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/container">

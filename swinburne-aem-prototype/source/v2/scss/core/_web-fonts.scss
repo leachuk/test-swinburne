@@ -7,7 +7,7 @@
 
 // Font Awesome 5
 
-@include font-face('Font Awesome 5 Brands', '../fonts/font-awesome/fa-brands-400', normal, normal, woff2 woff);
+@include font-face('Font Awesome 5 Brands', '../fonts/font-awesome/fa-brands-400', 400, normal, woff2 woff);
 
 @include font-face('Font Awesome 5 Pro', '../fonts/font-awesome/fa-light-300', 300, normal, woff2 woff);
 @include font-face('Font Awesome 5 Pro', '../fonts/font-awesome/fa-regular-400', 400, normal, woff2 woff);

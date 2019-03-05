@@ -98,5 +98,5 @@
 /// @param {String} $str - The input string to convert
 /// @return {String} - The converted string
 @function unicode($str) {
-  @return unquote("\"") + $str + unquote("\"");
+  @return unquote('\'') + $str + unquote('\'');
 }

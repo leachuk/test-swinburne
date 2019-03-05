@@ -12,29 +12,6 @@
   @return $map;
 }
 
-/// Pixel to REM cacluator
-/// @see https://gist.github.com/garystorey/5920051
-/// @param {Number} $size - The pixel size to convert
-/// @param {Boolean} $unitless - Should the unit be stripped away?
-/// @return {Number} - A REM number
-@function rem-calc($size: 16px, $unitless: false) {
-  // This is a tiny hack that ensures 'null' and 'rem' values get returned straight away
-  @if type-of($size) != number or str-index('#{$size}', rem) != null {
-    @return $size;
-  }
-
-  // Divide the size by the base page font size
-  $size: $size / 16px;
-
-  @if $unitless {
-    @return strip-unit($size);
-  }
-
-
-
-  @return $size * 1rem;
-}
-
 /// Remove the unit of a length
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
@@ -58,7 +35,7 @@
 /// @param {Number} $size - The pixel size to generate from
 /// @return {Number} - A REM number
 @function create-spacer($size: 16px) {
-  @return ($spacer * rem-calc($size, true));
+  @return ($spacer * strip-unit($size));
 }
 
 /// Retrieves the spacer value for the given key
@@ -72,7 +49,7 @@
 /// @param {String} $str - The input string to convert
 /// @return {String} - The converted string
 @function unicode($str) {
-  @return unquote("\"") + $str + unquote("\"");
+  @return unquote('\'') + $str + unquote('\'');
 }
 
 /// Appends the `$addition` selector with the `$base` selector
@@ -80,5 +57,12 @@
 /// @param {String} $addition - String to append to `$base`
 /// @return {String} - The joined selector
 @function create-selector($base, $addition) {
-  @return "#{selector-append($base, $addition)}";
+  @return '#{selector-append($base, $addition)}';
+}
+
+/// Retrieve a heading level config for the given level
+/// @param {String} $level - Level to search for
+/// @return {Map} - Map for the level
+@function typography-heading($level) {
+  @return map-get(map-get($typography, headings), $level);
 }

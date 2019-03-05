@@ -1,15 +1,6 @@
 .theme {
-  @import
-    'contentblock',
-    'contentblockmenu',
-    'form',
-    'grid',
-    'image',
-    'lists',
-    //'nav-list',
-    'page-details',
-    'page-list',
-    'video',
-    'hero-banner'
-  ;
+  @import 'lists';
+  @import 'page-list';
+  @import 'video';
+  @import 'image';
 }

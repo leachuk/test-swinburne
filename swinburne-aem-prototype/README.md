@@ -8,6 +8,7 @@ Getting going is pretty simple, you will, however, need to make sure you have th
 - **Yarn >= 1.10.0** _(version required for hash compatibility)_
 - **TypeScript enabled IDE** _(VS Code or an IDE plugin)_
 - **ESLint** _(required)_
+- **Stylelint** _(required)_
 - **EditorConfig** _(required)_
 - _An AEM instance that has Swinburne installed_ **(required)**
 

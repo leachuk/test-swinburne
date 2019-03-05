@@ -79,7 +79,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_414969460_I0U40BNLP"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-30]"
                     componentTheme="[swinburne-showcase:component-style-theme/layout/contentblock/banner]"
                     variant="container">
                     <bgimage

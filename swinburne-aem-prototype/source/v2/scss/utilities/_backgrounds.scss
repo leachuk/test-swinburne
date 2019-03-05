@@ -1,0 +1,22 @@
+/* stylelint-disable declaration-no-important */
+
+.bg-charcoal {
+  *:not(.link):not(.link-text) {
+    color: $white;
+  }
+
+  table {
+    &,
+    td,
+    tr,
+    th {
+      border-color: $white;
+    }
+  }
+}
+
+.bg-yellow {
+  @extend %yellow-foil;
+}
+
+/* stylelint-enable declaration-no-important */

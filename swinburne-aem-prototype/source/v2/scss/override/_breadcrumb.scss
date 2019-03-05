@@ -5,43 +5,40 @@
 // generates for us automatically.
 
 .breadcrumb {
-  font-weight: 300;
   font-size: 14px;
+  font-weight: 300;
 
   &-item {
     a {
-      color: $tertiary;
+      color: color('charcoal');
       font-weight: 400;
     }
 
     + .breadcrumb-item {
       padding-left: $spacing-sm;
 
-      &:before {
+      &::before {
+        content: '\F054';
+        font-family: $font-family-awesome;
         font-size: 11px;
         font-weight: 300;
-        font-family: $font-family-awesome;
-        content: "\F054";
         padding-right: $spacing-sm;
       }
     }
 
     &.active {
       a {
-        color: $grey-3;
+        color: color('grey-3');
         font-weight: 300;
       }
 
-      .bg-dark & {
-        :not(a) {
-          color: $grey-3;
-        }
+      .bg-charcoal & :not(a) {
+        color: color('grey-3');
       }
     }
-  }
 
-  // Nested '.breadcrumb' fix
-  > .breadcrumb {
-    margin-bottom: 0;
+    &::before {
+      display: none;
+    }
   }
 }

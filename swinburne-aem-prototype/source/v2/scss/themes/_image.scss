@@ -1,33 +1,25 @@
-&--image {
-  @each $side in left right {
-    @for $fraction from 1 through 4 {
-      $selector: #{$side}-#{$fraction};
-      $pull-value: calc(-#{percentage($fraction / $grid-columns)} + -#{($grid-gutter-width / 2) / 2});
-
-      &-pull-#{$selector} {
-        @include media-breakpoint-up(md) {
-          margin-#{$side}: $pull-value;
-
-          figcaption {
-            margin-#{if($side == left, right, left)}: $pull-value;
-          }
-        }
+&--logo {
+  img {
+    display: inline-flex;
+    max-height: 47px;
+    max-width: 100%;
+    @include media-breakpoint-up(md) {
+      max-height: 60px;
+    }
+    @include media-breakpoint-up(lg) {
+      max-height: 89px;
+    }
+    &:first-child {
+      @include media-breakpoint-up(md) {
+        display: none;
       }
     }
-  }
-
-  &-caption {
-    display: flex;
-    flex-direction: column;
-    max-width: 286px;
-
-    img {
-      display: block;
-      margin-bottom: 0;
+    &:last-child {
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: inline-flex;
+      }
     }
-
-    figcaption {
-      padding: rem-calc(24px) map-get($spacers, 30);
-    }
+    vertical-align: top;
   }
 }

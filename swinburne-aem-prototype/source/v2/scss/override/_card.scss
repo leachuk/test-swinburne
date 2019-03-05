@@ -4,11 +4,10 @@
 // care when making changes as we shouldn't be duplicating styles that Bootstrap
 // generates for us automatically.
 
-$card-top-bar-height: 18px;
-
 .card {
-  box-shadow: 0 2px 3px theme-color('g4');
+  box-shadow: 0 2px 3px color('grey-4');
   margin-bottom: 0;
+  width: 100%;
 
   &-img-top {
     display: block;
@@ -19,7 +18,7 @@ $card-top-bar-height: 18px;
       @include object-fit(cover, center);
 
       display: block;
-      max-width: 100%;
+      width: 100%;
 
       // AEM will always supply us with images in the JPEG format so we can easily enforce
       // the minimum width of the image when it is.
@@ -41,6 +40,7 @@ $card-top-bar-height: 18px;
       // In browsers that don't support object-fit we use a polyfill, for icons that are SVG we need to
       // ensure they scale to the parent container rather than covering the whole element.
       &[data-ofi-src$='svg'] {
+        // stylelint-disable-next-line
         background-size: auto !important;
       }
     }
@@ -63,6 +63,7 @@ $card-top-bar-height: 18px;
   }
 
   &-body {
+    background-color: $white;
     display: flex;
     flex-direction: column;
 
@@ -83,49 +84,30 @@ $card-top-bar-height: 18px;
     font-weight: 300;
   }
 
-  &-tags {
-    font-size: 12px;
+  &-taglist {
+    .taglist li::before {
+      display: none;
+    }
 
     &--basic {
-      color: theme-color('g2');
+      color: color('grey-2');
+      font-size: 12px;
+      margin-bottom: 0;
     }
   }
 
   &-link {
-    // This is a bit messy but is required to inherit the base styles for links when nothing
-    // has yet being applied via the badge config.
-    //
-    // TODO: Merge this style into the link component
-    &[class$=' '] {
-      @extend a[component].link;
-
-      align-items: center;
-      display: inline-flex;
-
-      &::after {
-        @extend .fal;
-        @extend .fa-long-arrow-right:before;
-
-        display: block;
-        font-size: 17px;
-        margin-left: 10px;
-      }
-    }
-  }
-
-  &-icon {
-    // These selectors take into account that Font Awesome 5 replaces the original icon
-    // along with the `.fa` classes been superseded by new category specific classes.
-    > svg.svg-inline--fa {
-      display: block;
-      margin: 0 auto;
-    }
+    @extend .link;
   }
 
   // Variations and style changes
-  @import
-    'card/taglist-share'
-  ;
+  @import 'card/promoted';
+  @import 'card/taglist-share';
+
+  // Background variations
+  .bg-yellow & {
+    box-shadow: 0 2px 3px #f3c26d;
+  }
 
   // Nested within a carousel
   .owl-item & {

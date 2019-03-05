@@ -53,8 +53,7 @@
                 <contentblock_1378969136
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_1378969136_NOY3YKSXF"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    componentId="contentblock_1378969136_NOY3YKSXF">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
@@ -74,14 +73,14 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="heading-bg-dark"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-dark,swinburne-showcase:component-style-modifier/margin/mb-40]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-charcoal]"
                             text="&lt;h1>Heading 1&lt;/h1>&#xd;&#xa;&lt;h2>Heading 2&lt;/h2>&#xd;&#xa;&lt;h3>Heading 3&lt;/h3>&#xd;&#xa;&lt;h4>Heading 4&lt;/h4>&#xd;&#xa;&lt;h5>Heading 5&lt;/h5>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_948915483_copy
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="body-bg-dark"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-dark,swinburne-showcase:component-style-modifier/margin/mb-40]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-charcoal]"
                             text="&lt;p>&lt;span class=&quot;text--cap-underline&quot;>body default with text cap underline:&amp;nbsp;We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/span>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>body bold :&amp;nbsp;We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>body small :&amp;nbsp;We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;small>&lt;b>body small bold :&amp;nbsp;We belieave advertising is an integral part of new media today, to the point where people rarely stop to hink about it. That's why we offer Advertising at Swinburne&lt;/b>.&lt;/small>&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;http://www.google.fr/&quot;>Link: his is a text link&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&lt;i>Italic: This text has added emphasis&lt;/i>&lt;/p>&#xd;&#xa;&lt;p>This text is deleted&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items&amp;nbsp;&amp;nbsp;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text
@@ -94,7 +93,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_2096403043_MC5EXBBDH"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/text/list/colors/list-dark,swinburne-showcase:component-style-modifier/margin/mb-40]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/text/list/colors/list-dark]"
                             text="&lt;ul>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;li>Simple style list items&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li> Ordered style list items&lt;/li>&#xd;&#xa;&lt;li>Ordered style list items&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_2134108520
@@ -107,7 +106,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1644544976_PXS3QM5BJ"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/text/headings/style/heading-outlined,swinburne-showcase:component-style-modifier/margin/mb-40]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/text/headings/style/heading-outlined]"
                             text="&lt;h1>Heading 1 not underlined&lt;br />&#xd;&#xa;&lt;/h1>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_2134108520_copy

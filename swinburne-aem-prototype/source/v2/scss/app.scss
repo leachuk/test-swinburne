@@ -1,53 +1,51 @@
 @charset 'UTF-8';
 
-@import
-  // Bootstrap internals
-  '~bootstrap/scss/functions',
-  '~bootstrap/scss/variables',
+// Bootstrap internals
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
 
-  // Internals
-  'functions',
-  'variables',
-  'mixins',
+// Internals
+@import 'functions';
+@import 'variables';
+@import 'mixins';
 
-  // Bootstrap reset and base typography
-  '~bootstrap/scss/mixins',
-  '~bootstrap/scss/reboot',
-  '~bootstrap/scss/type',
+// Bootstrap reset and base typography
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
 
-  // Vendors
-  'vendor/index',
+// Vendors
+@import 'vendor/index';
 
-  // Core
-  'core/index',
+// Core
+@import 'core/index';
 
-  // Bootstrap components
-  '~bootstrap/scss/buttons',
-  '~bootstrap/scss/breadcrumb',
-  '~bootstrap/scss/card',
-  '~bootstrap/scss/dropdown',
-  '~bootstrap/scss/grid',
-  '~bootstrap/scss/images',
-  '~bootstrap/scss/modal',
-  '~bootstrap/scss/nav',
-  '~bootstrap/scss/navbar',
-  '~bootstrap/scss/transitions',
+// Bootstrap components
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/breadcrumb';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/transitions';
 
-  // Layout
-  'layout/index',
+// Layout
+@import 'layout/index';
 
-  // Bootstrap overrides
-  'override/index',
+// Bootstrap overrides
+@import 'override/index';
 
-  // Global utility classes
-  'utilities',
+// Global utility classes
+@import 'utilities';
 
-  // Components
-  'components/index',
+// Components
+@import 'components/index';
 
-  // AEM specific changes
-  'aem/index',
+// AEM specific changes
+@import 'aem/index';
 
-  // Themes
-  'themes/index'
-;
+// Themes
+@import 'themes/index';

@@ -6,7 +6,7 @@ if [ ! -d "sync/" ]; then
   exit
 fi
 
-CLIENT_LIBS_FOLDER=$(cat pom.xml | sed -n 's:.*<package\.clientLibsFolder>\(.*\)</package\.clientLibsFolder>.*:\1:p')
+CLIENT_LIBS_FOLDER=$(cat ../pom.xml | sed -n 's:.*<package\.clientLibsFolder>\(.*\)</package\.clientLibsFolder>.*:\1:p')
 
 echo Copying files from public to sync
 cp -r public/ sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}

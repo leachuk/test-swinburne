@@ -26,63 +26,10 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
-                <contentblock1
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock1"
-                    title="Variant: Default"
-                    variant="advsection">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/container">
-                        <footer
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/footer"
-                            componentId="footer1"/>
-                    </par>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/media/image"/>
-                </contentblock1>
-                <contentblock2
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock2">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/container">
-                        <footer
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/footer"
-                            cancelInheritParent="false"
-                            componentId="footer2"/>
-                    </par>
-                </contentblock2>
-                <contentblock3
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock3">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/container">
-                        <footer
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/footer"
-                            cancelInheritParent="false"
-                            componentId="footer3">
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/media/image"/>
-                        </footer>
-                    </par>
-                </contentblock3>
-                <contentblock4
+                <swinburne_global_footer
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock4">
+                        componentId="swinburne_global_footer">
                     <par
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/container">
@@ -90,13 +37,13 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/layout/footer"
                                 cancelInheritParent="false"
-                                componentId="footer_swinburne_global">
+                                componentId="swinburne_global_footer_inherit">
                             <bgimage
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/media/image"/>
                         </footer>
                     </par>
-                </contentblock4>
+                </swinburne_global_footer>
             </par>
         </article>
         <footer

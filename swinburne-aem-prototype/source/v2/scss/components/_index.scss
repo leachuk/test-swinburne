@@ -1,26 +1,13 @@
-@import 'common-separators',
-'contentblock',
-'contentblockmenu',
-'pagelist',
-'tags',
-'text',
-'link',
-'article',
-'forms',
-'pagedetail',
-'forms',
-'parallaximage',
-'image',
-'hamburger',
-'backgrounds',
-'navlist',
-'taglist',
-'newslist',
-'eventdetails',
-'eventlist',
-'embedsource',
-'embedsource-ssi',
-'onlinemedia',
-'news-details',
-'table-heavy'
-;
+@import 'placeholders';
+
+@import 'content-block';
+@import 'content-block-menu';
+@import 'link';
+@import 'event-list';
+@import 'nav-list';
+@import 'news-details';
+@import 'news-list';
+@import 'page-details';
+@import 'page-list';
+@import 'tag-list';
+@import 'text';

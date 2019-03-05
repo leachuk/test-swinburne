@@ -1,9 +1,5 @@
 {
   "author": "Chris Shaw <chris.shaw@isobar.com>",
-  "browserslist": [
-    "> 1%",
-    "ie > 10"
-  ],
   "contributors": [
     {
       "name": "Chris Shaw",
@@ -78,6 +74,7 @@
     "jshint": "^2.10.1",
     "jstat": "^1.7.1",
     "lodash-webpack-plugin": "^0.11.5",
+    "mini-css-extract-plugin": "^0.5.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.11.0",
     "numeral": "^2.0.6",
@@ -86,14 +83,22 @@
     "pngquant-bin": "^5.0.2",
     "postcss-loader": "^3.0.0",
     "postcss-pxtorem": "^4.0.1",
+    "postcss-reporter": "^6.0.1",
     "postcss-sorting": "^4.0.1",
     "rimraf": "^2.6.3",
     "sass": "^1.17.1",
     "sass-loader": "^7.1.0",
+    "sass-true": "^4.0.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-twbs-bootstrap": "^0.3.0",
+    "stylelint-scss": "^3.5.3",
+    "stylelint-webpack-plugin": "^0.10.5",
     "ts-loader": "^5.3.3",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "tslint": "^5.12.1",

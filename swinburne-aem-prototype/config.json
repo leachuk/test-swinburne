@@ -1,6 +1,7 @@
 {
   "v1": {
     "outputName": "app",
+    "sassModule": "node-sass",
 
     "entryFile": {
       "js": "app.js",

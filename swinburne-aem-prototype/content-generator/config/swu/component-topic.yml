@@ -1,4 +1,4 @@
-content/cq:tags/swinburne/component-topic: &component-topic
+content/_cq_tags/swinburne/component-topic: &component-topic
   #used for comms between components
   group:
     prefixes:
@@ -14,5 +14,5 @@ content/cq:tags/swinburne/component-topic: &component-topic
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-showcase/component-topic: *component-topic
-content/cq:tags/swinburne-training/component-topic: *component-topic
+content/_cq_tags/swinburne-showcase/component-topic: *component-topic
+content/_cq_tags/swinburne-training/component-topic: *component-topic

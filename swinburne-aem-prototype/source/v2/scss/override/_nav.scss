@@ -6,8 +6,8 @@
 
 .nav-tabs {
   border-bottom-width: 0;
-  margin-bottom: map-get($spacers, 30);
   justify-content: center;
+  margin-bottom: map-get($spacers, 30);
 
   .nav-item {
     min-width: 184px;
@@ -20,8 +20,8 @@
     border-right-width: 0;
     border-top-width: 0;
     color: $nav-tabs-link-active-color;
-    font-size: rem-calc(18px);
-    padding-bottom: rem-calc(5px);
+    font-size: 18px;
+    padding-bottom: 5px;
     position: relative;
 
     &::after {
@@ -38,7 +38,7 @@
 
   .nav-link.active,
   .nav-item.show .nav-link {
-    font-weight: bold;
+    font-weight: 600;
 
     &::after {
       opacity: 1;

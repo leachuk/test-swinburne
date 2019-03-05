@@ -1,7 +1,6 @@
+import 'bootstrap';
 import Carousels from '@global/modules/carousel'
 import Subscribers from '@global/modules/subscribers'
-import PromotedCard from '@global/modules/promoted-card'
-import 'bootstrap';
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -34,9 +33,6 @@ $(() => {
 
   // Take over any hash links on the page so they correctly jump to the content
   //HashLinks()
-
-  //Only promote the first card of the list
-  //PromotedCard();
 
   // 'object-fit' polyfill for unsupported browsers
   ObjectFitImages()

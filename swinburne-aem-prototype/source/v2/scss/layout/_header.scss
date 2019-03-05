@@ -1,24 +1,18 @@
-#contentblock_NUKJQQTOB {
-  padding: 0;
-}
 
 .brand-header {
-  font-size: 12px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
-  z-index: 1000;
-  width: 100%;
+  font-size: 12px;
+  height: $header-height-sm;
+  @include media-breakpoint-up(lg) {
+    height: $header-height - 1px;
+  }
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
+  width: 100%;
+  z-index: 1000;
   @include media-breakpoint-up(lg) {
     position: inherit;
-  }
-  &,
-  &__logo {
-    height: $header-height-sm;
-    @include media-breakpoint-up(lg) {
-      height: $header-height - 1px;
-    }
   }
   & > .aem-Grid > .contentblock {
     display: flex;
@@ -29,11 +23,11 @@
   }
   &__actions,
   &__nav {
-    margin: 0;
     display: inline-flex;
+    height: ( $header-height / 3 ) * 2;
+    margin: 0;
     vertical-align: top;
     width: 100%;
-    height: ( $header-height / 3 ) * 2;
   }
   &__nav,
   &__admin {
@@ -44,37 +38,28 @@
   a:hover {
     text-decoration: none;
   }
-  &__logo { // Todo add this to logo wrapper
-    @include media-breakpoint-down(md) {
-      img {
-        display: inline-flex;
-        height: auto;
-        max-height: 100%;
-      }
+  &__container { // Navigation container
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: calc(100vh - 47px);
+    left: 0;
+    margin-top: 47px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      display: block;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: $header-height;
+      margin-top: 0;
+      position: static;
+      width: calc(100% - 176px);
     }
-    & + .contentblock { // Navigation container
-      width: 100%;
-      height: calc(100vh - 47px);
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      position: fixed;
-      top: 0;
-      margin-top: 47px;
-      left: 0;
-      @include media-breakpoint-up(lg) {
-        width: calc(100% - 176px);
-        display: block;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: $header-height;
-        position: static;
-        margin-top: 0;
-      }
-      @include media-breakpoint-down(md) {
-        background-color: color('charcoal');
-        overflow-y: auto;
-      }
+    @include media-breakpoint-down(md) {
+      background-color: color('charcoal');
+      overflow-y: auto;
     }
   }
   &__admin {
@@ -92,41 +77,43 @@
         flex-direction: column;
       }
       a {
-        margin-right: $spacing-sm;
         font-weight: 400;
+        margin-right: $spacing-sm;
         & > span {
           font-family: $font-family-base;
         }
         &:first-of-type {
-          &:before {
+          &::before {
             content: '\f24e';
           }
         }
         &:last-of-type {
-          &:before {
+          &::before {
             content: '\f005';
           }
         }
         &:first-of-type,
         &:last-of-type {
-          &:before {
-            margin-right: $spacing-xs;
+          &::before {
             font-family: $font-family-awesome;
             font-weight: 300;
+            margin-right: $spacing-xs;
           }
         }
       }
     }
-    .pagelist:not([data-modules*=carousel]) {
-      width: auto;
+    .pagelist:not([data-modules*='carousel']) {
+      display: inline-flex;
+      float: right;
       padding-left: 0;
       padding-right: 0;
+      width: auto;
       & > .content {
         margin-right: 0;
         & > ul > {
           li {
-            padding: 0 $spacing-xs;
             margin-right: 0;
+            padding: 0 $spacing-xs;
             &.last {
               padding-right: 0;
             }
@@ -135,14 +122,12 @@
       }
       &,
       & > .content {
-        margin-right: 0;
         margin-left: 0;
+        margin-right: 0;
       }
-      display: inline-flex;
-      float: right;
       @include media-breakpoint-down(md) {
-        float: none;
         display: flex;
+        float: none;
         & > .content > ul {
           flex-direction: column;
         }
@@ -155,8 +140,8 @@
     }
   }
   &__nav {
-    font-weight: 700;
     flex-direction: row;
+    font-weight: 700;
     max-width: calc(100% - 210px);
     padding: 0 $spacing-md;
     .nav-link {
@@ -199,6 +184,11 @@
       &.dropdown { // Level 1
         position: inherit;
       }
+      &:last-child {
+        [class*='l-'] {
+          margin-right: 0;
+        }
+      }
       .dropdown-menu { // Level 2
         background-color: color('grey-5');
         border: 0;
@@ -223,28 +213,36 @@
               border-bottom: 2px solid color('charcoal');
               color: color('charcoal');
             }
+            &:last-child {
+              margin-right: 0;
+            }
           }
         }
       }
     }
     @include media-breakpoint-down(md) {
+      display: flex;
       flex-direction: column;
+      height: auto;
       margin-bottom: $header-height-sm;
+      max-width: inherit;
+      order: -1;
+      padding-right: 0;
       .nav-link {
         color: $white;
         position: relative;
-        &:before {
+        &::before {
           content: '\f178';
           display: block;
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
+          font-family: $font-family-awesome;
           font-size: 18px;
+          font-weight: 200;
           line-height: 18px;
           margin-right: $spacing-lg;
-          font-family: $font-family-awesome;
-          font-weight: 200;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
       .nav-item {
@@ -256,32 +254,27 @@
           }
         }
       }
-      display: flex;
-      height: auto;
-      max-width: inherit;
-      order: -1;
-      padding-right: 0;
     }
   }
   &__actions {
-    max-width: 200px;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
+    max-width: 200px;
     @include media-breakpoint-down(md) {
-      position: fixed;
-      top: 0;
-      right: 0;
       height: auto;
       margin-top: 4px;
+      position: fixed;
+      right: 0;
+      top: 0;
     }
     a {
       &.btn {
-        height: 45px;
         font-weight: 400;
+        height: 45px;
         min-width: 140px;
         @include media-breakpoint-down(md) {
-          min-width: 101px;
           margin-right: 7px;
+          min-width: 101px;
         }
         &,
         &:hover {
@@ -290,14 +283,14 @@
       }
     }
     button.link {
-      border: 0;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
       align-items: center;
-      padding: 0;
       background-color: transparent;
+      border: 0;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      padding: 0;
+      width: 40px;
       .icon:first-of-type {
         color: color('charcoal');
         font-size: 14px;

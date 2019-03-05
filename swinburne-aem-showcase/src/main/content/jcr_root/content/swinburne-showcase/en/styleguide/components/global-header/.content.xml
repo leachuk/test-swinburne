@@ -21,36 +21,10 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
-                <page_details
-                    jcr:mixinTypes="[cq:Taggable]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/details/page-details"
-                    componentId="page_details_GWXYLMKFB"
-                    hideDescription="true"
-                    showBreadcrumb="false"
-                    showPageDate="false"
-                    showParsys="false"
-                    showToolbar="false"
-                    textIsRich="true"
-                    titleType="[,]">
-                    <secondaryImage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <thumbnail
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <ogImage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                </page_details>
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_NUKJQQTOB"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/padding/p-15,swinburne-showcase:component-style-modifier/padding/p-md-30]">
+                    componentId="contentblock_header">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">

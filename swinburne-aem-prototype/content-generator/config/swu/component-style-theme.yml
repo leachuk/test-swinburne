@@ -300,10 +300,10 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: brand-header
     title: 'Brand Header'
 
-  layout/brand-header/logo:
+  layout/brand-header/container:
     flat: true
-    prefix: brand-header__logo
-    title: 'Logo'
+    prefix: brand-header__container
+    title: 'Container'
 
   layout/brand-header/admin:
     flat: true

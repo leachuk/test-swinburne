@@ -69,6 +69,7 @@
       }
       @include media-breakpoint-down(md) {
         background-color: $tertiary;
+        overflow-y: auto;
       }
     }
   }
@@ -81,7 +82,7 @@
       font-weight: 400;
     }
     & > .contentblock {
-      flex: 1;
+      display: inline-flex;
       @include media-breakpoint-down(md) {
         display: flex;
         flex-direction: column;
@@ -122,7 +123,9 @@
           li {
             padding: 0 $spacing-xs;
             margin-right: 0;
-            &.last {}
+            &.last {
+              padding-right: 0;
+            }
           }
         }
       }
@@ -131,10 +134,18 @@
         margin-right: 0;
         margin-left: 0;
       }
+      display: inline-flex;
+      float: right;
+      @include media-breakpoint-down(md) {
+        float: none;
+        display: flex;
+        & > .content > ul {
+          flex-direction: column;
+        }
+      }
     }
-    flex-direction: row;
-    justify-content: flex-start;
     @include media-breakpoint-down(md) {
+      display: flex;
       flex-direction: column;
       height: auto;
     }
@@ -158,7 +169,7 @@
         border-bottom: 2px solid $primary;
       }
       @include media-breakpoint-down(md) {
-        width: 100vw;
+        width: 100%;
         margin-right: 0;
         &,
         &[aria-expanded="true"],
@@ -170,6 +181,10 @@
     [class*="l-"] {
       line-height: 16px;
       font-size: 12px;
+      @include media-breakpoint-down(md) {
+        padding-top: $spacing-sm;
+        height: 100%;
+      }
     }
     .nav-item {
       flex-wrap: nowrap;
@@ -210,6 +225,7 @@
     flex-direction: row;
     @include media-breakpoint-down(md) {
       flex-direction: column;
+      margin-bottom: $header-height-sm;
       .nav-link {
         color: $white;
         position: relative;
@@ -228,6 +244,7 @@
         }
       }
       .nav-item {
+        min-height: $header-height-sm;
         &:focus {
           &,
           & > a {
@@ -247,11 +264,11 @@
     justify-content: flex-end;
     align-items: center;
     @include media-breakpoint-down(md) {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       height: auto;
-      margin-top: -43px;
+      margin-top: 4px;
     }
     a {
       &.btn {

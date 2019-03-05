@@ -213,7 +213,7 @@
             display: inline-flex;
             vertical-align: top;
             padding-top: 16px;
-            &[aria-expanded="true"],
+            &[aria-expanded='true'],
             &:hover {
               border-bottom: 2px solid $tertiary;
               color: $tertiary;

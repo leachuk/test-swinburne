@@ -1,4 +1,10 @@
 content/cq:tags/swinburne/component-style-theme: &component-style-theme
+  #logo
+  common/logo:
+    flat: true
+    prefix: 'theme--logo'
+    title: 'Logo'
+
   # Cards
   common/cards:
     prefixes:

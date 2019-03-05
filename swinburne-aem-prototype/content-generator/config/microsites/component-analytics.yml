@@ -1,4 +1,4 @@
-content/cq:tags/swinburne-microsites/component-analytics: &component-analytics
+content/_cq_tags/swinburne-microsites/component-analytics: &component-analytics
   hittype:
     prefixes:
       - event
@@ -38,5 +38,5 @@ content/cq:tags/swinburne-microsites/component-analytics: &component-analytics
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-microsites-showcase/component-analytics: *component-analytics
-content/cq:tags/swinburne-microsites-training/component-analytics: *component-analytics
+content/_cq_tags/swinburne-microsites-showcase/component-analytics: *component-analytics
+content/_cq_tags/swinburne-microsites-training/component-analytics: *component-analytics

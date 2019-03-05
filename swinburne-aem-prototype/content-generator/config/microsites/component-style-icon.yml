@@ -1,4 +1,4 @@
-content/cq:tags/swinburne-microsites/component-style-icon: &component-style-icon
+content/_cq_tags/swinburne-microsites/component-style-icon: &component-style-icon
   feed/rss:
     flat: true
     prefix: 'fa fa-rss'
@@ -96,5 +96,5 @@ content/cq:tags/swinburne-microsites/component-style-icon: &component-style-icon
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-microsites-showcase/component-style-icon: *component-style-icon
-content/cq:tags/swinburne-microsites-training/component-style-icon: *component-style-icon
+content/_cq_tags/swinburne-microsites-showcase/component-style-icon: *component-style-icon
+content/_cq_tags/swinburne-microsites-training/component-style-icon: *component-style-icon

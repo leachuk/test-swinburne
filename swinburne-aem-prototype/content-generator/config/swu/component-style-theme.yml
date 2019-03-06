@@ -305,6 +305,11 @@ content/cq:tags/swinburne/component-style-theme: &component-style-theme
     prefix: brand-header__container
     title: 'Container'
 
+  layout/brand-header/nav-container:
+    flat: true
+    prefix: brand-header__nav-container
+    title: 'Nav Container'
+
   layout/brand-header/admin:
     flat: true
     prefix: brand-header__admin

@@ -14,7 +14,7 @@
   @include media-breakpoint-up(lg) {
     position: inherit;
   }
-  & > .aem-Grid > .contentblock {
+  &__container {
     display: flex;
     flex-direction: row;
     @include media-breakpoint-down(md) {
@@ -38,7 +38,7 @@
   a:hover {
     text-decoration: none;
   }
-  &__container { // Navigation container
+  &__nav-container { // Navigation container
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

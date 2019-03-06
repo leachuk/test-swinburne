@@ -97,6 +97,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/layout/contentblock"
                                     componentId="contentblock_1XEWJNPXD"
+                                    componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/container]"
                                     variant="parsys">
                                     <bgimage
                                         jcr:primaryType="nt:unstructured"
@@ -117,7 +118,7 @@
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="swinburne/components/layout/contentblock"
                                             componentId="contentblock_1339506827_BRQHUYTVY"
-                                            componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/container]"
+                                            componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/nav-container]"
                                             variant="parsys">
                                             <bgimage
                                                 jcr:primaryType="nt:unstructured"

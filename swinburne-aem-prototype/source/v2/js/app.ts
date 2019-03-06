@@ -31,9 +31,6 @@ $(() => {
   // Bind the pub/sub event subscribers
   Subscribers()
 
-  // Take over any hash links on the page so they correctly jump to the content
-  //HashLinks()
-
   // 'object-fit' polyfill for unsupported browsers
   ObjectFitImages()
 

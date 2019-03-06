@@ -1,5 +1,6 @@
 package specs.styleguide.components.pagelist
 
+import spock.lang.Ignore
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
@@ -15,8 +16,8 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    @Unroll("Appearance of Page List with badge 'Icon' in #viewport.label")
-    def "Appearance of Page List with badge 'Icon'"() {
+    @Unroll("Appearance of Page List with badge Icon in #viewport.label")
+    def "Appearance of Page List with badge Icon"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#social-links"
@@ -35,8 +36,28 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (default background)' in #viewport.label")
-    def "Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (default background)'"() {
+    @Unroll("Appearance of Page List with badge Default in #viewport.label")
+    def "Appearance of Page List with badge Default"() {
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#reference_AIQY5ZRKO #pagelist_default_links"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        waitForComponent(selector)
+
+        then: 'It should match reference image.'
+        designRef(selector)
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Appearance of Page List with badge Card with Image Tag Title and Action Promoted : default background in #viewport.label")
+    def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : default background"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#reference_OXHFFXJJE #pagelist36"
@@ -55,8 +76,8 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (default background with charcoal theme)' in #viewport.label")
-    def "Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (default background with charcoal theme)'"() {
+    @Unroll("Appearance of Page List with badge Card with Image Tag Title and Action Promoted : default background with charcoal theme in #viewport.label")
+    def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : default background with charcoal theme"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#reference_1XHFFXJJE #pagelistxxx"
@@ -75,8 +96,8 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (grey background)' in #viewport.label")
-    def "Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (grey background)'"() {
+    @Unroll("Appearance of Page List with badge Card with Image Tag Title and Action Promoted : grey background in #viewport.label")
+    def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : grey background"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#reference_2XHFFXJJE #pagelist36"
@@ -95,8 +116,8 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (yellow background)' in #viewport.label")
-    def "Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (yellow background)'"() {
+    @Unroll("Appearance of Page List with badge Card with Image Tag Title and Action Promoted : yellow background in #viewport.label")
+    def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : yellow background"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#reference_4XHFFXJJE #pagelist36"
@@ -115,8 +136,8 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (grey background with charcoal theme)' in #viewport.label")
-    def "Appearance of Page List with badge 'Card with Image, Tag, Title and Action - Promoted (grey background with charcoal theme)'"() {
+    @Unroll("Appearance of Page List with badge Card with Image Tag Title and Action Promoted : grey background with charcoal theme in #viewport.label")
+    def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : grey background with charcoal theme"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#reference_5XHFFXJJE #pagelistxxx"
@@ -135,8 +156,8 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Page List with badge 'Default : Horizontal links' in #viewport.label")
-    def "Appearance of Page List with badge 'Default : Horizontal links'"() {
+    @Unroll("Appearance of Page List with badge Default : Horizontal links in #viewport.label")
+    def "Appearance of Page List with badge Default : Horizontal links"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#reference_COQK8HAL9 #pagelist_F56DNYW78"

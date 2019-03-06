@@ -510,7 +510,7 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
             //element - highlight
             if (highlight) {
-                js.executeScript("arguments[0].setAttribute('style', 'box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8);position: relative;z-index: 9999;')", element);
+                js.executeScript("arguments[0].setAttribute('style', 'box-shadow: 0 0 0 99999px rgba(0, 0, 0, 1);position: relative;z-index: 9999;')", element);
             }
 
 

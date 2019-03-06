@@ -17,9 +17,6 @@
   &__container {
     display: flex;
     flex-direction: row;
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-    }
   }
   &__actions,
   &__nav {
@@ -32,7 +29,7 @@
   &__nav,
   &__admin {
     @include media-breakpoint-down(md) {
-      width: 100vw;
+      width: 100%;
     }
   }
   a:hover {
@@ -59,45 +56,51 @@
     }
     @include media-breakpoint-down(md) {
       background-color: color('charcoal');
+      max-width: 320px;
       overflow-y: auto;
+    }
+  }
+  .theme-logo {
+    img {
+      display: inline-flex;
     }
   }
   &__admin {
     background-color: color('charcoal');
     height: $header-height / 3;
     padding: 0 $spacing-md;
+    @include media-breakpoint-down(md) {
+      padding-right: 0;
+    }
     a {
       color: $white;
       font-weight: 400;
     }
     & > .contentblock {
       display: inline-flex;
-      @include media-breakpoint-down(md) {
-        display: flex;
-        flex-direction: column;
-      }
       a {
         font-weight: 400;
         margin-right: $spacing-sm;
         & > span {
+          display: inline-flex;
           font-family: $font-family-base;
+          line-height: 16px;
+          margin-left: $spacing-xs;
+          width: auto;
         }
-        &:first-of-type {
-          &::before {
-            content: '\f24e';
+      }
+      @include media-breakpoint-down(md) {
+        &,
+        .link {
+          display: block;
+        }
+        .link {
+          margin-right: 0;
+          & > * {
+            display: inline-block;
           }
-        }
-        &:last-of-type {
-          &::before {
-            content: '\f005';
-          }
-        }
-        &:first-of-type,
-        &:last-of-type {
-          &::before {
-            font-family: $font-family-awesome;
-            font-weight: 300;
-            margin-right: $spacing-xs;
+          span {
+            width: auto;
           }
         }
       }
@@ -114,6 +117,11 @@
           li {
             margin-right: 0;
             padding: 0 $spacing-xs;
+            &.first,
+            &:nth-child(2) {
+              margin: 0;
+              padding: 0;
+            }
             &.last {
               padding-right: 0;
             }
@@ -126,7 +134,7 @@
         margin-right: 0;
       }
       @include media-breakpoint-down(md) {
-        display: flex;
+        display: block;
         float: none;
         & > .content > ul {
           flex-direction: column;
@@ -173,7 +181,7 @@
       line-height: 16px;
       @include media-breakpoint-down(md) {
         height: 100%;
-        padding-top: $spacing-sm;
+        padding: $spacing-sm 0;
       }
     }
     .nav-item {
@@ -222,10 +230,8 @@
       }
     }
     @include media-breakpoint-down(md) {
-      display: flex;
-      flex-direction: column;
+      display: block;
       height: auto;
-      margin-bottom: $header-height-sm;
       max-width: inherit;
       order: -1;
       padding-right: 0;
@@ -247,6 +253,7 @@
         }
       }
       .nav-item {
+        display: block;
         min-height: $header-height-sm;
         &:focus {
           &,
@@ -273,9 +280,21 @@
         font-weight: 400;
         height: 45px;
         min-width: 140px;
+        &:first-of-type {
+          display: flex;
+        }
+        &:last-of-type {
+          display: none;
+        }
         @include media-breakpoint-down(md) {
-          margin-right: 7px;
+          margin: 0 7px 0 0;
           min-width: 101px;
+          &:first-of-type {
+            display: none;
+          }
+          &:last-of-type {
+            display: flex;
+          }
         }
         &,
         &:hover {

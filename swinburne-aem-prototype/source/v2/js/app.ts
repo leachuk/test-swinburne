@@ -1,6 +1,7 @@
 import 'bootstrap';
 import Carousels from '@global/modules/carousel'
 import Subscribers from '@global/modules/subscribers'
+import NavToggler from '@global/modules/header/nav-toggler'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -33,6 +34,8 @@ $(() => {
 
   // 'object-fit' polyfill for unsupported browsers
   ObjectFitImages()
+
+  NavToggler()
 
   // Open all the 'collapse' elements on the page when in author
   if (isAuthorEditMode()) {

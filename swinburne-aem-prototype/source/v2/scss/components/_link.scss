@@ -5,7 +5,7 @@
     width: 100%;
   }
 
-  &:not(.btn) {
+  &:not(.btn):not(.navbar-toggler):not([class*='icon-']) {
     align-items: center;
     display: inline-flex;
     font-weight: 600;

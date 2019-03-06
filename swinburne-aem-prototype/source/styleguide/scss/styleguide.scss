@@ -45,7 +45,8 @@ html:not(.aem-AuthorLayer-Edit) {
       width: 100%;
     }
 
-    .nav-link {
+    .nav-link:not([class*='l-']) {
+      color: color('grey-1');
       margin-bottom: 0;
       padding-bottom: 0;
     }

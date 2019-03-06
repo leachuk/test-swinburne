@@ -415,27 +415,26 @@ abstract class FunctionalSpec extends GebReportingSpec {
         }
         def isTestPass = false;
         def result = VERY_DIFFERENT
-        for (def i = 0; i < 3; i++) {
-            screenshotFilename = screenshot(element, fixedFilePath)
-            differenceFilename = screenshotFilename.replaceFirst(/^(.*)\.png$/, "\$1.diff.png")
-            result = compare(screenshotFilename, referenceFilename, differenceFilename)
 
-//            printDebug("COMPARE RESULT",result <= COMPARE_THRESHOLD)
+        screenshotFilename = screenshot(element, fixedFilePath)
+        differenceFilename = screenshotFilename.replaceFirst(/^(.*)\.png$/, "\$1.diff.png")
+        result = compare(screenshotFilename, referenceFilename, differenceFilename)
 
-            isTestPass = (result <= COMPARE_THRESHOLD)
-        }
+//        printDebug("COMPARE RESULT",result <= COMPARE_THRESHOLD)
+
+        isTestPass = (result <= COMPARE_THRESHOLD)
 
         File screenshotFile = new File(screenshotFilename)
         File differenceFile = new File(differenceFilename)
 
 //        printDebug("DESIGN REFERENCE",[
-//                    MATCH:isTestPass,
-//                    SOURCE:referenceFile.absolutePath,
-//                    DESTINATION:screenshotFile.absolutePath,
-//                    VARIANCE:result,
-//                    RESULT:differenceFile.absolutePath,
-//                    LABEL: specificationContext.currentIteration.name
-//            ])
+//                  MATCH:isTestPass,
+//                  SOURCE:referenceFile.absolutePath,
+//                  DESTINATION:screenshotFile.absolutePath,
+//                  VARIANCE:result,
+//                  RESULT:differenceFile.absolutePath,
+//                  LABEL: specificationContext.currentIteration.name
+//        ])
 
         ReportListener tempRL = new ReportListener()
         tempRL.writeReportResource(
@@ -500,7 +499,7 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
             //element - highlight
             if (highlight) {
-                js.executeScript("arguments[0].setAttribute('style', 'box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8);position: relative;z-index: 9999;')", element);
+                js.executeScript("arguments[0].setAttribute('style', 'box-shadow: 0 0 0 99999px rgba(0, 0, 0, 1);position: relative;z-index: 9999;')", element);
             }
 
 

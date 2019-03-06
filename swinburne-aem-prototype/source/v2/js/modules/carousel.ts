@@ -3,6 +3,12 @@ import _isNil from 'lodash/isNil'
 import _omitBy from 'lodash/omitBy'
 import _throttle from 'lodash/throttle'
 
+declare interface CarouselOptions {
+  [breakpoint: string]: {
+    [key: number]: OwlCarousel.Options,
+  },
+}
+
 // Internal
 let carousels: Element[]
 
@@ -11,7 +17,7 @@ let carousels: Element[]
  *
  * @param {HTMLElement} pagelist The page list element
  */
-const pageListConfiguration = (pagelist) => {
+function pageListConfiguration(pagelist: HTMLElement): CarouselOptions {
   const isEqualWidths = pagelist.classList.contains('theme--lists-equal')
   const isThirdWidths = pagelist.classList.contains('theme--lists-large')
 
@@ -33,17 +39,17 @@ const pageListConfiguration = (pagelist) => {
 /**
  * Binds `OwlCarousel` to the given target element.
  *
- * @param {HTMLElement} element      An element to bind OwlCarousel to
- * @param {HTMLElement} parent       The parent element of the carousel
- * @param {object}      options      Custom options for this carousel
- * @param {boolean}     needsRefresh Should the carousel be completely refreshed?
+ * @param {HTMLElement} element An element to bind OwlCarousel to
+ * @param {HTMLElement} parent The parent element of the carousel
+ * @param {CarouselOptions} options Custom options for this carousel
+ * @param {boolean} needsRefresh Should the carousel be completely refreshed?
  */
-const bindCarouselToElement = (
+function bindCarouselToElement(
   element: HTMLElement,
   parent: HTMLElement,
-  options = {},
+  options: CarouselOptions = {},
   needsRefresh: boolean = false,
-) => {
+) {
   let $list = $(element)
 
   const totalItems   = $list.find('li').length
@@ -164,12 +170,12 @@ const bindCarouselToElement = (
 
 const loopAndGenerateCarousels = (needsRefresh = false) => {
   carousels.forEach((carousel) => {
-    let config: { [key: string]: any } = {}
+    let config: CarouselOptions = {}
     let target: HTMLElement | null = null
 
     switch (true) {
       case carousel.classList.contains('pagelist'):
-        config = pageListConfiguration(carousel)
+        config = pageListConfiguration(carousel as HTMLElement)
         target = carousel.querySelector('ul')
         break
 

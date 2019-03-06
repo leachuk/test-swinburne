@@ -33,7 +33,7 @@
                 sling:resourceType="swinburne/components/layout/footer"
                 cancelInheritParent="true"
                 componentId="footer_7FPGZJN3W"
-                componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-dark,swinburne-showcase:component-style-modifier/color/standard/white]"
+                componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-charcoal,swinburne-showcase:component-style-modifier/color/standard/white]"
                 componentTheme="[swinburne-showcase:component-style-theme/layout/brand-footer]">
             <par
                     jcr:primaryType="nt:unstructured"

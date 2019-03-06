@@ -1,25 +1,26 @@
-content/cq:tags/swinburne/component-style-icon: &component-style-icon
-  feed/rss:
-    flat: true
-    prefix: 'fa fa-rss'
-    title: 'RSS'
+content/_cq_tags/swinburne/component-style-icon: &component-style-icon
   feed/atom:
     flat: true
     prefix: 'fa fa-rss'
     title: 'Atom'
 
+  feed/rss:
+    flat: true
+    prefix: 'fa fa-rss'
+    title: 'RSS'
+
   social:
     prefixes:
-      - youtube
       - facebook
       - facebook-f
-      - pinterest-p
-      - twitter
       - instagram
-      - linkedin-in
       - linkedin
-      - tumblr-square
+      - linkedin-in
+      - pinterest-p
       - tumblr
+      - tumblr-square
+      - twitter
+      - youtube
     valueFormat: fab fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
@@ -32,71 +33,71 @@ content/cq:tags/swinburne/component-style-icon: &component-style-icon
 
   general:
     prefixes:
-      - fast-forward
-      - comments
-      - briefcase
-      - calendar
-      - search
-      - home
-      - edit
-      - phone
-      - pencil-alt
-      - book
-      - reply-all
-      - life-ring
-      - calculator
-      - calendar-alt
-      - envelope
-      - star
-      - car
-      - street-view
-      - globe
-      - train
-      - play-circle
-      - user
-      - users
-      - users-class
-      - user-graduate
       - balance-scale
+      - book
+      - briefcase
       - building
+      - calculator
+      - calendar
+      - calendar-alt
+      - car
       - chalkboard-teacher
+      - chart-bar
       - child
-      - comment-alt-exclamation
-      - comment-alt-smile
+      - code
+      - cogs
       - comment-alt-check
       - comment-alt-dots
+      - comment-alt-exclamation
+      - comment-alt-smile
+      - comments
       - comments-alt
+      - connectdevelop
+      - edit
+      - envelope
+      - fast-forward
+      - flask
+      - gamepad
+      - gavel
+      - globe
+      - graduation-cap
+      - heartbeat
+      - home
       - info-circle
       - laptop
+      - life-ring
+      - link
       - location-circle
       - map-pin
+      - newspaper
+      - paper-plane
+      - pencil-alt
+      - phone
       - plane-arrival
       - plane-departure
-      - thumbs-up
-      - thumbs-down
-      - trophy
-      - wheelchair
-      - star
+      - play-circle
+      - reply-all
       - school
-      - paper-plane
-      - connectdevelop
-      - graduation-cap
-      - video
-      - university
-      - chart-bar
-      - newspaper
-      - cogs
-      - gamepad
-      - code
-      - gavel
+      - search
+      - star
+      - star
       - stethoscope
-      - flask
+      - street-view
+      - thumbs-down
+      - thumbs-up
+      - train
+      - trophy
+      - university
+      - user
+      - user-graduate
+      - users
+      - users-class
+      - video
+      - wheelchair
       - wrench
-      - heartbeat
-      - link
     valueFormat: fal fa-%%prefix%%
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-showcase/component-style-icon: *component-style-icon
-content/cq:tags/swinburne-training/component-style-icon: *component-style-icon
+content/_cq_tags/swinburne-showcase/component-style-icon: *component-style-icon
+content/_cq_tags/swinburne-training/component-style-icon: *component-style-icon

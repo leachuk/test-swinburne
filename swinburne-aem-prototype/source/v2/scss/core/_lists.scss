@@ -10,7 +10,7 @@ ul {
     flex-wrap: wrap;
 
     &::before {
-      color: theme-color('g3');
+      color: color('grey-3');
       margin-right: 10px;
     }
   }

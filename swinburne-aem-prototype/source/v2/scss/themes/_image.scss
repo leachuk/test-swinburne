@@ -1,0 +1,16 @@
+&--logo img {
+  display: block;
+  height: 47px;
+
+  @include media-breakpoint-up(md) {
+    height: 60px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 89px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 98px;
+  }
+}

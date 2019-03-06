@@ -1,4 +1,4 @@
-content/cq:tags/swinburne-microsites/component-dialog: &component-dialog
+content/_cq_tags/swinburne-microsites/component-dialog: &component-dialog
   # WARNING: Reference to these path is hardcoded into component dialogs
   asset/rendition/prefix:
     prefixes:
@@ -152,5 +152,5 @@ content/cq:tags/swinburne-microsites/component-dialog: &component-dialog
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-microsites-showcase/component-dialog: *component-dialog
-content/cq:tags/swinburne-microsites-training/component-dialog: *component-dialog
+content/_cq_tags/swinburne-microsites-showcase/component-dialog: *component-dialog
+content/_cq_tags/swinburne-microsites-training/component-dialog: *component-dialog

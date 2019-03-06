@@ -116,7 +116,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_2024348315_ZV7KBJ10M"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible]"
                             text="&lt;p>Visibility - Invisible&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1234007482
@@ -127,7 +127,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1234007482_T7OXLJUXT"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-xs-down]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-xs-down]"
                             text="&lt;p>Visibility - Visibility / Xs down&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1258104717
@@ -138,7 +138,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1258104717_FLJPIRGS6"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-sm-down]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-sm-down]"
                             text="&lt;p>Visibility - Visibility / Sm down&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_240127259
@@ -149,7 +149,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_240127259_5MGBGFXJQ"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-md-down]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-md-down]"
                             text="&lt;p>Visibility - Visibility / Md down&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1128533466
@@ -160,7 +160,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1128533466_NLE985MBZ"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-lg-down]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-lg-down]"
                             text="&lt;p>Visibility - Visibility / Lg down&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1454555955
@@ -171,7 +171,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1454555955_AP7GQHTVI"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-xl-down]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-xl-down]"
                             text="&lt;p>Visibility - Visibility / Xl down&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1933564755
@@ -182,7 +182,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1933564755_B056LWXEZ"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-xs-up]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-xs-up]"
                             text="&lt;p>Visibility : Visibility / Xs up&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1519611596
@@ -193,7 +193,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1519611596_XM7NN80B4"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-sm-up]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-sm-up]"
                             text="&lt;p>Visibility - Visibility / Sm up&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1465670839
@@ -204,7 +204,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1465670839_4G05NC960"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-md-up]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-md-up]"
                             text="&lt;p>Visibility - Visibility / Md up&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1007097376
@@ -215,7 +215,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1007097376_FZYJASS43"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-lg-up]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-lg-up]"
                             text="&lt;p>Visibility - Visibility / Lg up&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <text_1462394320
@@ -226,7 +226,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
                             componentId="text_1462394320_6UY7LGFW5"
-                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/invisible-xl-up]"
+                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-xl-up]"
                             text="&lt;p>Visibility - Visibility / XL up&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                     </par>

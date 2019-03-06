@@ -10,7 +10,7 @@
 
   &-item {
     a {
-      color: $tertiary;
+      color: color('charcoal');
       font-weight: 400;
     }
 
@@ -28,13 +28,17 @@
 
     &.active {
       a {
-        color: $grey-3;
+        color: color('grey-3');
         font-weight: 300;
       }
 
-      .bg-dark & :not(a) {
-        color: $grey-3;
+      .bg-charcoal & :not(a) {
+        color: color('grey-3');
       }
+    }
+
+    &::before {
+      display: none;
     }
   }
 }

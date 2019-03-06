@@ -202,7 +202,9 @@ module.exports = env => {
     },
 
     plugins: removeEmpty([
-      env.clean === true ? new CleanWebpackPlugin([PUBLIC_PATH]) : undefined,
+      env.clean === true ? new CleanWebpackPlugin({
+        cleanOnceBeforeBuildPatterns: [resolve(PUBLIC_PATH, '**/*')],
+      }) : undefined,
       new CopyWebpackPlugin([
         {
           context : PROJECT_PATH,

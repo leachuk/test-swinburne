@@ -1,150 +1,196 @@
-// import get from 'lodash/get'
-// import isNil from 'lodash/isNil'
-// import omitBy from 'lodash/omitBy'
-// import 'owl.carousel'
+import _get from 'lodash/get'
+import _isNil from 'lodash/isNil'
+import _omitBy from 'lodash/omitBy'
+import _throttle from 'lodash/throttle'
 
-// /**
-//  * Page list configuration.
-//  * @type {Object}
-//  */
-// const pageListConfiguration = {}
+// Internal
+let carousels: Element[]
 
-// /**
-//  * Binds OwlCarousel carousel to given element.
-//  *
-//  * @param {Element} element An element to bind OwlCarousel to
-//  * @param {Object}  options Custom options for this carousel
-//  */
-// const bindSlickToElement = (element, options = {}) => {
-//   const $parent = $(element);
-//   const $component = $parent.closest('[data-modules*="carousel"]');
-//   let $slideNbr = $component.is('[class*="slide-"]')
-//                     ? $component.attr('class').split(' ')
-//                       .filter( item => item.includes('slide-') )
-//                       .pop().split('-').pop()
-//                     : 3;
-//   $slideNbr = parseInt($slideNbr);
+/**
+ * Page list configuration.
+ *
+ * @param {HTMLElement} pagelist The page list element
+ */
+const pageListConfiguration = (pagelist) => {
+  const isEqualWidths = pagelist.classList.contains('theme--lists-equal')
+  const isThirdWidths = pagelist.classList.contains('theme--lists-large')
 
+  return {
+    breakpoint: {
+      768: {
+        items   : isEqualWidths ? 2 : (isThirdWidths ? 3 : 2),
+        slideBy : isEqualWidths ? 1 : (isThirdWidths ? 3 : 2),
+      },
 
+      1024: {
+        items   : isEqualWidths ? 2 : (isThirdWidths ? 3 : 4),
+        slideBy : isEqualWidths ? 1 : (isThirdWidths ? 3 : 2),
+      },
+    },
+  }
+}
 
-//   if (module.hot && $parent.hasClass('owl-loaded')) {
-//     // Destory the current instance
-//     $parent.owlCarousel('destroy')
-//   } else {
-//     // Add the OwlCarousel classes
-//     $parent.addClass('owl-carousel owl-theme')
+/**
+ * Binds `OwlCarousel` to the given target element.
+ *
+ * @param {HTMLElement} element      An element to bind OwlCarousel to
+ * @param {HTMLElement} parent       The parent element of the carousel
+ * @param {object}      options      Custom options for this carousel
+ * @param {boolean}     needsRefresh Should the carousel be completely refreshed?
+ */
+const bindCarouselToElement = (
+  element: HTMLElement,
+  parent: HTMLElement,
+  options = {},
+  needsRefresh: boolean = false,
+) => {
+  let $list = $(element)
 
-//     // Unwrap the LI elements from around the content within them.
-//     $parent.children().each((_, item) => {
-//       $(item).children().unwrap()
-//     })
-//   }
+  const totalItems   = $list.find('li').length
+  const itemsFor768  = _get(options, 'breakpoint.768.items', 2)
+  const itemsFor1024 = _get(options, 'breakpoint.1024.items', 4)
+  const splitEnabled = parent.dataset.listSplitEnabled === 'true'
+  const windowWidth  = $(window).width() || 0
 
-//   if($slideNbr !== 1) { // 3 slides per row ( default )
-//     $parent.owlCarousel(omitBy({
-//       center       : get(options, 'center', true),
-//       itemElement  : get(options, 'itemElement', null),
-//       items        : get(options, 'items', 1),
-//       loop         : get(options, 'loop', true),
-//       margin       : get(options, 'margin', 1),
-//       mouseDrag    : get(options, 'mouseDrag', true),
-//       nav          : get(options, 'nav', true),
-//       slideBy      : get(options, 'slideBy', 1),
-//       stageElement : get(options, 'stageElement', null),
-//       stagePadding : get(options, 'stagePadding', 0),
+  // We only need the carousel in certain situations
+  if (
+    windowWidth >= 768 &&
+    totalItems > 0 &&
+    (
+      (totalItems <= 2 && itemsFor768 === 2 && itemsFor1024 === 2) ||
+      (totalItems <= 3 && itemsFor768 === 3 && itemsFor1024 === 3) ||
+      (totalItems <= 4 && itemsFor768 === 4 && itemsFor1024 === 4)
+    ) &&
+    $list.hasClass('owl-loaded') &&
+    !splitEnabled
+  ) {
+    $list.owlCarousel('destroy').removeClass('owl-carousel')
 
-//       responsive: {
-//         0: omitBy({
-//           stagePadding: get(options, 'breakpoint.0.stagePadding', 0),
-//         }, isNil),
+    // Re-wrap the children so the markup is valid once again
+    $list.children().wrap('<li />')
 
-//         640: omitBy({
-//           items        : get(options, 'breakpoint.640.items', 1),
-//           stagePadding : get(options, 'breakpoint.640.stagePadding', 0),
-//         }, isNil),
+    return
+  }
 
-//         768: omitBy({
-//           center  : get(options, 'breakpoint.768.center', false),
-//           items   : get(options, 'breakpoint.768.items', 2),
-//           slideBy : get(options, 'breakpoint.768.slideBy', 1),
-//         }, isNil),
+  // Do we need to remove OwlCarousel from the current instance
+  if ((module.hot || needsRefresh) && $list.hasClass('owl-loaded')) {
+    $list.owlCarousel('destroy')
+  }
 
-//         1400: omitBy({
-//           center  : get(options, 'breakpoint.1400.center', false),
-//           items   : get(options, 'breakpoint.1400.items', 3),
-//           slideBy : get(options, 'breakpoint.1400.slideBy', 1),
-//         }, isNil),
-//       },
-//     }, isNil))
-//   }else{ // 1 slide per row
-//     $parent.owlCarousel(omitBy({
-//       center       : get(options, 'center', true),
-//       itemElement  : get(options, 'itemElement', null),
-//       items        : get(options, 'items', 1),
-//       loop         : get(options, 'loop', true),
-//       margin       : get(options, 'margin', 3),
-//       mouseDrag    : get(options, 'mouseDrag', true),
-//       nav          : get(options, 'nav', true),
-//       slideBy      : get(options, 'slideBy', 1),
-//       stageElement : get(options, 'stageElement', null),
-//       stagePadding : get(options, 'stagePadding', 0)
-//     }, isNil))
-//   }
+  let needsUnwrap = true
 
-//   if($parent.find('.owl-stage-outer').length === 0) {
-//     $parent.find('.owl-stage').wrap('<div class="owl-stage-outer"></div>');
-//     $parent.find('.owl-prev, .owl-next').wrapAll('<div class="owl-nav"></div>');
-//   }
+  // When a split is active we need to clone the list items into a mobile only version to ensure
+  // the visual aspects of the list remain intact.
+  if (splitEnabled) {
+    const listParent = element.parentNode as Element
 
-//   //Set IFrame depending of providers Youtube or Kaltura
-//   let $videos = $parent.find('.owl-item .card.video');
+    if (listParent) {
+      let mobileList = listParent.querySelector('ul.mobile-carousel')
 
-//   // Kaltura videos
-//   let playerId  = 32783592;
-//   let partnerId = 811441;
+      if (!mobileList) {
+        mobileList = document.createElement('ul')
+        mobileList.classList.add('mobile-carousel')
 
-//   if($videos.length) {
-//     $videos.each( (_, video)  => {
-//       let $video = $(video);
-//       let videoId = $video.find('a[title]').attr('title');
-//       let hasKaltura = $video.hasClass('video-kaltura');
-//       if (hasKaltura) {
-//         $video.html(`<iframe src="https://cdnapisec.kaltura.com/p/${partnerId}/sp/${partnerId}00/embedIframeJs/uiconf_id/${playerId}/partner_id/${partnerId}?iframeembed=true&playerId=kaltura_player&entry_id=${videoId}" allowfullscreen></iframe>`);
-//       } else {
-//         $video.html(`<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>`);
-//       }
-//     });
-//   }
+        // Migrate the existing lists items into the mobile clone
+        const existingLists = [...listParent.querySelectorAll('ul')]
 
+        if (existingLists.length) {
+          existingLists.forEach((list) => {
+            const children = [...list.children]
 
-//   // Add analytics data attributes
-//   $parent.find('.owl-prev')
-//     .attr('data-layer-event', 'site interaction')
-//     .attr('data-layer-linktype', 'link')
-//     .attr('data-layer-linklocation', 'pagelist')
-//     .attr('data-layer-linkdescription', 'carousel left');
+            children.forEach((item) => mobileList && mobileList.appendChild(item.cloneNode(true)))
+          })
+        }
 
-//   $parent.find('.owl-next')
-//     .attr('data-layer-event', 'site interaction')
-//     .attr('data-layer-linktype', 'link')
-//     .attr('data-layer-linklocation', 'pagelist')
-//     .attr('data-layer-linkdescription', 'carousel right');
-// }
+        listParent.insertAdjacentElement('afterbegin', mobileList)
+      } else {
+        needsUnwrap = false;
+      }
+
+      $list = $(mobileList as HTMLElement)
+    }
+  }
+
+  // Restore the OwlCarousel classes that are needed to style it
+  $list.addClass('owl-carousel owl-theme')
+
+  if (needsUnwrap && totalItems > 0) {
+    $list.children().each((_, item) => {
+      $(item).children().unwrap('li')
+    })
+  }
+
+  // Janky fix to control pre-rendering issues with OwlCarousel
+  setTimeout(() => {
+    $list.owlCarousel(_omitBy({
+      center       : _get(options, 'center', true),
+      itemElement  : _get(options, 'itemElement', null),
+      items        : _get(options, 'items', 1),
+      loop         : _get(options, 'loop', false),
+      margin       : _get(options, 'margin', 30),
+      mouseDrag    : _get(options, 'mouseDrag', false),
+      nav          : _get(options, 'nav', true),
+      slideBy      : _get(options, 'slideBy', 1),
+      stageElement : _get(options, 'stageElement', null),
+      stagePadding : _get(options, 'stagePadding', 25),
+
+      responsive: {
+        0: _omitBy({
+          stagePadding: _get(options, 'breakpoint.0.stagePadding', 0),
+        }, _isNil),
+
+        576: _omitBy({
+          items        : _get(options, 'breakpoint.576.items', 2),
+          stagePadding : _get(options, 'breakpoint.576.stagePadding', 0),
+        }, _isNil),
+
+        768: _omitBy({
+          center       : _get(options, 'breakpoint.768.center', false),
+          items        : itemsFor768,
+          slideBy      : _get(options, 'breakpoint.768.slideBy', 2),
+          stagePadding : _get(options, 'breakpoint.768.stagePadding', 25),
+        }, _isNil),
+
+        1024: _omitBy({
+          center       : _get(options, 'breakpoint.1024.center', false),
+          items        : itemsFor1024,
+          slideBy      : _get(options, 'breakpoint.1024.slideBy', 2),
+          stagePadding : _get(options, 'breakpoint.1024.stagePadding', 25),
+        }, _isNil),
+      },
+    }, _isNil))
+  }, 200)
+}
+
+const loopAndGenerateCarousels = (needsRefresh = false) => {
+  carousels.forEach((carousel) => {
+    let config: { [key: string]: any } = {}
+    let target: HTMLElement | null = null
+
+    switch (true) {
+      case carousel.classList.contains('pagelist'):
+        config = pageListConfiguration(carousel)
+        target = carousel.querySelector('ul')
+        break
+
+      default:
+        console.warn('Carousel definition not defined for:', carousel)
+    }
+
+    if (target) {
+      bindCarouselToElement(target, carousel as HTMLElement, config, needsRefresh)
+    }
+  })
+}
 
 export default () => {
-//   const carousels = [ ...document.querySelectorAll('[data-modules*="carousel"]') ]
+  carousels = [...document.querySelectorAll('[data-modules*="carousel"]')]
 
-//   if (carousels.length) {
-//     // Initalise the carousels
-//     carousels.forEach(carousel => {
-//       switch (true) {
-//         case carousel.classList.contains('pagelist'):
-//           bindSlickToElement(carousel.querySelector('ul'), pageListConfiguration)
-//           break
+  if (carousels.length) {
+    loopAndGenerateCarousels()
 
-//         default:
-//           console.warn('Carousel definition not defined for:', carousel)
-//       }
-//     })
-//   }
+    $(window).off('resize.carouselRefresh').on('resize.carouselRefresh', _throttle(() => {
+      loopAndGenerateCarousels(true)
+    }, 200))
+  }
 }

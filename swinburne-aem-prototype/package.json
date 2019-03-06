@@ -45,6 +45,7 @@
     "@types/fastclick": "^1.0.28",
     "@types/jquery": "^3.3.29",
     "@types/lodash": "^4.14.122",
+    "@types/owl.carousel": "^2.3.1",
     "@types/pubsub-js": "^1.5.18",
     "@types/webpack-env": "^1.13.8",
     "@typescript-eslint/eslint-plugin": "^1.4.2",

@@ -33,6 +33,7 @@
       "fastclick",
       "jquery",
       "lodash",
+      "owl.carousel",
       "pubsub-js"
     ]
   },

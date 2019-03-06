@@ -897,6 +897,13 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.21.tgz#7e8a0c34cf29f4e17a36e9bd0ea72d45ba03908e"
   integrity sha512-CBgLNk4o3XMnqMc0rhb6lc77IwShMEglz05deDcn2lQxyXEZivfwgYJu7SMha9V5XcrP6qZuevTHV/QrN2vjKQ==
 
+"@types/owl.carousel@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@types/owl.carousel/-/owl.carousel-2.3.1.tgz#029d6b0ef84fa3ad6b1e3de18a51742d5178792a"
+  integrity sha512-D4N1k+zTtdxSgQQeTaSYqJ/Av5X41u5VNymNznIrnngzhLVmM6WYh8Iga8Hr3dHKnijDhElya1JZJAMzjVbTkQ==
+  dependencies:
+    "@types/jquery" "*"
+
 "@types/pubsub-js@^1.5.18":
   version "1.5.18"
   resolved "https://registry.yarnpkg.com/@types/pubsub-js/-/pubsub-js-1.5.18.tgz#dd12284c5e93b39874e62675702bf50c6f55e9ec"

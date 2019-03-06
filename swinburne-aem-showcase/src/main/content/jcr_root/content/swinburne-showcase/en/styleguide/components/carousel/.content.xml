@@ -4,14 +4,12 @@
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
-        jcr:title="components"
-        sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="components"
-        pageTitle="components">
+        jcr:title="Carousel"
+        sling:resourceType="swinburne/components/template/styleguide">
         <aside
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"
-            componentId="aside_UWGLXC9ZY">
+            componentId="aside">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -19,7 +17,7 @@
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
-            componentId="article_ZHQUKI232">
+            componentId="article">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
@@ -29,30 +27,27 @@
                     sling:resourceType="swinburne/components/details/page-details"
                     componentId="page_details"
                     componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
-                    editable="{Boolean}false"
                     showBreadcrumb="false"
                     showPageDate="false"
-                    showParsys="false"
                     showToolbar="false"
-                    textIsRich="true"/>
+                    textIsRich="true"
+                    titleType="[,]"/>
                 <contentblock
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/container"/>
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/text"
+                            componentId="text"
+                            text="&lt;h4>Basic Carousel&lt;/h4>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </par>
                 </contentblock>
             </par>
         </article>
     </jcr:content>
-    <breadcrumbs/>
-    <carousel/>
-    <content-block/>
-    <global-footer/>
-    <link/>
-    <news-details/>
-    <news-list/>
-    <page-list/>
-    <text/>
 </jcr:root>

@@ -65,6 +65,8 @@ const icons = [
   { class: 'fal fa-wrench', 'name': 'Wrench' },
   { class: 'fal fa-heartbeat', 'name': 'Heartbeat' },
   { class: 'fal fa-link', 'name': 'Link' },
+  { class: 'fal fa-bars', 'name': 'Bars' },
+  { class: 'fal fa-times', 'name': 'Times' },
   { class: 'fab fa-connectdevelop', 'name': 'Connectdevelop' },
   { class: 'fab fa-facebook-f', 'name': 'Facebook F' },
   { class: 'fab fa-facebook', 'name': 'Facebook' },

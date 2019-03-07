@@ -17,6 +17,35 @@
   &__container {
     display: flex;
     flex-direction: row;
+    .navbar-toggler {
+      color: color('charcoal');
+      font-size: 10px;
+      font-weight: 700;
+      width: 70px;
+      & > * {
+        display: inline-flex;
+      }
+      & > span {
+        display: inline-flex;
+        width: auto;
+      }
+      &,
+      & > span {
+        margin-left: $spacing-xs;
+      }
+      &:first-of-type {
+        display: none;
+        margin-left: $spacing-2xs;
+      }
+      &[aria-expanded='true'] {
+        &:first-of-type {
+          display: block;
+        }
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
   }
   &__actions,
   &__nav {
@@ -45,6 +74,13 @@
     position: fixed;
     top: 0;
     width: 100%;
+
+    @include media-breakpoint-down(md) {
+      &:not(.collapse):not(.collapsing) {
+        display: none;
+      }
+    }
+
     @include media-breakpoint-up(lg) {
       display: block;
       flex-direction: row;
@@ -89,19 +125,33 @@
           width: auto;
         }
       }
+      .text {
+        display: none;
+      }
       @include media-breakpoint-down(md) {
         &,
         .link {
           display: block;
         }
         .link {
+          border-bottom: 1px solid color('grey-2');
+          font-weight: 700;
+          line-height: 16px;
           margin-right: 0;
+          padding: $spacing-sm 0;
           & > * {
             display: inline-block;
           }
           span {
             width: auto;
           }
+        }
+        .text {
+          color: color('grey-1');
+          display: block;
+          font-size: 12px;
+          font-weight: 200;
+          padding-top: $spacing-md;
         }
       }
     }
@@ -122,9 +172,6 @@
               margin: 0;
               padding: 0;
             }
-            &.last {
-              padding-right: 0;
-            }
           }
         }
       }
@@ -138,6 +185,14 @@
         float: none;
         & > .content > ul {
           flex-direction: column;
+          & > li {
+            font-weight: 200;
+            margin-bottom: $spacing-xs;
+            padding-left: 0;
+            &:nth-child(3) {
+              margin-top: $spacing-sm;
+            }
+          }
         }
       }
     }
@@ -207,6 +262,33 @@
         overflow: auto;
         padding: 0 $spacing-md;
         width: 100%;
+        @include media-breakpoint-down(md) {
+          background-color: color('charcoal');
+          box-shadow: none;
+          height: calc(100vh - 47px);
+          left: 5px !important;
+          margin-top: -5px;
+          overflow: auto;
+          padding-right: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 5;
+        }
+        button.link {
+          background: transparent;
+          border: 0;
+          color: $white;
+          display: flex;
+          flex-direction: row-reverse;
+          font-size: 12px;
+          font-weight: 700;
+          margin-top: $spacing-sm;
+          padding-left: 0;
+          & > i {
+            font-size: 14px;
+          }
+        }
         a {
           &.l-2 {
             border-bottom: 2px solid transparent;
@@ -225,6 +307,21 @@
             &:last-child {
               margin-right: 0;
             }
+            @include media-breakpoint-down(md) {
+              display: block;
+              width: 100%;
+              &,
+              &:hover,
+              &[aria-expanded='true'],
+              &::before {
+                color: $white;
+              }
+              &,
+              &:hover,
+              &[aria-expanded='true']{
+                border-bottom: 1px solid color('grey-2');
+              }
+            }
           }
         }
       }
@@ -235,6 +332,7 @@
       max-width: inherit;
       order: -1;
       padding-right: 0;
+      a.l-2,
       .nav-link {
         color: $white;
         position: relative;
@@ -252,6 +350,7 @@
           transform: translateY(-50%);
         }
       }
+      a.l-2,
       .nav-item {
         display: block;
         min-height: $header-height-sm;

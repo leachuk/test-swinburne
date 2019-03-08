@@ -203,7 +203,7 @@
                                 sling:resourceType="swinburne/components/content/link"
                                 componentId="link9"
                                 linkIcon="[swinburne-showcase:component-style-icon/spinner/cog]"
-                                linkIconDirection="right"
+                                linkIconPosition="right"
                                 variant="button"/>
                     </par>
                 </contentblock9>

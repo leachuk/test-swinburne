@@ -19,7 +19,7 @@ function preventNavClosing(){
 
 function setCloseInnerNav($dropdown){
   // Refactored from => https://github.com/TheCoder4eu/BootsFaces-OSP/issues/849
-  $dropdown.on('click', function(e){
+  $dropdown.on('click', (e) => {
     const JQuery : any = $;
     let events = JQuery._data(document, 'events') || {};
     events = events.click || [];

@@ -1,5 +1,5 @@
 function closeNavigation(element){
-  $(element.parentElement).removeClass('show');
+  $(element.target).parent().removeClass('show');
 }
 
 export default () => {

@@ -1,0 +1,34 @@
+<template data-sly-template.variant="${@ componentProperties}">
+    <div class="card card--taglist-share ${componentProperties.cardSize} ${componentProperties.badgeClassAttr}">
+        <div class="card-img-top">
+            <img src="${componentProperties.pageThumbnail}"
+                 data-sly-attribute="${componentProperties.badgeImageAttr @ context = 'unsafe'}"
+                 alt="${componentProperties.title}">
+        </div>
+        <div class="card-body">
+            <title class="card-title"
+                   data-sly-element="${componentProperties.badgeTitleType}">${componentProperties.badgeTitle}</title>
+            <div class="card-taglist"
+                 data-sly-test="${componentProperties.category}">
+                <ul class="taglist">
+                    <sly data-sly-list.tag="${componentProperties.category}" data-sly-unwrap>
+                        <sly data-sly-test="${componentProperties.category[tag]}">
+                            <li class="taglist__item" id="${componentProperties.category[tag].value}">#${componentProperties.category[tag].title}</li>
+                        </sly>
+                    </sly>
+                </ul>
+            </div>
+            <div class="card-action">
+                <a class="card-link text-primary text-xsmall text-bold ${componentProperties.badgeLinkStyle @ join=' '}"
+                   href="${componentProperties.pageUrl}"
+                   target="${componentProperties.badgeLinkTarget}"
+                   title="${componentProperties.badgeLinkTitle}"
+                   data-sly-attribute="${componentProperties.badgeLinkAttr @ context = 'unsafe'}">
+                    <span>${componentProperties.badgeLinkText}</span></a>
+            </div>
+            <div class="card-date" data-sly-test="${componentProperties.newsDateStatusText}">
+                ${componentProperties.newsDateStatusText @ context='unsafe'}
+            </div>
+        </div>
+    </div>
+</template>

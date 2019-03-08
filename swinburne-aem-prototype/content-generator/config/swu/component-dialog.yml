@@ -7,6 +7,16 @@ content/_cq_tags/swinburne/component-dialog: &component-dialog
     valueFormat: 'cq5dam.%%prefix%%.'
     title: 'OOTB %%prefix_normalised%%'
 
+  css/mediaquery:
+    contents:
+      - medium: { title: "Medium", value: "(min-width: 768px)" }
+      - retina: { title: "Retina", value: "(-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx)" }
+      - landscape-large: { title: "Landscape Large", value: "(min-width: 768px) and (orientation: landscape), screen and (min-width: 992px)" }
+      - extra-large: { title: "Extra Large", value: "(min-width: 1200px)" }
+      - retina-medium: { title: "Retina Medium", value: "(min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 768px) and (min-resolution: 1.5dppx)" }
+      - retina-landscape-large: { title: "Retina Landscape", value: "(min-width: 768px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 768px) and (orientation: landscape) and (min-resolution: 1.5dppx), only screen and (min-width: 992px) and (min-device-pixel-ratio: 2)" }
+      - retina-extra-large: { title: "Retina Extra Large", value: "(min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1200px) and (min-resolution: 1.5dppx)" }
+
   # WARNING: Reference to these path is hardcoded into component dialogs
   common/true-false:
     prefixes:

@@ -30,7 +30,6 @@
                         badgeLinkText="CTA link"
                         badgeLinkTitle="CTA link"
                         componentId="news_details"
-                        componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-yellow]"
                         componentTheme="[swinburne-showcase:component-style-theme/layout/news-details/theme--news-details]"
                         textIsRich="true"
                         titleType="[,]">

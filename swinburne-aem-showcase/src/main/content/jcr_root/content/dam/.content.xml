@@ -4,5 +4,6 @@
     jcr:primaryType="sling:OrderedFolder">
     <rep:policy/>
     <jcr:content/>
+    <formsanddocuments/>
     <swinburne-showcase/>
 </jcr:root>

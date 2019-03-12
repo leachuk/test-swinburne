@@ -62,7 +62,7 @@ function getButton(title, level) {
 }
 
 function setNavTogglerAA() {
-    const $buttons = $('.brand-header [data-toggle="collapse"]');
+    const $buttons = $('.brand-header button[data-toggle="collapse"]');
     const text = '<span class="sr-only"> navigation</span>';
     let $exploreBtn = $buttons.last();
     let $closeBtn = $buttons.first();

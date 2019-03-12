@@ -1,4 +1,4 @@
-content/cq:tags/swinburne-microsites/component-style-modifier: &component-style-modifier
+content/_cq_tags/swinburne-microsites/component-style-modifier: &component-style-modifier
   # BACKGROUND HORIZONTAL POSITION
   background/position/horizontal/phone: #sm
     prefixes:
@@ -1152,5 +1152,5 @@ content/cq:tags/swinburne-microsites/component-style-modifier: &component-style-
     - video: { value: "itemscope itemtype=&quot;http://schema.org/VideoObject&quot;", title: "Video Object" }
 
 # Extends to
-content/cq:tags/swinburne-microsites-showcase/component-style-modifier: *component-style-modifier
-content/cq:tags/swinburne-microsites-training/component-style-modifier: *component-style-modifier
+content/_cq_tags/swinburne-microsites-showcase/component-style-modifier: *component-style-modifier
+content/_cq_tags/swinburne-microsites-training/component-style-modifier: *component-style-modifier

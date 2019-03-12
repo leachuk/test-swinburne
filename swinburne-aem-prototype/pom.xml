@@ -142,7 +142,7 @@
             </goals>
             <configuration>
               <arguments> - -stack_size=8192</arguments>
-              <arguments>run aem:generatetags --clean --config=microsites.yml</arguments>
+              <arguments>run aem:generatetags --clean --no-console --config=microsites.yml</arguments>
             </configuration>
           </execution>
 
@@ -163,7 +163,7 @@
             </goals>
             <configuration>
               <arguments> - -stack_size=8192</arguments>
-              <arguments>run aem:generatetags --no-clean --config=swu.yml</arguments>
+              <arguments>run aem:generatetags --no-clean --no-console --config=swu.yml</arguments>
             </configuration>
           </execution>
 
@@ -186,7 +186,7 @@
             </goals>
             <configuration>
               <arguments> - -stack_size=8192</arguments>
-              <arguments>run aem:generatetags --no-clean --config=aemdesign.yml</arguments>
+              <arguments>run aem:generatetags --no-clean --no-console --config=aemdesign.yml</arguments>
             </configuration>
           </execution>
         </executions>

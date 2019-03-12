@@ -50,12 +50,10 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
     def getViewPorts() {
         return [
-                [label: "XS", width: 320, height: 480],
-                [label: "SM", width: 640, height: 480],
-                [label: "MD", width: 1024, height: 768],
-                [label: "LG", width: 1366, height: 1024],
-                [label: "XLG", width: 1920, height: 1280],
-                [label: "XXLG", width: 2560, height: 1440]
+                [label: "SM", width: 320, height: 480],
+                [label: "MD", width: 640, height: 768],
+                [label: "LG", width: 1024, height: 768],
+                [label: "XLG", width: 1366, height: 1280]
         ]
     }
 
@@ -96,10 +94,6 @@ abstract class FunctionalSpec extends GebReportingSpec {
 // 4K [3840, 2160, "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A"]
 
 
-    def setWindowSizeXS() {
-        setWindowSize(getListViewPorts("XS"))
-    }
-
     def setWindowSizeSM() {
         setWindowSize(getListViewPorts("SM"))
     }
@@ -114,10 +108,6 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
     def setWindowSizeXLG() {
         setWindowSize(getListViewPorts("XLG"))
-    }
-
-    def setWindowSizeXXLG() {
-        setWindowSize(getListViewPorts("XXLG"))
     }
 
     def setWindowsSize(int width, int height) {
@@ -425,27 +415,26 @@ abstract class FunctionalSpec extends GebReportingSpec {
         }
         def isTestPass = false;
         def result = VERY_DIFFERENT
-        for (def i = 0; i < 3; i++) {
-            screenshotFilename = screenshot(element, fixedFilePath)
-            differenceFilename = screenshotFilename.replaceFirst(/^(.*)\.png$/, "\$1.diff.png")
-            result = compare(screenshotFilename, referenceFilename, differenceFilename)
 
-//            printDebug("COMPARE RESULT",result <= COMPARE_THRESHOLD)
+        screenshotFilename = screenshot(element, fixedFilePath)
+        differenceFilename = screenshotFilename.replaceFirst(/^(.*)\.png$/, "\$1.diff.png")
+        result = compare(screenshotFilename, referenceFilename, differenceFilename)
 
-            isTestPass = (result <= COMPARE_THRESHOLD)
-        }
+//        printDebug("COMPARE RESULT",result <= COMPARE_THRESHOLD)
+
+        isTestPass = (result <= COMPARE_THRESHOLD)
 
         File screenshotFile = new File(screenshotFilename)
         File differenceFile = new File(differenceFilename)
 
 //        printDebug("DESIGN REFERENCE",[
-//                    MATCH:isTestPass,
-//                    SOURCE:referenceFile.absolutePath,
-//                    DESTINATION:screenshotFile.absolutePath,
-//                    VARIANCE:result,
-//                    RESULT:differenceFile.absolutePath,
-//                    LABEL: specificationContext.currentIteration.name
-//            ])
+//                  MATCH:isTestPass,
+//                  SOURCE:referenceFile.absolutePath,
+//                  DESTINATION:screenshotFile.absolutePath,
+//                  VARIANCE:result,
+//                  RESULT:differenceFile.absolutePath,
+//                  LABEL: specificationContext.currentIteration.name
+//        ])
 
         ReportListener tempRL = new ReportListener()
         tempRL.writeReportResource(
@@ -510,7 +499,7 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
             //element - highlight
             if (highlight) {
-                js.executeScript("arguments[0].setAttribute('style', 'box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8);position: relative;z-index: 9999;')", element);
+                js.executeScript("arguments[0].setAttribute('style', 'box-shadow: 0 0 0 99999px rgba(0, 0, 0, 1);position: relative;z-index: 9999;')", element);
             }
 
 

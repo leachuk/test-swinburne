@@ -41,16 +41,23 @@
         display: none;
         margin-left: $spacing-2xs;
       }
-      &[aria-expanded='true'] {
-        &:first-of-type {
-          display: block;
-        }
-        &:last-of-type {
-          display: none;
+      @include media-breakpoint-down(md) {
+        &[aria-expanded='true'] {
+          &:first-of-type {
+            display: block;
+          }
+          &:last-of-type {
+            display: none;
+          }
         }
       }
       @include media-breakpoint-up(lg) {
         display: none;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .collapse:not(.show) {
+        display: block;
       }
     }
   }

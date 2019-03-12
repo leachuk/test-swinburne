@@ -1,24 +1,24 @@
-function closeNavigation(element){
+function closeNavigation(element) {
   $(element.target).parent().removeClass('show');
 }
 
-function preventNavClosing(){
-  let isClosed;
+function preventNavClosing() {
   const $dropdown = $('.dropdown');
+  setCloseOuterNav($dropdown);
+  setCloseInnerNav($dropdown);
+}
 
-  //Prevent navigation from closing is click outside the dropdowns
+function setCloseOuterNav($dropdown) {
+  let isClosed;
+  //Prevent navigation from closing is click outside the drop downs
   $dropdown.on({
     "shown.bs.dropdown": () => { isClosed = false; },
     "click":             () => { isClosed = true; },
     "hide.bs.dropdown":  () => { return isClosed; }
   });
-
-  setCloseInnerNav($dropdown);
 }
 
-
-function setCloseInnerNav($dropdown){
-  // Refactored from => https://github.com/TheCoder4eu/BootsFaces-OSP/issues/849
+function setCloseInnerNav($dropdown) {
   $dropdown.on('click', (e) => {
     const JQuery : any = $;
     let events = JQuery._data(document, 'events') || {};
@@ -61,26 +61,41 @@ function getButton(title, level) {
   return button;
 }
 
+function setNavTogglerAA() {
+    const $buttons = $('.brand-header [data-toggle="collapse"]');
+    const text = '<span class="sr-only"> navigation</span>';
+    let $exploreBtn = $buttons.last();
+    let $closeBtn = $buttons.first();
+
+    $exploreBtn.append(text);
+    $closeBtn.append(text);
+}
+
+function setBackButtons() {
+  $('.brand-header__nav .dropdown-menu').each( (index, element) => {
+    let $menu = $(element);
+    let classes : any | undefined = $menu.prev().attr('class');
+    let level = classes.split(' ').pop().split('-').pop();
+    let title : string | undefined = $menu.attr('aria-labelledby');
+
+    const backButton = getButton(title, level);
+    $menu.prepend(backButton);
+  });
+}
+
+function cloneActions() {
+  const $actions = $('.brand-header__actions');
+  const $nav_container = $('.brand-header__container');
+  const clone = $actions.clone();
+  $actions.remove();
+  $nav_container.append(clone);
+}
+
 export default () => {
-  let $actions = $('.brand-header__actions');
-  let $nav_container = $('.brand-header__container');
-
-
-  if($actions.length && $nav_container.length && window.innerWidth < 1024) {
-    const clone = $actions.clone();
-    $actions.remove();
-    $nav_container.append(clone);
-
-    $('.brand-header__nav .dropdown-menu').each( (index, element) => {
-      let $menu = $(element);
-      let classes : any | undefined = $menu.prev().attr('class');
-      let level = classes.split(' ').pop().split('-').pop();
-      let title : string | undefined = $menu.attr('aria-labelledby');
-
-      $menu.prepend(getButton(title, level));
-
-      preventNavClosing();
-    });
+  if(window.innerWidth < 1024) {
+    cloneActions();
+    setBackButtons();
+    preventNavClosing();
+    setNavTogglerAA();
   }
-
 }

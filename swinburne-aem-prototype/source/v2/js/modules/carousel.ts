@@ -169,24 +169,27 @@ function bindCarouselToElement(
 }
 
 const loopAndGenerateCarousels = (needsRefresh = false) => {
-  carousels.forEach((carousel) => {
-    let config: CarouselOptions = {}
-    let target: HTMLElement | null = null
+  console.log(carousels, needsRefresh)
+  // carousels.forEach((carousel) => {
+  //   const list: HTMLElement = carousel as HTMLElement
 
-    switch (true) {
-      case carousel.classList.contains('pagelist'):
-        config = pageListConfiguration(carousel as HTMLElement)
-        target = carousel.querySelector('ul')
-        break
+  //   let config: CarouselOptions = {}
+  //   let target: HTMLElement | null = null
 
-      default:
-        console.warn('Carousel definition not defined for:', carousel)
-    }
+  //   switch (true) {
+  //     case list.classList.contains('pagelist'):
+  //       config = pageListConfiguration(list)
+  //       target = list.querySelector('ul')
+  //       break
 
-    if (target) {
-      bindCarouselToElement(target, carousel as HTMLElement, config, needsRefresh)
-    }
-  })
+  //     default:
+  //       console.warn('Carousel definition not defined for:', carousel)
+  //   }
+
+  //   if (target) {
+  //     bindCarouselToElement(target, list, config, needsRefresh)
+  //   }
+  // })
 }
 
 export default () => {

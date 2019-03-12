@@ -1,11 +1,20 @@
 %component-list {
+  @include make-container(0);
+  @include make-container-max-widths;
+  // iPhone X support
+  @include iphone-x;
+
   > .content {
+    @include make-row;
+
     &,
     > ul {
       justify-content: flex-start;
     }
 
     > ul {
+      display: flex;
+      flex-wrap: wrap;
       margin-bottom: 0;
       width: 100%;
 
@@ -44,13 +53,27 @@
     flex: 0 1 100%;
 
     @include media-breakpoint-up(md) {
-      flex-basis: percentage(3 / $grid-columns);
-      max-width: percentage(3 / $grid-columns);
+      flex-basis: percentage(4 / $grid-columns);
+      max-width: percentage(4 / $grid-columns);
     }
   }
 
   // Normalize the list when the 'carousel' module is applied
   &[data-modules*='carousel'] {
+    max-width: 100%;
+
+    > .content,
+    > .content ul {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+
+      li {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
     ul.owl-carousel {
       display: block;
       visibility: hidden;
@@ -76,25 +99,6 @@
         &.mobile-carousel {
           display: none;
         }
-      }
-    }
-  }
-
-  // If the page list component isn't currently been used as a carousel we can introduce
-  // standard grid container rules.
-  &:not([data-modules*='carousel']) {
-    @include make-container;
-    @include make-container-max-widths;
-
-    // iPhone X support
-    @include iphone-x;
-
-    > .content {
-      @include make-row;
-
-      > ul {
-        display: flex;
-        flex-wrap: wrap;
       }
     }
   }

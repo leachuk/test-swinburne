@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2019-03-12T12:19:19.569+11:00"
+        cq:lastModifiedBy="admin"
         cq:tags="[swinburne:content-type/page]"
         cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:primaryType="cq:PageContent"
@@ -69,52 +71,82 @@
                     </par>
                 </contentblock2>
                 <contentblock
+                    jcr:created="{Date}2019-02-27T15:12:02.919+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-02-27T15:12:14.049+11:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock_swinburne_global">
                     <bgimage
+                        jcr:lastModified="{Date}2019-02-27T15:12:14.049+11:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <bgvideo
+                        jcr:lastModified="{Date}2019-02-27T15:12:14.049+11:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/layout/container">
                         <header
+                            jcr:created="{Date}2019-02-27T15:13:03.554+11:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-28T11:31:47.594+11:00"
+                            jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/header"
                             cancelInheritParent="true"
                             componentId="header_FIEH48SBE"
                             componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header]">
                             <bgimage
+                                jcr:lastModified="{Date}2019-02-28T11:31:47.594+11:00"
+                                jcr:lastModifiedBy="admin"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/media/image"/>
                             <par
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/layout/container">
                                 <contentblock
+                                    jcr:created="{Date}2019-02-27T15:25:20.286+11:00"
+                                    jcr:createdBy="admin"
+                                    jcr:lastModified="{Date}2019-03-06T13:28:00.178+11:00"
+                                    jcr:lastModifiedBy="admin"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/layout/contentblock"
                                     componentId="contentblock_1XEWJNPXD"
                                     componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/container,swinburne-showcase:component-style-theme/lists/navbar/headernav]"
                                     variant="parsys">
                                     <bgimage
+                                        jcr:lastModified="{Date}2019-03-06T13:28:00.178+11:00"
+                                        jcr:lastModifiedBy="admin"
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="aemdesign/components/media/image"/>
                                     <bgvideo
+                                        jcr:lastModified="{Date}2019-03-06T13:28:00.178+11:00"
+                                        jcr:lastModifiedBy="admin"
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="aemdesign/components/media/image"/>
                                     <par
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="aemdesign/components/layout/container">
                                         <embedsource
+                                            jcr:created="{Date}2019-02-27T15:27:25.952+11:00"
+                                            jcr:createdBy="admin"
+                                            jcr:lastModified="{Date}2019-03-06T10:04:58.615+11:00"
+                                            jcr:lastModifiedBy="admin"
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="swinburne/components/content/embedsource"
                                             componentId="embedsource_MDEJAWPV4"
                                             componentTheme="[swinburne-showcase:component-style-theme/common/logo]"
                                             html="&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/logo-small.svg&quot; alt=&quot;Swinburne&quot; />&#xd;&#xa;&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/logo-long-full.svg&quot; alt=&quot;Swinburne&quot; />"/>
                                         <link_copy
+                                            jcr:created="{Date}2019-03-06T13:17:33.222+11:00"
+                                            jcr:createdBy="admin"
+                                            jcr:lastModified="{Date}2019-03-07T09:18:58.487+11:00"
+                                            jcr:lastModifiedBy="admin"
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="swinburne/components/content/link"
                                             componentId="link_BNGXYPV2I"
@@ -126,6 +158,10 @@
                                             linkIconDirection="left"
                                             variant="button"/>
                                         <link
+                                            jcr:created="{Date}2019-03-06T13:17:33.222+11:00"
+                                            jcr:createdBy="admin"
+                                            jcr:lastModified="{Date}2019-03-07T09:18:31.156+11:00"
+                                            jcr:lastModifiedBy="admin"
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="swinburne/components/content/link"
                                             componentId="link_BNGXYPV2I"
@@ -137,51 +173,83 @@
                                             linkIconDirection="left"
                                             variant="button"/>
                                         <contentblock_1339506827
+                                            jcr:created="{Date}2019-02-28T11:32:36.183+11:00"
+                                            jcr:createdBy="admin"
+                                            jcr:lastModified="{Date}2019-03-06T13:35:31.888+11:00"
+                                            jcr:lastModifiedBy="admin"
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="swinburne/components/layout/contentblock"
                                             componentId="header-nav-container"
                                             componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/nav-container,swinburne-showcase:component-style-theme/lists/navbar/headernav]"
                                             variant="parsys">
                                             <bgimage
+                                                jcr:lastModified="{Date}2019-03-06T13:35:31.888+11:00"
+                                                jcr:lastModifiedBy="admin"
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="aemdesign/components/media/image"/>
                                             <bgvideo
+                                                jcr:lastModified="{Date}2019-03-06T13:35:31.888+11:00"
+                                                jcr:lastModifiedBy="admin"
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="aemdesign/components/media/image"/>
                                             <par jcr:primaryType="nt:unstructured">
                                                 <contentblock
+                                                    jcr:created="{Date}2019-02-28T09:45:44.112+11:00"
+                                                    jcr:createdBy="admin"
+                                                    jcr:lastModified="{Date}2019-02-28T11:30:48.507+11:00"
+                                                    jcr:lastModifiedBy="admin"
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="swinburne/components/layout/contentblock"
                                                     componentId="contentblock_THYYTHLIR"
                                                     componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/admin]"
                                                     variant="parsys">
                                                     <bgimage
+                                                        jcr:lastModified="{Date}2019-02-28T11:30:48.507+11:00"
+                                                        jcr:lastModifiedBy="admin"
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="aemdesign/components/media/image"/>
                                                     <bgvideo
+                                                        jcr:lastModified="{Date}2019-02-28T11:30:48.507+11:00"
+                                                        jcr:lastModifiedBy="admin"
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="aemdesign/components/media/image"/>
                                                     <contentblock
+                                                        jcr:created="{Date}2019-02-28T09:50:49.773+11:00"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2019-02-28T09:51:32.793+11:00"
+                                                        jcr:lastModifiedBy="admin"
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="swinburne/components/layout/contentblock"
                                                         componentId="contentblock_YE7ZTSWH9"
                                                         variant="parsys">
                                                         <bgimage
+                                                            jcr:lastModified="{Date}2019-02-28T09:51:32.793+11:00"
+                                                            jcr:lastModifiedBy="admin"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="aemdesign/components/media/image"/>
                                                         <bgvideo
+                                                            jcr:lastModified="{Date}2019-02-28T09:51:32.793+11:00"
+                                                            jcr:lastModifiedBy="admin"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="aemdesign/components/media/image"/>
                                                         <par
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="aemdesign/components/layout/parsys">
                                                             <link
+                                                                jcr:created="{Date}2019-02-28T09:48:18.872+11:00"
+                                                                jcr:createdBy="admin"
+                                                                jcr:lastModified="{Date}2019-02-28T09:52:09.080+11:00"
+                                                                jcr:lastModifiedBy="admin"
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/link"
                                                                 componentId="link_FIQVMD83Z"
                                                                 label="Compare"
                                                                 linkUrl="#"/>
                                                             <link_608547715
+                                                                jcr:created="{Date}2019-02-28T09:52:24.637+11:00"
+                                                                jcr:createdBy="admin"
+                                                                jcr:lastModified="{Date}2019-02-28T09:52:42.023+11:00"
+                                                                jcr:lastModifiedBy="admin"
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/link"
                                                                 componentId="link_608547715_HL54GKUOQ"
@@ -193,20 +261,32 @@
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="aemdesign/components/layout/parsys">
                                                         <contentblock
+                                                            jcr:created="{Date}2019-02-28T11:29:56.190+11:00"
+                                                            jcr:createdBy="admin"
+                                                            jcr:lastModified="{Date}2019-02-28T11:30:05.986+11:00"
+                                                            jcr:lastModifiedBy="admin"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="swinburne/components/layout/contentblock"
                                                             componentId="contentblock_1FMPCFGTW"
                                                             variant="parsys">
                                                             <bgimage
+                                                                jcr:lastModified="{Date}2019-02-28T11:30:05.986+11:00"
+                                                                jcr:lastModifiedBy="admin"
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="aemdesign/components/media/image"/>
                                                             <bgvideo
+                                                                jcr:lastModified="{Date}2019-02-28T11:30:05.986+11:00"
+                                                                jcr:lastModifiedBy="admin"
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="aemdesign/components/media/image"/>
                                                             <par
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="aemdesign/components/layout/parsys">
                                                                 <link_1665873209
+                                                                    jcr:created="{Date}2019-02-28T11:28:48.789+11:00"
+                                                                    jcr:createdBy="admin"
+                                                                    jcr:lastModified="{Date}2019-03-06T13:44:59.820+11:00"
+                                                                    jcr:lastModifiedBy="admin"
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="swinburne/components/content/link"
                                                                     componentId="link_1665873209_IIXTBQE1S"
@@ -215,6 +295,10 @@
                                                                     linkIcon="[swinburne-showcase:component-style-icon/general/balance-scale]"
                                                                     linkUrl="#"/>
                                                                 <link
+                                                                    jcr:created="{Date}2019-02-28T11:28:23.117+11:00"
+                                                                    jcr:createdBy="admin"
+                                                                    jcr:lastModified="{Date}2019-03-06T13:45:09.333+11:00"
+                                                                    jcr:lastModifiedBy="admin"
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="swinburne/components/content/link"
                                                                     componentId="link_B2WD1XIME"
@@ -223,6 +307,10 @@
                                                                     linkIcon="[swinburne-showcase:component-style-icon/general/star]"
                                                                     linkUrl="#"/>
                                                                 <text
+                                                                    jcr:created="{Date}2019-03-07T11:09:40.533+11:00"
+                                                                    jcr:createdBy="admin"
+                                                                    jcr:lastModified="{Date}2019-03-07T11:11:17.775+11:00"
+                                                                    jcr:lastModifiedBy="admin"
                                                                     jcr:primaryType="nt:unstructured"
                                                                     sling:resourceType="swinburne/components/content/text"
                                                                     componentId="text_CKNILYGRL"
@@ -231,6 +319,10 @@
                                                             </par>
                                                         </contentblock>
                                                         <pagelist
+                                                            jcr:created="{Date}2019-02-28T09:46:27.190+11:00"
+                                                            jcr:createdBy="admin"
+                                                            jcr:lastModified="{Date}2019-02-28T11:27:52.226+11:00"
+                                                            jcr:lastModifiedBy="admin"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="swinburne/components/lists/pagelist"
                                                             componentId="pagelist_WHHYTX23O"
@@ -240,12 +332,18 @@
                                                             parentPage="/content/swinburne-showcase/en/pages/swu/top-navigation"
                                                             tagsMatch="any">
                                                             <badgeThumbnail
+                                                                jcr:lastModified="{Date}2019-02-28T11:27:52.226+11:00"
+                                                                jcr:lastModifiedBy="admin"
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="aemdesign/components/media/image"/>
                                                         </pagelist>
                                                     </par>
                                                 </contentblock>
                                                 <navlist_862816500
+                                                    jcr:created="{Date}2019-02-27T15:29:03.684+11:00"
+                                                    jcr:createdBy="admin"
+                                                    jcr:lastModified="{Date}2019-03-06T13:35:06.110+11:00"
+                                                    jcr:lastModifiedBy="admin"
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="swinburne/components/lists/navlist"
                                                     cancelInheritParent="true"
@@ -255,6 +353,10 @@
                                                     parentPage="/content/swinburne-showcase/en/pages/swu/bottom-navigation"
                                                     variant="stacked"/>
                                                 <contentblock_9576433
+                                                    jcr:created="{Date}2019-02-27T15:29:26.140+11:00"
+                                                    jcr:createdBy="admin"
+                                                    jcr:lastModified="{Date}2019-02-28T11:31:39.787+11:00"
+                                                    jcr:lastModifiedBy="admin"
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="swinburne/components/layout/contentblock"
                                                     componentId="contentblock_4TJIUB0SW"
@@ -264,18 +366,30 @@
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="aemdesign/components/layout/container">
                                                         <link
+                                                            jcr:created="{Date}2019-03-12T12:18:35.056+11:00"
+                                                            jcr:createdBy="admin"
+                                                            jcr:lastModified="{Date}2019-03-12T12:19:19.559+11:00"
+                                                            jcr:lastModifiedBy="admin"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="swinburne/components/content/link"
                                                             componentId="link_OQJRN4V6Y"
                                                             linkIcon="[swinburne-showcase:component-style-icon/general/search]"
                                                             variant="button"/>
                                                         <link_1175662764
+                                                            jcr:created="{Date}2019-02-27T15:29:55.358+11:00"
+                                                            jcr:createdBy="admin"
+                                                            jcr:lastModified="{Date}2019-03-05T17:15:28.823+11:00"
+                                                            jcr:lastModifiedBy="admin"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="swinburne/components/content/link"
                                                             componentId="link_1175662764_KP0ZF1JAD"
                                                             componentModifiers="[swinburne-showcase:component-style-modifier/button/primary-red]"
                                                             label="Apply now"/>
                                                         <link_1192565452
+                                                            jcr:created="{Date}2019-03-06T11:29:54.314+11:00"
+                                                            jcr:createdBy="admin"
+                                                            jcr:lastModified="{Date}2019-03-06T11:30:49.645+11:00"
+                                                            jcr:lastModifiedBy="admin"
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="swinburne/components/content/link"
                                                             componentId="link_1192565452_K8CZVUDHB"
@@ -283,9 +397,13 @@
                                                             label="Apply"/>
                                                     </par>
                                                     <bgimage
+                                                        jcr:lastModified="{Date}2019-02-28T11:31:39.787+11:00"
+                                                        jcr:lastModifiedBy="admin"
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="aemdesign/components/media/image"/>
                                                     <bgvideo
+                                                        jcr:lastModified="{Date}2019-02-28T11:31:39.787+11:00"
+                                                        jcr:lastModifiedBy="admin"
                                                         jcr:primaryType="nt:unstructured"
                                                         sling:resourceType="aemdesign/components/media/image"/>
                                                 </contentblock_9576433>

@@ -329,6 +329,9 @@
           & > .icon {
             font-size: 12px;
           }
+          @include media-breakpoint-up(lg) {
+            display: none;
+          }
         }
         a {
           &.l-2 {
@@ -425,6 +428,7 @@
       position: fixed;
       right: 0;
       top: 0;
+
     }
     @include media-breakpoint-between(md, md) {
       margin-top: $spacing-xs - 2px;
@@ -475,6 +479,20 @@
       .link-text {
         display: none;
       }
+    }
+  }
+  &__container > &__actions {
+    display: inline-flex;
+  }
+  &__nav-container > &__actions {
+    display: none;
+  }
+  @include media-breakpoint-up(lg) {
+    &__nav-container > &__actions {
+      display: inline-flex;
+    }
+    &__container > &__actions {
+      display: none;
     }
   }
 }

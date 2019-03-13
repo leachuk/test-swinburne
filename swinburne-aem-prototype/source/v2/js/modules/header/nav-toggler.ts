@@ -87,15 +87,14 @@ function cloneActions() {
   const $actions = $('.brand-header__actions');
   const $nav_container = $('.brand-header__container');
   const clone = $actions.clone();
-  $actions.remove();
   $nav_container.append(clone);
 }
 
 export default () => {
+  cloneActions();
+  setBackButtons();
+  setNavTogglerAA();
   if(window.innerWidth < 1024) {
-    cloneActions();
-    setBackButtons();
     preventNavClosing();
-    setNavTogglerAA();
   }
 }

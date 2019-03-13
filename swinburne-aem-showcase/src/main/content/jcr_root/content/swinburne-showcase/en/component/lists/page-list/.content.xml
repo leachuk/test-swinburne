@@ -1013,7 +1013,7 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
@@ -1033,7 +1033,7 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
@@ -1042,11 +1042,7 @@
                             detailsBadge="default"
                             listFrom="static"
                             pages="/content/swinburne-showcase/en/styleguide/components/page-list/child-details/nav-link-1"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </pagelist>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock35>
                 <contentblock36
@@ -1057,71 +1053,53 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <pagelist
+                        sling:resourceType="swinburne/components/layout/container">
+                        <pagelist_36a
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
                             badgeTitleType="h5"
-                            componentId="pagelist36"
+                            componentId="pagelist_36a"
                             detailsBadge="cardImageTagTitleAction"
                             limit="4"
                             listFrom="children"
                             listType="list"
                             parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </pagelist>
-                        <pagelist_copy
+                            tagsMatch="any"/>
+                        <pagelist_36b
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
                             badgeTitleType="h5"
-                            componentId="pagelistxxx"
+                            componentId="pagelist_36b"
                             componentTheme="[swinburne-showcase:component-style-theme/lists/cards/charcoal]"
                             detailsBadge="cardImageTagTitleAction"
                             limit="4"
                             listFrom="children"
                             listType="list"
                             parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </pagelist_copy>
+                            tagsMatch="any"/>
                     </par>
                 </contentblock36>
-                <contentblock
+                <contentblock37
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_BA7MYU3UR"
+                    componentId="contentblock_37"
                     hideTitle="false"
                     title="Page List : Badge. Default"
                     variant="advsection">
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
-                            componentId="pagelist_F56DNYW78"
+                            componentId="pagelist37"
                             componentTheme="[swinburne-showcase:component-style-theme/lists/direction/horizontal]"
                             detailsBadge="default"
                             listFrom="children"
                             parentPage="/content/swinburne-showcase/en/component/lists/page-list/images"
-                            tagsMatch="any">
-                            <badgeThumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                        </pagelist>
+                            tagsMatch="any"/>
                     </par>
-                </contentblock>
+                </contentblock37>
             </par>
         </article>
     </jcr:content>

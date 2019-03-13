@@ -3,6 +3,6 @@
     jcr:primaryType="cq:Component"
     jcr:title="News List"
     cq:icon="viewList"
-    sling:resourceSuperType="aemdesign/components/lists/list"
+    sling:resourceSuperType="aemdesign/components/lists/newslist"
     allowedParents="[*/parsys]"
     componentGroup="Swinburne - Lists"/>

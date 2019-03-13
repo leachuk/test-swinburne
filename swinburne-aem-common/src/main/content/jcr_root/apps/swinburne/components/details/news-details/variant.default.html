@@ -1,0 +1,49 @@
+<template data-sly-template.variant="${@ componentProperties}">
+    <!--/* Has a background */-->
+    <sly data-sly-test.hasBackground="${componentProperties.pageBackgroundImage}">
+        <div data-sly-attribute="${componentProperties.attr.data @ context = 'unsafe'}" style="background-image: url(${componentProperties.pageBackgroundImage})" />
+    </sly>
+
+    <!--/* Doesn't have a background */-->
+    <sly data-sly-test="${!hasBackground}">
+        <div data-sly-attribute="${componentProperties.attr.data @ context = 'unsafe'}" />
+    </sly>
+        <div class="container">
+            <sly data-sly-use.header="news-details.header.html"
+                 data-sly-call="${header.variant @ componentProperties=componentProperties}"></sly>
+            <header>
+                <div class="published"
+                     data-sly-test="${componentProperties.showPageDate}">${componentProperties.newsDateStatusText @ context='unsafe'}</div>
+
+                <div class="tags" data-sly-test="${componentProperties.category}">
+                    <sly data-sly-list.tag="${componentProperties.category}" data-sly-unwrap>
+                        <sly data-sly-test="${componentProperties.category[tag]}">
+                            <span class="tag badge badge-default" data-value="${componentProperties.category[tag].value}">${componentProperties.category[tag].title}</span>
+                        </sly>
+                    </sly>
+                </div>
+
+                <title class="title"
+                       data-sly-test="${!componentProperties.hideTitle}"
+                       data-sly-element="${componentProperties.titleType}"
+                       data-sly-attribute.id="${componentProperties.ariaLabelledBy}">${componentProperties.titleFormatted @ context = 'unsafe'}</title>
+            </header>
+
+            <div class="body">
+                <img src="${componentProperties.pageThumbnailImage}"
+                     data-sly-attribute="${componentProperties.badgeImageAttr @ context = 'unsafe'}"
+                     alt="${componentProperties.title}">
+
+                <sly data-sly-test="${componentProperties.showBreadcrumb}">
+                    <sly data-sly-resource="${'./breadcrumb' @ resourceType='swinburne/components/layout/breadcrumb', decorationTagName='div'}"></sly>
+                </sly>
+
+                <div class="description"
+                     data-sly-test="${!componentProperties.hideDescription}">${componentProperties.description @ context = 'unsafe'}</div>
+            </div>
+
+            <sly data-sly-use.footer="news-details.footer.html"
+                 data-sly-call="${footer.variant @ componentProperties=componentProperties}"></sly>
+        </div>
+    </div>
+</template>

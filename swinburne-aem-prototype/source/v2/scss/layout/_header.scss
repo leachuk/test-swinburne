@@ -10,6 +10,9 @@
   @include media-breakpoint-up(lg) {
     height: $header-height - 1px;
   }
+  @include media-breakpoint-up(xl) {
+    height: $header-height-xl;
+  }
   left: 0;
   position: fixed;
   top: 0;
@@ -68,6 +71,9 @@
     margin: 0;
     vertical-align: top;
     width: 100%;
+    @include media-breakpoint-up(xl) {
+      height: ( $header-height-xl / 3 ) * 2;
+    }
   }
   &__nav,
   &__admin {
@@ -120,15 +126,27 @@
       position: static;
       width: calc(100% - 176px);
     }
+    @include media-breakpoint-up(xl) {
+      height: $header-height-xl;
+    }
     @include media-breakpoint-down(md) {
       background-color: color('charcoal');
       max-width: 320px;
       overflow-y: auto;
     }
   }
-  .theme-logo {
+  .theme--logo {
     img {
       display: inline-flex;
+      &:last-child {
+        display: none;
+      }
+      @include media-breakpoint-up(md) {
+        display: none;
+        &:last-child {
+          display: inline-flex;
+        }
+      }
     }
   }
   &__admin {
@@ -136,6 +154,9 @@
     font-size: 11px;
     height: $header-height / 3;
     padding: 0 $spacing-md;
+    @include media-breakpoint-up(xl) {
+      height: $header-height-xl / 3;
+    }
     @include media-breakpoint-down(md) {
       padding-right: 0;
     }
@@ -145,6 +166,7 @@
     }
     & > .contentblock {
       display: inline-flex;
+      height: 100%;
       a {
         font-weight: 400;
         margin-right: $spacing-sm;
@@ -251,6 +273,9 @@
       height: (($header-height / 3) * 2) - 2px;
       margin-right: $spacing-md;
       padding-top: $spacing-md + 2px;
+      @include media-breakpoint-up(xl){
+        height: ($header-height-xl / 3) * 2;
+      }
       &::after {
         display: none;
       }

@@ -140,6 +140,7 @@ $lead-font-weight:            normal;
 
 // Options
 
+$enable-caret:              false;
 $enable-rounded:            true;
 
 
@@ -358,7 +359,7 @@ $btn-border-radius-sm:        $btn-border-radius;
 
 // Header
 $header-height-xl:      98px;
-$header-height:         90px;
+$header-height:         89px;
 $header-height-sm:      47px;
 $header-height-md:      60px;
 $header-level2-height:  50px;

@@ -1,40 +1,47 @@
+import _throttle from 'lodash/throttle'
+
+let $dropdown: JQuery
+let $window: JQuery<Window>
+
 function closeNavigation(element) {
   $(element.target).parent().removeClass('show');
 }
 
-function preventNavClosing() {
-  const $dropdown = $('.dropdown');
-  setCloseOuterNav($dropdown);
-  setCloseInnerNav($dropdown);
-}
-
-function setCloseOuterNav($dropdown) {
+function attachDropdownEvents() {
   let isClosed;
-  //Prevent navigation from closing is click outside the drop downs
-  $dropdown.on({
-    "shown.bs.dropdown": () => { isClosed = false; },
-    "click":             () => { isClosed = true; },
-    "hide.bs.dropdown":  () => { return isClosed; }
-  });
-}
 
-function setCloseInnerNav($dropdown) {
+  // Prevent navigation from closing is click outside the drop downs
+  $dropdown.on({
+    'shown.bs.dropdown': () => { isClosed = false; },
+    'click':             () => { isClosed = true; },
+    'hide.bs.dropdown':  () => { return isClosed; },
+  })
+
   $dropdown.on('click', (e) => {
-    const JQuery : any = $;
-    let events = JQuery._data(document, 'events') || {};
+    const JQuery: any = $;
+
+    let events = JQuery._data(document, 'events') || {}
+
     events = events.click || [];
+
     events.map( (event) => {
       if(event.selector) {
         if($(e.target).is(event.selector)) {
           event.handler.call(e.target, e);
         }
+
         $(e.target).parents(event.selector).each(function(){
           event.handler.call(this, e);
         });
       }
     });
+
     e.stopPropagation();
   });
+}
+
+function detechDropdownEvents() {
+  $dropdown.off('shown.bs.dropdown click hide.bs.dropdown')
 }
 
 function getButton(title, level) {
@@ -91,10 +98,20 @@ function cloneActions() {
 }
 
 export default () => {
+  $dropdown = $('.dropdown')
+  $window = $(window)
+
   cloneActions();
   setBackButtons();
   setNavTogglerAA();
-  if(window.innerWidth < 1024) {
-    preventNavClosing();
-  }
+
+  $window.on('resize', _throttle(() => {
+    const windowWidth = $window.outerWidth() || window.innerWidth
+
+    if (windowWidth >= 1024) {
+      detechDropdownEvents()
+    } else {
+      attachDropdownEvents()
+    }
+  }, 200)).trigger('resize')
 }

@@ -28,6 +28,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
                     componentId="page_details_LDDD2VILM"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-yellow]"
                     componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
                     hideDescription="true"
                     hideTitle="false"

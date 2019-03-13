@@ -6,4 +6,6 @@
     cq:isContainer="{Boolean}true"
     cq:icon="code"
     sling:resourceSuperType="wcm/foundation/components/responsivegrid"
-    componentGroup=".hidden"/>
+    componentGroup=".hidden">
+
+</jcr:root>

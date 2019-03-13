@@ -1,5 +1,6 @@
 /* eslint-disable */
 
+const argv   = require('yargs').argv
 const colors = require('colors')
 const mkdirp = require('mkdirp')
 
@@ -136,7 +137,7 @@ function titleCase(str) {
       word.replace(word[0], word[0].toUpperCase())
     )).join(' ')
   } catch (ex) {
-    console.log(colors.red(`Error: ${str}`), ex)
+    logToConsole(colors.red(`Error: ${str}`), ex)
   }
 
   return str
@@ -192,7 +193,7 @@ function generateContent(categoryTemplate, categoryTemplateDefault, category, pa
         }
       }
     } else {
-      console.log('Nothing to do with:', path)
+      logToConsole('Nothing to do with:', path)
       return
     }
   }
@@ -204,7 +205,7 @@ function verifyTemplate(path,content) {
   try {
     libxmljs.parseXml(content)
   } catch (ex) {
-    console.log('Invalid Template for ' + path)
+    logToConsole('Invalid Template for ' + path)
     return false
   }
 
@@ -271,9 +272,15 @@ function createTemplate(outputPath, template) {
 
 function consoleResult(success, outputPath, err = null) {
   if (!success) {
-    console.log(colors.red('Unable to save content for:'), outputPath, '\n', err)
+    logToConsole(colors.red('Unable to save content for:'), outputPath, '\n', err)
   } else {
-    console.log('Saved content for:', outputPath)
+    logToConsole('Saved content for:', outputPath)
+  }
+}
+
+function logToConsole(...args) {
+  if (argv.console !== false) {
+    console.log(...args)
   }
 }
 

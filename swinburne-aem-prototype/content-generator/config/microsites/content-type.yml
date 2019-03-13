@@ -1,4 +1,4 @@
-content/cq:tags/swinburne-microsites/content-type: &content-type
+content/_cq_tags/swinburne-microsites/content-type: &content-type
   # WARNING: Reference to these path is hardcoded into component dialogs
   asset:
     prefixes:
@@ -36,5 +36,5 @@ content/cq:tags/swinburne-microsites/content-type: &content-type
     title: 'Youtube'
 
 # Extends to
-content/cq:tags/swinburne-microsites-showcase/content-type: *content-type
-content/cq:tags/swinburne-microsites-training/content-type: *content-type
+content/_cq_tags/swinburne-microsites-showcase/content-type: *content-type
+content/_cq_tags/swinburne-microsites-training/content-type: *content-type

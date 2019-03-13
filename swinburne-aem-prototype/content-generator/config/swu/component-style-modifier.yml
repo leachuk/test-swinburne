@@ -1,4 +1,4 @@
-content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
+content/_cq_tags/swinburne/component-style-modifier: &component-style-modifier
   # Backgrounds
   background/primary:
     prefixes:
@@ -346,5 +346,5 @@ content/cq:tags/swinburne/component-style-modifier: &component-style-modifier
     title: '%%prefix_normalised%%'
 
 # Extends to
-content/cq:tags/swinburne-showcase/component-style-modifier: *component-style-modifier
-content/cq:tags/swinburne-training/component-style-modifier: *component-style-modifier
+content/_cq_tags/swinburne-showcase/component-style-modifier: *component-style-modifier
+content/_cq_tags/swinburne-training/component-style-modifier: *component-style-modifier

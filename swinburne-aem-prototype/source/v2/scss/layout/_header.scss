@@ -158,9 +158,6 @@
         font-weight: 400;
         margin-right: $spacing-sm;
       }
-      .text {
-        display: none;
-      }
       @include media-breakpoint-down(md) {
         display: block;
         margin-bottom: 16px;
@@ -179,12 +176,6 @@
           span {
             width: auto;
           }
-        }
-        .text {
-          color: color('grey-1');
-          display: block;
-          font-weight: 200;
-          padding-top: $spacing-md;
         }
       }
       @include media-breakpoint-between(md, md) {

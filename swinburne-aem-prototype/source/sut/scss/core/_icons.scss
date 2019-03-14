@@ -1,8 +1,8 @@
 // Sizing
 
 @each $name, $size in $icon-sizes {
-  .icon--#{$name} {
-    font-size: $size;
+  .icon--#{$name} [class*='fa'] {
+    font-size: $size !important;
     height: $size;
   }
 }

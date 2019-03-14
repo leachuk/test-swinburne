@@ -24,7 +24,7 @@ module.exports = env => {
   const { ifDev, ifProd } = getIfUtils(env)
 
   if (!env.project) {
-    console.log('Specify a project when running webpack eg --env.project="microsites"')
+    console.log('Specify a project when running webpack eg --env.project="sut"')
     return
   }
 
@@ -115,7 +115,7 @@ module.exports = env => {
         },
         {
           enforce : 'pre',
-          exclude : [resolve('node_modules'), resolve('source/v1')],
+          exclude : [resolve('node_modules'), resolve('source/microsites')],
           test    : /\.js$/,
           use     : ['eslint-loader'],
         },
@@ -203,7 +203,7 @@ module.exports = env => {
 
     plugins: removeEmpty([
       env.clean === true ? new CleanWebpackPlugin({
-        cleanOnceBeforeBuildPatterns: [resolve(PUBLIC_PATH, '**/*')],
+        cleanOnceBeforeBuildPatterns: [resolve(PUBLIC_PATH, env.project, '**/*')],
       }) : undefined,
       new CopyWebpackPlugin([
         {

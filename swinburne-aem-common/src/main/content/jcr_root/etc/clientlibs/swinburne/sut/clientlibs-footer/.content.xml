@@ -5,4 +5,4 @@
           debug="{Boolean}true"
           jsProcessor="[default:none]"
           cssProcessor="[default:none]"
-          categories="[swinburne.footer.v2]"/>
+          categories="[swinburne.sut.footer]"/>

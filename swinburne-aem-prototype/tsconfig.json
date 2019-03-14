@@ -23,7 +23,7 @@
 
     "paths": {
       "@global/*": [
-        "source/v2/js/*"
+        "source/sut/js/*"
       ]
     },
 

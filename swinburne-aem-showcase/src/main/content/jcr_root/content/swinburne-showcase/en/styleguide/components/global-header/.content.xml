@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="global header"
+        sling:resourceType="swinburne/components/template/styleguide">
+        <aside
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside"
+            componentId="aside_KLGGDCQDT">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </aside>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_BES54WGUM">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <contentblock
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_header">
+                    <par
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/container">
+                        <reference
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/reference"
+                            componentId="reference_DZIWSLNZO"
+                            path="/content/swinburne-showcase/en/component/layout/header/jcr:content/article/par/contentblock/par/header"/>
+                    </par>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                </contentblock>
+            </par>
+        </article>
+    </jcr:content>
+</jcr:root>

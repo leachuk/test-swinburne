@@ -1,6 +1,7 @@
+import 'bootstrap';
 import Carousels from '@global/modules/carousel'
 import Subscribers from '@global/modules/subscribers'
-import PromotedCard from '@global/modules/promoted-card'
+import NavToggler from '@global/modules/header/nav-toggler'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,
@@ -31,14 +32,10 @@ $(() => {
   // Bind the pub/sub event subscribers
   Subscribers()
 
-  // Take over any hash links on the page so they correctly jump to the content
-  //HashLinks()
-
-  //Only promote the first card of the list
-  //PromotedCard();
-
   // 'object-fit' polyfill for unsupported browsers
   ObjectFitImages()
+
+  NavToggler()
 
   // Open all the 'collapse' elements on the page when in author
   if (isAuthorEditMode()) {

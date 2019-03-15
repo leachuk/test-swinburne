@@ -3,6 +3,12 @@
 .brand-footer {
   overflow: hidden;
 
+  // Expand the containers to their full (original) width
+  .contentblock.container,
+  div[class*='colctrl']:not([class*='col-']) {
+    max-width: 1366px;
+  }
+
   &,
   a.link[component],
   .text[component] * {

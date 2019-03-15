@@ -444,6 +444,139 @@
         </plugins>
       </build>
     </profile>
+
+    <!-- Swinburne University of Technology (Styleguide/DLS) -->
+    <profile>
+      <id>buildSwinburneStyleguide</id>
+
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>1.6</version>
+
+            <configuration>
+              <nodeVersion>${nodeVersion}</nodeVersion>
+              <npmVersion>${npmVersion}</npmVersion>
+              <yarnVersion>${yarnVersion}</yarnVersion>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>install node and yarn</id>
+
+                <goals>
+                  <goal>install-node-and-yarn</goal>
+                </goals>
+
+                <configuration>
+                  <nodeVersion>${nodeVersion}</nodeVersion>
+                  <yarnVersion>${yarnVersion}</yarnVersion>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>exec-yarn-install-styleguide</id>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments>install</arguments>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>exec-aem-build-styleguide</id>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide --env.maven --env.clean</arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+
+            <!-- ensure that the empty directories are copied -->
+            <configuration>
+              <includeEmptyDirs>true</includeEmptyDirs>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>copy-css-vault-resources-styleguide</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/css</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/styleguide/css</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-image-vault-resources-styleguide</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/images</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/styleguide/images</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-js-vault-resources-styleguide</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/js</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/styleguide/js</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 
   <build>

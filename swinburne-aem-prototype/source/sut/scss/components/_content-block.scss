@@ -9,6 +9,7 @@
 
   // Strip away the padding when a nested `.container` exists in a content block container
   &.container > .container {
+    max-width: 100%;
     padding-left: 0;
     padding-right: 0;
   }

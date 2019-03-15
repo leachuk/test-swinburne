@@ -3,6 +3,8 @@ import _isNil from 'lodash/isNil'
 import _omitBy from 'lodash/omitBy'
 import _throttle from 'lodash/throttle'
 
+import { isAuthorEditMode } from '@global/utilities/aem'
+
 declare interface CarouselOptions {
   [breakpoint: string]: {
     [key: number]: OwlCarousel.Options,
@@ -53,8 +55,8 @@ function bindCarouselToElement(
   let $list = $(element)
 
   const totalItems   = $list.find('li').length
-  const itemsFor768  = _get(options, 'breakpoint.768.items', 2)
-  const itemsFor1024 = _get(options, 'breakpoint.1024.items', 4)
+  const itemsFor768  = _get(options, 'breakpoint.768.items', 3)
+  const itemsFor1024 = _get(options, 'breakpoint.1024.items', 3)
   const splitEnabled = parent.dataset.listSplitEnabled === 'true'
   const windowWidth  = $(window).width() || 0
 
@@ -138,30 +140,30 @@ function bindCarouselToElement(
       nav          : _get(options, 'nav', true),
       slideBy      : _get(options, 'slideBy', 1),
       stageElement : _get(options, 'stageElement', null),
-      stagePadding : _get(options, 'stagePadding', 25),
+      stagePadding : _get(options, 'stagePadding', 10),
 
       responsive: {
         0: _omitBy({
-          stagePadding: _get(options, 'breakpoint.0.stagePadding', 0),
+          stagePadding: _get(options, 'breakpoint.0.stagePadding', 10),
         }, _isNil),
 
         576: _omitBy({
           items        : _get(options, 'breakpoint.576.items', 2),
-          stagePadding : _get(options, 'breakpoint.576.stagePadding', 0),
+          stagePadding : _get(options, 'breakpoint.576.stagePadding', 10),
         }, _isNil),
 
         768: _omitBy({
           center       : _get(options, 'breakpoint.768.center', false),
           items        : itemsFor768,
           slideBy      : _get(options, 'breakpoint.768.slideBy', 2),
-          stagePadding : _get(options, 'breakpoint.768.stagePadding', 25),
+          stagePadding : _get(options, 'breakpoint.768.stagePadding', 15),
         }, _isNil),
 
         1024: _omitBy({
           center       : _get(options, 'breakpoint.1024.center', false),
           items        : itemsFor1024,
           slideBy      : _get(options, 'breakpoint.1024.slideBy', 2),
-          stagePadding : _get(options, 'breakpoint.1024.stagePadding', 25),
+          stagePadding : _get(options, 'breakpoint.1024.stagePadding', 15),
         }, _isNil),
       },
     }, _isNil))
@@ -194,7 +196,7 @@ const loopAndGenerateCarousels = (needsRefresh = false) => {
 export default () => {
   carousels = document.querySelectorAll('[data-modules*="carousel"]')
 
-  if (carousels.length) {
+  if (carousels.length && !isAuthorEditMode()) {
     loopAndGenerateCarousels()
 
     $(window).off('resize.carouselRefresh').on('resize.carouselRefresh', _throttle(() => {

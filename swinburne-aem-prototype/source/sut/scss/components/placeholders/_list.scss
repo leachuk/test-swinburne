@@ -59,40 +59,45 @@
   }
 
   // Normalize the list when the 'carousel' module is applied
-  &[data-modules*='carousel'] {
-    max-width: 100%;
-
-    > .content,
-    > .content ul {
-      display: block;
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    ul.owl-carousel {
-      display: block;
-      visibility: hidden;
-
-      .owl-item:last-child {
-        /* stylelint-disable-next-line */
-        margin-right: 0 !important;
+  @include not-aem-author {
+    &[data-modules*='carousel'] {
+      > .content,
+      > .content ul {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
       }
 
-      &.owl-loaded {
-        visibility: visible;
-      }
-    }
+      ul.owl-carousel {
+        display: block;
+        overflow-x: hidden;
+        visibility: hidden;
 
-    &[data-list-split-enabled='true'] ul {
-      @include media-breakpoint-down(sm) {
-        &:not(.mobile-carousel) {
-          display: none;
+        .owl-stage-outer {
+          overflow: visible;
+        }
+
+        .owl-item:last-child {
+          /* stylelint-disable-next-line */
+          margin-right: 0 !important;
+        }
+
+        &.owl-loaded {
+          visibility: visible;
         }
       }
 
-      @include media-breakpoint-up(md) {
-        &.mobile-carousel {
-          display: none;
+      &[data-list-split-enabled='true'] ul {
+        @include media-breakpoint-down(sm) {
+          &:not(.mobile-carousel) {
+            display: none;
+          }
+        }
+
+        @include media-breakpoint-up(md) {
+          &.mobile-carousel {
+            display: none;
+          }
         }
       }
     }

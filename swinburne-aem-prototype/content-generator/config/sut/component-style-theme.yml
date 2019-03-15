@@ -295,41 +295,37 @@ content/_cq_tags/swinburne/component-style-theme: &component-style-theme
     prefix: theme--header-swinburne
     title: 'Brand Header Default'
 
-  layout/brand-header:
-    flat: true
-    prefix: brand-header
-    title: 'Brand Header'
-
-  layout/brand-header/container:
-    flat: true
-    prefix: brand-header__container
-    title: 'Container'
-
-  layout/brand-header/nav-container:
-    flat: true
-    prefix: brand-header__nav-container
-    title: 'Nav Container'
-
-  layout/brand-header/admin:
-    flat: true
-    prefix: brand-header__admin
-    title: 'Admin'
-
-  layout/brand-header/nav:
-    flat: true
-    prefix: brand-header__nav
-    title: 'Nav'
-
-  layout/brand-header/actions:
-    flat: true
-    prefix: brand-header__actions
-    title: 'Actions'
-
   # Content Block
+  layout/contentblock/header/brand-top:
+    flat: true
+    prefix: brand-header__top container d-flex align-items-center justify-content-center justify-content-md-start
+    title: 'Brand Top'
+
   layout/contentblock/navbar/collapse:
     flat: true
     prefix: collapse navbar-collapse
     title: 'Navbar Collapse'
+
+  layout/contentblock/footer/top:
+    flat: true
+    prefix: brand-footer__top
+    title: 'Brand Footer - Top'
+
+  layout/contentblock/footer/bottom:
+    flat: true
+    prefix: brand-footer__bottom
+    title: 'Brand Footer - Bottom'
+
+  layout/contentblock/alert:
+    flat: true
+    prefix: brand-footer__bottom
+    title: 'Brand Footer - Bottom'
+
+  # Nav list
+  lists/navlist/navbar/nav:
+    flat: true
+    prefix: navbar-nav
+    title: 'Navbar Nav'
 
   # WARNING: Reference to these path is hardcoded into component dialogs
   # Badge - menuColor
@@ -342,7 +338,7 @@ content/_cq_tags/swinburne/component-style-theme: &component-style-theme
   # Navbar
   lists/navbar/headernav:
     flat: true
-    prefix: navbar-expand-lg navbar-light
+    prefix: navbar-expand-lg navbar-light bg-white
     title: 'Header Nav'
 
   lists/navlist/links:

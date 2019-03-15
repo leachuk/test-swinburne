@@ -1,43 +1,29 @@
-/* stylelint-disable declaration-no-important */
+&-horizontal > .content {
+  margin: 0;
 
-&-horizontal {
-  margin-right: 0 !important;
+  > ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: -$spacing-lg;
 
-  > .content {
-    margin: 0 !important;
+    > li {
+      flex-basis: auto;
+      max-width: inherit;
+      width: auto;
 
-    > ul {
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-
-      > li {
-        flex-basis: auto;
-        margin-bottom: 7px !important;
-        max-width: inherit;
-        padding-left: 0;
-        padding-right: 0;
-        width: auto;
-
-        &:not(:last-child) {
-          margin-right: $spacing-2xl;
-        }
-
-        @include media-breakpoint-up(lg) {
-          margin-bottom: 0 !important;
-        }
+      &,
+      &:not(:last-child) {
+        margin-bottom: $spacing-lg;
       }
 
-      @include media-breakpoint-up(md) {
-        flex-direction: row;
+      &:not(:last-child) {
+        margin-right: $spacing-2xl;
       }
     }
-  }
 
-  @include media-breakpoint-up(lg) {
-    width: auto !important;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
   }
 }
-
-/* stylelint-enable declaration-no-important */
-

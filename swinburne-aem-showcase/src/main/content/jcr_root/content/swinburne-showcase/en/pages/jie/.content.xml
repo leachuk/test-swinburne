@@ -100,7 +100,6 @@
                             badgeThumbnailHeight="1024"
                             badgeThumbnailType="rendition"
                             badgeThumbnailWidth="1024"
-                            componentId="pagelist_0ZKGVNRAV"
                             componentModules="[swinburne:component-style-module/lists/carousel]"
                             componentTheme="[swinburne:component-style-theme/lists/cardslist/images]"
                             detailsBadge="cardImageTitleDescriptionAction"
@@ -153,7 +152,6 @@
                 <contentblock_3
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_3_OW4IKFYDV"
                     componentModifiers="[swinburne:component-style-modifier/background/bg-c10]"
                     variant="container">
                     <bgimage
@@ -168,7 +166,6 @@
                         <pagelist
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/lists/pagelist"
-                            componentId="pagelist_HSTK3MLRQ"
                             componentTheme="[swinburne:component-style-theme/lists/cardslist/cardsnav]"
                             detailsBadge="cardIconTitleDescription"
                             listFrom="static"
@@ -271,7 +268,6 @@
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="text_COU6S3WR0"
                             text="&lt;h1>SWINBURNE&amp;nbsp;&lt;span class=&quot;text-red&quot;>INFO EVENING&lt;/span>&lt;/h1>&#xd;&#xa;&lt;p>Attend the Swinburne Info Evening to learn about the range of postgrad programs, master and bachelor degrees, and pathways that can take you where you want to go.&lt;/p>&#xd;&#xa;&lt;p>Chat with academics about the courses that are right for you and just where they can lead. You’ll leave feeling cool, calm and confident about your future.&lt;/p>&#xd;&#xa;&lt;p>To register, just drop your details in here.&lt;/p>&#xd;&#xa;"
                             textIsRich="true"/>
                         <col_break15337075723480
@@ -377,7 +373,6 @@
         <footer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
-            componentId="footer_DJPHEKDYT"
             componentTheme="[swinburne:component-style-theme/layout/brand-footer]">
             <bgimage
                 jcr:primaryType="nt:unstructured"

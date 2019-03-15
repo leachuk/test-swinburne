@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./deploy -Dcrx.host=localhost -P buildSwinburneGlobal
-#./deploy -Dcrx.host=localhost -P buildSwinburneGlobal,buildSwinburneMicrosites,buildSwinburneStyleguide
+# ./deploy -Dcrx.host=localhost -P buildSwinburneGlobal
+./deploy -Dcrx.host=localhost -P buildSwinburneGlobal,buildSwinburneMicrosites,buildSwinburneStyleguide

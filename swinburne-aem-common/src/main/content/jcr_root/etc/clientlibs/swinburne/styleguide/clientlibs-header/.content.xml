@@ -5,5 +5,4 @@
           debug="{Boolean}true"
           jsProcessor="[default:none]"
           cssProcessor="[default:none]"
-          categories="[swinburne.header.styleguide]"/>
-
+          categories="[swinburne.styleguide.header]"/>

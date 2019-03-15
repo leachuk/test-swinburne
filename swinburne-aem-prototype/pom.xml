@@ -57,21 +57,26 @@
   <profiles>
     <profile>
       <id>autoInstallPackage</id>
+
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>
+
       <build>
         <plugins>
           <plugin>
-            <groupId>com.day.jcr.vault</groupId>
             <artifactId>content-package-maven-plugin</artifactId>
+            <groupId>com.day.jcr.vault</groupId>
+
             <executions>
               <execution>
                 <id>install-content-package</id>
                 <phase>install</phase>
+
                 <goals>
                   <goal>install</goal>
                 </goals>
+
                 <configuration>
                   <targetURL>${package.uploadProtocol}://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
                   <userId>${crx.username}</userId>
@@ -86,11 +91,53 @@
 
     <profile>
       <id>deploymentpackage</id>
+
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
+
       <build>
         <plugins>
+          <plugin>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <groupId>com.github.eirslett</groupId>
+            <version>1.6</version>
+
+            <configuration>
+              <nodeVersion>${nodeVersion}</nodeVersion>
+              <npmVersion>${npmVersion}</npmVersion>
+              <yarnVersion>${yarnVersion}</yarnVersion>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>exec-install-node-and-yarn</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>install-node-and-yarn</goal>
+                </goals>
+
+                <configuration>
+                  <nodeVersion>${nodeVersion}</nodeVersion>
+                  <yarnVersion>${yarnVersion}</yarnVersion>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>exec-yarn-install</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments>install</arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -118,32 +165,8 @@
 
             <executions>
               <execution>
-                <id>install node and yarn</id>
-
-                <goals>
-                  <goal>install-node-and-yarn</goal>
-                </goals>
-
-                <configuration>
-                  <nodeVersion>${nodeVersion}</nodeVersion>
-                  <yarnVersion>${yarnVersion}</yarnVersion>
-                </configuration>
-              </execution>
-
-              <execution>
-                <id>exec-yarn-install-sut</id>
-
-                <goals>
-                  <goal>yarn</goal>
-                </goals>
-
-                <configuration>
-                  <arguments>install</arguments>
-                </configuration>
-              </execution>
-
-              <execution>
                 <id>exec-aem-build-sut</id>
+                <phase>initialize</phase>
 
                 <goals>
                   <goal>yarn</goal>
@@ -156,6 +179,7 @@
 
               <execution>
                 <id>exec-aem-generate-tags-sut</id>
+                <phase>initialize</phase>
 
                 <goals>
                   <goal>yarn</goal>
@@ -283,32 +307,8 @@
 
             <executions>
               <execution>
-                <id>install node and yarn</id>
-
-                <goals>
-                  <goal>install-node-and-yarn</goal>
-                </goals>
-
-                <configuration>
-                  <nodeVersion>${nodeVersion}</nodeVersion>
-                  <yarnVersion>${yarnVersion}</yarnVersion>
-                </configuration>
-              </execution>
-
-              <execution>
-                <id>exec-yarn-install-microsites</id>
-
-                <goals>
-                  <goal>yarn</goal>
-                </goals>
-
-                <configuration>
-                  <arguments>install</arguments>
-                </configuration>
-              </execution>
-
-              <execution>
                 <id>exec-aem-build-swinburne-microsites</id>
+                <phase>initialize</phase>
 
                 <goals>
                   <goal>yarn</goal>
@@ -321,6 +321,7 @@
 
               <execution>
                 <id>exec-aem-generate-tags-microsites</id>
+                <phase>initialize</phase>
 
                 <goals>
                   <goal>yarn</goal>
@@ -468,32 +469,8 @@
 
             <executions>
               <execution>
-                <id>install node and yarn</id>
-
-                <goals>
-                  <goal>install-node-and-yarn</goal>
-                </goals>
-
-                <configuration>
-                  <nodeVersion>${nodeVersion}</nodeVersion>
-                  <yarnVersion>${yarnVersion}</yarnVersion>
-                </configuration>
-              </execution>
-
-              <execution>
-                <id>exec-yarn-install-styleguide</id>
-
-                <goals>
-                  <goal>yarn</goal>
-                </goals>
-
-                <configuration>
-                  <arguments>install</arguments>
-                </configuration>
-              </execution>
-
-              <execution>
                 <id>exec-aem-build-styleguide</id>
+                <phase>initialize</phase>
 
                 <goals>
                   <goal>yarn</goal>

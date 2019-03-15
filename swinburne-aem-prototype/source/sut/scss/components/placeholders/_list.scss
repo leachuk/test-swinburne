@@ -68,18 +68,36 @@
         margin-right: 0;
       }
 
+      > .content ul {
+        overflow-x: hidden;
+      }
+
       ul.owl-carousel {
         display: block;
-        overflow-x: hidden;
         visibility: hidden;
 
-        .owl-stage-outer {
-          overflow: visible;
+        .owl-stage {
+          display: flex;
+
+          &-outer {
+            overflow: visible;
+          }
         }
 
-        .owl-item:last-child {
-          /* stylelint-disable-next-line */
-          margin-right: 0 !important;
+        .owl-item {
+          float: none;
+        }
+
+        .owl-item + .owl-item {
+          margin-left: 15px;
+
+          @include media-breakpoint-up(md) {
+            margin-left: 20px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            margin-left: 25px;
+          }
         }
 
         &.owl-loaded {

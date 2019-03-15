@@ -132,38 +132,33 @@ function bindCarouselToElement(
   setTimeout(() => {
     $list.owlCarousel(_omitBy({
       center       : _get(options, 'center', true),
+      dots         : _get(options, 'dots', false),
       itemElement  : _get(options, 'itemElement', null),
       items        : _get(options, 'items', 1),
       loop         : _get(options, 'loop', false),
-      margin       : _get(options, 'margin', 30),
+      margin       : _get(options, 'margin', 0),
       mouseDrag    : _get(options, 'mouseDrag', false),
       nav          : _get(options, 'nav', true),
       slideBy      : _get(options, 'slideBy', 1),
       stageElement : _get(options, 'stageElement', null),
-      stagePadding : _get(options, 'stagePadding', 10),
+      stagePadding : _get(options, 'stagePadding', 0),
 
       responsive: {
         0: _omitBy({
-          stagePadding: _get(options, 'breakpoint.0.stagePadding', 10),
         }, _isNil),
 
         576: _omitBy({
-          items        : _get(options, 'breakpoint.576.items', 2),
-          stagePadding : _get(options, 'breakpoint.576.stagePadding', 10),
+          items: _get(options, 'breakpoint.576.items', 2),
         }, _isNil),
 
         768: _omitBy({
-          center       : _get(options, 'breakpoint.768.center', false),
-          items        : itemsFor768,
-          slideBy      : _get(options, 'breakpoint.768.slideBy', 2),
-          stagePadding : _get(options, 'breakpoint.768.stagePadding', 15),
+          center : _get(options, 'breakpoint.768.center', false),
+          items  : itemsFor768,
         }, _isNil),
 
         1024: _omitBy({
-          center       : _get(options, 'breakpoint.1024.center', false),
-          items        : itemsFor1024,
-          slideBy      : _get(options, 'breakpoint.1024.slideBy', 2),
-          stagePadding : _get(options, 'breakpoint.1024.stagePadding', 15),
+          center : _get(options, 'breakpoint.1024.center', false),
+          items  : itemsFor1024,
         }, _isNil),
       },
     }, _isNil))

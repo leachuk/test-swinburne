@@ -10,7 +10,7 @@ declare interface CarouselOptions {
 }
 
 // Internal
-let carousels: Element[]
+let carousels: NodeListOf<Element>
 
 /**
  * Page list configuration.
@@ -169,31 +169,30 @@ function bindCarouselToElement(
 }
 
 const loopAndGenerateCarousels = (needsRefresh = false) => {
-  console.log(carousels, needsRefresh)
-  // carousels.forEach((carousel) => {
-  //   const list: HTMLElement = carousel as HTMLElement
+  carousels.forEach((carousel) => {
+    const list: HTMLElement = carousel as HTMLElement
 
-  //   let config: CarouselOptions = {}
-  //   let target: HTMLElement | null = null
+    let config: CarouselOptions = {}
+    let target: HTMLElement | null = null
 
-  //   switch (true) {
-  //     case list.classList.contains('pagelist'):
-  //       config = pageListConfiguration(list)
-  //       target = list.querySelector('ul')
-  //       break
+    switch (true) {
+      case list.classList.contains('pagelist'):
+        config = pageListConfiguration(list)
+        target = list.querySelector('ul')
+        break
 
-  //     default:
-  //       console.warn('Carousel definition not defined for:', carousel)
-  //   }
+      default:
+        console.warn('Carousel definition not defined for:', carousel)
+    }
 
-  //   if (target) {
-  //     bindCarouselToElement(target, list, config, needsRefresh)
-  //   }
-  // })
+    if (target) {
+      bindCarouselToElement(target, list, config, needsRefresh)
+    }
+  })
 }
 
 export default () => {
-  carousels = [...document.querySelectorAll('[data-modules*="carousel"]')]
+  carousels = document.querySelectorAll('[data-modules*="carousel"]')
 
   if (carousels.length) {
     loopAndGenerateCarousels()

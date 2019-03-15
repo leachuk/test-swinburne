@@ -9,15 +9,13 @@
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article"
-            componentId="article_URKBBCIIB">
+            sling:resourceType="swinburne/components/layout/article">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <contentblock1
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock1_BNF9APD09">
+                    sling:resourceType="swinburne/components/layout/contentblock">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
@@ -32,7 +30,6 @@
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_O12HZHGEX"
                                     text="&lt;p>Header Content&lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
@@ -41,8 +38,7 @@
                 </contentblock1>
                 <contentblock2
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock2_FCF4IEOBD">
+                    sling:resourceType="swinburne/components/layout/contentblock">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
@@ -57,7 +53,6 @@
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_UUQZLGKIF"
                                     text="&lt;p>Header Content with Background&lt;/p>&#xa;"
                                     textIsRich="true"/>
                             </par>
@@ -68,220 +63,6 @@
                         </header>
                     </par>
                 </contentblock2>
-                <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_swinburne_global">
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <header
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/header"
-                            cancelInheritParent="true"
-                            componentId="header_FIEH48SBE"
-                            componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header]">
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
-                            <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
-                                <contentblock
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/layout/contentblock"
-                                    componentId="contentblock_1XEWJNPXD"
-                                    componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/container,swinburne-showcase:component-style-theme/lists/navbar/headernav]"
-                                    variant="parsys">
-                                    <bgimage
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="aemdesign/components/media/image"/>
-                                    <bgvideo
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="aemdesign/components/media/image"/>
-                                    <par
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="aemdesign/components/layout/container">
-                                        <embedsource
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="swinburne/components/content/embedsource"
-                                            componentId="embedsource_MDEJAWPV4"
-                                            componentTheme="[swinburne-showcase:component-style-theme/common/logo]"
-                                            html="&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/logo-small.svg&quot; alt=&quot;Swinburne&quot; />&#xd;&#xa;&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/logo-long-full.svg&quot; alt=&quot;Swinburne&quot; />"/>
-                                        <link
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="swinburne/components/content/link"
-                                            componentId="link_BNGXYPV2I"
-                                            componentTheme="[swinburne-showcase:component-style-theme/content/link/navbar-toggler]"
-                                            dataTarget="#header-nav-container"
-                                            dataToggle="collapse"
-                                            label="Explore"
-                                            linkIcon="[swinburne-showcase:component-style-icon/general/bars]"
-                                            linkIconDirection="left"
-                                            variant="button"/>
-                                        <contentblock_1339506827
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="swinburne/components/layout/contentblock"
-                                            componentId="header-nav-container"
-                                            componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/nav-container,swinburne-showcase:component-style-theme/lists/navbar/headernav]"
-                                            variant="parsys">
-                                            <bgimage
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="aemdesign/components/media/image"/>
-                                            <bgvideo
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="aemdesign/components/media/image"/>
-                                            <par jcr:primaryType="nt:unstructured">
-                                                <contentblock
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="swinburne/components/layout/contentblock"
-                                                    componentId="contentblock_THYYTHLIR"
-                                                    componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/admin]"
-                                                    variant="parsys">
-                                                    <bgimage
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="aemdesign/components/media/image"/>
-                                                    <bgvideo
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="aemdesign/components/media/image"/>
-                                                    <contentblock
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="swinburne/components/layout/contentblock"
-                                                        componentId="contentblock_YE7ZTSWH9"
-                                                        variant="parsys">
-                                                        <bgimage
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="aemdesign/components/media/image"/>
-                                                        <bgvideo
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="aemdesign/components/media/image"/>
-                                                        <par
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="aemdesign/components/layout/parsys">
-                                                            <link
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="swinburne/components/content/link"
-                                                                componentId="link_FIQVMD83Z"
-                                                                label="Compare"
-                                                                linkUrl="#"/>
-                                                            <link_608547715
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="swinburne/components/content/link"
-                                                                componentId="link_608547715_HL54GKUOQ"
-                                                                label="Your favourites"
-                                                                linkUrl="#"/>
-                                                        </par>
-                                                    </contentblock>
-                                                    <par
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="aemdesign/components/layout/parsys">
-                                                        <contentblock
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="swinburne/components/layout/contentblock"
-                                                            componentId="contentblock_1FMPCFGTW"
-                                                            variant="parsys">
-                                                            <bgimage
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="aemdesign/components/media/image"/>
-                                                            <bgvideo
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="aemdesign/components/media/image"/>
-                                                            <par
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="aemdesign/components/layout/parsys">
-                                                                <link_1665873209
-                                                                    jcr:primaryType="nt:unstructured"
-                                                                    sling:resourceType="swinburne/components/content/link"
-                                                                    componentId="link_1665873209_IIXTBQE1S"
-                                                                    componentModifiers="[swinburne-showcase:component-style-modifier/icon/size/small]"
-                                                                    label="Compare"
-                                                                    linkIcon="[swinburne-showcase:component-style-icon/general/balance-scale]"
-                                                                    linkUrl="#"/>
-                                                                <link
-                                                                    jcr:primaryType="nt:unstructured"
-                                                                    sling:resourceType="swinburne/components/content/link"
-                                                                    componentId="link_B2WD1XIME"
-                                                                    componentModifiers="[swinburne-showcase:component-style-modifier/icon/size/small]"
-                                                                    label="Your favourites"
-                                                                    linkIcon="[swinburne-showcase:component-style-icon/general/star]"
-                                                                    linkUrl="#"/>
-                                                            </par>
-                                                        </contentblock>
-                                                        <text
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="swinburne/components/content/text"
-                                                            componentId="text_CKNILYGRL"
-                                                            componentModifiers="[swinburne-showcase:component-style-modifier/visibility/hide/invisible-lg-up,swinburne-showcase:component-style-modifier/colour/greys/text-grey-2]"
-                                                            text="&lt;p>More from Swinburne University&lt;/p>&#xd;&#xa;"
-                                                            textIsRich="true"/>
-                                                        <pagelist
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="swinburne/components/lists/pagelist"
-                                                            componentId="pagelist_WHHYTX23O"
-                                                            componentTheme="[swinburne-showcase:component-style-theme/lists/direction/horizontal]"
-                                                            detailsBadge="default"
-                                                            listFrom="children"
-                                                            parentPage="/content/swinburne-showcase/en/pages/swu/top-navigation"
-                                                            tagsMatch="any">
-                                                            <badgeThumbnail
-                                                                jcr:primaryType="nt:unstructured"
-                                                                sling:resourceType="aemdesign/components/media/image"/>
-                                                        </pagelist>
-                                                    </par>
-                                                </contentblock>
-                                                <navlist_862816500
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="swinburne/components/lists/navlist"
-                                                    cancelInheritParent="true"
-                                                    componentId="header-nav"
-                                                    componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/nav]"
-                                                    listFrom="children"
-                                                    parentPage="/content/swinburne-showcase/en/pages/swu/bottom-navigation"
-                                                    variant="stacked"/>
-                                                <contentblock_9576433
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="swinburne/components/layout/contentblock"
-                                                    componentId="contentblock_4TJIUB0SW"
-                                                    componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/actions]"
-                                                    variant="parsys">
-                                                    <par
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="aemdesign/components/layout/container">
-                                                        <link
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="swinburne/components/content/link"
-                                                            componentId="link_OQJRN4V6Y"
-                                                            linkIcon="[swinburne-showcase:component-style-icon/general/search]"
-                                                            variant="button"/>
-                                                        <link_1175662764
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="swinburne/components/content/link"
-                                                            componentId="link_1175662764_KP0ZF1JAD"
-                                                            componentModifiers="[swinburne-showcase:component-style-modifier/button/primary-red]"
-                                                            label="Apply now"
-                                                            linkUrl="#"/>
-                                                    </par>
-                                                    <bgimage
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="aemdesign/components/media/image"/>
-                                                    <bgvideo
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="aemdesign/components/media/image"/>
-                                                </contentblock_9576433>
-                                            </par>
-                                        </contentblock_1339506827>
-                                    </par>
-                                </contentblock>
-                            </par>
-                        </header>
-                    </par>
-                </contentblock>
             </par>
         </article>
     </jcr:content>

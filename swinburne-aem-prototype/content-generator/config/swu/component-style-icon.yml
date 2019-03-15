@@ -34,7 +34,6 @@ content/_cq_tags/swinburne/component-style-icon: &component-style-icon
   general:
     prefixes:
       - balance-scale
-      - bars
       - book
       - briefcase
       - building
@@ -54,8 +53,6 @@ content/_cq_tags/swinburne/component-style-icon: &component-style-icon
       - comments
       - comments-alt
       - connectdevelop
-      - chevron-left
-      - chevron-right
       - edit
       - envelope
       - fast-forward
@@ -86,7 +83,6 @@ content/_cq_tags/swinburne/component-style-icon: &component-style-icon
       - star
       - stethoscope
       - street-view
-      - times
       - thumbs-down
       - thumbs-up
       - train

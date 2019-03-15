@@ -14,7 +14,7 @@ body {
     width: 100%;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     font-size: 12px;
     line-height: 23px;
   }

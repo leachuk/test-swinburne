@@ -2,15 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-01-29T10:12:18.109+11:00"
-        cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn-v2"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Article Page"
         jcr:uuid="223c320d-c1f1-4dc8-9a6e-4b392e360502"
-        sling:resourceType="swinburne/components/template/column/one/v2">
+        sling:resourceType="swinburne/components/template/column/one/v2"
+        hideInNav="true">
         <header
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/header"
@@ -55,63 +54,66 @@
                             textIsRich="true"/>
                     </par>
                 </news_details>
-                <colctrl
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/colctrl"
-                    componentId="colctrl_XDYMDWGQB"
-                    controlType="start"
-                    layout="1;colctrl-1c"/>
-                <contentblock_1206489822
+                <contentblock_123001040
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_1206489822_8K6L9YWKJ"/>
-                <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_IECG75G3J"
-                    hideTopLink="true"
-                    title="Related Articles"
-                    titleType="h3"
-                    variant="advsection">
+                    componentId="contentblock_123001040_MINGMTBUC"
+                    variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <newslist
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/lists/newslist"
-                        componentId="newslist_GT8GXKMHO"
-                        detailsBadge="cardImageTitleCategoryActionDate"
-                        listFrom="static"
-                        pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
-                        tagsMatch="any">
-                        <badgeThumbnail
+                        sling:resourceType="aemdesign/components/media/video"/>
+                    <par jcr:primaryType="nt:unstructured">
+                        <contentblock
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"/>
-                    </newslist>
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <newslist
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/newslist"
-                            componentId="newslist_5UIB9RHOT"
-                            detailsBadge="cardImageTitleCategoryActionDate"
-                            listFrom="static"
-                            pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
-                            tagsMatch="any">
-                            <badgeThumbnail
+                            sling:resourceType="swinburne/components/layout/contentblock"
+                            componentId="contentblock_IECG75G3J"
+                            hideTopLink="true"
+                            title="Related Articles"
+                            titleType="h3"
+                            variant="advsection">
+                            <bgimage
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/media/image"/>
-                        </newslist>
+                            <bgvideo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/media/image"/>
+                            <newslist
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/lists/newslist"
+                                componentId="newslist_GT8GXKMHO"
+                                detailsBadge="cardImageTitleCategoryActionDate"
+                                listFrom="static"
+                                pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
+                                tagsMatch="any">
+                                <badgeThumbnail
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aemdesign/components/media/image"/>
+                            </newslist>
+                            <par
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/layout/container">
+                                <newslist
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="swinburne/components/lists/newslist"
+                                    componentId="newslist_5UIB9RHOT"
+                                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-30]"
+                                    componentTheme="[swinburne-showcase:component-style-theme/lists/widths/large]"
+                                    detailsBadge="cardImageTitleCategoryActionDate"
+                                    listFrom="static"
+                                    pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
+                                    sortOrder="asc"
+                                    tagsMatch="any">
+                                    <badgeThumbnail
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="aemdesign/components/media/image"/>
+                                </newslist>
+                            </par>
+                        </contentblock>
                     </par>
-                </contentblock>
-                <col_end15483956511680
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/colctrl"
-                    controlType="end"/>
+                </contentblock_123001040>
             </par>
         </article>
         <footer

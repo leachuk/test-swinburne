@@ -29,7 +29,16 @@
       font-size: 12px;
       font-weight: 700;
       margin-left: $spacing-xs;
-      width: 70px;
+      width: 80px;
+      div {
+        & > * {
+          display: inline-flex;
+          vertical-align: middle;
+        }
+        i {
+          margin-right: 3px;
+        }
+      }
 
       @include media-breakpoint-up(lg) {
         display: none !important;

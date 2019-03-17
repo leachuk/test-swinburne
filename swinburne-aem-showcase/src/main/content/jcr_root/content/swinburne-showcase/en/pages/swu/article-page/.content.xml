@@ -54,10 +54,10 @@
                             textIsRich="true"/>
                     </par>
                 </news_details>
-                <contentblock_123001040
+                <contentblock_1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_123001040_MINGMTBUC"
+                    componentId="contentblock_1"
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
@@ -66,10 +66,10 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/video"/>
                     <par jcr:primaryType="nt:unstructured">
-                        <contentblock
+                        <contentblock_2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock_IECG75G3J"
+                            componentId="contentblock_2"
                             hideTopLink="true"
                             title="Related Articles"
                             titleType="h3"
@@ -95,10 +95,10 @@
                             <par
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="aemdesign/components/layout/container">
-                                <newslist
+                                <newslist_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/lists/newslist"
-                                    componentId="newslist_5UIB9RHOT"
+                                    componentId="newslist_1"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-30]"
                                     componentTheme="[swinburne-showcase:component-style-theme/lists/widths/large]"
                                     detailsBadge="cardImageTitleCategoryActionDate"
@@ -109,11 +109,11 @@
                                     <badgeThumbnail
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="aemdesign/components/media/image"/>
-                                </newslist>
+                                </newslist_1>
                             </par>
-                        </contentblock>
+                        </contentblock_2> 
                     </par>
-                </contentblock_123001040>
+                </contentblock_1>
             </par>
         </article>
         <footer

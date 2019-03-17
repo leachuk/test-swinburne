@@ -22,5 +22,5 @@ echo "Copying files from public to sync"
 cp -r public/${PROJECT_FOLDER} sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/${PROJECT_FOLDER}
 
 echo "Launching VLT"
-cd sync/${PROJECT_FOLDER}
+cd sync
 ../tools/vault-cli/bin/vlt --verbose --credentials ${USERNAME}:${PASSWORD} commit --force ./jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/${PROJECT_FOLDER}

@@ -238,9 +238,9 @@ module.exports = env => {
         files       : '**/*.scss',
         quiet       : false,
       }) : undefined,
-      new ImageminPlugin({
+      ifProd(new ImageminPlugin({
         test: /\.(jpe?g|png|gif|svg)$/i,
-      }),
+      })),
       new LodashPlugin({
         collections : true,
         shorthands  : true,

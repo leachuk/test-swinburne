@@ -34,18 +34,29 @@
                     textIsRich="true"
                     titleType="[,]"/>
                 <contentblock
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock">
-                    <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
-                        <text
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock"
+                        componentModifiers="[swinburne-showcase:component-style-modifier/background/greys/bg-grey-5]">
+                    <par
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            componentId="text"
-                            text="&lt;h4>Basic Carousel&lt;/h4>&#xd;&#xa;"
-                            textIsRich="true"/>
+                            sling:resourceType="aemdesign/components/layout/container">
+                        <text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="text"
+                                text="&lt;h4>Basic Carousel&lt;/h4>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <pagelist
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/lists/pagelist"
+                                componentId="pagelist_FU64APJ1J"
+                                componentModules="[swinburne-showcase:component-style-module/lists/carousel]"
+                                detailsBadge="cardImageTagTitleAction"
+                                listFrom="children"
+                                parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"
+                                sortOrder="asc"
+                                tagsMatch="any"/>
                     </par>
                 </contentblock>
             </par>

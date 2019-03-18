@@ -250,6 +250,7 @@
           flex-basis: 100%;
           max-width: 100%;
 
+          // stylelint-disable-next-line
           + li {
             margin-left: 0;
           }
@@ -258,26 +259,16 @@
     }
 
     .pagelist[component] {
-      &,
-      li {
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      > .content {
-        margin-left: 0;
-        margin-right: 0;
-      }
-
       ul {
-        @include list-unstyled;
-
         margin-bottom: 0;
+        margin-left: 0;
+        width: 100%;
       }
 
       li {
         flex-basis: 100%;
         max-width: 100%;
+        padding: 0;
       }
 
       @include media-breakpoint-down(sm) {

@@ -22,6 +22,10 @@ $color-gray:  #d6d6d6;
       border-left: 1px solid #999;
     }
 
+    > i {
+      font-size: map-get($icon-sizes, regular);
+    }
+
     &.disabled {
       pointer-events: none;
     }

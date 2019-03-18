@@ -1,7 +1,14 @@
 @at-root {
   @include pagelist-variant(create-selector(&, '-quarter')) {
-    flex-basis: percentage(3 / $grid-columns);
-    max-width: percentage(3 / $grid-columns);
+    @include media-breakpoint-up(md) {
+      flex-basis: percentage(6 / $grid-columns);
+      max-width: percentage(6 / $grid-columns);
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: percentage(3 / $grid-columns);
+      max-width: percentage(3 / $grid-columns);
+    }
   }
 
   @include pagelist-variant(create-selector(&, '-equal')) {

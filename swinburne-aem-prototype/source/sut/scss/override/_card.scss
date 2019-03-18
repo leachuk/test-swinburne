@@ -93,6 +93,10 @@
       color: color('grey-2');
       font-size: 12px;
       margin-bottom: 0;
+
+      li::before {
+        display: none;
+      }
     }
   }
 
@@ -107,11 +111,6 @@
   // Background variations
   .bg-yellow & {
     box-shadow: 0 2px 3px #f3c26d;
-  }
-
-  // Nested within a carousel
-  .owl-item & {
-    margin-bottom: 4px;
   }
 
   @include media-breakpoint-up(md) {

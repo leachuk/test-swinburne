@@ -38,6 +38,13 @@ function pageListConfiguration(pagelist: HTMLElement): CarouselOptions {
   }
 }
 
+function getNavTextElements() {
+  return [
+    '<i class="fal fa-long-arrow-left"></i>',
+    '<i class="fal fa-long-arrow-right"></i>',
+  ]
+}
+
 /**
  * Binds `OwlCarousel` to the given target element.
  *
@@ -139,6 +146,7 @@ function bindCarouselToElement(
       margin       : _get(options, 'margin', 0),
       mouseDrag    : _get(options, 'mouseDrag', false),
       nav          : _get(options, 'nav', true),
+      navText      : _get(options, 'navText', getNavTextElements()),
       slideBy      : _get(options, 'slideBy', 1),
       stageElement : _get(options, 'stageElement', null),
       stagePadding : _get(options, 'stagePadding', 0),

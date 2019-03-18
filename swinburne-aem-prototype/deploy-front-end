@@ -19,7 +19,7 @@ USERNAME=$(cat ../pom.xml | sed -n 's:.*<crx\.username>\(.*\)</crx\.username>.*:
 PASSWORD=$(cat ../pom.xml | sed -n 's:.*<crx\.password>\(.*\)</crx\.password>.*:\1:p')
 
 echo "Copying files from public to sync"
-cp -r public/${PROJECT_FOLDER} sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/${PROJECT_FOLDER}
+cp -r public/${PROJECT_FOLDER}/** sync/jcr_root/etc/clientlibs/${CLIENT_LIBS_FOLDER}/${PROJECT_FOLDER}
 
 echo "Launching VLT"
 cd sync

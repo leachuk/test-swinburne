@@ -68,10 +68,6 @@
         margin-right: 0;
       }
 
-      > .content ul {
-        overflow-x: hidden;
-      }
-
       ul.owl-carousel {
         display: block;
         visibility: hidden;
@@ -80,12 +76,20 @@
           display: flex;
 
           &-outer {
-            overflow: visible;
+            margin-bottom: -20px;
+            overflow-x: hidden;
+            padding-bottom: 20px;
+            width: calc(100% + 100%);
           }
         }
 
         .owl-item {
           float: none;
+
+          &:not(.active) {
+            opacity: .5;
+            pointer-events: none;
+          }
         }
 
         .owl-item + .owl-item {

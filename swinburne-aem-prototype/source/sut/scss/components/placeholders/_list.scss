@@ -79,6 +79,10 @@
   }
 
   // Normalize the list when the 'carousel' module is applied
+  @extend %component-list-carousel;
+}
+
+%component-list-carousel {
   @include not-aem-author {
     &[data-modules*='carousel'] {
       max-width: 100%;

@@ -3,7 +3,10 @@ import _isNil from 'lodash/isNil'
 import _omitBy from 'lodash/omitBy'
 import _throttle from 'lodash/throttle'
 
+import sassVars from '../../scss/_common.scss'
+
 import { isAuthorEditMode } from '@global/utilities/aem'
+import { getWindowWidth } from '@global/utilities/dom'
 
 declare interface CarouselOptions {
   [breakpoint: string]: {
@@ -12,7 +15,15 @@ declare interface CarouselOptions {
 }
 
 // Internal
+const breakpoints = {
+  desktop      : parseInt(sassVars['breakpoint-lg'], 10),
+  desktopLarge : parseInt(sassVars['breakpoint-xl'], 10),
+  extraSmall   : parseInt(sassVars['breakpoint-xs'], 10),
+  tablet       : parseInt(sassVars['breakpoint-md'], 10),
+}
+
 let carousels: NodeListOf<Element>
+let lastWindowWidth: number = 0
 
 /**
  * Page list configuration.
@@ -25,12 +36,12 @@ function pageListConfiguration(pagelist: HTMLElement): CarouselOptions {
 
   return {
     breakpoint: {
-      768: {
+      [breakpoints.tablet]: {
         items   : isEqualWidths ? 2 : (isThirdWidths ? 3 : 2),
         slideBy : isEqualWidths ? 1 : (isThirdWidths ? 3 : 2),
       },
 
-      1024: {
+      [breakpoints.desktop]: {
         items   : isEqualWidths ? 2 : (isThirdWidths ? 3 : 4),
         slideBy : isEqualWidths ? 1 : (isThirdWidths ? 3 : 2),
       },
@@ -61,20 +72,20 @@ function bindCarouselToElement(
 ) {
   let $list = $(element)
 
-  const totalItems   = $list.find('li').length
-  const itemsFor768  = _get(options, 'breakpoint.768.items', 3)
-  const itemsFor1024 = _get(options, 'breakpoint.1024.items', 3)
-  const splitEnabled = parent.dataset.listSplitEnabled === 'true'
-  const windowWidth  = $(window).width() || 0
+  const totalItems      = $list.find('li').length
+  const itemsForTablet  = _get(options, `breakpoint.${breakpoints.tablet}.items`, 3)
+  const itemsForDesktop = _get(options, `breakpoint.${breakpoints.desktop}.items`, 3)
+  const splitEnabled    = parent.dataset.listSplitEnabled === 'true'
+  const windowWidth     = getWindowWidth()
 
   // We only need the carousel in certain situations
   if (
-    windowWidth >= 768 &&
+    windowWidth >= breakpoints.tablet &&
     totalItems > 0 &&
     (
-      (totalItems <= 2 && itemsFor768 === 2 && itemsFor1024 === 2) ||
-      (totalItems <= 3 && itemsFor768 === 3 && itemsFor1024 === 3) ||
-      (totalItems <= 4 && itemsFor768 === 4 && itemsFor1024 === 4)
+      (totalItems <= 2 && itemsForTablet === 2 && itemsForDesktop === 2) ||
+      (totalItems <= 3 && itemsForTablet === 3 && itemsForDesktop === 3) ||
+      (totalItems <= 4 && itemsForTablet === 4 && itemsForDesktop === 4)
     ) &&
     $list.hasClass('owl-loaded') &&
     !splitEnabled
@@ -138,7 +149,7 @@ function bindCarouselToElement(
   // Janky fix to control pre-rendering issues with OwlCarousel
   setTimeout(() => {
     $list.owlCarousel(_omitBy({
-      center       : _get(options, 'center', true),
+      center       : _get(options, 'center', false),
       dots         : _get(options, 'dots', false),
       itemElement  : _get(options, 'itemElement', null),
       items        : _get(options, 'items', 1),
@@ -152,21 +163,14 @@ function bindCarouselToElement(
       stagePadding : _get(options, 'stagePadding', 0),
 
       responsive: {
-        0: _omitBy({
+        [breakpoints.extraSmall]: _omitBy({}, _isNil),
+
+        [breakpoints.tablet]: _omitBy({
+          items : itemsForTablet,
         }, _isNil),
 
-        576: _omitBy({
-          items: _get(options, 'breakpoint.576.items', 2),
-        }, _isNil),
-
-        768: _omitBy({
-          center : _get(options, 'breakpoint.768.center', false),
-          items  : itemsFor768,
-        }, _isNil),
-
-        1024: _omitBy({
-          center : _get(options, 'breakpoint.1024.center', false),
-          items  : itemsFor1024,
+        [breakpoints.desktop]: _omitBy({
+          items: itemsForDesktop,
         }, _isNil),
       },
     }, _isNil))
@@ -197,13 +201,21 @@ const loopAndGenerateCarousels = (needsRefresh = false) => {
 }
 
 export default () => {
-  carousels = document.querySelectorAll('[data-modules*="carousel"]')
+  carousels       = document.querySelectorAll('[data-modules*="carousel"]')
+  lastWindowWidth = getWindowWidth()
 
   if (carousels.length && !isAuthorEditMode()) {
     loopAndGenerateCarousels()
 
     $(window).off('resize.carouselRefresh').on('resize.carouselRefresh', _throttle(() => {
+      // If the width of the window matches the last known width, do nothing!
+      if (getWindowWidth() === lastWindowWidth) {
+        return
+      }
+
       loopAndGenerateCarousels(true)
+
+      lastWindowWidth = getWindowWidth()
     }, 200))
   }
 }

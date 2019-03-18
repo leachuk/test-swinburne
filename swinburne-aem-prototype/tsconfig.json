@@ -41,7 +41,8 @@
   "include": [
     "source/**/*.ts",
     "source/**/*.tsx",
-    "source/**/*.vue"
+    "source/**/*.vue",
+    "source/**/*.scss",
   ],
 
   "exclude": [

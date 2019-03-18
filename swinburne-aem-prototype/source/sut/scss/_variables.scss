@@ -1,3 +1,5 @@
+@import 'common';
+
 // Colours
 
 $brand-colours: (
@@ -251,13 +253,7 @@ $aem-breakpoints: (
 
 // Grid breakpoints
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 320px,
-  md: 640px,
-  lg: 1024px,
-  xl: 1366px,
-);
+$grid-breakpoints: $breakpoints;
 
 
 // Grid containers

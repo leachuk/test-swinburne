@@ -7,6 +7,11 @@ declare var require: {
   ) => void;
 }
 
+declare module '*.scss' {
+  const content: { [className: string]: string };
+  export = content;
+}
+
 declare interface Window { CQ: any; }
 
 declare function ObjectFitImages(): void;

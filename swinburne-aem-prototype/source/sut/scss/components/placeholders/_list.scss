@@ -61,6 +61,9 @@
   // Normalize the list when the 'carousel' module is applied
   @include not-aem-author {
     &[data-modules*='carousel'] {
+      overflow-x: hidden;
+      max-width: 100%;
+
       > .content,
       > .content ul {
         display: block;
@@ -69,6 +72,9 @@
       }
 
       ul.owl-carousel {
+        @include make-container(0);
+        @include make-container-max-widths;
+
         display: block;
         visibility: hidden;
 
@@ -77,7 +83,6 @@
 
           &-outer {
             margin-bottom: -20px;
-            overflow-x: hidden;
             padding-bottom: 20px;
             width: calc(100% + 100%);
           }
@@ -85,6 +90,7 @@
 
         .owl-item {
           float: none;
+          transition: $transition-fade;
 
           &:not(.active) {
             opacity: .5;

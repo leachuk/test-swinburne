@@ -30,7 +30,7 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/news-details"
-                    componentId="news_details_7SQJEXJQO"
+                    componentId="news_details"
                     textIsRich="true"
                     titleType="[,]">
                     <secondaryImage
@@ -83,7 +83,7 @@
                             <newslist
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/lists/newslist"
-                                componentId="newslist_GT8GXKMHO"
+                                componentId="newslist"
                                 detailsBadge="cardImageTitleCategoryActionDate"
                                 listFrom="static"
                                 pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
@@ -111,7 +111,7 @@
                                         sling:resourceType="aemdesign/components/media/image"/>
                                 </newslist_1>
                             </par>
-                        </contentblock_2> 
+                        </contentblock_2>
                     </par>
                 </contentblock_1>
             </par>

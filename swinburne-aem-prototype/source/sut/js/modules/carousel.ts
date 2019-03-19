@@ -107,7 +107,6 @@ function bindCarouselToElement(
     // Create a new host element for the carousel
     const $carousel = $('<div />', { class: 'owl-carousel' }).insertBefore($list)
 
-    // Duplicate the list items
     if (totalItems > 0) {
       $list.children().each((_, item) => {
         $(item)
@@ -117,6 +116,8 @@ function bindCarouselToElement(
           .wrap('<div class="item"></div>')
       })
     }
+
+    $list = $carousel
   }
 
   // Janky fix to control pre-rendering issues with OwlCarousel
@@ -156,7 +157,8 @@ function bindCarouselToElement(
 
     console.log(carouselConfig)
 
-    // $list.owlCarousel(carouselConfig)
+    parent.classList.add('owl-ready')
+    $list.owlCarousel(carouselConfig)
   }, 200)
 }
 

@@ -5,26 +5,18 @@
   @include iphone-x;
 
   > .content {
-    &,
-    > ul {
-      justify-content: flex-start;
-    }
-
     > ul,
-    .owl-carousel {
+    .owl-carousel:not(.owl-loaded) {
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: -$list-item-margin;
       width: 100%;
 
       @include media-breakpoint-up(md) {
-        margin-bottom: -$list-item-md-margin;
         margin-left: -($list-item-md-margin / 2);
         width: calc(100% + #{$list-item-md-margin});
       }
 
       @include media-breakpoint-up(lg) {
-        margin-bottom: -$list-item-lg-margin;
         margin-left: -($list-item-lg-margin / 2);
         width: calc(100% + #{$list-item-lg-margin});
       }
@@ -38,6 +30,8 @@
     }
 
     > ul {
+      margin-bottom: -$list-item-margin;
+
       > li {
         margin-bottom: $list-item-margin;
 
@@ -53,6 +47,14 @@
         @include media-breakpoint-up(lg) {
           margin-bottom: $list-item-lg-margin;
         }
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: -$list-item-md-margin;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: -$list-item-lg-margin;
       }
     }
 
@@ -89,89 +91,142 @@
 }
 
 %component-list-carousel {
-  @include not-aem-author {
-    .owl-carousel {
+  .owl-carousel {
+    .owl-stage {
       display: flex;
+      margin-left: -$list-item-margin;
+
+      &-outer {
+        margin-bottom: -20px;
+        padding-bottom: 20px;
+        width: calc(100% + 100%);
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-left: -($list-item-md-margin / 2);
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-left: -($list-item-lg-margin / 2);
+      }
     }
 
+    .owl-item {
+      display: flex;
+      float: none;
+      height: auto;
+      min-height: 100%;
+      transition: $transition-fade;
 
+      > .item {
+        height: 100%;
+        padding-left: $list-item-md-margin / 2;
+        padding-right: $list-item-md-margin / 2;
+        width: 100%;
 
+        @include media-breakpoint-up(lg) {
+          padding-left: $list-item-lg-margin / 2;
+          padding-right: $list-item-lg-margin / 2;
+        }
+      }
 
+      &:not(.active) {
+        opacity: .5;
+        pointer-events: none;
+      }
 
+      @include media-breakpoint-up(lg) {
+        flex-basis: 352px;
+        max-width: 352px;
+        min-width: 352px;
+      }
+    }
 
+    &.owl-loaded {
+      @include make-container-max-widths;
 
-    // &[data-modules*='carousel'] {
-    //   max-width: 100%;
-    //   overflow-x: hidden;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
-    //   ul.owl-carousel {
-    //     @include make-container(0);
-    //     @include make-container-max-widths;
+  @include not-aem-author {
+    &[data-modules*='carousel'].owl-ready {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-    //     display: block;
-    //     visibility: hidden;
-
-    //     .owl-stage {
-    //       display: flex;
-    //       margin-left: -$list-item-margin;
-
-    //       &-outer {
-    //         margin-bottom: -20px;
-    //         padding-bottom: 20px;
-    //         width: calc(100% + 100%);
-    //       }
-
-    //       @include media-breakpoint-up(md) {
-    //         margin-left: -$list-item-md-margin;
-    //       }
-
-    //       @include media-breakpoint-up(lg) {
-    //         margin-left: -$list-item-lg-margin;
-    //       }
-    //     }
-
-    //     .owl-item {
-    //       flex-basis: 352px + $list-item-margin;
-    //       float: none;
-    //       max-width: 352px + $list-item-margin;
-    //       padding-left: $list-item-margin / 2;
-    //       padding-right: $list-item-margin / 2;
-    //       transition: $transition-fade;
-    //       // stylelint-disable-next-line
-    //       width: 352px + $list-item-margin !important;
-
-    //       &:not(.active) {
-    //         opacity: .5;
-    //         pointer-events: none;
-    //       }
-
-    //       // @include media-breakpoint-up(md) {
-    //       //   margin-left: $list-item-md-margin;
-    //       // }
-
-    //       // @include media-breakpoint-up(lg) {
-    //       //   margin-left: $list-item-lg-margin;
-    //       // }
-    //     }
-
-    //     &.owl-loaded {
-    //       visibility: visible;
+    // &[data-list-split-enabled='true'] ul {
+    //   @include media-breakpoint-down(sm) {
+    //     &:not(.mobile-carousel) {
+    //       display: none;
     //     }
     //   }
 
-    //   &[data-list-split-enabled='true'] ul {
-    //     @include media-breakpoint-down(sm) {
-    //       &:not(.mobile-carousel) {
-    //         display: none;
-    //       }
-    //     }
-
-    //     @include media-breakpoint-up(md) {
-    //       &.mobile-carousel {
-    //         display: none;
-    //       }
+    //   @include media-breakpoint-up(md) {
+    //     &.mobile-carousel {
+    //       display: none;
     //     }
     //   }
     // }
   }
+
+  // &[data-modules*='carousel'] {
+  //   max-width: 100%;
+  //   overflow-x: hidden;
+
+  //   ul.owl-carousel {
+  //     @include make-container(0);
+  //     @include make-container-max-widths;
+
+  //     display: block;
+  //     visibility: hidden;
+
+  //     .owl-stage {
+  //       display: flex;
+  //       margin-left: -$list-item-margin;
+
+  //       &-outer {
+  //         margin-bottom: -20px;
+  //         padding-bottom: 20px;
+  //         width: calc(100% + 100%);
+  //       }
+
+  //       @include media-breakpoint-up(md) {
+  //         margin-left: -$list-item-md-margin;
+  //       }
+
+  //       @include media-breakpoint-up(lg) {
+  //         margin-left: -$list-item-lg-margin;
+  //       }
+  //     }
+
+  //     .owl-item {
+  //       flex-basis: 352px + $list-item-margin;
+  //       float: none;
+  //       max-width: 352px + $list-item-margin;
+  //       padding-left: $list-item-margin / 2;
+  //       padding-right: $list-item-margin / 2;
+  //       transition: $transition-fade;
+  //       // stylelint-disable-next-line
+  //       width: 352px + $list-item-margin !important;
+
+  //       &:not(.active) {
+  //         opacity: .5;
+  //         pointer-events: none;
+  //       }
+
+  //       // @include media-breakpoint-up(md) {
+  //       //   margin-left: $list-item-md-margin;
+  //       // }
+
+  //       // @include media-breakpoint-up(lg) {
+  //       //   margin-left: $list-item-lg-margin;
+  //       // }
+  //     }
+
+  //     &.owl-loaded {
+  //       visibility: visible;
+  //     }
+  //   }
 }

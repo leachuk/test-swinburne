@@ -214,22 +214,10 @@
 @mixin pagelist-variant($selector: false, $selector-only: true) {
   $selector: if($selector != false, unquote($selector), $selector);
 
-  @if $selector-only == true {
-    #{if($selector != false, unquote($selector), '')} > .content {
-      > ul > li,
-      > div:not(.owl-carousel),
-      .owl-carousel > .item {
-        @content;
-      }
-    }
-  }
-  @else {
-    &#{if($selector != false, unquote($selector), '')} > .content {
-      > ul > li,
-      > div:not(.owl-carousel),
-      .owl-carousel > .item {
-        @content;
-      }
+  #{if($selector-only != false, &, '')}#{if($selector != false, unquote($selector), '')} > .content {
+    > ul > li,
+    > div:not(.owl-carousel) {
+      @content;
     }
   }
 }

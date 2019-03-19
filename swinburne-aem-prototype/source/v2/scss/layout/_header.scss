@@ -35,6 +35,9 @@
           display: inline-flex;
           vertical-align: middle;
         }
+        .icon {
+          margin-right: 7px !important;
+        }
       }
 
       @include media-breakpoint-up(lg) {

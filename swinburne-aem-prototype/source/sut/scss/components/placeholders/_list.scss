@@ -19,10 +19,14 @@
 
       @include media-breakpoint-up(md) {
         margin-bottom: -$list-item-md-margin;
+        margin-left: -($list-item-md-margin / 2);
+        width: calc(100% + #{$list-item-md-margin});
       }
 
       @include media-breakpoint-up(lg) {
         margin-bottom: -$list-item-lg-margin;
+        margin-left: -($list-item-lg-margin / 2);
+        width: calc(100% + #{$list-item-lg-margin});
       }
     }
 
@@ -49,16 +53,6 @@
         @include media-breakpoint-up(lg) {
           margin-bottom: $list-item-lg-margin;
         }
-      }
-
-      @include media-breakpoint-up(md) {
-        margin-left: -($list-item-md-margin / 2);
-        width: calc(100% + #{$list-item-md-margin});
-      }
-
-      @include media-breakpoint-up(lg) {
-        margin-left: -($list-item-lg-margin / 2);
-        width: calc(100% + #{$list-item-lg-margin});
       }
     }
 
@@ -97,7 +91,7 @@
 %component-list-carousel {
   @include not-aem-author {
     .owl-carousel {
-      display: block;
+      display: flex;
     }
 
 

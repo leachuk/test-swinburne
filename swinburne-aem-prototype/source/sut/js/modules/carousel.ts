@@ -111,7 +111,7 @@ function bindCarouselToElement(
     if (totalItems > 0) {
       $list.children().each((_, item) => {
         $(item)
-          .children(':first')
+          .children()
           .clone(false)
           .appendTo($carousel)
           .wrap('<div class="item"></div>')

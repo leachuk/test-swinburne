@@ -31,14 +31,14 @@
                     titleType="[,]">
                     <secondaryImage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/componentsmedia/image"/>
                     <thumbnail
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"
+                        sling:resourceType="swinburne/componentsmedia/image"
                         fileReference="/content/dam/swinburne-showcase/en/components/media/image/city1.jpg"/>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/componentsmedia/image"/>
                 </news_details>
             </par>
         </article>

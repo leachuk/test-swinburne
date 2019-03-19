@@ -35,17 +35,17 @@
                     titleType="[,]">
                     <secondaryImage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/componentsmedia/image"/>
                     <thumbnail
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"
+                        sling:resourceType="swinburne/componentsmedia/image"
                         fileReference="/content/dam/swinburne-showcase/en/components/content/download/change-as-good-holiday.jpg"/>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/componentsmedia/image"/>
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/componentslayout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -61,10 +61,10 @@
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/componentsmedia/image"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/video"/>
+                        sling:resourceType="swinburne/componentsmedia/video"/>
                     <par jcr:primaryType="nt:unstructured">
                         <contentblock
                             jcr:primaryType="nt:unstructured"
@@ -76,10 +76,10 @@
                             variant="advsection">
                             <bgimage
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/componentsmedia/image"/>
                             <bgvideo
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/componentsmedia/image"/>
                             <newslist
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/lists/newslist"
@@ -90,11 +90,11 @@
                                 tagsMatch="any">
                                 <badgeThumbnail
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/media/image"/>
+                                    sling:resourceType="swinburne/componentsmedia/image"/>
                             </newslist>
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/componentslayout/container">
                                 <newslist_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/lists/newslist"
@@ -108,7 +108,7 @@
                                     tagsMatch="any">
                                     <badgeThumbnail
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="aemdesign/components/media/image"/>
+                                        sling:resourceType="swinburne/componentsmedia/image"/>
                                 </newslist_1>
                             </par>
                         </contentblock>

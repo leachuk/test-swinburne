@@ -239,20 +239,22 @@
       }
     }
     a.l-1 {
+      z-index: 1;
       &::before {
         content: ' ';
         display: block;
-        height: 2px;
+        height: 20px;
         bottom: 0;
         left: 0;
         position: absolute;
         background-color: transparent;
+        opacity: 0;
         width: 100%;
+        z-index: 0;
       }
       &:hover {
         &::before {
-          height: 20px;
-          transition: background-color .4s ease-in-out, height .3s ease-in-out;
+          transition: background-color .3s ease-in-out, height .3s ease-in-out, opacity .5s ease-in-out;
         }
         box-shadow: inset 0 -2px 0 color('charcoal');
       }
@@ -260,7 +262,11 @@
         box-shadow: none;
         &::before {
           background-color: color('red');
+          opacity: 1;
           height: 2px;
+        }
+        &:hover:not(:active) {
+          box-shadow: inset 0 -2px 0 color('charcoal') !important;
         }
       }
     }
@@ -372,13 +378,13 @@
             height: 50px;
             margin-right: $spacing-md;
             transition: border-bottom .15s ease-in-out, padding-top .15s ease-in-out, color .3s ease-in-out;
-            border-bottom: 0 solid color('charcoal');
+            border-bottom: 0 solid color('grey-2');
             padding-top: 0;
-            &[aria-expanded='true'],
             &:hover {
               border-bottom: 2px solid color('grey-2');
               padding-top: 2px;
             }
+            &[aria-expanded='true'],
             &:active {
               border-bottom: 2px solid color('charcoal');
               color: color('charcoal');

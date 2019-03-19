@@ -217,7 +217,8 @@
   @if $selector-only == true {
     #{if($selector != false, unquote($selector), '')} > .content {
       > ul > li,
-      > div {
+      > div:not(.owl-carousel),
+      .owl-carousel > .item {
         @content;
       }
     }
@@ -225,7 +226,8 @@
   @else {
     &#{if($selector != false, unquote($selector), '')} > .content {
       > ul > li,
-      > div {
+      > div:not(.owl-carousel),
+      .owl-carousel > .item {
         @content;
       }
     }

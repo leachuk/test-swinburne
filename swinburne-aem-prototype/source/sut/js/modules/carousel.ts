@@ -8,10 +8,13 @@ import sassVars from '../../scss/_common.scss'
 import { isAuthorEditMode } from '@global/utilities/aem'
 import { getWindowWidth } from '@global/utilities/dom'
 
+declare interface BreakpointOptions {
+  [key: number]: OwlCarousel.Options,
+}
+
 declare interface CarouselOptions {
-  [breakpoint: string]: {
-    [key: number]: OwlCarousel.Options,
-  },
+  breakpoint?: BreakpointOptions,
+  refresh?: boolean,
 }
 
 // Internal
@@ -31,24 +34,14 @@ let lastWindowWidth: number = 0
  * @param {HTMLElement} pagelist The page list element
  */
 function pageListConfiguration(pagelist: HTMLElement): CarouselOptions {
-  const isEqualWidths = pagelist.classList.contains('theme--lists-equal')
-  const isThirdWidths = pagelist.classList.contains('theme--lists-large')
-
-  return {
-    breakpoint: {
-      [breakpoints.tablet]: {
-        items   : isEqualWidths ? 2 : (isThirdWidths ? 3 : 2),
-        slideBy : isEqualWidths ? 1 : (isThirdWidths ? 3 : 2),
-      },
-
-      [breakpoints.desktop]: {
-        items   : isEqualWidths ? 2 : (isThirdWidths ? 3 : 4),
-        slideBy : isEqualWidths ? 1 : (isThirdWidths ? 3 : 2),
-      },
-    },
-  }
+  return {}
 }
 
+/**
+ * Builds a basic list of elements for the previous/next nav buttons.
+ *
+ * @return {Array}
+ */
 function getNavTextElements() {
   return [
     '<i class="fal fa-long-arrow-left"></i>',
@@ -72,38 +65,15 @@ function bindCarouselToElement(
 ) {
   let $list = $(element)
 
-  const totalItems      = $list.find('li').length
-  const itemsForTablet  = _get(options, `breakpoint.${breakpoints.tablet}.items`, 3)
-  const itemsForDesktop = _get(options, `breakpoint.${breakpoints.desktop}.items`, 3)
-  const splitEnabled    = parent.dataset.listSplitEnabled === 'true'
-  const windowWidth     = getWindowWidth()
+  const totalItems   = $list.find('li').length
+  const splitEnabled = parent.dataset.listSplitEnabled === 'true'
 
-  // We only need the carousel in certain situations
-  if (
-    windowWidth >= breakpoints.tablet &&
-    totalItems > 0 &&
-    (
-      (totalItems <= 2 && itemsForTablet === 2 && itemsForDesktop === 2) ||
-      (totalItems <= 3 && itemsForTablet === 3 && itemsForDesktop === 3) ||
-      (totalItems <= 4 && itemsForTablet === 4 && itemsForDesktop === 4)
-    ) &&
-    $list.hasClass('owl-loaded') &&
-    !splitEnabled
-  ) {
-    $list.owlCarousel('destroy').removeClass('owl-carousel')
-
-    // Re-wrap the children so the markup is valid once again
-    $list.children().wrap('<li />')
-
+  // First check before destorying the carousel, do we actually need to remove the current instance?
+  if (needsRefresh && options.refresh === true && $list.hasClass('owl-loaded')) {
+    $list.owlCarousel('destroy')
+  } else if (needsRefresh && options.refresh !== true) {
     return
   }
-
-  // Do we need to remove OwlCarousel from the current instance
-  if ((module.hot || needsRefresh) && $list.hasClass('owl-loaded')) {
-    $list.owlCarousel('destroy')
-  }
-
-  let needsUnwrap = true
 
   // When a split is active we need to clone the list items into a mobile only version to ensure
   // the visual aspects of the list remain intact.
@@ -129,27 +99,31 @@ function bindCarouselToElement(
         }
 
         listParent.insertAdjacentElement('afterbegin', mobileList)
-      } else {
-        needsUnwrap = false;
       }
 
       $list = $(mobileList as HTMLElement)
     }
-  }
+  } else {
+    // Create a new host element for the carousel
+    const $carousel = $('<div />', { class: 'owl-carousel' }).insertBefore($list)
 
-  // Restore the OwlCarousel classes that are needed to style it
-  $list.addClass('owl-carousel owl-theme')
-
-  if (needsUnwrap && totalItems > 0) {
-    $list.children().each((_, item) => {
-      $(item).children().unwrap('li')
-    })
+    // Duplicate the list items
+    if (totalItems > 0) {
+      $list.children().each((_, item) => {
+        $(item)
+          .children(':first')
+          .clone(false)
+          .appendTo($carousel)
+          .wrap('<div class="item"></div>')
+      })
+    }
   }
 
   // Janky fix to control pre-rendering issues with OwlCarousel
   setTimeout(() => {
-    $list.owlCarousel(_omitBy({
-      center       : _get(options, 'center', false),
+    const carouselConfig = _omitBy({
+      autoWidth    : _get(options, 'autoWidth', true),
+      center       : _get(options, 'center', true),
       dots         : _get(options, 'dots', false),
       itemElement  : _get(options, 'itemElement', null),
       items        : _get(options, 'items', 1),
@@ -163,17 +137,26 @@ function bindCarouselToElement(
       stagePadding : _get(options, 'stagePadding', 0),
 
       responsive: {
+        // Mobile
         [breakpoints.extraSmall]: _omitBy({}, _isNil),
 
+        // Large mobile (landscape) and tablets
         [breakpoints.tablet]: _omitBy({
-          items : itemsForTablet,
+          center : _get(options, `breakpoint.${breakpoints.tablet}.center`, false),
+          items  : _get(options, `breakpoint.${breakpoints.tablet}.items`, 3),
         }, _isNil),
 
+        // Tablets (landscape) and small desktop browsers
         [breakpoints.desktop]: _omitBy({
-          items: itemsForDesktop,
+          center : _get(options, `breakpoint.${breakpoints.desktop}.center`, false),
+          items  : _get(options, `breakpoint.${breakpoints.desktop}.items`, 3),
         }, _isNil),
       },
-    }, _isNil))
+    }, _isNil)
+
+    console.log(carouselConfig)
+
+    // $list.owlCarousel(carouselConfig)
   }, 200)
 }
 

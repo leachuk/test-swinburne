@@ -9,7 +9,7 @@
         <header
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/header"
-            componentId="header">
+            componentId="header_0">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -17,7 +17,7 @@
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
-            componentId="article_">
+            componentId="article_0">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -25,7 +25,7 @@
         <footer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/footer"
-            componentId="footer">
+            componentId="footer_0">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>

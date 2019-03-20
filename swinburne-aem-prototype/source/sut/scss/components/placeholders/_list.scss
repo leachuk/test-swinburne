@@ -70,7 +70,7 @@
   }
 
   // Create the default page list child variant sizes
-  @include pagelist-variant($selector-only: false) {
+  @include pagelist-variant {
     flex: 0 1 100%;
 
     @include media-breakpoint-up(md) {

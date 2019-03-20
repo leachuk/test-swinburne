@@ -211,12 +211,11 @@
 }
 
 /// Page List variant generator
-@mixin pagelist-variant($selector: false, $selector-only: true) {
+@mixin pagelist-variant($selector: false) {
   $selector: if($selector != false, unquote($selector), $selector);
 
-  #{if($selector-only != false, &, '')}#{if($selector != false, unquote($selector), '')} > .content {
-    > ul > li,
-    > div:not(.owl-carousel) {
+  #{if($selector != false, unquote($selector), '')} > .content {
+    > ul > li {
       @content;
     }
   }

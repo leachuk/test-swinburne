@@ -162,7 +162,10 @@ function bindCarouselToElement(
       },
     }, _isNil)
 
+    // Set the parent list as 'ready'
     parent.classList.add('owl-ready')
+
+    // Create the carousel instance
     $list.owlCarousel(carouselConfig)
   }, 200)
 }

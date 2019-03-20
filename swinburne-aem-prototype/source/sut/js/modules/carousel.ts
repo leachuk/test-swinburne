@@ -1,3 +1,4 @@
+import _debounce from 'lodash/debounce'
 import _get from 'lodash/get'
 import _isNil from 'lodash/isNil'
 import _omitBy from 'lodash/omitBy'
@@ -54,6 +55,15 @@ function getNavTextElements(): string[] {
     '<i class="fal fa-long-arrow-left"></i>',
     '<i class="fal fa-long-arrow-right"></i>',
   ]
+}
+
+/**
+ * Builds a basic list of classes for the navigation buttons.
+ *
+ * @returns {string[]}
+ */
+function getNavClasses(): string[] {
+  return ['owl-prev btn', 'owl-next btn']
 }
 
 /**
@@ -130,18 +140,20 @@ function bindCarouselToElement(
   // Janky fix to control pre-rendering issues with OwlCarousel
   setTimeout(() => {
     const carouselConfig = _omitBy({
-      autoWidth    : _get(options, 'autoWidth', true),
-      center       : _get(options, 'center', false),
-      dots         : _get(options, 'dots', false),
-      items        : _get(options, 'items', 1),
-      loop         : _get(options, 'loop', false),
-      margin       : _get(options, 'margin', margins.default),
-      mouseDrag    : _get(options, 'mouseDrag', false),
-      nav          : _get(options, 'nav', true),
-      navText      : _get(options, 'navText', getNavTextElements()),
-      slideBy      : _get(options, 'slideBy', 1),
-      stageElement : _get(options, 'stageElement', null),
-      stagePadding : _get(options, 'stagePadding', 0),
+      autoWidth         : _get(options, 'autoWidth', true),
+      center            : _get(options, 'center', false),
+      dots              : _get(options, 'dots', false),
+      items             : _get(options, 'items', 1),
+      loop              : _get(options, 'loop', false),
+      margin            : _get(options, 'margin', margins.default),
+      mouseDrag         : _get(options, 'mouseDrag', false),
+      nav               : _get(options, 'nav', true),
+      navClass          : _get(options, 'navClass', getNavClasses()),
+      navContainerClass : _get(options, 'navContainerClass', 'owl-nav btn-group btn-group-sm'),
+      navText           : _get(options, 'navText', getNavTextElements()),
+      slideBy           : _get(options, 'slideBy', 1),
+      stageElement      : _get(options, 'stageElement', null),
+      stagePadding      : _get(options, 'stagePadding', 0),
 
       responsive: {
         // Mobile
@@ -167,6 +179,14 @@ function bindCarouselToElement(
     parent.classList.add('owl-ready')
 
     // Create the carousel instance
+    $list.on('initialized.owl.carousel', _debounce((event: Event) => {
+      const $target = $(event.target as HTMLElement)
+      const $nav    = $target.find('.owl-nav')
+
+      $nav.attr('aria-label', 'Carousel navigation')
+      $nav.attr('role', 'group')
+    }, 500))
+
     $list.owlCarousel(carouselConfig)
   }, 200)
 }

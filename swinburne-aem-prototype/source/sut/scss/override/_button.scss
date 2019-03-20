@@ -143,15 +143,6 @@
     }
   }
 
-  & + & {
-    margin-top: $spacing-sm;
-
-    @include media-breakpoint-up(md) {
-      margin-left: 30px;
-      margin-top: 0;
-    }
-  }
-
   @include media-breakpoint-down(sm) {
     // Correct the button size for mobile devices when it is default
     &:not(&-sm):not(&-lg):not(&-link) {

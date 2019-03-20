@@ -4,30 +4,50 @@ $color-gray:  #d6d6d6;
 
 @import '~owl.carousel/src/scss/core';
 
-.owl-nav {
-  border: 1px solid #999;
+.owl-carousel .owl-nav {
   border-radius: 3px;
   display: inline-flex;
   margin-top: 20px;
   -webkit-tap-highlight-color: transparent;
 
-  button[class*='owl-'] {
+  > button.btn {
     align-items: center;
+    border: 1px solid color('grey-3');
     display: flex;
-    height: 38px;
     justify-content: center;
+    min-width: 50px;
     width: 50px;
-
-    + button[class*='owl-'] {
-      border-left: 1px solid #999;
-    }
 
     > i {
       font-size: map-get($icon-sizes, regular);
     }
 
+    &:hover:not(:active) {
+      background-color: color('grey-3');
+      color: color('charcoal');
+    }
+
     &.disabled {
       pointer-events: none;
+    }
+
+    // Alternative colours
+    .bg-charcoal & {
+      border-color: $white;
+
+      &:hover:not(:active) {
+        background-color: $white;
+        color: color('charcoal');
+      }
+    }
+
+    .bg-yellow & {
+      border-color: color('charcoal');
+
+      &:hover:not(:active) {
+        background-color: color('charcoal');
+        color: $white;
+      }
     }
   }
 

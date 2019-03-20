@@ -105,9 +105,8 @@
       display: flex;
 
       &-outer {
-        margin-bottom: -20px;
         margin-left: -10px;
-        padding-bottom: 20px;
+        overflow: visible;
         padding-left: 10px;
         width: calc(100% + 100% + 10px);
       }
@@ -158,10 +157,13 @@
 
   @include not-aem-author {
     &[data-modules*='carousel'] {
+      margin-bottom: -20px;
+      padding-bottom: 20px;
+
       &.owl-ready {
         margin-left: -15px;
         max-width: calc(100% + 30px);
-        overflow-x: hidden;
+        overflow: hidden;
         width: calc(100% + 30px);
 
         > .content {

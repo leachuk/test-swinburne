@@ -105,6 +105,14 @@ html:not(.aem-AuthorLayer-Edit) {
   .page-details ~ section.contentblock {
     padding: 30px 15px;
 
+    > div > div > .text {
+      margin-bottom: 15px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 30px;
+      }
+    }
+
     &:not(:last-of-type) {
       margin-bottom: 0;
     }

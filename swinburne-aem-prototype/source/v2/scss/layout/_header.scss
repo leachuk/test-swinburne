@@ -93,6 +93,24 @@
         top: $header-height-md;
         width: calc(100vw - 320px);
       }
+      &::before {
+        content: ' ';
+        transition: transform .25s ease-in-out;
+        transform: translateY(-100vh);
+        background-color: color('charcoal');
+        position: absolute;
+        display: flex;
+        z-index: -1;
+        width: 100%;
+        max-width: 320px;
+        left: 0;
+        top: 0;
+      }
+      &.show {
+        &::before {
+          transform: translateY(0);
+        }
+      }
     }
 
     @include media-breakpoint-down(sm) {
@@ -123,7 +141,6 @@
       height: $header-height-xl;
     }
     @include media-breakpoint-down(md) {
-      background-color: color('charcoal');
       max-width: 320px;
       overflow-y: auto;
     }
@@ -143,13 +160,14 @@
     }
   }
   &__admin {
-    background-color: color('charcoal');
     display: flex;
     font-size: 10px;
     height: 30px;
     padding: 0 $spacing-md;
     width: 100%;
-
+    @include media-breakpoint-up(lg) {
+      background-color: color('charcoal');
+    }
     @include media-breakpoint-up(xl) {
       height: 34px;
     }

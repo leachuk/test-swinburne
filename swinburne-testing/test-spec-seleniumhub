@@ -86,46 +86,11 @@ function monitorTests() {
     echo ""
     echo "================================================================="
     echo ""
-    while true; do
-        COMMAND=$(docker inspect --format='{{.Name}}: {{.State.Status}} started @ {{.State.StartedAt}}' $@ 2>&1) #Save command result in a var.
-        echo "$COMMAND" #Print command result, including new lines.
 
-        sleep 3 #Keep above's output on screen during 3 seconds before clearing it
-
-        #exit if all containers closed
-        if [[ ! "$COMMAND" == *"started"* ]]; then
-
-            if [[ "$DEFAULT_OPEN_REPORT" == "true" ]]; then
-                #walk thought reports and see if the reports are ready to open
-                for (( i=1; i<${OPEN_REPORTS_LENGTH}+1; i++ ));
-                do
-                    ITEM_VALUE=${OPEN_REPORTS[$i-1]}
-                    echo "CHECKING REPORT: [$i/${OPEN_REPORTS_LENGTH}] $ITEM_VALUE"
-                    if [[ -e "$ITEM_VALUE/$DEFAULT_REPORT_PATH" ]]; then
-                        echo "OPENING REPORT: $ITEM_VALUE/$DEFAULT_REPORT_PATH"
-                        OPEN_REPORT=$(groovy -Dproject.buildDirectory=$ITEM_VALUE openReport.groovy)
-                    fi
-                done
-            fi
-
-            echo "ALL DONE"
-            break
-        fi
-
-        #Following code clears previously printed lines
-        LINES=$(echo "$COMMAND" | wc -l) #Calculate number of lines for the output previously printed
-        for (( i=1; i <= $(($LINES)); i++ ));do #For each line printed as a result of "$COMMAND"
-            tput cuu1 #Move cursor up by one line
-            tput el #Clear the line
-        done
-
-        #Allow for the spurious \n when using --format with inspect
-        if [[ -z "${COMMAND##\n*}" ]]; then
-            tput cuu1 #Move cursor up by one line
-            tput el #Clear the line
-        fi
-
-    done
+    docker logs -f $@ > docker-log-stdout-$(date +%s).log &
+    docker logs -f $@
+    docker stop $@
+    docker rm $@
 }
 
 function testHub() {

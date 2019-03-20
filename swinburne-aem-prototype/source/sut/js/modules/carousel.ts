@@ -35,20 +35,21 @@ let carousels: NodeListOf<Element>
 let lastWindowWidth: number = 0
 
 /**
- * Page list configuration.
+ * Retrieves the list configuration for the current `list`.
  *
- * @param {HTMLElement} pagelist The page list element
+ * @param {HTMLElement} list List element
+ * @return {CarouselOptions}
  */
-function pageListConfiguration(pagelist: HTMLElement): CarouselOptions {
+function getListConfiguration(list: HTMLElement): CarouselOptions {
   return {}
 }
 
 /**
  * Builds a basic list of elements for the previous/next nav buttons.
  *
- * @return {Array}
+ * @return {string[]}
  */
-function getNavTextElements() {
+function getNavTextElements(): string[] {
   return [
     '<i class="fal fa-long-arrow-left"></i>',
     '<i class="fal fa-long-arrow-right"></i>',
@@ -170,7 +171,23 @@ function bindCarouselToElement(
   }, 200)
 }
 
-function loopAndGenerateCarousels(needsRefresh = false) {
+/**
+ * Attempts to detect the give `type` using the `list` element given.
+ *
+ * @param {HTMLElement} list Parent element containing the list
+ * @param {string} type Type of list to detect
+ * @return {boolean}
+ */
+function detectListType(list: HTMLElement, type: string): boolean {
+  return list.classList.contains(type)
+}
+
+/**
+ * Detects and creates a carousel instance for the target elements.
+ *
+ * @param {boolean} [needsRefresh=false] Force refresh the carousel?
+ */
+function loopAndGenerateCarousels(needsRefresh: boolean = false) {
   carousels.forEach((carousel) => {
     const list: HTMLElement = carousel as HTMLElement
 
@@ -178,8 +195,9 @@ function loopAndGenerateCarousels(needsRefresh = false) {
     let target: HTMLElement | null = null
 
     switch (true) {
-      case list.classList.contains('pagelist'):
-        config = pageListConfiguration(list)
+      case detectListType(list, 'newslist'):
+      case detectListType(list, 'pagelist'):
+        config = getListConfiguration(list)
         target = list.querySelector('ul')
         break
 

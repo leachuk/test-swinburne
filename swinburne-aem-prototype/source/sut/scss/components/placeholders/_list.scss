@@ -173,13 +173,23 @@
       &:not(.owl-ready) .owl-carousel {
         flex-wrap: nowrap;
         margin-left: -$list-item-margin;
-        overflow: auto;
+        overflow: hidden;
 
         > .item {
           margin-left: $list-item-margin;
 
+          @include media-breakpoint-down(sm) {
+            &:nth-child(n+3) {
+              display: none;
+            }
+          }
+
           @include media-breakpoint-up(md) {
             margin-left: $list-item-md-margin;
+
+            &:nth-child(n+4) {
+              display: none;
+            }
           }
 
           @include media-breakpoint-up(lg) {

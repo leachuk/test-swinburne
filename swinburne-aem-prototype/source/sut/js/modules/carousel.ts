@@ -25,6 +25,12 @@ const breakpoints = {
   tablet       : parseInt(sassVars['breakpoint-md'], 10),
 }
 
+const margins = {
+  default : parseInt(sassVars['list-item-margin'], 10),
+  desktop : parseInt(sassVars['list-item-lg-margin'], 10),
+  tablet  : parseInt(sassVars['list-item-md-margin'], 10),
+}
+
 let carousels: NodeListOf<Element>
 let lastWindowWidth: number = 0
 
@@ -124,12 +130,11 @@ function bindCarouselToElement(
   setTimeout(() => {
     const carouselConfig = _omitBy({
       autoWidth    : _get(options, 'autoWidth', true),
-      center       : _get(options, 'center', true),
+      center       : _get(options, 'center', false),
       dots         : _get(options, 'dots', false),
-      itemElement  : _get(options, 'itemElement', null),
       items        : _get(options, 'items', 1),
       loop         : _get(options, 'loop', false),
-      margin       : _get(options, 'margin', 0),
+      margin       : _get(options, 'margin', margins.default),
       mouseDrag    : _get(options, 'mouseDrag', false),
       nav          : _get(options, 'nav', true),
       navText      : _get(options, 'navText', getNavTextElements()),
@@ -145,24 +150,24 @@ function bindCarouselToElement(
         [breakpoints.tablet]: _omitBy({
           center : _get(options, `breakpoint.${breakpoints.tablet}.center`, false),
           items  : _get(options, `breakpoint.${breakpoints.tablet}.items`, 3),
+          margin : _get(options, 'breakpoint.${breakpoints.tablet}.margin', margins.tablet),
         }, _isNil),
 
         // Tablets (landscape) and small desktop browsers
         [breakpoints.desktop]: _omitBy({
           center : _get(options, `breakpoint.${breakpoints.desktop}.center`, false),
           items  : _get(options, `breakpoint.${breakpoints.desktop}.items`, 3),
+          margin : _get(options, 'breakpoint.${breakpoints.tablet}.margin', margins.desktop),
         }, _isNil),
       },
     }, _isNil)
-
-    console.log(carouselConfig)
 
     parent.classList.add('owl-ready')
     $list.owlCarousel(carouselConfig)
   }, 200)
 }
 
-const loopAndGenerateCarousels = (needsRefresh = false) => {
+function loopAndGenerateCarousels(needsRefresh = false) {
   carousels.forEach((carousel) => {
     const list: HTMLElement = carousel as HTMLElement
 

@@ -21,12 +21,20 @@
       display: block;
       width: 100%;
 
-      // AEM will always supply us with images in the JPEG format so we can easily enforce
-      // the minimum width of the image when it is.
       &[src$='jpeg'],
-      &[src$='jpg'] {
+      &[src$='jpg'],
+      &[src$='png'] {
+        max-height: 145px;
         min-height: 100%;
         min-width: 100%;
+
+        @include media-breakpoint-up(md) {
+          max-height: 160px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          max-height: 210px;
+        }
       }
 
       // Handle SVG images slightly different so they don't stretch when they shouldn't

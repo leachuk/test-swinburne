@@ -91,51 +91,57 @@
 }
 
 %component-list-carousel {
+  &.owl-ready .owl-carousel:not(.owl-loaded) {
+    @include make-container-max-widths;
+
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+  }
+
   .owl-carousel {
     .owl-stage {
       display: flex;
-      margin-left: -$list-item-margin;
 
       &-outer {
         margin-bottom: -20px;
+        margin-left: -10px;
         padding-bottom: 20px;
-        width: calc(100% + 100%);
-      }
-
-      @include media-breakpoint-up(md) {
-        margin-left: -($list-item-md-margin / 2);
-      }
-
-      @include media-breakpoint-up(lg) {
-        margin-left: -($list-item-lg-margin / 2);
+        padding-left: 10px;
+        width: calc(100% + 100% + 10px);
       }
     }
 
-    .owl-item {
+    .owl-item > .item,
+    > .item {
+      height: 100%;
+      width: 100%;
+    }
+
+    .owl-item,
+    > .item {
       display: flex;
+      flex-basis: 272px;
       float: none;
       height: auto;
+      max-width: 272px;
       min-height: 100%;
+      min-width: 272px;
       transition: $transition-fade;
-
-      > .item {
-        height: 100%;
-        padding-left: $list-item-md-margin / 2;
-        padding-right: $list-item-md-margin / 2;
-        width: 100%;
-
-        @include media-breakpoint-up(lg) {
-          padding-left: $list-item-lg-margin / 2;
-          padding-right: $list-item-lg-margin / 2;
-        }
-      }
 
       &:not(.active) {
         opacity: .5;
         pointer-events: none;
       }
 
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(md) {
+        flex-basis: 260px;
+        max-width: 260px;
+        min-width: 260px;
+      }
+
+      @include media-breakpoint-up(xl) {
         flex-basis: 352px;
         max-width: 352px;
         min-width: 352px;
@@ -152,8 +158,15 @@
 
   @include not-aem-author {
     &[data-modules*='carousel'].owl-ready {
-      max-width: 100%;
+      margin-left: -15px;
+      max-width: calc(100% + 30px);
       overflow-x: hidden;
+      width: calc(100% + 30px);
+
+      > .content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
 
     // &[data-list-split-enabled='true'] ul {
@@ -170,63 +183,4 @@
     //   }
     // }
   }
-
-  // &[data-modules*='carousel'] {
-  //   max-width: 100%;
-  //   overflow-x: hidden;
-
-  //   ul.owl-carousel {
-  //     @include make-container(0);
-  //     @include make-container-max-widths;
-
-  //     display: block;
-  //     visibility: hidden;
-
-  //     .owl-stage {
-  //       display: flex;
-  //       margin-left: -$list-item-margin;
-
-  //       &-outer {
-  //         margin-bottom: -20px;
-  //         padding-bottom: 20px;
-  //         width: calc(100% + 100%);
-  //       }
-
-  //       @include media-breakpoint-up(md) {
-  //         margin-left: -$list-item-md-margin;
-  //       }
-
-  //       @include media-breakpoint-up(lg) {
-  //         margin-left: -$list-item-lg-margin;
-  //       }
-  //     }
-
-  //     .owl-item {
-  //       flex-basis: 352px + $list-item-margin;
-  //       float: none;
-  //       max-width: 352px + $list-item-margin;
-  //       padding-left: $list-item-margin / 2;
-  //       padding-right: $list-item-margin / 2;
-  //       transition: $transition-fade;
-  //       // stylelint-disable-next-line
-  //       width: 352px + $list-item-margin !important;
-
-  //       &:not(.active) {
-  //         opacity: .5;
-  //         pointer-events: none;
-  //       }
-
-  //       // @include media-breakpoint-up(md) {
-  //       //   margin-left: $list-item-md-margin;
-  //       // }
-
-  //       // @include media-breakpoint-up(lg) {
-  //       //   margin-left: $list-item-lg-margin;
-  //       // }
-  //     }
-
-  //     &.owl-loaded {
-  //       visibility: visible;
-  //     }
-  //   }
 }

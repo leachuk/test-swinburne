@@ -210,6 +210,10 @@
           flex-direction: column;
         }
       }
+
+      @include media-breakpoint-up(lg) {
+        justify-content: flex-end;
+      }
     }
     @include media-breakpoint-down(md) {
       display: flex;

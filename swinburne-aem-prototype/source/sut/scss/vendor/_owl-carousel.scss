@@ -6,9 +6,14 @@ $color-gray:  #d6d6d6;
 
 .owl-carousel .owl-nav {
   border-radius: 3px;
-  display: inline-flex;
   margin-top: 20px;
   -webkit-tap-highlight-color: transparent;
+
+  // Small workaround to ensure the navigation buttons are always visible
+  &,
+  &.disabled {
+    display: inline-flex;
+  }
 
   > button.btn {
     align-items: center;

@@ -72,20 +72,13 @@ function getButton(title, level) {
 function setNavToggler() {
   const $button = $('.brand-header button[data-toggle="collapse"]');
   let openContent = $button.html();
-  $button.html(`<div>${openContent}</div>`);
-  openContent = $button.html();
+  openContent = `<div>${openContent}</div>`;
+  $button.html(openContent);
 
   let closeContent = '<div><i class="icon fal fa-times"></i>';
   closeContent += '<span class="link-text">Close</span></div>';
 
-  $collapsible.on({
-    'show.bs.collapse': () => {
-      $button.html(closeContent);
-    },
-    'hide.bs.collapse':  () => {
-      $button.html(openContent);
-    },
-  })
+  $button.prepend(closeContent);
 }
 
 function setBackButtons() {

@@ -30,16 +30,62 @@
       font-weight: 700;
       margin-left: $spacing-xs;
       width: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
       div {
+        width: 100%;
+        transition: transform .3s ease-in-out, opacity .6s ease-in-out;
         & > * {
-          display: inline-flex;
           vertical-align: middle;
         }
-        i {
-          margin-right: 3px;
+        &:first-child {
+          transform: translateY(-16px);
+          opacity: 0;
+          .icon {
+            margin-left: -12px;
+          }
+          .link-text {
+            margin-left: $spacing-2xs + 1px;
+          }
+        }
+        &:last-child {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
+      &[aria-expanded='true'] {
+        div {
+          &:first-child {
+            transform: translateY(16px);
+            opacity: 1;
+          }
+          &:last-child {
+            transform: translateY(29px);
+            opacity: 0;
+          }
+        }
 
+      }
+      @include media-breakpoint-between(md, md) {
+        div {
+          &:last-child {
+            transform: translateY(5px);
+          }
+        }
+        &[aria-expanded='true'] {
+          div {
+            &:first-child {
+              transform: translateY(21px);
+            }
+            &:last-child {
+              transform: translateY(34px);
+            }
+          }
+
+        }
+      }
       @include media-breakpoint-up(lg) {
         display: none !important;
       }
@@ -74,7 +120,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: calc(100vh - 47px);
+    height: 0;
     left: 0;
     margin-top: 47px;
     position: fixed;
@@ -82,8 +128,14 @@
     width: 100%;
 
     @include media-breakpoint-down(md) {
-      opacity: 0;
-      transition: opacity .3s ease-in-out;
+      transition: height .3s ease-in-out;
+      .nav-link,
+      .pagelist ul > li > a,
+      .text,
+      .link {
+        opacity: 0;
+        transition: opacity .25s ease-in-out;
+      }
       &::after {
         background-color: rgba($white, .5);
         content: ' ';
@@ -95,30 +147,21 @@
         top: $header-height-md;
         width: calc(100vw - 320px);
       }
-      &::before {
-        content: ' ';
-        transition: transform .25s ease-in-out;
-        transform: translateY(-100vh);
-        background-color: color('charcoal');
-        position: absolute;
-        display: flex;
-        z-index: -1;
-        width: 100%;
-        max-width: 320px;
-        left: 0;
-        top: 0;
-      }
       &.show {
-        &::before {
-          transform: translateY(0);
-        }
-        &:not(.collapsing) {
+        height: calc(100vh - 60px);
+        .text,
+        .nav-link,
+        .pagelist ul > li > a,
+        .link {
           opacity: 1;
         }
       }
     }
 
     @include media-breakpoint-down(sm) {
+      &.show {
+        height: calc(100vh - 47px);
+      }
       &::after {
         height: calc(100% - #{$header-height-sm});
         top: $header-height-sm;
@@ -146,6 +189,7 @@
       height: $header-height-xl;
     }
     @include media-breakpoint-down(md) {
+      background-color: color('charcoal');
       max-width: 320px;
       overflow-y: auto;
     }
@@ -165,6 +209,7 @@
     }
   }
   &__admin {
+    background-color: color('charcoal');
     display: flex;
     font-size: 10px;
     height: 30px;
@@ -178,6 +223,9 @@
     }
     @include media-breakpoint-down(md) {
       padding-right: 0;
+      .text {
+        margin-bottom: $spacing-sm;
+      }
     }
     a {
       color: $white;
@@ -369,8 +417,8 @@
           background-color: color('charcoal');
           box-shadow: none;
           height: calc(100vh - 47px);
-          left: $spacing-2xs !important;
-          margin-top: -$spacing-2xs;
+          //left: $spacing-2xs !important;
+          //margin-top: -$spacing-2xs;
           overflow: auto;
           padding-right: 0;
           position: absolute;
@@ -378,6 +426,7 @@
           width: 100%;
           z-index: 5;
           transform: none !important;
+          overflow-x: hidden;
         }
         button.link {
           background: transparent;

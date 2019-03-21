@@ -12,6 +12,8 @@ declare module '*.scss' {
   export = content;
 }
 
+declare module 'owl.carousel';
+
 declare interface Window { CQ: any; }
 
 declare function ObjectFitImages(): void;

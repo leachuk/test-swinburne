@@ -1,4 +1,6 @@
-import 'bootstrap'
+import 'bootstrap/js/dist/collapse'
+import 'bootstrap/js/dist/dropdown'
+import 'bootstrap/js/dist/util'
 
 import Carousels from '@global/modules/carousel'
 import NavToggler from '@global/modules/header/nav-toggler'
@@ -34,8 +36,10 @@ $(() => {
   Subscribers()
 
   // 'object-fit' polyfill for unsupported browsers
-  ObjectFitImages()
+  import(/* webpackChunkName: "chunks/object-fit-images" */ 'object-fit-images')
+    .then(({ default: objectFitImages }) => objectFitImages())
 
+  // Header navigation toggler
   NavToggler()
 
   // Open all the 'collapse' elements on the page when in author

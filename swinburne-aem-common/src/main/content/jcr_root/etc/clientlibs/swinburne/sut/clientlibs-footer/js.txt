@@ -1,2 +1,2 @@
-../js/vendor.js
+../js/vendors.js
 ../js/app.js

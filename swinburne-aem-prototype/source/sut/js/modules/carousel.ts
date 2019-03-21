@@ -275,17 +275,19 @@ export default () => {
   lastWindowWidth = getWindowWidth()
 
   if (carousels.length && !isAuthorEditMode()) {
-    loopAndGenerateCarousels()
-
-    $(window).off('resize.carouselRefresh').on('resize.carouselRefresh', _throttle(() => {
-      // If the width of the window matches the last known width, do nothing!
-      if (getWindowWidth() === lastWindowWidth) {
-        return
-      }
-
+    import(/* webpackChunkName: "chunks/owl.carousel" */ 'owl.carousel').then(() => {
       loopAndGenerateCarousels()
 
-      lastWindowWidth = getWindowWidth()
-    }, 200))
+      $(window).off('resize.carouselRefresh').on('resize.carouselRefresh', _throttle(() => {
+        // If the width of the window matches the last known width, do nothing!
+        if (getWindowWidth() === lastWindowWidth) {
+          return
+        }
+
+        loopAndGenerateCarousels()
+
+        lastWindowWidth = getWindowWidth()
+      }, 200))
+    })
   }
 }

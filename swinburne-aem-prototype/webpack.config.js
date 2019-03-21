@@ -28,7 +28,7 @@ module.exports = env => {
     return
   }
 
-  const PUBLIC_PATH_AEM = `/etc/clientlibs/${env.clientLibsFolder || 'swinburne'}/`
+  const PUBLIC_PATH_AEM = `/etc/clientlibs/${env.clientLibsFolder || 'swinburne'}/${env.project}/`
 
   const project = config[env.project]
 
@@ -50,7 +50,7 @@ module.exports = env => {
 
     output: {
       filename      : 'js/[name].js',
-      chunkFilename : 'js/[name].[chunkhash].js',
+      chunkFilename : `js/[name]${env.prod === true ? '.[chunkhash]' : ''}.js`,
       path          : resolve(PUBLIC_PATH, env.project),
       publicPath    : PUBLIC_PATH_AEM,
     },
@@ -201,6 +201,8 @@ module.exports = env => {
       ],
 
       splitChunks: {
+        chunks: 'all',
+
         cacheGroups: {
           default: false,
           vendors: false,
@@ -253,9 +255,8 @@ module.exports = env => {
         shorthands  : true,
       }),
       new ProvidePlugin({
-        FastClick       : 'fastclick',
-        ObjectFitImages : 'object-fit-images',
-        PubSub          : 'pubsub-js',
+        FastClick : 'fastclick',
+        PubSub    : 'pubsub-js',
 
         // Expose the Bootstrap modules to the global namespace
         // https://github.com/shakacode/bootstrap-loader#bootstrap-4-internal-dependency-solution

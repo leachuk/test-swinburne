@@ -18,7 +18,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on mobile"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
@@ -34,14 +34,14 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on mobile with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
         waitForAuthorPreviewPage()
 
         then: 'I click on the Explore button'
-        js.exec("\$(\"${selector} #link_BNGXYPV2I\").click(); return true;")
+        js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
 
 
         then: 'Wait for the component to appear on the page'
@@ -55,14 +55,14 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on mobile with menu open and link clicked"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
         waitForAuthorPreviewPage()
 
         then: 'I click on the Explore button'
-        js.exec("\$(\"${selector} #link_BNGXYPV2I\").click(); return true;")
+        js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
 
 
         then: 'Wait for the component to appear on the page'
@@ -81,7 +81,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on tablet"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeMD()
@@ -97,14 +97,14 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on tablet with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeMD()
         waitForAuthorPreviewPage()
 
         then: 'I click on the Explore button'
-        js.exec("\$(\"${selector} #link_BNGXYPV2I\").click(); return true;")
+        js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
 
 
         then: 'Wait for the component to appear on the page'
@@ -118,14 +118,14 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on tablet with menu open and link clicked"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeMD()
         waitForAuthorPreviewPage()
 
         then: 'I click on the Explore button'
-        js.exec("\$(\"${selector} #link_BNGXYPV2I\").click(); return true;")
+        js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
 
 
         then: 'Wait for the component to appear on the page'
@@ -144,7 +144,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Small"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeLG()
@@ -160,7 +160,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Small with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeLG()
@@ -179,7 +179,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Large"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeXLG()
@@ -195,7 +195,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Large with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#header_FIEH48SBE"
+        def selector = "#swinburne_global_header"
 
         when: 'I am in the component showcase page'
         setWindowSizeXLG()

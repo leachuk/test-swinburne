@@ -5,6 +5,7 @@ let $collapsible : JQuery
 let $window: JQuery<Window>
 
 function closeNavigation(element) {
+  console.log(element.target);
   $(element.target).parent().removeClass('show');
 }
 

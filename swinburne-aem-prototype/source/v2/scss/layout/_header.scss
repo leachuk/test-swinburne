@@ -356,6 +356,7 @@
         box-shadow: none;
         margin-right: 0;
         width: 100%;
+        transition: color .3s ease-in-out, background-color .3s ease-in-out;
         &,
         &[aria-expanded='true'],
         &:hover {
@@ -364,6 +365,14 @@
         }
         &::before {
           display: none;
+        }
+        &:active,
+        &:hover {
+          color: color('charcoal');
+          background-color: color('yellow');
+          width: calc(100% + 20px);
+          margin-left: -$spacing-md;
+          padding-left: $spacing-md;
         }
       }
       @include media-breakpoint-between(md, md) {
@@ -476,6 +485,11 @@
               &[aria-expanded='true']{
                 border-bottom: 1px solid color('grey-2');
                 padding-top: 0;
+              }
+              &:active,
+              &:hover {
+                color: color('charcoal');
+                width: calc(100% + 20px);
               }
             }
             @include media-breakpoint-down(sm) {

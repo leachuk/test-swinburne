@@ -89,7 +89,7 @@ function determineListNeeds(list: HTMLElement, options: CarouselOptions): Carous
 
   // Default scenario (3 items)
   } else {
-    options.destroy       = windowWidth >= breakpoints.desktop && itemsTotal <= 3
+    options.destroy       = windowWidth >= 768 && itemsTotal <= 3
     options.needsCarousel = !isReady && (windowWidth < 768 || (windowWidth >= 768 && itemsTotal > 3))
     options.refreshOnly   = isReady
   }
@@ -121,14 +121,6 @@ function bindCarouselToElement(
   parent: HTMLElement,
   options: CarouselOptions,
 ) {
-  // Do we need to blow this instance away?
-  if (options.destroy === true) {
-    $(parent).find('.owl-carousel').owlCarousel('destroy').remove()
-
-    parent.classList.remove('owl-ready')
-    return
-  }
-
   let $list = $(element)
 
   const totalItems   = $list.find('li').length
@@ -246,10 +238,8 @@ function detectListType(list: HTMLElement, type: string): boolean {
 
 /**
  * Detects and creates a carousel instance for the target elements.
- *
- * @param {boolean} [needsRefresh=false] Force refresh the carousel?
  */
-function loopAndGenerateCarousels(needsRefresh: boolean = false) {
+function loopAndGenerateCarousels() {
   carousels.forEach((carousel) => {
     const list: HTMLElement = carousel as HTMLElement
 
@@ -269,7 +259,9 @@ function loopAndGenerateCarousels(needsRefresh: boolean = false) {
     }
 
     if (target) {
-      if (config.needsCarousel && config.refreshOnly === false) {
+      if (config.destroy === true) {
+        $(list).removeClass('owl-ready').find('.owl-carousel').remove()
+      } else if (config.needsCarousel && config.refreshOnly === false) {
         bindCarouselToElement(target, list, config)
       } else {
         $(list).find('.owl-carousel').trigger('refresh.owl.carousel')
@@ -291,7 +283,7 @@ export default () => {
         return
       }
 
-      loopAndGenerateCarousels(true)
+      loopAndGenerateCarousels()
 
       lastWindowWidth = getWindowWidth()
     }, 200))

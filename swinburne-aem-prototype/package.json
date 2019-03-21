@@ -19,6 +19,7 @@
     "bloodhound-js": "^1.2.3",
     "bootstrap": "4.2.1",
     "classnames": "^2.2.6",
+    "core-js": "^3.0.0",
     "es6-promise": "^4.2.6",
     "fastclick": "^1.0.6",
     "jquery": "^3.3.1",

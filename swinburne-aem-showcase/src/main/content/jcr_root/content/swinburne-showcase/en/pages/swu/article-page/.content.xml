@@ -13,7 +13,7 @@
         <header
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/header"
-            componentId="header_QGBUL5GXN">
+            componentId="header">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
@@ -21,7 +21,7 @@
         <article
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/article"
-            componentId="article_Y8ZRJFYXL">
+            componentId="article">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
@@ -30,22 +30,22 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/news-details"
-                    componentId="news_details_7SQJEXJQO"
+                    componentId="news_details"
                     textIsRich="true"
                     titleType="[,]">
                     <secondaryImage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/componentsmedia/image"/>
                     <thumbnail
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"
+                        sling:resourceType="swinburne/componentsmedia/image"
                         fileReference="/content/dam/swinburne-showcase/en/components/content/download/change-as-good-holiday.jpg"/>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/componentsmedia/image"/>
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/componentslayout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -61,57 +61,57 @@
                     variant="container">
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/componentsmedia/image"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/video"/>
+                        sling:resourceType="swinburne/componentsmedia/video"/>
                     <par jcr:primaryType="nt:unstructured">
-                        <contentblock_2
+                        <contentblock
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/contentblock"
-                            componentId="contentblock_2"
+                            componentId="contentblock"
                             hideTopLink="true"
                             title="Related Articles"
                             titleType="h3"
                             variant="advsection">
                             <bgimage
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/componentsmedia/image"/>
                             <bgvideo
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/componentsmedia/image"/>
                             <newslist
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/lists/newslist"
-                                componentId="newslist_GT8GXKMHO"
+                                componentId="newslist"
                                 detailsBadge="cardImageTitleCategoryActionDate"
                                 listFrom="static"
                                 pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
                                 tagsMatch="any">
                                 <badgeThumbnail
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/media/image"/>
+                                    sling:resourceType="swinburne/componentsmedia/image"/>
                             </newslist>
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/componentslayout/container">
                                 <newslist_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/lists/newslist"
                                     componentId="newslist_1"
-                                    componentModifiers="[swinburne-showcase:component-style-modifier/margin/mb-30]"
                                     componentTheme="[swinburne-showcase:component-style-theme/lists/widths/large]"
                                     detailsBadge="cardImageTitleCategoryActionDate"
-                                    listFrom="static"
+                                    listFrom="children"
                                     pages="[/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details,/content/swinburne-showcase/en/styleguide/components/news-details]"
+                                    parentPage="/content/swinburne-showcase/en/pages/swu/article-list"
                                     sortOrder="asc"
                                     tagsMatch="any">
                                     <badgeThumbnail
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="aemdesign/components/media/image"/>
+                                        sling:resourceType="swinburne/componentsmedia/image"/>
                                 </newslist_1>
                             </par>
-                        </contentblock_2> 
+                        </contentblock>
                     </par>
                 </contentblock_1>
             </par>

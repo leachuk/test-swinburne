@@ -267,7 +267,7 @@
           &:hover,
           &:active {
             //@extend %yellow-links;
-            background-color: color('yellow');
+            background-color: color('yellow'); // todo add padding to links and not container.
             color: color('charcoal');
             margin-left: -$spacing-md;
             padding-left: $spacing-md;

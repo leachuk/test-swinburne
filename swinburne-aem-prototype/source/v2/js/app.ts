@@ -1,7 +1,8 @@
-import 'bootstrap';
+import 'bootstrap'
+
 import Carousels from '@global/modules/carousel'
-import Subscribers from '@global/modules/subscribers'
 import NavToggler from '@global/modules/header/nav-toggler'
+import Subscribers from '@global/modules/subscribers'
 
 import {
   TOPIC_HIDE_SUGGESTIONS,

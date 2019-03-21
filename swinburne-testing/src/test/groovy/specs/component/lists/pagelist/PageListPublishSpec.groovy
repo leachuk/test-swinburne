@@ -1,6 +1,7 @@
 package specs.component.lists.pagelist
 
 
+import spock.lang.Ignore
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
@@ -104,32 +105,6 @@ class PageListPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Page List: Default variant using Card badge in #viewport.label")
-    def "Page List: Default variant using Card badge"() {
-
-        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#pagelist4"
-        def selectorContainer = "#contentblock4 .contents"
-
-        when: "I am on the component showcase page"
-        setWindowSize(viewport)
-        waitForAuthorPreviewPage()
-
-        then: "The component should be on the page"
-        def component = waitForComponent(selector)
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
-
-        and: "Has five list items"
-        assert $("${selector} li").size() == 5
-
-        and: "Has card as contents"
-        assert $("${selector} li .card").size() == 5
-
-        where:
-        viewport << getViewPorts()
-    }
 
 
     @Unroll("Page List: Default variant using Horizontal badge in #viewport.label")
@@ -203,7 +178,7 @@ class PageListPublishSpec extends ComponentSpec {
         takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
 
         and: "Has two list items"
-        assert $("${selector} li").size() == 2
+        assert $("${selector} ul.list > li").size() == 2
 
         and: "Has image in first item"
         assert $("${selector} > div > ul > li.first > div > div.card-img-top > img").attr("alt") == "Page1"
@@ -257,63 +232,6 @@ class PageListPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Page List: Default with Thumbnail Override in #viewport.label")
-    def "Page List: Default with Thumbnail Override"() {
-
-        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#pagelist31"
-        def selectorContainer = "#contentblock31 .contents"
-
-        when: "I am on the component showcase page"
-        setWindowSize(viewport)
-        waitForAuthorPreviewPage()
-
-        then: "The component should be on the page"
-        def component = waitForComponent(selector)
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
-
-        and: "Has two list items"
-        assert $("${selector} li").size() == 3
-
-        and: "Last item should have thumbnail override from list"
-        assert $("${selector} ul:nth-child(2) img").attr("src").contains("/cablecar.jpg/")
-        takeScreenshot($(selectorContainer).firstElement(), "Last item should have thumbnail override from list")
-
-        where:
-        viewport << getViewPorts()
-    }
-
-    @Unroll("Page List: Default without Thumbnail Override in #viewport.label")
-    def "Page List: Default without Thumbnail Override"() {
-
-        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#pagelist32"
-        def selectorContainer = "#contentblock32 .contents"
-
-        when: "I am on the component showcase page"
-        setWindowSize(viewport)
-        waitForAuthorPreviewPage()
-
-        then: "The component should be on the page"
-        def component = waitForComponent(selector)
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
-
-        and: "Has two list items"
-        assert $("${selector} li").size() == 3
-
-        and: "Last item should have thumbnail override from page details"
-        assert $("${selector} ul:nth-child(2) img").attr("src").contains("/grass.jpg/")
-        takeScreenshot($(selectorContainer).firstElement(), "Last item should have thumbnail override from page details")
-
-
-        where:
-        viewport << getViewPorts()
-    }
-
     @Unroll("Page List: Card Action with Analytics #viewport.label")
     def "Page List: Card Action with Analytics"() {
 
@@ -331,17 +249,16 @@ class PageListPublishSpec extends ComponentSpec {
         def component = waitForComponent(selector)
         takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
 
-        and: "First page link should have attribute: data-layer-event"
-        assert $("${selector} ul li:nth-child(1) a").attr("data-layer-event").equals("site interaction")
+        and: "First page link should have attribute: data-layer-track"
+        assert $("${selector} ul li a").getAt(0).attr("data-layer-track").equals("true")
 
-        and: "First page link should have attribute: data-layer-linktype"
-        assert $("${selector} ul li:nth-child(1) a").attr("data-layer-linktype").equals("link")
+        and: "First page link should have attribute: data-layer-label"
+        assert $("${selector} ul li a").getAt(0).attr("data-layer-label").equals("link")
 
-        and: "First page link should have attribute: data-layer-linklocation"
-        assert $("${selector} ul li:nth-child(1) a").attr("data-layer-linklocation").equals("pagelist")
+        and: "First page link should have attribute: data-layer-location"
+        assert $("${selector} ul li a").getAt(0).attr("data-layer-location").equals("pagelist")
 
-        and: "First page link should have attribute: data-layer-linkdescription"
-        assert $("${selector} ul li:nth-child(1) a").attr("data-layer-linkdescription").equals("badge Link Description")
+
 
 
         where:

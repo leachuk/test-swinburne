@@ -85,7 +85,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/layout/header"
                             cancelInheritParent="true"
-                            componentId="header_FIEH48SBE"
+                            componentId="swinburne_global_header"
                             componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header]">
                             <bgimage
                                 jcr:primaryType="nt:unstructured"
@@ -117,7 +117,7 @@
                                         <link
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="swinburne/components/content/link"
-                                            componentId="link_BNGXYPV2I"
+                                            componentId="global_header_link"
                                             componentTheme="[swinburne-showcase:component-style-theme/content/link/navbar-toggler]"
                                             dataTarget="#header-nav-container"
                                             dataToggle="collapse"
@@ -226,8 +226,8 @@
                                                             componentId="pagelist_WHHYTX23O"
                                                             componentTheme="[swinburne-showcase:component-style-theme/lists/direction/horizontal]"
                                                             detailsBadge="default"
-                                                            listFrom="children"
-                                                            parentPage="/content/swinburne-showcase/en/pages/swu/top-navigation"
+                                                            listFrom="static"
+                                                            pages="[/content/swinburne-showcase/en/pages/swu/top-navigation/about,/content/swinburne-showcase/en/pages/swu/top-navigation/alumni,/content/swinburne-showcase/en/pages/swu/top-navigation/collaboration,/content/swinburne-showcase/en/pages/swu/top-navigation/contact,/content/swinburne-showcase/en/pages/swu/top-navigation/current-students,/content/swinburne-showcase/en/pages/swu/top-navigation/staff,/content/swinburne-showcase/en/pages/swu/top-navigation/library]"
                                                             tagsMatch="any">
                                                             <badgeThumbnail
                                                                 jcr:primaryType="nt:unstructured"

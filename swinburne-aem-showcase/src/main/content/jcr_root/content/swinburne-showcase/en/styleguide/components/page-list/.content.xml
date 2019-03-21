@@ -41,7 +41,7 @@
                     componentId="contentblock">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -61,7 +61,7 @@
                     componentId="contentblock2">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -81,7 +81,7 @@
                     componentId="contentblock3">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -92,7 +92,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_OXHFFXJJE"
-                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist"/>
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_36a"/>
                     </par>
                 </contentblock3>
                 <contentblock4
@@ -101,7 +101,7 @@
                     componentId="contentblock4">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -112,17 +112,17 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_1XHFFXJJE"
-                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_copy"/>
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_36b"/>
                     </par>
                 </contentblock4>
                 <contentblock5
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock5"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-grey-5]">
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/greys/bg-grey-5]">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -133,23 +133,17 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_2XHFFXJJE"
-                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist"/>
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_36a"/>
                     </par>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock5>
                 <contentblock6
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock6"
-                    componentModifiers="[swinburne-showcase:component-style-modifier/background/bg-yellow]">
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-yellow]">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -160,22 +154,17 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_4XHFFXJJE"
-                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist"/>
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_36a"/>
                     </par>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock6>
                 <contentblock7
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
                     componentId="contentblock7"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/greys/bg-grey-5]">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -186,22 +175,16 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_5XHFFXJJE"
-                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_copy"/>
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock36/par/pagelist_36b"/>
                     </par>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock7>
                 <contentblock8
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock8"
+                    componentId="contentblock8">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -212,14 +195,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_COQK8HAL9"
-                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock/par/pagelist"/>
+                            path="/content/swinburne-showcase/en/component/lists/page-list/jcr:content/article/par/contentblock37/par/pagelist"/>
                     </par>
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock8>
             </par>
         </article>

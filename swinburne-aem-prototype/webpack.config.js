@@ -2,18 +2,18 @@
 const { getIfUtils, removeEmpty }                          = require('webpack-config-utils')
 const { DefinePlugin, LoaderOptionsPlugin, ProvidePlugin } = require('webpack')
 
+const { relative, resolve }   = require('path')
 const CleanWebpackPlugin      = require('clean-webpack-plugin')
 const CopyWebpackPlugin       = require('copy-webpack-plugin')
 const EventHooksPlugin        = require('event-hooks-webpack-plugin')
+const exec                    = require('child_process').exec
 const ImageminPlugin          = require('imagemin-webpack-plugin').default
 const LodashPlugin            = require('lodash-webpack-plugin')
 const MiniCssExtractPlugin    = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const StyleLintPlugin         = require('stylelint-webpack-plugin')
+const TerserPlugin            = require('terser-webpack-plugin')
 const TsconfigPathsPlugin     = require('tsconfig-paths-webpack-plugin')
-const UglifyJsPlugin          = require('uglifyjs-webpack-plugin')
-const exec                    = require('child_process').exec
-const { relative, resolve }   = require('path')
 
 const config = require('./config.json')
 
@@ -158,19 +158,25 @@ module.exports = env => {
 
     optimization: {
       minimizer: [
-        new UglifyJsPlugin({
+        new TerserPlugin({
           cache     : true,
-          parallel  : true,
-          sourceMap : env.dev === true,
+          sourceMap : false,
 
-          uglifyOptions: {
+          extractComments: {
+            condition: true,
+
+            banner() {
+              return `Copyright 2018-${(new Date).getFullYear()} Swinburne Univerisity of Technology.`
+            },
+          },
+
+          terserOptions: {
             ecma     : 6,
-            mangle   : false,
+            safari10 : true,
             warnings : false,
 
             compress: {
-              drop_console : true,
-              warnings     : false,
+              drop_console: true,
             },
 
             output: {
@@ -179,6 +185,7 @@ module.exports = env => {
             },
           },
         }),
+
         new OptimizeCSSAssetsPlugin({
           canPrint     : true,
           cssProcessor : require('cssnano'),

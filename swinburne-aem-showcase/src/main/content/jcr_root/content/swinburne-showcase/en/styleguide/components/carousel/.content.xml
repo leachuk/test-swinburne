@@ -110,31 +110,6 @@
                                 tagsMatch="any"/>
                     </par>
                 </contentblock_carousel_pagelist_yellow>
-                <contentblock_carousel_pagelist_default_short
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock_carousel_pagelist_default_short">
-                    <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
-                        <contentblock_carousel_pagelist_default_short_title
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/text"
-                                componentId="contentblock_carousel_pagelist_default_short_title"
-                                text="&lt;h4>Dynamic Carousel - Default Background (Page List)&lt;/h4>&lt;p>The carousel won't take affect until the screen real estate becomes too small for each item to fit.&lt;/p>&#xd;&#xa;"
-                                textIsRich="true"/>
-                        <contentblock_carousel_pagelist_default_short_list
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/lists/pagelist"
-                                componentId="contentblock_carousel_pagelist_default_short_list"
-                                componentModules="[swinburne-showcase:component-style-module/lists/carousel]"
-                                detailsBadge="cardImageTagTitleAction"
-                                listFrom="static"
-                                pages="[/content/swinburne-showcase/en/component/lists/page-list/cards/page1,/content/swinburne-showcase/en/component/lists/page-list/cards/page2,/content/swinburne-showcase/en/component/lists/page-list/cards/page3]"
-                                sortOrder="asc"
-                                tagsMatch="any"/>
-                    </par>
-                </contentblock_carousel_pagelist_default_short>
                 <contentblock_carousel_newslist_default
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/contentblock"
@@ -212,6 +187,31 @@
                                 tagsMatch="any"/>
                     </par>
                 </contentblock_carousel_newslist_yellow>
+                <contentblock_carousel_pagelist_default_short
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock_carousel_pagelist_default_short">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/layout/container">
+                        <contentblock_carousel_pagelist_default_short_title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/content/text"
+                                componentId="contentblock_carousel_pagelist_default_short_title"
+                                text="&lt;h4>Dynamic Carousel (Page List)&lt;/h4>&lt;p>This carousel won't take affect until the screen real estate becomes too small for each item to fit.&lt;/p>&#xd;&#xa;"
+                                textIsRich="true"/>
+                        <contentblock_carousel_pagelist_default_short_list
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/lists/pagelist"
+                                componentId="contentblock_carousel_pagelist_default_short_list"
+                                componentModules="[swinburne-showcase:component-style-module/lists/carousel]"
+                                detailsBadge="cardImageTagTitleAction"
+                                listFrom="static"
+                                pages="[/content/swinburne-showcase/en/component/lists/page-list/cards/page1,/content/swinburne-showcase/en/component/lists/page-list/cards/page2,/content/swinburne-showcase/en/component/lists/page-list/cards/page3]"
+                                sortOrder="asc"
+                                tagsMatch="any"/>
+                    </par>
+                </contentblock_carousel_pagelist_default_short>
             </par>
         </article>
     </jcr:content>

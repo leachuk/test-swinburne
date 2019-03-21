@@ -15,7 +15,9 @@ declare interface BreakpointOptions {
 
 declare interface CarouselOptions {
   breakpoint?: BreakpointOptions,
-  refresh?: boolean,
+  destroy?: boolean,
+  needsCarousel: boolean,
+  refreshOnly: boolean
 }
 
 // Internal
@@ -42,7 +44,57 @@ let lastWindowWidth: number = 0
  * @return {CarouselOptions}
  */
 function getListConfiguration(list: HTMLElement): CarouselOptions {
-  return {}
+  let options = {
+    needsCarousel : true,
+    refreshOnly   : false,
+  }
+
+  // Determine if the carousel is needed
+  options = determineListNeeds(list, options)
+
+  return options
+}
+
+/**
+ * Determines the needs of the list is needed based on a few business rules.
+ *
+ * @param {HTMLElement} list List element
+ * @param {CarouselOptions} options Carousel options
+ * @returns {CarouselOptions}
+ */
+function determineListNeeds(list: HTMLElement, options: CarouselOptions): CarouselOptions {
+  const target      = list.querySelector('ul.list')
+  const windowWidth = getWindowWidth()
+
+  if (!target) {
+    console.warn('Unable to determine the target list!')
+    return options
+  }
+
+  const isReady     = list.classList.contains('owl-ready')
+  const itemsTotal  = target.children.length
+  const orientation = Math.abs(screen.orientation.angle)
+
+  // Quarter scenario (4 items)
+  if (list.classList.contains('theme--lists-quarter')) {
+    options.destroy = itemsTotal <= 4
+
+  // Equal scenario (2 items)
+  } else if (list.classList.contains('theme--lists-equal')) {
+    options.destroy = itemsTotal <= 2
+
+  // Full scenario (1 item)
+  } else if (list.classList.contains('theme--lists-fill')) {
+    options.destroy = itemsTotal === 1
+
+  // Default scenario (3 items)
+  } else {
+    options.destroy       = windowWidth >= breakpoints.desktop && itemsTotal <= 3
+    options.needsCarousel = !isReady && (windowWidth < 768 || (windowWidth >= 768 && itemsTotal > 3))
+    options.refreshOnly   = isReady
+  }
+
+  return options
 }
 
 /**
@@ -58,39 +110,29 @@ function getNavTextElements(): string[] {
 }
 
 /**
- * Builds a basic list of classes for the navigation buttons.
- *
- * @returns {string[]}
- */
-function getNavClasses(): string[] {
-  return ['owl-prev btn', 'owl-next btn']
-}
-
-/**
  * Binds `OwlCarousel` to the given target element.
  *
  * @param {HTMLElement} element An element to bind OwlCarousel to
  * @param {HTMLElement} parent The parent element of the carousel
  * @param {CarouselOptions} options Custom options for this carousel
- * @param {boolean} needsRefresh Should the carousel be completely refreshed?
  */
 function bindCarouselToElement(
   element: HTMLElement,
   parent: HTMLElement,
-  options: CarouselOptions = {},
-  needsRefresh: boolean = false,
+  options: CarouselOptions,
 ) {
+  // Do we need to blow this instance away?
+  if (options.destroy === true) {
+    $(parent).find('.owl-carousel').owlCarousel('destroy').remove()
+
+    parent.classList.remove('owl-ready')
+    return
+  }
+
   let $list = $(element)
 
   const totalItems   = $list.find('li').length
   const splitEnabled = parent.dataset.listSplitEnabled === 'true'
-
-  // First check before destorying the carousel, do we actually need to remove the current instance?
-  if (needsRefresh && options.refresh === true && $list.hasClass('owl-loaded')) {
-    $list.owlCarousel('destroy')
-  } else if (needsRefresh && options.refresh !== true) {
-    return
-  }
 
   // When a split is active we need to clone the list items into a mobile only version to ensure
   // the visual aspects of the list remain intact.
@@ -148,7 +190,7 @@ function bindCarouselToElement(
       margin            : _get(options, 'margin', margins.default),
       mouseDrag         : _get(options, 'mouseDrag', false),
       nav               : _get(options, 'nav', true),
-      navClass          : _get(options, 'navClass', getNavClasses()),
+      navClass          : _get(options, 'navClass', ['owl-prev btn', 'owl-next btn']),
       navContainerClass : _get(options, 'navContainerClass', 'owl-nav btn-group btn-group-sm'),
       navText           : _get(options, 'navText', getNavTextElements()),
       slideBy           : _get(options, 'slideBy', 1),
@@ -211,14 +253,15 @@ function loopAndGenerateCarousels(needsRefresh: boolean = false) {
   carousels.forEach((carousel) => {
     const list: HTMLElement = carousel as HTMLElement
 
-    let config: CarouselOptions = {}
+    let config: CarouselOptions = { needsCarousel: true, refreshOnly: false }
     let target: HTMLElement | null = null
 
     switch (true) {
+      case detectListType(list, 'eventlist'):
       case detectListType(list, 'newslist'):
       case detectListType(list, 'pagelist'):
         config = getListConfiguration(list)
-        target = list.querySelector('ul')
+        target = list.querySelector('ul.list')
         break
 
       default:
@@ -226,7 +269,11 @@ function loopAndGenerateCarousels(needsRefresh: boolean = false) {
     }
 
     if (target) {
-      bindCarouselToElement(target, list, config, needsRefresh)
+      if (config.needsCarousel && config.refreshOnly === false) {
+        bindCarouselToElement(target, list, config)
+      } else {
+        $(list).find('.owl-carousel').trigger('refresh.owl.carousel')
+      }
     }
   })
 }

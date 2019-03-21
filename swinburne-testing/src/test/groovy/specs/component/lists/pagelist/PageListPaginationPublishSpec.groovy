@@ -16,8 +16,8 @@ class PageListPaginationPublishSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    @Unroll("Functionality of Component with Default variant and cardHorizontal Badge in #viewport.label")
-    def "Functionality of Component with Default variant and cardHorizontal Badge"() {
+    @Unroll("Functionality of Component with Default variant and Horizontal Badge in #viewport.label")
+    def "Functionality of Component with Default variant and Horizontal Badge"() {
 
         given: '>the page hierarchy is created as "Components" > "Lists" > "Page List" > "Pagination"'
         and: '>I am in the component showcase page'
@@ -31,40 +31,51 @@ class PageListPaginationPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
 
         and: "Has one list items"
         assert $("${selector} li").size() == 1
 
+        and: "Only next link exists on first page, without previous link"
+        scrollIntoView($("${selector} .pagination").firstElement())
+        assert $("${selector} > .pagination > .next").isDisplayed()
+        assert !$("${selector} > .pagination > .previous").isDisplayed()
+
         and: "Has pagination details"
-        assert $("${selector} > .pagination > div.label").text().trim() == "[1 - 1] of 5"
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on first page")
+        assert $("${selector} .pagination .current").text().trim() == "1"
+        takeScreenshot($(selector).firstElement(), "The component should be on first page")
 
         and: "Can select page 2"
+        scrollIntoView($("${selector} .pagination").firstElement())
         $("${selector} > .pagination > .next > a").click()
-        assert $("${selector} > .pagination > div.label").text().trim() == "[2 - 2] of 5"
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on second page")
+        assert $("${selector} .pagination .current").text().trim() == "2"
+        takeScreenshot($(selector).firstElement(), "The component should be on second page")
 
         and: "Can select page 3"
+        scrollIntoView($("${selector} .pagination").firstElement())
         $("${selector} > .pagination > .next > a").click()
-        assert $("${selector} > .pagination > div.label").text().trim() == "[3 - 3] of 5"
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on third page")
+        assert $("${selector} .pagination .current").text().trim() == "3"
+        takeScreenshot($(selector).firstElement(), "The component should be on third page")
 
         and: "Can select page 4"
+        scrollIntoView($("${selector} .pagination").firstElement())
         $("${selector} > .pagination > .next > a").click()
-        assert $("${selector} > .pagination > div.label").text().trim() == "[4 - 4] of 5"
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on forth page")
+        assert $("${selector} .pagination .current").text().trim() == "4"
+        takeScreenshot($(selector).firstElement(), "The component should be on forth page")
 
         and: "Can select page 5"
+        scrollIntoView($("${selector} .pagination").firstElement())
         $("${selector} > .pagination > .next > a").click()
-        assert $("${selector} > .pagination > div.label").text().trim() == "[5 - 5] of 5"
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on fifth page")
+        assert $("${selector} .pagination .current").text().trim() == "5"
+        takeScreenshot($(selector).firstElement(), "The component should be on fifth page")
 
         and: "Only previous link exists on last page, without next link"
-        assert $("${selector} > .pagination > .previous").isDisplayed()
+        scrollIntoView($("${selector} .pagination").firstElement())
         assert !$("${selector} > .pagination > .next").isDisplayed()
+        assert $("${selector} > .pagination > .previous").isDisplayed()
 
         where:
         viewport << getViewPorts()
     }
+
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-02-13T14:54:30.616+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Sarawak, Malaysia Campus"
+        jcr:uuid="d08d0c77-f49e-4f36-a2fb-abbef034e39c"
+        sling:resourceType="swinburne/components/template/base">
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/header"
+            componentId="header_KCE5FKZIK">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </header>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_I4JOVUKYG">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details_apply_now"/>
+            </par>
+        </article>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/footer"
+            componentId="footer_R0V8GNT5J">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </footer>
+    </jcr:content>
+</jcr:root>

@@ -25,7 +25,6 @@ $styleguide-sidebar-width: 260px;
   padding-right: 0;
 }
 
-
 html:not(.aem-AuthorLayer-Edit) {
   .styleguide {
     .article,
@@ -46,8 +45,8 @@ html:not(.aem-AuthorLayer-Edit) {
       width: 100%;
     }
 
-    .nav-link {
-      color: #737578;
+    .nav-link:not([class*='l-']) {
+      color: color('grey-1');
       margin-bottom: 0;
       padding-bottom: 0;
     }

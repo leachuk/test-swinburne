@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-02-13T14:47:17.099+11:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Living in Melbourne"
+        jcr:uuid="d63154d9-fb52-46cd-a871-30cd2b6b8305"
+        sling:resourceType="swinburne/components/template/base">
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/header"
+            componentId="header_GVSYU9MM8">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </header>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_DIAN3PCH5">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details_apply_now"/>
+            </par>
+        </article>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/footer"
+            componentId="footer_NBRE8WKQA">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </footer>
+    </jcr:content>
+    <getting-around-melbourne/>
+    <things-to-do-in-melbourne/>
+    <livings-costs--banking-and-money/>
+    <arriving-in-melbourne/>
+    <plan-your-arrival/>
+    <second-column-of-navigation-items/>
+    <livings-costs--banking-and-money0/>
+    <things-to-do-in-melbourne0/>
+    <arriving-in-melbourne0/>
+    <plan-your-arrival0/>
+</jcr:root>

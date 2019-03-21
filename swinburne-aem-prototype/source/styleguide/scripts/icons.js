@@ -5,6 +5,7 @@ const fs = require('fs')
 const icons = [
   { class: 'fal fa-home', 'name': 'Home' },
   { class: 'fal fa-chevron-right', 'name': 'Chevron Right' },
+  { class: 'fal fa-chevron-left', 'name': 'Chevron left' },
   { class: 'fal fa-calculator', 'name': 'Calculator' },
   { class: 'fal fa-briefcase', 'name': 'Briefcase' },
   { class: 'fal fa-fast-forward', 'name': 'Fast Forward' },
@@ -65,6 +66,8 @@ const icons = [
   { class: 'fal fa-wrench', 'name': 'Wrench' },
   { class: 'fal fa-heartbeat', 'name': 'Heartbeat' },
   { class: 'fal fa-link', 'name': 'Link' },
+  { class: 'fal fa-bars', 'name': 'Bars' },
+  { class: 'fal fa-times', 'name': 'Times' },
   { class: 'fab fa-connectdevelop', 'name': 'Connectdevelop' },
   { class: 'fab fa-facebook-f', 'name': 'Facebook F' },
   { class: 'fab fa-facebook', 'name': 'Facebook' },

@@ -1,0 +1,465 @@
+/* stylelint-disable declaration-no-important */
+
+.brand-header {
+  background-color: $white;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+  height: $header-height-sm;
+  @include media-breakpoint-up(md) {
+    height: $header-height-md;
+  }
+  @include media-breakpoint-up(lg) {
+    height: $header-height - 1px;
+  }
+  @include media-breakpoint-up(xl) {
+    height: $header-height-xl - 1px;
+  }
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  @include media-breakpoint-up(lg) {
+    position: inherit;
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    .navbar-toggler {
+      color: color('charcoal');
+      font-size: 12px;
+      font-weight: 700;
+      margin-left: $spacing-xs;
+      width: 80px;
+      div {
+        & > * {
+          display: inline-flex;
+          vertical-align: middle;
+        }
+        .icon {
+          margin-right: 7px !important;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        display: none !important;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .collapse:not(.show) {
+        display: flex;
+      }
+    }
+  }
+  &__actions,
+  &__nav {
+    display: flex;
+    height: 59px;
+    margin: 0;
+    width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      height: 64px;
+    }
+  }
+  &__nav,
+  &__admin {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  &__nav-container { // Navigation container
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: calc(100vh - 47px);
+    left: 0;
+    margin-top: 47px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      &::after {
+        background-color: rgba($white, .5);
+        content: ' ';
+        display: block;
+        height: calc(100vh - 60px);
+        pointer-events: none;
+        position: fixed;
+        right: 0;
+        top: $header-height-md;
+        width: calc(100vw - 320px);
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      &::after {
+        height: calc(100% - #{$header-height-sm});
+        top: $header-height-sm;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      &:not(.collapse):not(.collapsing) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-top: $header-height-md;
+    }
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: $header-height;
+      margin-top: 0;
+      position: static;
+      width: calc(100% - 176px);
+    }
+    @include media-breakpoint-up(xl) {
+      height: $header-height-xl;
+    }
+    @include media-breakpoint-down(md) {
+      background-color: color('charcoal');
+      max-width: 320px;
+      overflow-y: auto;
+    }
+  }
+  .theme--logo {
+    img {
+      display: inline-flex;
+      &:last-child {
+        display: none;
+      }
+      @include media-breakpoint-up(md) {
+        display: none;
+        &:last-child {
+          display: inline-flex;
+        }
+      }
+    }
+  }
+  &__admin {
+    background-color: color('charcoal');
+    display: flex;
+    font-size: 10px;
+    height: 30px;
+    padding: 0 $spacing-md;
+    width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      height: 34px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-right: 0;
+    }
+    a {
+      color: $white;
+      font-weight: 400;
+    }
+    & > .contentblock {
+      display: inline-flex;
+      height: 100%;
+      a {
+        font-weight: 400;
+        margin-right: $spacing-sm;
+      }
+      @include media-breakpoint-down(md) {
+        display: block;
+        margin-bottom: 16px;
+
+        .link {
+          border-bottom: 1px solid color('grey-2');
+          font-size: 12px;
+          font-weight: 700;
+          height: 47px;
+          line-height: 16px;
+          margin-right: 0;
+          width: 100%;
+          & > * {
+            display: inline-block;
+          }
+          span {
+            width: auto;
+          }
+        }
+      }
+      @include media-breakpoint-between(md, md) {
+        .link {
+          height: 57px;
+        }
+      }
+    }
+    .pagelist {
+      display: inline-flex;
+      margin-left: auto;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      width: auto;
+
+      & > .content > ul > li.last {
+        margin-right: 0;
+      }
+
+      @include media-breakpoint-down(md) {
+        display: block;
+
+        & > .content > ul {
+          flex-direction: column;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        justify-content: flex-end;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  &__nav {
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 $spacing-md;
+    width: auto;
+
+
+    a[class*='l-'],
+    .nav-link {
+      @extend .fa-long-arrow-right;
+
+      &::after {
+        @extend .fa, .fal;
+
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+      }
+    }
+
+    a.l-2,
+    .nav-link {
+      align-items: center;
+      border-bottom: 2px solid transparent;
+      color: color('charcoal');
+      display: flex;
+      height: 100%;
+      line-height: 16px;
+      margin-right: $spacing-md;
+      &::after {
+        display: none;
+      }
+      transition: border-bottom .3s ease-in-out;
+      &[aria-expanded='true'],
+      &:hover {
+        border-bottom: 2px solid color('red');
+      }
+      @include media-breakpoint-down(md) {
+        margin-right: 0;
+        width: 100%;
+        &,
+        &[aria-expanded='true'],
+        &:hover {
+          border-bottom: 1px solid color('grey-2');
+        }
+      }
+    }
+    [class*='l-'] {
+      font-size: 12px;
+      @include media-breakpoint-down(md) {
+        height: 47px;
+      }
+      @include media-breakpoint-between(md, md) {
+        height: 57px;
+      }
+    }
+    .nav-item {
+      flex-wrap: nowrap;
+      &::before {
+        display: none;
+      }
+      &.dropdown { // Level 1
+        position: inherit;
+      }
+      &:last-child {
+        [class*='l-'] {
+          margin-right: 0;
+        }
+      }
+      .dropdown-menu { // Level 2
+        align-items: center;
+        background-color: color('grey-5');
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0 2px 3px color('grey-3');
+        flex-direction: row;
+        height: $header-level2-height;
+        left: 5px;
+        overflow: auto;
+        padding: 0 $spacing-md;
+        width: 100%;
+        @include media-breakpoint-down(md) {
+          background-color: color('charcoal');
+          box-shadow: none;
+          height: calc(100vh - 47px);
+          left: $spacing-2xs !important;
+          margin-top: -$spacing-2xs;
+          overflow: auto;
+          padding-right: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 5;
+        }
+        button.link {
+          background: transparent;
+          border: 0;
+          color: $white;
+          display: flex;
+          flex-direction: row-reverse;
+          font-weight: 700;
+          margin-top: $spacing-sm;
+          padding-left: 0;
+          @include media-breakpoint-up(lg) {
+            display: none;
+          }
+        }
+        a {
+          &.l-2 {
+            border-bottom: 2px solid transparent;
+            color: color('grey-2');
+            height: 50px;
+            margin-right: $spacing-md;
+            transition: border-bottom .3s ease-in-out, color .3s ease-in-out;
+            &[aria-expanded='true'],
+            &:hover {
+              border-bottom: 2px solid color('charcoal');
+              color: color('charcoal');
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+            @include media-breakpoint-down(md) {
+              height: 57px;
+              width: 100%;
+              &,
+              &:hover,
+              &[aria-expanded='true'],
+              &::before {
+                color: $white;
+              }
+              &,
+              &:hover,
+              &[aria-expanded='true']{
+                border-bottom: 1px solid color('grey-2');
+              }
+            }
+            @include media-breakpoint-down(sm) {
+              height: 47px;
+            }
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          &.show {
+            display: flex;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      display: block;
+      height: auto;
+      max-width: inherit;
+      order: -1;
+      padding-right: 0;
+      a[class*='l-'],
+      .nav-link {
+        color: $white;
+        position: relative;
+
+        &::after {
+          display: block;
+          font-size: map-get($icon-sizes, regular);
+          margin-left: auto;
+          margin-right: $spacing-lg;
+        }
+      }
+
+      .nav-item {
+        display: block;
+        &:focus {
+          &,
+          & > a {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+  &__actions {
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 8px;
+    width: auto;
+
+    @include media-breakpoint-down(md) {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    a {
+      &.btn {
+        min-width: 113px;
+
+        @include media-breakpoint-up(lg) {
+          min-width: 140px;
+        }
+      }
+    }
+    button.link {
+      align-items: center;
+      background-color: transparent;
+      border: 0;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      padding: 0;
+      width: 40px;
+      .icon:first-of-type {
+        color: color('charcoal');
+        font-size: 14px;
+        font-weight: 300;
+        margin-right: 0;
+        padding-left: $spacing-2xs;
+      }
+      .link-text {
+        display: none;
+      }
+    }
+  }
+  &__container > &__actions {
+    display: inline-flex;
+  }
+  &__nav-container > &__actions {
+    display: none;
+  }
+  @include media-breakpoint-up(lg) {
+    &__nav-container > &__actions {
+      display: inline-flex;
+    }
+    &__container > &__actions {
+      display: none;
+    }
+  }
+}
+
+/* stylelint-enable declaration-no-important */

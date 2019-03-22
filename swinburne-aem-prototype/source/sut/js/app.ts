@@ -13,7 +13,7 @@ import {
 import { isAuthorEditMode } from '@global/utilities/aem'
 
 // Begin the app...
-$(() => {
+$(async () => {
 
   // Remove the 300ms delay using FastClick
   FastClick.attach(document.body)
@@ -36,8 +36,13 @@ $(() => {
   Subscribers()
 
   // 'object-fit' polyfill for unsupported browsers
-  import(/* webpackChunkName: "object-fit-images" */ 'object-fit-images')
-    .then(({ default: objectFitImages }) => objectFitImages())
+  if ('objectFit' in document.documentElement.style === false) {
+    const {
+      default: objectFitImages,
+    } = await import(/* webpackChunkName: "object-fit-images" */ 'object-fit-images')
+
+    objectFitImages()
+  }
 
   // Header navigation toggler
   NavToggler()

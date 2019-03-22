@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 const { getIfUtils, removeEmpty }                          = require('webpack-config-utils')
 const { DefinePlugin, LoaderOptionsPlugin, ProvidePlugin } = require('webpack')
 
@@ -50,7 +51,7 @@ module.exports = env => {
 
     output: {
       filename      : 'js/[name].js',
-      chunkFilename : `js/[name]${env.prod === true ? '.[chunkhash]' : ''}.js`,
+      chunkFilename : `js/chunks/[name]${env.prod === true ? '.[chunkhash]' : ''}.js`,
       path          : resolve(PUBLIC_PATH, env.project),
       publicPath    : PUBLIC_PATH_AEM,
     },
@@ -307,4 +308,5 @@ module.exports = env => {
     },
   }
 }
+
 /* eslint-enable */

@@ -270,24 +270,24 @@ function loopAndGenerateCarousels() {
   })
 }
 
-export default () => {
+export default async () => {
   carousels       = document.querySelectorAll('[data-modules*="carousel"]')
   lastWindowWidth = getWindowWidth()
 
   if (carousels.length && !isAuthorEditMode()) {
-    import(/* webpackChunkName: "chunks/owl.carousel" */ 'owl.carousel').then(() => {
+    await import(/* webpackChunkName: "owl.carousel" */ 'owl.carousel')
+
+    loopAndGenerateCarousels()
+
+    $(window).off('resize.carouselRefresh').on('resize.carouselRefresh', _throttle(() => {
+      // If the width of the window matches the last known width, do nothing!
+      if (getWindowWidth() === lastWindowWidth) {
+        return
+      }
+
       loopAndGenerateCarousels()
 
-      $(window).off('resize.carouselRefresh').on('resize.carouselRefresh', _throttle(() => {
-        // If the width of the window matches the last known width, do nothing!
-        if (getWindowWidth() === lastWindowWidth) {
-          return
-        }
-
-        loopAndGenerateCarousels()
-
-        lastWindowWidth = getWindowWidth()
-      }, 200))
-    })
+      lastWindowWidth = getWindowWidth()
+    }, 200))
   }
 }

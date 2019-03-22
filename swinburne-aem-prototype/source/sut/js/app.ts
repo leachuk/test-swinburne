@@ -36,7 +36,7 @@ $(() => {
   Subscribers()
 
   // 'object-fit' polyfill for unsupported browsers
-  import(/* webpackChunkName: "chunks/object-fit-images" */ 'object-fit-images')
+  import(/* webpackChunkName: "object-fit-images" */ 'object-fit-images')
     .then(({ default: objectFitImages }) => objectFitImages())
 
   // Header navigation toggler

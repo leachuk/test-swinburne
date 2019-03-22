@@ -33,14 +33,14 @@ class CarouselPublishSpec extends ComponentSpec {
         and: 'Has six items'
         assert $("${selectorCarousel} .owl-item").size() == 6
 
-        and 'First item is active'
-        assert $("${selectorCarousel} .owl-item").children().firstElement().getAttribute("class").contains("active")
+        and: 'First item is active'
+        assert $("${selectorCarousel} .owl-stage").children().firstElement().getAttribute("class").contains("active")
 
-        and 'Clicking the next button progresses the carousel'
+        and: 'Clicking the next button progresses the carousel'
         $("${selectorCarousel} .owl-next").click()
 
-        and 'The first item is no longer active'
-        assert !$("${selectorCarousel} .owl-item").children().firstElement().getAttribute("class").contains("active")
+        and: 'The first item is no longer active'
+        assert !$("${selectorCarousel} .owl-stage").children().firstElement().getAttribute("class").contains("active")
 
         where:
         viewport << getViewPorts()

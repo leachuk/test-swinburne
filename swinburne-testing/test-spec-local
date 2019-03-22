@@ -7,7 +7,7 @@ SKIP_PRINT_CONFIG=true
 
 source "../scripts/functions.sh"
 
-LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}')"
+LOCAL_IP="$(ifconfig | grep 'inet ' | head -1 | grep -v '127.0.0.1' | awk '{print $2}' | head -1)"
 
 EXEC_HOST="${1:-$LOCAL_IP}"
 EXEC_ENV="${2:-local-chrome}" #localremote - seleniumhub - local-phantomjs

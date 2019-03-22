@@ -2,13 +2,7 @@
 
 DEFAULT_POM_FILE="pom.xml"
 
-LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}')"
-
-GROOVY=$(which groovy)
-if [ -z "$GROOVY" ]; then
-    echo "ERROR: PLEASE INSTALL GROOVY"
-fi
-
+LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | head -1)"
 
 function getDefaultFromPom() {
     local PARAM_NAME=${1:-}

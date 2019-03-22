@@ -12,9 +12,10 @@ source "../scripts/functions.sh"
 CURL=$(/usr/bin/which curl)
 GREP=$(/usr/bin/which grep)
 
-EXEC_HOST="${1:-$AEM_HOST}"
-DEFAULT_HUB_URL="${2:-$SELENIUMHUB_SCHEME://$SELENIUMHUB_HOST:$SELENIUMHUB_PORT$SELENIUMHUB_SERVICE}"
-DEFAULT_PARAMS=""${@:3}""
+EXEC_AEM_HOST="${1:-$AEM_HOST}"
+EXEC_AEM_PORT="${2:-$AEM_PORT}"
+DEFAULT_HUB_URL="${3:-$SELENIUMHUB_SCHEME://$SELENIUMHUB_HOST:$SELENIUMHUB_PORT$SELENIUMHUB_SERVICE}"
+DEFAULT_PARAMS=""${@:4}""
 
 DEFAULT_IMAGE="aemdesign/centos-java-buildpack"
 DEFAULT_COMMAND="cd swinburne-testing && ./test-spec"
@@ -26,8 +27,13 @@ echo ""
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 echo "Usage:"
 echo ""
-echo " ./test-spec-seleniumhub <EXEC_HOST> <SELENIUM HUB ADDRESS> <MAVEN PARAMS>"
+echo " ./test-spec-seleniumhub <1.EXEC_AEM_HOST> <2.EXEC_AEM_PORT> <3.DEFAULT_HUB_URL> <4.DEFAULT_PARAMS>"
 echo ""
+echo "ARGUMENTS:"
+echo "  1.EXEC_AEM_HOST: $EXEC_AEM_HOST"
+echo "  2.EXEC_AEM_PORT: $EXEC_AEM_PORT"
+echo "  3.DEFAULT_HUB_URL: $DEFAULT_HUB_URL"
+echo "  4.DEFAULT_PARAMS: $DEFAULT_PARAMS"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 echo ""
 
@@ -38,7 +44,8 @@ echo ""
 
 function runTest() {
     local DRIVER=$1
-    local COMMAND="$DEFAULT_COMMAND $EXEC_HOST $DRIVER $DEFAULT_HUB_URL $DEFAULT_PARAMS"
+    local COMMAND="$DEFAULT_COMMAND $EXEC_AEM_HOST $EXEC_AEM_PORT $DRIVER $DEFAULT_HUB_URL $DEFAULT_PARAMS"
+    echo "COMMAND: $COMMAND"
 
     local CONTAINER_EXIST=$(docker ps -q -f name=$DRIVER)
 
@@ -50,7 +57,7 @@ function runTest() {
             docker rm $DRIVER
         fi
         echo " - RUNNING CONTAINER: $DRIVER"
-        START=$(docker run -d --rm --name $DRIVER -v $(pwd)/..:/build -v ~/.m2:/root/.m2 $DEFAULT_IMAGE /bin/sh -c "$COMMAND")
+        START=$(docker run -d --name $DRIVER -v $(pwd)/..:/build -v ~/.m2:/root/.m2 $DEFAULT_IMAGE /bin/sh -c "$COMMAND")
     else
         echo " - CONTAINER ALREADY RUNNING: $DRIVER"
     fi
@@ -93,9 +100,9 @@ function monitorTests() {
     docker rm $@
 }
 
-function testHub() {
+function testServer() {
 
-    local ADDRESS="$DEFAULT_HUB_URL"
+    local ADDRESS="$@"
 
     local RESULT="$($CURL -L --write-out %{http_code} --silent --output /dev/null ${ADDRESS} | $GREP -q "000" && echo false || echo true)"
 
@@ -108,16 +115,21 @@ function testHub() {
 # MAIN LOGIC
 #################################
 
-DEFAULT_HUB_AVAIABLE=$(testHub)
+DEFAULT_HUB_AVAIABLE=$(testServer $DEFAULT_HUB_URL)
+AEM_AVAILABLE=$(testServer http://$EXEC_AEM_HOST:$EXEC_AEM_PORT)
 
-if [[ "true" == "$DEFAULT_HUB_AVAIABLE" ]]; then
-    echo "SELENIUM HUB IS AVAILABLE at $DEFAULT_HUB_URL"
+echo "AEM AT $EXEC_AEM_HOST:$EXEC_AEM_PORT IS AVAILABLE: $AEM_AVAILABLE"
+
+if [[ "true" == "$DEFAULT_HUB_AVAIABLE" && "true" == "$AEM_AVAILABLE" ]]; then
+    echo "SELENIUM HUB IS AVAILABLE at $DEFAULT_HUB_URL AND AEM at $AEM_AVAILABLE"
 
     runTests $DEFAULT_DRIVERS_EXEC
     #runTest "remote-seleniumhub-chrome"
     #runTest "remote-seleniumhub-firefox"
 
     monitorTests $DEFAULT_DRIVERS_EXEC
+
 else
-    echo "SELENIUM HUB NOT AVAILABLE at $DEFAULT_HUB_URL"
+    echo "SELENIUM HUB OR AEM NOT AVAILABLE at $DEFAULT_HUB_URL"
+    exit 1 #indicate error with non zero return
 fi

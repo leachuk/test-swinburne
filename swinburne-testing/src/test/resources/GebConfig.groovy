@@ -52,8 +52,9 @@ String GLOBAL_PORT = System.properties.getProperty("crx.port","4502")
 String GLOBAL_USER = System.properties.getProperty("crx.user","admin")
 String GLOBAL_PASS = System.properties.getProperty("crx.password","admin")
 String GLOBAL_URL = "${GLOBAL_SCHEME}://${GLOBAL_HOST}:${GLOBAL_PORT}"
-String GLOBAL_SELENIUMHUB_URL = System.properties.getProperty("selenumhuburl","http://192.168.27.2:32768/wd/hub")
+String GLOBAL_SELENIUMHUB_URL = System.properties.getProperty("selenium.huburl","http://192.168.27.2:32768/wd/hub")
 String GLOBAL_BUILD_DIR = System.properties.getProperty("project.buildDirectory", GLOBAL_ENV)
+String GLOBAL_LOGIN_REQUIRED = System.properties.getProperty("login.req", "true")
 
 //save params if have not been defined
 System.properties.setProperty("crx.scheme", GLOBAL_SCHEME)
@@ -62,14 +63,14 @@ System.properties.setProperty("crx.port", GLOBAL_PORT)
 System.properties.setProperty("crx.password", GLOBAL_PASS)
 System.properties.setProperty("crx.user", GLOBAL_USER) //used in report
 System.properties.setProperty("geb.build.baseUrl", GLOBAL_URL)  //used in report
-System.properties.setProperty("selenumhuburl", GLOBAL_SELENIUMHUB_URL)  //used in report
+System.properties.setProperty("selenium.huburl", GLOBAL_SELENIUMHUB_URL)  //used in report
 System.properties.setProperty("geb.env", GLOBAL_ENV)  //used in report
 System.properties.setProperty("project.buildDirectory", GLOBAL_BUILD_DIR)  //used in report
+System.properties.setProperty("login.req", GLOBAL_LOGIN_REQUIRED) //set to no for aem publish instances
 
-String GLOBAL_DRIVER_TYPE = findDriverExecutable("chromedriver").canonicalPath
 //remember which driver being used
 if (GLOBAL_ENV.startsWith("local-")) {
-    System.properties.setProperty("selenumhuburl", "local")
+    System.properties.setProperty("selenium.huburl", "local")
 } else {
     GLOBAL_DRIVER_TYPE =  GLOBAL_BUILD_DIR
 }
@@ -84,7 +85,8 @@ printDebug("SETTINGS",[
         GLOBAL_BUILD_DIR,
         GLOBAL_URL,
         GLOBAL_ENV,
-        GLOBAL_DRIVER_TYPE
+        GLOBAL_DRIVER_TYPE,
+        GLOBAL_LOGIN_REQUIRED
 ])
 
 //specific driver

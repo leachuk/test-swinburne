@@ -5,9 +5,10 @@ SCRIPT_PARAMS="$@"
 
 source "../scripts/functions.sh"
 
-EXEC_HOST="${1:-$AEM_HOST}"
-EXEC_ENV="${2:-local-chrome}" #localremote - seleniumhub - local-phantomjs
-HUB_URL="${3:-$SELENIUMHUB_SCHEME://$SELENIUMHUB_HOST:$SELENIUMHUB_PORT$SELENIUMHUB_SERVICE}"
+EXEC_AEM_HOST="${1:-$AEM_HOST}"
+EXEC_AEM_PORT="${2:-$AEM_PORT}"
+EXEC_ENV="${3:-local-chrome}" #localremote - seleniumhub - local-phantomjs
+HUB_URL="${4:-$SELENIUMHUB_SCHEME://$SELENIUMHUB_HOST:$SELENIUMHUB_PORT$SELENIUMHUB_SERVICE}"
 
 
 if [ "$EXEC_ENV" == "" ]; then
@@ -15,20 +16,19 @@ if [ "$EXEC_ENV" == "" ]; then
     exit 1
 fi
 
-#THIS WILL RUN ALL WORKING TESTS
-#EXEC_TEST="${4:-Link*,Text*,Footer*,Header*,ContentBlock*,PageList*,PageDetails*,Columns*,Breadcrumb*,PageDate*,Image*,Video*,ContactDetails*,EmbedSource*,Navbar*,PageTags*,PageDate*,DataLayer*,External*,PageAuthor*,EventDetails*,OnlineMedia*}"
+#DEFAULT IF NOT SET VIA ARGS. THIS WILL RUN ALL WORKING TESTS
+EXEC_TEST="${5:-*ScreenshotSpec,*PublishSpec}"
 
 #THIS WILL RUN ONLY ONE TEST YOU CAN USE THIS IN DEV
-EXEC_TEST="${4:-*ScreenshotSpec}"
+#EXEC_TEST="${5:-ContentBlock*}"
 
-EXEC_TEST_EXCLUDE="${5:-}"
-EXEC_PARAMS=" ${*:6}"
+EXEC_TEST_EXCLUDE="${6:-}"
+EXEC_PARAMS=" ${*:7}"
 
+echo "RUNNING ENV: [$EXEC_ENV]"
+echo "RUNNING TESTS: [$EXEC_TEST]"
+echo "EXCLUDING TESTS: [$EXEC_TEST_EXCLUDE]"
+echo "WITH PARAMETERS: [$EXEC_PARAMS]"
+echo mvn clean test -Dgeb.env="$EXEC_ENV" -Dproject.buildDirectory="$EXEC_ENV" -Dcrx.host="$EXEC_AEM_HOST" -Dcrx.port="$EXEC_AEM_PORT" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""${EXEC_PARAMS}" -Dselenium.huburl="$HUB_URL"
 
-echo "RUNNING ENV: $EXEC_ENV"
-echo "RUNNING TESTS: $EXEC_TEST"
-echo "EXCLUDING TESTS: $EXEC_TEST_EXCLUDE"
-echo "WITH PARAMETERS: $EXEC_PARAMS"
-echo mvn clean test -Dgeb.env="$EXEC_ENV" -Dproject.buildDirectory="$EXEC_ENV" -Dcrx.host="$EXEC_HOST" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""$EXEC_PARAMS" -Dselenumhuburl="$HUB_URL"
-
-mvn clean test -Dgeb.env="$EXEC_ENV" -Dproject.buildDirectory="$EXEC_ENV" -Dcrx.host="$EXEC_HOST" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE""$EXEC_PARAMS" -Dselenumhuburl="$HUB_URL"
+mvn clean test -Dgeb.env="$EXEC_ENV" -Dproject.buildDirectory="$EXEC_ENV" -Dcrx.host="$EXEC_AEM_HOST" -Dcrx.port="$EXEC_AEM_PORT" -Dtest="$EXEC_TEST,$EXEC_TEST_EXCLUDE"$(echo "$EXEC_PARAMS") -Dselenium.huburl="$HUB_URL"

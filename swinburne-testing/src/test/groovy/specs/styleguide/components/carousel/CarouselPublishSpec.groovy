@@ -44,4 +44,154 @@ class CarouselPublishSpec extends ComponentSpec {
         where:
         viewport << getViewPorts()
     }
+
+    @Unroll("Basic Carousel - Grey Background (Page List) in #viewport.label")
+    def "Basic Carousel - Grey Background (Page List)"() {
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#contentblock_carousel_pagelist_grey .owl-carousel.owl-loaded"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: 'Has six items'
+        assert $("${selector} .owl-item").size() == 6
+
+        and: 'First item is active'
+        assert $("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        and: 'Clicking the next button progresses the carousel'
+        $("${selector} .owl-next").click()
+
+        and: 'The first item is no longer active'
+        assert !$("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Basic Carousel - Yellow Background (Page List) in #viewport.label")
+    def "Basic Carousel - Yellow Background (Page List)"() {
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#contentblock_carousel_pagelist_yellow .owl-carousel.owl-loaded"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: 'Has six items'
+        assert $("${selector} .owl-item").size() == 6
+
+        and: 'First item is active'
+        assert $("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        and: 'Clicking the next button progresses the carousel'
+        $("${selector} .owl-next").click()
+
+        and: 'The first item is no longer active'
+        assert !$("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Basic Carousel - Default Background (News List) in #viewport.label")
+    def "Basic Carousel - Default Background (News List)"() {
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#contentblock_carousel_newslist_default .owl-carousel.owl-loaded"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: 'Has six items'
+        assert $("${selector} .owl-item").size() == 6
+
+        and: 'First item is active'
+        assert $("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        and: 'Clicking the next button progresses the carousel'
+        $("${selector} .owl-next").click()
+
+        and: 'The first item is no longer active'
+        assert !$("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Basic Carousel - Grey Background (News List) in #viewport.label")
+    def "Basic Carousel - Grey Background (News List)"() {
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#contentblock_carousel_newslist_grey .owl-carousel.owl-loaded"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: 'Has six items'
+        assert $("${selector} .owl-item").size() == 6
+
+        and: 'First item is active'
+        assert $("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        and: 'Clicking the next button progresses the carousel'
+        $("${selector} .owl-next").click()
+
+        and: 'The first item is no longer active'
+        assert !$("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Basic Carousel - Yellow Background (News List) in #viewport.label")
+    def "Basic Carousel - Yellow Background (News List)"() {
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#contentblock_carousel_newslist_yellow .owl-carousel.owl-loaded"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: 'Has six items'
+        assert $("${selector} .owl-item").size() == 6
+
+        and: 'First item is active'
+        assert $("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        and: 'Clicking the next button progresses the carousel'
+        $("${selector} .owl-next").click()
+
+        and: 'The first item is no longer active'
+        assert !$("${selector} .owl-stage").children().firstElement().getAttribute("class").contains("active")
+
+        where:
+        viewport << getViewPorts()
+    }
 }

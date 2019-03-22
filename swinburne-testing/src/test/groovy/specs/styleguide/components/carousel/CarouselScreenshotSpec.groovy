@@ -20,7 +20,7 @@ class CarouselScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_pagelist_default"
-        def selectorCarousel = "${selector} .owl-carousel"
+        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -41,7 +41,7 @@ class CarouselScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_pagelist_grey"
-        def selectorCarousel = "${selector} .owl-carousel"
+        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -62,7 +62,7 @@ class CarouselScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_pagelist_yellow"
-        def selectorCarousel = "${selector} .owl-carousel"
+        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -83,7 +83,7 @@ class CarouselScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_newslist_default"
-        def selectorCarousel = "${selector} .owl-carousel"
+        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -104,7 +104,7 @@ class CarouselScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_newslist_grey"
-        def selectorCarousel = "${selector} .owl-carousel"
+        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -125,7 +125,7 @@ class CarouselScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_newslist_yellow"
-        def selectorCarousel = "${selector} .owl-carousel"
+        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -146,7 +146,7 @@ class CarouselScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_pagelist_default_short"
-        def selectorCarousel = "${selector} .owl-carousel"
+        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -167,7 +167,7 @@ class CarouselScreenshotSpec extends ComponentSpec {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_newslist_default_short"
-        def selectorCarousel = "${selector} .owl-carousel"
+        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

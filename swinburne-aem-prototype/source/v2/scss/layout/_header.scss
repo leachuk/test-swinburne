@@ -164,6 +164,7 @@
     @include media-breakpoint-down(md) {
       overflow-x: hidden;
       transition: height .3s ease-in-out;
+      background-color: color('charcoal');
       .brand-header__nav,
       .brand-header__admin {
         opacity: 0;
@@ -464,6 +465,10 @@
           font-weight: 700;
           margin-top: $spacing-sm;
           padding-left: 0;
+          &,
+          .icon {
+            font-size: 12px;
+          }
           @include media-breakpoint-up(lg) {
             display: none;
           }

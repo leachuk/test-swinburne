@@ -308,6 +308,163 @@
               </execution>
             </executions>
           </plugin>
+
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+
+            <configuration>
+              <verbose>true</verbose>
+              <failOnError>true</failOnError>
+              <group>swinburne</group>
+
+              <filters>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/sut/css</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/sut/fonts</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/sut/js</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/sut/images</root>
+                </filter>
+
+                <filter>
+                  <root>/content/cq:tags/swinburne/content-type</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-topic</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-theme</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-modifier</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-module</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-chevron</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-icon</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-dialog</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-aria</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-analytics</root>
+                  <mode>update</mode>
+                </filter>
+
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/content-type</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-topic</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-theme</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-modifier</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-module</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-chevron</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-icon</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-dialog</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-aria</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-analytics</root>
+                  <mode>update</mode>
+                </filter>
+
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/content-type</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-topic</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-theme</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-modifier</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-module</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-chevron</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-icon</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-dialog</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-aria</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-analytics</root>
+                  <mode>update</mode>
+                </filter>
+              </filters>
+
+              <subPackages>
+                <subPackage>
+                  <type>zip</type>
+                  <filter>true</filter>
+                </subPackage>
+              </subPackages>
+            </configuration>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -470,6 +627,89 @@
               </execution>
             </executions>
           </plugin>
+
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+              <verbose>true</verbose>
+              <failOnError>true</failOnError>
+              <group>swinburne</group>
+
+              <filters>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/microsites/css</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/microsites/fonts</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/microsites/js</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/microsites/images</root>
+                </filter>
+
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/content-type</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-topic</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-theme</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-modifier</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-module</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-chevron</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-icon</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-dialog</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-aria</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-analytics</root>
+                  <mode>update</mode>
+                </filter>
+
+                <filter>
+                  <root>/content/dam/formsanddocuments-themes/swinburne</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/forms</root>
+                  <mode>update</mode>
+                </filter>
+              </filters>
+
+              <subPackages>
+                <subPackage>
+                  <type>zip</type>
+                  <filter>true</filter>
+                </subPackage>
+              </subPackages>
+            </configuration>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -579,6 +819,39 @@
               </execution>
             </executions>
           </plugin>
+
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+              <verbose>true</verbose>
+              <failOnError>true</failOnError>
+              <group>swinburne</group>
+
+              <filters>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/styleguide/css</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/styleguide/fonts</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/styleguide/js</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/styleguide/images</root>
+                </filter>
+              </filters>
+
+              <subPackages>
+                <subPackage>
+                  <type>zip</type>
+                  <filter>true</filter>
+                </subPackage>
+              </subPackages>
+            </configuration>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -619,6 +892,39 @@
                 </configuration>
               </execution>
             </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+              <verbose>true</verbose>
+              <failOnError>true</failOnError>
+              <group>swinburne</group>
+
+              <filters>
+                <filter>
+                  <root>/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/misctools/specialCharsConfig/chars</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/styles/styles</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/paraformat/formats</root>
+                  <mode>update</mode>
+                </filter>
+              </filters>
+
+              <subPackages>
+                <subPackage>
+                  <type>zip</type>
+                  <filter>true</filter>
+                </subPackage>
+              </subPackages>
+            </configuration>
           </plugin>
         </plugins>
       </build>
@@ -683,7 +989,6 @@
         <extensions>true</extensions>
 
         <configuration>
-          <filterSource>.maven/content/META-INF/vault/filter.xml</filterSource>
           <group>${package.group}</group>
           <targetURL>${package.uploadProtocol}://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
 

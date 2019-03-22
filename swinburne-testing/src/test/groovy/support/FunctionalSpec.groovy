@@ -187,17 +187,17 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
         setWindowSizeMD()
 
-//        driver.manage().window().size = new Dimension(640, 960)
+        def username = System.properties.getProperty("crx.user", "admin")
+        def password = System.properties.getProperty("crx.password", "admin")
+        def loginReq = System.properties.getProperty("login.req", "false")
 
-        def username = getAdminUsername()
-        def password = getAdminPassword()
-        login(username, password, null)
-
-//        Cookie cookie = new Cookie.Builder("cq-authoring-mode", getUIMode())
-//                .domain(getHostName())
-//                .build()
-//
-//        browser.driver.manage().addCookie(cookie)
+        if(loginReq.equalsIgnoreCase("true")) {
+            printDebug("SETTINGS", "Login required")
+            login(username, password, null)
+        }
+        else{
+            printDebug("SETTINGS", "Login not required")
+        }
 
     }
 

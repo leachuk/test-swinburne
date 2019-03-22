@@ -140,46 +140,4 @@ class CarouselScreenshotSpec extends ComponentSpec {
         where:
         viewport << getViewPorts()
     }
-
-    @Unroll("Appearance of Dynamic Carousel (Page List) in #viewport.label")
-    def "Appearance of Dynamic Carousel (Page List)"() {
-        given: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_pagelist_default_short"
-        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
-
-        when: 'I am in the component showcase page'
-        setWindowSize(viewport)
-        waitForAuthorPreviewPage()
-
-        then: 'The component should appear on the page'
-        waitForComponent(selectorCarousel)
-
-        then: 'It should match reference image.'
-        designRef(selectorCarousel)
-
-        where:
-        viewport << getViewPorts()
-    }
-
-    @Unroll("Appearance of Dynamic Carousel (News List) in #viewport.label")
-    def "Appearance of Dynamic Carousel (News List)"() {
-        given: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_newslist_default_short"
-        def selectorCarousel = "${selector} .owl-carousel.owl-loaded"
-
-        when: 'I am in the component showcase page'
-        setWindowSize(viewport)
-        waitForAuthorPreviewPage()
-
-        then: 'The component should appear on the page'
-        waitForComponent(selectorCarousel)
-
-        then: 'It should match reference image.'
-        designRef(selectorCarousel)
-
-        where:
-        viewport << getViewPorts()
-    }
 }

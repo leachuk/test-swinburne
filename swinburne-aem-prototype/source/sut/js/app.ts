@@ -1,7 +1,3 @@
-import 'bootstrap/js/dist/collapse'
-import 'bootstrap/js/dist/dropdown'
-import 'bootstrap/js/dist/util'
-
 import Carousels from '@global/modules/carousel'
 import NavToggler from '@global/modules/header/nav-toggler'
 import Subscribers from '@global/modules/subscribers'

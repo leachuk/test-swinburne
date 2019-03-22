@@ -50,6 +50,7 @@
     <carousel/>
     <content-block/>
     <global-footer/>
+    <global-header/>
     <link/>
     <news-details/>
     <news-list/>

@@ -1,19 +1,20 @@
 /* eslint-disable */
+
 const { getIfUtils, removeEmpty }                          = require('webpack-config-utils')
 const { DefinePlugin, LoaderOptionsPlugin, ProvidePlugin } = require('webpack')
 
+const { relative, resolve }   = require('path')
 const CleanWebpackPlugin      = require('clean-webpack-plugin')
 const CopyWebpackPlugin       = require('copy-webpack-plugin')
 const EventHooksPlugin        = require('event-hooks-webpack-plugin')
+const exec                    = require('child_process').exec
 const ImageminPlugin          = require('imagemin-webpack-plugin').default
 const LodashPlugin            = require('lodash-webpack-plugin')
 const MiniCssExtractPlugin    = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const StyleLintPlugin         = require('stylelint-webpack-plugin')
+const TerserPlugin            = require('terser-webpack-plugin')
 const TsconfigPathsPlugin     = require('tsconfig-paths-webpack-plugin')
-const UglifyJsPlugin          = require('uglifyjs-webpack-plugin')
-const exec                    = require('child_process').exec
-const { relative, resolve }   = require('path')
 
 const config = require('./config.json')
 
@@ -24,11 +25,11 @@ module.exports = env => {
   const { ifDev, ifProd } = getIfUtils(env)
 
   if (!env.project) {
-    console.log('Specify a project when running webpack eg --env.project="microsites"')
+    console.log('Specify a project when running webpack eg --env.project="sut"')
     return
   }
 
-  const PUBLIC_PATH_AEM = `/etc/clientlibs/${env.clientLibsFolder || 'swinburne'}/`
+  const PUBLIC_PATH_AEM = `/etc/clientlibs/${env.clientLibsFolder || 'swinburne'}/${env.project}/`
 
   const project = config[env.project]
 
@@ -50,7 +51,7 @@ module.exports = env => {
 
     output: {
       filename      : 'js/[name].js',
-      chunkFilename : 'js/[name].[chunkhash].js',
+      chunkFilename : `js/chunks/[name]${env.prod === true ? '.[chunkhash]' : ''}.js`,
       path          : resolve(PUBLIC_PATH, env.project),
       publicPath    : PUBLIC_PATH_AEM,
     },
@@ -115,7 +116,7 @@ module.exports = env => {
         },
         {
           enforce : 'pre',
-          exclude : [resolve('node_modules'), resolve('source/v1')],
+          exclude : [resolve('node_modules'), resolve('source/microsites')],
           test    : /\.js$/,
           use     : ['eslint-loader'],
         },
@@ -158,19 +159,25 @@ module.exports = env => {
 
     optimization: {
       minimizer: [
-        new UglifyJsPlugin({
+        new TerserPlugin({
           cache     : true,
-          parallel  : true,
-          sourceMap : env.dev === true,
+          sourceMap : false,
 
-          uglifyOptions: {
+          extractComments: {
+            condition: true,
+
+            banner() {
+              return `Copyright 2018-${(new Date).getFullYear()} Swinburne Univerisity of Technology.`
+            },
+          },
+
+          terserOptions: {
             ecma     : 6,
-            mangle   : false,
+            safari10 : true,
             warnings : false,
 
             compress: {
-              drop_console : true,
-              warnings     : false,
+              drop_console: true,
             },
 
             output: {
@@ -179,6 +186,7 @@ module.exports = env => {
             },
           },
         }),
+
         new OptimizeCSSAssetsPlugin({
           canPrint     : true,
           cssProcessor : require('cssnano'),
@@ -194,6 +202,8 @@ module.exports = env => {
       ],
 
       splitChunks: {
+        chunks: 'all',
+
         cacheGroups: {
           default: false,
           vendors: false,
@@ -202,7 +212,9 @@ module.exports = env => {
     },
 
     plugins: removeEmpty([
-      env.clean === true ? new CleanWebpackPlugin([PUBLIC_PATH]) : undefined,
+      env.clean === true ? new CleanWebpackPlugin({
+        cleanOnceBeforeBuildPatterns: [resolve(PUBLIC_PATH, env.project, '**/*')],
+      }) : undefined,
       new CopyWebpackPlugin([
         {
           context : PROJECT_PATH,
@@ -236,17 +248,16 @@ module.exports = env => {
         files       : '**/*.scss',
         quiet       : false,
       }) : undefined,
-      new ImageminPlugin({
+      ifProd(new ImageminPlugin({
         test: /\.(jpe?g|png|gif|svg)$/i,
-      }),
+      })),
       new LodashPlugin({
         collections : true,
         shorthands  : true,
       }),
       new ProvidePlugin({
-        FastClick       : 'fastclick',
-        ObjectFitImages : 'object-fit-images',
-        PubSub          : 'pubsub-js',
+        FastClick : 'fastclick',
+        PubSub    : 'pubsub-js',
 
         // Expose the Bootstrap modules to the global namespace
         // https://github.com/shakacode/bootstrap-loader#bootstrap-4-internal-dependency-solution
@@ -297,4 +308,5 @@ module.exports = env => {
     },
   }
 }
+
 /* eslint-enable */

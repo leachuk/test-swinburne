@@ -13,10 +13,10 @@ function closeSubNavigation(element) {
 }
 
 function toggleNavigation() {
-  const windowWidth = $window.outerWidth() || window.innerWidth;
   $backButtons = $('button[data-nav]');
 
   $navLink.on('click', () => {
+    const windowWidth = $window.outerWidth() || window.innerWidth;
     if (windowWidth < 1024) {
       $toggleButton.trigger('click');
     }
@@ -121,7 +121,6 @@ export default () => {
   $collapsible = $('#header-nav-container');
   $toggleButton = $('.navbar-toggler');
   $navLink = $('a.parent');
-  const windowWidth = $window.outerWidth() || window.innerWidth;
 
   cloneActions();
   setBackButtons();
@@ -140,6 +139,7 @@ export default () => {
 
   //Close Sub navigation when navigation is closing.
   $collapsible.on('hide.bs.collapse', () => {
+    const windowWidth = $window.outerWidth() || window.innerWidth;
     if (windowWidth < 1024) {
       $backButtons.trigger('click');
     }

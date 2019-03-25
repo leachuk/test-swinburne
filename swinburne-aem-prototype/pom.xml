@@ -37,6 +37,10 @@
       <email>max@aem.design</email>
       <name>Max Barrass</name>
     </developer>
+    <developer>
+      <email>chris.shaw@isobar.com</email>
+      <name>Chris Shaw</name>
+    </developer>
   </developers>
 
   <dependencyManagement>
@@ -53,21 +57,26 @@
   <profiles>
     <profile>
       <id>autoInstallPackage</id>
+
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>
+
       <build>
         <plugins>
           <plugin>
-            <groupId>com.day.jcr.vault</groupId>
             <artifactId>content-package-maven-plugin</artifactId>
+            <groupId>com.day.jcr.vault</groupId>
+
             <executions>
               <execution>
                 <id>install-content-package</id>
                 <phase>install</phase>
+
                 <goals>
                   <goal>install</goal>
                 </goals>
+
                 <configuration>
                   <targetURL>${package.uploadProtocol}://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
                   <userId>${crx.username}</userId>
@@ -76,18 +85,850 @@
               </execution>
             </executions>
           </plugin>
-
         </plugins>
       </build>
     </profile>
+
     <profile>
       <id>deploymentpackage</id>
+
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
+
       <build>
         <plugins>
+          <plugin>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>2.5</version>
 
+            <executions>
+              <execution>
+                <id>clean-content-generator</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>clean</goal>
+                </goals>
+
+                <configuration>
+                  <filesets>
+                    <fileset>
+                      <directory>${basedir}/content-generator/content</directory>
+
+                      <includes>
+                        <include>**</include>
+                      </includes>
+                    </fileset>
+                  </filesets>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <groupId>com.github.eirslett</groupId>
+            <version>1.6</version>
+
+            <configuration>
+              <nodeVersion>${nodeVersion}</nodeVersion>
+              <npmVersion>${npmVersion}</npmVersion>
+              <yarnVersion>${yarnVersion}</yarnVersion>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>exec-install-node-and-yarn</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>install-node-and-yarn</goal>
+                </goals>
+
+                <configuration>
+                  <nodeVersion>${nodeVersion}</nodeVersion>
+                  <yarnVersion>${yarnVersion}</yarnVersion>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>exec-yarn-install</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments>install</arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- Swinburne University of Technology (SUT) -->
+    <profile>
+      <id>buildSwinburneGlobal</id>
+
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>1.6</version>
+
+            <configuration>
+              <nodeVersion>${nodeVersion}</nodeVersion>
+              <npmVersion>${npmVersion}</npmVersion>
+              <yarnVersion>${yarnVersion}</yarnVersion>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>exec-aem-build-sut</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=sut --env.maven --env.clean</arguments>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>exec-aem-generate-tags-sut</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments> - -stack_size=8192</arguments>
+                  <arguments>run aem:generatetags --no-clean --no-console --config=sut.yml</arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+
+            <!-- ensure that the empty directories are copied -->
+            <configuration>
+              <includeEmptyDirs>true</includeEmptyDirs>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>copy-css-vault-resources-sut</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/sut/css</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/sut/css</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-image-vault-resources-sut</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/sut/images</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/sut/images</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-fonts-vault-resources-sut</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/sut/fonts</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/sut/fonts</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-js-vault-resources-sut</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/sut/js</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/sut/js</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+
+            <configuration>
+              <verbose>false</verbose>
+              <failOnError>true</failOnError>
+              <group>${package.group}</group>
+
+              <filters combine.children="append">
+                <filter>
+                  <root>/etc/clientlibs/swinburne/sut/css</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/sut/fonts</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/sut/js</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/sut/images</root>
+                </filter>
+
+                <filter>
+                  <root>/content/cq:tags/swinburne/content-type</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-topic</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-theme</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-modifier</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-module</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-chevron</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-style-icon</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-dialog</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-aria</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne/component-analytics</root>
+                  <mode>update</mode>
+                </filter>
+
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/content-type</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-topic</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-theme</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-modifier</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-module</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-chevron</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-style-icon</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-dialog</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-aria</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-showcase/component-analytics</root>
+                  <mode>update</mode>
+                </filter>
+
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/content-type</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-topic</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-theme</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-modifier</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-module</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-chevron</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-style-icon</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-dialog</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-aria</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-training/component-analytics</root>
+                  <mode>update</mode>
+                </filter>
+              </filters>
+
+              <subPackages>
+                <subPackage>
+                  <type>zip</type>
+                  <filter>true</filter>
+                </subPackage>
+              </subPackages>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- Swinburne University of Technology (Microsites) -->
+    <profile>
+      <id>buildSwinburneMicrosites</id>
+
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>1.6</version>
+
+            <configuration>
+              <nodeVersion>${nodeVersion}</nodeVersion>
+              <npmVersion>${npmVersion}</npmVersion>
+              <yarnVersion>${yarnVersion}</yarnVersion>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>exec-aem-build-swinburne-microsites</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=microsites --env.maven --env.clean</arguments>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>exec-aem-generate-tags-microsites</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments> - -stack_size=8192</arguments>
+                  <arguments>run aem:generatetags --no-clean --no-console --config=microsites.yml</arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+
+            <!-- ensure that the empty directories are copied -->
+            <configuration>
+              <includeEmptyDirs>true</includeEmptyDirs>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>copy-css-vault-resources-microsites</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/microsites/css</outputDirectory>
+                  <resources>
+                    <resource>
+                      <directory>public/microsites/css</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-css-vault-resources-forms-microsites</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/microsites/forms/default/css</outputDirectory>
+                  <resources>
+                    <resource>
+                      <directory>public/microsites/css</directory>
+                      <includes>
+                        <include>theme.css</include>
+                      </includes>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-image-vault-resources-microsites</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/microsites/images</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/microsites/images</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-fonts-vault-resources-microsites</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/microsites/fonts</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/microsites/fonts</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-js-vault-resources-microsites</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/microsites/js</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/microsites/js</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+
+            <configuration>
+              <verbose>false</verbose>
+              <failOnError>true</failOnError>
+              <group>${package.group}</group>
+
+              <filters combine.children="append">
+                <filter>
+                  <root>/etc/clientlibs/swinburne/microsites/css</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/microsites/fonts</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/microsites/js</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/microsites/images</root>
+                </filter>
+
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/content-type</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-topic</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-theme</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-modifier</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-module</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-chevron</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-style-icon</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-dialog</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-aria</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/content/cq:tags/swinburne-microsites/component-analytics</root>
+                  <mode>update</mode>
+                </filter>
+
+                <filter>
+                  <root>/content/dam/formsanddocuments-themes/swinburne</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/forms</root>
+                  <mode>update</mode>
+                </filter>
+              </filters>
+
+              <subPackages>
+                <subPackage>
+                  <type>zip</type>
+                  <filter>true</filter>
+                </subPackage>
+              </subPackages>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- Swinburne University of Technology (Styleguide/DLS) -->
+    <profile>
+      <id>buildSwinburneStyleguide</id>
+
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>1.6</version>
+
+            <configuration>
+              <nodeVersion>${nodeVersion}</nodeVersion>
+              <npmVersion>${npmVersion}</npmVersion>
+              <yarnVersion>${yarnVersion}</yarnVersion>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>exec-aem-build-styleguide</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide --env.maven --env.clean</arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+
+            <!-- ensure that the empty directories are copied -->
+            <configuration>
+              <includeEmptyDirs>true</includeEmptyDirs>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>copy-css-vault-resources-styleguide</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/css</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/styleguide/css</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-image-vault-resources-styleguide</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/images</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/styleguide/images</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+
+              <execution>
+                <id>copy-js-vault-resources-styleguide</id>
+                <phase>generate-resources</phase>
+
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+
+                <configuration>
+                  <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/js</outputDirectory>
+
+                  <resources>
+                    <resource>
+                      <directory>public/styleguide/js</directory>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+
+            <configuration>
+              <verbose>false</verbose>
+              <failOnError>true</failOnError>
+              <group>${package.group}</group>
+
+              <filters combine.children="append">
+                <filter>
+                  <root>/etc/clientlibs/swinburne/styleguide/css</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/styleguide/fonts</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/styleguide/js</root>
+                </filter>
+                <filter>
+                  <root>/etc/clientlibs/swinburne/styleguide/images</root>
+                </filter>
+              </filters>
+
+              <subPackages>
+                <subPackage>
+                  <type>zip</type>
+                  <filter>true</filter>
+                </subPackage>
+              </subPackages>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- AEM.Design overrides -->
+    <profile>
+      <id>buildAEMDesignOverrides</id>
+
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>1.6</version>
+
+            <configuration>
+              <nodeVersion>${nodeVersion}</nodeVersion>
+              <npmVersion>${npmVersion}</npmVersion>
+              <yarnVersion>${yarnVersion}</yarnVersion>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>exec-aem-generate-tags-aemdesign</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>yarn</goal>
+                </goals>
+
+                <configuration>
+                  <arguments> - -stack_size=8192</arguments>
+                  <arguments>run aem:generatetags --no-clean --no-console --config=aemdesign.yml</arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            
+            <configuration>
+              <verbose>false</verbose>
+              <failOnError>true</failOnError>
+              <group>${package.group}</group>
+
+              <filters combine.children="append">
+                <filter>
+                  <root>/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/misctools/specialCharsConfig/chars</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/styles/styles</root>
+                  <mode>update</mode>
+                </filter>
+                <filter>
+                  <root>/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/paraformat/formats</root>
+                  <mode>update</mode>
+                </filter>
+              </filters>
+
+              <subPackages>
+                <subPackage>
+                  <type>zip</type>
+                  <filter>true</filter>
+                </subPackage>
+              </subPackages>
+            </configuration>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -96,106 +937,9 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>com.github.eirslett</groupId>
-        <artifactId>frontend-maven-plugin</artifactId>
-        <version>1.6</version>
-        <configuration>
-          <nodeVersion>${nodeVersion}</nodeVersion>
-          <npmVersion>${npmVersion}</npmVersion>
-          <yarnVersion>${yarnVersion}</yarnVersion>
-        </configuration>
-        <executions>
-          <execution>
-            <id>install node and yarn</id>
-            <goals>
-              <goal>install-node-and-yarn</goal>
-            </goals>
-            <configuration>
-              <nodeVersion>${nodeVersion}</nodeVersion>
-              <yarnVersion>${yarnVersion}</yarnVersion>
-            </configuration>
-          </execution>
-          <execution>
-            <id>yarn install</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>install</arguments>
-            </configuration>
-          </execution>
-
-          <!-- Microsites -->
-          <execution>
-            <id>exec-aem-build-microsites</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v1 --env.maven --env.clean</arguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>exec-aem-generate-tags-microsites</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments> - -stack_size=8192</arguments>
-              <arguments>run aem:generatetags --clean --no-console --config=microsites.yml</arguments>
-            </configuration>
-          </execution>
-
-          <!-- Swinburne Global (Study With Us) -->
-          <execution>
-            <id>exec-aem-build-swinburne-global</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=v2 --env.maven</arguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>exec-aem-generate-tags-swinburne-global</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments> - -stack_size=8192</arguments>
-              <arguments>run aem:generatetags --no-clean --no-console --config=swu.yml</arguments>
-            </configuration>
-          </execution>
-
-          <!-- Design Language System (DLS) -->
-          <execution>
-            <id>exec-aem-build-styleguide</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>${package.npmCommand} --env.clientLibsFolder=${package.clientLibsFolder} --env.project=styleguide --env.maven</arguments>
-            </configuration>
-          </execution>
-
-          <!-- AEM Design (internal)  -->
-          <execution>
-            <id>exec-aem-generate-tags-aemdesign</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments> - -stack_size=8192</arguments>
-              <arguments>run aem:generatetags --no-clean --no-console --config=aemdesign.yml</arguments>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <!-- ensure that the empty directories are copied -->
+        <groupId>org.apache.maven.plugins</groupId>
+
         <configuration>
           <includeEmptyDirs>true</includeEmptyDirs>
         </configuration>
@@ -204,11 +948,14 @@
           <execution>
             <id>copy-metainf-vault-resources</id>
             <phase>generate-resources</phase>
+
             <goals>
               <goal>copy-resources</goal>
             </goals>
+
             <configuration>
               <outputDirectory>${basedir}/target/vault-work/META-INF</outputDirectory>
+
               <resources>
                 <resource>
                   <directory>.maven/content/META-INF</directory>
@@ -219,228 +966,16 @@
           </execution>
 
           <execution>
-            <id>copy-css-vault-resources-v1</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/css</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v1/css</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-css-vault-resources-forms-v1</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/forms/default/css</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v1/css</directory>
-                  <includes>
-                    <include>theme.css</include>
-                  </includes>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-image-vault-resources-v1</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/images</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v1/images/logos</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-fonts-vault-resources-v1</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/fonts</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v1/fonts</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-js-vault-resources-v1</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v1/js</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v1/js</directory>
-                  <excludes>
-                    <exclude>styleguide.js</exclude>
-                    <exclude>styleguide.js.map</exclude>
-                  </excludes>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-css-vault-resources-v2</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/css</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v2/css</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-image-vault-resources-v2</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/images</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v2/images</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-fonts-vault-resources-v2</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/fonts</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v2/fonts</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-js-vault-resources-v2</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/v2/js</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/v2/js</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-css-vault-resources-styleguide</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/css</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/styleguide/css</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-image-vault-resources-styleguide</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/images</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/styleguide/images</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-fonts-vault-resources-styleguide</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/fonts</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/styleguide/fonts</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>copy-js-vault-resources-styleguide</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/etc/clientlibs/swinburne/styleguide/js</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>public/styleguide/js</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-
-          <execution>
             <id>copy-content-generator-content-resources</id>
             <phase>generate-resources</phase>
+
             <goals>
               <goal>copy-resources</goal>
             </goals>
+
             <configuration>
               <outputDirectory>${basedir}/target/classes/</outputDirectory>
+
               <resources>
                 <resource>
                   <directory>content-generator/content</directory>
@@ -452,23 +987,21 @@
       </plugin>
 
       <plugin>
-        <groupId>com.day.jcr.vault</groupId>
         <artifactId>content-package-maven-plugin</artifactId>
+        <groupId>com.day.jcr.vault</groupId>
         <extensions>true</extensions>
+
         <configuration>
           <group>${package.group}</group>
-          <filterSource>.maven/content/META-INF/vault/filter.xml</filterSource>
           <targetURL>${package.uploadProtocol}://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
 
           <properties>
-            <description>${project.description}</description>
+            <acHandling>merge_preserve</acHandling>
             <created>${buildNumber}</created>
             <createdBy>${package.createdBy}</createdBy>
-            <acHandling>merge_preserve</acHandling>
+            <description>${project.description}</description>
           </properties>
-
         </configuration>
-
       </plugin>
     </plugins>
   </build>

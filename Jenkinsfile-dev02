@@ -6,9 +6,10 @@ pipeline {
         sh 'mvn clean package -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
       }
     }
-    stage('Deploy-author') {
-         DEV02_AUTHOR_CREDS = credentials('dev-author-creds')
-       }
+    stage('Develop') {
+        environment {
+            DEV02_AUTHOR_CREDS = credentials('dev-author-creds')
+        }
        steps {
          sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackage,installdeploymentpackage clean install -Dcrx.host=52.62.114.58 -Dcrx.port=4502 -Dcrx.username=${DEV02_AUTHOR_CREDS_USR} -Dcrx.password=${DEV02_AUTHOR_CREDS_PSW} -e -U -P deploymentpackage,installdeploymentpackage -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
            }

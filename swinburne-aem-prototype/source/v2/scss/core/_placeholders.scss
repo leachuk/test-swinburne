@@ -6,15 +6,6 @@
   background-size: 13px 140px;
 }
 
-%yellow-links {
-  background-color: color('yellow');
-  color: color('charcoal');
-  margin-left: -$spacing-md;
-  padding-left: $spacing-md;
-  width: calc(100% + 20px);
-}
-
-
 %yellow-card-body {
   *:not(.btn) {
     color: color('charcoal');

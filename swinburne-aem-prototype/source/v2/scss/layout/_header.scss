@@ -2,20 +2,20 @@
 
 @mixin yellow-link {
   margin-left: -$spacing-md;
-  position: relative;
   padding-left: $spacing-md;
+  position: relative;
   transition: color .3s ease-in-out, background-color .3s ease-in-out;
   width: calc(100% + 20px);
   &::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: inherit;
-    height: 1px;
-    width: calc(100% - 20px);
     background-color: color('grey-2');
+    bottom: 0;
+    content: ' ';
+    display: block;
+    height: 1px;
+    left: inherit;
+    position: absolute;
+    right: 0;
+    width: calc(100% - 20px);
     z-index: 1;
   }
   &:focus,
@@ -25,12 +25,18 @@
     z-index: 1;
   }
   &,
+  &:focus,
+  &:active,
   &[aria-expanded='true'],
   &:hover {
     border-bottom: none;
     box-shadow: none;
     padding-top: 0;
   }
+}
+
+.frozen {
+  overflow: hidden !important;
 }
 
 
@@ -65,8 +71,8 @@
       flex-direction: column;
       font-size: 12px;
       font-weight: 700;
-      overflow: hidden;
       margin-left: $spacing-xs;
+      overflow: hidden;
       width: 80px;
       div {
         transition: transform .3s ease-in-out, opacity .3s ease-in-out;
@@ -162,9 +168,9 @@
     width: 100%;
 
     @include media-breakpoint-down(md) {
+      background-color: color('charcoal');
       overflow-x: hidden;
       transition: height .3s ease-in-out;
-      background-color: color('charcoal');
       .brand-header__nav,
       .brand-header__admin {
         opacity: 0;
@@ -175,7 +181,7 @@
         background-color: rgba($white, .5);
         content: ' ';
         display: block;
-        height: calc(100vh - 60px);
+        height: calc(100% - #{$header-height-md});
         pointer-events: none;
         position: fixed;
         right: 0;
@@ -183,7 +189,7 @@
         width: calc(100vw - 320px);
       }
       &.show {
-        height: calc(100vh - 60px) !important;
+        height: calc(100vh - #{$header-height-sm}) !important;
         .brand-header__nav,
         .brand-header__admin {
           opacity: 1;
@@ -193,7 +199,7 @@
 
     @include media-breakpoint-down(sm) {
       &.show {
-        height: calc(100vh - 47px) !important;
+        height: calc(100% - 47px) !important;
       }
       &::after {
         height: calc(100% - #{$header-height-sm});
@@ -368,6 +374,12 @@
             height: 2px;
             opacity: 1;
           }
+          &:hover:not(:focus) {
+            box-shadow: inset 0 -2px 0 color('charcoal');
+            &::before {
+              background-color: transparent;
+            }
+          }
         }
       }
     }
@@ -420,13 +432,13 @@
         overflow: auto;
         padding: 0 $spacing-md;
         width: 100%;
-        transition: transform .3s ease-in-out;
         @include media-breakpoint-up(lg) {
           display: flex !important;
-          transform: translate3d(0, 33px, 0) !important;
+          left: 0;
           position: absolute;
           top: 0;
-          left: 0;
+          transform: translate3d(0, 33px, 0) !important;
+          transition: transform .3s ease-in-out;
           z-index: -1;
           &.show {
             transform: translate3d(0, 89px, 0) !important;
@@ -443,15 +455,16 @@
           box-shadow: none;
           display: block !important;
           height: calc(100vh - 47px);
+          margin-top: 0;
           overflow: auto;
+          overflow-x: hidden;
           padding-right: 0;
           position: absolute;
           top: 0;
+          transform: translateX(100%) !important;
+          transition: transform .3s ease-in-out .3s;
           width: 100%;
           z-index: 5;
-          overflow-x: hidden;
-          transition: transform .3s ease-in-out;
-          transform: translateX(100%) !important;
           &.show {
             transform: translateX(0) !important;
           }
@@ -475,12 +488,12 @@
         }
         a {
           &.l-2 {
+            border-bottom: 0 solid color('grey-2');
             color: color('grey-2');
             height: 50px;
             margin-right: $spacing-md;
-            transition: border-bottom .15s ease-in-out, padding-top .15s ease-in-out, color .3s ease-in-out;
-            border-bottom: 0 solid color('grey-2');
             padding-top: 0;
+            transition: border-bottom .15s ease-in-out, padding-top .15s ease-in-out, color .3s ease-in-out;
             &:hover {
               border-bottom: 2px solid color('grey-2');
               padding-top: 2px;
@@ -600,5 +613,4 @@
     }
   }
 }
-
 /* stylelint-enable declaration-no-important */

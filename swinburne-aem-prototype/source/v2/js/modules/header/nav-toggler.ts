@@ -3,10 +3,24 @@ import _throttle from 'lodash/throttle'
 let $dropdown: JQuery
 let $collapsible : JQuery
 let $window: JQuery<Window>
+let $toggleButton : JQuery
+let $navLink : JQuery
+let $backButtons : JQuery
 
-function closeNavigation(element) {
-  console.log(element.target);
+
+function closeSubNavigation(element) {
   $(element.target).parent().removeClass('show');
+}
+
+function toggleNavigation() {
+  const windowWidth = $window.outerWidth() || window.innerWidth;
+  $backButtons = $('button[data-nav]');
+
+  $navLink.on('click', () => {
+    if (windowWidth < 1024) {
+      $toggleButton.trigger('click');
+    }
+  });
 }
 
 function attachDropdownEvents() {
@@ -42,7 +56,7 @@ function attachDropdownEvents() {
   });
 }
 
-function detechDropdownEvents() {
+function detachDropdownEvents() {
   $dropdown.off('shown.bs.dropdown click hide.bs.dropdown')
 }
 
@@ -53,7 +67,7 @@ function getButton(title, level) {
   button.classList.add('link');
   button.innerText = 'Back';
   button.setAttribute('data-nav', `${title}-${level}`);
-  button.addEventListener('click', closeNavigation);
+  button.addEventListener('click', closeSubNavigation);
 
   const text = document.createElement('span');
   text.classList.add('sr-only');
@@ -102,21 +116,33 @@ function cloneActions() {
 }
 
 export default () => {
-  $dropdown = $('.dropdown')
-  $window = $(window)
-  $collapsible = $('#header-nav-container')
+  $dropdown = $('.dropdown');
+  $window = $(window);
+  $collapsible = $('#header-nav-container');
+  $toggleButton = $('.navbar-toggler');
+  $navLink = $('a.parent');
+  const windowWidth = $window.outerWidth() || window.innerWidth;
 
   cloneActions();
   setBackButtons();
   setNavToggler();
+  toggleNavigation();
 
   $window.on('resize', _throttle(() => {
-    const windowWidth = $window.outerWidth() || window.innerWidth
+    const windowWidth = $window.outerWidth() || window.innerWidth;
 
     if (windowWidth >= 1024) {
-      detechDropdownEvents()
+      detachDropdownEvents()
     } else {
       attachDropdownEvents()
     }
   }, 200)).trigger('resize')
+
+  //Close Sub navigation when navigation is closing.
+  $collapsible.on('hide.bs.collapse', () => {
+    if (windowWidth < 1024) {
+      $backButtons.trigger('click');
+    }
+  });
+
 }

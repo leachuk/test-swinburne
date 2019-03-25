@@ -315,11 +315,11 @@
             <extensions>true</extensions>
 
             <configuration>
-              <verbose>true</verbose>
+              <verbose>false</verbose>
               <failOnError>true</failOnError>
-              <group>swinburne</group>
+              <group>${package.group}</group>
 
-              <filters>
+              <filters combine.children="append">
                 <filter>
                   <root>/etc/clientlibs/swinburne/sut/css</root>
                 </filter>
@@ -632,12 +632,13 @@
             <groupId>com.day.jcr.vault</groupId>
             <artifactId>content-package-maven-plugin</artifactId>
             <extensions>true</extensions>
-            <configuration>
-              <verbose>true</verbose>
-              <failOnError>true</failOnError>
-              <group>swinburne</group>
 
-              <filters>
+            <configuration>
+              <verbose>false</verbose>
+              <failOnError>true</failOnError>
+              <group>${package.group}</group>
+
+              <filters combine.children="append">
                 <filter>
                   <root>/etc/clientlibs/swinburne/microsites/css</root>
                 </filter>
@@ -824,12 +825,13 @@
             <groupId>com.day.jcr.vault</groupId>
             <artifactId>content-package-maven-plugin</artifactId>
             <extensions>true</extensions>
-            <configuration>
-              <verbose>true</verbose>
-              <failOnError>true</failOnError>
-              <group>swinburne</group>
 
-              <filters>
+            <configuration>
+              <verbose>false</verbose>
+              <failOnError>true</failOnError>
+              <group>${package.group}</group>
+
+              <filters combine.children="append">
                 <filter>
                   <root>/etc/clientlibs/swinburne/styleguide/css</root>
                 </filter>
@@ -898,12 +900,13 @@
             <groupId>com.day.jcr.vault</groupId>
             <artifactId>content-package-maven-plugin</artifactId>
             <extensions>true</extensions>
+            
             <configuration>
-              <verbose>true</verbose>
+              <verbose>false</verbose>
               <failOnError>true</failOnError>
-              <group>swinburne</group>
+              <group>${package.group}</group>
 
-              <filters>
+              <filters combine.children="append">
                 <filter>
                   <root>/apps/aemdesign/global/dialog/touch/text/content/items/textTab/items/column/items/text/rtePlugins/misctools/specialCharsConfig/chars</root>
                   <mode>update</mode>

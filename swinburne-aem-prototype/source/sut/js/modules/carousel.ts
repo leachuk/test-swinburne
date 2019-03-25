@@ -171,58 +171,56 @@ function bindCarouselToElement(
     $list = $carousel
   }
 
-  // Janky fix to control pre-rendering issues with OwlCarousel
-  setTimeout(() => {
-    const carouselConfig = _omitBy({
-      autoWidth         : _get(options, 'autoWidth', true),
-      center            : _get(options, 'center', false),
-      dots              : _get(options, 'dots', false),
-      items             : _get(options, 'items', 1),
-      loop              : _get(options, 'loop', false),
-      margin            : _get(options, 'margin', margins.default),
-      mouseDrag         : _get(options, 'mouseDrag', false),
-      nav               : _get(options, 'nav', true),
-      navClass          : _get(options, 'navClass', ['owl-prev btn', 'owl-next btn']),
-      navContainerClass : _get(options, 'navContainerClass', 'owl-nav btn-group btn-group-sm'),
-      navText           : _get(options, 'navText', getNavTextElements()),
-      slideBy           : _get(options, 'slideBy', 1),
-      stageElement      : _get(options, 'stageElement', null),
-      stagePadding      : _get(options, 'stagePadding', 0),
+  // Setup the configuration
+  const carouselConfig = _omitBy({
+    autoWidth         : _get(options, 'autoWidth', true),
+    center            : _get(options, 'center', false),
+    dots              : _get(options, 'dots', false),
+    items             : _get(options, 'items', 1),
+    loop              : _get(options, 'loop', false),
+    margin            : _get(options, 'margin', margins.default),
+    mouseDrag         : _get(options, 'mouseDrag', false),
+    nav               : _get(options, 'nav', true),
+    navClass          : _get(options, 'navClass', ['owl-prev btn', 'owl-next btn']),
+    navContainerClass : _get(options, 'navContainerClass', 'owl-nav btn-group btn-group-sm'),
+    navText           : _get(options, 'navText', getNavTextElements()),
+    slideBy           : _get(options, 'slideBy', 1),
+    stageElement      : _get(options, 'stageElement', null),
+    stagePadding      : _get(options, 'stagePadding', 0),
 
-      responsive: {
-        // Mobile
-        [breakpoints.extraSmall]: _omitBy({}, _isNil),
+    responsive: {
+      // Mobile
+      [breakpoints.extraSmall]: _omitBy({}, _isNil),
 
-        // Large mobile (landscape) and tablets
-        [breakpoints.tablet]: _omitBy({
-          center : _get(options, `breakpoint.${breakpoints.tablet}.center`, false),
-          items  : _get(options, `breakpoint.${breakpoints.tablet}.items`, 3),
-          margin : _get(options, 'breakpoint.${breakpoints.tablet}.margin', margins.tablet),
-        }, _isNil),
+      // Large mobile (landscape) and tablets
+      [breakpoints.tablet]: _omitBy({
+        center : _get(options, `breakpoint.${breakpoints.tablet}.center`, false),
+        items  : _get(options, `breakpoint.${breakpoints.tablet}.items`, 3),
+        margin : _get(options, 'breakpoint.${breakpoints.tablet}.margin', margins.tablet),
+      }, _isNil),
 
-        // Tablets (landscape) and small desktop browsers
-        [breakpoints.desktop]: _omitBy({
-          center : _get(options, `breakpoint.${breakpoints.desktop}.center`, false),
-          items  : _get(options, `breakpoint.${breakpoints.desktop}.items`, 3),
-          margin : _get(options, 'breakpoint.${breakpoints.tablet}.margin', margins.desktop),
-        }, _isNil),
-      },
-    }, _isNil)
+      // Tablets (landscape) and small desktop browsers
+      [breakpoints.desktop]: _omitBy({
+        center : _get(options, `breakpoint.${breakpoints.desktop}.center`, false),
+        items  : _get(options, `breakpoint.${breakpoints.desktop}.items`, 3),
+        margin : _get(options, 'breakpoint.${breakpoints.tablet}.margin', margins.desktop),
+      }, _isNil),
+    },
+  }, _isNil)
 
-    // Set the parent list as 'ready'
-    parent.classList.add('owl-ready')
+  // Set the parent list as 'ready'
+  parent.classList.add('owl-ready')
 
-    // Create the carousel instance
-    $list.on('initialized.owl.carousel', _debounce((event: Event) => {
-      const $target = $(event.target as HTMLElement)
-      const $nav    = $target.find('.owl-nav')
+  // Create the carousel instance
+  $list.on('initialized.owl.carousel', _debounce((event: Event) => {
+    const $target = $(event.target as HTMLElement)
+    const $nav    = $target.find('.owl-nav')
 
-      $nav.attr('aria-label', 'Carousel navigation')
-      $nav.attr('role', 'group')
-    }, 500))
+    $nav.attr('aria-label', 'Carousel navigation')
+    $nav.attr('role', 'group')
+  }, 500))
 
-    $list.owlCarousel(carouselConfig)
-  }, 200)
+  $list.owlCarousel(carouselConfig)
 }
 
 /**

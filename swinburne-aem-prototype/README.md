@@ -31,9 +31,9 @@ When you have VLT synced locally you can now run the command needed for the proj
 - Build directly into AEM: `yarn build:microsites`
 - Watch for changes and sync into AEM: `yarn dev:microsites`
 
-#### Swinburne Global (currently SWU)
-- Build directly into AEM: `yarn build:swu`
-- Watch for changes and sync into AEM: `yarn dev:swu`
+#### Swinburne Global
+- Build directly into AEM: `yarn build:sut`
+- Watch for changes and sync into AEM: `yarn dev:sut`
 
 #### DLS (Styleguide)
 - Build directly into AEM: `yarn build:sg`

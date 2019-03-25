@@ -8,4 +8,6 @@ source "../scripts/functions.sh"
 docker stop selenium-hub
 
 docker stop selenium-hub-node-chrome
-docker stop selenium-hub-node-firefox
+#docker stop selenium-hub-node-firefox
+
+docker network rm selenium-grid

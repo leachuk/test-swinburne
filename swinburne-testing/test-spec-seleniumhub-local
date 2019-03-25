@@ -7,9 +7,11 @@ SKIP_PRINT_CONFIG=true
 
 source "../scripts/functions.sh"
 
-LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}')"
+LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | tail -1)"
 
-EXEC_HOST="${1:-$LOCAL_IP}"
+EXEC_AEM_HOST="${1:-$LOCAL_IP}"
+EXEC_AEM_PORT="4502"
+
 HUB_URL="$SELENIUMHUB_SCHEME://$LOCAL_IP:$SELENIUMHUB_PORT$SELENIUMHUB_SERVICE"
 
-./test-spec-seleniumhub $EXEC_HOST $HUB_URL
+./test-spec-seleniumhub $EXEC_AEM_HOST $EXEC_AEM_PORT $HUB_URL $EXEC_TEST

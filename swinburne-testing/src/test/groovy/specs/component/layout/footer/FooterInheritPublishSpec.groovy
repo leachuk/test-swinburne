@@ -110,7 +110,7 @@ class FooterInheritPublishSpec extends ComponentSpec {
         assert $(selector + " #text_AYS4ZU6BL").eq(0).text().trim() == "Connect with Swinburne University"
 
         and: "Should have Swinburne brand logo"
-        assert $(selector + " #embedsource_AP3MMJNLO > img").attr("src").contains("/etc/clientlibs/swinburne/sut/images/swinburne-logo.svg")
+        assert $(selector + " #embedsource_AP3MMJNLO > img").attr("src").contains("/etc/clientlibs/swinburne/v2/images/swinburne-logo.svg")
         takeScreenshot($(selectorContainer).firstElement(), "Should have Swinburne Global")
 
         where:

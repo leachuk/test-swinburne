@@ -4,7 +4,6 @@
     "stylelint-config-twbs-bootstrap/scss"
   ],
   "rules": {
-    "at-rule-no-unknown": null,
     "function-max-empty-lines": null,
     "function-url-quotes": "never",
     "indentation": [2, {
@@ -43,9 +42,6 @@
     "value-list-max-empty-lines": null,
     "order/properties-alphabetical-order": true,
     "order/properties-order": null,
-    "scss/at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["at-root", "function", "import", "include", "mixin"]
-    }],
     "scss/dollar-variable-default": null
   }
 }

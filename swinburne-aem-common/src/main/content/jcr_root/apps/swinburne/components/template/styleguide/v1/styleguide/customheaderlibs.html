@@ -51,10 +51,10 @@
      data-sly-test="${wcmmode.preview || wcmmode.edit}"
      data-sly-call="${clientlib.css @ categories='aemdesign.common.coralui'}"/>
 
-<!-- all: swinburne.sut.header,swinburne.styleguide.header start -->
+<!-- all: swinburne.header.v2 start -->
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${clientlib.all @ categories='swinburne.sut.header,swinburne.styleguide.header'}"/>
-<!-- all: swinburne.sut.header,swinburne.styleguide.header end -->
+     data-sly-call="${clientlib.all @ categories='swinburne.header.v2,swinburne.header.styleguide'}"/>
+<!-- all: swinburne.header.v2 end -->
 
 <!-- swinburne/components/analytics/datalayer -->
 <sly data-sly-resource="${ @ resourceType='swinburne/components/analytics/datalayer'}"/>

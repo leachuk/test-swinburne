@@ -12,7 +12,6 @@ module.exports = ({ env }) => ({
 
       propList: [
         'bottom',
-        'flex-basis',
         'font',
         'font-size',
         'height',

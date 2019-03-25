@@ -1,5 +1,5 @@
 {
-  "microsites": {
+  "v1": {
     "outputName": "app",
     "sassModule": "node-sass",
 
@@ -26,7 +26,7 @@
     }
   },
 
-  "sut": {
+  "v2": {
     "outputName": "app",
 
     "entryFile": {
@@ -37,13 +37,17 @@
     "additionalEntries": {
       "vendors": [
         "es6-promise/auto",
+        "object-fit-images",
         "picturefill",
         "bootstrap/js/dist/util",
         "bootstrap/js/dist/collapse",
-        "bootstrap/js/dist/dropdown"
+        "bootstrap/js/dist/dropdown",
+        "bootstrap/js/dist/modal",
+        "bootstrap/js/dist/tab"
       ],
 
-      "vendorlib/jquery": "jquery"
+      "vendorlib/jquery": "jquery",
+      "vendorlib/owl.carousel": "owl.carousel"
     }
   },
 

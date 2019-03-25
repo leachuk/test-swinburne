@@ -11,9 +11,9 @@ $styleguide-sidebar-width: 260px;
 @import '~bootstrap/scss/variables';
 
 // Internals
-@import '../../sut/scss/functions';
-@import '../../sut/scss/variables';
-@import '../../sut/scss/mixins';
+@import '../../v2/scss/functions';
+@import '../../v2/scss/variables';
+@import '../../v2/scss/mixins';
 
 // Bootstrap reset and base typography
 @import '~bootstrap/scss/mixins';
@@ -99,27 +99,6 @@ html:not(.aem-AuthorLayer-Edit) {
 .styleguide {
   section.contentblock:not(:last-of-type) {
     margin-bottom: 30px;
-  }
-
-  .page-details ~ section.contentblock {
-    padding: 30px 15px;
-
-    > div > div > .text {
-      margin-bottom: 15px;
-
-      @include media-breakpoint-up(md) {
-        margin-bottom: 30px;
-      }
-    }
-
-    &:not(:last-of-type) {
-      margin-bottom: 0;
-    }
-
-    @include media-breakpoint-up(md) {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
   }
 }
 

@@ -608,4 +608,12 @@
     }
   }
 }
+html.aem-AuthorLayer-Edit{
+  .brand-header {
+    position: relative !important;
+    .dropdown-menu {
+      display: none !important;
+    }
+  }
+}
 /* stylelint-enable declaration-no-important */

@@ -7,6 +7,13 @@ declare var require: {
   ) => void;
 }
 
+declare module '*.scss' {
+  const content: { [className: string]: string };
+  export = content;
+}
+
+declare module 'owl.carousel';
+
 declare interface Window { CQ: any; }
 
 declare function ObjectFitImages(): void;

@@ -1,4 +1,3 @@
 #!/bin/bash
 
-./deploy -Dcrx.host=localhost
-
+./deploy -Dcrx.host=localhost -P buildSwinburneMicrosites,buildSwinburneGlobal,buildSwinburneStyleguide,buildAEMDesignOverrides

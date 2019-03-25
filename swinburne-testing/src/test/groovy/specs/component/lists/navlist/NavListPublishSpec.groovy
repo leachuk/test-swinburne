@@ -116,5 +116,70 @@ class NavListPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+    @Unroll("Nav List: Stacked with Children List has correct current page marks #viewport.label")
+    def "Nav List: Stacked with Children List has correct current page marks"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "Nav List" > "Pages" > "Page 2" > "Page 2"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#inheritedListInAside"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPageUrl("content/swinburne-showcase/en/component/lists/nav-list/pages/page2/page2.html")
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: "Has five nav items"
+        assert $("${selector} li.nav-item").size() == 5
+
+        and: "Has first menu item not marked as current"
+        assert !$("${selector} li.nav-item").getAt(0).getAttribute("class").contains("current")
+
+        and: "Has second menu item marked as current"
+        assert $("${selector} li.nav-item").getAt(1).getAttribute("class").contains("current")
+
+        and: "Has second menu item with link marked as active"
+        assert $("${selector} li.nav-item").getAt(1).find("a.active").size() == 1
+
+        and: "Has second menu item with link marked as active should have current link title equals Page2"
+        assert $("${selector} li.nav-item.current").find("a.current").firstElement().getAttribute("textContent").trim() == "Page2"
+
+        where:
+        viewport << getViewPorts()
+
+    }
+
+    @Unroll("Nav List: Dropdown with Children List in #viewport.label")
+    def "Nav List: Dropdown with Children List"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "Nav List"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#navlist6"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: "Has five first level items"
+        assert $("${selector} li").size() == 5
+
+        and: "First item has five items"
+        assert $("[aria-labelledby=navlist6_page1] > a.nav-link").size() == 5
+
+        and: "First item has five items"
+        assert $("[aria-labelledby=navlist6_page1_page1] > a.nav-link").size() == 2
+
+        where:
+        viewport << getViewPorts()
+    }
+
 
 }

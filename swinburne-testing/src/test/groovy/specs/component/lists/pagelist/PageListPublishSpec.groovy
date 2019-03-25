@@ -264,4 +264,89 @@ class PageListPublishSpec extends ComponentSpec {
         where:
         viewport << getViewPorts()
     }
+
+    @Unroll("Page List: Default with Thumbnail Override in #viewport.label")
+    def "Page List: Default with Thumbnail Override"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist31"
+        def selectorContainer = "#contentblock31 .contents"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: "Has two list items"
+        assert $("${selector} li").size() == 3
+
+        and: "Last item should have thumbnail override from list"
+        assert $("${selector} li img").getAt(0).attr("src").contains("/cablecar.jpg/")
+        takeScreenshot($(selector).firstElement(), "Last item should have thumbnail override from list")
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Page List: Default without Thumbnail Override in #viewport.label")
+    def "Page List: Default without Thumbnail Override"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist32"
+        def selectorContainer = "#contentblock32 .contents"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: "Has two list items"
+        assert $("${selector} li").size() == 3
+
+        and: "Last item should have thumbnail override from page details"
+        assert $("${selector} li img").getAt(0).attr("src").contains("/city2.jpg/")
+        takeScreenshot($(selector).firstElement(), "Last item should have thumbnail override from page details")
+
+
+        where:
+        viewport << getViewPorts()
+    }
+
+
+
+    @Unroll("Page List: Pages with no Details in #viewport.label")
+    def "Page List: Pages with no Details"() {
+
+        given: '>the page hierarchy is created as "Components" > "Lists" > "List"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#pagelist38"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+        and: "Has five items of page missing details"
+        assert $("${selector} .page-missing-details").size() == 5
+
+        where:
+        viewport << getViewPorts()
+    }
+
+
+
 }

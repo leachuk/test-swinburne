@@ -60,7 +60,7 @@
                                                                 sling:resourceType="swinburne/components/content/embedsource"
                                                                 componentId="embedsource_AP3MMJNLO"
                                                                 componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-logo]"
-                                                                html="&lt;img src=&quot;/etc/clientlibs/swinburne/sut/images/logo-long-full-keyline.svg&quot;>"/>
+                                                                html="&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/logo-long-full-keyline.svg&quot;>"/>
                                                         <contentblock
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/layout/contentblock"
@@ -117,7 +117,7 @@
                                                                 sling:resourceType="swinburne/components/content/embedsource"
                                                                 componentId="embedsource_AMM3MJNLO_B5MITSHGS"
                                                                 componentTheme="[swinburne:component-style-theme/layout/brand-footer/brand-footer-knowing]"
-                                                                html="&lt;img src=&quot;/etc/clientlibs/swinburne/sut/images/swinburne-knowing.svg&quot;>"/>
+                                                                html="&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/swinburne-knowing.svg&quot;>"/>
                                                     </par>
                                                 </contentblock>
                                                 <contentblock_1483829457
@@ -330,7 +330,7 @@
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/embedsource"
                                                                 componentId="embedsource_VHEGASDMM"
-                                                                html="&lt;img src=&quot;/etc/clientlibs/swinburne/sut/images/indigenous-acknowledgement.svg&quot;>"/>
+                                                                html="&lt;img src=&quot;/etc/clientlibs/swinburne/v2/images/indigenous-acknowledgement.svg&quot;>"/>
                                                         <text_141377034
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/text"

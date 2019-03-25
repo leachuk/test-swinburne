@@ -20,22 +20,22 @@
 
     <filter root="/etc/clientlibs/swinburne/core"/>
 
-    <filter root="/etc/clientlibs/swinburne/microsites">
+    <filter root="/etc/clientlibs/swinburne/v1">
         <!-- do not allow deploy into css js and fonts folders -->
-        <include pattern="/etc/clientlibs/swinburne/microsites/.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/microsites/css.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/microsites/js.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/microsites/fonts.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/microsites/images.*"/>
+        <include pattern="/etc/clientlibs/swinburne/v1/.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v1/css.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v1/js.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v1/fonts.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v1/images.*"/>
     </filter>
 
-    <filter root="/etc/clientlibs/swinburne/sut">
+    <filter root="/etc/clientlibs/swinburne/v2">
         <!-- do not allow deploy into css js and fonts folders -->
-        <include pattern="/etc/clientlibs/swinburne/sut/.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/sut/css.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/sut/js.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/sut/fonts.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/sut/images.*"/>
+        <include pattern="/etc/clientlibs/swinburne/v2/.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v2/css.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v2/js.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v2/fonts.*"/>
+        <exclude pattern="/etc/clientlibs/swinburne/v2/images.*"/>
     </filter>
 
     <filter root="/etc/clientlibs/swinburne/styleguide">

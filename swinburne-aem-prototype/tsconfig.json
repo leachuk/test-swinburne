@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
+    "downlevelIteration": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,
@@ -12,10 +13,12 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "esnext",
+    "target": "es5",
 
     "lib": [
       "esnext",
+      "es5",
+      "es2015.promise",
       "dom",
       "dom.iterable",
       "scripthost"
@@ -23,7 +26,7 @@
 
     "paths": {
       "@global/*": [
-        "source/v2/js/*"
+        "source/sut/js/*"
       ]
     },
 
@@ -33,6 +36,7 @@
       "fastclick",
       "jquery",
       "lodash",
+      "owl.carousel",
       "pubsub-js"
     ]
   },
@@ -40,7 +44,8 @@
   "include": [
     "source/**/*.ts",
     "source/**/*.tsx",
-    "source/**/*.vue"
+    "source/**/*.vue",
+    "source/**/*.scss",
   ],
 
   "exclude": [

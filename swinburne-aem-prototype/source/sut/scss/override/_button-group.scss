@@ -4,11 +4,9 @@
 // care when making changes as we shouldn't be duplicating styles that Bootstrap
 // generates for us automatically.
 
-@import 'breadcrumb';
-@import 'button';
-@import 'button-group';
-@import 'card';
-@import 'grid';
-@import 'image';
-@import 'nav';
-@import 'navbar';
+.btn-group {
+  .btn:not(:first-child) {
+    // stylelint-disable-next-line
+    border-left-width: 0 !important;
+  }
+}

@@ -73,7 +73,7 @@ function determineListNeeds(list: HTMLElement, options: CarouselOptions): Carous
 
   const isReady     = list.classList.contains('owl-ready')
   const itemsTotal  = target.children.length
-  const orientation = Math.abs(screen.orientation.angle)
+  const orientation = (screen.orientation && Math.abs(screen.orientation.angle)) || 0
 
   // Quarter scenario (4 items)
   if (list.classList.contains('theme--lists-quarter')) {
@@ -238,12 +238,11 @@ function detectListType(list: HTMLElement, type: string): boolean {
  * Detects and creates a carousel instance for the target elements.
  */
 function loopAndGenerateCarousels() {
-  carousels.forEach((carousel) => {
+  for (const carousel of carousels) {
     const list: HTMLElement = carousel as HTMLElement
 
     let config: CarouselOptions = { needsCarousel: true, refreshOnly: false }
     let target: HTMLElement | null = null
-
     switch (true) {
       case detectListType(list, 'eventlist'):
       case detectListType(list, 'newslist'):
@@ -265,7 +264,7 @@ function loopAndGenerateCarousels() {
         $(list).find('.owl-carousel').trigger('refresh.owl.carousel')
       }
     }
-  })
+  }
 }
 
 export default async () => {
@@ -274,6 +273,8 @@ export default async () => {
 
   if (carousels.length && !isAuthorEditMode()) {
     await import(/* webpackChunkName: "owl.carousel" */ 'owl.carousel')
+
+    console.info('Owl Carousel loaded and ready!')
 
     loopAndGenerateCarousels()
 

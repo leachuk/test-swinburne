@@ -16,11 +16,12 @@
     "target": "es5",
 
     "lib": [
-      "esnext",
-      "es5",
-      "es2015.promise",
       "dom",
       "dom.iterable",
+      "es2015",
+      "es2016",
+      "es2017",
+      "esnext",
       "scripthost"
     ],
 
@@ -29,6 +30,10 @@
         "source/sut/js/*"
       ]
     },
+
+    "typeRoots": [
+      "node_modules/@types"
+    ],
 
     "types": [
       "webpack-env",

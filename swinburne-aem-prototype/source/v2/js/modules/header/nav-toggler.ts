@@ -13,12 +13,21 @@ function closeSubNavigation(element) {
 }
 
 function toggleNavigation() {
-  $backButtons = $('button[data-nav]');
-
   $navLink.on('click', () => {
     const windowWidth = $window.outerWidth() || window.innerWidth;
     if (windowWidth < 1024) {
       $toggleButton.trigger('click');
+    }
+  });
+}
+
+//Close Sub navigation when navigation is closing.
+function resetNavigation(){
+  $backButtons = $('button[data-nav]');
+  $collapsible.on('hide.bs.collapse', () => {
+    const windowWidth = $window.outerWidth() || window.innerWidth;
+    if (windowWidth < 1024) {
+      $backButtons.trigger('click');
     }
   });
 }
@@ -126,6 +135,7 @@ export default () => {
   setBackButtons();
   setNavToggler();
   toggleNavigation();
+  resetNavigation();
 
   $window.on('resize', _throttle(() => {
     const windowWidth = $window.outerWidth() || window.innerWidth;
@@ -136,13 +146,5 @@ export default () => {
       attachDropdownEvents()
     }
   }, 200)).trigger('resize')
-
-  //Close Sub navigation when navigation is closing.
-  $collapsible.on('hide.bs.collapse', () => {
-    const windowWidth = $window.outerWidth() || window.innerWidth;
-    if (windowWidth < 1024) {
-      $backButtons.trigger('click');
-    }
-  });
 
 }

@@ -3,9 +3,33 @@ import _throttle from 'lodash/throttle'
 let $dropdown: JQuery
 let $collapsible : JQuery
 let $window: JQuery<Window>
+let $toggleButton : JQuery
+let $navLink : JQuery
+let $backButtons : JQuery
 
-function closeNavigation(element) {
+
+function closeSubNavigation(element) {
   $(element.target).parent().removeClass('show');
+}
+
+function toggleNavigation() {
+  $navLink.on('click', () => {
+    const windowWidth = $window.outerWidth() || window.innerWidth;
+    if (windowWidth < 1024) {
+      $toggleButton.trigger('click');
+    }
+  });
+}
+
+//Close Sub navigation when navigation is closing.
+function resetNavigation(){
+  $backButtons = $('button[data-nav]');
+  $collapsible.on('hide.bs.collapse', () => {
+    const windowWidth = $window.outerWidth() || window.innerWidth;
+    if (windowWidth < 1024) {
+      $backButtons.trigger('click');
+    }
+  });
 }
 
 function attachDropdownEvents() {
@@ -41,7 +65,7 @@ function attachDropdownEvents() {
   });
 }
 
-function detechDropdownEvents() {
+function detachDropdownEvents() {
   $dropdown.off('shown.bs.dropdown click hide.bs.dropdown')
 }
 
@@ -52,7 +76,7 @@ function getButton(title, level) {
   button.classList.add('link');
   button.innerText = 'Back';
   button.setAttribute('data-nav', `${title}-${level}`);
-  button.addEventListener('click', closeNavigation);
+  button.addEventListener('click', closeSubNavigation);
 
   const text = document.createElement('span');
   text.classList.add('sr-only');
@@ -72,20 +96,13 @@ function getButton(title, level) {
 function setNavToggler() {
   const $button = $('.brand-header button[data-toggle="collapse"]');
   let openContent = $button.html();
-  $button.html(`<div>${openContent}</div>`);
-  openContent = $button.html();
+  openContent = `<div>${openContent}</div>`;
+  $button.html(openContent);
 
   let closeContent = '<div><i class="icon fal fa-times"></i>';
   closeContent += '<span class="link-text">Close</span></div>';
 
-  $collapsible.on({
-    'show.bs.collapse': () => {
-      $button.html(closeContent);
-    },
-    'hide.bs.collapse':  () => {
-      $button.html(openContent);
-    },
-  })
+  $button.prepend(closeContent);
 }
 
 function setBackButtons() {
@@ -108,21 +125,26 @@ function cloneActions() {
 }
 
 export default () => {
-  $dropdown = $('.dropdown')
-  $window = $(window)
-  $collapsible = $('#header-nav-container')
+  $dropdown = $('.dropdown');
+  $window = $(window);
+  $collapsible = $('#header-nav-container');
+  $toggleButton = $('.navbar-toggler');
+  $navLink = $('a.parent');
 
   cloneActions();
   setBackButtons();
   setNavToggler();
+  toggleNavigation();
+  resetNavigation();
 
   $window.on('resize', _throttle(() => {
-    const windowWidth = $window.outerWidth() || window.innerWidth
+    const windowWidth = $window.outerWidth() || window.innerWidth;
 
     if (windowWidth >= 1024) {
-      detechDropdownEvents()
+      detachDropdownEvents()
     } else {
       attachDropdownEvents()
     }
   }, 200)).trigger('resize')
+
 }

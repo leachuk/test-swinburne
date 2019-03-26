@@ -17,7 +17,7 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="aemdesign/components/details/page-details"
-                    cardStyle="[aemdesign-showcase:component-style-modifier/background/bg-c8,aemdesign-showcase:component-style-modifier/card/coloured]"
+                    cardStyle="[swinburne-showcase:component-style-modifier/background/bg-c8,aemdesign-showcase:component-style-modifier/card/coloured]"
                     description="Page with Licensed Page Image, with non-Licensed Secondary Image and with Background non-Licensed Image"
                     showBreadcrumb="false"
                     showParsys="false"

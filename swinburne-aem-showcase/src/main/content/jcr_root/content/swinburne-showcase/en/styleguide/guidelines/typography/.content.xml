@@ -40,16 +40,16 @@
                     titleType="[h1,h1]">
                     <secondaryImage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <thumbnail
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <ogImage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                 </page_details>
                 <contentblock_1378969136
                     jcr:primaryType="nt:unstructured"
@@ -57,7 +57,7 @@
                     componentId="contentblock_1378969136_NOY3YKSXF">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <text_653407551
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
@@ -126,10 +126,10 @@
                     </par>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                 </contentblock_1378969136>
             </par>
         </article>

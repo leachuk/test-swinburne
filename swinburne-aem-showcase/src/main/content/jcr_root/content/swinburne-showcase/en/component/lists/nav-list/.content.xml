@@ -5,7 +5,7 @@
             cq:lastModified="{Date}2019-03-18T14:25:44.886+11:00"
             cq:lastModifiedBy="admin"
             cq:tags="[swinburne-showcase:content-type/page]"
-            cq:template="/conf/swinburne-showcase/settings/wcm/templates/twocolumn"
+           cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
             jcr:primaryType="cq:PageContent"
             jcr:title="Nav List"
             sling:resourceType="swinburne/components/template/base">

@@ -33,7 +33,7 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="aemdesign/components/details/page-details"
-                    cardStyle="[aemdesign-showcase:component-style-modifier/background/bg-c5,aemdesign-showcase:component-style-modifier/card/coloured]"
+                    cardStyle="[swinburne-showcase:component-style-modifier/background/bg-c5,aemdesign-showcase:component-style-modifier/card/coloured]"
                     description="Page 5 Page Details and Page with Page Image, Contact and Event Details"
                     showBreadcrumb="false"
                     showParsys="false"

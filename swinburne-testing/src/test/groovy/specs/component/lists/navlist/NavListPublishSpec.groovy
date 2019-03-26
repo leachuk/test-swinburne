@@ -20,7 +20,6 @@ class NavListPublishSpec extends ComponentSpec {
 
     @Unroll("Nav List: Default with Fixed List in #viewport.label")
     def "Nav List: Default with Fixed List"() {
-
         given: '>the page hierarchy is created as "Components" > "Lists" > "Nav List"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
@@ -33,19 +32,20 @@ class NavListPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
 
         and: "Has two list items"
         assert $("${selector} li").size() == 2
 
         and: "Has first item"
-        assert $("${selector} li:nth-child(1)").text().trim() == "Page1"
+        assert $("${selector} li").firstElement().getAttribute("textContent").trim().contains("Page1")
 
         and: "Has last item"
-        assert $("${selector} li:nth-child(2)").text().trim() == "Page2"
+        assert $("${selector} li").lastElement().getAttribute("textContent").trim().contains("Page2")
 
         where:
         viewport << getViewPorts()
+
     }
 
     @IgnoreRest
@@ -64,21 +64,20 @@ class NavListPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
 
         and: "Has two list items"
         assert $("${selector} li").size() == 2
 
         and: "Has first item"
-        assert $("${selector} a:nth-child(1)").text().trim() == "Page1"
+        assert $("${selector} .menu a").firstElement().getAttribute("textContent").trim().contains("Page1")
 
-//         and: "Has last item"
-//         assert $("${selector} li:nth-child(2) a").text().trim() == "Page2"
+        and: "Has last item"
+        assert $("${selector} .menu a").lastElement().getAttribute("textContent").trim().contains("Page2")
 
         where:
         viewport << getViewPorts()
     }
-
 
     @Unroll("Nav List: Stacked with Fixed List in #viewport.label")
     def "Nav List: Stacked with Fixed List"() {
@@ -95,22 +94,22 @@ class NavListPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+        takeScreenshot($(selector).firstElement(), "The component should be on the page")
 
         and: "Has two list items"
-        assert $("${selector} li .dropdown-toggle").size() == 2
+        assert $("${selector} li.dropdown").size() == 2
 
         and: "Has first item"
-        assert $("${selector} li:nth-child(1) .dropdown-toggle").text().trim() == "Page1"
+        assert $("${selector} li.dropdown").getAt(0).find("a.dropdown-toggle").getAttribute("textContent").trim() == "Page1"
 
         and: "First item has five sub items"
-        assert $("${selector} li:nth-child(1) .dropdown-menu a").size() == 2
+        assert $("${selector} li.dropdown").getAt(0).find("div.dropdown-menu a").size() == 5
 
         and: "Has last item"
-        assert $("${selector} li:nth-child(2) .dropdown-toggle").text().trim() == "Page2"
+        assert $("${selector} li.dropdown").getAt(1).find("a.dropdown-toggle").getAttribute("textContent").trim() == "Page2"
 
-        and: "First item has five sub items"
-        assert $("${selector} li:nth-child(2) .dropdown-menu a").size() == 2
+        and: "Last item has five sub items"
+        assert $("${selector} li.dropdown").getAt(1).find("div.dropdown-menu a").size() == 5
 
         where:
         viewport << getViewPorts()

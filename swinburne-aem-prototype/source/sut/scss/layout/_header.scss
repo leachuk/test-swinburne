@@ -1,4 +1,5 @@
 /* stylelint-disable declaration-no-important */
+@import '../mixins';
 
 @mixin yellow-link {
   margin-left: -$spacing-md;
@@ -609,7 +610,8 @@
     }
   }
 }
-html.aem-AuthorLayer-Edit{
+
+@include aem-author-edit {
   .brand-header {
     position: relative !important;
     .dropdown-menu {

@@ -311,6 +311,7 @@
 
       @include media-breakpoint-down(md) {
         display: block;
+        margin-left: 0;
 
         & > .content > ul {
           flex-direction: column;

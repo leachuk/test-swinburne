@@ -53,7 +53,7 @@
                             componentId="contentblock-light">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -93,10 +93,10 @@
                                 controlType="end"/>
                             <bgimage
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/components/media/image"/>
                             <bgvideo
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/media/image"/>
+                                sling:resourceType="swinburne/components/media/image"/>
                         </contentblock_422923487>
                     </par>
                 </contentblock>

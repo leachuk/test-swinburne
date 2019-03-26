@@ -243,4 +243,36 @@ class PageDetailsPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+    def "Page Details: Default metadata added to page"() {
+
+        given: '>the page hierarchy is created as "Components" > "Details" > "Page Details"'
+        and: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#page-details"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+
+        and: "Page has metadata field og:title from Details component"
+        assert $("meta[property='og:title']").attr("content").equals("Page Title")
+
+        and: "Page has metadata field og:type"
+        assert $("meta[property='og:type']").attr("content").equals("article")
+
+        and: "Page has metadata field og:image"
+        assert $("meta[property='og:image']").attr("content").contains("page-details.thumb.")
+
+        and: "Page has metadata field og:url"
+        assert $("meta[property='og:url']").attr("content").contains("details/page-details.html")
+
+        and: "Page has canonical link"
+        assert $("link[rel='canonical']").attr("href").contains("details/page-details.html")
+
+    }
+
+
 }

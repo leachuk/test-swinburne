@@ -2,17 +2,31 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:tags="[swinburne:content-type/page]"
-        cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
+        cq:tags="[swinburne-showcase:content-type/page]"
+       cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
+        jcr:description="Page Description"
         jcr:primaryType="cq:PageContent"
         jcr:title="Page Details"
         sling:resourceType="swinburne/components/template/base">
         <article
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article">
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
+                <pagedetails
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page-details"
+                    description="Custom Description"
+                    pageMetaProperty="og:type"
+                    pageMetaPropertyContent="article"
+                    showBreadcrumb="false"
+                    showParsys="false"
+                    showToolbar="false"
+                    title="Page Title"/>
                 <contentblock1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -24,12 +38,6 @@
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            text=""
-                            textIsRich="true"
-                            variant="simple"/>
                         <pagedetails
                             jcr:mixinTypes="[cq:Taggable]"
                             jcr:primaryType="nt:unstructured"
@@ -66,7 +74,8 @@
                             <toolbar
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/layout/navbar"
-                                cancelInheritParent="true">
+                                cancelInheritParent="true"
+                                componentId="toolbar2">
                                 <par
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/layout/container">
@@ -99,65 +108,6 @@
                         </pagedetails>
                     </par>
                 </contentblock2>
-                <contentblock7
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock7"
-                    hideTitle="false"
-                    hideTitleSeparator="true"
-                    title="Page Details: Default with included components and Parallax theme"
-                    variant="advsection">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            text=""
-                            textIsRich="true"
-                            variant="simple"/>
-                        <page_details
-                            jcr:mixinTypes="[cq:Taggable]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/details/page-details"
-                            componentId="page_details_timely"
-                            componentModifiers="[swinburne:component-style-modifier/background/standard/parallax]"
-                            componentTheme="[swinburne:component-style-theme/layout/page-details/theme--pagedetail-brand]"
-                            hideDescription="true"
-                            hideTitle="true"
-                            showBreadcrumb="false"
-                            showPageDate="false"
-                            showParsys="true"
-                            showToolbar="false"
-                            textIsRich="true">
-                            <secondaryImage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/media/image"/>
-                            <thumbnail
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/media/image"/>
-                            <bgimage
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/media/image"
-                                fileReference="/content/dam/swinburne-showcase/en/common/good-luck-for-exams.jpg"/>
-                            <par
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/container">
-                                <image
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/media/image"
-                                    componentId="image_timely"
-                                    fileReference="/content/dam/swinburne-showcase/en/common/youve-got-this.png"/>
-                                <text
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="swinburne/components/content/text"
-                                    componentId="text_timely"
-                                    text="&lt;p>Yep, exams suck. But you’re nearly there! And we’ve got a couple of things to help get you over the line.&lt;/p>&#xd;&#xa;&lt;p>If you need a D&amp;amp;M about your study options for after school, come speak to us at a&amp;nbsp;&lt;a href=&quot;http://localhost:3000/patterns/20-pages-2017-timely/20-pages-2017-timely.rendered.html?1536810376422&quot;>Swinburne Information Evening&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>Or if you just want to knuckle down and get it done, check out these&amp;nbsp;&lt;a href=&quot;http://localhost:3000/patterns/20-pages-2017-timely/20-pages-2017-timely.rendered.html?1536810376422&quot;>handy exam tips&lt;/a>.&lt;/p>&#xd;&#xa;"
-                                    textIsRich="true"/>
-                            </par>
-                        </page_details>
-                    </par>
-                </contentblock7>
                 <contentblock3
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
@@ -169,12 +119,6 @@
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            text=""
-                            textIsRich="true"
-                            variant="simple"/>
                         <pagedetails
                             jcr:mixinTypes="[cq:Taggable]"
                             jcr:primaryType="nt:unstructured"
@@ -211,7 +155,8 @@
                             title="Page Title 4">
                             <toolbar
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/layout/navbar">
+                                sling:resourceType="swinburne/components/layout/navbar"
+                                componentId="toolbar4">
                                 <par
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/layout/container">
@@ -254,13 +199,7 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            text=""
-                            textIsRich="true"
-                            variant="simple"/>
+                        sling:resourceType="aemdesign/components/layout/container">
                         <pagedetails
                             jcr:mixinTypes="[cq:Taggable]"
                             jcr:primaryType="nt:unstructured"
@@ -285,16 +224,10 @@
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
-                        <text
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/content/text"
-                            text=""
-                            textIsRich="true"
-                            variant="simple"/>
                         <pagedetails
                             jcr:mixinTypes="[cq:Taggable]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/details/page-details"
+                            sling:resourceType="aemdesign/components/details/page-details"
                             componentId="page-details6"
                             description="Custom Description"
                             hideDescription="true"
@@ -308,4 +241,5 @@
             </par>
         </article>
     </jcr:content>
+    <page-details-usage/>
 </jcr:root>

@@ -35,16 +35,16 @@
                     titleType="[,]">
                     <secondaryImage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <thumbnail
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <ogImage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                 </page_details>
             </par>
         </article>

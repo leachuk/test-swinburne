@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+       cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Page4"
         sling:resourceType="swinburne/components/template/base"
@@ -17,7 +17,7 @@
                     jcr:mixinTypes="[cq:Taggable]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
-                    cardStyle="[swinburne:component-style-modifier/background/bg-c4,swinburne:component-style-modifier/card/coloured]"
+                    cardStyle="[swinburne-showcase:component-style-modifier/background/bg-c4,swinburne-showcase:component-style-modifier/card/coloured]"
                     description="Page without Page Image and with Licensed Secondary Image"
                     showBreadcrumb="false"
                     showParsys="false"
@@ -31,4 +31,6 @@
             </par>
         </article>
     </jcr:content>
+    <page1/>
+    <page2/>
 </jcr:root>

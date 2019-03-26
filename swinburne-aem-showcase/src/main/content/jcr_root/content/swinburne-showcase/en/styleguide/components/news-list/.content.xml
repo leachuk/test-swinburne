@@ -47,7 +47,7 @@
                             componentId="contentblock_1872776108_VZWQOCEOG">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <newslist
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/lists/newslist"
@@ -59,17 +59,17 @@
                                     tagsMatch="any">
                                     <badgeThumbnail
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="aemdesign/components/media/image"/>
+                                        sling:resourceType="swinburne/components/media/image"/>
                                 </newslist>
                             </par>
                         </contentblock_1872776108>
                     </par>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                     <bgvideo
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
+                        sling:resourceType="swinburne/components/media/image"/>
                 </contentblock>
             </par>
         </article>

@@ -16,7 +16,7 @@
                 sling:resourceType="swinburne/components/layout/container"/>
             <bgimage
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="aemdesign/components/media/image"/>
+                sling:resourceType="swinburne/components/media/image"/>
         </aside>
         <article
             jcr:primaryType="nt:unstructured"
@@ -51,7 +51,7 @@
                             componentId="contentblock_995190377_AECQXMMV6">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <embedsource
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/embedsource"

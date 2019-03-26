@@ -67,10 +67,10 @@
                             </par>
                             <bgimage
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/media/image"/>
+                                    sling:resourceType="swinburne/components/media/image"/>
                             <bgvideo
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="aemdesign/components/media/image"/>
+                                    sling:resourceType="swinburne/components/media/image"/>
                         </contentblock_2094525290>
                     </par>
                 </contentblock>

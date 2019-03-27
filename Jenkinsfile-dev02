@@ -6,9 +6,8 @@ pipeline {
             DEV02_AUTHOR_CREDS = credentials('dev-author-creds')
         }
        steps {
-         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackagejenkins,installdeploymentpackagejenkins clean install -Dcrx.host=swinburne-author-dev-02.at.isobaraustralia.com -Dcrx.username=${DEV02_AUTHOR_CREDS_USR} -Dcrx.password=${DEV02_AUTHOR_CREDS_PSW}  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
-         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackagejenkins,installdeploymentpackagejenkins clean install -Dcrx.host=swinburne-publisher-dev-02.at.isobaraustralia.com -Dcrx.username=${DEV02_AUTHOR_CREDS_USR} -Dcrx.password=${DEV02_AUTHOR_CREDS_PSW}  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
-
+         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackagejenkins,installdeploymentpackage clean install -Dcrx.host=swinburne-author-dev-02.at.isobaraustralia.com -Dpackage.uploadProtocol=https -Dcrx.username=${DEV02_AUTHOR_CREDS_USR} -Dcrx.port=443 -Dcrx.password=${DEV02_AUTHOR_CREDS_PSW}  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackagejenkins,installdeploymentpackage clean install -Dcrx.host=swinburne-publisher-dev-02.at.isobaraustralia.com -Dpackage.uploadProtocol=https -Dcrx.username=${DEV02_AUTHOR_CREDS_USR} -Dcrx.port=443 -Dcrx.password=${DEV02_AUTHOR_CREDS_PSW}  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
            }
      }
 

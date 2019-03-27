@@ -7,10 +7,9 @@ SKIP_PRINT_CONFIG=true
 
 source "../scripts/functions.sh"
 
-LOCAL_IP="$(ifconfig | grep 'inet ' | head -1 | grep -v '127.0.0.1' | awk '{print $2}' | head -1)"
-
 EXEC_HOST="${1:-$LOCAL_IP}"
 EXEC_ENV="${2:-local-chrome}" #localremote - seleniumhub - local-phantomjs
 HUB_URL="${3:-$SELENIUMHUB_SCHEME://$LOCAL_IP:$SELENIUMHUB_PORT$SELENIUMHUB_SERVICE}"
+EXEC_AEM_PORT="${4:-$AEM_PORT}"
 
-./test-spec $EXEC_HOST $EXEC_ENV $HUB_URL
+./test-spec "$EXEC_HOST" "$EXEC_AEM_PORT" "$EXEC_ENV" "$HUB_URL"

@@ -217,7 +217,7 @@
                                     <goal>install</goal>
                                 </goals>
                                 <configuration>
-                                    <targetURL>${package.uploadProtocol}://${crx.host}/crx/packmgr/service.jsp</targetURL>
+                                    <targetURL>${package.uploadProtocol}://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
                                     <userId>${crx.username}</userId>
                                     <password>${crx.password}</password>
                                 </configuration>
@@ -255,7 +255,65 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>installdeploymentpackagejenkins</id>
+            <activation>
+                <property>
+                    <name>deploypackagejenkins</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.day.jcr.vault</groupId>
+                        <artifactId>content-package-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-content-package</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                                <configuration>
+                                    <targetURL>${package.uploadProtocolJenkins}://${crx.host}/crx/packmgr/service.jsp</targetURL>
+                                    <userId>${crx.username}</userId>
+                                    <password>${crx.password}</password>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.2</version>
+                        <executions>
+                            <execution>
+                                <id>clean-jsp-clean</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>curl</executable>
+                                    <arguments>
+                                        <argument>-u</argument>
+                                        <argument>${crx.username}:${crx.password}</argument>
+                                        <argument>-H</argument>
+                                        <argument>User-Agent:curl</argument>
+                                        <argument>-X</argument>
+                                        <argument>POST</argument>
+                                        <argument>${package.uploadProtocolJenkins}://${crx.host}/system/console/slingjsp</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
 
+
+                </plugins>
+            </build>
+        </profile>
 
 
 

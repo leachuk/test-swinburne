@@ -2,7 +2,52 @@
 
 DEFAULT_POM_FILE="pom.xml"
 
-LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | head -1)"
+OS=osx
+WINDOWS_UBUNTU_CONFIG_FILE="/etc/wsl.conf"
+
+if [ "$(uname)" == "Darwin" ]; then
+	OS=osx
+elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" && "$(uname -a | grep -q Microsoft && echo "true")" != "true" ]]; then
+    OS=linux
+elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" && "$(uname -a | grep -q Microsoft && echo "true")" == "true" ]]; then
+    OS=windowsbash
+    if [[ ! -f "$WINDOWS_UBUNTU_CONFIG_FILE" ]]; then
+        echo "Please create $WINDOWS_UBUNTU_CONFIG_FILE using following guide"
+        echo "https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#ensure-volume-mounts-work"
+        exit 1
+    fi
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    OS=windows
+    echo "Please use Ubuntu Bash"
+    exit 1
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+    OS=windows
+    echo "Please use Ubuntu Bash"
+    exit 1
+fi
+
+IFCONFIG="$(which ifconfig 2>/dev/null)"
+if [[ "$IFCONFIG" == "" && "$OS" == "windows" ]]; then
+	LOCAL_IP="$(ipconfig | grep "(Default Switch)" -A 6 | grep "IPv4 Address" | head -n1 | awk -F ": " '/1/ {print $2}')"
+else
+	if [[ "$IFCONFIG" == "" ]]; then
+		LOCAL_IP="localhost"
+	else
+		LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | head -1)"
+	fi
+fi
+
+function fixPath() {
+	local CHECK_PATH="${1?Need path}"
+	if [[ "$OS" == "windows" ]]; then
+		echo $(cygpath -wa $CHECK_PATH)
+	elif [[ "$OS" == "windowsbash" ]]; then
+#		local NEWPATH="$(wslpath -w $CHECK_PATH)"
+		echo "${CHECK_PATH//\/mnt/}"
+	else
+		echo "$CHECK_PATH"
+	fi
+}
 
 function getDefaultFromPom() {
     local PARAM_NAME=${1:-}

@@ -33,7 +33,7 @@ else
 	if [[ "$IFCONFIG" == "" ]]; then
 		LOCAL_IP="localhost"
 	else
-		LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | head -1)"
+		LOCAL_IP="$(ifconfig $(route -n get 0.0.0.0 2 | grep 'interface' | awk '{print $2}') | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}')"
 	fi
 fi
 

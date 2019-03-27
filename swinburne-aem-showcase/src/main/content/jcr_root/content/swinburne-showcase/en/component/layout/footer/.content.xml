@@ -38,7 +38,7 @@
                                         variant="container">
                                     <par
                                             jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="aemdesign/components/layout/container">
+                                            sling:resourceType="swinburne/components/layout/container">
                                         <contentblock_270068205
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="swinburne/components/layout/contentblock"
@@ -54,7 +54,7 @@
                                                         variant="parsys">
                                                     <par
                                                             jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="aemdesign/components/layout/container">
+                                                            sling:resourceType="swinburne/components/layout/container">
                                                         <embedsource
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="swinburne/components/content/embedsource"

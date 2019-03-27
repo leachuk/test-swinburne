@@ -71,7 +71,7 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <onlinemedia
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/widgets/onlinemedia"
@@ -96,7 +96,7 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <onlinemedia
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/widgets/onlinemedia"
@@ -118,7 +118,7 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <onlinemedia
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/widgets/onlinemedia"
@@ -137,7 +137,7 @@
                     variant="advsection">
                     <par
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/layout/container">
+                        sling:resourceType="swinburne/components/layout/container">
                         <onlinemedia
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/widgets/onlinemedia"

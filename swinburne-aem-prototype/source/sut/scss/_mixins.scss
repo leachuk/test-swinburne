@@ -191,7 +191,7 @@
 }
 
 @mixin aem-author-edit() {
-  html.aem-AuthorLayer-Edit & {
+  html.aem-AuthorLayer-Edit  {
     @content;
   }
 }

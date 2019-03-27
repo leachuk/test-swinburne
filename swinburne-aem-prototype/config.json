@@ -37,6 +37,7 @@
     "additionalEntries": {
       "vendors": [
         "es6-promise/auto",
+        "classlist.js",
         "picturefill",
         "bootstrap/js/dist/util",
         "bootstrap/js/dist/collapse",

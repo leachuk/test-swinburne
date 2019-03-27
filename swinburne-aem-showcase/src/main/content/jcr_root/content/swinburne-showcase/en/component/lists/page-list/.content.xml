@@ -1011,6 +1011,29 @@
                                 tagsMatch="any"/>
                     </par>
                 </contentblock37>
+                <contentblock38
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/layout/contentblock"
+                        componentId="contentblock38"
+                        hideTitle="false"
+                        hideTitleSeparator="true"
+                        title="Page List: Pages with no Details"
+                        variant="componentConfig">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/layout/container">
+                        <pagelist
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aemdesign/components/lists/pagelist"
+                                componentId="pagelist38"
+                                limit="5"
+                                listFrom="children"
+                                listType="list"
+                                parentPage="/content/swinburne-showcase/en/component/lists/page-list/nodetails"
+                                sortOrder="asc"
+                                tagsMatch="any"/>
+                    </par>
+                </contentblock38>
             </par>
         </article>
     </jcr:content>
@@ -1020,4 +1043,5 @@
     <icons/>
     <pages/>
     <analytics/>
+    <nodetails />
 </jcr:root>

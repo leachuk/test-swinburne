@@ -71,7 +71,7 @@
         <package.clientLibsFolder>swinburne</package.clientLibsFolder>
         <package.npmCommand>aem:build</package.npmCommand>
         <package.classNamespace>edu.au.swinburne</package.classNamespace>
-        <package.uploadProtocol>http</package.uploadProtocol>
+        <package.uploadProtocol>https</package.uploadProtocol>
         <aem.verison>6.4</aem.verison>
         <buildNumber>0</buildNumber>
         <seleniumhubhost.host>192.168.27.2</seleniumhubhost.host>

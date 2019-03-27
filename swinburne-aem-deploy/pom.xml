@@ -217,7 +217,7 @@
                                     <goal>install</goal>
                                 </goals>
                                 <configuration>
-                                    <targetURL>${package.uploadProtocol}://${crx.host}:${crx.port}/crx/packmgr/service.jsp</targetURL>
+                                    <targetURL>${package.uploadProtocol}://${crx.host}/crx/packmgr/service.jsp</targetURL>
                                     <userId>${crx.username}</userId>
                                     <password>${crx.password}</password>
                                 </configuration>

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER=$(/usr/bin/which docker &>/dev/null)
+DOCKER=$(/usr/bin/which docker)
 
 if [[ "$OS" == "windowsbash" ]]; then
 	DOCKER="docker.exe"

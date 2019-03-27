@@ -17,7 +17,7 @@ pipeline {
         DEV02_PUBLISH1_CREDS = credentials('dev-publish1-creds')
       }
       steps {
-        sh 'curl -u ${DEV02_PUBLISH1_CREDS} -X POST  http://52.63.178.158:4503/etc/acs-commons/dispatcher-flush/disp-flush/_jcr_content/configuration.flush.html'
+        sh 'curl -u ${DEV02_PUBLISH1_CREDS} -X POST  https://swinburne-publisher-dev-02.at.isobaraustralia.com/etc/acs-commons/dispatcher-flush/disp-flush/_jcr_content/configuration.flush.html'
       }
     }
   }

@@ -115,7 +115,7 @@ function monitorTests() {
     echo "================================================================="
     echo ""
 
-    $DOCKER logs -f $@ > docker-log-stdout-$(date +%s).log &
+    $DOCKER logs -f $@ > dockerlogs/docker-log-stdout-$(date +%s).log &
     $DOCKER logs -f $@
     echo Stopping: $@
     $DOCKER stop $@

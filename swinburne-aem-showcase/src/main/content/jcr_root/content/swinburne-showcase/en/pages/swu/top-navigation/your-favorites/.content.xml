@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-27T16:34:26.274+11:00"
+        cq:lastModified="{Date}2019-03-21T09:14:35.339+11:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
@@ -22,7 +22,16 @@
             componentId="article_XALD6KC7K">
             <par
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
+                sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                    jcr:created="{Date}2019-03-21T09:14:35.337+11:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-03-21T09:14:35.337+11:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details_UDDFG7XWB"/>
+            </par>
         </article>
         <footer
             jcr:primaryType="nt:unstructured"

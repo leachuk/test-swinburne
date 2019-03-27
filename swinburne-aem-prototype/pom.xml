@@ -175,7 +175,7 @@
       <id>buildSwinburneGlobal</id>
 
       <activation>
-        <activeByDefault>false</activeByDefault>
+        <activeByDefault>true</activeByDefault>
       </activation>
 
       <build>
@@ -474,7 +474,7 @@
       <id>buildSwinburneMicrosites</id>
 
       <activation>
-        <activeByDefault>false</activeByDefault>
+        <activeByDefault>true</activeByDefault>
       </activation>
 
       <build>
@@ -720,7 +720,7 @@
       <id>buildSwinburneStyleguide</id>
 
       <activation>
-        <activeByDefault>false</activeByDefault>
+        <activeByDefault>true</activeByDefault>
       </activation>
 
       <build>
@@ -863,7 +863,7 @@
       <id>buildAEMDesignOverrides</id>
 
       <activation>
-        <activeByDefault>false</activeByDefault>
+        <activeByDefault>true</activeByDefault>
       </activation>
 
       <build>

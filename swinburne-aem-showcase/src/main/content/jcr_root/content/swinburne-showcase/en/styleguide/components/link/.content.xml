@@ -47,7 +47,7 @@
                             componentId="contentblock_AW7LGYG2C">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
@@ -62,7 +62,7 @@
                             componentId="contentblock_148734255_T5ZUT5HJR">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -84,7 +84,7 @@
                             componentId="contentblock_1193128105_TDYTTO7BM">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -106,7 +106,7 @@
                             componentId="contentblock_521654491_JUKZADXO7">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -128,7 +128,7 @@
                             componentId="contentblock_1481692248_YZBR2S359">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -150,7 +150,7 @@
                             componentId="contentblock_586921059_AKISOBH8C">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -202,7 +202,7 @@
                             componentId="contentblock_AW7LGYG2C">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -224,7 +224,7 @@
                             componentId="contentblock_1193128105_TDYTTO7BM">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -246,7 +246,7 @@
                             componentId="contentblock_521654491_JUKZADXO7">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -268,7 +268,7 @@
                             componentId="contentblock_1481692248_YZBR2S359">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"
@@ -290,7 +290,7 @@
                             componentId="contentblock_586921059_AKISOBH8C">
                             <par
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="aemdesign/components/layout/container">
+                                sling:resourceType="swinburne/components/layout/container">
                                 <text
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/text"

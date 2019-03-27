@@ -35,7 +35,7 @@
                         titleType="[,]">
                     <thumbnail
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/media/image"
+                            sling:resourceType="swinburne/components/media/image"
                             fileReference="/content/dam/swinburne-showcase/en/components/content/download/change-as-good-holiday.jpg"/>
                 </news_details>
             </par>

@@ -5,17 +5,26 @@ module.exports = {
 
   presets: [
     ['@babel/preset-env', {
-      corejs      : 3,
       loose       : true,
       modules     : false,
-      useBuiltIns : 'usage',
+      useBuiltIns : 'entry',
+
+      corejs: {
+        proposals : true,
+        version   : 3,
+      },
     }],
     '@babel/preset-typescript',
   ],
 
   plugins: [
-    '@babel/plugin-syntax-dynamic-import',
     '@babel/proposal-class-properties',
     '@babel/proposal-object-rest-spread',
+    '@babel/plugin-syntax-dynamic-import',
+    ['@babel/plugin-transform-regenerator', {
+      'async'           : true,
+      'asyncGenerators' : false,
+      'generators'      : false,
+    }],
   ],
 }

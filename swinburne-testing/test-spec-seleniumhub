@@ -9,14 +9,6 @@ SCRIPT_PARAMS="$@"
 
 source "../scripts/functions.sh"
 
-CURL=$(/usr/bin/which curl)
-GREP=$(/usr/bin/which grep)
-DOCKER=$(/usr/bin/which docker)
-
-if [[ "$OS" == "windowsbash" ]]; then
-	DOCKER="docker.exe"
-fi
-
 EXEC_AEM_HOST="${1:-$AEM_HOST}"
 EXEC_AEM_PORT="${2:-$AEM_PORT}"
 DEFAULT_HUB_URL="${3:-$SELENIUMHUB_SCHEME://$SELENIUMHUB_HOST:$SELENIUMHUB_PORT$SELENIUMHUB_SERVICE}"

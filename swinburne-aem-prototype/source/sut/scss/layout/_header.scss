@@ -553,27 +553,28 @@
                 background-color: color('charcoal');
                 display: block !important;
                 height: auto;
-                max-height: 400px;
                 max-width: 936px;
+                min-height: 400px;
                 overflow-y: auto;
-                padding: $spacing-7xl $spacing-7xl $spacing-7xl 420px;
+                padding: $spacing-4xl $spacing-6xl $spacing-4xl 415px;
                 position: absolute;
                 transform: translate3d(20px, -500px, 0) !important;
                 transition: transform .3s ease-in-out;
-                transition-delay: .3s;
                 width: auto;
                 z-index: -2;
                 .meta {
-                  left: $spacing-7xl;
+                  left: 0;
+                  margin: $spacing-4xl 0 $spacing-md $spacing-6xl;
                   position: absolute;
-                  top: $spacing-7xl;
-                  width: 370px;
+                  top: 0;
+                  width: 375px;
                   &,
                   & > * {
                     display: block;
                   }
                   .title {
                     color: $white;
+                    margin-top: -$spacing-2xs;
                   }
                   .description {
                     color: color('grey-1');
@@ -599,6 +600,10 @@
             width: 50%;
             &:hover {
               text-decoration: underline;
+            }
+            &:last-of-type,
+            &:nth-last-of-type(2) {
+              margin-bottom: 0;
             }
           }
         }

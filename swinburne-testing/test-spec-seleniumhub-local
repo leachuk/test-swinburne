@@ -7,8 +7,6 @@ SKIP_PRINT_CONFIG=true
 
 source "../scripts/functions.sh"
 
-LOCAL_IP="$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | tail -1)"
-
 EXEC_AEM_HOST="${1:-$LOCAL_IP}"
 EXEC_AEM_PORT="4502"
 

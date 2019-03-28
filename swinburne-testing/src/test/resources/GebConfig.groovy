@@ -68,12 +68,15 @@ System.properties.setProperty("geb.env", GLOBAL_ENV)  //used in report
 System.properties.setProperty("project.buildDirectory", GLOBAL_BUILD_DIR)  //used in report
 System.properties.setProperty("login.req", GLOBAL_LOGIN_REQUIRED) //set to no for aem publish instances
 
+printDebug("GLOBAL_BUILD_DIR", GLOBAL_BUILD_DIR)
+
+String GLOBAL_DRIVER_TYPE = GLOBAL_BUILD_DIR
+
 //remember which driver being used
 if (GLOBAL_ENV.startsWith("local-")) {
     System.properties.setProperty("selenium.huburl", "local")
-} else {
-    GLOBAL_DRIVER_TYPE =  GLOBAL_BUILD_DIR
-}
+} 
+
 System.properties.setProperty("testingdriver", GLOBAL_DRIVER_TYPE)  //used in report
 
 printDebug("SETTINGS",[

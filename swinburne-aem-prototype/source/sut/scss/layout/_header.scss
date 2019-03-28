@@ -554,16 +554,17 @@
               & + .dropdown-menu {
                 background-color: color('charcoal');
                 display: block !important;
-                height: auto;
+                height: 0;
                 max-width: 936px;
-                min-height: 400px;
                 overflow-y: auto;
-                padding: $spacing-4xl $spacing-6xl $spacing-4xl 415px;
+                padding-bottom: 0;
+                padding-left: 415px;
+                padding-right: $spacing-6xl;
+                padding-top: 0;
                 position: absolute;
-                transform: translate3d(20px, -500px, 0) !important;
-                transition: transform .3s ease-in-out;
+                transform: translate3d(20px, 48px, 0) !important;
+                transition: height .3s ease-in-out, padding-top .3s ease-in-out, padding-bottom .3s ease-in-out;
                 width: auto;
-                z-index: -2;
                 .meta {
                   left: 0;
                   margin: $spacing-4xl 0 $spacing-md $spacing-6xl;
@@ -583,8 +584,19 @@
                     font-weight: 400;
                   }
                 }
+                .meta,
+                a.l-3 {
+                  opacity: 0;
+                  transition: opacity .3s ease-in-out .2s;
+                }
                 &.show {
-                  transform: translate3d(20px, 48px, 0) !important;
+                  height: 400px;
+                  padding-bottom: $spacing-4xl;
+                  padding-top: $spacing-4xl;
+                  a.l-3,
+                  .meta {
+                    opacity: 1;
+                  }
                 }
               }
             }

@@ -7,8 +7,6 @@ pipeline {
       }
     }
     stage('Develop') {
-       when { branch 'develop-v2' }
-       environment {
          DEV02_AUTHOR_CREDS = credentials('dev-author-creds')
          DEV02_PUBLISH1_CREDS = credentials('dev-publish1-creds')
 

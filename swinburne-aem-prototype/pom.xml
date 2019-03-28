@@ -139,17 +139,21 @@
 
             <executions>
               <execution>
+                <id>exec-install-node-and-npm</id>
+                <phase>initialize</phase>
+
+                <goals>
+                  <goal>install-node-and-npm</goal>
+                </goals>
+              </execution>
+
+              <execution>
                 <id>exec-install-node-and-yarn</id>
                 <phase>initialize</phase>
 
                 <goals>
                   <goal>install-node-and-yarn</goal>
                 </goals>
-
-                <configuration>
-                  <nodeVersion>${nodeVersion}</nodeVersion>
-                  <yarnVersion>${yarnVersion}</yarnVersion>
-                </configuration>
               </execution>
 
               <execution>

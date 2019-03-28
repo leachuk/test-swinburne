@@ -94,8 +94,8 @@ swinburne-testing/local-*
 .bash_history
 
 #prototype project
-patternlab.json
 **/content-generator/content/
 **/content-generator/output/
 **/content-generator/tmp/
-sync/
+**/node/
+**/sync/

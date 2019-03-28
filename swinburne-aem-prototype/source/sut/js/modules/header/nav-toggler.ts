@@ -9,7 +9,11 @@ let $backButtons : JQuery
 
 
 function closeSubNavigation(element) {
-  $(element.target).parent().removeClass('show');
+  $(element.target)
+    .parent()
+    .removeClass('show')
+    .prev()
+    .attr('aria-expanded', 'false')
 }
 
 function toggleNavigation() {

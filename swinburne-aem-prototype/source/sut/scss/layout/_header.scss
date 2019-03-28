@@ -55,7 +55,7 @@
   width: 100%;
   z-index: 1000;
   @include media-breakpoint-up(lg) {
-    position: inherit;
+    position: relative;
   }
   &__container {
     display: flex;
@@ -127,6 +127,8 @@
       }
     }
     @include media-breakpoint-up(lg) {
+      background-color: $white;
+
       .collapse:not(.show) {
         display: flex;
       }

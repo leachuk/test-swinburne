@@ -72,6 +72,7 @@
         <package.npmCommand>aem:build</package.npmCommand>
         <package.classNamespace>edu.au.swinburne</package.classNamespace>
         <package.uploadProtocol>http</package.uploadProtocol>
+        <package.uploadProtocolJenkins>https</package.uploadProtocolJenkins>
         <aem.verison>6.4</aem.verison>
         <buildNumber>0</buildNumber>
         <seleniumhubhost.host>192.168.27.2</seleniumhubhost.host>
@@ -475,6 +476,25 @@
                 <module>swinburne-aem-training</module>
                 <module>swinburne-aem-deploy</module>
                  <module>swinburne-aem-prototype</module>
+                <module>swinburne-testing</module>
+            </modules>
+
+        </profile>
+        <profile>
+            <id>deploymentpackagejenkins</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>swinburne-aem-author</module>
+                <module>swinburne-aem-services</module>
+                <module>swinburne-aem-common</module>
+                <module>swinburne-aem-config</module>
+                <!--module>swinburne-aem-content</module-->
+                <module>swinburne-aem-showcase</module>
+                <module>swinburne-aem-training</module>
+                <module>swinburne-aem-deploy</module>
+                <module>swinburne-aem-prototype</module>
                 <module>swinburne-testing</module>
             </modules>
 

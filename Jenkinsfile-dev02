@@ -1,0 +1,23 @@
+pipeline {
+  agent any
+  stages {
+    stage('Develop') {
+        environment {
+            DEV02_AUTHOR_CREDS = credentials('dev-author-creds')
+        }
+       steps {
+         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackagejenkins,installdeploymentpackage clean install -Dcrx.host=${ENV_DEV02_AUTHOR} -Dpackage.uploadProtocol=https -Dcrx.username=${DEV02_AUTHOR_CREDS_USR} -Dcrx.port=443 -Dcrx.password=${DEV02_AUTHOR_CREDS_PSW}  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+         sh "mvn -Dvault.useProxy=false -DskipTests -e -U -P deploymentpackagejenkins,installdeploymentpackage clean install -Dcrx.host=${ENV_DEV02_PUBLISHER} -Dpackage.uploadProtocol=https -Dcrx.username=${DEV02_AUTHOR_CREDS_USR} -Dcrx.port=443 -Dcrx.password=${DEV02_AUTHOR_CREDS_PSW}  -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+           }
+     }
+
+    stage('CacheClearPublish') {
+      environment {
+        DEV02_PUBLISH1_CREDS = credentials('dev-publish1-creds')
+      }
+      steps {
+        sh 'curl -u ${DEV02_PUBLISH1_CREDS} -X POST  https://swinburne-publisher-dev-02.at.isobaraustralia.com/etc/acs-commons/dispatcher-flush/disp-flush/_jcr_content/configuration.flush.html'
+      }
+    }
+  }
+}

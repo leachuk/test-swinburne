@@ -354,6 +354,35 @@
         }
       }
     }
+    .meta {
+      display: none;
+      .title {
+        color: $white;
+      }
+      .description {
+        color: color('grey-1');
+        font-weight: 400;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .meta {
+        display: block;
+        .title {
+          margin-top: $spacing-md;
+        }
+        .description {
+          display: none;
+        }
+      }
+      a.l-2 + .dropdown-menu {
+        .meta {
+          &,
+          .description {
+            display: block;
+          }
+        }
+      }
+    }
     a.l-1,
     a.l-2 {
       @include media-breakpoint-up(lg) {
@@ -395,12 +424,6 @@
           &::before {
             background-color: color('red');
             height: 2px;
-          }
-        }
-        //LEVEL 1 DROP DOWN
-        & + .dropdown-menu {
-          .meta {
-            display: none;
           }
         }
       }
@@ -550,7 +573,10 @@
               height: 47px;
             }
             @include media-breakpoint-up(lg) {
-              // DESKTOP LEVEL 2 DROP DOWNS
+              // DESKTOP LEVEL 3 DROP DOWNS
+              .meta {
+                display: none;
+              }
               & + .dropdown-menu {
                 background-color: color('charcoal');
                 display: block !important;
@@ -577,7 +603,6 @@
                   }
                   .title {
                     color: $white;
-                    margin-top: -$spacing-2xs;
                   }
                   .description {
                     color: color('grey-1');

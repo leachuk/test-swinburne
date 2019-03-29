@@ -9,9 +9,6 @@ SCRIPT_PARAMS="$@"
 
 source "../scripts/functions.sh"
 
-CURL=$(/usr/bin/which curl)
-GREP=$(/usr/bin/which grep)
-
 EXEC_AEM_HOST="${1:-$AEM_HOST}"
 EXEC_AEM_PORT="${2:-$AEM_PORT}"
 DEFAULT_HUB_URL="${3:-$SELENIUMHUB_SCHEME://$SELENIUMHUB_HOST:$SELENIUMHUB_PORT$SELENIUMHUB_SERVICE}"
@@ -47,17 +44,41 @@ function runTest() {
     local COMMAND="$DEFAULT_COMMAND $EXEC_AEM_HOST $EXEC_AEM_PORT $DRIVER $DEFAULT_HUB_URL $DEFAULT_PARAMS"
     echo "COMMAND: $COMMAND"
 
-    local CONTAINER_EXIST=$(docker ps -q -f name=$DRIVER)
+    local CONTAINER_EXIST=$($DOCKER ps -q -f name=$DRIVER)
 
     #check if container exist
-    if [ ! "$(docker ps -q -f name=$DRIVER)" ]; then
-        if [ "$(docker ps -aq -f status=exited -f name=$DRIVER)" ]; then
+    if [ ! "$($DOCKER ps -q -f name=$DRIVER)" ]; then
+        if [ "$($DOCKER ps -aq -f status=exited -f name=$DRIVER)" ]; then
             # cleanup
             echo " - CONTAINER FINISHED REMOVING: $DRIVER"
-            docker rm $DRIVER
+            $DOCKER rm $DRIVER
         fi
         echo " - RUNNING CONTAINER: $DRIVER"
-        START=$(docker run -d --name $DRIVER -v $(pwd)/..:/build -v ~/.m2:/root/.m2 $DEFAULT_IMAGE /bin/sh -c "$COMMAND")
+
+		local PROJECT_ROOT_DIR="$(pwd)/.."
+		local MAVEN_DIR="$(realpath ~/.m2)"
+		
+		if [[ "$OS" == "windows" ]]; then
+		
+			PROJECT_ROOT_DIR=$(fixPath "$PROJECT_ROOT_DIR")			
+			MAVEN_DIR="$(fixPath "$MAVEN_DIR")"
+			
+        elif [[ "$OS" == "windowsbash" ]]; then
+            MAVEN_DIR="/mnt/c/Users/$USER/.m2"
+            PROJECT_ROOT_DIR="$(cd .. && pwd)"
+
+			PROJECT_ROOT_DIR=$(fixPath "$PROJECT_ROOT_DIR")
+			MAVEN_DIR="$(fixPath "$MAVEN_DIR")"
+		fi
+
+        echo PROJECT_ROOT_DIR: $PROJECT_ROOT_DIR
+        echo MAVEN_DIR: $MAVEN_DIR
+
+		echo $DOCKER run -d --name $DRIVER -v $PROJECT_ROOT_DIR:/build -v $MAVEN_DIR:/root/.m2 $DEFAULT_IMAGE /bin/sh -c "$COMMAND"
+
+		#exit 1
+		
+        START=$($DOCKER run -d --name $DRIVER -v $PROJECT_ROOT_DIR:/build -v $MAVEN_DIR:/root/.m2 $DEFAULT_IMAGE /bin/sh -c "$COMMAND")
     else
         echo " - CONTAINER ALREADY RUNNING: $DRIVER"
     fi
@@ -94,10 +115,12 @@ function monitorTests() {
     echo "================================================================="
     echo ""
 
-    docker logs -f $@ > docker-log-stdout-$(date +%s).log &
-    docker logs -f $@
-    docker stop $@
-    docker rm $@
+    $DOCKER logs -f $@ > dockerlogs/docker-log-stdout-$(date +%s).log &
+    $DOCKER logs -f $@
+    echo Stopping: $@
+    $DOCKER stop $@
+    echo Removing: $@
+    $DOCKER rm $@
 }
 
 function testServer() {

@@ -1,6 +1,7 @@
 #ignore testing remote driver exec files and restuls
 /remote-*
 /local-*
+/dockerlogs/*
 
 #ignore bash things
 .bash_history

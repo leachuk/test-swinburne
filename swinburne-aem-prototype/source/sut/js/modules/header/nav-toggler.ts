@@ -14,9 +14,13 @@ let $window: JQuery<Window>
 
 let scrollOffset
 
-function closeSubNavigation(element: Event) {
+function closeSubNavigation(element) {
   if (element.target) {
-    $(element.target).parent().removeClass('show')
+    $(element.target)
+      .parent()
+      .removeClass('show')
+      .prev()
+      .attr('aria-expanded', 'false')
   }
 }
 
@@ -44,9 +48,17 @@ function attachDropdownEvents() {
 
   // Prevent navigation from closing is click outside the drop downs
   $dropdown.on({
-    'click':             () => { isClosed = true },
-    'hide.bs.dropdown':  () => isClosed,
-    'shown.bs.dropdown': () => { isClosed = false },
+    click() {
+      isClosed = true
+    },
+
+    ['hide.bs.dropdown']() {
+      return getWindowWidth() >= breakpoints.desktop ? true : isClosed
+    },
+
+    ['shown.bs.dropdown']() {
+      isClosed = false
+    },
   })
 
   $dropdown.on('click', (e: JQuery.TriggeredEvent) => {
@@ -69,10 +81,6 @@ function attachDropdownEvents() {
 
     e.stopPropagation()
   })
-}
-
-function detachDropdownEvents() {
-  $dropdown.off('shown.bs.dropdown click hide.bs.dropdown')
 }
 
 function getButton(title, level) {
@@ -114,7 +122,7 @@ function setNavToggler() {
 }
 
 function setBackButtons() {
-  $('.brand-header__nav .dropdown-menu').each( (_, element) => {
+  $('.dropdown-menu, .dropdown-submenu', $('.brand-header__nav')).each((_, element) => {
     const $menu = $(element)
     const classes: any | undefined = $menu.prev().attr('class')
     const level = classes.split(' ').pop().split('-').pop()
@@ -141,6 +149,44 @@ function resetScrollOffset() {
   $window.scrollTop(-scrollOffset)
 }
 
+function dropdownSubMenuFix() {
+  $('.dropdown-menu a.dropdown-toggle').on('click.navbar.dropdown.toggle', function(event: JQuery.Event) {
+    event.stopImmediatePropagation()
+
+    const $this = $(this)
+
+    // If the submenu doesn't have a class of 'show', remove the 'show' class from the parent first
+    if (!$this.next().hasClass('show')) {
+      $this
+        .parents('.dropdown-menu')
+        .first()
+        .find('.show')
+        .removeClass('show')
+        .prev()
+        .attr('aria-expanded', 'false')
+    }
+
+    // Toggle the submenu on/off
+    $this
+      .attr('aria-expanded', $this.attr('aria-expanded') === 'false' ? 'true' : 'false')
+      .next(".dropdown-menu")
+      .toggleClass('show')
+
+    // Required to show the focus styles on submenu items
+    if (getWindowWidth() < breakpoints.desktop) {
+      this.focus()
+    }
+
+    // Listen for the 'hidden' event on the parent dropdown and hide the submenu
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', () => {
+      $('.dropdown-submenu .show')
+        .removeClass('show')
+        .prev()
+        .attr('aria-expanded', 'false')
+    })
+  })
+}
+
 export default () => {
   $body         = $(document.body)
   $collapsible  = $('#header-nav-container')
@@ -156,15 +202,15 @@ export default () => {
   resetNavigation()
 
   $window.on('resize', _throttle(() => {
-    if (getWindowWidth() >= breakpoints.desktop) {
-      detachDropdownEvents()
-    } else {
-      attachDropdownEvents()
-    }
+    attachDropdownEvents()
   }, 200)).trigger('resize')
 
+  // Submenu fix for nested drop downs
+  // @see https://stackoverflow.com/a/45755948
+  dropdownSubMenuFix()
+
   // Listen for when the toggle button is clicked
-  $toggleButton.off('click.navbar.toggler').on('click.navbar.toggler', () => {
+  $toggleButton.on('click.navbar.toggler', () => {
     if ($body.hasClass('no-scroll')) {
       resetScrollOffset()
     } else {

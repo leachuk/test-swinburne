@@ -149,33 +149,15 @@ function resetScrollOffset() {
   $window.scrollTop(-scrollOffset)
 }
 
-function attachBodyClickEvent() {
-  $window.on('click.navbar.body', (event: JQuery.TriggeredEvent) => {
-    const $target = $(event.target)
-
-    if ((
-      $target.is('.dropdown-menu') &&
-      $target.parents('.dropdown-menu').length &&
-      $target.is('.dropdown-submenu') &&
-      $target.parents('.dropdown-submenu').length
-    ) === false) {
-      $('.dropdown-submenu')
-        .removeClass('show')
-        .prev()
-        .attr('aria-expanded', 'false')
-    }
-  })
-}
-
-function detachBodyClickEvent() {
-  $window.off('click.navbar.body')
-}
-
 function dropdownSubMenuFix() {
   $('.dropdown-menu a.dropdown-toggle').on('click.navbar.dropdown.toggle', function(event: JQuery.Event) {
+    event.stopImmediatePropagation()
+
+    const $this = $(this)
+
     // If the submenu doesn't have a class of 'show', remove the 'show' class from the parent first
-    if (!$(this).next().hasClass('show')) {
-      $(this)
+    if (!$this.next().hasClass('show')) {
+      $this
         .parents('.dropdown-menu')
         .first()
         .find('.show')
@@ -184,10 +166,10 @@ function dropdownSubMenuFix() {
         .attr('aria-expanded', 'false')
     }
 
-    // Toggle the submenu on
-    $(this)
-      .attr('aria-expanded', 'true')
-      .next(".dropdown-submenu")
+    // Toggle the submenu on/off
+    $this
+      .attr('aria-expanded', $this.attr('aria-expanded') === 'false' ? 'true' : 'false')
+      .next(".dropdown-menu")
       .toggleClass('show')
 
     // Required to show the focus styles on submenu items
@@ -202,8 +184,6 @@ function dropdownSubMenuFix() {
         .prev()
         .attr('aria-expanded', 'false')
     })
-
-    event.stopImmediatePropagation()
   })
 }
 
@@ -223,12 +203,6 @@ export default () => {
 
   $window.on('resize', _throttle(() => {
     attachDropdownEvents()
-
-    if (getWindowWidth() >= breakpoints.desktop) {
-      attachBodyClickEvent()
-    } else {
-      detachBodyClickEvent()
-    }
   }, 200)).trigger('resize')
 
   // Submenu fix for nested drop downs

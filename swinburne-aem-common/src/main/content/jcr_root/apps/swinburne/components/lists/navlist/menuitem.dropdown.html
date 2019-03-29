@@ -8,6 +8,12 @@
     <sly data-sly-test="${menuItem.depth}">
         <sly data-sly-set.levelClass="${' l-{0}' @ format=[menuItem.depth]}"></sly>
     </sly>
+    <sly data-sly-test="${menuItem.depth && menuItem.depth > 1}">
+        <sly data-sly-set.dropdownClass=" dropdown-submenu"></sly>
+    </sly>
+    <sly data-sly-test="${menuItem.depth && menuItem.depth == 1}">
+        <sly data-sly-set.dropdownClass=" dropdown-menu"></sly>
+    </sly>
     <li data-sly-unwrap="${!isTopLevel}" class="nav-item${menuItem.current ? ' active' : ''}${menuItem.children ? ' dropdown' : ''}">
         <!--/*no children print link only*/-->
         <a data-sly-test="${!menuItem.children}"
@@ -19,7 +25,7 @@
            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
            title="${'{0} {1}' @ format=[componentProperties.linkTitlePrefix,menuItem.title]}">${menuItem.pageNavTitle}<span data-sly-test="${menuItem.current}" class="sr-only">(current)</span></a>
         <!--/*if has children print menu*/-->
-        <div data-sly-test="${menuItem.children}" class="dropdown-menu${menuItem.current ? ' active' : ''}" aria-labelledby="${menuId}" x-placement="bottom-start">
+        <div data-sly-test="${menuItem.children}" class="${dropdownClass}${menuItem.current ? ' active' : ''}" aria-labelledby="${menuId}" x-placement="bottom-start">
             <div class="meta">
                 <h4 class="title">${menuItem.pageNavTitle}</h4>
                 <p class="description" data-sly-test="${menuItem.description}">${menuItem.description}</p>

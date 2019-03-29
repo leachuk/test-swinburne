@@ -374,7 +374,9 @@
           display: none;
         }
       }
-      a.l-2 + .dropdown-menu {
+      a.l-2 + .dropdown-menu,
+      a.l-2 + .dropdown-submenu {
+        z-index: 6;
         .meta {
           &,
           .description {
@@ -462,7 +464,8 @@
           margin-right: 0;
         }
       }
-      .dropdown-menu { // Level 2
+      .dropdown-menu,
+      .dropdown-submenu { // Level 2
         align-items: center;
         background-color: color('grey-5');
         border: 0;
@@ -508,6 +511,10 @@
           transition: transform .3s ease-in-out .3s;
           width: 100%;
           z-index: 5;
+          a.l-2 + .dropdown-menu,
+          a.l-2 + .dropdown-submenu {
+            z-index: 6;
+          }
           &.show {
             transform: translateX(0) !important;
           }
@@ -577,7 +584,8 @@
               .meta {
                 display: none;
               }
-              & + .dropdown-menu {
+              & + .dropdown-menu,
+              & + .dropdown-submenu {
                 background-color: color('charcoal');
                 display: block !important;
                 height: 0;
@@ -627,6 +635,14 @@
             }
           }
         }
+        a.l-3,
+        a.l-2 {
+          @include media-breakpoint-down(md) {
+            &:last-of-type {
+              margin-bottom: $spacing-md;
+            }
+          }
+        }
         a.l-3 {
           @include media-breakpoint-up(lg) {
             color: $white;
@@ -645,6 +661,12 @@
               margin-bottom: 0;
             }
           }
+        }
+      }
+
+      .dropdown-submenu {
+        @include media-breakpoint-down(md) {
+          left: 0;
         }
       }
     }
@@ -741,7 +763,8 @@
 @include aem-author-edit {
   .brand-header {
     position: relative !important;
-    .dropdown-menu {
+    .dropdown-menu,
+    .dropdown-submenu {
       display: none !important;
     }
   }

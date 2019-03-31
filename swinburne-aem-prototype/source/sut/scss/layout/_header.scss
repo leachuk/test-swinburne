@@ -494,11 +494,12 @@
             transform: translate3d(0, 98px, 0) !important;
           }
         }
+        
         @include media-breakpoint-down(md) {
           background-color: color('charcoal');
           box-shadow: none;
           display: block !important;
-          height: calc(100vh - 47px);
+          height: calc(100vh - 27px);
           margin-top: 0;
           overflow: auto;
           overflow-x: hidden;

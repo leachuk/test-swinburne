@@ -191,7 +191,7 @@ export default () => {
   $body         = $(document.body)
   $collapsible  = $('#header-nav-container')
   $dropdown     = $('.dropdown')
-  $navLink      = $('a.parent')
+  $navLink      = $('a.nav-link').not('[href="#"]')
   $toggleButton = $('.navbar-toggler')
   $window       = $(window)
 

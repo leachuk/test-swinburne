@@ -494,7 +494,6 @@
             transform: translate3d(0, 98px, 0) !important;
           }
         }
-        
         @include media-breakpoint-down(md) {
           background-color: color('charcoal');
           box-shadow: none;

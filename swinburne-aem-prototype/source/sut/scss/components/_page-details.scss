@@ -4,12 +4,46 @@
 // behaviour that can be handled already by Bootstrap helper classes such as spacing
 // and other component level changes.
 
-.page-details {
-  padding-bottom: 30px;
-  padding-top: 30px;
+.page-details[component] {
+  background-size: cover;
+  padding: $spacing-md $spacing-8xl;
   position: relative;
   z-index: 1;
+  @include media-breakpoint-down(md) {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 200px 0 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 100px 0 0;
+  }
 
+  > .container {
+    background-color: rgba(color('charcoal'), .8);
+    margin: 0 auto 0 0;
+    padding: $spacing-7xl;
+    width: 800px;
+    @include media-breakpoint-down(md) {
+      background-color: rgba(color('charcoal'), 1);
+      padding: $spacing-5xl;
+      width: 100%;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: $spacing-2xl $spacing-lg;
+    }
+    header {
+      .title,
+      .description {
+        color: $white;
+      }
+      .title {
+        &::after {
+          background-color: color('yellow');
+        }
+      }
+    }
+  }
   > div {
     @include clearfix;
   }
@@ -32,7 +66,7 @@
   }
 
   .description p {
-    @extend .lead;
+    @extend p;
   }
 
   // Search form
@@ -98,11 +132,5 @@
         width: auto;
       }
     }
-  }
-
-  @include media-breakpoint-up(md) {
-    min-height: 140px;
-    padding-bottom: 70px;
-    padding-top: 70px;
   }
 }

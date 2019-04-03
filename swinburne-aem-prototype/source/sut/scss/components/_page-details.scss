@@ -66,10 +66,6 @@
     clear: both;
   }
 
-  .description p {
-    @extend p;
-  }
-
   // Search form
   [data-modules*='header-search'] {
     margin-left: auto;

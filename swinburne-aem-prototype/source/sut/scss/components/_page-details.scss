@@ -25,12 +25,13 @@
     padding: $spacing-7xl;
     width: 800px;
     @include media-breakpoint-down(md) {
+      @include foil('white');
       background-color: rgba(color('charcoal'), 1);
-      padding: $spacing-5xl;
+      padding: $spacing-5xl $spacing-5xl $spacing-6xl $spacing-5xl;
       width: 100%;
     }
     @include media-breakpoint-down(sm) {
-      padding: $spacing-2xl $spacing-lg;
+      padding: $spacing-2xl $spacing-lg $spacing-3xl $spacing-lg;
     }
     header {
       .title,

@@ -1,0 +1,51 @@
+&--page-details {
+  &-narrow {
+    background-color: color('charcoal');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 100px 0 0;
+    position: relative;
+    z-index: 1;
+    @include media-breakpoint-up(md) {
+      padding: 200px 0 0;
+    }
+    @include media-breakpoint-up(lg) {
+      background-color: transparent;
+      background-size: cover;
+      padding: $spacing-md $spacing-8xl;
+    }
+
+    > .container {
+      @include foil('white');
+      background-color: rgba(color('charcoal'), 1);
+      margin: 0 auto 0 0;
+      padding: $spacing-2xl $spacing-lg $spacing-3xl $spacing-lg;
+      width: 100%;
+      @include media-breakpoint-up(md) {
+        padding: $spacing-5xl $spacing-5xl $spacing-6xl $spacing-5xl;
+      }
+      @include media-breakpoint-up(lg) {
+        background-color: rgba(color('charcoal'), .8);
+        background-image: none;
+        padding: $spacing-7xl;
+        width: 800px;
+      }
+      header {
+        .title,
+        .description {
+          color: $white;
+        }
+        .title {
+          &::after {
+            background-color: color('yellow');
+          }
+        }
+      }
+    }
+    .description p {
+      @extend p;
+      font-size: $font-size-base;
+    }
+  }
+}

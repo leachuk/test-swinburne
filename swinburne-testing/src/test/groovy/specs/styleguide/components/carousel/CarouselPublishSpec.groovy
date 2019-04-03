@@ -19,7 +19,7 @@ class CarouselPublishSpec extends ComponentSpec {
     def "Basic Carousel - Default Background (Page List)"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_pagelist_default .owl-carousel.owl-loaded"
+        def selector = "#contentblock_carousel_pagelist_default_list"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -49,7 +49,7 @@ class CarouselPublishSpec extends ComponentSpec {
     def "Basic Carousel - Grey Background (Page List)"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_pagelist_grey .owl-carousel.owl-loaded"
+        def selector = "#contentblock_carousel_pagelist_grey_list"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -79,7 +79,7 @@ class CarouselPublishSpec extends ComponentSpec {
     def "Basic Carousel - Yellow Background (Page List)"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_pagelist_yellow .owl-carousel.owl-loaded"
+        def selector = "#contentblock_carousel_pagelist_yellow_list"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -109,7 +109,7 @@ class CarouselPublishSpec extends ComponentSpec {
     def "Basic Carousel - Default Background (News List)"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_newslist_default .owl-carousel.owl-loaded"
+        def selector = "#contentblock_carousel_newslist_default_list"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -139,7 +139,7 @@ class CarouselPublishSpec extends ComponentSpec {
     def "Basic Carousel - Grey Background (News List)"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_newslist_grey .owl-carousel.owl-loaded"
+        def selector = "#contentblock_carousel_newslist_grey_list"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -169,7 +169,7 @@ class CarouselPublishSpec extends ComponentSpec {
     def "Basic Carousel - Yellow Background (News List)"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_newslist_yellow .owl-carousel.owl-loaded"
+        def selector = "#contentblock_carousel_newslist_yellow_list"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

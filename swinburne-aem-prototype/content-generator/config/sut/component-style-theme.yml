@@ -197,6 +197,11 @@ content/_cq_tags/swinburne/component-style-theme: &component-style-theme
     prefix: '${title}<span class="subtitle">${subtitle}</span>'
     title: 'Including Subtitle'
 
+  details/page-details/narrow:
+    flat: true
+    prefix: theme--page-details-narrow
+    title: 'Narrow'
+
   # Content Block
   layout/contentblock:
     prefixes:

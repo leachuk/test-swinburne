@@ -26,6 +26,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/details/page-details"
                     componentId="page_details_TYYPIP9YT"
+                    componentTheme="[swinburne-showcase:component-style-theme/details/page-details/narrow]"
                     description="&lt;p>We believe an understanding of language, people and culture is key to effecting world change. That's what makes Swinburne arts and humanities courses special.&lt;/p>&#xd;&#xa;"
                     showBreadcrumb="false"
                     showPageDate="false"
@@ -42,7 +43,7 @@
                         sling:resourceType="aemdesign/components/media/image"/>
                     <bgimage
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/media/image"
+                        sling:resourceType="aemdesign/components/media/image"
                         adaptiveImageMapping="[2048=(min-width:1024px),1280=(min-width:640px),640=(min-width:1px)]"
                         assetMediaQuery="[swinburne-showcase:component-dialog/css/mediaquery/retina,swinburne-showcase:component-dialog/css/mediaquery/landscape-large,swinburne-showcase:component-dialog/css/mediaquery/extra-large,swinburne-showcase:component-dialog/css/mediaquery/medium,swinburne-showcase:component-dialog/css/mediaquery/retina-extra-large]"
                         assetMediaQueryRendition="[original,cq5dam.web.1280.1280.jpeg,cq5dam.web.1280.1280.jpeg,cq5dam.web.1280.1280.jpeg,cq5dam.web.1280.1280.jpeg]"

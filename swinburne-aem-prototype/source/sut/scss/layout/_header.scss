@@ -1,5 +1,4 @@
 /* stylelint-disable declaration-no-important */
-@import '../mixins';
 
 @mixin yellow-link {
   margin-left: -$spacing-md;
@@ -7,6 +6,7 @@
   position: relative;
   transition: color .3s ease-in-out, background-color .3s ease-in-out;
   width: calc(100% + 20px);
+
   &::before {
     background-color: color('grey-2');
     bottom: 0;
@@ -20,12 +20,14 @@
     width: calc(100% - 20px);
     z-index: 1;
   }
+
   &:focus,
   &:active {
     background-color: color('yellow');
     color: color('charcoal');
     z-index: 1;
   }
+
   &,
   &:focus,
   &:active,
@@ -41,26 +43,16 @@
   background-color: $white;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
   height: $header-height-sm;
-  @include media-breakpoint-up(md) {
-    height: $header-height-md;
-  }
-  @include media-breakpoint-up(lg) {
-    height: $header-height - 1px;
-  }
-  @include media-breakpoint-up(xl) {
-    height: $header-height-xl - 1px;
-  }
   left: 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  @include media-breakpoint-up(lg) {
-    position: relative;
-  }
+
   &__container {
     display: flex;
     flex-direction: row;
+
     .navbar-toggler {
       align-items: center;
       color: color('charcoal');
@@ -71,27 +63,34 @@
       margin-left: $spacing-xs;
       overflow: hidden;
       width: 80px;
+
       div {
         transition: transform .3s ease-in-out, opacity .3s ease-in-out;
         width: 100%;
+
         & > * {
           vertical-align: middle;
         }
+
         &:first-child {
           opacity: 0;
           transform: translateY(-10px);
+
           .icon {
             margin-left: -12px;
           }
+
           .link-text {
             margin-left: $spacing-2xs + 1px;
           }
         }
+
         &:last-child {
           opacity: 1;
           transform: translateY(0);
         }
       }
+
       &[aria-expanded='true'] {
         div {
           &:first-child {
@@ -760,14 +759,29 @@
       display: none;
     }
   }
+
+  @include media-breakpoint-up(md) {
+    height: $header-height-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $header-height - 1px;
+    position: relative;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: $header-height-xl - 1px;
+  }
 }
 
 @include aem-author-edit {
   .brand-header {
     position: relative !important;
+
     .dropdown-menu {
       display: none !important;
     }
   }
 }
+
 /* stylelint-enable declaration-no-important */

@@ -39,7 +39,8 @@
   @if $position {
     font-family: 'object-fit: #{$fit}; object-position: #{$position}';
     object-position: $position;
-  } @else {
+  }
+  @else {
     font-family: 'object-fit: #{$fit}';
   }
 }
@@ -135,20 +136,6 @@
   #{unquote($prop)}: #{'max(#{$gutter}, env(safe-area-inset-left))'};
 }
 
-@mixin placeholder {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-
-  &::-moz-placeholder {  /* Firefox 19+ */
-    @content;
-  }
-
-  &:-ms-input-placeholder {
-    @content;
-  }
-}
-
 ///
 @mixin container-flush($pseudo: ':not(:last-child)') {
   [class*='col']#{unquote($pseudo)} > div {
@@ -231,5 +218,45 @@
       padding-left: #{$gutter}px;
       padding-right: #{$gutter}px;
     }
+  }
+}
+
+///
+@mixin yellow-link {
+  margin-left: -$spacing-md;
+  padding-left: $spacing-md;
+  position: relative;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  width: calc(100% + 20px);
+
+  &::before {
+    background-color: color('grey-2');
+    bottom: 0;
+    content: ' ';
+    display: block;
+    height: 1px;
+    left: inherit;
+    position: absolute;
+    right: 0;
+    transform: none;
+    width: calc(100% - 20px);
+    z-index: 1;
+  }
+
+  &:focus,
+  &:active {
+    background-color: color('yellow');
+    color: color('charcoal');
+    z-index: 1;
+  }
+
+  &,
+  &:focus,
+  &:active,
+  &[aria-expanded='true'],
+  &:hover {
+    border-bottom-width: 0;
+    box-shadow: none;
+    padding-top: 0;
   }
 }

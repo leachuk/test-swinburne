@@ -113,7 +113,7 @@
                                             sling:resourceType="swinburne/components/content/embedsource"
                                             componentId="embedsource_MDEJAWPV4"
                                             componentTheme="[swinburne-showcase:component-style-theme/common/logo]"
-                                            html="&lt;img src=&quot;/etc/clientlibs/swinburne/sut/images/logo-small.svg&quot; alt=&quot;Swinburne&quot; />&#xd;&#xa;&lt;img src=&quot;/etc/clientlibs/swinburne/sut/images/logo-long-full.svg&quot; alt=&quot;Swinburne&quot; />"/>
+                                            html="&lt;img class=&quot;invisible-md-up&quot; src=&quot;/etc/clientlibs/swinburne/sut/images/logo-small.svg&quot; alt=&quot;Swinburne&quot; />&#xd;&#xa;&lt;img class=&quot;invisible-sm-down&quot; src=&quot;/etc/clientlibs/swinburne/sut/images/logo-long-full.svg&quot; alt=&quot;Swinburne&quot; />"/>
                                         <link
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="swinburne/components/content/link"

@@ -1,0 +1,47 @@
+&__actions {
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 8px;
+  width: auto;
+
+  @include media-breakpoint-down(md) {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  a {
+    &.btn {
+      min-width: 113px;
+
+      @include media-breakpoint-up(lg) {
+        min-width: 140px;
+      }
+    }
+  }
+
+  button.link {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+    width: 40px;
+
+    .icon:first-of-type {
+      color: color('charcoal');
+      font-size: 12px;
+      font-weight: 300;
+      margin-right: 0;
+      padding-left: $spacing-2xs;
+    }
+
+    .link-text {
+      display: none;
+    }
+  }
+}

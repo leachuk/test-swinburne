@@ -15,7 +15,7 @@ class CarouselDynamicLargeDesktopScreenshotSpec extends ComponentSpec {
     def "Appearance of Dynamic Carousel (Page List) on large desktop"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_pagelist_default_short .list"
+        def selector = "#contentblock_carousel_pagelist_default_short_list"
         setWindowSizeXLG()
         waitForAuthorPreviewPage()
 
@@ -29,7 +29,7 @@ class CarouselDynamicLargeDesktopScreenshotSpec extends ComponentSpec {
     def "Appearance of Dynamic Carousel (News List) on large desktop"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#contentblock_carousel_newslist_default_short .list"
+        def selector = "#contentblock_carousel_newslist_default_short_list"
 
         when: 'The component appears as a carousel on the page'
         waitForComponent(selector)

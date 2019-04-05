@@ -99,3 +99,6 @@ swinburne-testing/local-*
 **/content-generator/tmp/
 **/node/
 **/sync/
+
+#automated test screenshots
+*.diff.png

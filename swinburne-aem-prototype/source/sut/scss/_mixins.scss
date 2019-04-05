@@ -208,6 +208,13 @@
   }
 }
 
+@mixin foil($color) {
+  background-image: url(../images/patterns/foil-#{$color}.png);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 13px 140px;
+}
+
 /// Custom grid gutter
 @mixin grid-gutter($gutter) {
   .row {

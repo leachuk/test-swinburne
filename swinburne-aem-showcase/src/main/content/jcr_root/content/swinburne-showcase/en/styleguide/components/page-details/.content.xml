@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Page Details"
+        sling:resourceType="swinburne/components/template/styleguide">
+        <aside
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/aside"
+            componentId="aside_EG8XT3EIB">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container"/>
+        </aside>
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article"
+            componentId="article_N2BD9IBCL">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details_TYYPIP9YT"
+                    componentTheme="[swinburne-showcase:component-style-theme/details/page-details/narrow]"
+                    description="&lt;p>We believe an understanding of language, people and culture is key to effecting world change. That's what makes Swinburne arts and humanities courses special.&lt;/p>&#xd;&#xa;"
+                    showBreadcrumb="false"
+                    showPageDate="false"
+                    showParsys="true"
+                    showToolbar="false"
+                    textIsRich="true"
+                    title="Arts &amp; Humanities"
+                    titleType="h2">
+                    <secondaryImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <thumbnail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/media/image"
+                        adaptiveImageMapping="[2048=(min-width:1024px),1280=(min-width:640px),640=(min-width:1px)]"
+                        assetMediaQuery="[swinburne-showcase:component-dialog/css/mediaquery/retina,swinburne-showcase:component-dialog/css/mediaquery/landscape-large,swinburne-showcase:component-dialog/css/mediaquery/extra-large,swinburne-showcase:component-dialog/css/mediaquery/medium,swinburne-showcase:component-dialog/css/mediaquery/retina-extra-large]"
+                        assetMediaQueryRendition="[original,cq5dam.web.1280.1280.jpeg,cq5dam.web.1280.1280.jpeg,cq5dam.web.1280.1280.jpeg,cq5dam.web.1280.1280.jpeg]"
+                        fileReference="/content/dam/swinburne-showcase/en/components/content/download/andrew.jpg"
+                        imageOption="mediaqueryrendition"
+                        width="1800"/>
+                    <ogImage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                </page_details>
+            </par>
+        </article>
+    </jcr:content>
+</jcr:root>

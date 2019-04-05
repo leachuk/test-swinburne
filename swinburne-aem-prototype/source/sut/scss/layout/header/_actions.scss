@@ -3,6 +3,7 @@
   justify-content: flex-end;
   margin-left: auto;
   margin-right: 8px;
+  position: relative;
   width: auto;
 
   @include media-breakpoint-down(md) {
@@ -12,13 +13,12 @@
     top: 0;
   }
 
-  a {
-    &.btn {
-      min-width: 113px;
+  a.btn {
+    min-width: 113px;
+    z-index: 2;
 
-      @include media-breakpoint-up(lg) {
-        min-width: 140px;
-      }
+    @include media-breakpoint-up(lg) {
+      min-width: 140px;
     }
   }
 }

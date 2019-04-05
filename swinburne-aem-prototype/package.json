@@ -71,6 +71,7 @@
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
     "event-hooks-webpack-plugin": "2.1.1",
     "exports-loader": "^0.7.0",
     "expose-loader": "^0.7.5",
@@ -98,6 +99,9 @@
     "postcss-reporter": "^6.0.1",
     "postcss-sorting": "^4.1.0",
     "prettier": "^1.16.4",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1",
+    "prettier-stylelint": "^0.4.2",
     "rimraf": "^2.6.3",
     "sass": "^1.17.4",
     "sass-loader": "^7.1.0",
@@ -141,6 +145,23 @@
     "dev:sut": "$(npm bin)/webpack --progress --watch --env.clean --env.dev --env.aem --env.deploy --env.project=sut",
     "build:sg": "$(npm bin)/webpack --progress --env.clean --env.dev --env.deploy --env.project=styleguide",
     "dev:sg": "$(npm bin)/webpack --progress --watch --env.clean --env.dev --env.aem --env.deploy --env.project=styleguide"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "source/sut/**/*.{scss,ts,vue}": [
+        "prettier-eslint --write",
+        "prettier-stylelint --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "public/**/*"
+    ]
   },
   "version": "0.0.1"
 }

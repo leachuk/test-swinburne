@@ -4,6 +4,26 @@
 // care when making changes as we shouldn't be duplicating styles that Bootstrap
 // generates for us automatically.
 
+// Colour variants
+//
+// Pattern:
+// <variant name>: (
+//   <base colour>,
+//   <text colour>,
+//   <hover colour>,
+//   <shadow colour (on hover)>,
+//   <border colour (optional)>,
+//   <border colour (on hover, optional)>
+// )
+
+$button-colours: (
+  primary-red:        (color('red'), $white, null, #ad1914, null, null),
+  primary-yellow:     (color('yellow'), $black, #ffd200, #fcb945, null, null),
+  secondary-charcoal: (color('charcoal'), $white, #58595b, $black, null, null),
+  secondary-white:    ($white, $black, null, color('grey-2'), null, null),
+  secondary-outline:  (transparent, null, null, color('charcoal'), color('grey-3'), color('charcoal')),
+);
+
 .btn {
   align-items: center;
   border-bottom-width: 0;
@@ -12,18 +32,6 @@
   letter-spacing: -.5px;
   min-width: 175px;
   position: relative;
-
-  // Colour variants
-  //
-  // Pattern:
-  // <variant name>: ( <base colour>, <text colour>, <hover colour>, <shadow colour (on hover)>, <border colour (optional)>, <border colour (on hover, optional)> )
-  $button-colours: (
-    primary-red:        (color('red'), $white, null, #ad1914, null, null),
-    primary-yellow:     (color('yellow'), $black, #ffd200, #fcb945, null, null),
-    secondary-charcoal: (color('charcoal'), $white, #58595b, $black, null, null),
-    secondary-white:    ($white, $black, null, color('grey-2'), null, null),
-    secondary-outline:  (transparent, null, null, color('charcoal'), color('grey-3'), color('charcoal')),
-  );
 
   @each $variant, $options in $button-colours {
     $base-colour: nth($options, 1);
@@ -109,7 +117,7 @@
   &-link {
     color: $link-color;
     font-size: $btn-font-size + 2px;
-    min-width: initial;
+    min-width: unset;
     padding: 0;
 
     > span::after {

@@ -31,10 +31,6 @@
     clear: both;
   }
 
-  .description p {
-    @extend .lead;
-  }
-
   @include media-breakpoint-up(md) {
     min-height: 140px;
     padding-bottom: 70px;

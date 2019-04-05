@@ -1,9 +1,9 @@
-/* stylelint-disable declaration-no-important */
-/* stylelint-disable max-nesting-depth */
-/* stylelint-disable selector-max-combinators */
-/* stylelint-disable selector-max-compound-selectors */
-/* stylelint-disable selector-max-class */
-/* stylelint-disable selector-max-specificity */
+// stylelint-disable declaration-no-important
+// stylelint-disable max-nesting-depth
+// stylelint-disable selector-max-combinators
+// stylelint-disable selector-max-compound-selectors
+// stylelint-disable selector-max-class
+// stylelint-disable selector-max-specificity
 
 .brand-header {
   background-color: $white;
@@ -638,10 +638,3 @@
     }
   }
 }
-
-/* stylelint-enable selector-max-specificity */
-/* stylelint-enable selector-max-class */
-/* stylelint-enable selector-max-compound-selectors */
-/* stylelint-enable selector-max-combinators */
-/* stylelint-enable max-nesting-depth */
-/* stylelint-enable declaration-no-important */

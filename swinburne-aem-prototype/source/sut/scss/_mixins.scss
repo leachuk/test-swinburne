@@ -124,10 +124,8 @@
 ///
 @mixin iphone-x($gutter: $grid-gutter-width / 2) {
   @supports (padding: #{'max(0px)'}) {
-    & {
-      @include iphone-x-prop('padding-left', $gutter);
-      @include iphone-x-prop('padding-right', $gutter);
-    }
+    @include iphone-x-prop('padding-left', $gutter);
+    @include iphone-x-prop('padding-right', $gutter);
   }
 }
 
@@ -178,7 +176,7 @@
 }
 
 @mixin aem-author-edit() {
-  html.aem-AuthorLayer-Edit  {
+  html.aem-AuthorLayer-Edit {
     @content;
   }
 }
@@ -202,6 +200,7 @@
   $selector: if($selector != false, unquote($selector), $selector);
 
   #{if($selector != false, unquote($selector), '')} > .content {
+    // stylelint-disable-next-line
     > ul > li {
       @content;
     }
@@ -221,7 +220,7 @@
     margin-left: -#{$gutter}px;
     margin-right: -#{$gutter}px;
 
-    & > [class*='col-'] {
+    > [class*='col-'] {
       padding-left: #{$gutter}px;
       padding-right: #{$gutter}px;
     }

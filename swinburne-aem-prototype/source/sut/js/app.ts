@@ -1,5 +1,5 @@
 import Carousels from '@global/modules/carousel'
-import NavToggler from '@global/modules/header/nav-toggler'
+import Header from '@global/modules/header'
 import Subscribers from '@global/modules/subscribers'
 
 import { TOPIC_HIDE_SUGGESTIONS } from '@global/utilities/constants'
@@ -22,8 +22,7 @@ $(() => {
     }
   })
 
-  // Carousel functionality for anything, this dynamically loads slick carousel to reduce
-  // the weight of the page.
+  // Carousel functionality for anything!
   Carousels()
 
   // Bind the pub/sub event subscribers
@@ -32,8 +31,8 @@ $(() => {
   // 'object-fit' polyfill for unsupported browsers
   ObjectFit()
 
-  // Header navigation toggler
-  NavToggler()
+  // Header controls
+  Header()
 
   // Open all the 'collapse' elements on the page when in author
   if (isAuthorEditMode()) {

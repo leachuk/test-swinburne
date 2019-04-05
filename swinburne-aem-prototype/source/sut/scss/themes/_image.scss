@@ -1,16 +1,20 @@
 &--logo img {
   display: block;
   height: 47px;
+  min-width: 47px;
 
   @include media-breakpoint-up(md) {
     height: 60px;
+    min-width: 60px;
   }
 
   @include media-breakpoint-up(lg) {
     height: 89px;
+    min-width: 176px;
   }
 
   @include media-breakpoint-up(xl) {
     height: 98px;
+    min-width: 192px;
   }
 }

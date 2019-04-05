@@ -257,6 +257,7 @@
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="swinburne/components/widgets/search"
                                                             componentId="search_LHCDCBDLH"
+                                                            componentTheme="[swinburne-showcase:component-style-theme/layout/brand-header/quick-search]"
                                                             formAction="http://search.swinburne.edu.au/s/search.html?query={{query}}&amp;collection=swinburne-internet-meta"
                                                             formMethod="GET"
                                                             variant="quick"/>

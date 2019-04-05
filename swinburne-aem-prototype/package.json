@@ -146,11 +146,6 @@
     "build:sg": "$(npm bin)/webpack --progress --env.clean --env.dev --env.deploy --env.project=styleguide",
     "dev:sg": "$(npm bin)/webpack --progress --watch --env.clean --env.dev --env.aem --env.deploy --env.project=styleguide"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "linters": {
       "source/sut/**/*.{scss,ts,vue}": [

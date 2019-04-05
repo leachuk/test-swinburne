@@ -1,0 +1,44 @@
+&__quick-search {
+  position: relative;
+  // This is required to override a design choice within AEM Design.
+  // stylelint-disable-next-line
+  width: auto !important;
+
+  &,
+  form,
+  input[type='search'] {
+    height: 100%;
+  }
+
+  form {
+    align-items: center;
+    display: flex;
+  }
+
+  input[type='search'] {
+    background-color: $white;
+    border-width: 0;
+    opacity: 0;
+    padding: 0 15px;
+    pointer-events: none;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    transition: $transition-fade;
+    width: calc(100vw - 192px - 15px - 100%);
+    z-index: 1;
+  }
+
+  button[type='submit'] {
+    background-color: transparent;
+    border-width: 0;
+    display: block;
+    margin-right: 30px;
+    padding: 0;
+  }
+
+  &.show input[type='search'] {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-27T15:39:55.061+11:00"
+        cq:lastModified="{Date}2019-04-08T14:57:39.832+10:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
@@ -12,12 +12,20 @@
         jcr:uuid="8bd5f125-0d75-4d4b-a100-53e17fb282b7"
         sling:resourceType="swinburne/components/template/base">
         <header
+            jcr:lastModified="{Date}2019-04-08T14:57:39.823+10:00"
+            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/header"
+            cancelInheritParent="false"
             componentId="header_HMCAPOWFO">
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container"/>
+            <bgimage
+                jcr:lastModified="{Date}2019-04-08T14:57:39.823+10:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdesign/components/media/image"/>
         </header>
         <article
             jcr:primaryType="nt:unstructured"

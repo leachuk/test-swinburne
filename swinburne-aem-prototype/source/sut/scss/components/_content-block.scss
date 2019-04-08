@@ -20,7 +20,7 @@
 
   &.advsection {
     .title {
-      @include make-container(0);
+      @include make-container(15px);
       @include make-container-max-widths;
     }
   }

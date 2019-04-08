@@ -17,4 +17,11 @@
   .video:not(.playing) {
     display: none;
   }
+
+  &.advsection {
+    .title {
+      @include make-container(0);
+      @include make-container-max-widths;
+    }
+  }
 }

@@ -15,8 +15,8 @@ class CarouselScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    @Unroll("Appearance of Basic Carousel - Default Background (Page List) in #viewport.label")
-    def "Appearance of Basic Carousel - Default Background (Page List)"() {
+    @Unroll("Appearance of Basic Carousel Default Background Page List in #viewport.label")
+    def "Appearance of Basic Carousel Default Background Page List"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_pagelist_default_list"
@@ -36,8 +36,8 @@ class CarouselScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Basic Carousel - Grey Background (Page List) in #viewport.label")
-    def "Appearance of Basic Carousel - Grey Background (Page List)"() {
+    @Unroll("Appearance of Basic Carousel Grey Background Page List in #viewport.label")
+    def "Appearance of Basic Carousel Grey Background Page List"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_pagelist_grey_list"
@@ -57,8 +57,8 @@ class CarouselScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Basic Carousel - Yellow Background (Page List) in #viewport.label")
-    def "Appearance of Basic Carousel - Yellow Background (Page List)"() {
+    @Unroll("Appearance of Basic Carousel Yellow Background Page List in #viewport.label")
+    def "Appearance of Basic Carousel Yellow Background Page List"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_pagelist_yellow_list"
@@ -78,8 +78,8 @@ class CarouselScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Basic Carousel - Default Background (News List) in #viewport.label")
-    def "Appearance of Basic Carousel - Default Background (News List)"() {
+    @Unroll("Appearance of Basic Carousel Default Background News List in #viewport.label")
+    def "Appearance of Basic Carousel Default Background News List"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_newslist_default_list"
@@ -99,8 +99,8 @@ class CarouselScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Basic Carousel - Grey Background (News List) in #viewport.label")
-    def "Appearance of Basic Carousel - Grey Background (News List)"() {
+    @Unroll("Appearance of Basic Carousel Grey Background News List in #viewport.label")
+    def "Appearance of Basic Carousel Grey Background News List"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_newslist_grey_list"
@@ -120,8 +120,8 @@ class CarouselScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Basic Carousel - Yellow Background (News List) in #viewport.label")
-    def "Appearance of Basic Carousel - Yellow Background (News List)"() {
+    @Unroll("Appearance of Basic Carousel Yellow Background News List in #viewport.label")
+    def "Appearance of Basic Carousel Yellow Background News List"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_newslist_yellow_list"

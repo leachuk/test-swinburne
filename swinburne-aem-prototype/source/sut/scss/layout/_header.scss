@@ -405,6 +405,7 @@
             transition: background-color .3s ease-in-out, height .3s ease-in-out, opacity .5s ease-in-out;
           }
         }
+        &.active,
         &[aria-expanded='true'] {
           &::before {
             opacity: 1;
@@ -421,6 +422,7 @@
         &:hover {
           box-shadow: inset 0 -2px 0 color('charcoal');
         }
+        &.active,
         &[aria-expanded='true'] {
           box-shadow: none;
           &::before {
@@ -478,6 +480,7 @@
         width: 100%;
         @include media-breakpoint-up(lg) {
           display: flex !important;
+          margin-top: 0;
           overflow: visible;
           position: absolute;
           top: 0;
@@ -562,9 +565,15 @@
                   height: 2px;
                 }
               }
+              &.active,
               &:active {
                 border-bottom: 2px solid color('charcoal');
                 color: color('charcoal');
+                &:hover {
+                  &[aria-expanded='false'] {
+                    padding-top: 0;
+                  }
+                }
               }
             }
             @include media-breakpoint-down(md) {
@@ -587,6 +596,7 @@
               }
               & + .dropdown-menu {
                 background-color: color('charcoal');
+                box-shadow: none;
                 display: block !important;
                 height: 0;
                 max-width: 936px;
@@ -761,6 +771,17 @@
     }
   }
 }
+
+// Add top padding on article for mobile and tablet
+body > .container > .header + .article {
+  @include media-breakpoint-down(md) {
+    margin-top: $header-height-md;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: $header-height-sm;
+  }
+}
+
 
 @include aem-author-edit {
   .brand-header {

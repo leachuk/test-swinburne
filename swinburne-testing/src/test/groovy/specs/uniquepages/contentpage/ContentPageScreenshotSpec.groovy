@@ -37,4 +37,24 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         where:
         viewport << getViewPorts()
     }
+
+    @Unroll("Appearance of Basic Page List Carousel with Yellow Background in #viewport.label")
+    def "Appearance of Basic Page List Carousel with Yellow Background"() {
+        given: '>I am in the component showcase page'
+        and: '>the component is on the showcase page'
+        def selector = "#contentblock_XLRZRS9UE"
+
+        when: 'I am in the component showcase page'
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: 'The component should appear on the page'
+        waitForComponent(selector)
+
+        then: 'It should match reference image.'
+        designRef(selector)
+
+        where:
+        viewport << getViewPorts()
+    }
 }

@@ -6,10 +6,10 @@ import support.ComponentSpec
 
 @Stepwise
 class ContentBlockStyleguideScreenshotSpec extends ComponentSpec {
-    String pathPage = "Styleguide-SWU/components/content-block"
+    String pathPage = "styleguide/components/content-block"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
-    String componentPath = "jcr:content/article/par/contentblock_1045719959/par/contentblock"
+    String componentPath = "jcr:content/article/par/contentblock_2/par/contentblock"
 
     def setupSpec() {
         loginAsAdmin()
@@ -19,7 +19,7 @@ class ContentBlockStyleguideScreenshotSpec extends ComponentSpec {
     def "Appearance of Advanced Content Block with Title"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_contentblock_advanced_with_title"
+        def selector = "contentblock_2"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

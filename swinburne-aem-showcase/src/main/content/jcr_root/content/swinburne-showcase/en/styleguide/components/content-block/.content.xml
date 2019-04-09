@@ -50,6 +50,33 @@
                             path="/content/swinburne-showcase/en/component/layout/contentblock/jcr:content/article/par/contentblock7"/>
                     </par>
                 </contentblock>
+                <contentblock_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_2"
+                    hideInMenu="true"
+                    hideTopLink="true"
+                    title="My awesome title"
+                    titleType="h1"
+                    variant="advsection">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/video"/>
+                </contentblock_2>
+                <contentblock_1119252870
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_2">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/video"/>
+                </contentblock_1119252870>
             </par>
         </article>
     </jcr:content>

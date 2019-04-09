@@ -66,17 +66,6 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/video"/>
                 </contentblock_2>
-                <contentblock_1119252870
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock_2">
-                    <bgimage
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/image"/>
-                    <bgvideo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="aemdesign/components/media/video"/>
-                </contentblock_1119252870>
             </par>
         </article>
     </jcr:content>

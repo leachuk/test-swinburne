@@ -1,5 +1,4 @@
-
-
+// stylelint-disable declaration-no-important
 @each $direction in map-keys($spacing-modifiers) {
   $level-map: map-get($spacing-modifiers, $direction);
   @each $level in map-keys($level-map) {
@@ -8,8 +7,8 @@
         @include media-breakpoint-up($breakpoint) {
           $spaces: map-deep-get($spacing-modifiers, $direction, $level);
           $space: map-get($spaces, $breakpoint);
-          padding-bottom: $space;
-          padding-top: $space;
+          padding-bottom: $space !important;
+          padding-top: $space !important;
         }
       }
     }

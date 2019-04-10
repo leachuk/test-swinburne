@@ -252,8 +252,8 @@ content/_cq_tags/swinburne/component-style-modifier: &component-style-modifier
 
   grid/container-flush:
     flat: true
-    prefix: container
-    title: '%%prefix_normalised%%'
+    prefix: container-flush
+    title: 'container-flush'
 
   grid/container-text:
     flat: true

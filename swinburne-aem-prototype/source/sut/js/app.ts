@@ -2,13 +2,16 @@ import Carousels from '@global/modules/carousel'
 import Header from '@global/modules/header'
 import Subscribers from '@global/modules/subscribers'
 
-import { TOPIC_HIDE_SUGGESTIONS } from '@global/utilities/constants'
+import {
+  TOPIC_HIDE_SUGGESTIONS,
+} from '@global/utilities/constants'
 
 import { isAuthorEditMode } from '@global/utilities/aem'
 import ObjectFit from '@global/utilities/object-fit'
 
 // Begin the app...
 $(() => {
+
   // Remove the 300ms delay using FastClick
   FastClick.attach(document.body)
 
@@ -38,6 +41,7 @@ $(() => {
   if (isAuthorEditMode()) {
     $('.collapse[data-parent]').collapse('dispose')
   }
+
 })
 
 // HMR (Hot Module Replacement)

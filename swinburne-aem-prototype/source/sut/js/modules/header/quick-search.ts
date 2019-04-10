@@ -1,3 +1,5 @@
+import { sanitizeHTML } from '@global/utilities/dom'
+
 // Internal
 const QUICK_SEARCH_CLASS = '.brand-header__quick-search'
 
@@ -5,8 +7,8 @@ export default () => {
   const quickSearch = document.querySelector(QUICK_SEARCH_CLASS)
 
   if (quickSearch) {
-    const searchField = quickSearch.querySelector('input[type=search]')
-    const submitButton = quickSearch.querySelector('button[type=submit]')
+    const searchField: HTMLInputElement = quickSearch.querySelector('input[type=search]') as HTMLInputElement
+    const submitButton: HTMLElement = quickSearch.querySelector('button[type=submit]') as HTMLElement
 
     if (submitButton && searchField) {
       submitButton.addEventListener('click', (event: Event) => {
@@ -17,9 +19,13 @@ export default () => {
 
           // Focus on the search input field, the timeout ensures that some mobile devices don't
           // miss this action.
-          setTimeout(() => (searchField as HTMLElement).focus(), 1)
+          setTimeout(() => searchField.focus(), 1)
         } else {
-          console.info('Normal submission!')
+          console.info(
+            'Normal submission!\n',
+            'Field Value:', sanitizeHTML(searchField.value), '\n',
+            'Field Value (URI encoded):', encodeURIComponent(sanitizeHTML(searchField.value)),
+          )
         }
       })
     }

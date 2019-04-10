@@ -16,7 +16,7 @@
 
   input[type='search'] {
     background-color: $white;
-    border-width: 0;
+    border: 1px solid color('charcoal');
     opacity: 0;
     padding: 0 15px;
     pointer-events: none;
@@ -24,7 +24,7 @@
     right: calc(100% - 40px);
     top: 0;
     transition: $transition-fade;
-    width: calc(100vw - 192px - 40px - 100%);
+    width: calc(100vw - 192px - 40px);
     z-index: 1;
   }
 

@@ -28,6 +28,9 @@ class CarouselScreenshotSpec extends ComponentSpec {
 
         then: 'The component should appear on the page'
         waitForComponent(selector)
+        waitFor(15, 0.1) {
+            $(selectorCarousel).isDisplayed()
+        }
 
         then: 'It should match reference image.'
         designRef(selector)
@@ -49,6 +52,9 @@ class CarouselScreenshotSpec extends ComponentSpec {
 
         then: 'The component should appear on the page'
         waitForComponent(selector)
+        waitFor(15, 0.1) {
+            $(selectorCarousel).isDisplayed()
+        }
 
         then: 'It should match reference image.'
         designRef(selector)
@@ -70,6 +76,9 @@ class CarouselScreenshotSpec extends ComponentSpec {
 
         then: 'The component should appear on the page'
         waitForComponent(selector)
+        waitFor(15, 0.1) {
+            $(selectorCarousel).isDisplayed()
+        }
 
         then: 'It should match reference image.'
         designRef(selector)
@@ -91,6 +100,9 @@ class CarouselScreenshotSpec extends ComponentSpec {
 
         then: 'The component should appear on the page'
         waitForComponent(selector)
+        waitFor(15, 0.1) {
+            $(selectorCarousel).isDisplayed()
+        }
 
         then: 'It should match reference image.'
         designRef(selector)
@@ -112,6 +124,9 @@ class CarouselScreenshotSpec extends ComponentSpec {
 
         then: 'The component should appear on the page'
         waitForComponent(selector)
+        waitFor(15, 0.1) {
+            $(selectorCarousel).isDisplayed()
+        }
 
         then: 'It should match reference image.'
         designRef(selector)
@@ -133,6 +148,9 @@ class CarouselScreenshotSpec extends ComponentSpec {
 
         then: 'The component should appear on the page'
         waitForComponent(selector)
+        waitFor(15, 0.1) {
+            $(selectorCarousel).isDisplayed()
+        }
 
         then: 'It should match reference image.'
         designRef(selector)

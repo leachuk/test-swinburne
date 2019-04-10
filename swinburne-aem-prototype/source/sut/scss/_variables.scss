@@ -274,6 +274,15 @@ $container-max-widths: (
   xs: 1106px,
 );
 
+$container-types: (
+  text: (
+    sm: 100%,
+    md: 542px,
+    lg: 658px,
+    xl: 880px
+  )
+);
+
 
 // Grid columns
 

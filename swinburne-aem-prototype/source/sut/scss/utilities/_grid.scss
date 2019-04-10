@@ -1,12 +1,3 @@
-$container-types: (
-  text: (
-    sm: 100%,
-    md: 542px,
-    lg: 658px,
-    xl: 880px
-  )
-);
-
 @each $type in map-keys($container-types) {
   .container-#{$type} {
     @include make-container(30px);

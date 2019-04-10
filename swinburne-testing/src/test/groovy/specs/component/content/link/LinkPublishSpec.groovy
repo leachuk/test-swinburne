@@ -211,4 +211,29 @@ class LinkPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+    @Unroll("Functionality of Component Variant: Default without Analytics tracking false in #viewport.label")
+    def "Functionality of Component Variant: Default without Analytics tracking false"() {
+
+        given: 'The page hierarchy is created as "Components" > "Content" > "Link"'
+        def selector = "#link10"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+
+        and: "Should have sample component text"
+        assert $(selector).text().trim() == "Link"
+        report("Should have sample component text")
+
+        and: "Should have analytics attribute: data-layer-track as false"
+        assert $(selector).attr("data-layer-track") == "false"
+
+        where:
+        viewport << getViewPorts()
+    }
+
+
 }

@@ -252,8 +252,13 @@ content/_cq_tags/swinburne/component-style-modifier: &component-style-modifier
 
   grid/container-flush:
     flat: true
-    prefix: container-flush
-    title: 'Container Flush'
+    prefix: container
+    title: '%%prefix_normalised%%'
+
+  grid/container-text:
+    flat: true
+    prefix: container-text
+    title: 'Container Text'
 
   # Icons
   icon/size:
@@ -312,6 +317,12 @@ content/_cq_tags/swinburne/component-style-modifier: &component-style-modifier
       - uppercase
       - small
     prefixValue: text-
+    title: '%%prefix_normalised%%'
+
+  spacing/vertical:
+    prefixes:
+      - level-1
+    prefixValue: spacing-vertical-
     title: '%%prefix_normalised%%'
 
   video:

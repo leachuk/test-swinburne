@@ -88,6 +88,17 @@ $spacers: (
   40 : 40px,
 );
 
+$spacing-modifiers: (
+  vertical: (
+    level-1: (
+      sm: 20px,
+      md: 30px,
+      lg: 40px,
+      xl: 50px
+    )
+  )
+);
+
 
 // Spacing variables
 

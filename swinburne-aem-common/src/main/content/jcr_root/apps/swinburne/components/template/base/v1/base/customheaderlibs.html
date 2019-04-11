@@ -53,22 +53,10 @@
      data-sly-test="${wcmmode.preview || wcmmode.edit}"
      data-sly-call="${clientlib.css @ categories='aemdesign.common.coralui'}"/>
 
-<!-- all: swinburne.microsites.header.all start -->
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${clientlib.all @ categories='swinburne.microsites.header'}"/>
-<!-- all: swinburne.microsites.header.all end -->
 
 <!-- swinburne/components/analytics/datalayer -->
 <sly data-sly-resource="${ @ resourceType='swinburne/components/analytics/datalayer'}"/>
 
-<!-- contexthub start -->
-<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
-<!-- contexthub end -->
-
-<!--cloud config: start-->
-<!--Live Chat cloud config: included-->
-<sly data-sly-resource="${'livecloudservices' @ resourceType='/apps/cq/analytics/components/livechat'}"/>
-<!--cloud config: end-->
 
 <!--- launch include -->
 <script src = "//assets.adobedtm.com/launch-ENff3603b5bce848df8b05b43e547e1dd8.min.js "></script>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+          smtp.host="smtp.office365.com"
+          smtp.port="587"
+          smtp.user="aemmail@swin.edu.au"
+          smtp.password="{54cba0664cc216807df18a6e1cccc0ab9384d0bc4a68495d351d962e28618c1e}"
+          from.address="aemmail@swin.edu.au"
+          smtp.starttls="{Boolean}true"
+/>
+
+<!-- Password(smtp.password) is generated with Crypto Support from Test-01 author-->

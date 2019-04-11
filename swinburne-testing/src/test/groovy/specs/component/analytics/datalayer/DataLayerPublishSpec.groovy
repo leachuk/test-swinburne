@@ -57,14 +57,14 @@ class DataLayerPublishSpec extends ComponentSpec {
         assert js.exec("return window.digitalData.page.pageInfo.destinationUrl.endsWith(\"datalayer.html\");")
 
         then: 'The digitalData.page.attributes.abort should equals "false"'
-        assert js.exec("return window.digitalData.page.attributes.abort == 'false';")
+        assert js.exec("return window.digitalData.page.pageInfo.abort == 'false';")
 
         then: 'The digitalData.page.attributes.platform should equals "aem"'
-        assert js.exec("return window.digitalData.page.attributes.platform == 'aem';")
+        assert js.exec("return window.digitalData.page.pageInfo.platform == 'aem';")
 
-//         then: 'The digitalData.page.attributes.breakPoint should equals "#viewport.label"'
-//         assert js.exec("return window.digitalData.page.attributes.breakPoint;").toString() == viewport.label
-
+        then: 'The digitalData.page.pageInfo.sections should be set'
+        assert js.exec("return window.digitalData.page.pageInfo.sections !== \"\";")
+        
         where:
         viewport << getViewPorts()
     }

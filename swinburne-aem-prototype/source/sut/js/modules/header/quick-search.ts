@@ -1,4 +1,4 @@
-import { sanitizeHTML } from '@global/utilities/dom'
+import { hasParent, matches, sanitizeHTML } from '@global/utilities/dom'
 
 // Internal
 const QUICK_SEARCH_CLASS = '.brand-header__quick-search'
@@ -50,11 +50,10 @@ export default () => {
     }
 
     // Listen for when the user clicks around the window
-    // TODO: Convert to vanilla JS
-    $(window).on('click.header.search', (e: JQuery.TriggeredEvent) => {
-      const $target = $(e.target)
+    window.addEventListener('click', (event: Event) => {
+      const target: HTMLElement = event.target as HTMLElement
 
-      if (!$target.is(QUICK_SEARCH_CLASS) && !$target.parents(QUICK_SEARCH_CLASS).length) {
+      if (!matches(target, QUICK_SEARCH_CLASS) && !hasParent(target.parentNode, QUICK_SEARCH_CLASS)) {
         quickSearch.classList.remove('show')
       }
     })

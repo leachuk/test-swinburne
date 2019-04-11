@@ -71,3 +71,17 @@
     }
   }
 }
+
+.text {
+  p {
+    margin-bottom: 16px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 30px;
+    }
+  }
+}

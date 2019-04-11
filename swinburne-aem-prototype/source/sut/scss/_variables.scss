@@ -88,6 +88,17 @@ $spacers: (
   40 : 40px,
 );
 
+$spacing-modifiers: (
+  vertical: (
+    level-1: (
+      sm: 20px,
+      md: 30px,
+      lg: 40px,
+      xl: 50px
+    )
+  )
+);
+
 
 // Spacing variables
 
@@ -261,6 +272,15 @@ $grid-breakpoints: $breakpoints;
 
 $container-max-widths: (
   xs: 1106px,
+);
+
+$container-types: (
+  text: (
+    sm: 100%,
+    md: 542px,
+    lg: 658px,
+    xl: 880px
+  )
 );
 
 

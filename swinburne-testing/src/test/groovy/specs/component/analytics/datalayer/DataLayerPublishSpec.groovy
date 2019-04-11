@@ -64,7 +64,7 @@ class DataLayerPublishSpec extends ComponentSpec {
 
         then: 'The digitalData.page.pageInfo.sections should be set'
         assert js.exec("return window.digitalData.page.pageInfo.sections !== \"\";")
-        
+
         where:
         viewport << getViewPorts()
     }

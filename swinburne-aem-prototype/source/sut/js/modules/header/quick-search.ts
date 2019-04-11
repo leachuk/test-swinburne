@@ -57,5 +57,16 @@ export default () => {
         quickSearch.classList.remove('show')
       }
     })
+
+    // Listen for when the user presses the escape key on their keyboard
+    window.addEventListener('keyup', (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && quickSearch.classList.contains('show')) {
+        quickSearch.classList.remove('show')
+
+        if (submitButton) {
+          submitButton.focus()
+        }
+      }
+    })
   }
 }

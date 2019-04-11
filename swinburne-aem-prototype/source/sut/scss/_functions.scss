@@ -66,3 +66,21 @@
 @function typography-heading($level) {
   @return map-get(map-get($typography, headings), $level);
 }
+
+/// Retrieves the height or width for the logo size at the provided breakpoint
+/// @param {String} $name - Name of the logo
+/// @param {String} $breakpoint - Breakpoint size to look up
+/// @param {String} $axis - Height or width?
+/// @return {Number} - Height or width in pixels
+@function logo-size($name: null, $breakpoint: sm, $axis: width) {
+  @if not $name or not map-has-key($logos, $name) {
+    @error 'Invalid logo name given, valid names are: #{map-keys($logos)}';
+  }
+  @else {
+    $sizes: map-deep-get($logos, $name, $breakpoint);
+
+    @return if($axis == width, nth($sizes, 2), nth($sizes, 1));
+  }
+
+  @return null;
+}

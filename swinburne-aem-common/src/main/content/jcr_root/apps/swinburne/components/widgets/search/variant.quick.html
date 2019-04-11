@@ -1,0 +1,12 @@
+<template data-sly-template.variant="${@ componentProperties}">
+    <div style="${componentProperties.attr.data.style @ context = 'unsafe'}"
+         data-sly-attribute="${componentProperties.attr.data @ context = 'unsafe'}">
+        <form name="search" action="${componentProperties.formAction @ context = 'unsafe'}" method="${componentProperties.formMethod}">
+            <input type="search" name="${componentProperties.formParameterName}" placeholder="${componentProperties.placeholderText}">
+
+            <button type="submit">
+                <i class="icon fal fa-search"></i>
+            </button>
+        </form>
+    </div>
+</template>

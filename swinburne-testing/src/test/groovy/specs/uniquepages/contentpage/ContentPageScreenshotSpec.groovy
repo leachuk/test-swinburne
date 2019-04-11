@@ -46,6 +46,7 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         def prefix = "contentpage-"
         def selector = "body"
         def selectorCarousel = "#contentblock_XLRZRS9UE .owl-carousel.owl-loaded"
+        def selectorHeaderNav = "#header_nav_root"
 
         when: "I am on the content page showcase page"
         setWindowSize(viewport)
@@ -58,6 +59,7 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         }
 
         then: 'It should match the small viewport reference image.'
+        js.exec("\$('${selectorHeaderNav}').css('position', 'relative'); return true;") //necessary to overcome the moving header being duplicated on fullscreen screenshots
         designRefFull(selector, prefix)
 
         where:

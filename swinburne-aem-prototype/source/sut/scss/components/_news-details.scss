@@ -2,7 +2,7 @@
   padding: $spacing-md 0;
   position: relative;
 
-  & > .container {
+  > .container {
     max-width: 575px;
   }
 
@@ -11,14 +11,14 @@
   }
 
   @include media-breakpoint-up(lg) {
-    & > .container {
+    > .container {
       max-width: 690px;
     }
   }
 
   @include media-breakpoint-up(xl) {
     padding: $spacing-3xl 0;
-    & > .container {
+    > .container {
       max-width: 915px;
     }
   }
@@ -135,7 +135,7 @@
 
   .card-img-top {
     max-height: inherit;
-    overflow: initial;
+    overflow: visible;
 
     img {
       display: block;

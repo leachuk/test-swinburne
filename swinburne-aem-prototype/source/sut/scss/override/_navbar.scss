@@ -4,6 +4,9 @@
 // care when making changes as we shouldn't be duplicating styles that Bootstrap
 // generates for us automatically.
 
+// stylelint-disable max-nesting-depth
+// stylelint-disable selector-max-compound-selectors
+
 .navbar {
   height: 72px;
   justify-content: flex-start;
@@ -16,10 +19,6 @@
         margin-right: 0;
       }
     }
-  }
-
-  &-toggler::before {
-    // @include pseudo-icon('bars', 19px, $needs-margin: false);
   }
 
   &-brand {
@@ -48,10 +47,6 @@
     color: $navbar-light-color;
     margin-right: 30px;
     order: 1;
-
-    &::before {
-      // @include pseudo-icon('house', 18px, $needs-margin: false);
-    }
 
     @include hover-focus {
       color: $navbar-light-hover-color;
@@ -82,16 +77,8 @@
       z-index: $zindex-fixed;
     }
 
-    // &.collapse {
-    //   &:not(.show) {
-    //     display: none;
-    //   }
-    // }
-
     &.collapsing,
     &.collapse.show {
-      // transform: translateX(0);
-      // transition: transform .35s ease;
       transition: none;
     }
   }
@@ -136,8 +123,6 @@
       width: 100%;
 
       &.dropdown-toggle::after {
-        // @include pseudo-icon('chevron-down', 11px, $needs-margin: false);
-
         border-width: 0;
         display: block;
         height: auto;
@@ -180,8 +165,6 @@
         @include hover-focus {
           &,
           &[aria-expanded='true'] {
-            // font-weight: bold;
-
             &::before {
               opacity: 1;
             }
@@ -212,91 +195,11 @@
       max-width: 340px;
       overflow-x: hidden;
       overflow-y: auto;
-      // transform: translateX(-70%);
       width: 70%;
     }
 
     @include media-breakpoint-up(lg) {
       align-items: center;
-    }
-  }
-
-  [data-modules*='global-search'] {
-    $search-icon-size: 22px;
-
-    height: $search-icon-size;
-    margin-right: $search-icon-size;
-    margin-top: -2px;
-    width: $search-icon-size;
-
-    form {
-      border: 2px solid color('purple');
-      border-radius: 24px;
-      height: 46px;
-      opacity: 0;
-      position: absolute;
-      right: 38px;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: $transition-fade;
-      // 100% - 22px (hamburger icon) - 16px (left margin)
-      width: calc(100% - 38px);
-
-      .search-input {
-        height: 100%;
-      }
-
-      input[type='text'] {
-        background-color: transparent;
-        border-width: 0;
-        height: inherit;
-        padding: 0 50px;
-        width: 100%;
-      }
-
-      .clear-search {
-        color: color('purple');
-        font-size: 14px;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .global-search & {
-        opacity: 1;
-      }
-    }
-
-    .mobile-search {
-      color: $navbar-light-color;
-      display: flex;
-      font-size: $search-icon-size;
-      position: absolute;
-      transition: $transition-base;
-      z-index: 1;
-
-      @include hover-focus {
-        text-decoration: none;
-      }
-
-      .global-search & {
-        left: $grid-gutter-width / 2;
-      }
-    }
-
-    .suggestions {
-      $offset: 22px;
-
-      box-shadow: 0 0 5px 0 rgba($black, .5);
-      left: $offset;
-      padding: 20px $spacing-lg;
-      top: calc(100% + #{2px});
-      width: calc(100% - #{$offset * 2});
-    }
-
-    @include media-breakpoint-up(md) {
-      display: none;
     }
   }
 

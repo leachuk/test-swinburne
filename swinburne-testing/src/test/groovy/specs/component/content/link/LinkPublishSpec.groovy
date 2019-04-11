@@ -51,7 +51,7 @@ class LinkPublishSpec extends ComponentSpec {
         def component = waitForComponent(selector)
 
         and: "Should have sample component link"
-        assert $(selector).text().trim() == "Link: Button"
+        assert $(selector).text().trim() == "Button"
         report("Should have sample component link")
 
         where:
@@ -97,17 +97,18 @@ class LinkPublishSpec extends ComponentSpec {
         assert $(selector).text().trim() == "Link"
         report("Should have sample component text")
 
-        and: "Should have analytics attribute: data-layer-event"
-        assert $(selector).attr("data-layer-event") == "site interaction"
+        and: "Should have analytics attribute: data-analytics-event"
+        assert $(selector).attr("data-analytics-event") == "site interaction"
 
-        and: "Should have analytics attribute: data-layer-linktype"
-        assert $(selector).attr("data-layer-linktype") == "link"
+        and: "Should have analytics attribute: data-layer-type"
+        assert $(selector).attr("data-layer-track") == "true"
 
-        and: "Should have analytics attribute: data-layer-linklocation"
-        assert $(selector).attr("data-layer-linklocation") == "link page"
+        and: "Should have analytics attribute: data-layer-location"
+        assert $(selector).attr("data-layer-location") == "link6-location"
 
-        and: "Should have analytics attribute: data-layer-linkdescription"
-        assert $(selector).attr("data-layer-linkdescription") == "link description"
+        and: "Should have analytics attribute: data-layer-label"
+        assert $(selector).attr("data-layer-label") == "link-label"
+
 
         where:
         viewport << getViewPorts()
@@ -131,17 +132,18 @@ class LinkPublishSpec extends ComponentSpec {
         assert $(selector).text().trim() == "Link"
         report("Should have sample component text")
 
-        and: "Should have analytics attribute: data-layer-event"
-        assert $(selector).attr("data-layer-event") == "site interaction"
+        and: "Should have analytics attribute: data-analytics-event"
+        assert $(selector).attr("data-analytics-event") == "site interaction"
 
-        and: "Should have analytics attribute: data-layer-linktype"
-        assert $(selector).attr("data-layer-linktype") == "button"
+        and: "Should have analytics attribute: data-layer-type"
+        assert $(selector).attr("data-layer-track") == "true"
 
-        and: "Should have analytics attribute: data-layer-linklocation"
-        assert $(selector).attr("data-layer-linklocation") == "link page"
+        and: "Should have analytics attribute: data-layer-location"
+        assert $(selector).attr("data-layer-location") == "link7-location"
 
-        and: "Should have analytics attribute: data-layer-linkdescription"
-        assert $(selector).attr("data-layer-linkdescription") == "link description"
+        and: "Should have analytics attribute: data-layer-label"
+        assert $(selector).attr("data-layer-label") == "link-label"
+
 
         where:
         viewport << getViewPorts()
@@ -208,5 +210,30 @@ class LinkPublishSpec extends ComponentSpec {
         where:
         viewport << getViewPorts()
     }
+
+    @Unroll("Functionality of Component Variant: Default without Analytics tracking false in #viewport.label")
+    def "Functionality of Component Variant: Default without Analytics tracking false"() {
+
+        given: 'The page hierarchy is created as "Components" > "Content" > "Link"'
+        def selector = "#link10"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+
+        and: "Should have sample component text"
+        assert $(selector).text().trim() == "Link"
+        report("Should have sample component text")
+
+        and: "Should have analytics attribute: data-layer-track as false"
+        assert $(selector).attr("data-layer-track") == "false"
+
+        where:
+        viewport << getViewPorts()
+    }
+
 
 }

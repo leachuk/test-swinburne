@@ -61,7 +61,7 @@
                                     sling:resourceType="swinburne/components/content/embedsource"
                                     componentId="logo_embedsource"
                                     componentTheme="[swinburne-showcase:component-style-theme/common/logo]"
-                                    html="&lt;img class=&quot;invisible-md-up&quot; src=&quot;/etc/clientlibs/swinburne/v2/images/logo-small.svg&quot; alt=&quot;Swinburne&quot; />&#xd;&#xa;&lt;img class=&quot;invisible-sm-down&quot; src=&quot;/etc/clientlibs/swinburne/v2/images/logo-long-full.svg&quot; alt=&quot;Swinburne&quot; />"/>
+                                    html="&lt;img class=&quot;invisible-md-up&quot; src=&quot;/etc/clientlibs/swinburne/sut/images/logo-small.svg&quot; alt=&quot;Swinburne&quot; />&#xd;&#xa;&lt;img class=&quot;invisible-sm-down&quot; src=&quot;/etc/clientlibs/swinburne/sut/images/logo-long-full.svg&quot; alt=&quot;Swinburne&quot; />"/>
                             </par>
                         </contentblock>
                     </par>

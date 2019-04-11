@@ -55,12 +55,10 @@ $colors: (
 
 $theme-colors: $colors;
 
-
 // Body
 
 $body-bg:                   $white;
 $body-color:                color('charcoal');
-
 
 // Links
 
@@ -68,11 +66,9 @@ $link-color:                              color('red');
 $link-decoration:                         none;
 $link-hover-color:                        darken($link-color, 20%);
 
-
 // Paragraphs
 
 $paragraph-margin-bottom: 16px;
-
 
 // Spacers used for utility classes
 
@@ -88,6 +84,16 @@ $spacers: (
   40 : 40px,
 );
 
+$spacing-modifiers: (
+  vertical: (
+    level-1: (
+      sm: 20px,
+      md: 30px,
+      lg: 40px,
+      xl: 50px,
+    ),
+  ),
+);
 
 // Spacing variables
 
@@ -104,7 +110,6 @@ $spacing-6xl: 50px;
 $spacing-7xl: 55px;
 $spacing-8xl: 70px;
 
-
 // Components
 //
 // Define common padding and border radius sizes and more.
@@ -114,7 +119,6 @@ $border-color:                color('grey-4');
 $border-radius:               0;
 $border-radius-lg:            0;
 $border-radius-sm:            0;
-
 
 // Fonts
 
@@ -140,12 +144,10 @@ $headings-color:              inherit;
 $lead-font-size:              18px;
 $lead-font-weight:            normal;
 
-
 // Options
 
 $enable-caret:              false;
 $enable-rounded:            true;
-
 
 // Icons
 
@@ -155,7 +157,6 @@ $icon-sizes: (
   regular : 16px,
   large   : 23px,
 );
-
 
 // Custom typography map for responsive headings and text
 $typography: (
@@ -238,7 +239,6 @@ $typography: (
   ),
 );
 
-
 // Grid generic
 
 $aem-prefix:     'aem-Grid';
@@ -251,11 +251,9 @@ $aem-breakpoints: (
   'default' : 'xl',
 );
 
-
 // Grid breakpoints
 
 $grid-breakpoints: $breakpoints;
-
 
 // Grid containers
 
@@ -263,11 +261,18 @@ $container-max-widths: (
   xs: 1106px,
 );
 
+$container-types: (
+  text: (
+    sm: 100%,
+    md: 542px,
+    lg: 658px,
+    xl: 880px,
+  ),
+);
 
 // Grid columns
 
 $grid-gutter-width: 30px;
-
 
 // Navs
 
@@ -281,7 +286,6 @@ $nav-tabs-link-hover-border-color:  $nav-tabs-border-color;
 $nav-tabs-link-active-color:        color('grey-4');
 $nav-tabs-link-active-bg:           transparent;
 $nav-tabs-link-active-border-color: $nav-tabs-border-color;
-
 
 // Navbar
 
@@ -303,7 +307,6 @@ $navbar-light-disabled-color:       color('grey-5');
 $navbar-light-toggler-icon-bg:      null;
 $navbar-light-toggler-border-color: null;
 
-
 // Breadcrumbs
 
 $breadcrumb-padding-y:              0;
@@ -314,7 +317,6 @@ $breadcrumb-divider-color:          inherit;
 $breadcrumb-active-color:           inherit;
 $breadcrumb-divider:                '›';
 
-
 // Cards
 
 $card-spacer-y:                     16px;
@@ -323,7 +325,6 @@ $card-border-width:                 0;
 $card-border-radius:                null;
 $card-inner-border-radius:          null;
 $card-bg:                           transparent;
-
 
 // Buttons
 
@@ -354,8 +355,23 @@ $btn-border-radius-lg:        $btn-border-radius;
 $btn-border-radius-sm:        $btn-border-radius;
 
 // Header
-$header-height-xl:      98px;
-$header-height:         89px;
-$header-height-sm:      47px;
-$header-height-md:      60px;
-$header-level2-height:  50px;
+
+$actions-margin:       8px;
+
+$header-height:        89px;
+$header-height-sm:     47px;
+$header-height-md:     60px;
+$header-height-xl:     98px;
+
+$header-level2-height: 50px;
+
+// Logos
+
+$logos: (
+  primary: (
+    sm: 47px 47px,
+    md: 60px 60px,
+    lg: 89px 176px,
+    xl: 98px 192px,
+  ),
+);

@@ -347,6 +347,37 @@ class PageListPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+	@Unroll("Page List: Card Action with default Analytics #viewport.label")
+	def "Page List: Card Action with default Analytics"() {
 
+		given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+		and: '>I am in the component showcase page'
+		and: '>the component is on the showcase page'
+		def selector = "#pagelist39"
+		def selectorContainer = "#contentblock40 .contents"
+
+		when: "I am on the component showcase page"
+		setWindowSize(viewport)
+		waitForAuthorPreviewPage()
+
+		then: "The component should be on the page"
+		def component = waitForComponent(selector)
+		takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+
+		and: "First page link should have attribute: data-layer-track false - unauthored"
+		assert $("${selector} ul li a").getAt(0).attr("data-layer-track").equals("false")
+
+		and: "First page link should have attribute: data-layer-label"
+		assert $("${selector} ul li a").getAt(0).attr("data-layer-label").equals("pagelist39")
+
+		and: "First page link should have attribute: data-layer-location as blank - unauthored"
+		assert $("${selector} ul li a").getAt(0).attr("data-layer-location").equals("blank")
+
+
+
+
+		where:
+		viewport << getViewPorts()
+	}
 
 }

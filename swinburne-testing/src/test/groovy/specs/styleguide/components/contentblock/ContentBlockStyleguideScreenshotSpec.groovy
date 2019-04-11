@@ -19,7 +19,7 @@ class ContentBlockStyleguideScreenshotSpec extends ComponentSpec {
     def "Appearance of Advanced Content Block with Title"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "contentblock_2"
+        def selector = "#contentblock_2"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

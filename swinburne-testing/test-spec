@@ -17,7 +17,7 @@ if [ "$EXEC_ENV" == "" ]; then
 fi
 
 #DEFAULT IF NOT SET VIA ARGS. THIS WILL RUN ALL WORKING TESTS
-EXEC_TEST="${5:-*ContentBlockStyleguideScreenshotSpec}"
+EXEC_TEST="${5:-*ContentPageScreenshotSpec}"
 
 #THIS WILL RUN ONLY ONE TEST YOU CAN USE THIS IN DEV
 #EXEC_TEST="${5:-ContentBlock*}"

@@ -1,0 +1,59 @@
+&__quick-search {
+  // This is required to override a design choice within AEM Design.
+  // stylelint-disable-next-line
+  width: auto !important;
+
+  &,
+  form,
+  input[type='search'] {
+    height: 100%;
+  }
+
+  form {
+    align-items: center;
+    display: flex;
+  }
+
+  input[type='search'] {
+    $logo-width: logo-size(primary, sm, width);
+    $logo-width-md: logo-size(primary, md, width);
+    $logo-width-lg: logo-size(primary, lg, width);
+    $logo-width-xl: logo-size(primary, xl, width);
+
+    background-color: $white;
+    border-width: 0;
+    opacity: 0;
+    padding: 0 15px;
+    pointer-events: none;
+    position: absolute;
+    right: calc(100% - 40px);
+    top: 0;
+    transition: $transition-fade;
+    // (<viewport width> - <parent width / 2>) - <logo width> - <submit button width> - <parent margin> - <parent^parent padding / 2>
+    width: calc((100vw - 50%) - #{$logo-width} - 40px - #{$actions-margin});
+    z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+      width: calc((100vw - 50%) - #{$logo-width-lg} - 40px - #{$actions-margin} - 10px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: calc((100vw - 50%) - #{$logo-width-xl} - 40px - #{$actions-margin} - 10px);
+    }
+  }
+
+  button[type='submit'] {
+    background-color: transparent;
+    border-width: 0;
+    display: block;
+    margin-right: 10px;
+    padding: 0;
+    width: 30px;
+    z-index: 2;
+  }
+
+  &.show input[type='search'] {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

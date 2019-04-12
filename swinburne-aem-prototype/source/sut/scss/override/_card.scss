@@ -78,12 +78,12 @@
 
     // A small 'hack' (if you will) that ensures buttons remain aligned to the bottom of the
     // card as sibling cards will be the same height as oneanother.
-    & :last-child:not(.card-title):not(.card-text) {
+    :last-child:not(.card-title):not(.card-text) {
       margin-top: auto;
     }
 
     // Remove the bottom margin if it's the only child in the body
-    & :only-child {
+    :only-child {
       margin-bottom: 0;
     }
   }

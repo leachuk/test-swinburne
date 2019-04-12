@@ -24,32 +24,48 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="swinburne/components/layout/container">
                 <page_details
-                        jcr:mixinTypes="[cq:Taggable]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/details/page-details"
-                        editable="{Boolean}false"
-                        componentId="page_details"
-                        componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-yellow]"
-                        componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
-                        showBreadcrumb="false"
-                        showPageDate="false"
-                        showParsys="false"
-                        showToolbar="false"
-                        textIsRich="true" />
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-yellow]"
+                    componentTheme="[swinburne-showcase:component-style-theme/styleguide/page-details]"
+                    editable="{Boolean}false"
+                    showBreadcrumb="false"
+                    showPageDate="false"
+                    showParsys="false"
+                    showToolbar="false"
+                    textIsRich="true"/>
                 <contentblock
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <reference_contentblock_advanced_with_title
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/reference"
-                                componentId="reference_contentblock_advanced_with_title"
-                                path="/content/swinburne-showcase/en/component/layout/contentblock/jcr:content/article/par/contentblock7" />
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/reference"
+                            componentId="reference_contentblock_advanced_with_title"
+                            path="/content/swinburne-showcase/en/component/layout/contentblock/jcr:content/article/par/contentblock7"/>
                     </par>
                 </contentblock>
+                <contentblock_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock_2"
+                    hideInMenu="true"
+                    hideTopLink="true"
+                    title="My awesome title"
+                    titleType="h1"
+                    variant="advsection">
+                    <bgimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgvideo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/video"/>
+                </contentblock_2>
             </par>
         </article>
     </jcr:content>

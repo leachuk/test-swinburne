@@ -1,0 +1,15 @@
+Subject: Ready to Review - Publish: ${payloadPath}
+
+====================================================================================================
+Workflow : ${wfModelTitle}
+Start Time : ${wfStartTime}
+Request Submitted By : ${wfinitiatorName}
+====================================================================================================
+
+Please review and approve the following item(s) to be published: ${authorPath}${payloadOpenURL}
+
+Why have I received this?
+
+You have received this notification because you are assigned as a Reveiwer of this item of content.
+
+This is an automatically generated message. Please do not reply.

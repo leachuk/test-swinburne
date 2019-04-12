@@ -2,10 +2,12 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OsgiConfig"
-          smtp.host="smtp.gmail.com"
-          smtp.port="465"
-          smtp.user="isobaremail@gmail.com"
-          smtp.password="isobar1234"
-          from.address="isobaremail@gmail.com"
-          smtp.ssl="{Boolean}true"
+          smtp.host="smtp.office365.com"
+          smtp.port="587"
+          smtp.user="aemmail@swin.edu.au"
+          smtp.password="{da2e490df240479056b30071970e638ef40beb8ba45066b129ed0ad7c5ca44b4}"
+          from.address="aemmail@swin.edu.au"
+          smtp.starttls="{Boolean}true"
 />
+
+<!-- Password(smtp.password) is generated with Crypto Support from Dev-02 author-->

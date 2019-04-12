@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}false"
+    jcr:primaryType="cq:WorkflowModel"
+    sling:resourceType="cq/workflow/components/model"
+    description="This is the request for swinburne unpublish workflow"
+    title="Swinburne Unpublish">
+    <metaData
+        cq:generatingPage="/conf/global/settings/workflow/models/swinburne/swinburne_unpublish/jcr:content"
+        jcr:primaryType="nt:unstructured"
+        multiResourceSupport="true"
+        tags="wcm"/>
+    <nodes jcr:primaryType="nt:unstructured">
+        <node0
+            jcr:primaryType="cq:WorkflowNode"
+            title="Start"
+            type="START">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0>
+        <node1
+            jcr:primaryType="cq:WorkflowNode"
+            description="A process to lock the payload."
+            title="Lock Payload Process"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.workflow.impl.process.LockProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node1>
+        <node2
+            jcr:primaryType="cq:WorkflowNode"
+            description="Read content from payload and send mail to Reviewers to review the content"
+            title="Notify Reviewers"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                customParticipant="swin-marketing-reviewer"
+                PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
+                PROCESS_AUTO_ADVANCE="true"
+                templatePath="/conf/global/settings/workflow/notification/email/swinburne/unpublish/to.reviewer.group/en.txt"/>
+        </node2>
+        <node3
+            jcr:primaryType="cq:WorkflowNode"
+            description="Review page to unpublish"
+            title="Review to unpublish"
+            type="PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="false"
+                PARTICIPANT="swin-marketing-reviewer"/>
+        </node3>
+        <node4
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node4>
+        <node5
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node5>
+        <node6
+            jcr:primaryType="cq:WorkflowNode"
+            description="Read content from payload and send email to initiator about content being approved for unpublish"
+            title="Approve"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
+                PROCESS_AUTO_ADVANCE="true"
+                templatePath="/conf/global/settings/workflow/notification/email/swinburne/unpublish/to.initiator.approved/en.txt"/>
+        </node6>
+        <node7
+            jcr:primaryType="cq:WorkflowNode"
+            description="Read content from payload and send mail to Publishers to further go through the process"
+            title="Notify Publishers"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                customParticipant="swin-marketing-publisher"
+                PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
+                PROCESS_AUTO_ADVANCE="true"
+                templatePath="/conf/global/settings/workflow/notification/email/swinburne/unpublish/to.publisher.group/en.txt"/>
+        </node7>
+        <node8
+            jcr:primaryType="cq:WorkflowNode"
+            description="Review and Unpublish"
+            title="Unpublish"
+            type="PARTICIPANT">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                DO_NOTIFY="false"
+                PARTICIPANT="swin-marketing-publisher"/>
+        </node8>
+        <node9
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_SPLIT"
+            type="OR_SPLIT">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node9>
+        <node10
+            jcr:primaryType="cq:WorkflowNode"
+            title="OR_JOIN"
+            type="OR_JOIN">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node10>
+        <node11
+            jcr:primaryType="cq:WorkflowNode"
+            description="A process to unlock the payload. - Unlock Payload Process"
+            title="Approve Unpublish"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node11>
+        <node12
+            jcr:primaryType="cq:WorkflowNode"
+            title="Deactivate Page/Asset"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.wcm.workflow.process.DeactivatePageProcess"
+                PROCESS_AUTO_ADVANCE="true"
+                replicateAsParticipant="true"/>
+        </node12>
+        <node13
+            jcr:primaryType="cq:WorkflowNode"
+            description="Read content from payload and send email to initiator about content being deactivated"
+            title="Send Templated Email - Swinburne - Deactivated by Publisher"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
+                PROCESS_AUTO_ADVANCE="true"
+                templatePath="/conf/global/settings/workflow/notification/email/swinburne/unpublish/to.initiator.unpublished/en.txt"/>
+        </node13>
+        <node14
+            jcr:primaryType="cq:WorkflowNode"
+            description="Read content from payload and send email to initiator about content being rejected by publisher to unpublish&#xd;&#xa;"
+            title="Reject Unpublish"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
+                PROCESS_AUTO_ADVANCE="true"
+                templatePath="/conf/global/settings/workflow/notification/email/swinburne/unpublish/to.initiator.rejected/en.txt"/>
+        </node14>
+        <node15
+            jcr:primaryType="cq:WorkflowNode"
+            description="A process to unlock the payload."
+            title="Unlock Payload Process"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node15>
+        <node16
+            jcr:primaryType="cq:WorkflowNode"
+            description="Read content from payload and send email to initiator about content being rejected by reviewer to unpublish&#xd;&#xa;&#xd;&#xa;Send Templated Email - Swinburne  - Reject By Reviewer"
+            title="Reject"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="/apps/swinburne/components/workflow/sendemailprocess/scripts/sendemailprocess.ecma"
+                PROCESS_AUTO_ADVANCE="true"
+                templatePath="/conf/global/settings/workflow/notification/email/swinburne/unpublish/to.initiator.rejected/en.txt"/>
+        </node16>
+        <node17
+            jcr:primaryType="cq:WorkflowNode"
+            description="A process to unlock the payload."
+            title="Unlock Payload Process"
+            type="PROCESS">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                PROCESS="com.day.cq.workflow.impl.process.UnlockProcess"
+                PROCESS_AUTO_ADVANCE="true"/>
+        </node17>
+        <node18
+            jcr:primaryType="cq:WorkflowNode"
+            title="End"
+            type="END">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node18>
+    </nodes>
+    <transitions jcr:primaryType="nt:unstructured">
+        <node0_x0023_node1
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node0"
+            rule=""
+            to="node1">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node0_x0023_node1>
+        <node1_x0023_node2
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node1"
+            rule=""
+            to="node2">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node1_x0023_node2>
+        <node2_x0023_node3
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node2"
+            rule=""
+            to="node3">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node2_x0023_node3>
+        <node3_x0023_node4
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node3"
+            to="node4">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node3_x0023_node4>
+        <node4_x0023_node6
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            rule=""
+            to="node6">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node4_x0023_node6>
+        <node6_x0023_node7
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node6"
+            rule=""
+            to="node7">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node6_x0023_node7>
+        <node7_x0023_node8
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node7"
+            rule=""
+            to="node8">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node7_x0023_node8>
+        <node8_x0023_node9
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node8"
+            to="node9">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node8_x0023_node9>
+        <node9_x0023_node11
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node9"
+            rule=""
+            to="node11">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node9_x0023_node11>
+        <node11_x0023_node12
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node11"
+            rule=""
+            to="node12">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node11_x0023_node12>
+        <node12_x0023_node13
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node12"
+            rule=""
+            to="node13">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node12_x0023_node13>
+        <node13_x0023_node10
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node13"
+            to="node10">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node13_x0023_node10>
+        <node9_x0023_node14
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node9"
+            rule=""
+            to="node14">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node9_x0023_node14>
+        <node14_x0023_node15
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node14"
+            rule=""
+            to="node15">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node14_x0023_node15>
+        <node15_x0023_node10
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node15"
+            to="node10">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node15_x0023_node10>
+        <node10_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node10"
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node10_x0023_node5>
+        <node4_x0023_node16
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node4"
+            rule=""
+            to="node16">
+            <metaData
+                jcr:primaryType="nt:unstructured"
+                isDefault="false"/>
+        </node4_x0023_node16>
+        <node16_x0023_node17
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node16"
+            rule=""
+            to="node17">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node16_x0023_node17>
+        <node17_x0023_node5
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node17"
+            to="node5">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node17_x0023_node5>
+        <node5_x0023_node18
+            jcr:primaryType="cq:WorkflowTransition"
+            from="node5"
+            to="node18">
+            <metaData jcr:primaryType="nt:unstructured"/>
+        </node5_x0023_node18>
+    </transitions>
+</jcr:root>

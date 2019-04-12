@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:tags="[]"
-       cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
+        cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Pages configured for navigation"
         sling:resourceType="swinburne/components/template/base">

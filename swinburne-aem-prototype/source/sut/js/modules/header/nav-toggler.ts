@@ -11,6 +11,7 @@ let $dropdown: JQuery
 let $navLink: JQuery
 let $toggleButton: JQuery
 let $window: JQuery<Window>
+let $activeElements: JQuery
 
 let scrollOffset
 
@@ -22,6 +23,15 @@ function closeSubNavigation(element) {
       .prev()
       .attr('aria-expanded', 'false')
   }
+}
+
+function openNavAtLink() {
+    let $level1Link : JQuery
+
+    $level1Link = $(`a.active.l-1`)
+    if($level1Link.length > 0) {
+      $level1Link.trigger('click').trigger('blur');
+    }
 }
 
 function toggleNavigation() {
@@ -58,6 +68,7 @@ function attachDropdownEvents() {
 
     ['shown.bs.dropdown']() {
       isClosed = false
+      $activeElements.removeClass('active')
     },
   })
 
@@ -188,18 +199,21 @@ function dropdownSubMenuFix() {
 }
 
 export default () => {
-  $body         = $(document.body)
-  $collapsible  = $('#header-nav-container')
-  $dropdown     = $('.dropdown')
-  $navLink      = $('a.nav-link').not('[href="#"]')
-  $toggleButton = $('.navbar-toggler')
-  $window       = $(window)
+  $body           = $(document.body)
+  $collapsible    = $('#header-nav-container')
+  $dropdown       = $('.dropdown')
+  $navLink        = $('a.nav-link').not('[href="#"]')
+  $toggleButton   = $('.navbar-toggler')
+  $window         = $(window)
+  $activeElements = $('a.dropdown-toggle.active, .dropdown-menu.active')
 
   cloneActions()
   setBackButtons()
   setNavToggler()
   toggleNavigation()
   resetNavigation()
+  openNavAtLink()
+
 
   $window.on('resize', _throttle(() => {
     attachDropdownEvents()

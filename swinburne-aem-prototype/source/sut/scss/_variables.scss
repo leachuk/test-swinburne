@@ -366,11 +366,12 @@ $header-height-xl:     98px;
 $header-level2-height: 50px;
 
 // Logos
+// <height>, <min-width>
 
 $logos: (
   primary: (
     sm: 47px 47px,
-    md: 60px 60px,
+    md: 60px 119px,
     lg: 89px 176px,
     xl: 98px 192px,
   ),

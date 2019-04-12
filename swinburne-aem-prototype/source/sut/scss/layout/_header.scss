@@ -2,9 +2,7 @@
   background-color: $white;
   box-shadow: 0 0 4px 0 rgba($black, .5);
   height: $header-height-sm;
-  left: 0;
-  position: fixed;
-  top: 0;
+  position: relative;
   width: 100%;
   z-index: 1000;
 

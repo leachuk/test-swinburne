@@ -16,8 +16,29 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    @Unroll("Experience Page Screenshot in #viewport.label")
-    def "Experience Page Screenshot"() {
+    @Unroll("Appearance of Global Header Nav on Content Page in #viewport.label")
+    def "Appearance of Global Header Nav on Content Page "() {
+
+        given: '>the page hierarchy is created as "Pages" > "SWU" > "Content Page"'
+        and: '>I am on the content page'
+        def selector = "#header_nav_root"
+
+        when: "I am on the component showcase page"
+        setWindowSize(viewport)
+        waitForAuthorPreviewPage()
+
+        then: "The component should be on the page"
+        def component = waitForComponent(selector)
+
+        then: 'It should match the small viewport reference image.'
+        designRef(selector)
+
+        where:
+        viewport << getViewPorts()
+    }
+
+    @Unroll("Full Content Page Screenshot in #viewport.label")
+    def "Full Content Page Screenshot"() {
 
         given: '>the page hierarchy is created as "Pages" > "SWU" > "Content Page"'
         and: '>I am in the content page showcase page'

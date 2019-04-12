@@ -37,15 +37,14 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Experience Page Screenshot in #viewport.label")
-    def "Experience Page Screenshot"() {
+    @Unroll("Full Content Page Screenshot in #viewport.label")
+    def "Full Content Page Screenshot"() {
 
         given: '>the page hierarchy is created as "Pages" > "SWU" > "Content Page"'
         and: '>I am in the content page showcase page'
         def prefix = "contentpage-"
         def selector = "body"
         def selectorCarousel = "#contentblock_XLRZRS9UE .owl-carousel.owl-loaded"
-        def selectorHeaderNav = "#header_nav_root"
 
         when: "I am on the content page showcase page"
         setWindowSize(viewport)

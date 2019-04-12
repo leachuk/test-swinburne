@@ -1034,6 +1034,34 @@
                                 tagsMatch="any"/>
                     </par>
                 </contentblock38>
+                <contentblock39
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/contentblock"
+                        componentId="contentblock39"
+                        hideInMenu="true"
+                        hideTitle="false"
+                        hideTopLink="true"
+                        title="Page List: Default variant with no analytics configuration"
+                        titleType="h2"
+                        variant="advsection">
+                    <par
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aemdesign/components/layout/container">
+                        <pagelist39
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="swinburne/components/lists/pagelist"
+                                badgeTitleType="h5"
+                                componentId="pagelist_39"
+                                detailsBadge="cardImageTagTitleAction"
+                                limit="4"
+                                listFrom="children"
+                                listType="list"
+                                parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"
+                                sortOrder="asc"
+                                tagsMatch="any">
+                        </pagelist39>
+                    </par>
+                </contentblock39>
             </par>
         </article>
     </jcr:content>

@@ -5,7 +5,7 @@
         cq:lastModified="{Date}2019-03-20T17:13:13.115+11:00"
         cq:lastModifiedBy="admin"
         cq:tags="[swinburne-showcase:content-type/page]"
-       cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
+        cq:template="/conf/swinburne/settings/wcm/templates/twocolumn"
         jcr:description="Page Properties - Description"
         jcr:primaryType="cq:PageContent"
         jcr:title="Page Properties - Title "

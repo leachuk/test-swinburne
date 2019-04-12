@@ -5,12 +5,8 @@
         cq:template="/conf/swinburne/settings/wcm/templates/experience-fragment"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="swinburne/components/template/experience-fragments/base/v1/xfpage">
-        <article
+        <par
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="swinburne/components/layout/article">
-            <par
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
-        </article>
+            sling:resourceType="swinburne/components/layout/container"/>
     </jcr:content>
 </jcr:root>

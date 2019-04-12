@@ -31,7 +31,6 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         def component = waitForComponent(selector)
 
         then: 'It should match the small viewport reference image.'
-        js.exec("\$('${selector}').css('position', 'relative'); return true;") //necessary to overcome SM and MD fixed positions which prevented geb locating the header
         designRef(selector)
 
         where:
@@ -59,7 +58,6 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         }
 
         then: 'It should match the small viewport reference image.'
-        js.exec("\$('${selectorHeaderNav}').css('position', 'relative'); return true;") //necessary to overcome the moving header being duplicated on fullscreen screenshots
         designRefFull(selector, prefix)
 
         where:

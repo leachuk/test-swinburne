@@ -5,9 +5,9 @@
           smtp.host="smtp.office365.com"
           smtp.port="587"
           smtp.user="aemmail@swin.edu.au"
-          smtp.password="{54cba0664cc216807df18a6e1cccc0ab9384d0bc4a68495d351d962e28618c1e}"
+          smtp.password="{b85f639577d3e18842a530507a26aa9ceeac1c802cd15590ba4eb352150b5c0f}"
           from.address="aemmail@swin.edu.au"
           smtp.starttls="{Boolean}true"
 />
 
-<!-- Password(smtp.password) is generated with Crypto Support from Test-01 author-->
+<!-- Password(smtp.password) is generated with Crypto Support from PROD author-->

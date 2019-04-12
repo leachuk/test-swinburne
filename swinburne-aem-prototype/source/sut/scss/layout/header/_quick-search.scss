@@ -34,12 +34,12 @@
     z-index: 1;
 
     @include media-breakpoint-up(md) {
-      width: calc(100vw - #{$logo-width-md} - 15px - 30px);
+      right: calc(100% - 40px);
+      // (<viewport width> - <parent width / 2>) - <logo width> - <submit button width> - <parent margin> - <parent^parent padding / 2>
+      width: calc((100vw - 50%) - #{$logo-width-md} - 30px - #{$actions-margin} - 10px);
     }
 
     @include media-breakpoint-up(lg) {
-      right: calc(100% - 40px);
-      // (<viewport width> - <parent width / 2>) - <logo width> - <submit button width> - <parent margin> - <parent^parent padding / 2>
       width: calc((100vw - 50%) - #{$logo-width-lg} - 40px - #{$actions-margin} - 10px);
     }
 
@@ -67,13 +67,13 @@
     }
 
     button[type='submit'] {
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(sm) {
         margin-left: auto;
       }
     }
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     form {
       display: flex;
       pointer-events: none;

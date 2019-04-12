@@ -353,8 +353,8 @@ class PageListPublishSpec extends ComponentSpec {
 		given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
 		and: '>I am in the component showcase page'
 		and: '>the component is on the showcase page'
-		def selector = "#pagelist39"
-		def selectorContainer = "#contentblock40 .contents"
+		def selector = "#pagelist_39"
+		def selectorContainer = "#contentblock39 .contents"
 
 		when: "I am on the component showcase page"
 		setWindowSize(viewport)
@@ -368,7 +368,7 @@ class PageListPublishSpec extends ComponentSpec {
 		assert $("${selector} ul li a").getAt(0).attr("data-layer-track").equals("false")
 
 		and: "First page link should have attribute: data-layer-label"
-		assert $("${selector} ul li a").getAt(0).attr("data-layer-label").equals("pagelist39")
+		assert $("${selector} ul li a").getAt(0).attr("data-layer-label").equals("pagelist_39")
 
 		and: "First page link should have attribute: data-layer-location as blank - unauthored"
 		assert $("${selector} ul li a").getAt(0).attr("data-layer-location").equals("blank")

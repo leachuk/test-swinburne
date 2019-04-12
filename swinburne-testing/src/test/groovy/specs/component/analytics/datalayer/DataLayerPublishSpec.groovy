@@ -65,6 +65,33 @@ class DataLayerPublishSpec extends ComponentSpec {
         then: 'The digitalData.page.pageInfo.sections should be set'
         assert js.exec("return window.digitalData.page.pageInfo.sections !== \"\";")
 
+		then: 'The digitalData.form.name should be empty'
+		assert js.exec("return window.digitalData.form.name == '';")
+
+		then: 'The digitalData.form.stepName should be empty'
+		assert js.exec("return window.digitalData.form.stepName == '';")
+
+		then: 'The digitalData.form.fieldName should be empty'
+		assert js.exec("return window.digitalData.form.fieldName == '';")
+
+		then: 'The digitalData.form.referenceId should be empty'
+		assert js.exec("return window.digitalData.form.referenceId == '';")
+
+		then: 'The digitalData.form.status should be empty'
+		assert js.exec("return window.digitalData.form.status == '';")
+
+		then: 'The digitalData.event[0].eventAction should be empty'
+		assert js.exec("return window.digitalData.event[0].eventAction == '';")
+
+		then: 'The digitalData.event[0].timeStamp should be empty'
+		assert js.exec("return window.digitalData.event[0].timeStamp == '';")
+
+		then: 'The digitalData.error[0].code should be empty'
+		assert js.exec("return window.digitalData.error[0].code == '';")
+
+		then: 'The digitalData.error[0].message should be empty'
+		assert js.exec("return window.digitalData.error[0].message == '';")
+
         where:
         viewport << getViewPorts()
     }

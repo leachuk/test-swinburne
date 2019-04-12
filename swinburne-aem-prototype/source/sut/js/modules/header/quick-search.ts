@@ -100,7 +100,7 @@ export default () => {
 
       // Define the event callback for when the user releases any key on their keyboard
       setEventCallback<KeyboardEvent>(({ key }) => {
-        if (key === 'Escape' && quickSearch.classList.contains('show')) {
+        if (/Esc(ape)?/.test(key) && quickSearch.classList.contains('show')) {
           quickSearch.classList.remove('show')
 
           if (submitButton) {

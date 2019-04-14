@@ -2,11 +2,12 @@
   "root": true,
 
   "extends": [
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
   ],
 
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
 
   "parser": "@typescript-eslint/parser",
@@ -22,6 +23,7 @@
   },
 
   "rules": {
-    "@typescript-eslint/indent": [1, 2, {"SwitchCase": 1, "VariableDeclarator": 1}]
+    "@typescript-eslint/indent": [1, 2, {"SwitchCase": 1, "VariableDeclarator": 1}],
+    "prettier/prettier": "error"
   }
 }

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2019-02-27T15:43:48.634+11:00"
+        cq:lastModified="{Date}2019-04-10T14:10:31.503+10:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:isCheckedOut="{Boolean}true"
@@ -25,7 +25,44 @@
             componentId="article_FCRIDDHKS">
             <par
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="swinburne/components/layout/container"/>
+                sling:resourceType="swinburne/components/layout/container">
+                <page_details
+                    jcr:created="{Date}2019-04-09T12:58:36.087+10:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-04-10T14:10:31.462+10:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    componentId="page_details_X8QLPM0A1"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/background/primary/bg-yellow]"
+                    showBreadcrumb="false"
+                    showPageDate="false"
+                    showParsys="false"
+                    showToolbar="false"
+                    textIsRich="true">
+                    <secondaryImage
+                        jcr:lastModified="{Date}2019-04-10T14:10:31.462+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <thumbnail
+                        jcr:lastModified="{Date}2019-04-10T14:10:31.462+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <bgimage
+                        jcr:lastModified="{Date}2019-04-10T14:10:31.462+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                    <ogImage
+                        jcr:lastModified="{Date}2019-04-10T14:10:31.462+10:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aemdesign/components/media/image"/>
+                </page_details>
+            </par>
         </article>
         <footer
             jcr:primaryType="nt:unstructured"

@@ -17,7 +17,7 @@
         <header
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/header"
-            cancelInheritParent="true"
+            cancelInheritParent="false"
             componentId="header_DYQQTCCYQ">
             <par
                 jcr:primaryType="nt:unstructured"

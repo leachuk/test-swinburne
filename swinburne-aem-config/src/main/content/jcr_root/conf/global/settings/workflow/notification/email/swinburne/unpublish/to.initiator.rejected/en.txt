@@ -1,0 +1,16 @@
+To: ${wfinitiatorEmail}
+Subject: Rejected Content Review - Unpublish: ${payloadPath}
+
+====================================================================================================
+Workflow : ${wfModelTitle}
+Request Rejected By : ${wfPreviousStepUser}
+====================================================================================================
+
+The following website content review has not been approved to be unpublished: ${authorPath}${payloadOpenURL}
+
+Reviewer message:
+${wfPreviousStepComment}
+
+Please edit content and resubmit for approval.
+
+This is an automatically generated message. Please do not reply.

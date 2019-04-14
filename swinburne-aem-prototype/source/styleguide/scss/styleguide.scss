@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* stylelint-disable declaration-no-important */
-/* stylelint-disable selector-max-compound-selectors */
-/* stylelint-disable selector-max-combinators */
+// stylelint-disable declaration-no-important
+// stylelint-disable selector-max-compound-selectors
+// stylelint-disable selector-max-combinators
 
 $styleguide-sidebar-width: 260px;
 
@@ -17,7 +17,6 @@ $styleguide-sidebar-width: 260px;
 
 // Bootstrap reset and base typography
 @import '~bootstrap/scss/mixins';
-
 
 .container--styleguide {
   max-width: 100%;
@@ -121,6 +120,12 @@ html:not(.aem-AuthorLayer-Edit) {
       padding-right: 30px;
     }
   }
+
+  .brand-header__quick-search input[type='search'] {
+    @include media-breakpoint-up(xl) {
+      width: calc((100vw - 50%) - #{logo-size(primary, xl, width)} - 40px - #{$actions-margin} - 10px - #{$styleguide-sidebar-width});
+    }
+  }
 }
 
 .colour-panel {
@@ -192,9 +197,10 @@ html:not(.aem-AuthorLayer-Edit) {
   &__header {
     padding: $spacing-xs $spacing-lg;
 
-    &:first-child{
+    &:first-child {
       padding-left: $spacing-xs;
     }
+
     &:last-child {
       padding-right: $spacing-xs;
     }
@@ -224,7 +230,3 @@ body {
     }
   }
 }
-
-/* stylelint-enable selector-max-combinators */
-/* stylelint-enable selector-max-compound-selectors */
-/* stylelint-enable declaration-no-important */

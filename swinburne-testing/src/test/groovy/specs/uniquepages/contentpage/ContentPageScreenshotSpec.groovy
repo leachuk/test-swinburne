@@ -16,13 +16,12 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    @Unroll("Appearance of Narrow Banner on Content Page in #viewport.label")
-    def "Functionality of Component"() {
+    @Unroll("Appearance of Global Header Nav on Content Page in #viewport.label")
+    def "Appearance of Global Header Nav on Content Page "() {
 
         given: '>the page hierarchy is created as "Pages" > "SWU" > "Content Page"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#page_details_NEZHZ1ZX0"
+        and: '>I am on the content page'
+        def selector = "#header_nav_root"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -38,21 +37,27 @@ class ContentPageScreenshotSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Appearance of Basic Page List Carousel with Yellow Background in #viewport.label")
-    def "Appearance of Basic Page List Carousel with Yellow Background"() {
-        given: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#contentblock_XLRZRS9UE"
+    @Unroll("Full Content Page Screenshot in #viewport.label")
+    def "Full Content Page Screenshot"() {
 
-        when: 'I am in the component showcase page'
+        given: '>the page hierarchy is created as "Pages" > "SWU" > "Content Page"'
+        and: '>I am in the content page showcase page'
+        def prefix = "contentpage-"
+        def selector = "body"
+        def selectorCarousel = "#contentblock_XLRZRS9UE .owl-carousel.owl-loaded"
+
+        when: "I am on the content page showcase page"
         setWindowSize(viewport)
         waitForAuthorPreviewPage()
 
-        then: 'The component should appear on the page'
-        waitForComponent(selector)
+        then: "The page should have finished loading"
+        def component = waitForComponent(selector)
+        waitFor(15, 0.1) {
+            $(selectorCarousel).isDisplayed()
+        }
 
-        then: 'It should match reference image.'
-        designRef(selector)
+        then: 'It should match the small viewport reference image.'
+        designRefFull(selector, prefix)
 
         where:
         viewport << getViewPorts()

@@ -1,3 +1,5 @@
+// stylelint-disable selector-max-compound-selectors
+
 &-cards-charcoal {
   .card {
     &:not(.card--promoted) .card-body {

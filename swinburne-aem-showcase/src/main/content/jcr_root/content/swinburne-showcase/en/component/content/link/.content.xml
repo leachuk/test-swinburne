@@ -183,40 +183,40 @@
                     </par>
                 </contentblock7>
                 <contentblock8
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock8"
-                        hideTitle="false"
-                        title="Link: Button with icon on left"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock8"
+                    hideTitle="false"
+                    title="Link: Button with icon on left"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <link
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="link8"
-                                linkIcon="[swinburne-showcase:component-style-icon/spinner/cog]"
-                                variant="button"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            componentId="link8"
+                            linkIcon="[swinburne-showcase:component-style-icon/spinner/cog]"
+                            variant="button"/>
                     </par>
                 </contentblock8>
                 <contentblock9
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock9"
-                        hideTitle="false"
-                        title="Link: Button with icon on right"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock9"
+                    hideTitle="false"
+                    title="Link: Button with icon on right"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container">
                         <link
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="swinburne/components/content/link"
-                                componentId="link9"
-                                linkIcon="[swinburne-showcase:component-style-icon/spinner/cog]"
-                                linkIconPosition="right"
-                                variant="button"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="swinburne/components/content/link"
+                            componentId="link9"
+                            linkIcon="[swinburne-showcase:component-style-icon/spinner/cog]"
+                            linkIconPosition="right"
+                            variant="button"/>
                     </par>
                 </contentblock9>
                 <contentblock10

@@ -3,7 +3,8 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         jcr:primaryType="nt:unstructured"
-        sling:resourceType="wcm/core/components/policies/mappings">
+        sling:resourceType="wcm/core/components/policies/mappings"
+        cq:policy="swinburne/components/template/base/policy">
         <header jcr:primaryType="nt:unstructured">
             <par
                 cq:policy="wcm/foundation/components/responsivegrid/swinburne-default"

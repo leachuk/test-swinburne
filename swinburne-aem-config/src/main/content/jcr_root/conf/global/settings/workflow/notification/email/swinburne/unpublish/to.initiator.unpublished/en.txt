@@ -1,0 +1,11 @@
+To: ${wfinitiatorEmail}
+Subject: Page Unpublished: ${payloadPath}
+
+====================================================================================================
+Workflow : ${wfModelTitle}
+Request Unpublished By : ${wfPreviousStepUser}
+====================================================================================================
+
+The following website content has been unpublished: ${authorPath}${payloadOpenURL}
+
+This is an automatically generated message. Please do not reply.

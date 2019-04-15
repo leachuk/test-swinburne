@@ -1,0 +1,42 @@
+<template data-sly-template.variant="${@ componentProperties}">
+    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlib.all @ categories=['aemdesign.components.datalayer']}"></sly>
+
+    ${'<script type="text/javascript" id="datalayer">' @ context = "scriptString"}
+        window.digitalData = {
+            "page": {
+                "pageInfo": {
+                    "abort": "${componentProperties.abort @ context='text'}",
+                    "contentCountry": "${componentProperties.contentCountry @ context='text'}",
+                    "contentLanguage": "${componentProperties.contentLanguage @ context='text'}",
+                    "pageName": "${componentProperties.pageName @ context='text'}",
+                    "pageType": "${componentProperties.pageType @ context='text'}",
+                    "pagePath": "${componentProperties.pagePath @ context='text'}",
+                    "effectiveDate": "${componentProperties.effectiveDate @ context='text'}",
+                    "platform": "${componentProperties.platform @ context='text'}"
+                }
+            },
+            "form": {
+                "name": "",
+                "stepName": "",
+                "fieldName": "",
+                "referenceId": "",
+                "status": ""
+            },
+            "event": [{
+                "eventAction": "",
+                "timeStamp": ""
+            }],
+            "error": [{
+                "code": "",
+                "message": ""
+            }],
+        };
+        window.digitalData.page.pageInfo.referringURL = AEMDESIGN.analytics.getReferringUrl();
+        window.digitalData.page.pageInfo.destinationUrl = AEMDESIGN.analytics.getDestinationUrl();
+        $(document).ready(function(){
+            window.digitalData.page.pageInfo.sections = AEMDESIGN.analytics.getSections();
+        });
+        window.digitalData.page.pageInfo.breakPoint = AEMDESIGN.analytics.getBreakpoint()["label"];
+    ${'</script>' @ context = "unsafe"}
+</template>

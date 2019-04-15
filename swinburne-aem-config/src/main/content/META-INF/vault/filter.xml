@@ -16,30 +16,21 @@
     <filter root="/apps/swinburne/config.publish.prod"/>
 
     <!-- cloud services -->
-    <filter root="/etc/cloudservices/livechat" mode="update"/>
-    <!--<filter root="/etc/cloudservices/googleanalytics" mode="update"/>-->
-
-    <!-- dam config -->
-    <!--<filter root="/etc/dam/dynamicmediaconfig" mode="update"/>-->
-
-    <!-- langiage config -->
-    <!--<filter root="/etc/languages" mode="update"/>-->
+    <filter root="/etc/cloudservices/livechat"/>
 
     <!-- maping rules -->
-    <filter root="/etc/map/http/" mode="update"/>
-    <filter root="/etc/map/https" mode="update"/>
-    <filter root="/etc/map.publish" mode="update"/>
+    <filter root="/etc/map/http/"/>
+    <filter root="/etc/map/https"/>
+    <filter root="/etc/map.publish"/>
 
-    <filter root="/etc/tenants/swinburne" mode="update"/>
+    <filter root="/etc/tenants/swinburne"/>
 
-    <filter root="/conf/global/settings/workflow" mode="update"/>
+    <filter root="/conf/global/settings/workflow"/>
 
-    <filter root="/var/workflow/models/swinburne" mode="update"/>
+    <filter root="/var/workflow/models/swinburne"/>
 
+	<!-- tenant update for microsites into swu root" -->
+	<filter root="/conf/swinburne"/>
+	<filter root="/conf/swinburne-microsites"/>
 
-    <!--<filter root="/conf/swinburne/settings/cloudconfigs" mode="update"/>-->
-
-    <!--<filter root="/apps/granite/operations/config/maintenance">-->
-        <!--<include pattern="/apps/granite/operations/config/maintenance/swinburne-.*"/>-->
-    <!--</filter>-->
 </workspaceFilter>

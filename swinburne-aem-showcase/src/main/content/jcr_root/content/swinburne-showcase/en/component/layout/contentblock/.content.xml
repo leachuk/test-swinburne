@@ -136,19 +136,19 @@
                     </par>
                 </contentblock6>
                 <contentblock7
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock7"
-                        hideInMenu="false"
-                        hideTitle="false"
-                        hideTitleSeparator="false"
-                        hideTopLink="true"
-                        title="Variant: Advanced Plain Section with Title"
-                        titleType="h6"
-                        variant="advsection">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/layout/contentblock"
+                    componentId="contentblock7"
+                    hideInMenu="false"
+                    hideTitle="false"
+                    hideTitleSeparator="false"
+                    hideTopLink="true"
+                    title="Variant: Advanced Plain Section with Title"
+                    titleType="h6"
+                    variant="advsection">
                     <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/layout/container" />
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="swinburne/components/layout/container"/>
                 </contentblock7>
                 <contentblock8
                     jcr:primaryType="nt:unstructured"

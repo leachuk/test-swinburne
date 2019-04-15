@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:tags="[facebook:]"
-       cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
+        cq:template="/conf/swinburne/settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Page1"
         sling:resourceType="swinburne/components/template/base"

@@ -490,7 +490,7 @@
                 <module>swinburne-aem-services</module>
                 <module>swinburne-aem-common</module>
                 <module>swinburne-aem-config</module>
-                <!--module>swinburne-aem-content</module-->
+                <module>swinburne-aem-content</module>
                 <module>swinburne-aem-showcase</module>
                 <module>swinburne-aem-training</module>
                 <module>swinburne-aem-deploy</module>

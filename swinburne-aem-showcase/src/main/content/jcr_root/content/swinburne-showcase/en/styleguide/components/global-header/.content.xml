@@ -32,7 +32,7 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/reference"
                             componentId="reference_DZIWSLNZO"
-                            path="/content/swinburne-showcase/en/component/layout/header/jcr:content/article/par/contentblock/par/header"/>
+                            path="/content/swinburne-showcase/en/jcr:content/header"/>
                     </par>
                     <bgimage
                         jcr:primaryType="nt:unstructured"

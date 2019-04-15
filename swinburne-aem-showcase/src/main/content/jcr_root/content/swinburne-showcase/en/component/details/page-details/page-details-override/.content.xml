@@ -113,7 +113,7 @@
                             jcr:lastModified="{Date}2019-03-20T17:09:10.951+11:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="aemdesign/components/lists/pagelist"
+                            sling:resourceType="swinburne/components/lists/pagelist"
                             componentId="pagelist2"
                             detailsBadge="cardActionImageTitleCategoryDescription"
                             listFrom="static"

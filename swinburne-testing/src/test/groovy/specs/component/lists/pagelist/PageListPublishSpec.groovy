@@ -232,96 +232,37 @@ class PageListPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
-    @Unroll("Page List: Card Action with Analytics #viewport.label")
-    def "Page List: Card Action with Analytics"() {
-
-        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#pagelist33"
-        def selectorContainer = "#contentblock33 .contents"
-
-        when: "I am on the component showcase page"
-        setWindowSize(viewport)
-        waitForAuthorPreviewPage()
-
-        then: "The component should be on the page"
-        def component = waitForComponent(selector)
-        takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
-
-        and: "First page link should have attribute: data-layer-track"
-        assert $("${selector} ul li a").getAt(0).attr("data-layer-track").equals("true")
-
-        and: "First page link should have attribute: data-layer-label"
-        assert $("${selector} ul li a").getAt(0).attr("data-layer-label").equals("link")
-
-        and: "First page link should have attribute: data-layer-location"
-        assert $("${selector} ul li a").getAt(0).attr("data-layer-location").equals("pagelist")
 
 
+	@Unroll("Page List: Card Action with Analytics #viewport.label")
+	def "Page List: Card Action with Analytics"() {
 
+		given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+		and: '>I am in the component showcase page'
+		and: '>the component is on the showcase page'
+		def selector = "#pagelist33"
+		def selectorContainer = "#contentblock33 .contents"
 
-        where:
-        viewport << getViewPorts()
-    }
+		when: "I am on the component showcase page"
+		setWindowSize(viewport)
+		waitForAuthorPreviewPage()
 
-    @Unroll("Page List: Default with Thumbnail Override in #viewport.label")
-    def "Page List: Default with Thumbnail Override"() {
+		then: "The component should be on the page"
+		def component = waitForComponent(selector)
+		takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
 
-        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#pagelist31"
-        def selectorContainer = "#contentblock31 .contents"
+		and: "First page link should have attribute: data-layer-track"
+		assert $("${selector} .card-link").getAt(0).attr("data-layer-track").equals("true")
 
-        when: "I am on the component showcase page"
-        setWindowSize(viewport)
-        waitForAuthorPreviewPage()
+		and: "First page link should have attribute: data-layer-label"
+		assert $("${selector} .card-link").getAt(0).attr("data-layer-label").equals("link")
 
-        then: "The component should be on the page"
-        def component = waitForComponent(selector)
-        takeScreenshot($(selector).firstElement(), "The component should be on the page")
+		and: "First page link should have attribute: data-layer-location"
+		assert $("${selector} .card-link").getAt(0).attr("data-layer-location").equals("pagelist")
 
-        and: "Has two list items"
-        assert $("${selector} li").size() == 3
-
-        and: "Last item should have thumbnail override from list"
-        assert $("${selector} li img").getAt(0).attr("src").contains("/cablecar.jpg/")
-        takeScreenshot($(selector).firstElement(), "Last item should have thumbnail override from list")
-
-        where:
-        viewport << getViewPorts()
-    }
-
-    @Unroll("Page List: Default without Thumbnail Override in #viewport.label")
-    def "Page List: Default without Thumbnail Override"() {
-
-        given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
-        and: '>I am in the component showcase page'
-        and: '>the component is on the showcase page'
-        def selector = "#pagelist32"
-        def selectorContainer = "#contentblock32 .contents"
-
-        when: "I am on the component showcase page"
-        setWindowSize(viewport)
-        waitForAuthorPreviewPage()
-
-        then: "The component should be on the page"
-        def component = waitForComponent(selector)
-        takeScreenshot($(selector).firstElement(), "The component should be on the page")
-
-        and: "Has two list items"
-        assert $("${selector} li").size() == 3
-
-        and: "Last item should have thumbnail override from page details"
-        assert $("${selector} li img").getAt(0).attr("src").contains("/city2.jpg/")
-        takeScreenshot($(selector).firstElement(), "Last item should have thumbnail override from page details")
-
-
-        where:
-        viewport << getViewPorts()
-    }
-
+		where:
+		viewport << getViewPorts()
+	}
 
 
     @Unroll("Page List: Pages with no Details in #viewport.label")
@@ -347,6 +288,35 @@ class PageListPublishSpec extends ComponentSpec {
         viewport << getViewPorts()
     }
 
+	@Unroll("Page List: Card Action with default Analytics #viewport.label")
+	def "Page List: Card Action with default Analytics"() {
 
+		given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
+		and: '>I am in the component showcase page'
+		and: '>the component is on the showcase page'
+		def selector = "#pagelist39"
+		def selectorContainer = "#contentblock39 .contents"
+
+		when: "I am on the component showcase page"
+		setWindowSize(viewport)
+		waitForAuthorPreviewPage()
+
+		then: "The component should be on the page"
+		def component = waitForComponent(selector)
+		takeScreenshot($(selectorContainer).firstElement(), "The component should be on the page")
+
+		and: "First page link should have attribute: data-layer-track false - unauthored"
+		assert $("${selector}").getAt(0).attr("data-layer-track").equals("false")
+
+		and: "First page link should have attribute: data-layer-label"
+		assert $("${selector}").getAt(0).attr("data-layer-label").equals("pagelist_39")
+
+		and: "First page link should have attribute: data-layer-location as blank - unauthored"
+		assert $("${selector} ul li a").getAt(0).attr("data-layer-location").equals("blank")
+
+
+		where:
+		viewport << getViewPorts()
+	}
 
 }

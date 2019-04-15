@@ -22,7 +22,8 @@ class DLSPageListPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_OXHFFXJJE #pagelist36"
+        def selector = "#reference_OXHFFXJJE #pagelist_36a"
+        //def selector = "#reference_OXHFFXJJE #pagelist36"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -51,7 +52,7 @@ class DLSPageListPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_1XHFFXJJE #pagelistxxx"
+        def selector = "#reference_1XHFFXJJE #pagelist_36b"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -80,7 +81,7 @@ class DLSPageListPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_2XHFFXJJE #pagelist36"
+        def selector = "#reference_2XHFFXJJE #pagelist_36a"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -109,7 +110,7 @@ class DLSPageListPublishSpec extends ComponentSpec {
         given: '>the page hierarchy is created as "Components" > "Lists" > "Page List"'
         and: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_4XHFFXJJE #pagelist36"
+        def selector = "#reference_4XHFFXJJE #pagelist_36a"
 
         when: "I am on the component showcase page"
         setWindowSize(viewport)
@@ -131,4 +132,5 @@ class DLSPageListPublishSpec extends ComponentSpec {
         where:
         viewport << getViewPorts()
     }
+
 }

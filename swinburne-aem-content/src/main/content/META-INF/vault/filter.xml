@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
 
-    <!--Filter root is commented below to use for content sync in future -->
-    <!--<filter root="/content/dam/swinburne"/>-->
     <filter root="/content/dam/formsanddocuments-themes"/>
-    <!--Filter root is commented below to use for content sync in future -->
-    <filter root="/content/swinburne"/>
-    <filter root="/content/swinburne-microsites" />
 
-    <filter root="/content/api/swinburne" mode="update"/>
-    <!--Filter root is commented below to use for content sync in future -->
-    <!--<filter root="/content/experience-fragments/swinburne" mode="update"/>-->
+    <filter root="/content/swinburne" mode="update"/>
 
-    <!-- tenant update for microsites into swu root" -->
-    <filter root="/conf/swinburne" mode="update"/>
-    <filter root="/conf/swinburne-microsites" mode="update"/>
+	<filter root="/content/experience-fragments/swinburne" mode="update"/>
 
-    <!--Filter root is commented below to use for content sync in future -->
-    <!--<filter root="/content/dam/formsanddocuments-themes/swinburne"/>-->
+    <filter root="/content/swinburne-microsites" mode="update"/>
 
-    <!--TODO: Used to backport analytics tags from Prod-->
-    <!--<filter root="/content/cq:tags/swinburne/component-analytics" mode="merge"/>-->
+    <filter root="/content/api/swinburne"/>
 
 </workspaceFilter>

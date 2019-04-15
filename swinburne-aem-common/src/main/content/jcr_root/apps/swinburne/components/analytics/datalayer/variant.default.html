@@ -2,18 +2,18 @@
     <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
          data-sly-call="${clientlib.all @ categories=['aemdesign.components.datalayer']}"></sly>
 
-    ${'<script type="text/javascript" id="datalayer">' @ context = "unsafe"}
+    ${'<script type="text/javascript" id="datalayer">' @ context = "scriptString"}
         window.digitalData = {
             "page": {
                 "pageInfo": {
-                    "abort": "${componentProperties.abort @ content="unsafe"}",
-                    "contentCountry": "${componentProperties.contentCountry}",
-                    "contentLanguage": "${componentProperties.contentLanguage}",
-                    "pageName": "${componentProperties.pageName}",
-                    "pageType": "${componentProperties.pageType}",
-                    "pagePath": "${componentProperties.pagePath}",
-                    "effectiveDate": "${componentProperties.effectiveDate}",
-                    "platform": "${componentProperties.platform}"
+                    "abort": "${componentProperties.abort @ context='text'}",
+                    "contentCountry": "${componentProperties.contentCountry @ context='text'}",
+                    "contentLanguage": "${componentProperties.contentLanguage @ context='text'}",
+                    "pageName": "${componentProperties.pageName @ context='text'}",
+                    "pageType": "${componentProperties.pageType @ context='text'}",
+                    "pagePath": "${componentProperties.pagePath @ context='text'}",
+                    "effectiveDate": "${componentProperties.effectiveDate @ context='text'}",
+                    "platform": "${componentProperties.platform @ context='text'}"
                 }
             },
             "form": {

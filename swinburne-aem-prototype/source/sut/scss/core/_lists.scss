@@ -8,10 +8,15 @@ ul {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 15px;
+    position: relative;
 
     &::before {
       color: color('grey-3');
-      margin-right: 10px;
+      left: 0;
+      margin-top: 12px;
+      position: absolute;
+      top: 0;
     }
   }
 }
@@ -31,5 +36,6 @@ ol {
   li::before {
     content: counter(list-item);
     counter-increment: list-item;
+    line-height: 5px;
   }
 }

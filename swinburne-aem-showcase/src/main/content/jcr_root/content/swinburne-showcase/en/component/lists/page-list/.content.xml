@@ -823,21 +823,23 @@
                             text="&lt;p>Related Cards with override on Badge CTA config&lt;/p>&#xa;"
                             textIsRich="true"
                             variant="simple"/>
-                        <pagelist
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="swinburne/components/lists/pagelist"
-                            badgeLinkStyle="[swinburne:component-style-modifier/button/primary]"
-                            badgeLinkText="Button Text"
-                            componentId="pagelist29"
-                            componentTheme="[swinburne:component-style-theme/lists/column/flat]"
-                            detailsBadge="cardImageTitleDescriptionAction"
-                            limit="2"
-                            listFrom="children"
-                            listType="list"
-                            orderBy="jcr:title"
-                            parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"
-                            tagsMatch="any"/>
-                    </par>
+						<pagelist
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="swinburne/components/lists/pagelist"
+							badgeLinkStyle="[swinburne:component-style-modifier/button/primary]"
+							badgeLinkText="Button Text"
+							componentId="pagelist29"
+							componentTheme="[swinburne:component-style-theme/lists/column/flat]"
+							detailsBadge="cardImageTitleDescriptionAction"
+							limit="2"
+							listFrom="children"
+							listType="list"
+							parentPage="/content/swinburne-showcase/en/component/lists/page-list/cards"
+							sortOrder="asc"
+							tagsMatch="any">
+						</pagelist>
+
+					</par>
                 </contentblock29>
                 <contentblock30
                     jcr:primaryType="nt:unstructured"
@@ -870,6 +872,37 @@
                             parentPage="/content/swinburne-showcase/en/component/lists/page-list/images"/>
                     </par>
                 </contentblock30>
+				<contentblock31
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="swinburne/components/layout/contentblock"
+					componentId="contentblock31"
+					hideTitle="false"
+					hideTitleSeparator="true"
+					title="Page List: Default with Thumbnail Override"
+					variant="componentConfig">
+					<par
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="swinburne/components/layout/container">
+						<pagelist
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="swinburne/components/lists/pagelist"
+							componentId="pagelist31"
+							detailsBadge="cardImageTitleCategoryDescription"
+							limit="5"
+							listFrom="static"
+							listSplit="true"
+							listSplitEvery="2"
+							listType="list"
+							orderBy="@jcr:content/jcr:title"
+							pages="[/content/swinburne-showcase/en/component/lists/page-list/cards/page1,/content/swinburne-showcase/en/component/lists/page-list/cards/page6,/content/swinburne-showcase/en/component/lists/page-list/cards/page5]"
+							tagsMatch="any">
+							<badgeThumbnail
+								jcr:primaryType="nt:unstructured"
+								sling:resourceType="swinburne/components/media/image"
+								fileReference="content/dam/swinburne-showcase/en/common/apply-now.jpg"/>
+						</pagelist>
+					</par>
+				</contentblock31>
                 <contentblock33
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/contentblock"

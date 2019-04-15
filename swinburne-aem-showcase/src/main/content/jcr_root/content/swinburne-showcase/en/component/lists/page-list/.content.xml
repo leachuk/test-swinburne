@@ -1084,7 +1084,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/lists/pagelist"
                                 badgeTitleType="h5"
-                                componentId="pagelist_39"
+                                componentId="pagelist39"
                                 detailsBadge="cardImageTagTitleAction"
                                 limit="4"
                                 listFrom="children"

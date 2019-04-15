@@ -311,8 +311,8 @@ class PageListPublishSpec extends ComponentSpec {
 		and: "First page link should have attribute: data-layer-label"
 		assert $("${selector}").getAt(0).attr("data-layer-label").equals("pagelist_39")
 
-	//	and: "First page link should have attribute: data-layer-location as blank - unauthored"
-	//	assert $("${selector} ul li a").getAt(0).attr("data-layer-location").equals("blank")
+		and: "First page link should have attribute: data-layer-location as blank - unauthored"
+		assert $("${selector} ul li a").getAt(0).attr("data-layer-location").equals("blank")
 
 
 		where:

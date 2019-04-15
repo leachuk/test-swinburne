@@ -1054,6 +1054,7 @@
                         variant="componentConfig">
                     <par
                             jcr:primaryType="nt:unstructured"
+<<<<<<< Updated upstream
                             sling:resourceType="aemdesign/components/layout/container">
                         <pagelist
                                 jcr:primaryType="nt:unstructured"
@@ -1065,6 +1066,16 @@
                                 parentPage="/content/swinburne-showcase/en/component/lists/page-list/nodetails"
                                 sortOrder="asc"
                                 tagsMatch="any"/>
+=======
+                            sling:resourceType="swinburne/components/lists/pagelist"
+                            componentId="pagelist38"
+                            limit="5"
+                            listFrom="children"
+                            listType="list"
+                            parentPage="/content/swinburne-showcase/en/component/lists/page-list/nodetails"
+                            sortOrder="asc"
+                            tagsMatch="any"/>
+>>>>>>> Stashed changes
                     </par>
                 </contentblock38>
                 <contentblock39

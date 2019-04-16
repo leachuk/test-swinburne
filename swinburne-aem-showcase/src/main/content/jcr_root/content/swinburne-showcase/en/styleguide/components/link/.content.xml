@@ -51,7 +51,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_RI5KAMKJG"
+                                    componentId="link_1"
                                     label="Link default variant"
                                     linkUrl="https://www.google.com.au"/>
                             </par>
@@ -72,7 +72,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_YDCDPAF0R"
+                                    componentId="link_2"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/primary-yellow]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -94,7 +94,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_E5GUAFDQS"
+                                    componentId="link_3"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/state/disabled,swinburne-showcase:component-style-modifier/button/primary-yellow]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -118,7 +118,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_80PFZ0C53"
+                                    componentId="link_4"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/secondary-outline]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -138,7 +138,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_80PFZ0C53"
+                                    componentId="link_5"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/secondary-outline-charcoal]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -160,7 +160,7 @@
 								<link
 									jcr:primaryType="nt:unstructured"
 									sling:resourceType="swinburne/components/content/link"
-									componentId="link_ONFIYKB3I"
+									componentId="link_6"
 									componentModifiers="[swinburne-showcase:component-style-modifier/button/secondary-charcoal]"
 									label="Label"
 									linkUrl="https://www.google.com.au"/>
@@ -182,7 +182,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_NZWBHOIXE"
+                                    componentId="link_7"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/secondary-outline,swinburne-showcase:component-style-modifier/button/state/disabled]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -202,7 +202,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_GDXLZ8VVW"
+                                    componentId="link_8"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/primary-red]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -234,7 +234,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_YDCDPAF0R"
+                                    componentId="link_9"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/primary-yellow]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -256,7 +256,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_E5GUAFDQS"
+                                    componentId="link_10"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/state/disabled,swinburne-showcase:component-style-modifier/button/primary-yellow]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -278,7 +278,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_ONFIYKB3I"
+                                    componentId="link_11"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/secondary-white]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -300,7 +300,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_80PFZ0C53"
+                                    componentId="link_12"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/secondary-outline]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -320,7 +320,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_80PFZ0C53"
+                                    componentId="link_13"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/secondary-outline-charcoal]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -342,7 +342,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_NZWBHOIXE"
+                                    componentId="link_14"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/secondary-outline,swinburne-showcase:component-style-modifier/button/state/disabled]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>
@@ -362,7 +362,7 @@
                                 <link
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="swinburne/components/content/link"
-                                    componentId="link_GDXLZ8VVW"
+                                    componentId="link_15"
                                     componentModifiers="[swinburne-showcase:component-style-modifier/button/primary-red]"
                                     label="Label"
                                     linkUrl="https://www.google.com.au"/>

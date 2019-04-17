@@ -111,7 +111,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
 
         then: 'It should match reference image.'
-        designRefFull(selector, "menu-open")
+        designRef(selector, "menu-open")
     }
 
     def "Appearance of Swinburne Global Header on tablet with menu open and link clicked"() {
@@ -191,7 +191,6 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
         designRef(selector, "menu")
     }
 
-	@IgnoreRest
     def "Appearance of Swinburne Global Header on Desktop Large with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
@@ -218,7 +217,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
         when: 'I am in the component showcase page'
         setWindowSizeXLG()
-        //waitForAuthorPreviewPage()
+        waitForAuthorPreviewPage()
 
         then: 'I click on the level 1 Life At Swinburne link'
         js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;")
@@ -240,7 +239,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
         when: 'I am in the component showcase page'
         setWindowSizeLG()
-        //waitForAuthorPreviewPage()
+        waitForAuthorPreviewPage()
 
         then: 'I click on the level 1 Life At Swinburne link'
         js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;")
@@ -262,7 +261,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
         when: 'I am in the component showcase page'
         setWindowSizeMD()
-        //waitForAuthorPreviewPage()
+        waitForAuthorPreviewPage()
 
         then: 'I click on the Explore button'
         js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
@@ -287,7 +286,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
-        //waitForAuthorPreviewPage()
+        waitForAuthorPreviewPage()
 
         then: 'I click on the Explore button'
         js.exec("\$(\"${selector} #global_header_link\").click(); return true;")

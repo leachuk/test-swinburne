@@ -703,7 +703,7 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
         def viewPort = viewPorts.find { value -> value.width == driverWidth }
 
-//        printDebug("getWindowWidthName", [driverWidth,viewPorts,viewPort])
+        //printDebug("getWindowWidthName", [driverWidth,viewPorts,viewPort])
 
         if (!viewPort) {
             viewPort = viewPorts[3] //LG

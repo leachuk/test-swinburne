@@ -1,5 +1,6 @@
 package specs.styleguide.components.globalheader
 
+import org.junit.Ignore
 import spock.lang.IgnoreRest
 import spock.lang.Stepwise
 import support.ComponentSpec
@@ -18,11 +19,11 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on mobile"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
-        waitForAuthorPreviewPage()
+		waitForAuthorPreviewPage() //geb doesn't provide a setupBefore option, so only do this once here
 
         then: 'The component should appear on the page'
         waitForComponent(selector)
@@ -34,7 +35,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on mobile with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
@@ -43,19 +44,17 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
         then: 'I click on the Explore button'
         js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
 
-
         then: 'Wait for the component to appear on the page'
-        waitFor(15, 0.1) { $("${selector} #header-nav-container").isDisplayed() }
-
+        waitFor(15, 2.0) { $("${selector} #header-nav-container").isDisplayed() }
 
         then: 'It should match reference image.'
-        designRef(selector, "menu-open")
+        designRefFull(selector, "menu-open")
     }
 
     def "Appearance of Swinburne Global Header on mobile with menu open and link clicked"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
@@ -66,22 +65,22 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
 
         then: 'Wait for the component to appear on the page'
-        waitFor(15, 0.1) { $("${selector} #header-nav-container").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} #header-nav-container").isDisplayed() }
 
-        then: 'I click on the Locations link'
+        then: 'I click on the Life At Swinburne link'
         js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;")
 
         then: 'The component should appear on the page'
-        waitFor(15, 0.1) { $("${selector} a#header-nav_life-at-swinburne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne + .dropdown-menu").isDisplayed() }
 
         then: 'It should match reference image.'
-        designRef(selector, "menu-open-link-clicked")
+        designRefFull(selector, "menu-open-link-clicked")
     }
 
     def "Appearance of Swinburne Global Header on tablet"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeMD()
@@ -97,7 +96,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on tablet with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeMD()
@@ -108,17 +107,17 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
 
         then: 'Wait for the component to appear on the page'
-        waitFor(15, 0.1) { $("${selector} #header-nav-container").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} #header-nav-container").isDisplayed() }
 
 
         then: 'It should match reference image.'
-        designRef(selector, "menu-open")
+        designRefFull(selector, "menu-open")
     }
 
     def "Appearance of Swinburne Global Header on tablet with menu open and link clicked"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeMD()
@@ -129,13 +128,13 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
 
         then: 'Wait for the component to appear on the page'
-        waitFor(15, 0.1) { $("${selector} #header-nav-container").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} #header-nav-container").isDisplayed() }
 
-        then: 'I click on the Locations link'
+        then: 'I click on the Life At Swinburne link'
         js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;")
 
         then: 'The component should appear on the page'
-        waitFor(15, 0.1) { $("${selector} a#header-nav_life-at-swinburne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne + .dropdown-menu").isDisplayed() }
 
         then: 'It should match reference image.'
         designRef(selector, "menu-open-link-clicked")
@@ -144,7 +143,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Small"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeLG()
@@ -160,17 +159,17 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Small with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeLG()
         waitForAuthorPreviewPage()
 
-        then: 'I click on the Locations link'
+        then: 'I click on the Life At Swinburne link'
         js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;")
 
         then: 'The component should appear on the page'
-        waitFor(15, 0.1) { $("${selector} a#header-nav_life-at-swinburne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne + .dropdown-menu").isDisplayed() }
 
         then: 'It should match reference image.'
         designRef(selector, "menu-link-clicked")
@@ -179,7 +178,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Large"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeXLG()
@@ -192,20 +191,21 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
         designRef(selector, "menu")
     }
 
+	@IgnoreRest
     def "Appearance of Swinburne Global Header on Desktop Large with menu open"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeXLG()
         waitForAuthorPreviewPage()
 
-        then: 'I click on the Locations link'
+        then: 'I click on the Life At Swinburne link'
         js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;")
 
         then: 'The component should appear on the page'
-        waitFor(15, 0.1) { $("${selector} a#header-nav_life-at-swinburne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne + .dropdown-menu").isDisplayed() }
 
         then: 'It should match reference image.'
         designRef(selector, "menu-link-clicked")
@@ -214,20 +214,20 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Large with menu open level 3"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeXLG()
-        waitForAuthorPreviewPage()
+        //waitForAuthorPreviewPage()
 
-        then: 'I click on the level 1 link'
+        then: 'I click on the level 1 Life At Swinburne link'
         js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;")
 
-        then: 'I click on the level 2 link'
-        waitFor(15, 0.1) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
+        then: 'I click on the level 2 Living In Melbourne link'
+        waitFor(15, 2.0) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
 
         then: 'The component should appear on the page'
-        waitFor(15, 0.1) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
 
         then: 'It should match reference image.'
         designRef(selector, "submenu-link-clicked")
@@ -236,20 +236,20 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Desktop Small with menu open level 3"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeLG()
-        waitForAuthorPreviewPage()
+        //waitForAuthorPreviewPage()
 
-        then: 'I click on the level 1 link'
+        then: 'I click on the level 1 Life At Swinburne link'
         js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;")
 
-        then: 'I click on the level 2 link'
-        waitFor(15, 0.1) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
+        then: 'I click on the level 2 Living In Melbourne link'
+        waitFor(15, 2.0) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
 
         then: 'The component should appear on the page'
-        waitFor(15, 0.1) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
 
         then: 'It should match reference image.'
         designRef(selector, "submenu-link-clicked")
@@ -258,23 +258,23 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Tablet with menu open level 3"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeMD()
-        waitForAuthorPreviewPage()
+        //waitForAuthorPreviewPage()
 
         then: 'I click on the Explore button'
         js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
 
-        then: 'I click on the level 1 link'
-        waitFor(15, 0.1) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;") }
+        then: 'I click on the level 1 Life At Swinburne link'
+        waitFor(15, 2.0) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;") }
 
-        then: 'I click on the level 2 link'
-        waitFor(15, 0.1) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
+        then: 'I click on the level 2 Living In Melbourne link'
+        waitFor(15, 2.0) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
 
         then: 'The component should appear on the page'
-        waitFor(15, 0.1) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
 
         then: 'It should match reference image.'
         designRef(selector, "submenu-link-clicked")
@@ -283,23 +283,23 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
     def "Appearance of Swinburne Global Header on Mobile with menu open level 3"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
-        waitForAuthorPreviewPage()
+        //waitForAuthorPreviewPage()
 
         then: 'I click on the Explore button'
         js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
 
-        then: 'I click on the level 1 link'
-        waitFor(15, 0.1) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;") }
+        then: 'I click on the level 1 Life At Swinburne link'
+        waitFor(15, 2.0) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne\").click(); return true;") }
 
-        then: 'I click on the level 2 link'
-        waitFor(15, 0.1) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
+        then: 'I click on the level 2 Living In Melbourne link'
+        waitFor(15, 2.0) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
 
         then: 'The component should appear on the page'
-        waitFor(15, 0.1) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
 
         then: 'It should match reference image.'
         designRef(selector, "submenu-link-clicked")

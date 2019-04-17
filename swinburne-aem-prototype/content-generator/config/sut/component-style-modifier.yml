@@ -49,6 +49,7 @@ content/_cq_tags/swinburne/component-style-modifier: &component-style-modifier
       - primary-yellow
       - secondary-charcoal
       - secondary-outline
+      - secondary-outline-charcoal
       - secondary-white
     valueFormat: btn btn-%%prefix%%
     title: '%%prefix_normalised%%'

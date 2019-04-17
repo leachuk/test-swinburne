@@ -16,11 +16,11 @@ class LinkScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    @Unroll("Appearance of Component Variant: Default in #viewport.label")
-    def "Appearance of Component Variant: Default"() {
+    @Unroll("Appearance of Component Variant Default in #viewport.label")
+    def "Appearance of Component Variant Default"() {
 
         given: '>Component has already been added to component showcase page'
-        def selector = "#link1"
+        def selector = "#contentblock1 #link1"
 
         when: 'I am on the component showcase page'
         setWindowSize(viewport)
@@ -37,11 +37,11 @@ class LinkScreenshotSpec extends ComponentSpec {
 
     }
 
-    @Unroll("Appearance of Component Variant: Button in #viewport.label")
-    def "Appearance of Component Variant: Button"() {
+    @Unroll("Appearance of Component Variant Button in #viewport.label")
+    def "Appearance of Component Variant Button"() {
 
         given: '>Component has already been added to component showcase page'
-        def selector = "#link2"
+        def selector = "#contentblock2 #link2"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -58,11 +58,11 @@ class LinkScreenshotSpec extends ComponentSpec {
 
     }
 
-    @Unroll("Appearance of Component Variant: Default no Label in #viewport.label")
-    def "Appearance of Component Variant: Default no Label"() {
+    @Unroll("Appearance of Component Variant Default no Label in #viewport.label")
+    def "Appearance of Component Variant Default no Label"() {
 
         given: '>Component has already been added to component showcase page'
-        def selector = "#link3"
+        def selector = "#contentblock3 #link3"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -79,11 +79,11 @@ class LinkScreenshotSpec extends ComponentSpec {
 
     }
 
-    @Unroll("Appearance of Component Variant: Prototype Example in #viewport.label")
-    def "Appearance of Component Variant: Prototype Example"() {
+    @Unroll("Appearance of Component Variant Prototype Example in #viewport.label")
+    def "Appearance of Component Variant Prototype Example"() {
 
         given: '>Component has already been added to component showcase page'
-        def selector = "#contentblock4 .contents"
+        def selector = "#contentblock4 .content"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -100,11 +100,11 @@ class LinkScreenshotSpec extends ComponentSpec {
 
     }
 
-    @Unroll("Appearance of Component Variant: Button with icon on left in #viewport.label")
-    def "Appearance of Component Variant: Button with icon on left"() {
+    @Unroll("Appearance of Component Variant Button with icon on left in #viewport.label")
+    def "Appearance of Component Variant Button with icon on left"() {
 
         given: '>Component has already been added to component showcase page'
-        def selector = "#link8"
+        def selector = "#contentblock8 #link8"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -121,11 +121,11 @@ class LinkScreenshotSpec extends ComponentSpec {
 
     }
 
-    @Unroll("Appearance of Component Variant: Button with icon on right in #viewport.label")
-    def "Appearance of Component Variant: Button with icon on right"() {
+    @Unroll("Appearance of Component Variant Button with icon on right in #viewport.label")
+    def "Appearance of Component Variant Button with icon on right"() {
 
         given: '>Component has already been added to component showcase page'
-        def selector = "#link9"
+        def selector = "#contentblock9 #link9"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

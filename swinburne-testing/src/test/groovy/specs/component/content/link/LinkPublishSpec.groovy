@@ -28,6 +28,9 @@ class LinkPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
+		waitFor(15,0.1,{
+			$(selector).isDisplayed()
+		})
 
         and: "Should have sample component link"
         assert $(selector).text().trim() == "Link: Default"
@@ -49,6 +52,9 @@ class LinkPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
+		waitFor(15,0.1,{
+			$(selector).isDisplayed()
+		})
 
         and: "Should have sample component link"
         assert $(selector).text().trim() == "Button"
@@ -70,6 +76,9 @@ class LinkPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
+		waitFor(15,0.1,{
+			$(selector).isDisplayed()
+		})
 
         and: "Should have sample component link"
         assert $(selector).text().trim() == "Link"
@@ -92,6 +101,9 @@ class LinkPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
+		waitFor(15,0.1,{
+			$(selector).isDisplayed()
+		})
 
         and: "Should have sample component text"
         assert $(selector).text().trim() == "Link"
@@ -127,6 +139,9 @@ class LinkPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
+		waitFor(15,0.1,{
+			$(selector).isDisplayed()
+		})
 
         and: "Should have sample component text"
         assert $(selector).text().trim() == "Link"
@@ -162,6 +177,9 @@ class LinkPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
+		waitFor(15,0.1,{
+			$(selector).isDisplayed()
+		})
 
         and: "Should have sample component text"
         assert $(selector).text().trim() == "Link"
@@ -193,6 +211,9 @@ class LinkPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
+		waitFor(15,0.1,{
+			$(selector).isDisplayed()
+		})
 
         and: "Should have sample component text"
         assert $(selector).text().trim() == "Link"
@@ -223,6 +244,9 @@ class LinkPublishSpec extends ComponentSpec {
 
         then: "The component should be on the page"
         def component = waitForComponent(selector)
+		waitFor(15,0.1,{
+			$(selector).isDisplayed()
+		})
 
         and: "Should have sample component text"
         assert $(selector).text().trim() == "Link"

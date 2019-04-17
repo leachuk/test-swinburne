@@ -1,3 +1,4 @@
+import Icons from '@global/modules/header/icons'
 import NavToggler from '@global/modules/header/nav-toggler'
 import QuickSearch from '@global/modules/header/quick-search'
 
@@ -7,4 +8,7 @@ export default () => {
 
   // Quick search toggle
   QuickSearch()
+
+  // Append Font Awesome icons to the navigation links
+  Icons()
 }

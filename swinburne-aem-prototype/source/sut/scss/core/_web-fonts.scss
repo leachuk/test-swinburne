@@ -4,11 +4,3 @@
 @include font-face('Open Sans', '../fonts/open-sans/open-sans-v15-latin-regular', 400, normal, woff2 woff);
 @include font-face('Open Sans', '../fonts/open-sans/open-sans-v15-latin-600', 600, normal, woff2 woff);
 @include font-face('Open Sans', '../fonts/open-sans/open-sans-v15-latin-700', 700, normal, woff2 woff);
-
-// Font Awesome 5
-
-@include font-face('Font Awesome 5 Brands', '../fonts/font-awesome/fa-brands-400', 400, normal, woff2 woff);
-
-@include font-face('Font Awesome 5 Pro', '../fonts/font-awesome/fa-light-300', 300, normal, woff2 woff);
-@include font-face('Font Awesome 5 Pro', '../fonts/font-awesome/fa-regular-400', 400, normal, woff2 woff);
-@include font-face('Font Awesome 5 Pro', '../fonts/font-awesome/fa-solid-900', 900, normal, woff2 woff);

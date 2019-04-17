@@ -2,28 +2,13 @@ import Carousels from '@global/modules/carousel'
 import Header from '@global/modules/header'
 import Subscribers from '@global/modules/subscribers'
 
-import {
-  TOPIC_HIDE_SUGGESTIONS,
-} from '@global/utilities/constants'
-
 import { isAuthorEditMode } from '@global/utilities/aem'
-import ObjectFit from '@global/utilities/object-fit'
 
 // Begin the app...
-$(() => {
+$(async () => {
 
   // Remove the 300ms delay using FastClick
   FastClick.attach(document.body)
-
-  // Listen for clicks on the body
-  $(document.body).on('click', (e) => {
-    const $suggestions = $('.suggestions')
-    const $target = $(e.target)
-
-    if ($suggestions.length && !$target.is('.suggestions') && !$target.parents('.suggestions').length) {
-      PubSub.publish(TOPIC_HIDE_SUGGESTIONS, null)
-    }
-  })
 
   // Carousel functionality for anything!
   Carousels()
@@ -32,7 +17,13 @@ $(() => {
   Subscribers()
 
   // 'object-fit' polyfill for unsupported browsers
-  ObjectFit()
+  if ('objectFit' in document.documentElement.style === false) {
+    const {
+      default: objectFitImages,
+    } = await import(/* webpackChunkName: "object-fit-images" */ 'object-fit-images')
+
+    objectFitImages()
+  }
 
   // Header controls
   Header()
@@ -41,6 +32,9 @@ $(() => {
   if (isAuthorEditMode()) {
     $('.collapse[data-parent]').collapse('dispose')
   }
+
+  // Load the Font Awesome icons last as they are the heaviest payload
+  await import(/* webpackChunkName: "fa-pro" */ '@fortawesome/fontawesome-pro/js/all')
 
 })
 

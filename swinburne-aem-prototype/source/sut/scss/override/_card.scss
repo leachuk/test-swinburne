@@ -46,8 +46,9 @@
         max-height: 100%;
       }
 
-      // In browsers that don't support object-fit we use a polyfill, for icons that are SVG we need to
-      // ensure they scale to the parent container rather than covering the whole element.
+      // In browsers that don't support object-fit we use a polyfill, for icons that are
+      // SVG we need to ensure they scale to the parent container rather than covering
+      // the whole element.
       &[data-ofi-src$='svg'] {
         // stylelint-disable-next-line
         background-size: auto !important;
@@ -96,6 +97,10 @@
   &-taglist {
     .taglist li::before {
       display: none;
+    }
+
+    li {
+      padding-left: 0;
     }
 
     &--basic {

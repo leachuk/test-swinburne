@@ -16,7 +16,7 @@
   .nav-link {
     .svg-inline--fa {
       display: block;
-      font-size: map-get($icon-sizes, regular);
+      font-size: icon-size(regular);
       margin-left: auto;
       margin-right: $spacing-lg;
 

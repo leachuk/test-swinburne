@@ -1,5 +1,5 @@
 export default () => {
-  const navLinks = document.querySelectorAll('.navlist .nav-link')
+  const navLinks = document.querySelectorAll('header .nav-link')
 
   if (!navLinks.length) {
     return

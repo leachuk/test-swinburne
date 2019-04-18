@@ -28,13 +28,18 @@ $(async () => {
   // Header controls
   Header()
 
-  // Open all the 'collapse' elements on the page when in author
+  // Apply some fixes when we aren't in the AEM author 'edit' mode
   if (isAuthorEditMode()) {
+    // Open all the 'collapse' elements on the page when in author
     $('.collapse[data-parent]').collapse('dispose')
+  } else {
+    // Append Font Awesome icons to any/all elements that need them
+    const { default: Icons } = await import(/* webpackChunkName: "icons" */ '@global/modules/icons')
+    Icons()
   }
 
   // Load the Font Awesome icons last as they are the heaviest payload
-  await import(/* webpackChunkName: "fa-pro" */ '@fortawesome/fontawesome-pro/js/all')
+  await import(/* webpackChunkName: "fontawesome-pro" */ '@fortawesome/fontawesome-pro/js/all')
 
 })
 

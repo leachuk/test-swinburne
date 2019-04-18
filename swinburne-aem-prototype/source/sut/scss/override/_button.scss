@@ -86,17 +86,7 @@ $button-colours: (
   }
 
   > span {
-    @extend .fa-long-arrow-right;
-
     transition: transform .15s ease-in-out;
-
-    &::after {
-      @extend .fal;
-
-      display: block;
-      font-size: 18px;
-      margin-left: auto;
-    }
   }
 
   @include hover {

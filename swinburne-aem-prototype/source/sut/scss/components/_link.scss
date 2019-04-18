@@ -11,8 +11,8 @@
     font-weight: 600;
 
     // Icon
-    .icon {
-      font-size: 16px;
+    .svg-inline--fa {
+      font-size: icon-size(regular);
 
       &:first-child {
         margin-right: 10px;

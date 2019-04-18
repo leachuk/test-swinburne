@@ -23,7 +23,7 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
         when: 'I am in the component showcase page'
         setWindowSizeSM()
-		waitForAuthorPreviewPage() //geb doesn't provide a setupBefore option, so only do this once here
+		waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
         waitForComponent(selector)
@@ -62,7 +62,6 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
         then: 'I click on the Explore button'
         js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
-
 
         then: 'Wait for the component to appear on the page'
         waitFor(15, 2.0) { $("${selector} #header-nav-container").isDisplayed() }
@@ -105,10 +104,8 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
         then: 'I click on the Explore button'
         js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
 
-
         then: 'Wait for the component to appear on the page'
         waitFor(15, 2.0) { $("${selector} #header-nav-container").isDisplayed() }
-
 
         then: 'It should match reference image.'
         designRef(selector, "menu-open")
@@ -125,7 +122,6 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
 
         then: 'I click on the Explore button'
         js.exec("\$(\"${selector} #global_header_link\").click(); return true;")
-
 
         then: 'Wait for the component to appear on the page'
         waitFor(15, 2.0) { $("${selector} #header-nav-container").isDisplayed() }
@@ -226,7 +222,10 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
         waitFor(15, 2.0) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
 
         then: 'The component should appear on the page'
-        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) {
+			$("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed()
+			$("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").css("height") == "400px"
+		}
 
         then: 'It should match reference image.'
         designRef(selector, "submenu-link-clicked")
@@ -248,7 +247,10 @@ class GlobalHeaderScreenshotSpec extends ComponentSpec {
         waitFor(15, 2.0) { js.exec("\$(\"${selector} a#header-nav_life-at-swinburne_living-in-melbourne\").click(); return true;") }
 
         then: 'The component should appear on the page'
-        waitFor(15, 2.0) { $("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed() }
+        waitFor(15, 2.0) {
+			$("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").isDisplayed()
+			$("${selector} a#header-nav_life-at-swinburne_living-in-melbourne + .dropdown-menu").css("height") == "400px"
+		}
 
         then: 'It should match reference image.'
         designRef(selector, "submenu-link-clicked")

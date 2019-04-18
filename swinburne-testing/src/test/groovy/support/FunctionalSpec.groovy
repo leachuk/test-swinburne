@@ -35,7 +35,9 @@ abstract class FunctionalSpec extends GebReportingSpec {
     // Desktop
     // 4k
     def getListViewPorts(label) {
-        return getViewPorts().label
+        return getViewPorts().find({
+			it.label == label
+		})
     }
 
     def getViewPorts() {

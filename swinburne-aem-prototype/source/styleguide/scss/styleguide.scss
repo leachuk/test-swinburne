@@ -64,6 +64,8 @@ html:not(.aem-AuthorLayer-Edit) {
           margin-bottom: 15px;
 
           > li {
+            padding-left: 0;
+
             &:not(:last-child) {
               margin-bottom: 2px;
             }

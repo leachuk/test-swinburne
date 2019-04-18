@@ -26,13 +26,20 @@ $color-gray:  #d6d6d6;
     min-width: 50px;
     width: 50px;
 
-    > i {
-      font-size: map-get($icon-sizes, regular);
+    > .svg-inline--fa {
+      font-size: icon-size(regular);
+      margin-left: 0;
     }
 
-    &:hover:not(:active):not(.disabled) {
-      background-color: color('grey-3');
-      color: color('charcoal');
+    @include hover {
+      > .svg-inline--fa {
+        transform: none;
+      }
+
+      &:not(:active):not(.disabled) {
+        background-color: color('grey-3');
+        color: color('charcoal');
+      }
     }
 
     &.disabled {
@@ -43,18 +50,22 @@ $color-gray:  #d6d6d6;
     .bg-charcoal & {
       border-color: $white;
 
-      &:hover:not(:active):not(.disabled) {
-        background-color: $white;
-        color: color('charcoal');
+      @include hover {
+        &:not(:active):not(.disabled) {
+          background-color: $white;
+          color: color('charcoal');
+        }
       }
     }
 
     .bg-yellow & {
       border-color: color('charcoal');
 
-      &:hover:not(:active):not(.disabled) {
-        background-color: color('charcoal');
-        color: $white;
+      @include hover {
+        &:not(:active):not(.disabled) {
+          background-color: color('charcoal');
+          color: $white;
+        }
       }
     }
   }

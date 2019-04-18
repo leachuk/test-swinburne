@@ -5,6 +5,10 @@
     width: 100%;
   }
 
+  .icon {
+    width: icon-size(regular);
+  }
+
   &:not(.btn) {
     align-items: center;
     display: inline-flex;

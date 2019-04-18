@@ -2,7 +2,7 @@
     <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
          data-sly-call="${clientlib.all @ categories=['aemdesign.components.datalayer']}"></sly>
 
-    ${'<script type="text/javascript" id="datalayer">' @ context = "scriptString"}
+  ${'<script type="text/javascript" id="datalayer">' @ context = "unsafe"}
         window.digitalData = {
             "page": {
                 "pageInfo": {
@@ -38,5 +38,5 @@
             window.digitalData.page.pageInfo.sections = AEMDESIGN.analytics.getSections();
         });
         window.digitalData.page.pageInfo.breakPoint = AEMDESIGN.analytics.getBreakpoint()["label"];
-    ${'</script>' @ context = "unsafe"}
+      ${'</script>' @ context = "unsafe"}
 </template>

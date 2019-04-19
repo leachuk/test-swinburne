@@ -47,9 +47,7 @@ export default () => {
     const mutationObserver = new MutationObserver((mutations: MutationRecord[]) => {
       console.info('\n[Icons] Change detected! %d mutations in play', mutations.length)
 
-      mutations.forEach((mutation: MutationRecord) => {
-        const addedNodes = mutation.addedNodes
-
+      mutations.forEach(({ addedNodes }: MutationRecord) => {
         if (addedNodes.length) {
           for (const node of addedNodes) {
             if (

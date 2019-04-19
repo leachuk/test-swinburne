@@ -9,7 +9,7 @@ declare interface ComponentConfig {
 }
 
 // Internal
-const bannedNodes = ['script', 'style']
+const bannedNodes = ['#comment', 'script', 'style']
 
 const longArrowRight = document.createElement('i')
 longArrowRight.setAttribute('class', 'icon fal fa-long-arrow-right')

@@ -20,6 +20,7 @@
                 <contentblock1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
+					componentId="contentblock1"
                     hideTitle="false"
                     title="Link: Default"
                     variant="advsection">
@@ -222,7 +223,7 @@
                 <contentblock10
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/contentblock"
-                        componentId="contentblock_HKRKKADG0"
+                        componentId="contentblock10"
                         hideInMenu="true"
                         hideTitle="false"
                         hideTopLink="true"

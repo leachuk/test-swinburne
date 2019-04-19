@@ -32,16 +32,20 @@
       background-color: rgba($white, .5);
       content: ' ';
       display: block;
-      height: calc(100% - #{$header-height-md});
+      height: $header-height-md;
       pointer-events: none;
       position: fixed;
       right: 0;
-      top: $header-height-md;
-      width: calc(100vw - 320px);
+      top: 0;
+      transition: height .3s ease-in-out;
+      width: calc(100% - 320px);
     }
 
     &.show {
       height: calc(100vh - #{$header-height-sm}) !important;
+      &::after {
+        height: 100%;
+      }
 
       .brand-header__nav,
       .brand-header__admin {
@@ -51,13 +55,14 @@
   }
 
   @include media-breakpoint-down(sm) {
-    &.show {
-      height: calc(100% - 47px) !important;
-    }
-
     &::after {
-      height: calc(100% - #{$header-height-sm});
-      top: $header-height-sm;
+      height: $header-height-sm;
+    }
+    &.show {
+      height: calc(100% - #{$header-height-sm}) !important;
+      &::after {
+        height: 100%;
+      }
     }
   }
 

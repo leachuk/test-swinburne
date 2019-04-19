@@ -41,6 +41,13 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="aemdesign/components/media/image"/>
                 </contentblock>
+				<page_details
+					jcr:mixinTypes="[cq:Taggable]"
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="swinburne/components/details/page-details"
+					componentId="page_details_1"
+					textIsRich="true"
+					variant="hidden" />
             </par>
         </article>
     </jcr:content>

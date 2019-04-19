@@ -4,9 +4,9 @@ import _isNil from 'lodash/isNil'
 import _omitBy from 'lodash/omitBy'
 import _throttle from 'lodash/throttle'
 
-import { isAuthorEditMode } from '@global/utilities/aem'
-import { breakpoints, margins } from '@global/utilities/config'
-import { getWindowWidth } from '@global/utilities/dom'
+import { isAuthorEditMode } from '@utility/aem'
+import { breakpoints, margins } from '@utility/config'
+import { getWindowWidth } from '@utility/dom'
 
 declare interface BreakpointOptions {
   [key: number]: OwlCarousel.Options,
@@ -264,7 +264,7 @@ export default async () => {
 
     loopAndGenerateCarousels()
 
-    $(window).off('resize.carouselRefresh').on('resize.carouselRefresh', _throttle(() => {
+    window.addEventListener('resize', _throttle(() => {
       // If the width of the window matches the last known width, do nothing!
       if (getWindowWidth() === lastWindowWidth) {
         return

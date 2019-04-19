@@ -28,6 +28,12 @@
     "paths": {
       "@global/*": [
         "source/sut/js/*"
+      ],
+      "@module/*": [
+        "source/sut/js/modules/*"
+      ],
+      "@utility/*": [
+        "source/sut/js/utilities/*"
       ]
     },
 

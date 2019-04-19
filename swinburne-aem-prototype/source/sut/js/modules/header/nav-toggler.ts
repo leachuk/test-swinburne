@@ -1,9 +1,10 @@
 import _throttle from 'lodash/throttle'
 
-import { breakpoints } from '@global/utilities/config'
-import { getWindowWidth } from '@global/utilities/dom'
+import { breakpoints } from '@utility/config'
+import { getWindowWidth } from '@utility/dom'
 
 // Internal
+let $activeElements: JQuery
 let $backButtons: JQuery
 let $body: JQuery
 let $collapsible: JQuery
@@ -11,13 +12,13 @@ let $dropdown: JQuery
 let $navLink: JQuery
 let $toggleButton: JQuery
 let $window: JQuery<Window>
-let $activeElements: JQuery
+let scrollOffset: number
 
-let scrollOffset
+function closeSubNavigation(event: Event) {
+  const target = event.target
 
-function closeSubNavigation(element) {
-  if (element.target) {
-    $(element.target)
+  if (target) {
+    $(target)
       .parent()
       .removeClass('show')
       .prev()
@@ -26,12 +27,11 @@ function closeSubNavigation(element) {
 }
 
 function openNavAtLink() {
-    let $level1Link : JQuery
+  const $level1Link: JQuery = $(`a.active.l-1`)
 
-    $level1Link = $(`a.active.l-1`)
-    if($level1Link.length > 0) {
-      $level1Link.trigger('click').trigger('blur');
-    }
+  if ($level1Link.length > 0) {
+    $level1Link.trigger('click').trigger('blur');
+  }
 }
 
 function toggleNavigation() {
@@ -74,9 +74,7 @@ function attachDropdownEvents() {
 
   $dropdown.on('click', (e: JQuery.TriggeredEvent) => {
     const JQuery: any = $
-
-    let events = JQuery._data(document, 'events') || {}
-    events = events.click || []
+    const events = (JQuery._data(document, 'events') || {}).click || []
 
     events.map((event) => {
       if (event.selector) {
@@ -214,7 +212,6 @@ export default () => {
   resetNavigation()
   openNavAtLink()
 
-
   $window.on('resize', _throttle(() => {
     attachDropdownEvents()
   }, 200)).trigger('resize')
@@ -228,7 +225,7 @@ export default () => {
     if ($body.hasClass('no-scroll')) {
       resetScrollOffset()
     } else {
-      scrollOffset = $window.scrollTop()
+      scrollOffset = $window.scrollTop() || 0
 
       // Prevent the scroll on the body of the page and set the top offset to the current scroll
       // position so the user remains at the same offset.

@@ -1,8 +1,9 @@
-import Carousels from '@global/modules/carousel'
-import Header from '@global/modules/header'
-import Subscribers from '@global/modules/subscribers'
+import Carousels from '@module/carousel'
+import Header from '@module/header'
+import Icons from '@module/icons'
+import Subscribers from '@module/subscribers'
 
-import { isAuthorEditMode } from '@global/utilities/aem'
+import { isAuthorEditMode } from '@utility/aem'
 
 // Begin the app...
 $(async () => {
@@ -32,11 +33,10 @@ $(async () => {
   if (isAuthorEditMode()) {
     // Open all the 'collapse' elements on the page when in author
     $('.collapse[data-parent]').collapse('dispose')
-  } else {
-    // Append Font Awesome icons to any/all elements that need them
-    const { default: Icons } = await import(/* webpackChunkName: "icons" */ '@global/modules/icons')
-    Icons()
   }
+
+  // Append Font Awesome icons to any/all elements that need them
+  Icons()
 
   // Load the Font Awesome icons last as they are the heaviest payload
   await import(/* webpackChunkName: "fontawesome-pro-brands" */ '@fortawesome/fontawesome-pro/js/brands')
@@ -44,8 +44,3 @@ $(async () => {
   await import(/* webpackChunkName: "fontawesome-pro" */ '@fortawesome/fontawesome-pro/js/fontawesome')
 
 })
-
-// HMR (Hot Module Replacement)
-if (module.hot) {
-  module.hot.accept()
-}

@@ -9,8 +9,10 @@ declare interface ComponentConfig {
 }
 
 // Internal
+const bannedNodes = ['script', 'style']
+
 const longArrowRight = document.createElement('i')
-longArrowRight.setAttribute('class', 'fal fa-long-arrow-right')
+longArrowRight.setAttribute('class', 'icon fal fa-long-arrow-right')
 
 const components: ComponentConfig = {
   link: {
@@ -43,13 +45,21 @@ export default () => {
     console.info('[Icons] Spinning up mutation observer for AEM author mode!')
 
     const mutationObserver = new MutationObserver((mutations: MutationRecord[]) => {
-      console.info('[Icons] Change detected! %d mutations in play', mutations.length)
+      console.info('\n[Icons] Change detected! %d mutations in play', mutations.length)
 
       mutations.forEach((mutation: MutationRecord) => {
         const addedNodes = mutation.addedNodes
 
         if (addedNodes.length) {
-          addedNodes.forEach((node) => {
+          for (const node of addedNodes) {
+            if (
+              bannedNodes.indexOf(node.nodeName.toLowerCase()) !== -1 ||
+              (node as Element).querySelector('.icon')
+            ) {
+              continue
+            }
+
+            // Now, check through the pre-defined components
             for (const component of Object.keys(components)) {
               console.info('\n[Icons] Running through mutation %O against component %O', node, component)
 
@@ -86,7 +96,7 @@ export default () => {
                 }
               }
             }
-          })
+          }
         }
       })
     })

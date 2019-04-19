@@ -86,6 +86,7 @@ export default () => {
 
                   // If one or more of the parents didn't match, continue onto the next selector
                   if (count !== selectorLevels.length - 1) {
+                    console.info('[Icons] One or more parent selectors for %s failed to match!', selectorMatch)
                     continue
                   }
 

@@ -1,7 +1,7 @@
 import { isAuthorEditMode } from '@utility/aem'
 import { hasParent, matches } from '@utility/dom'
 
-declare interface ComponentConfig {
+interface ComponentConfig {
   [key: string]: {
     icon: Element,
     selectors: string[],
@@ -71,25 +71,28 @@ export default () => {
 
                 console.info('[Icons] Checking selector %s with levels:', selectorMatch, selectorLevels)
 
-                // If there are additional levels, use them as a way of detecting if the node exists in
-                // the correct parent tree.
-                if (selectorLevels.length) {
-                  let count = 0
-
-                  // Check the levels in reverse, this is because we want to go from the node up
-                  for (const level of selectorLevels.reverse()) {
-                    count = hasParent(node.parentNode, level) ? count + 1 : count
-                  }
-
-                  // If one or more of the parents didn't match, continue onto the next selector
-                  if (count !== selectorLevels.length - 1) {
-                    continue
-                  }
-                }
-
                 // Finally, test to ensure the node matches
                 if (selectorMatch && matches(node as Element, selectorMatch)) {
-                  console.info('[Icons] Selector %s matched, appending icon:', selectorMatch, config.icon)
+                  // If there are additional levels, use them as a way of detecting if the node exists in
+                  // the correct parent tree.
+                  if (selectorLevels.length) {
+                    let count = 0
+
+                    // Check the levels in reverse, this is because we want to go from the node up
+                    for (const level of selectorLevels.reverse()) {
+                      count = hasParent(node.parentNode, level) ? count + 1 : count
+                    }
+
+                    // If one or more of the parents didn't match, continue onto the next selector
+                    if (count !== selectorLevels.length - 1) {
+                      continue
+                    }
+
+                    console.info('[Icons] Selector %s and parents matched, appending icon:', selectorMatch, config.icon)
+                  } else {
+                    console.info('[Icons] Selector %s matched, appending icon:', selectorMatch, config.icon)
+                  }
+
                   node.appendChild(config.icon.cloneNode())
                 } else {
                   console.info('[Icons] Selector %s invalid, continuing on...', selectorMatch)

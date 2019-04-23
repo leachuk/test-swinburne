@@ -5,9 +5,7 @@
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Typography"
-        sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="Typography"
-        pageTitle="Typography">
+        sling:resourceType="swinburne/components/template/styleguide">
         <aside
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"

@@ -4,10 +4,8 @@
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Visual decorators"
-        sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="Visual decorators"
-        pageTitle="Visual decorators">
+        jcr:title="Visual Decorators"
+        sling:resourceType="swinburne/components/template/styleguide">
         <aside
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"

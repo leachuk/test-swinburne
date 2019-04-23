@@ -6,7 +6,7 @@ import { getWindowWidth } from '@global/utilities/dom'
 // Internal
 let $backButtons: JQuery
 let $body: JQuery
-let $collapsible: JQuery
+let $navContainer: JQuery
 let $dropdown: JQuery
 let $navLink: JQuery
 let $toggleButton: JQuery
@@ -26,10 +26,9 @@ function closeSubNavigation(element) {
 }
 
 function openNavAtLink() {
-    let $level1Link : JQuery
+    const $level1Link: JQuery = $(`a.active.l-1`)
 
-    $level1Link = $(`a.active.l-1`)
-    if($level1Link.length > 0) {
+    if ($level1Link.length > 0) {
       $level1Link.trigger('click').trigger('blur');
     }
 }
@@ -46,7 +45,7 @@ function toggleNavigation() {
 function resetNavigation() {
   $backButtons = $('button[data-nav]')
 
-  $collapsible.on('hide.bs.collapse', () => {
+  $navContainer.on('hide.bs.collapse', () => {
     if (getWindowWidth() < breakpoints.desktop) {
       $backButtons.trigger('click')
     }
@@ -145,11 +144,11 @@ function setBackButtons() {
 }
 
 function cloneActions() {
-  const $actions      = $('.brand-header__actions')
-  const $navContainer = $('.brand-header__container')
-  const clone         = $actions.clone()
+  const $actions         = $('.brand-header__actions')
+  const $headerContainer = $('.brand-header__container')
+  const clone            = $actions.clone()
 
-  $navContainer.append(clone)
+  $headerContainer.append(clone)
 }
 
 function resetScrollOffset() {
@@ -200,7 +199,7 @@ function dropdownSubMenuFix() {
 
 export default () => {
   $body           = $(document.body)
-  $collapsible    = $('#header-nav-container')
+  $navContainer    = $('#header-nav-container')
   $dropdown       = $('.dropdown')
   $navLink        = $('a.nav-link').not('[href="#"]')
   $toggleButton   = $('.navbar-toggler')
@@ -214,6 +213,8 @@ export default () => {
   resetNavigation()
   openNavAtLink()
 
+  // Create a backdrop element for the mobile menu
+  $('<div class="brand-header__nav-backdrop" />').insertAfter($navContainer)
 
   $window.on('resize', _throttle(() => {
     attachDropdownEvents()

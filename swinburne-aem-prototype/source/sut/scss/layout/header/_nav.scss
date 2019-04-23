@@ -142,6 +142,7 @@
 
   .nav-item {
     flex-wrap: nowrap;
+    padding-left: 0;
 
     &::before {
       display: none;

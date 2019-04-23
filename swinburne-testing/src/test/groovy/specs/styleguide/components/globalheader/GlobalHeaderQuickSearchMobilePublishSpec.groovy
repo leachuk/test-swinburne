@@ -16,7 +16,7 @@ class GlobalHeaderQuickSearchMobilePublishSpec extends ComponentSpec {
     def "Quick Search on mobile"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#swinburne_global_header"
+        def selector = "#header_nav_root"
         def selectorSearch = "${selector} .brand-header__container > .brand-header__actions .brand-header__quick-search"
         def selectorSearchInput = "${selectorSearch} input[type=search]"
 

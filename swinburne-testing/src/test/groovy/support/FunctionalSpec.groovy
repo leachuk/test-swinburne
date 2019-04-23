@@ -35,17 +35,9 @@ abstract class FunctionalSpec extends GebReportingSpec {
     // Desktop
     // 4k
     def getListViewPorts(label) {
-        def config = getViewPorts()
-        String[] labels = getViewPorts()[0]
-        for (int i = 0; i < labels.length; i++) {
-            if (label != "") {
-                if (config[i].label == label) {
-                    return config[i].label
-                }
-            }
-            labels[i] = config[i].label
-        }
-        return labels
+        return getViewPorts().find({
+			it.label == label
+		})
     }
 
     def getViewPorts() {
@@ -703,7 +695,7 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
         def viewPort = viewPorts.find { value -> value.width == driverWidth }
 
-//        printDebug("getWindowWidthName", [driverWidth,viewPorts,viewPort])
+        //printDebug("getWindowWidthName", [driverWidth,viewPorts,viewPort])
 
         if (!viewPort) {
             viewPort = viewPorts[3] //LG

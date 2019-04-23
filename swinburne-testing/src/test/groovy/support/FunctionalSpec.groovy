@@ -185,7 +185,7 @@ abstract class FunctionalSpec extends GebReportingSpec {
 
     def loginAsAdmin() {
 
-        setWindowSizeMD()
+        setWindowSizeLG()
 
         def username = System.properties.getProperty("crx.user", "admin")
         def password = System.properties.getProperty("crx.password", "admin")

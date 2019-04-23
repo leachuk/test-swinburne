@@ -1,14 +1,34 @@
 import { isAuthorEditMode } from '@utility/aem'
 
 // Internal
-const longArrowRight = document.createElement('i')
-longArrowRight.setAttribute('class', 'icon fal fa-long-arrow-right')
+const icons: { [key: string]: string } = {
+  chevronRight   : 'chevron-right',
+  longArrowRight : 'long-arrow-right',
+}
 
 const components: ComponentConfig = {
+  breadcrumb: {
+    icon      : buildIcon(icons.chevronRight),
+    selectors : ['.breadcrumb-item:not(:last-child)'],
+  },
+
   link: {
-    icon      : longArrowRight,
+    icon      : buildIcon(icons.longArrowRight),
     selectors : ['.link.btn', '.btn.btn-link', 'header .nav-link'],
   },
+}
+
+/**
+ * Generates an HTML element for the given Font Awesome `iconClass`.
+ *
+ * @param {string} iconClass CSS class needed for Font Awesome
+ * @return {Element}
+ */
+function buildIcon(iconClass: string): Element {
+  const icon = document.createElement('i')
+  icon.setAttribute('class', `icon fal fa-${iconClass}`)
+
+  return icon
 }
 
 export default async () => {
@@ -27,6 +47,8 @@ export default async () => {
       }
     }
   }
+
+  console.info('[Icons] All done!')
 
   // When in author mode, we need to watch for DOM changes so we can correctly inject the
   // icons needed dynamically.

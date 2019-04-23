@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Breadcrumb"
+        jcr:title="Breadcrumbs"
         sling:resourceType="swinburne/components/template/styleguide">
         <aside
             jcr:primaryType="nt:unstructured"
@@ -36,41 +36,45 @@
                     showParsys="false"
                     showToolbar="false"
                     textIsRich="true"/>
-                <contentblock
+                <contentblock_light
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="swinburne/components/layout/contentblock"
-                    componentId="contentblock">
+                    componentId="contentblock_light">
                     <par
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="swinburne/components/layout/container">
-						<text
+						<contentblock_light_title
 							jcr:primaryType="nt:unstructured"
 							sling:resourceType="swinburne/components/content/text"
-							componentId="text_5SAG7S8CD"
-							text="&lt;p>Breadcrumb enable users to quickly see their location within a path of navigation and navigate to a parent page if required.&lt;/p>&#xd;&#xa;&lt;p>Content is automatically generated using the site heirarchy in AEM.&lt;/p>&#xd;&#xa;"
+							componentId="contentblock_light_title"
+							text="&lt;h4>Breadcrumbs (Default)&lt;/h4>&#xd;&#xa;"
 							textIsRich="true"/>
-						<colctrl
+						<breadcrumb
 							jcr:primaryType="nt:unstructured"
-							sling:resourceType="swinburne/components/layout/colctrl"
-							componentId="colctrl_IB08WVL5M"
-							controlType="start"
-							layout="1;colctrl-1c"/>
-						<reference_1
-							jcr:primaryType="nt:unstructured"
-							sling:resourceType="swinburne/components/content/reference"
-							componentId="reference_1"
-							path="/content/swinburne-showcase/en/component/layout/breadcrumb/jcr:content/article/par/contentblock4"/>
-						<reference_2
-							jcr:primaryType="nt:unstructured"
-							sling:resourceType="swinburne/components/content/reference"
-							componentId="reference_2"
-							path="/content/swinburne-showcase/en/component/layout/breadcrumb/jcr:content/article/par/contentblock5"/>
-						<col_end15475044610680
-							jcr:primaryType="nt:unstructured"
-							sling:resourceType="swinburne/components/layout/colctrl"
-							controlType="end"/>
+							sling:resourceType="swinburne/components/layout/breadcrumb"
+							componentId="breadcrumb_light"/>
                     </par>
-                </contentblock>
+                </contentblock_light>
+				<contentblock_dark
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="swinburne/components/layout/contentblock"
+					componentId="contentblock_dark"
+					componentModifiers="[swinburne:component-style-modifier/background/primary/bg-charcoal]">
+					<par
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="swinburne/components/layout/container">
+						<contentblock_dark_title
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="swinburne/components/content/text"
+							componentId="contentblock_dark_title"
+							text="&lt;h4>Breadcrumbs (Dark)&lt;/h4>&#xd;&#xa;"
+							textIsRich="true"/>
+						<breadcrumb
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="swinburne/components/layout/breadcrumb"
+							componentId="breadcrumb_dark"/>
+					</par>
+				</contentblock_dark>
             </par>
         </article>
     </jcr:content>

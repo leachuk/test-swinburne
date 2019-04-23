@@ -1,4 +1,4 @@
-import { hasParent, matches } from '@utility/dom'
+import { matches } from '@utility/dom'
 
 export default (components: ComponentConfig) => {
   console.info('[Author Icons] Spinning up mutation observer for AEM author mode!')

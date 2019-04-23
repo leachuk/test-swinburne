@@ -4,7 +4,7 @@
     <jcr:content
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
-        jcr:title="components"
+        jcr:title="Components"
         sling:resourceType="swinburne/components/template/styleguide">
         <aside
             jcr:primaryType="nt:unstructured"

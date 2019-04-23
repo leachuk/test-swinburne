@@ -311,11 +311,16 @@ $navbar-light-toggler-border-color: null;
 
 $breadcrumb-padding-y:              0;
 $breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           $grid-gutter-width / 2;
+
+$breadcrumb-margin-bottom:          0;
 
 $breadcrumb-bg:                     transparent;
 $breadcrumb-divider-color:          inherit;
-$breadcrumb-active-color:           inherit;
-$breadcrumb-divider:                '›';
+$breadcrumb-active-color:           #808285;
+$breadcrumb-divider:                null;
+
+$breadcrumb-border-radius:          null;
 
 // Cards
 

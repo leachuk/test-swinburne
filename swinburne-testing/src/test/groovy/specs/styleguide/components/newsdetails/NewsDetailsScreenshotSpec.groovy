@@ -5,18 +5,16 @@ import support.ComponentSpec
 
 @Stepwise
 class NewsDetailScreenshotSpec extends ComponentSpec {
-
-    String pathPage = "/Styleguide-SWU/components/news-details"
-    String pathSite = "content/swinburne-showcase"
-    String language = "en"
-    String componentPath = "jcr:content/swinburne-showcase/en/Styleguide-SWU/components/news-details/jcr:content/article/par/news_details"
+    String pathPage = "styleguide/components/news-details"
+	String pathSite = "content/swinburne-showcase"
+	String language = "en"
+	String componentPath = "jcr:content/article/par/news_details"
 
     def setupSpec() {
         loginAsAdmin()
     }
 
     def "Appearance of News Details with default variant'"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#news_details"
@@ -30,7 +28,5 @@ class NewsDetailScreenshotSpec extends ComponentSpec {
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
-
 }

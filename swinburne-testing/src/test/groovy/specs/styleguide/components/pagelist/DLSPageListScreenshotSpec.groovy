@@ -1,6 +1,5 @@
 package specs.styleguide.components.pagelist
 
-import spock.lang.Ignore
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
@@ -60,7 +59,7 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
     def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : default background"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_OXHFFXJJE #pagelist36"
+        def selector = "#reference_OXHFFXJJE #pagelist_36a"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -80,7 +79,7 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
     def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : default background with charcoal theme"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_1XHFFXJJE #pagelistxxx"
+        def selector = "#reference_1XHFFXJJE #pagelist_36b"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -100,7 +99,7 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
     def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : grey background"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_2XHFFXJJE #pagelist36"
+        def selector = "#reference_2XHFFXJJE #pagelist_36a"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -120,7 +119,7 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
     def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : yellow background"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_4XHFFXJJE #pagelist36"
+        def selector = "#reference_4XHFFXJJE #pagelist_36a"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -140,7 +139,7 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
     def "Appearance of Page List with badge Card with Image Tag Title and Action Promoted : grey background with charcoal theme"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_5XHFFXJJE #pagelistxxx"
+        def selector = "#reference_5XHFFXJJE #pagelist_36b"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -160,7 +159,7 @@ class DLSPageListScreenshotSpec extends ComponentSpec {
     def "Appearance of Page List with badge Default : Horizontal links"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#reference_COQK8HAL9 #pagelist_F56DNYW78"
+        def selector = "#reference_COQK8HAL9 #pagelist37"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)

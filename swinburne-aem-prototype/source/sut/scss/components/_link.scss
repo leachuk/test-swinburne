@@ -5,8 +5,16 @@
     width: 100%;
   }
 
-  .icon {
+  .icon:not(.svg-inline--fa) {
     width: icon-size(regular);
+
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-left: 10px;
+    }
   }
 
   &:not(.btn) {

@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Page">
-    <article-list/>
-    <apply-now/>
-    <contact-us/>
-    <card-list/>
-    <cop/>
-    <error-pages/>
-    <event-list/>
-    <find-a-course/>
-    <juggling-life-and-uni/>
-    <jie/>
-    <jie-final/>
-    <home/>
-    <social/>
-    <thank-you/>
-    <mid-year/>
-    <nie/>
-    <open-day/>
-    <swu/>
-    <timely/>
-    <timely-home-page/>
-    <test-two-column/>
+	<swu/>
 </jcr:root>

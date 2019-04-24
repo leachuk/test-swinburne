@@ -32,7 +32,7 @@ git submodule update --recursive --remote --init
 When creating new submodules use following command to add it to parent project
 
 ```bash
-git submodule add ssh://git@gitlab.com/swinburne/swinburne-aem-common.git swinburne-aem-common
+git submodule add ssh://git@gitlab.com/swinburne/swinburne-core-common.git swinburne-core-common
 ```
 
 After adding new submodules do a submodule update
@@ -88,7 +88,7 @@ KEYNAME=swinburne; ssh-keygen -t rsa -b 4096 -C "${KEYNAME}" -N '' -f "${KEYNAME
 Use the deploy scripts or use the following command
 
 ```bash
-mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallBundle,autoInstallPackage -pl swinburne-aem-common,swinburne-aem-content,swinburne-aem-showcase  -Dcrx.host=localhost
+mvn -Dvault.useProxy=false -DskipTests clean install -P autoInstallBundle,autoInstallPackage -pl swinburne-core-common,swinburne-core-content,swinburne-core-showcase  -Dcrx.host=localhost
 ```
 
 

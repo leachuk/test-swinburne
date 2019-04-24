@@ -6,11 +6,11 @@
     <!-- ====================================================================== -->
 
     <groupId>edu.au.swinburne.aem</groupId>
-    <artifactId>swinburne-parent</artifactId>
+    <artifactId>swinburne-core</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>swinburne :: swinburne :: parent</name>
+    <name>swinburne :: swinburne :: core</name>
     <description>Maven Multimodule project for Swinburne AEM Parent Project.</description>
 
     <scm>
@@ -459,7 +459,6 @@
         </pluginManagement>
     </build>
 
-
     <profiles>
         <profile>
             <id>deploymentpackage</id>
@@ -467,39 +466,16 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
-                <module>swinburne-aem-author</module>
-                <module>swinburne-aem-services</module>
-                <module>swinburne-aem-common</module>
-                <module>swinburne-aem-config</module>
-                <module>swinburne-aem-content</module>
-                <module>swinburne-aem-showcase</module>
-                <module>swinburne-aem-training</module>
-                <module>swinburne-aem-deploy</module>
-                 <module>swinburne-aem-prototype</module>
-                <module>swinburne-testing</module>
+                <module>swinburne-core-author</module>
+                <module>swinburne-core-services</module>
+                <module>swinburne-core-common</module>
+                <module>swinburne-core-config</module>
+                <module>swinburne-core-content</module>
+                <module>swinburne-core-showcase</module>
+                <module>swinburne-core-deploy</module>
+                <module>swinburne-core-testing</module>
             </modules>
-
         </profile>
-        <profile>
-            <id>deploymentpackagejenkins</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <modules>
-                <module>swinburne-aem-author</module>
-                <module>swinburne-aem-services</module>
-                <module>swinburne-aem-common</module>
-                <module>swinburne-aem-config</module>
-                <module>swinburne-aem-content</module>
-                <module>swinburne-aem-showcase</module>
-                <module>swinburne-aem-training</module>
-                <module>swinburne-aem-deploy</module>
-                <module>swinburne-aem-prototype</module>
-                <module>swinburne-testing</module>
-            </modules>
-
-        </profile>
-
     </profiles>
 
 </project>

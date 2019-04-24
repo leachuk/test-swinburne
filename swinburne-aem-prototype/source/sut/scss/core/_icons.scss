@@ -1,9 +1,0 @@
-// Sizing
-
-@each $name, $size in $icon-sizes {
-  .icon--#{$name} [class*='fa'] {
-    // stylelint-disable-next-line
-    font-size: $size !important;
-    height: $size;
-  }
-}

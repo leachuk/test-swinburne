@@ -5,9 +5,7 @@
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="guidelines"
-        sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="guidelines"
-        pageTitle="guidelines">
+        sling:resourceType="swinburne/components/template/styleguide">
         <aside
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"
@@ -39,8 +37,8 @@
         </article>
     </jcr:content>
     <background/>
+	<breakpoints/>
     <colour/>
-    <breakpoints/>
     <grid/>
     <iconography/>
     <imagery/>
@@ -49,6 +47,6 @@
     <spacing-units/>
     <template/>
     <typography/>
-    <visual-decorators/>
     <visibility/>
+	<visual-decorators/>
 </jcr:root>

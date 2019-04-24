@@ -122,14 +122,17 @@
   }
 
   nav.breadcrumb > ol.breadcrumb {
-    margin-top: $spacing-md;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
     @include media-breakpoint-up(md) {
-      margin-top: $spacing-2xl;
+      padding-bottom: 15px;
+      padding-top: 20px;
     }
 
     @include media-breakpoint-up(lg) {
-      margin-top: $spacing-3xl;
+      padding-bottom: 30px;
+      padding-top: 30px;
     }
   }
 

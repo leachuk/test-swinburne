@@ -23,6 +23,13 @@ interface Element {
   oMatchesSelector(selectors: string): boolean;
 }
 
+interface ComponentConfig {
+  [key: string]: {
+    icon: Element,
+    selectors: string[],
+  }
+}
+
 declare function ObjectFitImages(): void;
 
 declare type FormInputCallback = (($target: JQuery, $input: JQuery, event: JQuery.TriggeredEvent) => boolean) | void;

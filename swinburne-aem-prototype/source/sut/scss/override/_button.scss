@@ -86,23 +86,22 @@ $button-colours: (
     }
   }
 
-  > span {
-    @extend .fa-long-arrow-right;
-
+  > span,
+  > .svg-inline--fa {
     transition: transform .15s ease-in-out;
+  }
 
-    &::after {
-      @extend .fal;
-
-      display: block;
-      font-size: 18px;
-      margin-left: auto;
-    }
+  > .svg-inline--fa {
+    font-size: 18px;
+    margin-left: auto;
   }
 
   @include hover {
-    &:not(.btn-link):not(:active) > span {
-      transform: translateY(-2px);
+    &:not(.btn-link):not(:active) {
+      > span,
+      > .svg-inline--fa {
+        transform: translateY(-2px);
+      }
     }
   }
 
@@ -121,7 +120,7 @@ $button-colours: (
     min-width: unset;
     padding: 0;
 
-    > span::after {
+    > .svg-inline--fa {
       margin-left: 30px;
     }
 

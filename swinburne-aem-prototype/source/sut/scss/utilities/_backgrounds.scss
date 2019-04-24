@@ -1,7 +1,7 @@
 // stylelint-disable declaration-no-important
 
 .bg-charcoal {
-  *:not(.link):not(.link-text) {
+  *:not(.link):not(.link-text):not(.svg-inline--fa):not(path) {
     color: $white;
   }
 

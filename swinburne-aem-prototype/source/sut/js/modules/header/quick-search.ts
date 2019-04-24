@@ -1,4 +1,4 @@
-import { hasParent, matches, sanitizeHTML } from '@global/utilities/dom'
+import { hasParent, matches, sanitizeHTML } from '@utility/dom'
 
 // Internal
 const CALLBACK_CLICK     = 'click'

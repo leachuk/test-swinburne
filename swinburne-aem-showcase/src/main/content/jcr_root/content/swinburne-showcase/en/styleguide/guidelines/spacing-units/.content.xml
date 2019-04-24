@@ -5,9 +5,7 @@
         cq:template="/conf/swinburne/settings/wcm/templates/styleguide"
         jcr:primaryType="cq:PageContent"
         jcr:title="Spacing"
-        sling:resourceType="swinburne/components/template/styleguide"
-        navTitle="Spacing"
-        pageTitle="Spacing">
+        sling:resourceType="swinburne/components/template/styleguide">
         <aside
             jcr:primaryType="nt:unstructured"
             sling:resourceType="swinburne/components/layout/aside"

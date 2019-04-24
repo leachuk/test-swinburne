@@ -16,50 +16,7 @@
     </filter>
 
     <filter root="/etc/blueprints/swinburne" mode="update"/>
-    <filter root="/etc/designs/swinburne" mode="update"/>
 
     <filter root="/etc/clientlibs/swinburne/core"/>
-
-    <filter root="/etc/clientlibs/swinburne/microsites">
-        <!-- do not allow deploy into css js and fonts folders -->
-        <include pattern="/etc/clientlibs/swinburne/microsites/.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/microsites/css.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/microsites/js.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/microsites/fonts.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/microsites/images.*"/>
-    </filter>
-
-    <filter root="/etc/clientlibs/swinburne/sut">
-        <!-- do not allow deploy into css js and fonts folders -->
-        <include pattern="/etc/clientlibs/swinburne/sut/.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/sut/css.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/sut/js.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/sut/fonts.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/sut/images.*"/>
-    </filter>
-
-    <filter root="/etc/clientlibs/swinburne/styleguide">
-        <!-- do not allow deploy into css js and fonts folders -->
-        <include pattern="/etc/clientlibs/swinburne/styleguide/.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/styleguide/css.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/styleguide/js.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/styleguide/fonts.*"/>
-        <exclude pattern="/etc/clientlibs/swinburne/styleguide/images.*"/>
-    </filter>
-
-    <!--<filter root="/apps/settings/wcm/design/swinburne"/>-->
-
-    <!--<filter root="/etc/clientlibs/swinburne">-->
-        <!--&lt;!&ndash; do not allow deploy into css js and fonts folders &ndash;&gt;-->
-        <!--<include pattern="/etc/clientlibs/swinburne/.*"/>-->
-        <!--<exclude pattern="/etc/clientlibs/swinburne/css.*"/>-->
-        <!--<exclude pattern="/etc/clientlibs/swinburne/js.*"/>-->
-        <!--<exclude pattern="/etc/clientlibs/swinburne/fonts.*"/>-->
-        <!--<exclude pattern="/etc/clientlibs/swinburne/images.*"/>-->
-    <!--</filter>-->
-
-    <!-- required for templates -->
-    <!--<filter root="/conf/swinburne/install"></filter>-->
-
 
 </workspaceFilter>

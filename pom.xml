@@ -14,7 +14,7 @@
     <description>Maven Multimodule project for Swinburne AEM Parent Project.</description>
 
     <scm>
-        <developerConnection>scm:git:https://bitbucket.org/SwinburneIT_AEM/swinburne-parent.git</developerConnection>
+        <developerConnection>scm:git:https://bitbucket.org/SwinburneIT_AEM/swinburne-core.git</developerConnection>
         <tag>swinburne-0.1.0-RC01</tag>
     </scm>
     <distributionManagement>
@@ -29,13 +29,6 @@
             <url>https://nexus.isobaraustralia.com/repository/releases/</url>
         </repository>
     </distributionManagement>
-
-    <developers>
-        <developer>
-            <email>max@aem.design</email>
-            <name>Max Barrass</name>
-        </developer>
-    </developers>
 
     <prerequisites>
         <maven>3.0.2</maven>
@@ -466,12 +459,10 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
-                <module>swinburne-core-author</module>
                 <module>swinburne-core-services</module>
                 <module>swinburne-core-common</module>
                 <module>swinburne-core-config</module>
-                <module>swinburne-core-content</module>
-                <module>swinburne-core-showcase</module>
+				<module>swinburne-core-showcase</module>
                 <module>swinburne-core-deploy</module>
                 <module>swinburne-core-testing</module>
             </modules>

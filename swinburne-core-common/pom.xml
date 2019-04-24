@@ -7,7 +7,7 @@
     <!-- ====================================================================== -->
     <parent>
         <groupId>edu.au.swinburne.aem</groupId>
-        <artifactId>swinburne-parent</artifactId>
+        <artifactId>swinburne-core</artifactId>
         <version>0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -20,17 +20,9 @@
     <groupId>edu.au.swinburne.aem</groupId>
     <artifactId>swinburne-core-common</artifactId>
     <packaging>content-package</packaging>
-    <name>swinburne :: swinburne :: parent :: aem-common</name>
+    <name>swinburne :: swinburne :: core :: aem-common</name>
     <description>Package with all common components</description>
     <version>0.1-SNAPSHOT</version>
-
-    <developers>
-        <developer>
-            <email>max@aem.design</email>
-            <name>Max Barrass</name>
-        </developer>
-    </developers>
-
 
     <dependencies>
         <dependency>

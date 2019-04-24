@@ -6,7 +6,7 @@
     <!-- ====================================================================== -->
     <parent>
         <groupId>edu.au.swinburne.aem</groupId>
-        <artifactId>swinburne-parent</artifactId>
+        <artifactId>swinburne-core</artifactId>
         <version>0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -19,7 +19,7 @@
     <artifactId>swinburne-server-config</artifactId>
     <packaging>jar</packaging>
     <version>0.1-SNAPSHOT</version>
-    <name>swinburne :: swinburne :: parent :: server</name>
+    <name>swinburne :: swinburne :: core :: server</name>
     <description>Swinburne Servers Config</description>
 
 </project>

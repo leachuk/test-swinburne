@@ -14,61 +14,6 @@ Please ensure following packages are installed on your AEM instance before deplo
 
 This project is a parent project used to manage modules for AEM project.
 
-
-This project uses git submodule's, please use the following command to clone project with ith submodules initially
-
-```bash
-git clone --recurse-submodules ssh://git@gitlab.com/swinburne/swinburne-parent.git
-```
-
-or
-
-```bash
-git clone ssh://git@gitlab.com/swinburne/swinburne-parent.git
-git submodule update --recursive --remote --init
-```
-
-
-When creating new submodules use following command to add it to parent project
-
-```bash
-git submodule add ssh://git@gitlab.com/swinburne/swinburne-core-common.git swinburne-core-common
-```
-
-After adding new submodules do a submodule update
-
-
-After adding new submodule update and pull
-
-```bash
-git submodule update --recursive --remote --init
-```
-
-
-Push all submodules
-
-```bash
-git submodule foreach git push
-```
-
-
-Git commit rules has been setup to require GPG signed commits please update your system or repos with correct GPG key.
-
-If you are using different account to commit code to repos, update each of the repos with your required account
-
-```bash
-git submodule foreach 'git config user.signingkey {your key id}'
-git submodule foreach 'git config user.email {your email}'
-```
-
-
-If you commit using wrong account you can udate your commits using following command
-
-```bash
-git commit --amend --author="{your full name} <{your email}>"
-```
-
-
 All branches must be named as follows:
 * `master`: The main branch for integration and releases.
     All changes to this branch must be done with pull requests.

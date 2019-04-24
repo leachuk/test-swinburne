@@ -7,7 +7,7 @@
     <!-- ====================================================================== -->
     <parent>
         <groupId>edu.au.swinburne.aem</groupId>
-        <artifactId>swinburne-parent</artifactId>
+        <artifactId>swinburne-core</artifactId>
         <version>0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -18,7 +18,7 @@
     <groupId>edu.au.swinburne.aem</groupId>
     <artifactId>swinburne-core-deploy</artifactId>
     <packaging>content-package</packaging>
-    <name>swinburne :: swinburne :: parent :: aem-deploy</name>
+    <name>swinburne :: swinburne :: core :: aem-deploy</name>
     <description>This content package contains all sub packages for the deployment.</description>
     <version>0.1-SNAPSHOT</version>
     <!-- ====================================================================== -->
@@ -35,12 +35,6 @@
         -->
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>swinburne-core-author</artifactId>
-            <type>zip</type>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
             <artifactId>swinburne-core-common</artifactId>
             <type>zip</type>
             <version>${project.version}</version>
@@ -53,25 +47,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>swinburne-core-content</artifactId>
-            <type>zip</type>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
             <artifactId>swinburne-core-showcase</artifactId>
-            <type>zip</type>
-            <version>${project.version}</version>
-        </dependency>
-        <!--<dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>swinburne-core-training</artifactId>
-            <type>zip</type>
-            <version>${project.version}</version>
-        </dependency>-->
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>swinburne-core-prototype</artifactId>
             <type>zip</type>
             <version>${project.version}</version>
         </dependency>
@@ -82,9 +58,6 @@
     <!-- ====================================================================== -->
     <build>
         <plugins>
-
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -250,9 +223,7 @@
                             </execution>
                         </executions>
                     </plugin>
-
-
-                </plugins>
+				 </plugins>
             </build>
         </profile>
         <profile>
@@ -309,13 +280,9 @@
                             </execution>
                         </executions>
                     </plugin>
-
-
                 </plugins>
             </build>
         </profile>
-
-
 
     </profiles>
 </project>

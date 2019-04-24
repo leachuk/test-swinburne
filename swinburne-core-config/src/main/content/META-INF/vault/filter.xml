@@ -31,6 +31,5 @@
 
 	<!-- tenant update for microsites into swu root" -->
 	<filter root="/conf/swinburne"/>
-	<filter root="/conf/swinburne-microsites"/>
 
 </workspaceFilter>

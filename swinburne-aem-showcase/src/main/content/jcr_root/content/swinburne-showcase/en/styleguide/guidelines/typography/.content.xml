@@ -117,7 +117,7 @@
                         <text_653407551_copy
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="swinburne/components/content/text"
-                            componentId="heading-not-undelined"
+                            componentId="heading-not-underlined"
                             componentModifiers="[swinburne-showcase:component-style-modifier/text/headings/style/heading-outlined]"
                             text="&lt;h1>Heading 1&lt;/h1>&#xd;&#xa;&lt;h2>Heading 2&lt;/h2>&#xd;&#xa;&lt;h3>Heading 3&lt;/h3>&#xd;&#xa;&lt;h4>Heading 4&lt;/h4>&#xd;&#xa;"
                             textIsRich="true"/>

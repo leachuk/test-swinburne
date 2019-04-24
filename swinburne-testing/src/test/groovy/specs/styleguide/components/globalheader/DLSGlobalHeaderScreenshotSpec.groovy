@@ -6,7 +6,7 @@ import spock.lang.Stepwise
 import support.ComponentSpec
 
 @Stepwise
-class GlobalHeaderScreenshotSpec extends ComponentSpec {
+class DLSGlobalHeaderScreenshotSpec extends ComponentSpec {
     String pathPage = "styleguide/components/global-header"
     String pathSite = "content/swinburne-showcase"
     String language = "en"

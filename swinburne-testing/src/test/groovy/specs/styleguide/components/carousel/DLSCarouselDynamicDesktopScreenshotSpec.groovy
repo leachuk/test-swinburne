@@ -2,7 +2,7 @@ package specs.styleguide.components.carousel
 
 import support.ComponentSpec
 
-class CarouselDynamicTabletScreenshotSpec extends ComponentSpec {
+class DLSCarouselDynamicDesktopScreenshotSpec extends ComponentSpec {
     String pathPage = "styleguide/components/carousel"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
@@ -12,11 +12,11 @@ class CarouselDynamicTabletScreenshotSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    def "Appearance of Dynamic Carousel (Page List) on tablet"() {
+    def "Appearance of Dynamic Carousel (Page List) on small desktop"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_pagelist_default_short_list"
-        setWindowSizeMD()
+        setWindowSizeLG()
         waitForAuthorPreviewPage()
 
         when: 'The component appears as a carousel on the page'
@@ -26,7 +26,7 @@ class CarouselDynamicTabletScreenshotSpec extends ComponentSpec {
         designRef(selector)
     }
 
-    def "Appearance of Dynamic Carousel (News List) on tablet"() {
+    def "Appearance of Dynamic Carousel (News List) on small desktop"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#contentblock_carousel_newslist_default_short_list"

@@ -5,7 +5,7 @@ import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class CarouselPublishSpec extends ComponentSpec {
+class DLSCarouselPublishSpec extends ComponentSpec {
     String pathPage = "styleguide/components/carousel"
     String pathSite = "content/swinburne-showcase"
     String language = "en"

@@ -2,7 +2,7 @@ package specs.styleguide.components.carousel
 
 import support.ComponentSpec
 
-class CarouselDynamicLargeDesktopScreenshotSpec extends ComponentSpec {
+class DLSCarouselDynamicLargeDesktopScreenshotSpec extends ComponentSpec {
     String pathPage = "styleguide/components/carousel"
     String pathSite = "content/swinburne-showcase"
     String language = "en"

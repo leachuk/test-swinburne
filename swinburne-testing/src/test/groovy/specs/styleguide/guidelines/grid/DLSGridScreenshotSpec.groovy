@@ -4,8 +4,7 @@ import spock.lang.Stepwise
 import support.ComponentSpec
 
 @Stepwise
-class GridScreenshotSpec extends ComponentSpec {
-
+class DLSGridScreenshotSpec extends ComponentSpec {
     String pathPage = "styleguide/guidelines/grid"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
@@ -16,7 +15,6 @@ class GridScreenshotSpec extends ComponentSpec {
     }
 
     def "Appearance of 4 column grid"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#grid-col-4"
@@ -26,15 +24,13 @@ class GridScreenshotSpec extends ComponentSpec {
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
 
     def "Appearance of 3 column grid"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#grid-col-3"
@@ -44,15 +40,13 @@ class GridScreenshotSpec extends ComponentSpec {
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
 
     def "Appearance of 2 column grid"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#grid-col-2"
@@ -62,15 +56,13 @@ class GridScreenshotSpec extends ComponentSpec {
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
 
     def "Appearance of 6 column grid"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#grid-col-6"
@@ -80,15 +72,13 @@ class GridScreenshotSpec extends ComponentSpec {
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
 
     def "Appearance of 12 column grid"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#grid-col-12"
@@ -98,10 +88,9 @@ class GridScreenshotSpec extends ComponentSpec {
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
 }

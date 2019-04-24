@@ -4,7 +4,7 @@ import spock.lang.Stepwise
 import support.ComponentSpec
 
 @Stepwise
-class LogoPublishSpec extends ComponentSpec {
+class DLSLogoPublishSpec extends ComponentSpec {
     String pathPage = "styleguide/guidelines/logo-and-usage"
     String pathSite = "content/swinburne-showcase"
     String language = "en"

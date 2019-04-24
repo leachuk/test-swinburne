@@ -5,7 +5,7 @@ import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class BreadcrumbsScreenshotSpec extends ComponentSpec {
+class DLSBreadcrumbsScreenshotSpec extends ComponentSpec {
     String pathPage = "styleguide/components/breadcrumbs"
     String pathSite = "content/swinburne-showcase"
     String language = "en"

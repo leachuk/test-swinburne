@@ -5,7 +5,7 @@ import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class GlobalFooterScreenshotSpec extends ComponentSpec {
+class DLSGlobalFooterScreenshotSpec extends ComponentSpec {
     String pathPage = "styleguide/components/global-footer"
     String pathSite = "content/swinburne-showcase"
     String language = "en"

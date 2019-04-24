@@ -4,8 +4,7 @@ import spock.lang.Stepwise
 import support.ComponentSpec
 
 @Stepwise
-class ColoursScreenshotSpec extends ComponentSpec {
-
+class DLSColoursScreenshotSpec extends ComponentSpec {
     String pathPage = "styleguide/guidelines/colour"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
@@ -16,7 +15,6 @@ class ColoursScreenshotSpec extends ComponentSpec {
     }
 
     def "Appearance of Primary colours"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#primary-colours"
@@ -26,15 +24,13 @@ class ColoursScreenshotSpec extends ComponentSpec {
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
 
     def "Appearance of Main colours"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#main-colours"
@@ -44,15 +40,13 @@ class ColoursScreenshotSpec extends ComponentSpec {
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
 
     def "Appearance of Grey Tones"() {
-
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#grey-tones"
@@ -62,10 +56,9 @@ class ColoursScreenshotSpec extends ComponentSpec {
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'
-        def component = waitForComponent(selector)
+        waitForComponent(selector)
 
         then: 'It should match reference image.'
         designRef(selector)
-
     }
 }

@@ -5,7 +5,7 @@ import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class ContentBlockStyleguideScreenshotSpec extends ComponentSpec {
+class DLSContentBlockStyleguideScreenshotSpec extends ComponentSpec {
     String pathPage = "styleguide/components/content-block"
     String pathSite = "content/swinburne-showcase"
     String language = "en"

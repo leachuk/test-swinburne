@@ -3,7 +3,7 @@ package specs.styleguide.components.globalheader
 import org.openqa.selenium.Keys
 import support.ComponentSpec
 
-class GlobalHeaderQuickSearchLargeDesktopPublishSpec extends ComponentSpec {
+class DLSGlobalHeaderQuickSearchDesktopPublishSpec extends ComponentSpec {
     String pathPage = "styleguide/components/global-header"
     String pathSite = "content/swinburne-showcase"
     String language = "en"
@@ -13,7 +13,7 @@ class GlobalHeaderQuickSearchLargeDesktopPublishSpec extends ComponentSpec {
         loginAsAdmin()
     }
 
-    def "Quick Search on a large desktop"() {
+    def "Quick Search on a small desktop"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
         def selector = "#header_nav_root"
@@ -21,7 +21,7 @@ class GlobalHeaderQuickSearchLargeDesktopPublishSpec extends ComponentSpec {
         def selectorSearchInput = "${selectorSearch} input[type=search]"
 
         when: 'I am in the component showcase page'
-        setWindowSizeXLG()
+        setWindowSizeLG()
         waitForAuthorPreviewPage()
 
         then: 'The component should appear on the page'

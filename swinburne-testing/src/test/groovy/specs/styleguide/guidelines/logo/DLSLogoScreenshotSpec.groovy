@@ -1,25 +1,25 @@
-package specs.styleguide.components.newsdetails
+package specs.styleguide.guidelines.logo
 
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
 
 @Stepwise
-class NewsDetailScreenshotSpec extends ComponentSpec {
-    String pathPage = "styleguide/components/news-details"
-	String pathSite = "content/swinburne-showcase"
-	String language = "en"
-	String componentPath = "jcr:content/article/par/news_details"
+class DLSLogoScreenshotSpec extends ComponentSpec {
+    String pathPage = "styleguide/guidelines/logo-and-usage"
+    String pathSite = "content/swinburne-showcase"
+    String language = "en"
+    String componentPath = "jcr:content/article/par"
 
     def setupSpec() {
         loginAsAdmin()
     }
 
-	@Unroll("Appearance of News Details with default variant in #viewport.label")
-    def "Appearance of News Details with default variant'"() {
+    @Unroll("Appearance of logo in #viewport.label")
+    def "Appearance of logo"() {
         given: '>I am in the component showcase page'
         and: '>the component is on the showcase page'
-        def selector = "#news_details"
+        def selector = "#logo_embedsource"
 
         when: 'I am in the component showcase page'
         setWindowSize(viewport)
@@ -31,7 +31,7 @@ class NewsDetailScreenshotSpec extends ComponentSpec {
         then: 'It should match reference image.'
         designRef(selector)
 
-		where:
-		viewport << getViewPorts()
+        where:
+        viewport << getViewPorts()
     }
 }

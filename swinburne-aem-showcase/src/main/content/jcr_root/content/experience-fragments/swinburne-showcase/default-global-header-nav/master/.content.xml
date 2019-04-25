@@ -44,7 +44,7 @@
                                 sling:resourceType="swinburne/components/content/embedsource"
                                 componentId="embedsource_MDEJAWPV4"
                                 componentTheme="[swinburne-showcase:component-style-theme/common/logo]"
-                                html="&lt;a href=&quot;/&quot;>&lt;img class=&quot;invisible-md-up&quot; src=&quot;/etc/clientlibs/swinburne/sut/images/logo-small.svg&quot; alt=&quot;Swinburne&quot; />&#xd;&#xa;&lt;img class=&quot;invisible-sm-down&quot; src=&quot;/etc/clientlibs/swinburne/sut/images/logo-long-full.svg&quot; alt=&quot;Swinburne&quot; />&lt;/a>"/>
+                                html="&lt;a href=&quot;https://www.swinburne.edu.au/&quot;>&lt;img class=&quot;invisible-md-up&quot; src=&quot;/etc/clientlibs/swinburne/sut/images/logo-small.svg&quot; alt=&quot;Swinburne&quot; />&#xd;&#xa;&lt;img class=&quot;invisible-sm-down&quot; src=&quot;/etc/clientlibs/swinburne/sut/images/logo-long-full.svg&quot; alt=&quot;Swinburne&quot; />&lt;/a>"/>
                             <link
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="swinburne/components/content/link"

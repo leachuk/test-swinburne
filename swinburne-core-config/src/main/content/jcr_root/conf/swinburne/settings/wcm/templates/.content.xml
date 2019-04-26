@@ -4,11 +4,9 @@
     jcr:primaryType="cq:Page">
     <experience-fragment/>
     <onecolumn-v2/>
-    <styleguide/>
     <rep:policy/>
     <base/>
     <blankforms/>
     <onecolumn/>
     <twocolumn/>
-    <threecolumn/>
 </jcr:root>

@@ -3,10 +3,8 @@
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
     <twocolumn/>
-    <threecolumn/>
     <base/>
     <onecolumn/>
     <rep:policy/>
     <onecolumn-v2/>
-    <styleguide/>
 </jcr:root>

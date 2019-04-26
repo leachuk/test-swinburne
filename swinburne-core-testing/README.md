@@ -22,18 +22,18 @@ mvn -PautoInstallPackage clean install -DskipTests=true
 ```
 - Run sample test from parent
 ```bash
-mvn -pl swinburne-testing clean test -Dgeb.env=dev -Dtest=EventDetailsPublishSpec
+mvn -pl swinburne-core-testing clean test -Dgeb.env=dev -Dtest=EventDetailsPublishSpec
 ```
 - Run full suit of test
 ```bash
-mvn -pl swinburne-testing clean test -Dgeb.env=dev -Dtest=EventDetailsPublishSpec
+mvn -pl swinburne-core-testing clean test -Dgeb.env=dev -Dtest=EventDetailsPublishSpec
 ```
 - Pass parameters to test on other sites
 
 From Root:
 
 ```bash
-mvn -pl swinburne-testing clean test -Dgeb.env=dev -Dcrx.host=192.168.27.2 -Dcrx.port=4502 -Dcrx.user=admin -Dcrx.password=admin -Dtest=Text*
+mvn -pl swinburne-core-testing clean test -Dgeb.env=dev -Dcrx.host=192.168.27.2 -Dcrx.port=4502 -Dcrx.user=admin -Dcrx.password=admin -Dtest=Text*
 ```
 
 In Project Folder
@@ -47,7 +47,7 @@ mvn clean test -Dgeb.env=dev -Dcrx.host=192.168.27.2 -Dcrx.port=4502 -Dcrx.user=
 Test Login Page from Root Project
 
 ```bash
-mvn -pl swinburne-testing clean test -Dgeb.env=dev -Dtest=Text*
+mvn -pl swinburne-core-testing clean test -Dgeb.env=dev -Dtest=Text*
 ```
 
 Test Text Component from Testing Project
@@ -76,7 +76,7 @@ All test should be done either on Showcase or respect unknown nature of target h
 - Clone Repo
 SSH Clone
 ```bash
-git clone ssh://git@gitlab.com/swinburne/swinburne-testing.git
+git clone ssh://git@gitlab.com/swinburne/swinburne-core-testing.git
 ```
 - Test if project is runnable:
 ```bas

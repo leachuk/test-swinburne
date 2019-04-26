@@ -15,7 +15,7 @@ DEFAULT_HUB_URL="${3:-$SELENIUMHUB_SCHEME://$SELENIUMHUB_HOST:$SELENIUMHUB_PORT$
 DEFAULT_PARAMS=""${@:4}""
 
 DEFAULT_IMAGE="aemdesign/centos-java-buildpack"
-DEFAULT_COMMAND="cd swinburne-testing && ./test-spec"
+DEFAULT_COMMAND="cd swinburne-core-testing && ./test-spec"
 DEFAULT_REPORT_PATH="generated-docs/summary.html"
 DEFAULT_OPEN_REPORT="true"
 DEFAULT_DRIVERS_EXEC="remote-seleniumhub-chrome "

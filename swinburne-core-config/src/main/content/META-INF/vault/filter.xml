@@ -29,7 +29,6 @@
 
     <filter root="/var/workflow/models/swinburne"/>
 
-	<!-- tenant update for microsites into swu root" -->
 	<filter root="/conf/swinburne"/>
 
 </workspaceFilter>

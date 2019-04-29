@@ -12,10 +12,6 @@
         <sly data-sly-call="${clientlib.js @ categories='aemdesign.common.body'}"/>
         <!-- js: aemdesign.common.body end -->
     
-        <!-- js: swinburne.microsites.footer start -->
-        <sly data-sly-call="${clientlib.js @ categories='swinburne.microsites.footer'}"/>
-        <!-- js: swinburne.microsites.footer end -->
-    
         <!--/* Load authoring related client libraries */-->
         <!-- js: aemdesign.common.coralui start -->
         <sly data-sly-test="${wcmmode.preview || wcmmode.edit}" data-sly-call="${clientLib.js @ categories='aemdesign.common.coralui'}"/>

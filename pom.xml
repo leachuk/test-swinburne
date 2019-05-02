@@ -79,7 +79,7 @@
 		<seleniumhubhost.port>32768</seleniumhubhost.port>
 		<seleniumhubhost.scheme>http</seleniumhubhost.scheme>
 		<seleniumhubhost.service>/wd/hub</seleniumhubhost.service>
-		<selenium.version>3.14.0</selenium.version>
+		<selenium.version>3.141.59</selenium.version>
 		<groovy-all.version>2.4.14</groovy-all.version>
 	</properties>
 

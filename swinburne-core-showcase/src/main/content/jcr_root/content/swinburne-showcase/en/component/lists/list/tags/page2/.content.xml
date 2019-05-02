@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:tags="[swinburne-showcase:content-type/page/contact]"
-        cq:template="/conf/swinburne-showcase/settings/wcm/templates/onecolumn"
+        cq:template="/conf/swinburne//settings/wcm/templates/onecolumn"
         jcr:primaryType="cq:PageContent"
         jcr:title="Tag Page2"
         sling:resourceType="swinburne/components/template/base"

@@ -2,6 +2,7 @@ package specs.component.lists.pagelist
 
 
 import spock.lang.Ignore
+import spock.lang.IgnoreRest
 import spock.lang.Stepwise
 import spock.lang.Unroll
 import support.ComponentSpec
@@ -315,5 +316,55 @@ class PageListPublishSpec extends ComponentSpec {
 		where:
 		viewport << getViewPorts()
 	}
+
+	@Unroll("List: Pages search with By Tags in #viewport.label")
+	def "List: Pages search with By Tags"() {
+
+		given: '>the page hierarchy is created as "Components" > "Lists" > "List"'
+		and: '>I am in the component showcase page'
+		and: '>the component is on the showcase page'
+		def selector = "#list8"
+
+		when: "I am on the component showcase page"
+		setWindowSize(viewport)
+		waitForAuthorPreviewPage()
+
+		then: "The component should be on the page"
+		def component = waitForComponent(selector)
+		takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+		and: "Has two items in the list"
+		assert $("${selector} li").size() == 2
+
+		where:
+		viewport << getViewPorts()
+	}
+
+
+	@Unroll("List: Pages search with By Tags with Tags not Specified in #viewport.label")
+	def "List: Pages search with By Tags with Tags not Specified"() {
+
+		given: '>the page hierarchy is created as "Components" > "Lists" > "List"'
+		and: '>I am in the component showcase page'
+		and: '>the component is on the showcase page'
+		def selector = "#list9"
+
+		when: "I am on the component showcase page"
+		setWindowSize(viewport)
+		waitForAuthorPreviewPage()
+
+		then: "The component should be on the page"
+		def component = waitForComponent(selector)
+		takeScreenshot($(selector).firstElement(), "The component should be on the page")
+
+		and: "Has zero items in the list"
+		assert $("${selector} li").size() == 0
+
+		where:
+		viewport << getViewPorts()
+	}
+
+
+
 
 }

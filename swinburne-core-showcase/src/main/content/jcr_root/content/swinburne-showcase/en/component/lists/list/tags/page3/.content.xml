@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/swinburne//settings/wcm/templates/onecolumn"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Tag Page3"
+        sling:resourceType="swinburne/components/template/base"
+        subtitle="Page Sub-Title 3">
+        <article
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/layout/article">
+            <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="swinburne/components/layout/container">
+                <page-details
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="swinburne/components/details/page-details"
+                    cardIcon="[swinburne-showcase:component-style-modifier/icon/size/sm,swinburne-showcase:component-style-icon/social/github]"
+                    cardIconShow="true"
+                    componentIcon="[swinburne-showcase:component-style-icon/social/github]"
+                    componentId="page-details"
+                    componentModifiers="[swinburne-showcase:component-style-modifier/icon/size/sm]"
+                    showBreadcrumb="false"
+                    showParsys="false"
+                    showToolbar="false"
+                    textIsRich="true">
+                </page-details>
+            </par>
+        </article>
+        <image
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="swinburne/components/media/image"
+            fileReference="/content/dam/swinburne-showcase/en/components/media/image/city2.jpg"/>
+    </jcr:content>
+</jcr:root>

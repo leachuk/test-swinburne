@@ -2,7 +2,7 @@
 
 use([], function () {
     //horrible hack from OOTB Adobe equivalent but can't find a js way to get the child node resource like in java
-    var rootResource = resource.getChild('par');
+    var rootResource = resource.getChild('root');
     var resourcePath = "";
 
     if (rootResource != null) {

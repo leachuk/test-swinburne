@@ -1,10 +1,10 @@
 <%-- TODO: Refactor required to implement dropdown option for fields rather having explicit fields. --%>
 
 <%@ page import="org.apache.sling.api.resource.ResourceUtil" %>
-<%@ include file="/apps/aemdesign/global/global.jsp" %>
-<%@ include file="/apps/aemdesign/global/components.jsp" %>
-<%@ include file="/apps/aemdesign/global/datetime.jsp" %>
-<%@ include file="/apps/aemdesign/global/images.jsp" %>
+<%@ include file="/apps/swinburne/global/global.jsp" %>
+<%@ include file="/apps/swinburne/global/components.jsp" %>
+<%@ include file="/apps/swinburne/global/datetime.jsp" %>
+<%@ include file="/apps/swinburne/global/images.jsp" %>
 
 <%
     HashMap<String, Object> ogDataInfo = new HashMap<String, Object>();

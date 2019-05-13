@@ -1,0 +1,247 @@
+/publishfarm
+	{  
+	# client headers which should be passed through to the render instances
+	# (feature supported since dispatcher build 2.6.3.5222)
+	/clientheaders
+	  {
+	  	$include "clientheaders.any"
+	  }
+	# hostname globbing for farm selection (virtual domain addressing)
+	/virtualhosts
+	  {
+		$include "publish-vhosts.any"
+	  }
+	# the load will be balanced among these render instances
+	/renders
+	  {
+	  $include "publish-renders.any"
+	  }
+	# only handle the requests in the following acl. default is 'none'
+	# the glob pattern is matched against the first request line
+	/filter
+	  {
+	  # deny everything and allow specific entries
+	  /0001 { /type "deny"  /glob "*" }
+	
+	  # open consoles
+	#    /0012 { /type "allow" /glob "* /crx/*"    }  # allow content repository
+	#    /0013 { /type "allow" /glob "* /system/*" }  # allow OSGi console
+	
+	  # allow non-public content directories
+	#    /0021 { /type "allow" /glob "* /apps/*"   }  # allow apps access
+	#    /0022 { /type "allow" /glob "* /bin/*"    }
+
+  
+	#    /0024 { /type "allow" /glob "* /libs/*"   }
+	#    /0025 { /type "deny"  /glob "* /libs/shindig/proxy*" } # if you enable /libs close access to proxy
+
+	#    /0026 { /type "allow" /glob "* /home/*"   }
+	#    /0027 { /type "allow" /glob "* /tmp/*"    }
+	#    /0028 { /type "allow" /glob "* /var/*"    }
+          	
+        ## This rule allows content to be access (html and other file access)
+	/0010 {
+      		/type "allow"
+      		/path "/content/*"
+      		/extension '(html|css|gif|ico|js|png|swf|svg|woff|woff|ttf|eot|jpg|bmp|psd*|raw|ai|doc|docx|pdf|txt|xls|xlsx|ppt|pptx|indd|epub|aac|mp3|mp4a|m2v|vob|mp4|wav|wma|dvi|m4v|mpe|mov|wmv|asf|srt|less)'
+	}
+  
+	# enable specific mime types in non-public content directories
+	/0011 {
+      		/type "allow"
+      		/method "GET"
+      		/path "/content/dam/*"
+      		/extension '(css|gif|ico|js|png|swf|svg|woff|woff|ttf|eot|jpg|bmp|psd*|raw|ai|doc|docx|pdf|txt|xls|xlsx|ppt|pptx|indd|epub|aac|mp3|mp4a|m2v|vob|mp4|wav|wma|dvi|m4v|mpe|mov|wmv|asf|srt|less)'
+	}
+  
+	 ## Please remove the rules from /0058 to /0066 in case if the /0012 rule is removed.
+	/0012 { /type "allow" /path "/*" /extension "html"} # Custom allow any mapped with an html extension for swinburne campaign
+	/0013 { /type "allow" /path "/downloads/*" /extension "doc|docx|pdf|txt|xls|xlsx|ppt|pptx"} # Custom allow mapped DAM documents asset path for swinburne campaign
+  
+	## Custom Rule to enable background image to load from jcr:content path -- As part of Microsite page background
+	/0023 {
+      		/type "allow"
+      		/url "/*/_jcr_content/*/bgimage.img.png/*"
+      		/extension "png"
+	}
+  
+	## Enable clientlibs proxy servlet
+	/0014 { /type "allow" /method "GET" /url "/etc.clientlibs/*" }
+  
+	## Enable clientlibs
+	/0015 { /type "allow" /method "GET" /url "/etc/clientlibs/*" }
+ 
+	/0016 { /type "allow" /method "GET" /url "/etc/designs/default*" }  # enable default
+	/0017 { /type "allow" /method "GET" /url "/etc/designs/swinburne*" }  # enable swinburne
+	/0018 { /type "allow" /method "GET" /url "/etc/designs/aemdesign*" }  # enable aem designs
+  
+	# enable AEM Forms features
+	/0020 { /type "allow" /url "/content/dam/*/countrycodes.json" } # enable countrycode json form DAM path
+	/0021 { /type "allow" /method "POST" /url "/content/[.]*.aemform.*.html" }  # allow POSTs to form selectors under content
+	/0022 { /type "allow" /method "POST" /url "/content/forms/*guideContainer.af.*submit*" } # to enable AEM Forms submission   
+  
+	# enable features
+	/0040 { /type "allow" /method "POST" /url "/content/[.]*.form.html" }  # allow POSTs to form selectors under content
+	/0041 { /type "allow" /method "GET" /url "/libs/cq/personalization/*" }  # enable personalization
+	/0042 { /type "allow" /url "POST /content/[.]*.commerce.cart.json" }  # allow POSTs to update the shopping cart
+	/0043 { /type "allow" /url "/etc/clientcontext/*"  }  # enable personalization
+  
+  
+	## Allow CSRF token
+	/0050 { /type "allow" /method "GET" /url '/libs/granite/csrf/token.json' /extension 'json' } ## AEM provides a framework aimed at preventing Cross-Site Request Forgery attacks
+      
+	## Deny content grabbing for greedy queries and prevent un-intended self DOS attacks
+	/0051 {
+      		/type "deny"
+      		/selectors '(feed|rss|pages|languages|blueprint|infinity|tidy|sysview|docview|query|[0-9-]+|jcr:content)'
+   		/extension '(json|xml|html|feed)'
+	}
+            
+	# Deny content grabbing for /content and its subtree
+	/0052 {
+    		/type "deny"
+      		/path "/content/*"
+      		/selectors '(feed|rss|pages|languages|blueprint|infinity|tidy)'
+      		/extension '(json|xml|html)'
+	}   
+      
+	#Elham's changes
+	/0053 {
+      		/type "deny"
+      		/path "/content*
+      		/method "GET"
+      		/selectors '(pages|languages|blueprint|feed)'
+      		/extension '(json|html)'
+	}
+  
+	## Deny authoring query params
+	/0054 { /type "deny" /method "GET" /query "debug=*" }
+	/0055 { /type "deny" /method "GET" /query "wcmmode=*" }
+      
+	#### Deny front door entry
+	/0056 { /type "deny" /path "/content/ams/healthcheck/*"}
+	/0057 { /type "allow" /url "/content/regent.html"}
+  
+	## Deny rules with .html extension as part of allowing access to root node with .html : refer /0012 above
+	/0058 { /type "deny" /url "/crx/*" /extension 'html' }
+	/0059 { /type "deny" /url "/bin/*" /extension 'html' }
+	/0060 { /type "deny" /url "/libs*" /extension 'html' }
+	/0061 { /type "deny" /url "/system*" /extension 'html' }
+	/0062 { /type "deny" /url "/etc*" /extension 'html' }
+	/0063 { /type "deny" /url "/home/*" /extension 'html' }
+	/0064 { /type "deny" /url "/var*" /extension 'html' }
+	/0065 { /type "deny" /url "/apps*" /extension 'html' }
+	/0066 { /type "deny" /url "/tmp*" /extension 'html' }
+
+      
+	  
+
+      	# Required by Asset Share
+      	/0104 { /type "allow" /url "/libs/dam/lightbox.json" }
+      	/0105 { /type "allow" /url "/libs/dam/lightbox" }
+      	/0106 { /type "allow" /url "/libs/dam/drm" }
+      	/0108 { /type "allow" /url "/libs/wcm/core/content/pageinfo.json" }
+      	/0109 { /type "allow" /url "/home/users/*/profile/querybuilder/savedsearch*" }
+      	/0110 { /type "allow" /url "/libs/cq/security/userinfo.json" }
+      	/0111 { /type "allow" /url "/libs/cq/i18n/dict.en.json" }
+      	# /home/users/x/y/profile/lightbox/default/th9X93NN9F.jpg.assetdownload.zip?_charset_=utf-8
+      	/0112 { /type "allow" /url "/home/users/*/lightbox/*.assetdownload.zip" }
+
+      	# Asset Share: Tags
+      	/0113 { /type "allow" /url "/content/dam/*/jcr:content.infinity.json" }
+      	/0114 { /type "allow" /url "/libs/wcm/core/resources/languages.overlay.infinity.json" }
+     	# /etc/tags.tags.json, /etc/tags.json, /etc/tags/properties/orientation.infinity.json, /etc/tags/*.infinity.json etc
+      	/0115 { /type "allow" /url "/etc/tags*json" }
+
+      	# Site admin:
+      	/0130 { /type "allow" /url "/libs/wcm/core/content/search/searchpanel/facets.overlay.infinity.json" }
+	/0140 { /type "deny" /method "POST" /url "/etc/*" }
+	/0150 { /type "allow" /method "GET" /url "/etc/*" /query "a=*" }
+
+	#Selectors
+	/0151 { /type "deny" /url "*.*.*.html" } # Deny random selectors for html
+	/0152 { /type "deny" /url "*.*.json" } # Deny random selectors for json
+	
+
+	#allow JPEG	
+   	# /0154 { /type "allow" /glob "* *.jpeg *"   }  # enable jpeg
+	   #allow HTML
+	# /0155 { /type "allow" /glob "* *.html *"   }  # enable html
+	
+	# /0156 { /type "allow" /extension '([Gg][Ii][Fg]|[Jj][Pp][Ee]?[Gg]|[Pp][Nn][Gg]|[Ss][Vv][Gg]|[Ii][Cc][Oo]|[Jj][Pp][Gg])' }  # enable case insensitve extentions for images
+    
+	}
+	# allow propagation of replication posts (should seldomly be used)
+	/propagateSyndPost "0"
+
+	# the cache is used to store requests from the renders for faster delivery
+	# for a second time.
+	/cache
+	  {
+	  # the cacheroot must be equal to the document root of the webserver
+	  /docroot "/var/www/html"
+
+	  # sets the level upto which files named ".stat" will be created in the 
+	  # document root of the webserver. when an activation request for some 
+	  # handle is received, only files within the same subtree are affected 
+	  # by the invalidation.
+	  /statfileslevel "0"
+  
+	  # caches also authorized data
+	  /allowAuthorized "0"
+
+	  # the rules define, which pages should be cached. please note that
+	  # - only GET requests are cached
+	  # - only requests with an extension are cached
+	  # - only requests without query parameters ( ? ) are cached
+	  # - only unauthorized pages are cached unless allowUnauthorized is set to 1
+	  /rules
+		{
+			$include "rules.any"
+		}
+	  # the invalidate section defines those pages which are 'invalidated' after
+	  # any activation. please note that, the activated page itself and all 
+	  # related documents are flushed on an modification. for example: if the 
+	  # page /foo/bar is activated, all /foo/bar.* files are removed from the
+	  # cache.
+	  /invalidate
+		{
+		/0000
+		  {
+		  /glob "*"
+		  /type "deny"
+		  }
+		/0001
+		  {
+		  /glob "*.html"
+		  /type "allow"
+		  }
+		}
+	  /allowedClients
+		{
+		/0000
+		  {
+		  /glob "*.*.*.*"
+		  /type "deny"
+		  }
+		$include "publish-invalidate-allowed.any"
+		}
+	  }
+	# the statistics define, how the load should be balanced among the renders
+	# according to the media-type. 
+	/statistics
+	  {
+	  /categories
+		{
+		/html
+		  {
+		  /glob "*.html"
+		  }
+		/others
+		  {
+		  /glob "*"
+		  }
+		}
+	  }
+	}
+

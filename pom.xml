@@ -127,6 +127,16 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe.aem</groupId>
+			<artifactId>uber-jar</artifactId>
+			<version>6.4.0</version>
+			<classifier>apis</classifier>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- START swinburne-core-testing dependencies-->
@@ -324,13 +334,6 @@
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>1.7.6</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.adobe.aem</groupId>
-				<artifactId>uber-jar</artifactId>
-				<version>6.1.0</version>
-				<classifier>obfuscated-apis</classifier>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>

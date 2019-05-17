@@ -57,6 +57,7 @@
 <!-- swinburne/components/analytics/datalayer -->
 <sly data-sly-resource="${ @ resourceType='swinburne/components/analytics/datalayer'}"/>
 
-
-<!--- launch include -->
-<script src = "//assets.adobedtm.com/launch-ENff3603b5bce848df8b05b43e547e1dd8.min.js "></script>
+<!--cloud config: start-->
+<!--Live Chat cloud config: included-->
+<sly data-sly-resource="${'livecloudservices' @ resourceType='/apps/cq/analytics/components/livechat'}"/>
+<!--cloud config: end-->

@@ -7,5 +7,6 @@
         jcr:title="English">
         <folderThumbnail/>
     </jcr:content>
+	<components/>
 	<multimedia/>
 </jcr:root>

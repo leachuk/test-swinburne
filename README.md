@@ -6,7 +6,7 @@
 Please ensure following packages are installed on your AEM instance before deploying this project
 
 * AEM 6.4 Service Pack 2
-* ACS Twitter
+* ACS Twitter 
 * ACS Commons
 * Adobe Core
 * AEM Design Author

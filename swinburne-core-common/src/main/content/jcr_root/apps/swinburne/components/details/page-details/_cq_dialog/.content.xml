@@ -81,6 +81,22 @@
                                                 sling:resourceType="granite/ui/components/foundation/form/hidden"
                                                 name="./ogImage/sling:resourceType"
                                                 value="aemdesign/components/media/image"/>
+                                            <imageRendition
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    emptyOption="{Boolean}false"
+                                                    fieldDescription="Select image rendition for OG"
+                                                    fieldLabel="OG Image Rendition"
+                                                    name="./ogImage/imageRendition"
+                                                    value="">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <rendition1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        valuealt="1280x1280"
+                                                        text="1280x1280"
+                                                        value="1280x1280"/>
+                                                </items>
+                                            </imageRendition>
                                         </items>
                                     </attributes>
                                 </items>

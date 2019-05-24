@@ -4,5 +4,5 @@
     jcr:title="Swinburne two column Page"
     jcr:description="Swinburne Base template"
     cq:icon="columnTwoA"
-    sling:resourceSuperType="swinburne/components/template/base/v2"
+    sling:resourceSuperType="swinburne/components/template/base/v1/base"
     componentGroup=".hidden"/>

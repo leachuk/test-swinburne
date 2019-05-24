@@ -1,8 +1,8 @@
 <%@ page import="com.day.cq.wcm.api.WCMMode" %>
 <%@ page import="com.day.cq.wcm.foundation.External" %>
 <%@ page import="org.apache.commons.lang3.StringUtils"%>
-<%@ include file="/apps/aemdesign/global/global.jsp"%>
-<%@ include file="/apps/aemdesign/global/components.jsp"%>
+<%@ include file="/apps/swinburne/global/global.jsp"%>
+<%@ include file="/apps/swinburne/global/components.jsp"%>
 <%
 
     Object[][] componentFields = {
@@ -35,4 +35,4 @@
         </c:when>
     </c:choose>
 </div>
-<%@include file="/apps/aemdesign/global/component-badge.jsp" %>
+<%@include file="/apps/swinburne/global/component-badge.jsp" %>
